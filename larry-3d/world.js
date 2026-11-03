@@ -250,6 +250,10 @@ window.renderAt = (t, frame) => {
   const pos = new THREE.Vector3(C.pos[0] + L.anchorX * 0.6, C.pos[1], C.pos[2]), tgt = new THREE.Vector3(C.tgt[0] + L.anchorX * 0.8, C.tgt[1], C.tgt[2]);
   const push = sc.loop ? 0 : 0.045 * Math.min(1, age / sdur);
   pos.lerp(tgt, push);
+  if (TL.share && !sc.loop && t >= TL.share[0] && t < TL.share[1]) {   // share card: ease the camera back, more sky on top
+    const q = Math.min(1, (t - TL.share[0]) / 0.35), e = q * q * (3 - 2 * q);
+    pos.sub(tgt).multiplyScalar(1 + 0.32 * e).add(tgt);
+  }
   const basePos = pos.clone(), baseTgt = tgt.clone();
   const z = zoomAmount(sc, t);
   if (z > 1.001 && larryHead) {                               // move toward Larry's face, keep the same angle

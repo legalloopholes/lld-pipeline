@@ -343,6 +343,16 @@ for ph in ('follow legal loopholes daily', 'legal loopholes daily'):
         HANDLE_T = words[hits[-1]][0]; break
 if HANDLE_T is not None and BRAND.get('handle_sfx', 'correct') != 'none':
     SFX_EVENTS.append((HANDLE_T, BRAND.get('handle_sfx', 'correct')))
+# share card: "Send this to the friend who..." on screen (not spoken) from the call to action until the loop ending
+SHARE_LINE = ((plan or {}).get('share_line') or '').strip()
+SHARE_T0 = SHARE_T1 = None
+if SHARE_LINE:
+    toks = [norm(x) for x in 'make sure to like'.split()]
+    hits = [i for i in range(len(wn) - len(toks) + 1) if wn[i:i + len(toks)] == toks]
+    SHARE_T0 = words[hits[-1]][0] if hits else (HANDLE_T - 1.5 if HANDLE_T is not None else None)
+    if SHARE_T0 is not None:
+        SHARE_T1 = scenes[-1]['t'] - 0.05 if scenes[-1].get('loop') and scenes[-1]['t'] > SHARE_T0 + 1.5 else SHARE_T0 + 4.5
+        SFX_EVENTS.append((SHARE_T0, 'pop'))
 # narration cues
 for s_ in sentences:
     txt = ' '.join(w[2] for w in s_).lower()
@@ -618,6 +628,38 @@ def draw_handle(frame, t):
     if a < 1: im = Image.fromarray((np.array(im) * np.array([1, 1, 1, a])).astype(np.uint8), 'RGBA')
     frame.alpha_composite(im, ((W - im.width) // 2, HANDLE_Y - im.height // 2))
 
+_share = None
+def share_active(t): return SHARE_T0 is not None and SHARE_T0 <= t < SHARE_T1
+def draw_share(frame, t):
+    global _share
+    if not share_active(t): return
+    if _share is None:
+        d0 = ImageDraw.Draw(Image.new('RGBA', (1, 1)))
+        for size, maxl in ((58, 2), (52, 2), (52, 3), (46, 3), (40, 4)):   # prefer 2 big lines, else 3 smaller
+            f = load_font(size); lines, cur = [], ''
+            for w_ in SHARE_LINE.upper().split():
+                trial = (cur + ' ' + w_).strip()
+                if cur and d0.textbbox((0, 0), trial, font=f)[2] > 900: lines.append(cur); cur = w_
+                else: cur = trial
+            lines.append(cur)
+            if len(lines) <= maxl: break
+        txt = '\n'.join(lines)
+        bb = d0.multiline_textbbox((0, 0), txt, font=f, align='center', spacing=12)
+        w, h = int(bb[2] - bb[0] + 90), int(bb[3] - bb[1] + 70)
+        _share = Image.new('RGBA', (w + 16, h + 16), (0, 0, 0, 0)); d = ImageDraw.Draw(_share)
+        d.rounded_rectangle([8, 14, w + 8, h + 14], 34, fill=(0, 0, 0, 40))
+        d.rounded_rectangle([0, 0, w, h], 34, fill=(*RED, 255))
+        d.rounded_rectangle([0, 0, w, h], 34, outline=NAVY, width=8)
+        d.multiline_text((45 - bb[0], 30 - bb[1]), txt, font=f, fill=(255, 255, 255), align='center', spacing=12)
+        if _share.width > 1000: _share = _share.resize((1000, round(_share.height * 1000 / _share.width)), Image.LANCZOS)
+    age, left = t - SHARE_T0 - 0.2, SHARE_T1 - t          # pops in once the camera has started pulling back
+    s_ = pop(age)
+    if left < 0.15: s_ *= max(0.0, left / 0.15)
+    if s_ <= 0.02: return
+    im = _share
+    if s_ != 1.0: im = im.resize((max(1, round(im.width * s_)), max(1, round(im.height * s_))), Image.BILINEAR)
+    frame.alpha_composite(im, (round(W / 2 - im.width / 2), round(250 - im.height / 2)))
+
 # ---------- captions: word pop + coloured keywords ----------
 def write_ass(path):
     hl = {norm(x) for x in (plan or {}).get('highlight', [])}
@@ -676,7 +718,8 @@ def render_3d_base(nframes):
           'scenes': [{'t': sc['t'], 'end': min(sc['end'], dur + 1), 'bg': sc.get('bg', 'white'), 'loop': bool(sc.get('loop')),
                       'cast': [{k: v for k, v in c.items() if k in ('id', 'x', 'anim', 'from')} for c in sc.get('cast', [])],
                       'items': items_3d(sc), 'zooms': [{'t': z['t'], 'amount': z.get('amount', 1.18), 'hold': z.get('hold', 0.9)} for z in sc['zooms']]}
-                     for sc in scenes]}
+                     for sc in scenes],
+          'share': None if SHARE_T0 is None else [SHARE_T0, SHARE_T1]}   # camera pulls back to make room for the share card
     tl_path, base = os.path.abspath(out + '.timeline.json'), os.path.abspath(out + '.base3d.mp4')
     json.dump(tl, open(tl_path, 'w'))
     if os.environ.get('LLD_TIMELINE_ONLY'): raise SystemExit(0)
@@ -688,6 +731,7 @@ def render_3d_base(nframes):
 
 CARD_Y, CARD_MAX_H = 255, 300          # cards sit in the sky band, above the cast's heads
 def draw_cards_3d(frame, sc, t):
+    if share_active(t): return                     # the share card owns the top band during the call to action
     cards = [it for it in sc['items'] if 'card' in it]
     for j, it in enumerate(cards):
         nxt = cards[j + 1]['t'] if j + 1 < len(cards) else sc['end']
@@ -718,7 +762,7 @@ nframes = int(math.ceil(dur * FPS))
 base3d = None
 last3d = Image.new('RGB', (W, H), (0, 0, 0))
 if RENDER3D:
-    base3d = render_3d_base(nframes)
+    base3d = os.environ.get('LLD_BASE3D') or render_3d_base(nframes)   # LLD_BASE3D: reuse a rendered 3D pass (testing)
     dec = subprocess.Popen([FFMPEG, '-loglevel', 'error', '-i', base3d, '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-'], stdout=subprocess.PIPE)
 proc = subprocess.Popen(cmd, stdin=subprocess.PIPE)
 for fi in range(nframes):
@@ -736,6 +780,7 @@ for fi in range(nframes):
         draw_items(frame, sc, t)
         frame = apply_zoom(frame, sc, t)
     draw_legal(frame, t)
+    draw_share(frame, t)
     draw_handle(frame, t)
     proc.stdin.write(frame.convert('RGB').tobytes())
 proc.stdin.close()
@@ -764,4 +809,5 @@ for sc in ([] if RENDER3D else scenes):
 print(json.dumps({'video': out, 'renderer': '3d' if RENDER3D else '2d', 'seconds': round(dur, 2), 'plan': bool(plan), 'sfx': len(SFX_EVENTS),
                   'zooms': sum(len(s_['zooms']) for s_ in scenes),
                   'scenes': [[round(s['t'], 2), s.get('bg', 'white')] for s in scenes], 'missing_assets': sorted(missing) + ([] if HANDLE else ['brand.json handle']),
-                  'handle_at': None if HANDLE_T is None else round(HANDLE_T, 2)}))
+                  'handle_at': None if HANDLE_T is None else round(HANDLE_T, 2),
+                  'share': None if SHARE_T0 is None else [round(SHARE_T0, 2), round(SHARE_T1, 2), SHARE_LINE]}))
