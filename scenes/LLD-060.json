@@ -1,0 +1,183 @@
+{
+ "video_id": "LLD-060",
+ "episode": "E60",
+ "hook": "THE EXCEPTION IN THE TEXT",
+ "highlight": [
+  "except",
+  "convicted",
+  "limits"
+ ],
+ "youtube_title": "The Exception Written Into the Thirteenth Amendment 🦝⚖️",
+ "caption": "The Thirteenth Amendment bans slavery and involuntary servitude 'except as a punishment for crime whereof the party shall have been duly convicted.' The Supreme Court has still limited how that exception can be used.",
+ "hashtags": [
+  "#legalloopholes",
+  "#constitution",
+  "#history",
+  "#thirteenthamendment",
+  "#lawtok",
+  "#civics"
+ ],
+ "script": "The Constitution bans slavery and involuntary servitude, with an exception written into the same sentence. This is a serious subject, so this one is straight explanation. The Thirteenth Amendment says that neither slavery nor involuntary servitude shall exist in the United States, except as a punishment for crime whereof the party shall have been duly convicted. That exception isn't an internet rumor. It's in the text. The drafters took that language from the Northwest Ordinance of seventeen eighty-seven. And it's the reason the government can require people who've been convicted of crimes to work. But the exception has limits. In nineteen eleven, the Supreme Court struck down an Alabama law that used the threat of criminal punishment to force people to work off debts, saying a state may not compel one person to labor for another in payment of a debt. In nineteen fourteen, it found that an arrangement forcing convicted people to work for whoever paid their fines amounted to peonage. And other parts of the Constitution, along with federal and state laws, still limit how people in prison can be treated. So the exception is real, and it matters. Knowing exactly what the text says, and what it doesn't, is the point. [loop] So the next time someone says the Constitution simply bans slavery, remember",
+ "publish_at": "2026-12-01T12:00:00-05:00",
+ "sources": [
+  "https://www.law.cornell.edu/constitution-conan/amendment-13/exceptions-clause"
+ ],
+ "legal_status": "Express constitutional exception",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "doc",
+     "text": "Thirteenth Amendment",
+     "sub": "U.S. Constitution"
+    }
+   ]
+  },
+  {
+   "at": "this is a serious subject",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "card": "A SERIOUS SUBJECT",
+   "card_at": "serious subject"
+  },
+  {
+   "at": "the thirteenth amendment says",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "doc",
+     "text": "“…except as a punishment for crime…”",
+     "sub": "Section 1"
+    }
+   ]
+  },
+  {
+   "at": "that exception isn't",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "card": "IT'S IN THE TEXT",
+   "card_at": "in the text"
+  },
+  {
+   "at": "the drafters took",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📜1787",
+     "text": "Northwest Ordinance"
+    }
+   ]
+  },
+  {
+   "at": "and it's the reason",
+   "bg": "bg-prison",
+   "cast": [
+    {
+     "id": "larry:concerned",
+     "x": 0.3
+    }
+   ],
+   "card": "COMPELLED PRISON LABOR",
+   "card_at": "require people"
+  },
+  {
+   "at": "but the exception has limits",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "card": "1911: NO FORCED WORK FOR DEBT",
+   "card_at": "in payment of a debt"
+  },
+  {
+   "at": "in nineteen fourteen",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "card": "1914: PEONAGE STRUCK DOWN",
+   "card_at": "amounted to peonage"
+  },
+  {
+   "at": "and other parts of",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "⚖️",
+     "text": "Other limits apply"
+    }
+   ]
+  },
+  {
+   "at": "so the exception is real",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "card": "KNOW WHAT IT SAYS",
+   "card_at": "what the text says"
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so the next time someone says the constitution",
+   "bg": "white",
+   "loop": true
+  }
+ ]
+}

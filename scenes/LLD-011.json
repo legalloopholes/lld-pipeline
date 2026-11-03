@@ -1,0 +1,205 @@
+{
+ "video_id": "LLD-011",
+ "episode": "E11",
+ "hook": "MARRY THE WITNESS?",
+ "highlight": [
+  "privilege",
+  "confidential",
+  "witness"
+ ],
+ "youtube_title": "Can Marrying Your Witness Keep Them Quiet? 🦝⚖️",
+ "caption": "Trammel v. United States (1980): in federal court, a spouse can choose to testify against their partner — the privilege belongs to the witness. Private marital communications have a separate protection. Marriage doesn't stop a prosecution.",
+ "hashtags": [
+  "#legalloopholes",
+  "#marriage",
+  "#evidence",
+  "#supremecourt",
+  "#lawtok",
+  "#criminallaw"
+ ],
+ "script": "Can marrying your witness keep them quiet? In federal court, the answer has two very different parts. This comes from a U.S. Supreme Court case from nineteen eighty, Trammel versus United States. A man was charged with conspiring to import heroin. His wife had been involved too, and she agreed to cooperate and testify against him. He argued she couldn't, because they were married. Under the older rule, the accused spouse could block that kind of testimony. The Supreme Court changed that. It said this privilege belongs to the witness spouse. She can't be forced to testify against her husband, but she also can't be stopped if she chooses to. So her testimony came in, and his conviction stood. But there's a second, separate protection. Confidential communications between spouses, the private things they say to each other during the marriage, have their own privilege, and the Court left that rule in place. That's why the trial court kept out the couple's private conversations, but let her describe what she saw and what was said in front of other people. Here's the limit. Marriage doesn't reach back and protect conversations from before the wedding, or everything a spouse sees. There are exceptions, state rules differ, and marriage never stops a prosecution. [loop] So before you plan a wedding as a legal strategy, remember",
+ "publish_at": "2026-11-06T19:00:00-05:00",
+ "sources": [
+  "https://www.law.cornell.edu/supremecourt/text/445/40"
+ ],
+ "legal_status": "Real privilege with limits",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ]
+  },
+  {
+   "at": "this comes from",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "doc",
+     "text": "Trammel v. United States",
+     "sub": "U.S. Supreme Court"
+    }
+   ]
+  },
+  {
+   "at": "a man was charged",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ]
+  },
+  {
+   "at": "he argued she couldn't",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:thinking"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "💍🤐",
+     "text": "Spouse can't testify?"
+    }
+   ]
+  },
+  {
+   "at": "the supreme court changed",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:surprised",
+     "x": 0.3
+    }
+   ],
+   "card": "THE WITNESS SPOUSE DECIDES",
+   "card_at": "belongs to the witness spouse",
+   "zooms": [
+    {
+     "at": "belongs to the witness spouse",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "so her testimony came in",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:concerned",
+     "x": 0.3
+    }
+   ],
+   "card": "CONVICTION STOOD",
+   "card_at": "conviction stood"
+  },
+  {
+   "at": "but there's a second",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🔒💬",
+     "text": "Private talk: safe"
+    }
+   ]
+  },
+  {
+   "at": "that's why the trial court",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "👀",
+     "text": "What she saw: allowed"
+    }
+   ]
+  },
+  {
+   "at": "here's the limit",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📅",
+     "text": "Before wedding: no"
+    }
+   ]
+  },
+  {
+   "at": "there are exceptions",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:concerned",
+     "x": 0.3
+    }
+   ],
+   "card": "MARRIAGE ≠ IMMUNITY",
+   "card_at": "never stops a prosecution"
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so before you plan",
+   "bg": "bg-courtroom",
+   "loop": true
+  }
+ ]
+}

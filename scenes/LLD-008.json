@@ -1,0 +1,220 @@
+{
+ "video_id": "LLD-008",
+ "episode": "E08",
+ "hook": "THE EVIDENCE WAS… FISH",
+ "highlight": [
+  "fish",
+  "tangible",
+  "information"
+ ],
+ "youtube_title": "He Threw the Evidence Overboard — and Beat One Charge Because It Was Fish 🦝⚖️",
+ "caption": "In Yates v. United States (2015), the Supreme Court held that undersized fish thrown overboard weren't a 'tangible object' under the Sarbanes-Oxley evidence statute. His separate conviction for destroying property to prevent seizure stood.",
+ "hashtags": [
+  "#legalloopholes",
+  "#supremecourt",
+  "#fishing",
+  "#lawtok",
+  "#weirdlaws",
+  "#criminallaw"
+ ],
+ "script": "He threw evidence into the ocean and still beat one federal charge, because the evidence was fish. This is a U.S. Supreme Court case from twenty fifteen. A Florida wildlife officer with federal authority boarded a commercial fishing boat in the Gulf of Mexico and found red grouper that were too small. He told the captain, John Yates, to keep those undersized fish separate until they got back to port. Instead, Yates had a crew member throw them overboard and swap in other fish. Prosecutors charged him under a law passed after the Enron scandal, part of the Sarbanes-Oxley Act. It punishes destroying a record, a document, or a tangible object to obstruct a federal investigation. A fish is a tangible object, right? Five justices said this charge didn't fit. The lead opinion said a tangible object under that law means something used to record or preserve information, like a hard drive or a ledger. Not a grouper. But here's what the clickbait leaves out. Yates was also convicted under a different law, for destroying property to prevent a federal seizure, and he didn't challenge that one. So destroying evidence did not become legal. He won on the one statute that was built for shredded records. [loop] So before you call a fish a document, remember",
+ "publish_at": "2026-11-05T12:00:00-05:00",
+ "sources": [
+  "https://www.law.cornell.edu/supremecourt/text/13-7451"
+ ],
+ "legal_status": "Historical ruling, 2015",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "bg-harbor",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🐟🗑️",
+     "text": ""
+    }
+   ]
+  },
+  {
+   "at": "this is a us supreme",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ]
+  },
+  {
+   "at": "a florida wildlife officer",
+   "bg": "bg-harbor",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "x": 0.68
+    },
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "card": "UNDERSIZED RED GROUPER",
+   "card_at": "red grouper"
+  },
+  {
+   "at": "instead yates had",
+   "bg": "bg-harbor",
+   "cast": [
+    {
+     "id": "larry:surprised",
+     "x": 0.3
+    }
+   ],
+   "card": "OVERBOARD!",
+   "card_at": "throw them overboard",
+   "zooms": [
+    {
+     "at": "throw them overboard",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "prosecutors charged him",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "doc",
+     "text": "Sarbanes-Oxley",
+     "sub": "Passed after Enron"
+    }
+   ]
+  },
+  {
+   "at": "it punishes destroying",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📄💾🐟?",
+     "text": "Tangible object?"
+    }
+   ]
+  },
+  {
+   "at": "five justices said",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:surprised",
+     "x": 0.3
+    }
+   ],
+   "card": "CHARGE DOESN'T FIT",
+   "card_at": "didn't fit"
+  },
+  {
+   "at": "the lead opinion said",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "💾📒",
+     "text": "Records info"
+    }
+   ]
+  },
+  {
+   "at": "not a grouper",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:smug"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🐟",
+     "text": "Not a record"
+    }
+   ]
+  },
+  {
+   "at": "but here's what the clickbait",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:concerned",
+     "x": 0.3
+    }
+   ],
+   "card": "OTHER CONVICTION STOOD",
+   "card_at": "didn't challenge that one"
+  },
+  {
+   "at": "so destroying evidence",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🚫",
+     "text": "Still illegal"
+    }
+   ]
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so before you call a fish",
+   "bg": "bg-harbor",
+   "loop": true
+  }
+ ]
+}

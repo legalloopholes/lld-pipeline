@@ -1,0 +1,193 @@
+{
+ "video_id": "LLD-033",
+ "episode": "E33",
+ "hook": "GOVERNMENT WORK = FREE?",
+ "highlight": [
+  "copyright",
+  "employee",
+  "official"
+ ],
+ "youtube_title": "Some Government Work Has No Copyright — and You Can Reuse It 🦝⚖️",
+ "caption": "Under 17 U.S.C. §105, works made by federal employees as part of their official duties have no U.S. copyright. Contractor or licensed material on a .gov site can still be protected, and seals, endorsements and privacy are separate issues.",
+ "hashtags": [
+  "#legalloopholes",
+  "#copyright",
+  "#publicdomain",
+  "#creators",
+  "#lawtok",
+  "#didyouknow"
+ ],
+ "script": "Some work paid for by the U.S. government can be copied, even commercially, without a copyright license. It comes from section one-oh-five of the copyright statute: copyright protection is not available for any work of the United States government. And that phrase means something specific: a work prepared by a federal officer or employee as part of their official duties. So imagine a government website with two photos. One was taken by a federal employee on the job. Under this rule, it generally has no U.S. copyright, so you may be able to reuse it, even in a commercial project. The other was taken by an outside contractor, or licensed from a photographer. That one can be fully copyrighted, even though it sits on a government page. The government can also hold copyrights that are transferred to it. So federal funding alone isn't enough, and a dot-gov address isn't proof. And copyright isn't the only rule. Government seals and logos can have their own restrictions. You can't imply a government endorsement. Photos of people can raise privacy issues. There are narrow exceptions written into the statute, like certain scholarly works by faculty at some federal schools. And this is about federal works. State governments follow different rules. [loop] So before you assume that government photo is free to use, remember",
+ "publish_at": "2026-11-17T19:00:00-05:00",
+ "sources": [
+  "https://www.law.cornell.edu/uscode/text/17/105"
+ ],
+ "legal_status": "Current public-domain rule",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "bg-capitol",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🏛️🆓",
+     "text": ""
+    }
+   ]
+  },
+  {
+   "at": "it comes from section",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "doc",
+     "text": "17 U.S.C. §105",
+     "sub": "Copyright Act"
+    }
+   ]
+  },
+  {
+   "at": "copyright protection is not available",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:surprised"
+    }
+   ],
+   "card": "NO COPYRIGHT FOR FEDERAL WORKS",
+   "card_at": "not available",
+   "zooms": [
+    {
+     "at": "not available",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "and that phrase means",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:pointing",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🧑‍💼",
+     "text": "Employee, on the job"
+    }
+   ]
+  },
+  {
+   "at": "so imagine a government",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "card": "HYPOTHETICAL",
+   "card_at": "so imagine"
+  },
+  {
+   "at": "one was taken by a federal",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:smug"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📷✅",
+     "text": "Employee photo: free"
+    }
+   ]
+  },
+  {
+   "at": "the other was taken",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📷©️",
+     "text": "Contractor: protected"
+    }
+   ]
+  },
+  {
+   "at": "so federal funding alone",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:pointing",
+     "x": 0.3
+    }
+   ],
+   "card": ".GOV ISN'T PROOF",
+   "card_at": "isn't proof"
+  },
+  {
+   "at": "and copyright isn't the only",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🦅🚫",
+     "text": "Seals & endorsements"
+    }
+   ]
+  },
+  {
+   "at": "and this is about federal",
+   "bg": "bg-capitol",
+   "cast": [
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "card": "STATES: DIFFERENT RULES",
+   "card_at": "different rules"
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so before you assume",
+   "bg": "bg-capitol",
+   "loop": true
+  }
+ ]
+}

@@ -1,0 +1,194 @@
+{
+ "video_id": "LLD-040",
+ "episode": "E40",
+ "hook": "A LAW MISSING ONE DETAIL",
+ "highlight": [
+  "eighteen",
+  "infants",
+  "amended"
+ ],
+ "youtube_title": "The Safe Haven Law That Forgot an Age Limit (Nebraska, 2008) 🦝⚖️",
+ "caption": "Nebraska's 2008 safe haven law covered children up to 18. In 127 days, 36 children — none of them infants — were surrendered. A special session limited the law to infants up to 30 days old.",
+ "hashtags": [
+  "#legalloopholes",
+  "#nebraska",
+  "#history",
+  "#lawmaking",
+  "#lawtok",
+  "#familylaw"
+ ],
+ "script": "In two thousand eight, Nebraska left an age limit out of a law, and families began surrendering teenagers at hospitals. This is a serious story, about drafting, and about families who needed help. Safe haven laws are usually meant to let a parent safely surrender a newborn, instead of abandoning a baby. Nebraska passed its version in two thousand eight. But the law didn't limit it to infants. According to the Nebraska State Historical Society, it let parents or guardians leave children up to age eighteen at a hospital without abandonment charges. Over one hundred twenty-seven days, thirty-six children were surrendered. None of them were newborns or infants. Many were brought in from other states, and a number had mental health or behavioral issues. It exposed a gap in the wording, and families who felt they had nowhere else to turn. The governor called a special session. Lawmakers amended the law so it applied only to infants up to thirty days old, effective November twenty-second, two thousand eight. So this is history, not guidance, and it was never a trick. If a family you know is struggling, local family services or a doctor are a far better place to start. [loop] So when someone tells you every word in a law matters, remember",
+ "publish_at": "2026-11-21T12:00:00-05:00",
+ "sources": [
+  "https://history.nebraska.gov/safe-haven-law-2008/"
+ ],
+ "legal_status": "Historical loophole; closed in 2008",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📜🔍",
+     "text": ""
+    }
+   ]
+  },
+  {
+   "at": "this is a serious story",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "card": "A SERIOUS STORY",
+   "card_at": "serious story"
+  },
+  {
+   "at": "safe haven laws are usually",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🏥👶",
+     "text": "Meant for newborns"
+    }
+   ]
+  },
+  {
+   "at": "but the law didn't limit",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "doc",
+     "text": "LB157 (2008)",
+     "sub": "Nebraska"
+    }
+   ]
+  },
+  {
+   "at": "according to the nebraska",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:surprised"
+    }
+   ],
+   "card": "UP TO AGE 18",
+   "card_at": "up to age eighteen",
+   "zooms": [
+    {
+     "at": "up to age eighteen",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "over one hundred",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🏥",
+     "text": "36 children, 127 days"
+    }
+   ]
+  },
+  {
+   "at": "many were brought in",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🗺️",
+     "text": "From other states"
+    }
+   ]
+  },
+  {
+   "at": "it exposed a gap",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:thinking"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "✏️🤝",
+     "text": "Wording + real need"
+    }
+   ]
+  },
+  {
+   "at": "the governor called",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "card": "FIXED: INFANTS UP TO 30 DAYS",
+   "card_at": "thirty days old"
+  },
+  {
+   "at": "so this is history",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🕰️",
+     "text": "History, not guidance"
+    }
+   ]
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so when someone tells you",
+   "bg": "white",
+   "loop": true
+  }
+ ]
+}

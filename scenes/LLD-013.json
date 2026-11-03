@@ -1,0 +1,219 @@
+{
+ "video_id": "LLD-013",
+ "episode": "E13",
+ "hook": "FREE LAND AFTER 10 YEARS?",
+ "highlight": [
+  "ten",
+  "counter",
+  "notified"
+ ],
+ "youtube_title": "Can Land Become Yours Without the Owner Ever Selling It? 🦝⚖️",
+ "caption": "In England and Wales, 10 years of adverse possession lets a squatter apply for registered land — but the owner is notified and can usually defeat it by counter-notice, unless narrow conditions apply.",
+ "hashtags": [
+  "#legalloopholes",
+  "#property",
+  "#uk",
+  "#landlaw",
+  "#lawtok",
+  "#squatters"
+ ],
+ "script": "Can land become yours without the owner ever selling it? In England and Wales, sometimes, but not the way the internet tells it. This is about registered land, under the Land Registration Act of two thousand two. The Land Registry says that after ten years of adverse possession, a squatter is entitled to apply to be registered as the owner. Picture a hypothetical. A neighbor fences in a strip of garden that the title map says belongs next door, and treats it as theirs for ten years. Can they apply? Yes. Do they automatically win? No. The registered owner gets notified and can serve a counter-notice. Once they do, the application is rejected unless the squatter fits one of three narrow conditions. One: it would be unconscionable to remove them, for example, if the owner knowingly let them build there. Two: they're entitled to the land for some other reason, like an inheritance. Three: a reasonable mistake about the boundary of land next to their own, lasting at least ten years. If the application is rejected and the squatter stays two more years, they can apply again, and then, subject to exceptions, objections won't stop it. And squatting in a residential building can itself be a crime in England and Wales. [loop] So before you move your fence a few feet, remember",
+ "publish_at": "2026-11-07T19:00:00-05:00",
+ "sources": [
+  "https://www.gov.uk/government/publications/adverse-possession-of-registered-land/practice-guide-4-adverse-possession-of-registered-land"
+ ],
+ "legal_status": "Current doctrine with safeguards",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "bg-neighborhood",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🏡🚧",
+     "text": ""
+    }
+   ]
+  },
+  {
+   "at": "in england and wales",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🇬🇧",
+     "text": "England & Wales"
+    }
+   ]
+  },
+  {
+   "at": "this is about registered land",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "doc",
+     "text": "Land Registration Act 2002",
+     "sub": "Schedule 6"
+    }
+   ]
+  },
+  {
+   "at": "the land registry says",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "card": "10 YEARS → CAN APPLY",
+   "card_at": "entitled to apply"
+  },
+  {
+   "at": "picture a hypothetical",
+   "bg": "bg-neighborhood",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "x": 0.68
+    },
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "card": "HYPOTHETICAL",
+   "card_at": "picture a hypothetical"
+  },
+  {
+   "at": "can they apply",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:smug"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📝",
+     "text": "Apply: yes"
+    }
+   ]
+  },
+  {
+   "at": "do they automatically win",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:surprised"
+    }
+   ],
+   "card": "AUTOMATIC WIN? NO.",
+   "card_at": "do they automatically win",
+   "zooms": [
+    {
+     "at": "automatically win",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "the registered owner gets notified",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:pointing",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📬",
+     "text": "Counter-notice"
+    }
+   ]
+  },
+  {
+   "at": "one it would be unconscionable",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "1️⃣2️⃣3️⃣",
+     "text": "Narrow conditions"
+    }
+   ]
+  },
+  {
+   "at": "if the application is rejected",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:thinking",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "⏳",
+     "text": "+2 more years"
+    }
+   ]
+  },
+  {
+   "at": "and squatting in a residential",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🚨🏠",
+     "text": "Can be a crime"
+    }
+   ]
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so before you move your fence",
+   "bg": "bg-neighborhood",
+   "loop": true
+  }
+ ]
+}

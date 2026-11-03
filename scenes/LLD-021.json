@@ -1,0 +1,217 @@
+{
+ "video_id": "LLD-021",
+ "episode": "E21",
+ "hook": "THE WAIVER MIGHT BE VOID",
+ "highlight": [
+  "void",
+  "negligence",
+  "waiver"
+ ],
+ "youtube_title": "You Signed the Gym Waiver. In New York, That May Not Protect the Gym 🦝⚖️",
+ "caption": "New York General Obligations Law 5-326 voids waivers at paid recreational facilities that try to excuse the operator's own negligence. Injury alone isn't negligence, and not every program is covered.",
+ "hashtags": [
+  "#legalloopholes",
+  "#newyork",
+  "#gym",
+  "#waiver",
+  "#lawtok",
+  "#consumerrights"
+ ],
+ "script": "You signed the gym waiver, but in New York, that doesn't always mean the gym escapes a negligence claim. New York's General Obligations Law has a section aimed at a specific kind of fine print. If you pay to use a pool, a gym, an amusement park, or a similar recreational place, any agreement that exempts the owner or operator from liability for its own negligence, or its employees' negligence, is void as against public policy and wholly unenforceable. So picture a hypothetical. You pay for a gym membership and sign a waiver saying the gym isn't responsible for anything. Then you get hurt because staff ignored a broken machine. Under this law, that waiver can't shield the gym from your negligence claim. But this is where the internet oversells it. First, the law covers certain paid recreational facilities. Not every sports release or instructional program falls under it. Second, getting hurt doesn't prove negligence. You still have to show the gym was careless, and that the carelessness caused the injury. Third, the gym can still argue you accepted the normal risks of the activity. So the waiver isn't magic, but neither is the statute. [loop] So the next time you sign a stack of gym paperwork, remember",
+ "publish_at": "2026-11-11T19:00:00-05:00",
+ "sources": [
+  "https://www.nysenate.gov/legislation/laws/GOB/5-326"
+ ],
+ "legal_status": "Current statutory protection",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🏋️📝",
+     "text": ""
+    }
+   ]
+  },
+  {
+   "at": "new york's general obligations",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "doc",
+     "text": "GOL §5-326",
+     "sub": "New York"
+    }
+   ]
+  },
+  {
+   "at": "if you pay to use",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🏊🏋️🎢",
+     "text": "Paid recreation"
+    }
+   ]
+  },
+  {
+   "at": "is void as against",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:surprised"
+    }
+   ],
+   "card": "VOID & UNENFORCEABLE",
+   "card_at": "wholly unenforceable",
+   "zooms": [
+    {
+     "at": "wholly unenforceable",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "so picture a hypothetical",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "x": 0.68
+    },
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "card": "HYPOTHETICAL",
+   "card_at": "picture a hypothetical"
+  },
+  {
+   "at": "under this law",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:smug"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📝❌",
+     "text": "Waiver can't shield"
+    }
+   ]
+  },
+  {
+   "at": "but this is where",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "⚠️",
+     "text": "Oversold online"
+    }
+   ]
+  },
+  {
+   "at": "not every sports release",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🎓",
+     "text": "Not every program"
+    }
+   ]
+  },
+  {
+   "at": "second getting hurt",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "card": "INJURY ≠ NEGLIGENCE",
+   "card_at": "doesn't prove negligence"
+  },
+  {
+   "at": "third the gym can still",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:thinking"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🎯",
+     "text": "Assumed risk"
+    }
+   ]
+  },
+  {
+   "at": "so the waiver isn't magic",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "card": "NEITHER SIDE IS MAGIC",
+   "card_at": "neither is the statute"
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so the next time you sign",
+   "bg": "bg-office",
+   "loop": true
+  }
+ ]
+}

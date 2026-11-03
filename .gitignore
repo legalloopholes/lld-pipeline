@@ -1,0 +1,7 @@
+node_modules/
+secrets/
+*.mp4
+*.wav
+*.srt
+__pycache__/
+.DS_Store

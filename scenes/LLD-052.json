@@ -1,0 +1,201 @@
+{
+ "video_id": "LLD-052",
+ "episode": "E52",
+ "hook": "BIG MAC… PARTLY LOST?",
+ "highlight": [
+  "genuine",
+  "use",
+  "revoked"
+ ],
+ "youtube_title": "McDonald's Lost Part of Its 'Big Mac' Trademark in the EU 🦝⚖️",
+ "caption": "In June 2024 the EU General Court partially revoked the BIG MAC trade mark for chicken products and restaurant services for lack of proven genuine use. Protection for meat sandwiches remained.",
+ "hashtags": [
+  "#legalloopholes",
+  "#mcdonalds",
+  "#trademark",
+  "#eu",
+  "#lawtok",
+  "#branding"
+ ],
+ "script": "Even McDonald's can lose trademark protection when it can't prove the right kind of use. This is the European Union's General Court, in June twenty twenty-four. In the EU, a registered trademark can be revoked for goods or services where it hasn't been genuinely used over a five-year period. McDonald's Big Mac registration covered more than burgers. It also listed things like chicken sandwiches, foods made from poultry, and services for operating restaurants. A challenge was brought, and the court looked at the evidence from twenty twelve to twenty seventeen. For chicken sandwiches, McDonald's had advertising posters, a TV ad and some social media screenshots. But the court said the evidence didn't show the extent of the mark's use for chicken sandwiches: how much, how often, how regularly. So that part was revoked, along with poultry foods. For restaurant services, the court said using Big Mac for a meat sandwich can't prove use for running restaurants. So that part went too. But the burger side survived. Protection for meat sandwiches, and related sandwich and meat food categories, stayed in place. So this wasn't McDonald's losing the Big Mac. It was a lesson in use it or lose it, one category at a time. [loop] So before you register a trademark for everything under the sun, remember",
+ "publish_at": "2026-11-27T12:00:00-05:00",
+ "sources": [
+  "https://www.euipo.europa.eu/cs/law/recent-case-law/big-mac-is-used-for-burgers-not-restaurants"
+ ],
+ "legal_status": "Historical ruling, 2024",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "bg-shop",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🍔™️",
+     "text": ""
+    }
+   ]
+  },
+  {
+   "at": "this is the european union's",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🇪🇺",
+     "text": "General Court, 2024"
+    }
+   ]
+  },
+  {
+   "at": "in the eu a registered",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "card": "USE IT OR LOSE IT",
+   "card_at": "genuinely used"
+  },
+  {
+   "at": "mcdonald's big mac registration",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🍔🍗🍽️",
+     "text": "Burgers + more"
+    }
+   ]
+  },
+  {
+   "at": "a challenge was brought",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "card": "EVIDENCE: 2012–2017",
+   "card_at": "looked at the evidence"
+  },
+  {
+   "at": "for chicken sandwiches",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:thinking"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🍗📸",
+     "text": "Posters & ads"
+    }
+   ]
+  },
+  {
+   "at": "but the court said",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:surprised",
+     "x": 0.3
+    }
+   ],
+   "card": "CHICKEN: REVOKED",
+   "card_at": "that part was revoked",
+   "zooms": [
+    {
+     "at": "that part was revoked",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "for restaurant services",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🍽️❌",
+     "text": "Restaurants: revoked"
+    }
+   ]
+  },
+  {
+   "at": "but the burger side survived",
+   "bg": "bg-shop",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "card": "MEAT SANDWICHES: KEPT",
+   "card_at": "burger side survived"
+  },
+  {
+   "at": "so this wasn't mcdonald's",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📋✂️",
+     "text": "Category by category"
+    }
+   ]
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so before you register",
+   "bg": "bg-shop",
+   "loop": true
+  }
+ ]
+}

@@ -1,0 +1,200 @@
+{
+ "video_id": "LLD-017",
+ "episode": "E17",
+ "hook": "THE ROTH IRA BACKDOOR",
+ "highlight": [
+  "conversion",
+  "income",
+  "taxable"
+ ],
+ "youtube_title": "Too Rich for a Roth IRA? The 'Backdoor' Explained 🦝⚖️",
+ "caption": "Direct Roth IRA contributions have income limits; conversions don't. The 'backdoor' pairs a nondeductible traditional IRA contribution with a conversion — but existing pre-tax IRA money can make part of it taxable.",
+ "hashtags": [
+  "#legalloopholes",
+  "#rothira",
+  "#taxes",
+  "#retirement",
+  "#personalfinance",
+  "#lawtok"
+ ],
+ "script": "Make too much money to put cash straight into a Roth IRA? There's a different legal route, and people call it the backdoor. This is U.S. federal tax law. A Roth IRA is popular because, if you follow the rules, qualified withdrawals aren't taxed. But direct contributions to a Roth come with income limits. Earn above them, and you can't contribute directly. Conversions are different. The IRS says that regardless of your income, you may be able to convert money from a traditional IRA into a Roth IRA. So the backdoor is really two steps. First, a contribution to a traditional IRA that you don't deduct. Then, a conversion of that money into a Roth. It's reported on an IRS form, Form eighty-six-oh-six. Here's what the shortcut videos skip. The normal yearly contribution limits still apply, and you need taxable compensation to contribute at all. A conversion taxes any untaxed money that's being converted. And if you already have pre-tax money in traditional IRAs, the IRS looks at all of them together, so part of your conversion can be taxable, even though your new contribution wasn't deducted. Once you convert, you can't undo it. This is an explanation, not a recommendation. Get professional tax advice before moving retirement money. [loop] So if someone tells you high earners can't have a Roth, remember",
+ "publish_at": "2026-11-09T19:00:00-05:00",
+ "sources": [
+  "https://www.irs.gov/taxtopics/tc309",
+  "https://www.irs.gov/retirement-plans/retirement-plans-faqs-regarding-iras",
+  "https://www.irs.gov/instructions/i8606"
+ ],
+ "legal_status": "Current tax-law workaround",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🚪💰",
+     "text": ""
+    }
+   ]
+  },
+  {
+   "at": "this is us federal tax law",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🏦",
+     "text": "Roth IRA"
+    }
+   ]
+  },
+  {
+   "at": "but direct contributions",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🚧",
+     "text": "Income limits"
+    }
+   ]
+  },
+  {
+   "at": "conversions are different",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:surprised"
+    }
+   ],
+   "card": "CONVERSIONS: NO INCOME LIMIT",
+   "card_at": "regardless of your income",
+   "zooms": [
+    {
+     "at": "regardless of your income",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "so the backdoor is really",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:pointing",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "1️⃣➡️2️⃣",
+     "text": "Contribute, convert"
+    }
+   ]
+  },
+  {
+   "at": "it's reported on",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "doc",
+     "text": "Form 8606",
+     "sub": "IRS"
+    }
+   ]
+  },
+  {
+   "at": "here's what the shortcut",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📏",
+     "text": "Limits still apply"
+    }
+   ]
+  },
+  {
+   "at": "and if you already have",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "card": "PRO-RATA: PART CAN BE TAXED",
+   "card_at": "looks at all of them together"
+  },
+  {
+   "at": "once you convert",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "↩️❌",
+     "text": "No undo"
+    }
+   ]
+  },
+  {
+   "at": "this is an explanation",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:concerned",
+     "x": 0.3
+    }
+   ],
+   "card": "NOT A RECOMMENDATION",
+   "card_at": "not a recommendation"
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so if someone tells you",
+   "bg": "bg-office",
+   "loop": true
+  }
+ ]
+}

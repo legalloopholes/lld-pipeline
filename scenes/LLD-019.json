@@ -1,0 +1,202 @@
+{
+ "video_id": "LLD-019",
+ "episode": "E19",
+ "hook": "THIS THREAT DOESN'T WORK",
+ "highlight": [
+  "unenforceable",
+  "penalize",
+  "will"
+ ],
+ "youtube_title": "'Challenge My Will and Get Nothing'? Florida Says No 🦝⚖️",
+ "caption": "Florida Statutes 732.517 makes will clauses that penalize someone for contesting the will unenforceable. The challenge still has to succeed on its own merits, and other states treat these clauses differently.",
+ "hashtags": [
+  "#legalloopholes",
+  "#florida",
+  "#wills",
+  "#estateplanning",
+  "#lawtok",
+  "#inheritance"
+ ],
+ "script": "Your will says: challenge this and you get nothing. But in Florida, that threat is unenforceable. These are called no-contest clauses, and the idea is to scare relatives out of fighting over a will. Florida's statute on them is short. A provision in a will that tries to penalize any interested person for contesting the will, or for starting other proceedings about the estate, is unenforceable. That's it. One sentence. So picture a hypothetical will. I leave my son one hundred thousand dollars, but if he challenges this will, he gets nothing. In Florida, that penalty can't be enforced. He can bring his challenge without that threat hanging over him. But here's the crucial part. Taking away the penalty doesn't make the challenge any stronger. He still has to prove something is legally wrong with the will, like a problem with how it was signed, or undue influence. If he loses, the will stands as written. The statute just stops the will from punishing him for trying. And Florida's approach isn't universal. Other states treat no-contest clauses differently, so the answer really depends on where the estate is handled. If you're writing a will, or thinking of challenging one, that's a conversation for a lawyer in that state. [loop] So before you put a scary clause in your will, remember",
+ "publish_at": "2026-11-10T19:00:00-05:00",
+ "sources": [
+  "https://www.leg.state.fl.us/statutes/index.cfm/0100-0199/0110/Sections/index.cfm?App_mode=Display_Statute&Search_String=&URL=0700-0799%2F0732%2FSections%2F0732.517.html"
+ ],
+ "legal_status": "Current statutory exception",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📜⚠️",
+     "text": "Contest = nothing?"
+    }
+   ]
+  },
+  {
+   "at": "these are called",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "😱📜",
+     "text": "No-contest clause"
+    }
+   ]
+  },
+  {
+   "at": "florida's statute on them",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:pointing",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "doc",
+     "text": "§732.517",
+     "sub": "Florida Statutes"
+    }
+   ]
+  },
+  {
+   "at": "is unenforceable",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:surprised"
+    }
+   ],
+   "card": "UNENFORCEABLE",
+   "card_at": "is unenforceable",
+   "zooms": [
+    {
+     "at": "is unenforceable",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "so picture a hypothetical",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "x": 0.68
+    },
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "card": "HYPOTHETICAL",
+   "card_at": "picture a hypothetical"
+  },
+  {
+   "at": "in florida that penalty",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:smug"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "❌⚠️",
+     "text": "Penalty: void"
+    }
+   ]
+  },
+  {
+   "at": "but here's the crucial part",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "⚖️",
+     "text": "Still must win"
+    }
+   ]
+  },
+  {
+   "at": "he still has to prove",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "card": "PROVE THE WILL IS INVALID",
+   "card_at": "legally wrong"
+  },
+  {
+   "at": "and florida's approach",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🗺️",
+     "text": "States differ"
+    }
+   ]
+  },
+  {
+   "at": "if you're writing a will",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:concerned",
+     "x": 0.3
+    }
+   ],
+   "card": "ASK A LOCAL LAWYER",
+   "card_at": "conversation for a lawyer"
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so before you put a scary",
+   "bg": "bg-office",
+   "loop": true
+  }
+ ]
+}

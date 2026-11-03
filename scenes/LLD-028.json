@@ -1,0 +1,198 @@
+{
+ "video_id": "LLD-028",
+ "episode": "E28",
+ "hook": "SWAP BUILDINGS, DELAY TAX",
+ "highlight": [
+  "deferral",
+  "exchange",
+  "deadlines"
+ ],
+ "youtube_title": "Swap One Property for Another and Postpone the Tax Bill (1031) 🦝⚖️",
+ "caption": "Section 1031 lets qualifying exchanges of business or investment real estate postpone tax on the gain. It's deferral, not forgiveness, with strict 45- and 180-day deadlines; personal homes don't qualify.",
+ "hashtags": [
+  "#legalloopholes",
+  "#realestate",
+  "#1031exchange",
+  "#taxes",
+  "#lawtok",
+  "#investing"
+ ],
+ "script": "An investor can swap one property for another and put off the tax bill, but the details make or break it. This is section ten thirty-one of the U.S. tax code, the like-kind exchange. Normally, selling an investment property at a profit means tax on the gain. But in a qualifying exchange of real property held for business or investment, no gain is recognized at the time of the exchange. Picture a hypothetical. An investor trades one rental building for another through the exchange rules, instead of cashing out. If it qualifies, the tax is postponed. Here's what the shortcuts leave out. It's deferral, not forgiveness. The new property's tax basis is figured from the old one, so the gain is still waiting for later. Since twenty eighteen, it only works for real property. A home used solely as your personal residence doesn't qualify, and neither does property held mainly for resale. The deadlines are strict. In a deferred exchange, the replacement property has to be identified within forty-five days, and received within one hundred eighty days, or by your tax return's due date if that comes first. And cash you receive along the way can be taxed. Selling one place and buying another doesn't automatically count. [loop] So before you call your next property swap tax-free, remember",
+ "publish_at": "2026-11-15T12:00:00-05:00",
+ "sources": [
+  "https://www.irs.gov/instructions/i8824"
+ ],
+ "legal_status": "Current statutory deferral",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "bg-neighborhood",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🏢🔁🏢",
+     "text": ""
+    }
+   ]
+  },
+  {
+   "at": "this is section",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "doc",
+     "text": "Section 1031",
+     "sub": "U.S. tax code"
+    }
+   ]
+  },
+  {
+   "at": "normally selling an investment",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "💵📈",
+     "text": "Gain = taxed"
+    }
+   ]
+  },
+  {
+   "at": "but in a qualifying exchange",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:surprised"
+    }
+   ],
+   "card": "NO GAIN RECOGNIZED… YET",
+   "card_at": "no gain is recognized",
+   "zooms": [
+    {
+     "at": "no gain is recognized",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "picture a hypothetical",
+   "bg": "bg-neighborhood",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "x": 0.68
+    },
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "card": "HYPOTHETICAL",
+   "card_at": "picture a hypothetical"
+  },
+  {
+   "at": "here's what the shortcuts",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "⏸️",
+     "text": "Deferred, not forgiven"
+    }
+   ]
+  },
+  {
+   "at": "since twenty eighteen",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🏠❌",
+     "text": "Your home: no"
+    }
+   ]
+  },
+  {
+   "at": "the deadlines are strict",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:concerned",
+     "x": 0.3
+    }
+   ],
+   "card": "45 DAYS · 180 DAYS",
+   "card_at": "has to be identified"
+  },
+  {
+   "at": "and cash you receive",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "💵",
+     "text": "Cash = taxable"
+    }
+   ]
+  },
+  {
+   "at": "selling one place",
+   "bg": "bg-neighborhood",
+   "cast": [
+    {
+     "id": "larry:concerned",
+     "x": 0.3
+    }
+   ],
+   "card": "NOT AUTOMATIC",
+   "card_at": "doesn't automatically count"
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so before you call your next",
+   "bg": "bg-neighborhood",
+   "loop": true
+  }
+ ]
+}

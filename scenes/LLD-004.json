@@ -1,0 +1,203 @@
+{
+ "video_id": "LLD-004",
+ "episode": "E04",
+ "hook": "BEES… LEGALLY FISH?",
+ "highlight": [
+  "fish",
+  "invertebrates",
+  "bees"
+ ],
+ "youtube_title": "California Protected Bees by Calling Them… Fish? 🦝⚖️",
+ "caption": "A California appeals court held in 2022 that the Fish and Game Code's definition of fish, which includes invertebrates, lets the state list bumble bees under its Endangered Species Act. Legally classified — not biologically fish.",
+ "hashtags": [
+  "#legalloopholes",
+  "#bees",
+  "#california",
+  "#savethebees",
+  "#lawtok",
+  "#weirdlaws"
+ ],
+ "script": "California found a way to protect bumble bees by fitting them into the legal definition of fish. Here's how. California's Endangered Species Act protects birds, mammals, fish, amphibians, reptiles and plants. Insects don't get their own category. But the state's Fish and Game Code defines fish to include invertebrates, along with things like mollusks and crustaceans. So, in twenty twenty-two, a California appeals court had to decide: can that definition reach a bee that has never lived in water? Its answer was yes. The court said the definition isn't limited to animals that live in water, so the state commission can list a land-dwelling invertebrate, like a bumble bee, if it meets the law's requirements. Even the case name sounds like a joke: Almond Alliance versus the Fish and Game Commission. When the California Supreme Court declined to review the case, the chief justice wrote that the denial should not be read as the court deciding that bumble bees are fish. And biologically, they obviously aren't. This is a legal classification for one wildlife law, not a rule that bees are fish everywhere in California. [loop] So if you ever spot a bee at the fish market, just remember",
+ "publish_at": "2026-11-03T12:00:00-05:00",
+ "sources": [
+  "https://www.courts.ca.gov/opinions/archive/C093542S.PDF"
+ ],
+ "legal_status": "Ruling, 2022 (review denied)",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "bg-campsite",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🐝➡️🐟",
+     "text": ""
+    }
+   ]
+  },
+  {
+   "at": "here's how",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "doc",
+     "text": "Endangered Species Act",
+     "sub": "California"
+    }
+   ]
+  },
+  {
+   "at": "insects don't get",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:surprised"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🐝",
+     "text": "No insect category"
+    }
+   ]
+  },
+  {
+   "at": "but the state's fish",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🐟🦀🐌",
+     "text": "Fish = invertebrates"
+    }
+   ]
+  },
+  {
+   "at": "so in twenty",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:thinking",
+     "x": 0.3
+    }
+   ],
+   "card": "A BEE THAT NEVER SWAM?",
+   "card_at": "never lived in water"
+  },
+  {
+   "at": "its answer was yes",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:surprised",
+     "x": 0.3
+    }
+   ],
+   "zooms": [
+    {
+     "at": "its answer was yes",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "the court said",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🐝✅",
+     "text": "Can be listed"
+    }
+   ]
+  },
+  {
+   "at": "even the case name",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:smug"
+    }
+   ],
+   "card": "ALMOND ALLIANCE v. FISH AND GAME",
+   "card_at": "almond alliance"
+  },
+  {
+   "at": "when the california supreme",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge-confused",
+     "x": 0.7
+    },
+    {
+     "id": "larry:concerned",
+     "x": 0.3
+    }
+   ],
+   "card": "NOT A RULING THAT BEES ARE FISH",
+   "card_at": "should not be read"
+  },
+  {
+   "at": "and biologically",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:smug"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🐝≠🐟",
+     "text": "Biology unchanged"
+    }
+   ]
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so if you ever spot",
+   "bg": "bg-campsite",
+   "loop": true
+  }
+ ]
+}

@@ -1,0 +1,200 @@
+{
+ "video_id": "LLD-049",
+ "episode": "E49",
+ "hook": "A GAP… FOR ONE DAY",
+ "highlight": [
+  "emergency",
+  "possession",
+  "older"
+ ],
+ "youtube_title": "The Court Ruling That Briefly Opened a Gap in Ireland's Drug Laws (2015) 🦝⚖️",
+ "caption": "In March 2015, an Irish Court of Appeal ruling affected possession offences for certain newer psychoactive substances added by government order. Older drugs weren't affected, supply stayed illegal, and emergency legislation re-controlled everything within about a day.",
+ "hashtags": [
+  "#legalloopholes",
+  "#ireland",
+  "#lawmaking",
+  "#history",
+  "#lawtok",
+  "#constitution"
+ ],
+ "script": "A court ruling briefly knocked certain drugs out of Ireland's possession laws. This is a story about how laws get made, not a guide to anything else. Ireland's Misuse of Drugs Act of nineteen seventy-seven let the government add new substances to the list of controlled drugs. Over the years, successive governments used that power to control newer psychoactive substances. On March tenth, twenty fifteen, the Court of Appeal ruled on a challenge to that power, and the ruling went against it. According to Ireland's Department of Health, that affected possession of certain newer psychoactive substances that had been added that way. It did not affect the laws on older drugs like heroin, cocaine or cannabis. And the department said selling and supplying psychoactive substances was still an offense under other laws. The government had prepared for this outcome. Emergency legislation was introduced that same evening, with the aim of passing both houses of parliament within twenty-four hours, and it re-controlled everything that had been controlled before the ruling. So the gap was real, but it was very short, it never covered selling, and it's long closed. The lesson is how much depends on the way a law gives power to the government in the first place. [loop] So when someone tells you a court legalized drugs overnight, remember",
+ "publish_at": "2026-11-25T19:00:00-05:00",
+ "sources": [
+  "https://www.drugsandalcohol.ie/23570/",
+  "https://www.irishstatutebook.ie/eli/2015/act/6/enacted/en/print.html"
+ ],
+ "legal_status": "Historical gap; closed March 2015",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🇮🇪📜",
+     "text": ""
+    }
+   ]
+  },
+  {
+   "at": "this is a story",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "card": "ABOUT LAWMAKING",
+   "card_at": "how laws get made"
+  },
+  {
+   "at": "ireland's misuse of drugs act",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "doc",
+     "text": "Misuse of Drugs Act 1977",
+     "sub": "Ireland"
+    }
+   ]
+  },
+  {
+   "at": "over the years",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "➕📋",
+     "text": "Added by government"
+    }
+   ]
+  },
+  {
+   "at": "on march tenth",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:surprised",
+     "x": 0.3
+    }
+   ],
+   "card": "COURT OF APPEAL RULING",
+   "card_at": "court of appeal",
+   "zooms": [
+    {
+     "at": "went against it",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "according to ireland's department",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🧪",
+     "text": "Newer substances only"
+    }
+   ]
+  },
+  {
+   "at": "it did not affect",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📋✅",
+     "text": "Older drugs: unchanged"
+    }
+   ]
+  },
+  {
+   "at": "and the department said",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🚫",
+     "text": "Supply still illegal"
+    }
+   ]
+  },
+  {
+   "at": "the government had prepared",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:surprised"
+    }
+   ],
+   "card": "FIXED IN ~24 HOURS",
+   "card_at": "same evening"
+  },
+  {
+   "at": "so the gap was real",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🔒",
+     "text": "Long closed"
+    }
+   ]
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so when someone tells you a court",
+   "bg": "white",
+   "loop": true
+  }
+ ]
+}

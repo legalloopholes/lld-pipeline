@@ -1,0 +1,218 @@
+{
+ "video_id": "LLD-010",
+ "episode": "E10",
+ "hook": "THEY BEAT THE LOTTERY… LEGALLY?",
+ "highlight": [
+  "roll",
+  "expected",
+  "guaranteed"
+ ],
+ "youtube_title": "The Lottery Players Who Made the Odds Work for Them 🦝⚖️",
+ "caption": "Massachusetts' Cash WinFall rolled its jackpot down to smaller prizes once the pool hit $2 million. Organized groups bet heavily on those draws for a favorable expected return. A state review found no illicit activity by bettors; the game was ended.",
+ "hashtags": [
+  "#legalloopholes",
+  "#lottery",
+  "#math",
+  "#massachusetts",
+  "#lawtok",
+  "#truestory"
+ ],
+ "script": "These lottery players found a way to make the odds work for them, without rigging a single draw. This was Massachusetts, and a game called Cash WinFall, which launched in two thousand four. Most lotteries let the jackpot grow and grow. Once the jackpot pool reached two million dollars and nobody hit the top prize, the money rolled down to the smaller prizes, for matching fewer numbers. On those roll-down draws, the smaller prizes got much bigger. Some players did the math. If you bought a huge number of tickets on exactly those draws, the expected return could be worth more than you spent. Expected, not guaranteed. A state review identified four betting groups making enormous purchases during roll-downs, including a group of MIT students. It found no evidence of illicit activity or collusion among the bettors. But it did find that some retailers broke rules to help the big players, sometimes with the okay of some lottery officials. The state treasurer later said those steps should have come much sooner. And Cash WinFall is gone. The state ended the game. Most lotteries aren't built like this, and buying more tickets doesn't beat a normal draw. [loop] So the next time someone tells you nobody can beat the lottery, remember",
+ "publish_at": "2026-11-06T12:00:00-05:00",
+ "sources": [
+  "https://www.mass.gov/doc/letter-to-state-treasurer-steven-grossman-regarding-the-lottery-july-2012/download",
+  "https://archives.lib.state.ma.us/server/api/core/bitstreams/ea1512d5-cb14-4881-a5c1-67fc2cfabcb5/content",
+  "https://www.upi.com/Top_News/US/2012/07/31/Report-Mass-lottery-games-flaw-ignored/UPI-57971343752485/"
+ ],
+ "legal_status": "Historical game-design loophole; game ended",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "bg-shop",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🎟️📈",
+     "text": ""
+    }
+   ]
+  },
+  {
+   "at": "this was massachusetts",
+   "bg": "bg-shop",
+   "cast": [
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🎰",
+     "text": "Cash WinFall"
+    }
+   ]
+  },
+  {
+   "at": "most lotteries let",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "💰⬆️",
+     "text": "Jackpot grows"
+    }
+   ]
+  },
+  {
+   "at": "once the jackpot pool",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "💰⬇️",
+     "text": "Rolls down!"
+    }
+   ]
+  },
+  {
+   "at": "the smaller prizes got",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:surprised"
+    }
+   ],
+   "card": "SMALLER PRIZES GET BIGGER",
+   "card_at": "got much bigger"
+  },
+  {
+   "at": "some players did the math",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:thinking",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🧮",
+     "text": "Expected value"
+    }
+   ]
+  },
+  {
+   "at": "expected not guaranteed",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "card": "EXPECTED ≠ GUARANTEED",
+   "card_at": "expected not guaranteed",
+   "zooms": [
+    {
+     "at": "expected not guaranteed",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "a state review identified",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "doc",
+     "text": "State review",
+     "sub": "Massachusetts"
+    }
+   ]
+  },
+  {
+   "at": "it found no evidence",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "card": "NO EVIDENCE OF COLLUSION BY BETTORS",
+   "card_at": "no evidence"
+  },
+  {
+   "at": "but it did find",
+   "bg": "bg-shop",
+   "cast": [
+    {
+     "id": "larry:concerned",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📋⚠️",
+     "text": "Rules bent"
+    }
+   ]
+  },
+  {
+   "at": "and cash winfall is gone",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🛑",
+     "text": "Game ended"
+    }
+   ]
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so the next time someone tells",
+   "bg": "bg-shop",
+   "loop": true
+  }
+ ]
+}

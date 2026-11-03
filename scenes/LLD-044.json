@@ -1,0 +1,218 @@
+{
+ "video_id": "LLD-044",
+ "episode": "E44",
+ "hook": "NOT TAXED LIKE A PAYCHECK?",
+ "highlight": [
+  "carried",
+  "three",
+  "character"
+ ],
+ "youtube_title": "Why Part of a Fund Manager's Pay Can Be Taxed Differently 🦝⚖️",
+ "caption": "Carried interest is a fund manager's share of profits, which can keep long-term capital gain character. Since 2018, section 1061 generally requires a more-than-three-year holding period; fees are still ordinary income.",
+ "hashtags": [
+  "#legalloopholes",
+  "#taxes",
+  "#privateequity",
+  "#finance",
+  "#lawtok",
+  "#investing"
+ ],
+ "script": "Why can part of a fund manager's pay be taxed differently from an ordinary paycheck? It's called carried interest. In many private equity and investment funds, the manager gets paid in two ways. A management fee, which is generally taxed as ordinary income. And a share of the fund's profits, often held as an interest in a partnership. That profits share is the carried interest. Because these funds are often partnerships, the character of the investment gains can flow through to the partners. So if the fund sells an investment at a long-term capital gain, the manager's share of that gain can keep its long-term character, which is generally taxed at lower rates than wages. That's the debate in one sentence. But Congress added a limit. For tax years after twenty seventeen, section ten sixty-one of the tax code says that for these interests, gain is generally long-term only if the underlying asset was held for more than three years. Otherwise, it's recharacterized as short-term, which is taxed like ordinary income. Here's the limit. Not all fund manager pay qualifies. Fees are still ordinary income, and the rules come with detailed reporting. This is an explanation of how the rules work, not an opinion on whether they should exist. [loop] So the next time someone says fund managers pay less tax, remember",
+ "publish_at": "2026-11-23T12:00:00-05:00",
+ "sources": [
+  "https://www.irs.gov/businesses/partnerships/section-1061-reporting-guidance-faqs"
+ ],
+ "legal_status": "Current tax treatment with restrictions",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "💼📊",
+     "text": ""
+    }
+   ]
+  },
+  {
+   "at": "it's called carried interest",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🧾",
+     "text": "Carried interest"
+    }
+   ]
+  },
+  {
+   "at": "a management fee",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "💵",
+     "text": "Fee: ordinary income"
+    }
+   ]
+  },
+  {
+   "at": "and a share of the fund's",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📈",
+     "text": "Profits share"
+    }
+   ]
+  },
+  {
+   "at": "because these funds",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🤝",
+     "text": "Partnership"
+    }
+   ]
+  },
+  {
+   "at": "so if the fund sells",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:surprised"
+    }
+   ],
+   "card": "LONG-TERM GAIN CAN FLOW THROUGH",
+   "card_at": "manager's share of that gain",
+   "zooms": [
+    {
+     "at": "lower rates than wages",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "but congress added",
+   "bg": "bg-capitol",
+   "cast": [
+    {
+     "id": "char-politician",
+     "x": 0.7
+    },
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "card": "SECTION 1061",
+   "card_at": "added a limit"
+  },
+  {
+   "at": "for tax years after",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "⏳",
+     "text": "Held 3+ years"
+    }
+   ]
+  },
+  {
+   "at": "otherwise it's recharacterized",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "⏱️",
+     "text": "Else: short-term"
+    }
+   ]
+  },
+  {
+   "at": "here's the limit",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "💵",
+     "text": "Fees: still ordinary"
+    }
+   ]
+  },
+  {
+   "at": "this is an explanation",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "card": "EXPLANATION, NOT OPINION",
+   "card_at": "not an opinion"
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so the next time someone says fund",
+   "bg": "bg-office",
+   "loop": true
+  }
+ ]
+}

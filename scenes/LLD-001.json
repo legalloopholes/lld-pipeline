@@ -1,0 +1,242 @@
+{
+ "video_id": "LLD-001",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "bg-campsite",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "x": 0.66
+    },
+    {
+     "id": "larry:sneaky",
+     "x": 0.33,
+     "anim": "tiptoe"
+    }
+   ]
+  },
+  {
+   "at": "quick disclaimer",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:neutral"
+    }
+   ],
+   "sfx": "none"
+  },
+  {
+   "at": "well what if",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "map-us",
+     "at": "a place in the united",
+     "hold": 3.2,
+     "h": 0.3
+    },
+    {
+     "id": "prop-constitution",
+     "at": "constitution could"
+    }
+   ]
+  },
+  {
+   "at": "this is the yellowstone",
+   "bg": "bg-yellowstone",
+   "cast": [
+    {
+     "id": "larry:smug"
+    }
+   ],
+   "card": "ZONE OF DEATH",
+   "card_at": "zone of death",
+   "zooms": [
+    {
+     "at": "zone of death",
+     "amount": 1.15,
+     "hold": 0.8,
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "at": "most of yellowstone",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "map-yellowstone",
+     "h": 0.3
+    }
+   ]
+  },
+  {
+   "at": "congress put all",
+   "bg": "bg-capitol",
+   "cast": [
+    {
+     "id": "larry:pointing",
+     "x": 0.35
+    }
+   ]
+  },
+  {
+   "at": "the sixth amendment",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "prop-constitution",
+     "hold": 3
+    }
+   ]
+  },
+  {
+   "at": "so if the crime",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ],
+   "props": [
+    {
+     "id": "map-zone",
+     "h": 0.3
+    }
+   ]
+  },
+  {
+   "at": "the population of this",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "larry:surprised",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "prop-tumbleweed",
+     "at": "basically zero",
+     "anim": "roll",
+     "roll_time": 2.6,
+     "h": 0.15
+    }
+   ],
+   "card": "POPULATION: 0",
+   "card_at": "basically zero",
+   "zooms": [
+    {
+     "at": "basically zero",
+     "amount": 1.25,
+     "hold": 1.1,
+     "sfx": "stinger"
+    }
+   ]
+  },
+  {
+   "at": "so the legal theory",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge-confused",
+     "x": 0.7
+    },
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ]
+  },
+  {
+   "at": "for the record",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "prop-gavel",
+     "at": "a court could"
+    }
+   ]
+  },
+  {
+   "at": "the thing is congress",
+   "bg": "bg-capitol",
+   "cast": [
+    {
+     "id": "char-politician",
+     "x": 0.7
+    },
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ]
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so before you pick",
+   "bg": "bg-campsite",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "x": 0.66
+    },
+    {
+     "id": "larry:sneaky",
+     "x": 0.33
+    }
+   ]
+  }
+ ],
+ "hook": "THE U.S. ZONE WHERE NO JURY EXISTS",
+ "highlight": [
+  "yellowstone",
+  "idaho",
+  "wyoming",
+  "sixth"
+ ],
+ "youtube_title": "The U.S. Zone Where No Jury Can Exist \ud83e\udd9d\u2696\ufe0f",
+ "caption": "A tiny piece of Yellowstone sits in Idaho but belongs to Wyoming's federal district, and that might make a constitutional jury impossible.",
+ "hashtags": [
+  "#legalloopholes",
+  "#lawtok",
+  "#yellowstone",
+  "#zoneofdeath",
+  "#constitution",
+  "#sixthamendment"
+ ]
+}

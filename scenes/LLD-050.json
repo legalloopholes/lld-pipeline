@@ -1,0 +1,207 @@
+{
+ "video_id": "LLD-050",
+ "episode": "E50",
+ "hook": "PATENTED… GOVERNMENT USES IT ANYWAY",
+ "highlight": [
+  "compensation",
+  "government",
+  "patent"
+ ],
+ "youtube_title": "The U.S. Government Can Use Your Patent Without Asking — Then Pay 🦝⚖️",
+ "caption": "Under 28 U.S.C. §1498, when the U.S. government (or an authorized contractor) uses a patented invention without a license, the owner's remedy is compensation from the government in the Court of Federal Claims.",
+ "hashtags": [
+  "#legalloopholes",
+  "#patents",
+  "#inventors",
+  "#government",
+  "#lawtok",
+  "#ip"
+ ],
+ "script": "The U.S. government can use a patented invention without asking first, and the inventor may get money instead of a court order. Normally, a patent lets the owner go to court to stop unlicensed use. But a federal law, section fourteen ninety-eight of title twenty-eight, sets a different rule when the user is the United States. If a patented invention is used or made by or for the U.S. government without a license, the patent owner's remedy is a lawsuit against the United States in the Court of Federal Claims, for reasonable compensation. So the owner generally can't get an order blocking that government use. Instead, the fight is about money. And by or for the government includes contractors, when the government has authorized or consented to the use. Picture a contractor building equipment for a federal agency using someone's patented design, with the government's okay. The patent owner's claim is generally against the government, for compensation. Here's the limit. This is not a free pass for any company to copy patents. It applies to use by or for the United States, with government authorization or consent, and the owner is still entitled to be paid. Think of it a bit like eminent domain for inventions. [loop] So before you assume a patent means nobody can use your invention, remember",
+ "publish_at": "2026-11-26T12:00:00-05:00",
+ "sources": [
+  "https://www.law.cornell.edu/uscode/text/28/1498"
+ ],
+ "legal_status": "Current statutory remedy",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "💡🏛️",
+     "text": ""
+    }
+   ]
+  },
+  {
+   "at": "normally a patent",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🛑",
+     "text": "Patent = stop sign"
+    }
+   ]
+  },
+  {
+   "at": "but a federal law",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "doc",
+     "text": "28 U.S.C. §1498",
+     "sub": "Government use"
+    }
+   ]
+  },
+  {
+   "at": "if a patented invention",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "card": "SUE FOR COMPENSATION",
+   "card_at": "reasonable compensation"
+  },
+  {
+   "at": "so the owner generally",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:surprised"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🛑➡️💵",
+     "text": "Money, not a block"
+    }
+   ],
+   "zooms": [
+    {
+     "at": "the fight is about money",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "and by or for",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:pointing",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🏗️",
+     "text": "Authorized contractors"
+    }
+   ]
+  },
+  {
+   "at": "picture a contractor",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "x": 0.68
+    },
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "card": "HYPOTHETICAL",
+   "card_at": "picture a contractor"
+  },
+  {
+   "at": "here's the limit",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🏢🚫",
+     "text": "Not for companies"
+    }
+   ]
+  },
+  {
+   "at": "it applies to use",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "💵",
+     "text": "Owner gets paid"
+    }
+   ]
+  },
+  {
+   "at": "think of it a bit",
+   "bg": "bg-capitol",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "card": "LIKE EMINENT DOMAIN",
+   "card_at": "eminent domain"
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so before you assume a patent",
+   "bg": "bg-office",
+   "loop": true
+  }
+ ]
+}

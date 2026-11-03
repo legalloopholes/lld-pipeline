@@ -1,0 +1,204 @@
+{
+ "video_id": "LLD-051",
+ "episode": "E51",
+ "hook": "NO PURCHASE NECESSARY?",
+ "highlight": [
+  "purchase",
+  "chance",
+  "free"
+ ],
+ "youtube_title": "Why Every Giveaway Says 'No Purchase Necessary' 🦝⚖️",
+ "caption": "A lottery generally combines a prize, chance and payment. The FTC says purchase-required sweepstakes are illegal in the U.S. — which is why giveaways offer free entry. State rules still apply.",
+ "hashtags": [
+  "#legalloopholes",
+  "#sweepstakes",
+  "#marketing",
+  "#giveaway",
+  "#lawtok",
+  "#consumer"
+ ],
+ "script": "Those three words in a giveaway's fine print, no purchase necessary, are doing serious legal work. In the U.S., lawyers generally describe a lottery as three pieces: a prize, chance, and something you have to pay to play, which they call consideration. Private lotteries are generally illegal. So how can a soda company run a giveaway where winners are picked by chance? By taking the payment out. The Federal Trade Commission's guidance says sweepstakes-type promotions that require a purchase are illegal in the United States. Its consumer advice says real sweepstakes are free and winning is by chance, and that sweepstakes mailings must say you don't have to pay to participate. That's why giveaways offer a free way to enter, like an online form or a mail-in entry. It removes the payment piece. But no purchase necessary isn't a magic spell. The free route has to be genuine. Each state has its own rules, which may require disclosures, licensing or a bond. Other agencies, like the Postal Service and the FCC, also enforce prize promotion laws. And skill contests are treated differently from sweepstakes. So printing three words on a box doesn't make any game legal. [loop] So the next time you see no purchase necessary in tiny print, remember",
+ "publish_at": "2026-11-26T19:00:00-05:00",
+ "sources": [
+  "https://www.ftc.gov/business-guidance/resources/advertising-faqs-guide-small-business",
+  "https://consumer.ftc.gov/articles/fake-prize-sweepstakes-and-lottery-scams"
+ ],
+ "legal_status": "Current promotional-law structure",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "bg-shop",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🎁🔍",
+     "text": "No purchase necessary"
+    }
+   ]
+  },
+  {
+   "at": "in the us lawyers",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🏆🎲💵",
+     "text": "Prize · Chance · Pay"
+    }
+   ]
+  },
+  {
+   "at": "private lotteries are",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🚫🎰",
+     "text": "Generally illegal"
+    }
+   ]
+  },
+  {
+   "at": "so how can a soda",
+   "bg": "bg-shop",
+   "cast": [
+    {
+     "id": "larry:thinking",
+     "x": 0.3
+    }
+   ],
+   "card": "REMOVE THE PAYMENT",
+   "card_at": "taking the payment out",
+   "zooms": [
+    {
+     "at": "taking the payment out",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "the federal trade commission's",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "doc",
+     "text": "FTC guidance",
+     "sub": "Contests & sweepstakes"
+    }
+   ]
+  },
+  {
+   "at": "its consumer advice",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🆓🎲",
+     "text": "Free + chance"
+    }
+   ]
+  },
+  {
+   "at": "that's why giveaways",
+   "bg": "bg-shop",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "✉️💻",
+     "text": "Free entry route"
+    }
+   ]
+  },
+  {
+   "at": "but no purchase necessary",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🪄❌",
+     "text": "Not magic"
+    }
+   ]
+  },
+  {
+   "at": "each state has",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🗺️",
+     "text": "State rules"
+    }
+   ]
+  },
+  {
+   "at": "so printing three words",
+   "bg": "bg-shop",
+   "cast": [
+    {
+     "id": "larry:concerned",
+     "x": 0.3
+    }
+   ],
+   "card": "NOT AUTOMATICALLY LEGAL",
+   "card_at": "doesn't make any game legal"
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so the next time you see",
+   "bg": "bg-shop",
+   "loop": true
+  }
+ ]
+}

@@ -1,0 +1,208 @@
+{
+ "video_id": "LLD-007",
+ "episode": "E07",
+ "hook": "A BIBLE SAFER THAN CASH?",
+ "highlight": [
+  "religious",
+  "exempt",
+  "creditor"
+ ],
+ "youtube_title": "Could a Rare Bible Beat a Debt Collector in New York? 🦝⚖️",
+ "caption": "New York's CPLR 5205 lists religious texts used by a debtor's family as exempt without a stated dollar cap, while other books are capped at $500. A textual quirk — not a tested strategy.",
+ "hashtags": [
+  "#legalloopholes",
+  "#newyork",
+  "#debt",
+  "#weirdlaws",
+  "#lawtok",
+  "#didyouknow"
+ ],
+ "script": "Could a rare Bible be harder for a creditor to take than your cash? In New York, the wording of the law makes that a real question. When someone loses a lawsuit and owes money, the winner can try to collect from their property. But New York's civil practice law protects certain things from being taken. Cash and bank accounts? Only a limited amount. Ordinary books? Up to five hundred dollars' worth. But in that same line, the law separately lists religious texts, family pictures and school books used by the debtor or the family. And for those, it doesn't state a dollar limit. So on paper, a religious text the family uses sits in its own protected category. Which raises the obvious question: what if that book is a priceless antique? Here's the honest answer. Don't treat this as a court-approved strategy. It's a quirk in the wording. The book has to actually be used by the debtor or the family. The protection doesn't apply if the debt is for the price of the book itself. And moving money into assets to dodge creditors can run into fraudulent transfer laws and bankruptcy rules. [loop] So before you go shopping for the world's most expensive Bible, remember",
+ "publish_at": "2026-11-04T19:00:00-05:00",
+ "sources": [
+  "https://www.nysenate.gov/legislation/laws/CVP/5205"
+ ],
+ "legal_status": "Textual oddity; untested extension",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📖💎",
+     "text": ""
+    }
+   ]
+  },
+  {
+   "at": "in new york the wording",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "doc",
+     "text": "CPLR 5205",
+     "sub": "New York"
+    }
+   ]
+  },
+  {
+   "at": "when someone loses",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "card": "PAY UP",
+   "card_at": "owes money"
+  },
+  {
+   "at": "but new york's civil",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:pointing",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🛡️",
+     "text": "Protected property"
+    }
+   ]
+  },
+  {
+   "at": "cash and bank accounts",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "💵",
+     "text": "Cash: limited"
+    }
+   ]
+  },
+  {
+   "at": "ordinary books",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:pointing",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📚",
+     "text": "Other books: $500"
+    }
+   ]
+  },
+  {
+   "at": "but in that same line",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:surprised"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📖",
+     "text": "Religious: no cap"
+    }
+   ],
+   "zooms": [
+    {
+     "at": "doesn't state a dollar limit",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "which raises the obvious",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:thinking"
+    }
+   ],
+   "card": "A PRICELESS ANTIQUE?",
+   "card_at": "priceless antique"
+  },
+  {
+   "at": "here's the honest answer",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "⚠️",
+     "text": "Not a tested strategy"
+    }
+   ]
+  },
+  {
+   "at": "the book has to actually",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "doc",
+     "text": "Exceptions",
+     "sub": "Fraudulent transfer · Bankruptcy"
+    }
+   ]
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so before you go shopping",
+   "bg": "bg-office",
+   "loop": true
+  }
+ ]
+}

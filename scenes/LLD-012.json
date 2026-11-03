@@ -1,0 +1,216 @@
+{
+ "video_id": "LLD-012",
+ "episode": "E12",
+ "hook": "IS A SNUGGIE CLOTHING?",
+ "highlight": [
+  "blanket",
+  "garment",
+  "sleeves"
+ ],
+ "youtube_title": "The Snuggie Beat the Clothing Tariff — Sleeves and All 🦝⚖️",
+ "caption": "In 2017 the Court of International Trade ruled the Snuggie is a blanket, not a garment, for tariff purposes: designed, used and sold as a blanket, with sleeves the court called incidental.",
+ "hashtags": [
+  "#legalloopholes",
+  "#snuggie",
+  "#tariffs",
+  "#customs",
+  "#lawtok",
+  "#weirdlaws"
+ ],
+ "script": "The government wanted to tax the Snuggie like clothing, but its sleeves weren't enough. This is a U.S. Court of International Trade decision from February twenty seventeen. The Snuggie is that oversized fleece blanket with sleeves. When it's imported, customs has to put it in a tariff category, and the category sets the duty. Customs called it a garment, at fourteen point nine percent. The importer, Allstar Marketing, said it's a blanket, at eight and a half percent. So the court looked at the evidence. The design came from existing blankets. There's no closure and nothing fitted about it. It's huge and loose. It's sold in bedding and housewares departments, not clothing. Allstar described it as a blanket on its invoices, and its trademark covers blankets and throws. And the sleeves? The court said they were incidental to its use as a blanket. They mostly keep it in place while your hands are free. The court's conclusion: the Snuggie is designed, used, and functions as a blanket. So it got the lower blanket rate. Here's the limit. That was one product and one tariff decision. Sewing sleeves onto a blanket doesn't automatically change its taxes, and calling something a blanket on the label isn't enough by itself. [loop] So the next time you're wearing your blanket, remember",
+ "publish_at": "2026-11-07T12:00:00-05:00",
+ "sources": [
+  "https://www.cit.uscourts.gov/sites/cit/files/17-15.pdf"
+ ],
+ "legal_status": "Historical ruling, 2017",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "bg-harbor",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🛋️👘",
+     "text": "Blanket or clothing?"
+    }
+   ]
+  },
+  {
+   "at": "this is a us court",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ]
+  },
+  {
+   "at": "the snuggie is that",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🧣",
+     "text": "Blanket with sleeves"
+    }
+   ]
+  },
+  {
+   "at": "when it's imported",
+   "bg": "bg-harbor",
+   "cast": [
+    {
+     "id": "larry:pointing",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📦⚓",
+     "text": "Tariff category"
+    }
+   ]
+  },
+  {
+   "at": "customs called it a garment",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "👕",
+     "text": "Garment: 14.9%"
+    }
+   ]
+  },
+  {
+   "at": "the importer allstar",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:smug"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🛏️",
+     "text": "Blanket: 8.5%"
+    }
+   ]
+  },
+  {
+   "at": "so the court looked",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "card": "NO CLOSURE. NOT FITTED.",
+   "card_at": "no closure"
+  },
+  {
+   "at": "it's sold in bedding",
+   "bg": "bg-shop",
+   "cast": [
+    {
+     "id": "larry:pointing",
+     "x": 0.3
+    }
+   ],
+   "card": "SOLD AS BEDDING",
+   "card_at": "bedding and housewares"
+  },
+  {
+   "at": "and the sleeves",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:thinking"
+    }
+   ],
+   "card": "SLEEVES: “INCIDENTAL”",
+   "card_at": "incidental",
+   "zooms": [
+    {
+     "at": "incidental",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "the court's conclusion",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:surprised",
+     "x": 0.3
+    }
+   ],
+   "card": "VERDICT: BLANKET",
+   "card_at": "functions as a blanket"
+  },
+  {
+   "at": "here's the limit",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🏷️",
+     "text": "Label isn't enough"
+    }
+   ]
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so the next time you're wearing",
+   "bg": "bg-harbor",
+   "loop": true
+  }
+ ]
+}

@@ -1,0 +1,206 @@
+{
+ "video_id": "LLD-056",
+ "episode": "E56",
+ "hook": "ONE SQUEEZE TOO MANY",
+ "highlight": [
+  "plain",
+  "feel",
+  "weapon"
+ ],
+ "youtube_title": "The Officer Found the Drugs — but the Extra Squeeze Crossed the Line 🦝⚖️",
+ "caption": "Minnesota v. Dickerson (1993): police may seize contraband that's immediately apparent by touch during a lawful frisk — but manipulating a pocket after ruling out a weapon went beyond the frisk's purpose.",
+ "hashtags": [
+  "#legalloopholes",
+  "#fourthamendment",
+  "#supremecourt",
+  "#constitution",
+  "#lawtok",
+  "#knowyourrights"
+ ],
+ "script": "The officer found the drugs, and the extra squeezing helped make the search unconstitutional. This is Minnesota versus Dickerson, a U.S. Supreme Court case from nineteen ninety-three. Officers in Minneapolis stopped a man and patted him down for weapons, which police can do in certain situations under an earlier case called Terry. The patdown found no weapon. But the officer felt a small lump in his jacket pocket, and only concluded it was crack cocaine after squeezing, sliding and manipulating it. The Court did two things. First, it recognized what's called plain feel. During a lawful protective patdown, if an officer feels an object whose criminal nature is immediately apparent, the officer can seize it, a lot like something in plain view. But second, that's not what happened here. The officer had already determined the lump wasn't a weapon. His continued exploration of the pocket had nothing to do with the protective purpose of the patdown. So it became an unlawful search, and the cocaine was suppressed. The purpose of a search limits its scope. Here's the limit. Plain feel is still real. If contraband is immediately obvious by touch during a lawful frisk, it can be seized. And these cases turn on specific facts. [loop] So before you assume a patdown means anything goes, remember",
+ "publish_at": "2026-11-29T12:00:00-05:00",
+ "sources": [
+  "https://www.law.cornell.edu/supremecourt/text/508/366"
+ ],
+ "legal_status": "Constitutional ruling, 1993",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "bg-street",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "👮✋",
+     "text": ""
+    }
+   ]
+  },
+  {
+   "at": "this is minnesota",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "doc",
+     "text": "Minnesota v. Dickerson",
+     "sub": "U.S. Supreme Court"
+    }
+   ]
+  },
+  {
+   "at": "officers in minneapolis",
+   "bg": "bg-street",
+   "cast": [
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🔍🗡️",
+     "text": "Weapons patdown"
+    }
+   ]
+  },
+  {
+   "at": "the patdown found no weapon",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:surprised"
+    }
+   ],
+   "card": "NO WEAPON",
+   "card_at": "found no weapon"
+  },
+  {
+   "at": "but the officer felt",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🤏",
+     "text": "Squeeze, slide…"
+    }
+   ],
+   "zooms": [
+    {
+     "at": "squeezing",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "the court did two things",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "card": "“PLAIN FEEL”",
+   "card_at": "plain feel"
+  },
+  {
+   "at": "but second",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:pointing",
+     "x": 0.3
+    }
+   ],
+   "card": "SEARCH WENT TOO FAR",
+   "card_at": "continued exploration"
+  },
+  {
+   "at": "so it became an unlawful",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:surprised"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🚫",
+     "text": "Evidence suppressed"
+    }
+   ]
+  },
+  {
+   "at": "the purpose of a search",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🎯",
+     "text": "Purpose limits scope"
+    }
+   ]
+  },
+  {
+   "at": "here's the limit",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "✋✅",
+     "text": "Plain feel is real"
+    }
+   ]
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so before you assume a patdown",
+   "bg": "bg-street",
+   "loop": true
+  }
+ ]
+}

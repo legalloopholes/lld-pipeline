@@ -1,0 +1,202 @@
+{
+ "video_id": "LLD-031",
+ "episode": "E31",
+ "hook": "WHO OWNS A MONKEY'S PHOTO?",
+ "highlight": [
+  "human",
+  "authorship",
+  "monkey"
+ ],
+ "youtube_title": "If a Monkey Takes the Photo, Who Owns the Copyright? 🦝⚖️",
+ "caption": "The U.S. Copyright Office won't register works produced by animals — and its own rulebook lists 'a photo taken by a monkey' as an example. Owning the camera isn't the same as being the author.",
+ "hashtags": [
+  "#legalloopholes",
+  "#copyright",
+  "#monkey",
+  "#photography",
+  "#lawtok",
+  "#funfacts"
+ ],
+ "script": "If a monkey takes the photo, who gets the copyright? Under U.S. law, the answer is awkward. The U.S. Copyright Office has a rulebook for what it will register, called the Compendium. And it says plainly: the Office will not register works produced by nature, animals, or plants. Then it gives examples. A photo taken by a monkey. A mural painted by an elephant. Driftwood shaped and smoothed by the ocean. Even a song application that names the Holy Spirit as its author. The principle is human authorship. Copyright protects creative work by people. So imagine you set up a camera, and a monkey grabs it and snaps a picture. You may own the camera. You may own the memory card. But owning the equipment doesn't make you the author of a photo the monkey took. Here's the limit. This doesn't mean every picture with an animal in it is unprotected. A photographer who chooses the shot, the framing and the moment is a human author. When a person and an animal both play a part, the human contribution has to be looked at on its own. And this is a U.S. copyright explanation. Other countries can see things differently, and other rights, like contracts, can still matter. [loop] So the next time a monkey borrows your camera, remember",
+ "publish_at": "2026-11-16T19:00:00-05:00",
+ "sources": [
+  "https://www.copyright.gov/comp3/docs/compendium-12-22-14.pdf",
+  "https://www.copyright.gov/comp3/chap300/ch300-copyrightable-authorship.pdf"
+ ],
+ "legal_status": "Human-authorship boundary",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "bg-campsite",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🐒📸",
+     "text": ""
+    }
+   ]
+  },
+  {
+   "at": "under us law",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "doc",
+     "text": "Compendium §313.2",
+     "sub": "U.S. Copyright Office"
+    }
+   ]
+  },
+  {
+   "at": "and it says plainly",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:surprised"
+    }
+   ],
+   "card": "NO REGISTRATION FOR ANIMAL WORKS",
+   "card_at": "will not register",
+   "zooms": [
+    {
+     "at": "will not register",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "then it gives examples",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🐒📸",
+     "text": "Monkey photo"
+    }
+   ]
+  },
+  {
+   "at": "a mural painted",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:smug"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🐘🎨",
+     "text": "Elephant mural"
+    }
+   ]
+  },
+  {
+   "at": "even a song application",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:surprised"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🎵👼",
+     "text": "Holy Spirit author?"
+    }
+   ]
+  },
+  {
+   "at": "the principle is human",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "card": "HUMAN AUTHORSHIP",
+   "card_at": "human authorship"
+  },
+  {
+   "at": "so imagine you set up",
+   "bg": "bg-campsite",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "x": 0.68
+    },
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "card": "HYPOTHETICAL",
+   "card_at": "so imagine"
+  },
+  {
+   "at": "but owning the equipment",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📷≠✍️",
+     "text": "Owner ≠ author"
+    }
+   ]
+  },
+  {
+   "at": "here's the limit",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🧑‍🎨",
+     "text": "Your shot: protected"
+    }
+   ]
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so the next time a monkey",
+   "bg": "bg-campsite",
+   "loop": true
+  }
+ ]
+}

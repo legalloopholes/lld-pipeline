@@ -1,0 +1,207 @@
+{
+ "video_id": "LLD-041",
+ "episode": "E41",
+ "hook": "NOT ALL 'STUDENT LOANS' ARE EQUAL",
+ "highlight": [
+  "categories",
+  "hardship",
+  "qualified"
+ ],
+ "youtube_title": "Your Lender Calls It a Student Loan. Bankruptcy Law Might Not 🦝⚖️",
+ "caption": "Bankruptcy Code §523(a)(8) protects specific categories of education debt from discharge. A private loan that fits none of them may be treated like ordinary debt — but many loans do fit, and details decide it.",
+ "hashtags": [
+  "#legalloopholes",
+  "#studentloans",
+  "#bankruptcy",
+  "#personalfinance",
+  "#lawtok",
+  "#debt"
+ ],
+ "script": "Your lender calls it a student loan, but bankruptcy law may see it differently. In U.S. bankruptcy, most student loans are hard to wipe out. Under the Bankruptcy Code, they're excepted from discharge unless repaying them would impose an undue hardship on the debtor and their dependents. But that protection is defined by categories. One: loans made, insured or guaranteed by a government unit, or under government or nonprofit programs. Two: obligations to repay money received as an educational benefit, scholarship or stipend. Three: any other educational loan that counts as a qualified education loan under the tax code. A recent bankruptcy opinion described that third group as private loans to people attending eligible schools for certain qualified expenses. So the label on the loan isn't the test. The statute's categories are. A private loan that doesn't fit any of them may be treated like other unsecured debt. Here's the limit. Most federal loans, and many private ones, do fit, and then you'd still need to prove undue hardship. In that very opinion, the court found the debtor's loans did qualify, so they weren't discharged. Whether a loan fits depends on its details, so that's a question for a bankruptcy lawyer. [loop] So before you assume every student loan is the same in bankruptcy, remember",
+ "publish_at": "2026-11-21T19:00:00-05:00",
+ "sources": [
+  "https://www.law.cornell.edu/uscode/text/11/523",
+  "https://www.mssb.uscourts.gov/sites/mssb/files/opinions/24-06026-KMS_45_20260930.pdf"
+ ],
+ "legal_status": "Current classification distinction",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🎓💳",
+     "text": ""
+    }
+   ]
+  },
+  {
+   "at": "in us bankruptcy",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "doc",
+     "text": "11 U.S.C. §523(a)(8)",
+     "sub": "Bankruptcy Code"
+    }
+   ]
+  },
+  {
+   "at": "under the bankruptcy code",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:concerned",
+     "x": 0.3
+    }
+   ],
+   "card": "UNLESS UNDUE HARDSHIP",
+   "card_at": "undue hardship"
+  },
+  {
+   "at": "but that protection is defined",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🏛️",
+     "text": "1. Government-backed"
+    }
+   ]
+  },
+  {
+   "at": "two obligations to repay",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🎓",
+     "text": "2. Scholarships"
+    }
+   ]
+  },
+  {
+   "at": "three any other",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🏦",
+     "text": "3. Qualified loans"
+    }
+   ]
+  },
+  {
+   "at": "so the label on the loan",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:surprised"
+    }
+   ],
+   "card": "LABEL ≠ LEGAL TEST",
+   "card_at": "isn't the test",
+   "zooms": [
+    {
+     "at": "isn't the test",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "a private loan that doesn't",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📄",
+     "text": "May be ordinary debt"
+    }
+   ]
+  },
+  {
+   "at": "here's the limit",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "✅",
+     "text": "Most loans fit"
+    }
+   ]
+  },
+  {
+   "at": "in that very opinion",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:concerned",
+     "x": 0.3
+    }
+   ],
+   "card": "THOSE LOANS: NOT DISCHARGED",
+   "card_at": "weren't discharged"
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so before you assume every",
+   "bg": "bg-office",
+   "loop": true
+  }
+ ]
+}

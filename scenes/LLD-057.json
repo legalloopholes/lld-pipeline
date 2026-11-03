@@ -1,0 +1,201 @@
+{
+ "video_id": "LLD-057",
+ "episode": "E57",
+ "hook": "BINDING… WHILE STILL IN THE MAIL?",
+ "highlight": [
+  "sent",
+  "acceptance",
+  "mailbox"
+ ],
+ "youtube_title": "The Contract That's Binding Before Your 'Yes' Even Arrives 🦝⚖️",
+ "caption": "Under the mailbox rule, a properly sent acceptance can take effect when it's sent, not when it arrives — unless the offer says otherwise. Option contracts and state rules can change the result.",
+ "hashtags": [
+  "#legalloopholes",
+  "#contracts",
+  "#lawschool",
+  "#business",
+  "#lawtok",
+  "#didyouknow"
+ ],
+ "script": "A contract can become binding before the other side even receives your yes. It's called the mailbox rule, a default rule of contract law in the United States. Under it, an acceptance sent by an authorized method takes effect when it's sent, not when it arrives. The Restatement of Contracts says it counts once it's out of your hands. Picture a hypothetical. Someone offers to sell you a piece of equipment, and you mail back your acceptance on Monday. On Tuesday, before your letter arrives, they change their mind and try to withdraw the offer. Under the mailbox rule, there may already be a contract, because your acceptance took effect when you sent it. So the person who made the offer carries the risk of a slow delivery. Here's where it gets complicated. The rule only applies if the offer doesn't say otherwise, and an offer can require that acceptance actually be received. Option contracts, where someone has paid to keep an offer open, generally need the acceptance to be received, though some states treat that differently. The rule has been applied to things like email, but electronic messages raise their own questions, and the details vary by state. So don't assume hitting send always creates a contract. [loop] So before you drop your acceptance in the mailbox, remember",
+ "publish_at": "2026-11-29T19:00:00-05:00",
+ "sources": [
+  "https://www.law.cornell.edu/wex/mailbox_rule"
+ ],
+ "legal_status": "Default rule with exceptions",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "bg-neighborhood",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📬✅",
+     "text": ""
+    }
+   ]
+  },
+  {
+   "at": "it's called the mailbox rule",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📮",
+     "text": "The mailbox rule"
+    }
+   ]
+  },
+  {
+   "at": "under it an acceptance",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:surprised"
+    }
+   ],
+   "card": "EFFECTIVE WHEN SENT",
+   "card_at": "when it's sent",
+   "zooms": [
+    {
+     "at": "when it's sent",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "the restatement of contracts",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "doc",
+     "text": "Restatement (Second) §63",
+     "sub": "Contracts"
+    }
+   ]
+  },
+  {
+   "at": "picture a hypothetical",
+   "bg": "bg-neighborhood",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "x": 0.68
+    },
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "card": "HYPOTHETICAL",
+   "card_at": "picture a hypothetical"
+  },
+  {
+   "at": "on tuesday before",
+   "bg": "bg-neighborhood",
+   "cast": [
+    {
+     "id": "larry:surprised",
+     "x": 0.3
+    }
+   ],
+   "card": "TOO LATE TO WITHDRAW?",
+   "card_at": "withdraw the offer"
+  },
+  {
+   "at": "so the person who made",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:smug"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🐌📬",
+     "text": "Offeror bears delay"
+    }
+   ]
+  },
+  {
+   "at": "here's where it gets",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📄",
+     "text": "Offer can override"
+    }
+   ]
+  },
+  {
+   "at": "option contracts",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🔒",
+     "text": "Options: on receipt"
+    }
+   ]
+  },
+  {
+   "at": "the rule has been applied",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:thinking"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📧❓",
+     "text": "Email questions"
+    }
+   ]
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so before you drop",
+   "bg": "bg-neighborhood",
+   "loop": true
+  }
+ ]
+}

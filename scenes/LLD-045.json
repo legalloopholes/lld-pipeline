@@ -1,0 +1,203 @@
+{
+ "video_id": "LLD-045",
+ "episode": "E45",
+ "hook": "YOU CAN PROSECUTE?",
+ "highlight": [
+  "private",
+  "prosecution",
+  "cps"
+ ],
+ "youtube_title": "The State Won't Prosecute? In England, a Private Person Can Try 🦝⚖️",
+ "caption": "In England and Wales, any adult can apply to a magistrates' court to bring a private prosecution. The CPS can take over or end it, the evidence and disclosure rules still apply, and costs are significant.",
+ "hashtags": [
+  "#legalloopholes",
+  "#uk",
+  "#england",
+  "#criminallaw",
+  "#lawtok",
+  "#justice"
+ ],
+ "script": "The authorities decide not to prosecute, but in England and Wales, that may not be the end of the story. It's called a private prosecution. The U.K. government's own guidance says any adult has the right to apply to a magistrates' court to bring one. It's a criminal case, not a lawsuit for money, started by a private person instead of the Crown Prosecution Service. Here's how it starts. The person files an application form with a court office. A judge, a magistrate, or a legal adviser decides on the paperwork alone, so the form has to be complete and disclose all relevant information. If it's refused, the only route is judicial review in the High Court, for a mistake of law. Now the catches. Some offences restrict who can prosecute, and some need the Attorney General's consent. The Crown Prosecution Service can take over a private prosecution, and it can end it if it doesn't believe the case should have been brought. And it's expensive. Government figures put the average cost at around eight thousand five hundred pounds, and getting costs back isn't guaranteed. So it's a real right, but not a guaranteed prosecution, and definitely not a guaranteed conviction. [loop] So if you've heard that only the state can bring criminal charges, remember",
+ "publish_at": "2026-11-23T19:00:00-05:00",
+ "sources": [
+  "https://www.gov.uk/government/publications/private-prosecutions/private-prosecutions"
+ ],
+ "legal_status": "Current legal procedure",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ]
+  },
+  {
+   "at": "it's called a private",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "doc",
+     "text": "Private prosecutions",
+     "sub": "UK government guidance"
+    }
+   ]
+  },
+  {
+   "at": "the uk government's own",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:surprised"
+    }
+   ],
+   "card": "ANY ADULT CAN APPLY",
+   "card_at": "any adult",
+   "zooms": [
+    {
+     "at": "any adult",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "it's a criminal case",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "⚖️≠💵",
+     "text": "Criminal, not money"
+    }
+   ]
+  },
+  {
+   "at": "here's how it starts",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📝",
+     "text": "Application form"
+    }
+   ]
+  },
+  {
+   "at": "if it's refused",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:concerned",
+     "x": 0.3
+    }
+   ],
+   "card": "REFUSED? HIGH COURT ONLY",
+   "card_at": "judicial review"
+  },
+  {
+   "at": "now the catches",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🔐",
+     "text": "Some need consent"
+    }
+   ]
+  },
+  {
+   "at": "the crown prosecution service can",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:concerned",
+     "x": 0.3
+    }
+   ],
+   "card": "CPS CAN TAKE OVER — OR END IT",
+   "card_at": "take over"
+  },
+  {
+   "at": "and it's expensive",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:surprised"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "💷",
+     "text": "~£8,500 average"
+    }
+   ]
+  },
+  {
+   "at": "so it's a real right",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "card": "REAL RIGHT · NO GUARANTEES",
+   "card_at": "real right"
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so if you've heard",
+   "bg": "bg-courtroom",
+   "loop": true
+  }
+ ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "lld-larry-3d",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "description": "Legal Loopholes Daily 3D world renderer (called by render_video.py when brand.json has \"renderer\": \"3d\")",
+  "dependencies": {
+    "three": "0.169.0",
+    "playwright": "1.48.2"
+  }
+}

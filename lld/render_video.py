@@ -1,0 +1,767 @@
+#!/usr/bin/env python3
+"""Legal Loopholes Daily - render the vertical video from a scene plan.
+Usage: render_video.py <voiceover.wav> <captions.srt> <output.mp4> [scene_plan.json | base64-json]
+If no plan is given, looks for ~/.n8n-files/scenes/<VIDEO-ID>.json; without a plan it falls back to
+Larry on white.
+"""
+import sys, os, re, json, math, shutil, subprocess, base64
+import numpy as np
+from PIL import Image, ImageDraw, ImageFont
+
+W, H, FPS = 1080, 1920, 30
+ROOT = os.environ.get('LLD_ROOT') or os.path.expanduser('~/.n8n-files')
+ASSETS = os.path.join(ROOT, 'assets')
+FFMPEG = next((p for p in ['/opt/homebrew/opt/ffmpeg-full/bin/ffmpeg', shutil.which('ffmpeg')] if p and os.path.exists(p)), 'ffmpeg')
+FFPROBE = FFMPEG.replace('ffmpeg', 'ffprobe') if os.path.exists(FFMPEG.replace('ffmpeg', 'ffprobe')) else 'ffprobe'
+CAPTION_STYLE = ("FontName=Arial Rounded MT Bold,FontSize=16,PrimaryColour=&H00FFFFFF,OutlineColour=&H00000000,"
+                 "BackColour=&H00000000,BorderStyle=1,Outline=4,Shadow=0,Alignment=2,MarginV=90")
+FEET_Y = 1180             # ground line for characters (captions sit below)
+LARRY_H = 770             # Larry's on-screen height at scale 1
+CHAR_H = 720              # other characters' height at scale 1
+NAVY, RED = (11, 16, 32), (230, 57, 70)
+FONT_FILES = ([os.environ['LLD_FONT']] if os.environ.get('LLD_FONT') else []) + ['/System/Library/Fonts/Supplemental/Arial Rounded Bold.ttf', '/Library/Fonts/Arial Rounded Bold.ttf',
+              '/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf']
+TALK_POSES = {'neutral', 'explaining'}
+SR_A = 24000
+# Words that get a coloured caption (and can trigger an automatic punch-in). Red = danger/shock, yellow = key idea.
+HOT_RED = {'kill', 'killed', 'murder', 'death', 'die', 'dead', 'illegal', 'crime', 'crimes', 'prison', 'jail', 'never',
+           'zero', 'impossible', 'nobody', 'banned', 'arrested', 'guilty'}
+HOT_YELLOW = {'constitution', 'constitutional', 'constitutionally', 'congress', 'jury', 'jurors', 'law', 'loophole',
+              'loopholes', 'amendment', 'federal', 'court', 'judge', 'legal', 'theory', 'technically', 'actually',
+              'secret', 'free', 'million', 'billion', 'everyone', 'anyone', 'only'}
+ZOOM_WORDS = {'zero', 'impossible', 'never', 'death', 'murder', 'kill', 'nobody', 'illegal'}
+LEGAL_LINE = 'Educational content • Not legal advice'
+# Brand: assets/brand.json  {"handle": "@yourhandle", "handle_sfx": "correct", "handle_hold": 3.0}
+try: BRAND = json.load(open(os.path.join(ASSETS, 'brand.json')))
+except Exception: BRAND = {}
+HANDLE = (BRAND.get('handle') or '').strip()
+# 3D mode: the scene (sets, cast, props, camera) comes from the Three.js world in larry-3d/; this script still
+# resolves the plan, and adds captions, cards, handle tag, legal line and sound on top. Switch: brand.json "renderer".
+RENDER3D = (os.environ.get('LLD_RENDERER') or BRAND.get('renderer', '2d')).lower() == '3d'
+R3D_DIR = os.path.expanduser(BRAND.get('renderer_dir') or os.path.join(ROOT, 'larry-3d'))
+HANDLE_Y = 1400           # just under the captions: never over Larry (feet at 1180) or the prop band, above app UI
+
+wav, srt, out = sys.argv[1], sys.argv[2], sys.argv[3]
+video_id = os.path.basename(wav).replace('-voiceover.wav', '')
+
+# ---------- inputs ----------
+def t2s(t):
+    h, m, s = t.split(':'); s, ms = s.split(',')
+    return int(h) * 3600 + int(m) * 60 + int(s) + int(ms) / 1000
+words = []
+for block in open(srt, encoding='utf-8').read().strip().split('\n\n'):
+    lines = block.strip().split('\n')
+    if len(lines) >= 3 and '-->' in lines[1]:
+        a, b = [t2s(x.strip()) for x in lines[1].split('-->')]
+        words.append((a, b, ' '.join(lines[2:])))
+norm = lambda s: re.sub(r'[^a-z0-9]', '', s.lower())
+wn = [norm(w[2]) for w in words]
+dur = float(subprocess.run([FFPROBE, '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', wav],
+                           capture_output=True, text=True).stdout.strip())
+
+plan = None
+arg = sys.argv[4] if len(sys.argv) > 4 else os.path.join(ROOT, 'scenes', f'{video_id}.json')
+if arg and os.path.exists(arg):
+    plan = json.load(open(arg))
+elif arg and not arg.endswith('.json'):
+    try: plan = json.loads(base64.b64decode(arg).decode('utf-8'))
+    except Exception: plan = None
+
+NUMW = {'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen',
+        'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty', 'thirty', 'forty', 'fifty', 'sixty',
+        'seventy', 'eighty', 'ninety', 'hundred', 'thousand', 'million', 'billion', 'oh', 'and', 'point', 'percent',
+        'first', 'second', 'third', 'fourth', 'fifth', 'tenth', 'st', 'nd', 'rd', 'th', 'twenties', 'thirties', 'forties',
+        'fifties', 'sixties', 'seventies', 'eighties', 'nineties', 'hundreds', 'thousands', 'millions'}
+def _numless(t): return t in NUMW or bool(re.fullmatch(r'\d+(st|nd|rd|th|s)?', t)) or bool(re.fullmatch(r'(twenty|thirty|forty|fifty|sixty|seventy|eighty|ninety)(one|two|three|four|five|six|seven|eight|nine)', t))
+def find(phrase, start_idx=0):
+    """time and index of the first word of `phrase` in the narration, searching forward from start_idx.
+    Falls back to matching with number words/digits ignored, since the recognizer may write 'twenty fifteen' as '2015'."""
+    toks = [norm(t) for t in phrase.split() if norm(t)]
+    for rng in (range(start_idx, len(wn) - len(toks) + 1), range(0, len(wn) - len(toks) + 1)):
+        for i in rng:
+            if wn[i:i + len(toks)] == toks: return words[i][0], i
+    core = [t for t in toks if not _numless(t)]
+    if core:
+        idx = [i for i, t in enumerate(wn) if not _numless(t)]
+        red = [wn[i] for i in idx]
+        for lo in (start_idx, 0):
+            for j in range(len(red) - len(core) + 1):
+                if idx[j] < lo: continue
+                if red[j:j + len(core)] == core:
+                    k = idx[j]                                     # back up over number words that led the phrase
+                    while k > lo and _numless(wn[k - 1]) and toks and _numless(toks[0]): k -= 1
+                    return words[k][0], k
+    return None, None
+
+# ---------- Larry's automatic pose per sentence ----------
+sentences, cur = [], []
+for w in words:
+    cur.append(w)
+    if re.search(r'[.?!:]$', w[2]): sentences.append(cur); cur = []
+if cur: sentences.append(cur)
+RULES = [(r'probably know this exists', 'smug'),
+         (r'\bdisclaimer\b|not legal advice|educational purposes|interpreted as such', 'neutral'),
+         (r'like and follow', 'confident'), (r'just be aware|before you try', 'smug'),
+         (r'for the record|no one has ever|could reject|still be prosecuted', 'concerned'),
+         (r'\bzero\b|impossible|weird|unable', 'surprised'), (r'^(however|but)\b', 'pointing'),
+         (r'\?$', 'thinking'), (r'congress|amendment|constitution|district|jury|jurors|court|law\b', 'explaining')]
+auto_seg = []
+for i, s in enumerate(sentences):
+    text = ' '.join(w[2] for w in s).lower()
+    auto_seg.append([s[0][0], next((p for pat, p in RULES if re.search(pat, text)), ['explaining', 'neutral'][i % 2])])
+def auto_pose(t):
+    p = 'neutral'
+    for a, q in auto_seg:
+        if a <= t + 0.05: p = q
+    return p
+# Mouth follows the actual voice: open on syllables, closed in every pause (even tiny ones between words).
+def _mouth_track():
+    pcm = subprocess.run([FFMPEG, '-loglevel', 'error', '-i', wav, '-f', 's16le', '-ac', '1', '-ar', '16000', '-'],
+                         capture_output=True).stdout
+    a = np.frombuffer(pcm, np.int16).astype(np.float32) / 32768; sr = 16000
+    n = int(len(a) / sr * FPS) + 2; win = int(0.03 * sr)
+    segs = [a[max(0, int(i / FPS * sr) - win // 2):int(i / FPS * sr) + win // 2] for i in range(n)]
+    rms = np.array([np.sqrt(np.mean(g ** 2) + 1e-12) if len(g) else 0.0 for g in segs])
+    p95 = np.percentile(rms, 95)
+    pad = np.pad(rms, 3, mode='edge')
+    local = np.lib.stride_tricks.sliding_window_view(pad, 7).max(1)
+    quiet = rms <= 0.22 * p95
+    o = (~quiet) & (rms > 0.6 * local)
+    for _ in range(2):                       # drop 1-frame blips so the mouth never flickers (silence always wins)
+        i = 0
+        while i < n:
+            j = i
+            while j < n and o[j] == o[i]: j += 1
+            if j - i < 2 and 0 < i and j < n and not quiet[i]: o[i:j] = o[i - 1]
+            i = j
+    return o & ~quiet
+MOUTH = _mouth_track()
+def talking(t):
+    f = int(round(t * FPS))
+    return bool(MOUTH[f]) if f < len(MOUTH) else False
+
+# ---------- sound effects (built-in, royalty-free; drop assets/sfx/<name>.wav to override) ----------
+def _lp(x, alpha):
+    y = np.empty_like(x); acc = 0.0
+    al = np.broadcast_to(alpha, x.shape)
+    for i in range(len(x)): acc += al[i] * (x[i] - acc); y[i] = acc
+    return y
+def _sfx(name):
+    sr = SR_A; rng = np.random.default_rng(7)
+    T = lambda d: np.arange(int(d * sr)) / sr
+    if name == 'pop':
+        t = T(0.09); f = 1200 * np.exp(-t * 14) + 380
+        x = np.sin(2 * np.pi * np.cumsum(f) / sr) * np.exp(-t * 45)
+    elif name == 'whoosh':
+        t = T(0.42); n = rng.standard_normal(len(t)); p = t / t[-1]
+        x = _lp(n, 0.04 + 0.45 * np.sin(np.pi * p) ** 2) * np.sin(np.pi * p) ** 2
+    elif name in ('boom', 'hit'):
+        d = 1.0 if name == 'boom' else 0.4; t = T(d)
+        f = 55 * np.exp(-t * 1.2) + 36
+        ph = 2 * np.pi * np.cumsum(f) / sr
+        x = np.tanh(3 * (np.sin(ph) + 0.5 * np.sin(2 * ph))) * np.minimum(1, t / 0.005) * np.exp(-t * (3.2 if name == 'boom' else 8))
+        x[:int(0.03 * sr)] += _lp(rng.standard_normal(int(0.03 * sr)), 0.3) * np.exp(-T(0.03) * 120) * 0.8
+    elif name == 'ding':
+        t = T(1.4); x = sum(a * np.sin(2 * np.pi * 1318 * r * t) * np.exp(-t * dcy)
+                            for r, a, dcy in [(1, 1, 3), (2.0, .4, 4), (2.76, .3, 6), (5.4, .15, 9)])
+    elif name == 'wind':
+        t = T(2.8); n = rng.standard_normal(len(t))
+        x = _lp(n, 0.03) * (0.6 + 0.4 * np.sin(2 * np.pi * 0.7 * t)) * np.minimum(1, t / 0.4) * np.minimum(1, (t[-1] - t) / 0.6)
+    elif name == 'gavel':
+        x = np.zeros(int(0.6 * sr))
+        for st in (0, 0.22):
+            t = T(0.3); k = (np.sin(2 * np.pi * 190 * t) + 0.6 * np.sin(2 * np.pi * 420 * t)) * np.exp(-t * 30)
+            k[:int(0.015 * sr)] += _lp(rng.standard_normal(int(0.015 * sr)), 0.25) * 1.5
+            i = int(st * sr); x[i:i + len(k)] += k[:len(x) - i]
+    elif name == 'boing':
+        t = T(0.6); f = 380 * np.exp(-t * 1.5) + 60 * np.sin(2 * np.pi * 11 * t) * np.exp(-t * 3)
+        x = np.sin(2 * np.pi * np.cumsum(f) / sr) * np.exp(-t * 4.5)
+    elif name == 'step':
+        t = T(0.12); x = np.sin(2 * np.pi * 523 * t) * np.exp(-t * 35)
+    elif name == 'stinger':
+        parts = []
+        for f0, d in ((146.8, 0.2), (138.6, 0.2), (110.0, 1.0)):
+            t = T(d); x = sum(np.sin(2 * np.pi * f0 * h * t) / h for h in range(1, 8))
+            parts.append(x * np.minimum(1, t / 0.01) * np.exp(-t * (6 if d < 0.5 else 1.8)))
+            parts.append(np.zeros(int(0.03 * sr)))
+        x = np.concatenate(parts)
+    else:
+        return np.zeros(1)
+    return (x / (np.abs(x).max() + 1e-9) * 0.9).astype(np.float32)
+FILE_GAIN = {'boom': 0.55, 'pop': 0.45, 'alert': 0.4, 'huh': 0.6, 'correct': 0.4, 'error': 0.4, 'quack': 0.45,
+             'click': 0.6, 'ding': 0.4}
+SFX_GAIN = {'pop': 0.32, 'whoosh': 0.28, 'boom': 0.5, 'hit': 0.4, 'ding': 0.35, 'wind': 0.28, 'gavel': 0.55,
+            'boing': 0.35, 'step': 0.25, 'stinger': 0.45}
+_sfx_cache = {}
+def sfx_audio(name):
+    if name in _sfx_cache: return _sfx_cache[name]
+    f = os.path.join(ASSETS, 'sfx', f'{name}.wav')
+    if os.path.exists(f):
+        pcm = subprocess.run([FFMPEG, '-loglevel', 'error', '-i', f, '-f', 's16le', '-ac', '1', '-ar', str(SR_A), '-'], capture_output=True).stdout
+        x = np.frombuffer(pcm, np.int16).astype(np.float32) / 32768 * FILE_GAIN.get(name, 0.4) / SFX_GAIN.get(name, 0.3)
+    else:
+        x = _sfx(name)
+    _sfx_cache[name] = x
+    return x
+SFX_EVENTS = []     # (time, name)
+
+# ---------- assets ----------
+def load_font(size):
+    for f in FONT_FILES:
+        if os.path.exists(f): return ImageFont.truetype(f, size)
+    return ImageFont.load_default()
+_cache = {}
+def sprite(kind, name, target_h=None, target_w=None):
+    key = (kind, name, target_h, target_w)
+    if key in _cache: return _cache[key]
+    folder = {'larry': 'larry', 'char': 'chars', 'prop': 'props', 'bg': 'bg'}[kind]
+    fname = f'larry-{name}.png' if kind == 'larry' else f'{name}.png'
+    f = os.path.join(ASSETS, folder, fname)
+    if not os.path.exists(f):
+        _cache[key] = None; return None
+    im = Image.open(f).convert('RGB' if kind == 'bg' else 'RGBA')
+    if kind == 'bg':
+        s = max(W / im.width, H / im.height) * 1.06          # a little extra room for the slow zoom
+        im = im.resize((round(im.width * s), round(im.height * s)), Image.LANCZOS)
+    elif target_h or target_w:
+        s = min((target_h or 1e9) / im.height, (target_w or 1e9) / im.width)
+        im = im.resize((max(1, round(im.width * s)), max(1, round(im.height * s))), Image.LANCZOS)
+    _cache[key] = im
+    return im
+
+_cards = {}
+def make_card(text, max_w=900):
+    if text in _cards: return _cards[text]
+    if len(text) > 18 and ' ' in text and '\n' not in text:      # long hooks wrap onto two balanced lines
+        ws_ = text.split(); best = None
+        for i in range(1, len(ws_)):
+            a_, b_ = ' '.join(ws_[:i]), ' '.join(ws_[i:])
+            if best is None or abs(len(a_) - len(b_)) < abs(len(best[0]) - len(best[1])): best = (a_, b_)
+        text_draw = best[0] + '\n' + best[1]
+    else: text_draw = text
+    f = load_font(150 if len(text) <= 2 else (84 if '\n' in text_draw else 74))
+    bb = ImageDraw.Draw(Image.new('RGBA', (1, 1))).multiline_textbbox((0, 0), text_draw, font=f, align='center', spacing=14)
+    w, h = int(bb[2] - bb[0] + 90), int(bb[3] - bb[1] + 70)
+    card = Image.new('RGBA', (w + 16, h + 16), (0, 0, 0, 0)); d = ImageDraw.Draw(card)
+    d.rounded_rectangle([8, 14, w + 8, h + 14], 34, fill=(0, 0, 0, 40))
+    d.rounded_rectangle([0, 0, w, h], 34, fill=(255, 255, 255, 255))
+    d.rectangle([20, h - 18, w - 20, h - 6], fill=RED)
+    d.rounded_rectangle([0, 0, w, h], 34, outline=NAVY, width=8)
+    d.multiline_text((45 - bb[0], 30 - bb[1]), text_draw, font=f, fill=NAVY, align='center', spacing=14)
+    if card.width > max_w: card = card.resize((max_w, round(card.height * max_w / card.width)), Image.LANCZOS)
+    _cards[text] = card
+    return card
+
+g = np.linspace(0, 1, H)[:, None, None]
+white = (np.array([255, 255, 255]) * (1 - g) + np.array([244, 244, 240]) * g).repeat(W, 1)
+yy, xx = np.mgrid[0:H, 0:W]
+WHITE_BG = Image.fromarray(np.clip(white - np.exp(-(((xx - W / 2) / 230) ** 2 + ((yy - FEET_Y) / 26) ** 2))[..., None] * 38,
+                                   0, 255).astype(np.uint8), 'RGB').convert('RGBA')
+
+def pop(age, dur_in=0.18, bounce=0.12):
+    if age < 0: return 0.0
+    return min(1.0, age / dur_in) * (1 + bounce * math.exp(-age * 10) * math.sin(age * 25)) if age < 0.6 else 1.0
+
+# ---------- timeline ----------
+scenes = []
+if plan:
+    idx = 0
+    for sc in plan.get('scenes', []):
+        if sc.get('at') in (None, '', 'start'): t0, i0 = 0.0, 0
+        else:
+            t0, i0 = find(sc['at'], idx)
+            if t0 is None:
+                print(json.dumps({'warning': f'phrase not found: {sc["at"]}'}), file=sys.stderr); continue
+        idx = i0
+        items = []
+        if not scenes and plan.get('hook'):
+            items.append({'card': plan['hook'], 't': 0.0, 'hold': 2.6, 'sfx': 'boom', 'hook': True})
+        for it in sc.get('props', []) + ([{'card': sc['card'], 'at': sc.get('card_at'), 'y': sc.get('card_y', 0.14)}] if sc.get('card') else []):
+            ta = t0
+            if it.get('at'):
+                ta2, _ = find(it['at'], i0); ta = ta2 if ta2 is not None else t0
+            items.append(dict(it, t=ta))
+        zooms = []
+        for z in sc.get('zooms', []):
+            tz, _ = find(z['at'], i0)
+            if tz is not None: zooms.append(dict(z, t=tz))
+        scenes.append(dict(sc, t=t0, items=items, zooms=zooms))
+    scenes.sort(key=lambda s: s['t'])
+if not scenes or scenes[0]['t'] > 0:
+    scenes.insert(0, {'t': 0.0, 'bg': 'white', 'cast': [{'id': 'larry:auto'}], 'items': []})
+# loop ending: the last scene must look exactly like the video's first frame, so the replay is seamless.
+# It is the last scene when the plan marks it "loop": true or it reuses the opening background. Anyone who
+# enters during the opening (tiptoe / walk-in) is left out, because at frame 0 they are still off-screen.
+ENTRANCES = ('tiptoe', 'walk_in', 'enter')
+if len(scenes) > 2 and (scenes[-1].get('loop') or (scenes[-1].get('bg', 'white') == scenes[0].get('bg', 'white') != 'white')):
+    scenes[-1]['cast'] = [dict(c) for c in scenes[0].get('cast', []) if c.get('anim') not in ENTRANCES]
+    for c in scenes[-1]['cast']: c.pop('anim', None)
+    scenes[-1]['loop'] = True
+for i, sc in enumerate(scenes):
+    sc['end'] = scenes[i + 1]['t'] if i + 1 < len(scenes) else dur + 1
+    sc.setdefault('zooms', [])
+
+# automatic punch-ins on shock words (at most one every 6 s, never on top of a planned one)
+planned_z = [z['t'] for sc in scenes for z in sc['zooms']]
+last = -99
+for (a, b, wtxt), n_ in zip(words, wn):
+    if n_ in ZOOM_WORDS and a - last >= 6 and all(abs(a - p) > 4 for p in planned_z):
+        for sc in reversed(scenes):
+            if sc['t'] <= a:
+                if not plan or plan.get('auto_zoom', True): sc['zooms'].append({'t': a, 'amount': 1.18, 'hold': 0.9, 'auto': True})
+                break
+        last = a
+
+# sound effects tied to what happens on screen (plan items can force one with "sfx": name, or silence it with "none")
+for i, sc in enumerate(scenes):
+    if i > 0 and sc.get('sfx', 'whoosh') != 'none': SFX_EVENTS.append((sc['t'], sc.get('sfx', 'whoosh')))
+    for it in sc['items']:
+        name = it.get('sfx')
+        if not name:
+            pid = it.get('id', '')
+            name = ('wind' if it.get('anim') == 'roll' else 'gavel' if 'gavel' in pid else 'click' if pid.startswith('map') else
+                    'boom' if 'card' in it else 'pop')
+        if name != 'none': SFX_EVENTS.append((it['t'], name))
+    for z in sc['zooms']:
+        if z.get('sfx', 'hit') != 'none': SFX_EVENTS.append((z['t'], z.get('sfx', 'hit')))
+    for c in sc.get('cast', []):
+        if c.get('anim') == 'tiptoe':
+            walk = max(0.6, (sc['end'] - sc['t']) * 0.7)
+            for k_ in range(int(walk / 0.29)): SFX_EVENTS.append((sc['t'] + k_ * 0.29, 'step'))
+            SFX_EVENTS.append((sc['t'] + walk, 'alert'))                     # "!" when he arrives behind his target
+        if c['id'] == 'larry:surprised': SFX_EVENTS.append((sc['t'] + 0.05, 'boing'))
+        if 'confused' in c['id']: SFX_EVENTS.append((sc['t'] + 0.6, 'huh'))
+    for e in sc.get('sfx_at', []):                                       # plan: {"at": phrase, "sfx": "quack"}
+        te, _ = find(e['at'], 0)
+        if te is not None: SFX_EVENTS.append((te, e['sfx']))
+# handle tag + sound when the narration says "follow Legal Loopholes Daily" (last mention = the call to action)
+HANDLE_T = None
+for ph in ('follow legal loopholes daily', 'legal loopholes daily'):
+    toks = [norm(x) for x in ph.split()]
+    hits = [i for i in range(len(wn) - len(toks) + 1) if wn[i:i + len(toks)] == toks]
+    if hits:
+        HANDLE_T = words[hits[-1]][0]; break
+if HANDLE_T is not None and BRAND.get('handle_sfx', 'correct') != 'none':
+    SFX_EVENTS.append((HANDLE_T, BRAND.get('handle_sfx', 'correct')))
+# narration cues
+for s_ in sentences:
+    txt = ' '.join(w[2] for w in s_).lower()
+    if re.search(r"^(so,? )?the (legal )?theory|here'?s the (thing|catch|kicker)|the thing is|turns out", txt):
+        SFX_EVENTS.append((s_[0][0], 'ding'))
+    if re.search(r'(have|has) not done anything|done nothing|never fixed|still exists', txt):
+        SFX_EVENTS.append((s_[-1][0], 'error'))
+# keep it tasteful: per-sound limits and no two sounds piled on top of each other
+LIMITS = {'boom': (3, 6), 'alert': (1, 99), 'huh': (2, 15), 'error': (1, 99), 'ding': (2, 15), 'quack': (1, 99),
+          'correct': (2, 15), 'boing': (2, 12), 'stinger': (1, 99), 'hit': (4, 6), 'gavel': (2, 10), 'wind': (1, 99)}
+PRIORITY = ['correct', 'boom', 'alert', 'stinger', 'error', 'huh', 'ding', 'gavel', 'boing', 'wind', 'correct', 'quack',
+            'click', 'pop', 'hit', 'whoosh', 'step']
+rank = lambda n: PRIORITY.index(n) if n in PRIORITY else 50
+kept, count, times = [], {}, {}
+for t_, n_ in sorted(SFX_EVENTS, key=lambda e: (rank(e[1]), e[0])):      # important sounds claim their moment first
+    mx, gap_ = LIMITS.get(n_, (99, 0))
+    if count.get(n_, 0) >= mx or any(abs(t_ - x) < gap_ for x in times.get(n_, [])): continue
+    if n_ not in ('step', 'whoosh') and any(abs(t_ - x) < 0.35 for x, m in kept if m not in ('step', 'whoosh')): continue
+    kept.append((t_, n_)); count[n_] = count.get(n_, 0) + 1; times.setdefault(n_, []).append(t_)
+SFX_EVENTS = sorted(kept)
+
+def scene_at(t):
+    for sc in reversed(scenes):
+        if sc['t'] <= t: return sc
+    return scenes[0]
+
+# ---------- layout: real proportions, no overlaps ----------
+MARGIN, GAP = 50, 36                 # screen-edge margin and minimum space between figures (px)
+BAND_TOP, BAND_GAP = 70, 36          # props/cards live above the figures with at least this much space
+# On-screen height (px) of each figure at full size. Larry standing = 770. Keeps everyone in proportion.
+REGISTRY = {'larry': 770, 'larry:sneaky': 740,
+            'char-friend-chimp': 560, 'char-judge': 730, 'char-judge-confused': 850, 'char-politician': 860}
+try: REGISTRY.update(json.load(open(os.path.join(ASSETS, 'registry.json'))))
+except Exception: pass
+LARRY_POSES = ['neutral', 'explaining', 'pointing', 'thinking', 'surprised', 'smug', 'concerned', 'confident']
+
+def fig_key(cid):
+    if cid.startswith('larry'):
+        pose = cid.split(':', 1)[1] if ':' in cid else 'auto'
+        return 'larry:' + pose if 'larry:' + pose in REGISTRY else 'larry'
+    return cid
+
+def fig_sprite(cid, pose, k, talk=False):
+    h = round(REGISTRY.get(fig_key(cid if not cid.startswith('larry') else 'larry:' + pose), 720) * k)
+    if cid.startswith('larry'):
+        im = sprite('larry', pose + '-talk', h) if talk else None
+        return im or sprite('larry', pose, h) or sprite('larry', 'neutral', h)
+    return sprite('char', cid, h)
+
+def layout(sc):
+    """Fix each figure's position once per scene: ordered by requested x, spaced so nothing overlaps,
+    shrunk together (keeping proportions) if they don't fit across the screen."""
+    cast = sorted(sc.get('cast', []), key=lambda c: c.get('x', 0.5))
+    def widths(k):
+        ws = []
+        for c in cast:
+            if c['id'].startswith('larry'):
+                pose = c['id'].split(':', 1)[1] if ':' in c['id'] else 'auto'
+                poses = LARRY_POSES if pose == 'auto' else [pose]
+                ws.append(max((fig_sprite(c['id'], p, k).width for p in poses if fig_sprite(c['id'], p, k)), default=0))
+            else:
+                im = fig_sprite(c['id'], None, k); ws.append(im.width if im else 0)
+        return ws
+    def tallest(k):
+        hs = []
+        for c in cast:
+            if c['id'].startswith('larry'):
+                pose = c['id'].split(':', 1)[1] if ':' in c['id'] else 'auto'
+                poses = LARRY_POSES if pose == 'auto' else [pose]
+                hs.append(max(fig_sprite(c['id'], p, k).height for p in poses if fig_sprite(c['id'], p, k)))
+            else:
+                im = fig_sprite(c['id'], None, k); hs.append(im.height if im else 0)
+        return max(hs, default=0)
+    # a big prop (e.g. a map) asks for room: figures shrink together, never below 60% size
+    want_band = max([H * it.get('h', 0) for it in sc.get('items', []) if it.get('anim') != 'roll' and it.get('h', 0) >= 0.24], default=0)
+    k = 1.0
+    while want_band and k > 0.6 and FEET_Y - tallest(k) - BAND_GAP - BAND_TOP < want_band:
+        k *= 0.95
+    for _ in range(12):
+        ws = widths(k)
+        if sum(ws) + GAP * (len(ws) - 1) <= W - 2 * MARGIN: break
+        k *= 0.92
+    total = sum(ws) + GAP * (len(ws) - 1)
+    # honour requested x where possible, but never overlap or leave the screen
+    xs, cursor = [], MARGIN
+    for c, w in zip(cast, ws):
+        want = W * c.get('x', 0.5) - w / 2
+        left = max(cursor, want)
+        xs.append(left); cursor = left + w + GAP
+    overflow = cursor - GAP - (W - MARGIN)
+    if overflow > 0: xs = [x - overflow for x in xs]
+    if len(cast) == 1 and 'x' not in cast[0]: xs = [(W - ws[0]) / 2]
+    # tallest figure decides how much room is left above for props
+    tops = []
+    for c in cast:
+        if c['id'].startswith('larry'):
+            pose = c['id'].split(':', 1)[1] if ':' in c['id'] else 'auto'
+            poses = LARRY_POSES if pose == 'auto' else [pose]
+            tops.append(max(fig_sprite(c['id'], p, k).height for p in poses if fig_sprite(c['id'], p, k)))
+        else:
+            im = fig_sprite(c['id'], None, k); tops.append(im.height if im else 0)
+    sc['_layout'] = {'k': k, 'slots': list(zip(cast, xs, ws)), 'fig_top': FEET_Y - max(tops, default=0)}
+
+def draw_cast(frame, sc, t):
+    if '_layout' not in sc:
+        if sc.get('loop'):                                   # copy the opening frame's exact positions and sizes
+            if '_layout' not in scenes[0]: layout(scenes[0])
+            L0 = scenes[0]['_layout']
+            sc['_layout'] = dict(L0, slots=[(dict(c, anim=None), x, w) for c, x, w in L0['slots'] if c.get('anim') not in ENTRANCES])
+        else:
+            layout(sc)
+    L = sc['_layout']; age = t - sc['t']
+    still = sc['t'] == 0 or sc.get('loop')                   # opening frame and loop ending: cast already in place
+    for n, (c, left, w) in enumerate(L['slots']):
+        cid = c['id']
+        if cid.startswith('larry'):
+            pose = cid.split(':', 1)[1] if ':' in cid else 'auto'
+            if pose == 'auto': pose = auto_pose(t)
+            im = fig_sprite(cid, pose, L['k'], talk=pose in TALK_POSES and talking(t))
+        else:
+            pose = cid; im = fig_sprite(cid, None, L['k'])
+        if im is None: continue
+        if c.get('flip'): im = im.transpose(Image.FLIP_LEFT_RIGHT)
+        cx = left + w / 2; dy = 0
+        if c.get('anim') == 'tiptoe':                       # walks in from off-screen and stops at its slot
+            p = min(1.0, age / max(0.6, (sc['end'] - sc['t']) * 0.7))
+            start = -w / 2 if c.get('from', 'left') == 'left' else W + w / 2
+            cx = start + (cx - start) * p
+            dy = -abs(12 * math.sin(t * 7)) if p < 1.0 else 0
+        s = 1.0 if (still or c.get('anim') == 'tiptoe') else pop(age - 0.08 * n)
+        if s <= 0.02: continue
+        if s != 1.0: im = im.resize((max(1, round(im.width * s)), max(1, round(im.height * s))), Image.BILINEAR)
+        top = round(FEET_Y - im.height + dy)
+        frame.alpha_composite(im, (round(cx - im.width / 2), top))
+        if pose == 'surprised' and age < 1.2:
+            d = ImageDraw.Draw(frame); r = int(age * 10) % 3
+            for side in (-1, 1):
+                for ang in (-35, 0, 35):
+                    a = math.radians(ang); bx = cx + side * (im.width / 2 + 10)
+                    d.line([(bx + side * (6 + 3 * r) * math.cos(a), top + 110 + (6 + 3 * r) * math.sin(a)),
+                            (bx + side * (30 + 3 * r) * math.cos(a), top + 110 + (30 + 3 * r) * math.sin(a))],
+                           fill=(246, 190, 60, 255), width=11)
+
+def item_image(it, sc):
+    """Prop or card scaled to fit the free band above the figures (never touching them)."""
+    if '_layout' not in sc: layout(sc)
+    band_h = sc['_layout']['fig_top'] - BAND_GAP - BAND_TOP
+    if 'card' in it: im = make_card(it['card'])
+    else: im = sprite('prop', it['id'], H * it.get('h', 0.2), W * it.get('w', 0.8))
+    if im is None: return None
+    if it.get('anim') == 'roll': return im
+    f = min(1.0, band_h / im.height, (W - 2 * MARGIN) / im.width)
+    if f < 1.0: im = im.resize((max(1, round(im.width * f)), max(1, round(im.height * f))), Image.LANCZOS)
+    return im
+
+FRAME_BOXES = []
+def draw_items(frame, sc, t):
+    if '_layout' not in sc: layout(sc)
+    band = [it for it in sc['items'] if it.get('anim') != 'roll']
+    for j, it in enumerate(band):                           # one band item at a time: the next one replaces it
+        nxt = band[j + 1]['t'] if j + 1 < len(band) else sc['end']
+        it['_end'] = min(nxt, it['t'] + it['hold']) if it.get('hold') else nxt
+    for it in sc['items']:
+        age = t - it['t']
+        if age < 0: continue
+        im = item_image(it, sc)
+        if im is None: continue
+        if it.get('anim') == 'roll':
+            # rolls in along the floor and stops in the widest empty gap between figures
+            slots = sc['_layout']['slots']; edges = [(MARGIN, MARGIN)] + [(l, l + w) for _, l, w in slots] + [(W - MARGIN, W - MARGIN)]
+            gaps = sorted(((edges[i + 1][0] - edges[i][1], (edges[i][1] + edges[i + 1][0]) / 2) for i in range(len(edges) - 1)), reverse=True)
+            gw, gx = gaps[0]
+            f = min(1.0, (gw - 2 * GAP) / im.width) if gw > 2 * GAP else 0.0
+            if f <= 0.05: continue
+            if f < 1.0: im = im.resize((max(1, round(im.width * f)), max(1, round(im.height * f))), Image.LANCZOS)
+            p = min(1.0, age / it.get('roll_time', 2.0))
+            start = W + im.width / 2 if gx > W / 2 else -im.width / 2
+            x = start + (gx - start) * (1 - (1 - p) ** 2)
+            y = FEET_Y - im.height / 2 - (abs(30 * math.sin(p * math.pi * 3)) if p < 1 else 0)
+            pim = im.rotate((1 - p) * 540 * (1 if start > gx else -1), resample=Image.BILINEAR, expand=True)
+            frame.alpha_composite(pim, (round(x - pim.width / 2), round(y - pim.height / 2)))
+            continue
+        left = it['_end'] - t
+        if left <= 0: continue
+        s = pop(age)
+        if left < 0.15: s *= max(0.0, left / 0.15)
+        if s <= 0.02: continue
+        band_h = sc['_layout']['fig_top'] - BAND_GAP - BAND_TOP
+        x, y = W * it.get('x', 0.5), BAND_TOP + band_h / 2
+        pim = im.resize((max(1, round(im.width * s)), max(1, round(im.height * s))), Image.BILINEAR) if s != 1.0 else im
+        frame.alpha_composite(pim, (round(x - pim.width / 2), round(y - pim.height / 2)))
+        bw, bh = im.width, im.height
+        FRAME_BOXES.append((x - bw / 2, y - bh / 2, x + bw / 2, y + bh / 2))
+
+def background(sc, t):
+    bg = sc.get('bg', 'white')
+    im = sprite('bg', bg) if bg != 'white' else None
+    if im is None: return WHITE_BG.copy()
+    p = min(1.0, (t - sc['t']) / max(1.0, sc['end'] - sc['t']))
+    z = 1.0 + 0.045 * p                                    # slow push-in
+    cw, ch = im.width / 1.06 / z, im.height / 1.06 / z
+    cx, cy = im.width / 2, im.height / 2
+    crop = im.crop((round(cx - cw / 2), round(cy - ch / 2), round(cx + cw / 2), round(cy + ch / 2)))
+    return crop.resize((W, H), Image.BILINEAR).convert('RGBA')
+
+def zoom_amount(sc, t):
+    best = 1.0
+    for z in sc['zooms']:
+        age = t - z['t']; hold = z.get('hold', 0.9); amt = z.get('amount', 1.18)
+        if 0 <= age < hold + 0.25:
+            e = min(1.0, age / 0.08) if age < hold else max(0.0, 1 - (age - hold) / 0.25)
+            best = max(best, 1 + (amt - 1) * e)
+    return best
+
+def apply_zoom(frame, sc, t):
+    z = zoom_amount(sc, t)
+    if z <= 1.001: return frame
+    L = sc.get('_layout'); cx, cy = W / 2, H * 0.4
+    if L:
+        for c, left, w in L['slots']:
+            if c['id'].startswith('larry'):
+                cx = left + w / 2; cy = FEET_Y - REGISTRY['larry'] * L['k'] * 0.72; break
+    def fit(z):
+        cw, ch = W / z, H / z
+        x0 = min(max(0, cx - cw / 2), W - cw); y0 = min(max(0, cy - ch / 2), H - ch)
+        if FRAME_BOXES:                                    # slide the window to keep props/cards inside it
+            bx0 = min(b[0] for b in FRAME_BOXES); by0 = min(b[1] for b in FRAME_BOXES)
+            bx1 = max(b[2] for b in FRAME_BOXES); by1 = max(b[3] for b in FRAME_BOXES)
+            x0 = min(max(x0, bx1 - cw), bx0); y0 = min(max(y0, by1 - ch), by0)
+            x0 = min(max(0, x0), W - cw); y0 = min(max(0, y0), H - ch)
+            ok = x0 <= bx0 and x0 + cw >= bx1 and y0 <= by0 and y0 + ch >= by1
+        else: ok = True
+        return ok, x0, y0, cw, ch
+    while z > 1.001:
+        ok, x0, y0, cw, ch = fit(z)
+        if ok: break
+        z -= 0.01
+    if z <= 1.001: return frame
+    return frame.crop((round(x0), round(y0), round(x0 + cw), round(y0 + ch))).resize((W, H), Image.BILINEAR)
+
+_legal = None
+def draw_legal(frame, t):
+    global _legal
+    if t > 3.5: return
+    if _legal is None:
+        f = load_font(34); d0 = ImageDraw.Draw(Image.new('RGBA', (1, 1)))
+        bb = d0.textbbox((0, 0), LEGAL_LINE, font=f, stroke_width=4)
+        _legal = Image.new('RGBA', (bb[2] - bb[0] + 10, bb[3] - bb[1] + 10), (0, 0, 0, 0))
+        ImageDraw.Draw(_legal).text((5 - bb[0], 5 - bb[1]), LEGAL_LINE, font=f, fill=(255, 255, 255, 235),
+                                    stroke_width=4, stroke_fill=(11, 16, 32, 220))
+    a = 1.0 if t < 3.0 else max(0.0, (3.5 - t) / 0.5)
+    im = _legal if a >= 1 else Image.fromarray((np.array(_legal) * np.array([1, 1, 1, a])).astype(np.uint8), 'RGBA')
+    frame.alpha_composite(im, ((W - im.width) // 2, 24))
+
+_handle = None
+def draw_handle(frame, t):
+    global _handle
+    if not HANDLE or HANDLE_T is None: return
+    hold = float(BRAND.get('handle_hold', 3.0)); age = t - HANDLE_T
+    if age < 0 or age > hold + 0.4: return
+    if _handle is None:
+        f = load_font(46); d0 = ImageDraw.Draw(Image.new('RGBA', (1, 1)))
+        bb = d0.textbbox((0, 0), HANDLE, font=f)
+        w, h = bb[2] - bb[0] + 64, bb[3] - bb[1] + 34
+        _handle = Image.new('RGBA', (w + 8, h + 10), (0, 0, 0, 0)); d = ImageDraw.Draw(_handle)
+        d.rounded_rectangle([4, 8, w + 4, h + 8], h // 2, fill=(0, 0, 0, 45))
+        d.rounded_rectangle([0, 0, w, h], h // 2, fill=(*NAVY, 235))
+        d.text((32 - bb[0], 17 - bb[1]), HANDLE, font=f, fill=(255, 255, 255, 255))
+    a = 1.0 if age < hold else max(0.0, (hold + 0.4 - age) / 0.4)
+    s_ = max(0.01, pop(age))
+    im = _handle
+    if s_ != 1: im = im.resize((max(1, round(im.width * s_)), max(1, round(im.height * s_))), Image.BILINEAR)
+    if a < 1: im = Image.fromarray((np.array(im) * np.array([1, 1, 1, a])).astype(np.uint8), 'RGBA')
+    frame.alpha_composite(im, ((W - im.width) // 2, HANDLE_Y - im.height // 2))
+
+# ---------- captions: word pop + coloured keywords ----------
+def write_ass(path):
+    hl = {norm(x) for x in (plan or {}).get('highlight', [])}
+    def ts(x):
+        cs = int(round(x * 100)); return f'{cs // 360000}:{cs // 6000 % 60:02d}:{cs // 100 % 60:02d}.{cs % 100:02d}'
+    lines = ['[Script Info]', 'ScriptType: v4.00+', 'PlayResX: 162', 'PlayResY: 288', 'WrapStyle: 2', 'ScaledBorderAndShadow: yes', '',
+             '[V4+ Styles]',
+             'Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding',
+             'Style: Cap,Arial Rounded MT Bold,16,&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,4,0,2,5,5,90,1',
+             '', '[Events]', 'Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text']
+    for (a, b, wtxt), n_ in zip(words, wn):
+        col = ''
+        if n_ in HOT_RED or re.search(r'\d', wtxt): col = r'\c&H004639E6&'        # brand red
+        elif n_ in HOT_YELLOW or n_ in hl: col = r'\c&H0000D7FF&'                 # yellow
+        txt = wtxt.replace('{', '(').replace('}', ')')
+        lines.append(f'Dialogue: 0,{ts(a)},{ts(b)},Cap,,0,0,0,,{{{col}\\fscx72\\fscy72\\t(0,90,\\fscx110\\fscy110)\\t(90,160,\\fscx100\\fscy100)}}{txt}')
+    open(path, 'w', encoding='utf-8').write('\n'.join(lines) + '\n')
+
+# ---------- audio: voice + sound effects ----------
+def mix_audio(path):
+    pcm = subprocess.run([FFMPEG, '-loglevel', 'error', '-i', wav, '-f', 's16le', '-ac', '1', '-ar', str(SR_A), '-'], capture_output=True).stdout
+    voice = np.frombuffer(pcm, np.int16).astype(np.float32) / 32768
+    mix = voice.copy()
+    for t0, name in SFX_EVENTS:
+        x = sfx_audio(name) * SFX_GAIN.get(name, 0.3); i = int(t0 * SR_A)
+        if i >= len(mix): continue
+        mix[i:i + len(x)] += x[:len(mix) - i]
+    peak = np.abs(mix).max()
+    if peak > 0.98: mix *= 0.98 / peak
+    import wave
+    with wave.open(path, 'wb') as wf:
+        wf.setnchannels(1); wf.setsampwidth(2); wf.setframerate(SR_A)
+        wf.writeframes((mix * 32767).astype(np.int16).tobytes())
+
+# ---------- 3D mode ----------
+BG3D = {'white', 'bg-campsite', 'bg-yellowstone', 'bg-capitol', 'bg-courtroom', 'bg-prison', 'bg-shop', 'bg-office', 'bg-street', 'bg-neighborhood', 'bg-harbor'}
+PROP3D = {'map-us', 'map-yellowstone', 'map-zone', 'prop-constitution', 'prop-gavel', 'prop-tumbleweed', 'sign', 'doc'}
+CHAR3D = {'char-friend-chimp', 'char-judge', 'char-judge-confused', 'char-politician'}
+
+def render_3d_base(nframes):
+    """Write the resolved timeline and let the Three.js world render the picture (no captions, no sound)."""
+    def items_3d(sc):
+        board = [it for it in sc['items'] if 'id' in it and it.get('anim') != 'roll']
+        out_ = []
+        for j, it in enumerate(board):
+            nxt = board[j + 1]['t'] if j + 1 < len(board) else sc['end']
+            end = min(nxt, it['t'] + it['hold']) if it.get('hold') else nxt
+            out_.append(dict({k: it[k] for k in ('icon', 'text', 'sub') if k in it}, id=it['id'], t=it['t'], end=end))
+        for it in sc['items']:
+            if 'id' in it and it.get('anim') == 'roll':
+                out_.append({'id': it['id'], 't': it['t'], 'anim': 'roll', 'roll_time': it.get('roll_time', 2.0)})
+        return out_
+    tl = {'fps': FPS, 'dur': dur, 'frames': nframes,
+          'mouth': [int(bool(MOUTH[i])) if i < len(MOUTH) else 0 for i in range(nframes)],
+          'poses': auto_seg,
+          'scenes': [{'t': sc['t'], 'end': min(sc['end'], dur + 1), 'bg': sc.get('bg', 'white'), 'loop': bool(sc.get('loop')),
+                      'cast': [{k: v for k, v in c.items() if k in ('id', 'x', 'anim', 'from')} for c in sc.get('cast', [])],
+                      'items': items_3d(sc), 'zooms': [{'t': z['t'], 'amount': z.get('amount', 1.18), 'hold': z.get('hold', 0.9)} for z in sc['zooms']]}
+                     for sc in scenes]}
+    tl_path, base = os.path.abspath(out + '.timeline.json'), os.path.abspath(out + '.base3d.mp4')
+    json.dump(tl, open(tl_path, 'w'))
+    if os.environ.get('LLD_TIMELINE_ONLY'): raise SystemExit(0)
+    node = next((p for p in ['/opt/homebrew/bin/node', '/usr/local/bin/node', shutil.which('node')] if p and os.path.exists(p)), 'node')
+    r = subprocess.run([node, os.path.join(R3D_DIR, 'render3d.mjs'), tl_path, base], cwd=R3D_DIR,
+                       env=dict(os.environ, FFMPEG=FFMPEG, PATH=os.environ.get('PATH', '') + ':/opt/homebrew/bin:/usr/local/bin'))
+    if r.returncode != 0 or not os.path.exists(base): raise SystemExit('3D render failed')
+    return base
+
+CARD_Y, CARD_MAX_H = 255, 300          # cards sit in the sky band, above the cast's heads
+def draw_cards_3d(frame, sc, t):
+    cards = [it for it in sc['items'] if 'card' in it]
+    for j, it in enumerate(cards):
+        nxt = cards[j + 1]['t'] if j + 1 < len(cards) else sc['end']
+        end = min(nxt, it['t'] + it['hold']) if it.get('hold') else nxt
+        age, left = t - it['t'], end - t
+        if age < 0 or left <= 0: continue
+        im = make_card(it['card'])
+        f = min(1.0, CARD_MAX_H / im.height)
+        if f < 1: im = im.resize((round(im.width * f), round(im.height * f)), Image.LANCZOS)
+        s_ = pop(age)
+        if left < 0.15: s_ *= max(0.0, left / 0.15)
+        if s_ <= 0.02: continue
+        if s_ != 1.0: im = im.resize((max(1, round(im.width * s_)), max(1, round(im.height * s_))), Image.BILINEAR)
+        frame.alpha_composite(im, (round(W / 2 - im.width / 2), round(CARD_Y - im.height / 2)))
+
+# ---------- render ----------
+MIN_SECONDS = float(BRAND.get('min_seconds', 0) or 0)
+if MIN_SECONDS and dur < MIN_SECONDS:      # never post a short under the platform minimum we target
+    print(json.dumps({'error': f'narration {dur:.1f}s is under min_seconds {MIN_SECONDS:.0f}s; not rendered', 'video': out}))
+    raise SystemExit(3)
+ass_path, mix_path = out + '.captions.ass', out + '.mix.wav'
+write_ass(ass_path); mix_audio(mix_path)
+vf = f"ass=filename='{ass_path}'"
+cmd = [FFMPEG, '-loglevel', 'error', '-y', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{W}x{H}', '-r', str(FPS),
+       '-i', 'pipe:0', '-i', mix_path, '-vf', vf, '-c:v', 'libx264', '-preset', 'medium', '-crf', '18', '-pix_fmt', 'yuv420p',
+       '-c:a', 'aac', '-b:a', '192k', '-ar', '48000', '-ac', '2', '-profile:v', 'high', '-r', str(FPS), '-shortest', '-movflags', '+faststart', out]
+nframes = int(math.ceil(dur * FPS))
+base3d = None
+last3d = Image.new('RGB', (W, H), (0, 0, 0))
+if RENDER3D:
+    base3d = render_3d_base(nframes)
+    dec = subprocess.Popen([FFMPEG, '-loglevel', 'error', '-i', base3d, '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-'], stdout=subprocess.PIPE)
+proc = subprocess.Popen(cmd, stdin=subprocess.PIPE)
+for fi in range(nframes):
+    t = fi / FPS
+    FRAME_BOXES.clear()
+    sc = scene_at(t)
+    if RENDER3D:
+        raw = dec.stdout.read(W * H * 3)
+        frame = (Image.frombytes('RGB', (W, H), raw) if len(raw) == W * H * 3 else last3d).convert('RGBA')
+        last3d = frame
+        draw_cards_3d(frame, sc, t)
+    else:
+        frame = background(sc, t)
+        draw_cast(frame, sc, t)
+        draw_items(frame, sc, t)
+        frame = apply_zoom(frame, sc, t)
+    draw_legal(frame, t)
+    draw_handle(frame, t)
+    proc.stdin.write(frame.convert('RGB').tobytes())
+proc.stdin.close()
+if proc.wait() != 0: raise SystemExit('ffmpeg failed')
+if RENDER3D:
+    dec.stdout.close(); dec.wait()
+for p_ in (ass_path, mix_path) + ((base3d, base3d.replace('.base3d.mp4', '.timeline.json')) if base3d and not os.environ.get('LLD_KEEP') else ()):
+    try: os.remove(p_)
+    except OSError: pass
+
+missing = set()
+for sc in (scenes if RENDER3D else []):
+    if sc.get('bg', 'white') not in BG3D: missing.add('3d-set/' + sc['bg'])
+    for c in sc.get('cast', []):
+        if not c['id'].startswith('larry') and c['id'] not in CHAR3D: missing.add('3d-char/' + c['id'])
+    for it in sc['items']:
+        if 'id' in it and it['id'] not in PROP3D: missing.add('3d-prop/' + it['id'])
+for sc in ([] if RENDER3D else scenes):
+    if sc.get('bg', 'white') != 'white' and sprite('bg', sc['bg']) is None: missing.add('bg/' + sc['bg'])
+    for c in sc.get('cast', []):
+        if c['id'].startswith('larry:') and c['id'] != 'larry:auto' and sprite('larry', c['id'][6:]) is None:
+            missing.add('larry/larry-' + c['id'][6:])
+        if not c['id'].startswith('larry') and sprite('char', c['id']) is None: missing.add('chars/' + c['id'])
+    for it in sc['items']:
+        if 'id' in it and sprite('prop', it['id'], H * it.get('h', 0.2), W * it.get('w', 0.8)) is None: missing.add('props/' + it['id'])
+print(json.dumps({'video': out, 'renderer': '3d' if RENDER3D else '2d', 'seconds': round(dur, 2), 'plan': bool(plan), 'sfx': len(SFX_EVENTS),
+                  'zooms': sum(len(s_['zooms']) for s_ in scenes),
+                  'scenes': [[round(s['t'], 2), s.get('bg', 'white')] for s in scenes], 'missing_assets': sorted(missing) + ([] if HANDLE else ['brand.json handle']),
+                  'handle_at': None if HANDLE_T is None else round(HANDLE_T, 2)}))

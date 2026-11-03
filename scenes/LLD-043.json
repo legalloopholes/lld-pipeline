@@ -1,0 +1,213 @@
+{
+ "video_id": "LLD-043",
+ "episode": "E43",
+ "hook": "FOREVER ROYALTIES? NOPE.",
+ "highlight": [
+  "royalties",
+  "expires",
+  "patent"
+ ],
+ "youtube_title": "Marvel Promised Royalties Forever. Patent Law Said No 🦝⚖️",
+ "caption": "Kimble v. Marvel (2015): a settlement promised royalties on a Spider-Man toy with no end date, but the Supreme Court kept the rule that patent royalties can't be charged for use after the patent expires.",
+ "hashtags": [
+  "#legalloopholes",
+  "#spiderman",
+  "#marvel",
+  "#patents",
+  "#lawtok",
+  "#supremecourt"
+ ],
+ "script": "Marvel agreed to pay royalties with no end date, and patent law supplied one anyway. This is Kimble versus Marvel, a U.S. Supreme Court case from twenty fifteen. Stephen Kimble patented a Spider-Man web-shooting toy. Marvel's predecessor settled with him. It bought the patent for a lump sum, plus a three percent royalty on future sales, with no end date. Then Marvel found an older Supreme Court case called Brulotte. Its rule: a patent holder can't collect royalties for using an invention after the patent expires. Kimble's patent expired in twenty ten, so Marvel asked the courts to say it could stop paying. The Supreme Court agreed, six to three. The majority kept the old rule and said critics should ask Congress, not the Court, to change it. And Justice Kagan closed the opinion with a line from the comic where Spider-Man first appeared: in this world, with great power there must also come great responsibility. Here's the limit. The Court said parties can still structure deals differently. Payments for use before the patent expires can be spread out over time. And royalties tied to rights that aren't patents, like trade secrets, can work differently. So not every royalty deal automatically ends with a patent. [loop] So before you sign a forever royalty deal on a patent, remember",
+ "publish_at": "2026-11-22T19:00:00-05:00",
+ "sources": [
+  "https://www.law.cornell.edu/supremecourt/text/13-720"
+ ],
+ "legal_status": "Patent-law ruling, 2015",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🕸️💵♾️",
+     "text": ""
+    }
+   ]
+  },
+  {
+   "at": "this is kimble",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "doc",
+     "text": "Kimble v. Marvel",
+     "sub": "U.S. Supreme Court"
+    }
+   ]
+  },
+  {
+   "at": "stephen kimble patented",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🕸️🧸",
+     "text": "Web-shooting toy"
+    }
+   ]
+  },
+  {
+   "at": "it bought the patent",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:pointing",
+     "x": 0.3
+    }
+   ],
+   "card": "3% ROYALTY · NO END DATE",
+   "card_at": "no end date"
+  },
+  {
+   "at": "then marvel found",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:surprised"
+    }
+   ],
+   "props": [
+    {
+     "id": "doc",
+     "text": "Brulotte rule",
+     "sub": "Older Supreme Court case"
+    }
+   ]
+  },
+  {
+   "at": "its rule",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "card": "NO ROYALTIES AFTER EXPIRATION",
+   "card_at": "after the patent expires",
+   "zooms": [
+    {
+     "at": "after the patent expires",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "kimble's patent expired",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:concerned",
+     "x": 0.3
+    }
+   ],
+   "card": "PAYMENTS STOP",
+   "card_at": "stop paying"
+  },
+  {
+   "at": "the majority kept",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🏛️",
+     "text": "Ask Congress"
+    }
+   ]
+  },
+  {
+   "at": "and justice kagan closed",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:smug"
+    }
+   ],
+   "card": "“WITH GREAT POWER…”",
+   "card_at": "with great power"
+  },
+  {
+   "at": "here's the limit",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📆",
+     "text": "Pre-expiry payments OK"
+    }
+   ]
+  },
+  {
+   "at": "so not every royalty",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🔐",
+     "text": "Trade secrets differ"
+    }
+   ]
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so before you sign",
+   "bg": "bg-office",
+   "loop": true
+  }
+ ]
+}

@@ -1,0 +1,203 @@
+{
+ "video_id": "LLD-003",
+ "episode": "E03",
+ "hook": "ONE MISSING COMMA",
+ "highlight": [
+  "comma",
+  "distribution",
+  "shipment"
+ ],
+ "youtube_title": "The Missing Comma That Revived an Overtime Fight 🦝⚖️",
+ "caption": "A missing comma in Maine's overtime exemption led the First Circuit in 2017 to revive delivery drivers' overtime claim. The ruling kept the case alive; it didn't itself award a payout.",
+ "hashtags": [
+  "#legalloopholes",
+  "#oxfordcomma",
+  "#grammar",
+  "#overtime",
+  "#lawtok",
+  "#maine"
+ ],
+ "script": "One missing comma helped a group of delivery drivers take on their employer over overtime pay. This was Maine, in a federal appeals court, in twenty seventeen. Maine's overtime law had a list of jobs that didn't get overtime. It covered the canning, processing, preserving, freezing, drying, marketing, storing, packing for shipment or distribution of certain foods. Notice what's missing? There's no comma after the word shipment. So is distribution its own exempt job? Or is the job packing, whether for shipment or for distribution? The drivers for Oakhurst Dairy delivered milk. They said they distributed it, but they didn't pack it. The court's opinion opens with a line lawyers love: for want of a comma, we have this case. The judges found the list ambiguous, and they read it in the drivers' favor. That revived their overtime claim and sent the case back to the lower court. Now, here's the part people skip. The ruling itself didn't hand anyone a payout. It kept the case alive. And this was the law's wording at the time, not a guide to Maine law today. [loop] So the next time someone tells you punctuation doesn't matter, remember",
+ "publish_at": "2026-11-02T19:00:00-05:00",
+ "sources": [
+  "https://media.ca1.uscourts.gov/pdf.opinions/16-1901P-01A.pdf"
+ ],
+ "legal_status": "Historical ruling, 2017",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "bg-street",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "✏️",
+     "text": "The comma"
+    }
+   ]
+  },
+  {
+   "at": "this was maine",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ]
+  },
+  {
+   "at": "maine's overtime law",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "doc",
+     "text": "No overtime for:",
+     "sub": "Maine overtime law"
+    }
+   ]
+  },
+  {
+   "at": "it covered the canning",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📦",
+     "text": "Packing or…?"
+    }
+   ]
+  },
+  {
+   "at": "notice what's missing",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:surprised"
+    }
+   ],
+   "card": "NO COMMA!",
+   "card_at": "no comma",
+   "zooms": [
+    {
+     "at": "no comma",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "so is distribution",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:thinking"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🤔",
+     "text": "Distribution alone?"
+    }
+   ]
+  },
+  {
+   "at": "the drivers for",
+   "bg": "bg-street",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "x": 0.68
+    },
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "card": "WE DELIVER. WE DON'T PACK.",
+   "card_at": "didn't pack it"
+  },
+  {
+   "at": "the court's opinion opens",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "card": "“FOR WANT OF A COMMA…”",
+   "card_at": "for want of a comma"
+  },
+  {
+   "at": "the judges found",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "card": "CLAIM REVIVED",
+   "card_at": "revived"
+  },
+  {
+   "at": "now here's the part",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🚫💰",
+     "text": "No payout yet"
+    }
+   ]
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so the next time someone",
+   "bg": "bg-street",
+   "loop": true
+  }
+ ]
+}

@@ -1,0 +1,214 @@
+{
+ "video_id": "LLD-014",
+ "episode": "E14",
+ "hook": "ILLEGAL… BUT NO TRIAL?",
+ "highlight": [
+  "immunity",
+  "waive",
+  "diplomat"
+ ],
+ "youtube_title": "Illegal — But the Host Country Can't Prosecute? Diplomatic Immunity 🦝⚖️",
+ "caption": "Under the Vienna Convention, accredited diplomats are immune from the host country's criminal courts — but their own country can waive it or prosecute them, and the host can require them to leave.",
+ "hashtags": [
+  "#legalloopholes",
+  "#diplomaticimmunity",
+  "#internationallaw",
+  "#lawtok",
+  "#didyouknow",
+  "#law"
+ ],
+ "script": "A crime can be clearly illegal, and the country where it happened still may not be able to put that person on trial. It's called diplomatic immunity, and it comes from an international treaty, the Vienna Convention on Diplomatic Relations. Here's how the U.S. State Department explains it. Accredited diplomatic agents have complete immunity from the criminal jurisdiction of the host country's courts. So the law still applies to them. The host country just can't prosecute them. That's the gap between breaking a law and being tried for it. But the immunity isn't the diplomat's to give away. The individual can't waive it. Their home country can, and the waiver has to be express. If there's no waiver in a serious case, like a felony or a violent crime, U.S. policy is to require that person to leave the country. And the treaty says immunity in the host country doesn't exempt a diplomat from the courts of their own country. Status matters too. Consular officers usually have immunity only for official acts, and consular employees have even less. A diplomatic-looking passport alone isn't enough. In the State Department's words, diplomatic immunity is not a license to flout the law. [loop] So before you assume a diplomat is above the law, remember",
+ "publish_at": "2026-11-08T12:00:00-05:00",
+ "sources": [
+  "https://2017-2021.state.gov/wp-content/uploads/2019/09/19-04499-DipConImm_v2_web.pdf",
+  "https://www.legislation.gov.uk/ukpga/1964/81/schedule/1/enacted",
+  "https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/35/11120"
+ ],
+ "legal_status": "Current jurisdictional immunity",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "bg-street",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🛂✨",
+     "text": ""
+    }
+   ]
+  },
+  {
+   "at": "it's called diplomatic immunity",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "doc",
+     "text": "Vienna Convention",
+     "sub": "Diplomatic Relations, 1961"
+    }
+   ]
+  },
+  {
+   "at": "here's how the us state",
+   "bg": "bg-capitol",
+   "cast": [
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ]
+  },
+  {
+   "at": "accredited diplomatic agents",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:pointing",
+     "x": 0.3
+    }
+   ],
+   "card": "IMMUNE FROM HOST COURTS",
+   "card_at": "complete immunity"
+  },
+  {
+   "at": "so the law still applies",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:thinking"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📜≠⚖️",
+     "text": "Law ≠ trial"
+    }
+   ]
+  },
+  {
+   "at": "but the immunity isn't",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🏳️",
+     "text": "Home country waives"
+    }
+   ],
+   "zooms": [
+    {
+     "at": "the individual can't waive it",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "if there's no waiver",
+   "bg": "bg-street",
+   "cast": [
+    {
+     "id": "larry:concerned",
+     "x": 0.3
+    }
+   ],
+   "card": "REQUIRED TO LEAVE",
+   "card_at": "leave the country"
+  },
+  {
+   "at": "and the treaty says",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "card": "HOME COUNTRY COURTS STILL APPLY",
+   "card_at": "their own country"
+  },
+  {
+   "at": "status matters too",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🪪",
+     "text": "Consular: less"
+    }
+   ]
+  },
+  {
+   "at": "passport alone",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:smug"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🛂❌",
+     "text": "Passport isn't enough"
+    }
+   ]
+  },
+  {
+   "at": "in the state department's words",
+   "bg": "bg-capitol",
+   "cast": [
+    {
+     "id": "larry:concerned",
+     "x": 0.3
+    }
+   ],
+   "card": "“NOT A LICENSE TO FLOUT THE LAW”",
+   "card_at": "not a license"
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so before you assume",
+   "bg": "bg-street",
+   "loop": true
+  }
+ ]
+}

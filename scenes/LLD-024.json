@@ -1,0 +1,200 @@
+{
+ "video_id": "LLD-024",
+ "episode": "E24",
+ "hook": "IRISH ON PAPER… TAXED ELSEWHERE?",
+ "highlight": [
+  "resident",
+  "incorporated",
+  "historical"
+ ],
+ "youtube_title": "The 'Double Irish': Irish on Paper, Tax Resident Elsewhere (Closed) 🦝⚖️",
+ "caption": "The 'Double Irish' exploited the gap between where a company was incorporated and where it was tax resident. Ireland changed its residence rules from 2015, with a transition that ended in 2020. Historical, not available today.",
+ "hashtags": [
+  "#legalloopholes",
+  "#tax",
+  "#ireland",
+  "#doubleirish",
+  "#lawtok",
+  "#business"
+ ],
+ "script": "A company could be Irish on paper and tax resident somewhere else entirely, and that gap was worth enormous amounts. This is a historical story, and the loophole is closed. Here's the idea, simplified. For tax purposes, countries ask where a company is resident. For older Irish companies, the key test was where the company was centrally managed and controlled. So a company could be incorporated in Ireland but managed from somewhere else, and Ireland wouldn't treat it as Irish tax resident. Pair that with a second Irish company, route payments for intellectual property through them, and you get the name: the Double Irish. Ireland's Department of Finance says it changed the rules to shut down known structures like the Double Irish, which it said exploited gaps in U.S. tax rules. Under Revenue's rules, a company incorporated in Ireland on or after January first, twenty fifteen, is tax resident in Ireland, unless a tax treaty says otherwise. Companies incorporated before that got a transition period that ran until the end of twenty twenty. So label this one historical. It isn't available today, and it doesn't mean every company that used it paid zero tax. [loop] So the next time someone says a company's address tells you where it pays tax, remember",
+ "publish_at": "2026-11-13T12:00:00-05:00",
+ "sources": [
+  "https://www.revenue.ie/en/companies-and-charities/corporation-tax-for-companies/corporation-tax/company-residency-rules.aspx",
+  "https://www.revenue.ie/en/tax-professionals/tdm/income-tax-capital-gains-tax-corporation-tax/part-02/02-02-03.pdf",
+  "https://www.gov.ie/en/department-of-finance/press-releases/minister-donohoe-publishes-update-to-irelands-corporation-tax-roadmap/"
+ ],
+ "legal_status": "Historical loophole; transition ended 2020",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🇮🇪📄",
+     "text": "Irish on paper"
+    }
+   ]
+  },
+  {
+   "at": "this is a historical story",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "card": "HISTORICAL — NOW CLOSED",
+   "card_at": "loophole is closed"
+  },
+  {
+   "at": "here's the idea simplified",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🏢❓",
+     "text": "Where's it resident?"
+    }
+   ]
+  },
+  {
+   "at": "for older irish companies",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:pointing",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🧭",
+     "text": "Managed & controlled"
+    }
+   ]
+  },
+  {
+   "at": "so a company could be",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:surprised"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🇮🇪➡️🌴",
+     "text": "Here ≠ resident"
+    }
+   ],
+   "zooms": [
+    {
+     "at": "wouldn't treat it",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "pair that with",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🏢🏢",
+     "text": "Two Irish companies"
+    }
+   ]
+  },
+  {
+   "at": "ireland's department of finance",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "doc",
+     "text": "Corporation Tax Roadmap",
+     "sub": "Department of Finance"
+    }
+   ]
+  },
+  {
+   "at": "under revenue's rules",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "card": "FROM 2015: INCORPORATED HERE = RESIDENT HERE",
+   "card_at": "january first"
+  },
+  {
+   "at": "companies incorporated before",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "⏳",
+     "text": "Transition ended 2020"
+    }
+   ]
+  },
+  {
+   "at": "so label this one",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:concerned",
+     "x": 0.3
+    }
+   ],
+   "card": "NOT AVAILABLE TODAY",
+   "card_at": "isn't available today"
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so the next time someone says",
+   "bg": "bg-office",
+   "loop": true
+  }
+ ]
+}

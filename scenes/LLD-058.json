@@ -1,0 +1,183 @@
+{
+ "video_id": "LLD-058",
+ "episode": "E58",
+ "hook": "BEES… FOR A TAX BREAK?",
+ "highlight": [
+  "bees",
+  "productivity",
+  "acres"
+ ],
+ "youtube_title": "In Texas, Bees Can Change a Landowner's Property Tax Bill 🦝⚖️",
+ "caption": "Texas allows agricultural (productivity) appraisal of qualifying land, and its tax code counts beekeeping on 5 to 20 acres as agricultural use — subject to local intensity standards, history requirements and documentation.",
+ "hashtags": [
+  "#legalloopholes",
+  "#texas",
+  "#bees",
+  "#propertytax",
+  "#homestead",
+  "#lawtok"
+ ],
+ "script": "In Texas, bees can change a landowner's property tax bill. Texas lets qualifying agricultural land be appraised based on what it can produce, called productivity value, instead of market value. And the state Comptroller says productivity value is usually lower than market value. To qualify, the land generally has to be devoted principally to agricultural use, to the degree of intensity that's generally accepted in the area, and it has to have been used for agriculture in at least five of the past seven years. Here's the bee part. Texas amended its tax code to include beekeeping in the definition of agricultural use. Land used to raise or keep bees for pollination, or for products like honey, can qualify, but only on land that's at least five and no more than twenty acres. Picture a hypothetical. Someone owns a ten-acre parcel and starts keeping bees there. If it genuinely meets the rules, the appraisal could shift toward agricultural value. But it's not an instant tax trick. Local appraisal districts set their own standards, including how many hives are required per acre. And the house itself doesn't vanish from the tax roll. This is about the land's agricultural use. [loop] So before you call a few beehives a tax strategy, remember",
+ "publish_at": "2026-11-30T12:00:00-05:00",
+ "sources": [
+  "https://comptroller.texas.gov/taxes/property-tax/ag-timber/",
+  "https://comptroller.texas.gov/taxes/property-tax/docs/96-300.pdf",
+  "https://agrilife.org/tcch/2012/04/13/beekeeping-qualifies-as-an-agricultural-use-enterprise/"
+ ],
+ "legal_status": "Current agricultural valuation rule",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "bg-neighborhood",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🐝🏡",
+     "text": ""
+    }
+   ]
+  },
+  {
+   "at": "texas lets qualifying",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🌾",
+     "text": "Productivity value"
+    }
+   ]
+  },
+  {
+   "at": "and the state comptroller",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "card": "USUALLY LOWER THAN MARKET VALUE",
+   "card_at": "usually lower"
+  },
+  {
+   "at": "to qualify the land",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📅",
+     "text": "5 of the past 7 years"
+    }
+   ]
+  },
+  {
+   "at": "here's the bee part",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:surprised"
+    }
+   ],
+   "card": "BEEKEEPING = AGRICULTURE",
+   "card_at": "include beekeeping",
+   "zooms": [
+    {
+     "at": "include beekeeping",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "land used to raise",
+   "bg": "bg-neighborhood",
+   "cast": [
+    {
+     "id": "larry:pointing",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🐝",
+     "text": "5 to 20 acres"
+    }
+   ]
+  },
+  {
+   "at": "picture a hypothetical",
+   "bg": "bg-neighborhood",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "x": 0.68
+    },
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "card": "HYPOTHETICAL",
+   "card_at": "picture a hypothetical"
+  },
+  {
+   "at": "but it's not an instant",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🐝🐝🐝",
+     "text": "Hives per acre"
+    }
+   ]
+  },
+  {
+   "at": "and the house itself",
+   "bg": "bg-neighborhood",
+   "cast": [
+    {
+     "id": "larry:concerned",
+     "x": 0.3
+    }
+   ],
+   "card": "THE HOUSE STILL COUNTS",
+   "card_at": "house itself"
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so before you call",
+   "bg": "bg-neighborhood",
+   "loop": true
+  }
+ ]
+}

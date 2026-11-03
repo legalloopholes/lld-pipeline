@@ -1,0 +1,220 @@
+{
+ "video_id": "LLD-005",
+ "episode": "E05",
+ "hook": "CAKE OR BISCUIT? THE TAX TRIAL",
+ "highlight": [
+  "cake",
+  "biscuit",
+  "vat",
+  "stale"
+ ],
+ "youtube_title": "The Jaffa Cake Trial: Cake or Biscuit? 🦝⚖️",
+ "caption": "UK VAT treats chocolate-covered biscuits and cakes differently. A tribunal weighed ingredients, texture, staling, size, packaging and more, and ruled Jaffa Cakes are cakes.",
+ "hashtags": [
+  "#legalloopholes",
+  "#jaffacakes",
+  "#uk",
+  "#tax",
+  "#vat",
+  "#lawtok"
+ ],
+ "script": "In the U.K., this snack's tax bill depended on one question: is it a cake, or a biscuit? Here's why it mattered. In Britain, most food is zero-rated for VAT. But biscuits covered in chocolate are taxed at the standard rate, while cakes, even with chocolate on them, are not. Jaffa Cakes have a sponge base, an orange layer and a chocolate top. So the tax authority decided they were really chocolate-covered biscuits, and should be taxed. The maker, United Biscuits, took it to a VAT tribunal. And the tribunal went through the evidence like a trial. The name? Only a minor point. The ingredients? An egg, flour and sugar batter, like a sponge cake. The texture? Soft sponge, not a crisp snap. And the famous one: when a Jaffa Cake goes stale, it goes hard, like a cake. A stale biscuit goes soft. Some factors pointed the other way: the size, the packaging, and the fact that shops sell them next to biscuits. But on balance, the tribunal said: cake. So Jaffa Cakes stayed zero-rated. Going hard when stale wasn't the whole test, just one factor among many. And this is one VAT result, not a rule that any snack can call itself a cake. [loop] So before you call it a biscuit, remember",
+ "publish_at": "2026-11-03T19:00:00-05:00",
+ "sources": [
+  "https://www.gov.uk/hmrc-internal-manuals/vat-food/vfood6260"
+ ],
+ "legal_status": "Established classification",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "bg-shop",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🍰❓🍪",
+     "text": ""
+    }
+   ]
+  },
+  {
+   "at": "here's why it mattered",
+   "bg": "bg-shop",
+   "cast": [
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🇬🇧",
+     "text": "Most food: zero VAT"
+    }
+   ]
+  },
+  {
+   "at": "but biscuits covered",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🍫🍪",
+     "text": "Choc biscuit = taxed"
+    }
+   ]
+  },
+  {
+   "at": "jaffa cakes have",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:thinking"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🍊🍫",
+     "text": "Sponge + orange"
+    }
+   ]
+  },
+  {
+   "at": "so the tax authority",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:surprised"
+    }
+   ],
+   "card": "TAX IT LIKE A BISCUIT!",
+   "card_at": "should be taxed"
+  },
+  {
+   "at": "the maker united biscuits",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "card": "CAKE v. BISCUIT",
+   "card_at": "vat tribunal"
+  },
+  {
+   "at": "the ingredients",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "doc",
+     "text": "Exhibit A: sponge batter",
+     "sub": "Evidence"
+    }
+   ]
+  },
+  {
+   "at": "and the famous one",
+   "bg": "bg-shop",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "card": "STALE CAKE → HARD",
+   "card_at": "goes hard",
+   "zooms": [
+    {
+     "at": "goes hard",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "some factors pointed",
+   "bg": "bg-shop",
+   "cast": [
+    {
+     "id": "larry:thinking",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📦",
+     "text": "Size · box · shelf"
+    }
+   ]
+  },
+  {
+   "at": "but on balance",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:surprised",
+     "x": 0.3
+    }
+   ],
+   "card": "VERDICT: CAKE",
+   "card_at": "said cake"
+  },
+  {
+   "at": "going hard when stale",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "⚖️",
+     "text": "One factor only"
+    }
+   ]
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so before you call",
+   "bg": "bg-shop",
+   "loop": true
+  }
+ ]
+}

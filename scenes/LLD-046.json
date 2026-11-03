@@ -1,0 +1,223 @@
+{
+ "video_id": "LLD-046",
+ "episode": "E46",
+ "hook": "7,000,000 POINTS = A JET?",
+ "highlight": [
+  "offer",
+  "jet",
+  "reasonable"
+ ],
+ "youtube_title": "The Pepsi Ad Fighter Jet — and the Man Who Tried to Collect 🦝⚖️",
+ "caption": "Leonard v. PepsiCo: a man tried to redeem a Harrier jet shown in a Pepsi Points commercial. Courts held the ad wasn't an offer and no reasonable person would take the jet seriously. He didn't get the jet.",
+ "hashtags": [
+  "#legalloopholes",
+  "#pepsi",
+  "#contracts",
+  "#90s",
+  "#lawtok",
+  "#truestory"
+ ],
+ "script": "A Pepsi ad showed a fighter jet for points, and one man actually tried to collect. This is Leonard versus PepsiCo. In the nineteen nineties, a Pepsi Stuff commercial showed a teenager flying a Harrier jet to school, with the on-screen text: Harrier fighter, seven million Pepsi points. The catalog didn't list a jet. John Leonard raised about seven hundred thousand dollars. He sent an order form for one Harrier jet, fifteen original Pepsi points, and a check for seven hundred thousand eight dollars and fifty cents, to cover the rest of the points. PepsiCo sent the check back. Leonard sued. In nineteen ninety-nine, a federal court ruled for PepsiCo, for three reasons. First, the commercial was an advertisement, not an offer. Second, no reasonable person would think the jet was serious. The court called it zany humor, and said that price for a jet worth about twenty-three million dollars was a deal too good to be true. Third, there was no signed writing to satisfy the statute of frauds. In two thousand, the appeals court affirmed. So he didn't get the jet. Here's the nuance. Some ads can be real offers, if they're specific enough. This one just wasn't. [loop] So the next time an ad promises you a fighter jet, remember",
+ "publish_at": "2026-11-24T12:00:00-05:00",
+ "sources": [
+  "https://law.justia.com/cases/federal/district-courts/FSupp2/88/116/2579076/",
+  "https://law.justia.com/cases/federal/appellate-courts/F3/210/88/483989/"
+ ],
+ "legal_status": "Failed contract argument, 1999–2000",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "bg-shop",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🥤✈️",
+     "text": ""
+    }
+   ]
+  },
+  {
+   "at": "this is leonard",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "doc",
+     "text": "Leonard v. PepsiCo",
+     "sub": "S.D.N.Y. 1999"
+    }
+   ]
+  },
+  {
+   "at": "in the nineteen nineties",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:surprised"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📺✈️",
+     "text": "7,000,000 points"
+    }
+   ]
+  },
+  {
+   "at": "the catalog didn't list",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📖❌✈️",
+     "text": "Not in catalog"
+    }
+   ]
+  },
+  {
+   "at": "john leonard raised",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:surprised",
+     "x": 0.3
+    }
+   ],
+   "card": "A $700,008.50 CHECK",
+   "card_at": "check for",
+   "zooms": [
+    {
+     "at": "check for",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "pepsico sent the check back",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:concerned",
+     "x": 0.3
+    }
+   ],
+   "card": "LEONARD SUES",
+   "card_at": "leonard sued"
+  },
+  {
+   "at": "first the commercial",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📺",
+     "text": "Ad, not offer"
+    }
+   ]
+  },
+  {
+   "at": "second no reasonable person",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "card": "“ZANY HUMOR”",
+   "card_at": "zany humor"
+  },
+  {
+   "at": "third there was no",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "✍️❌",
+     "text": "No signed writing"
+    }
+   ]
+  },
+  {
+   "at": "in two thousand",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:concerned",
+     "x": 0.3
+    }
+   ],
+   "card": "NO JET",
+   "card_at": "didn't get the jet"
+  },
+  {
+   "at": "here's the nuance",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:thinking"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📣",
+     "text": "Some ads are offers"
+    }
+   ]
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so the next time an ad",
+   "bg": "bg-shop",
+   "loop": true
+  }
+ ]
+}

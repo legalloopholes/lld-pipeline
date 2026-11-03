@@ -1,0 +1,207 @@
+{
+ "video_id": "LLD-036",
+ "episode": "E36",
+ "hook": "NOT HACKING?",
+ "highlight": [
+  "authorized",
+  "access",
+  "improper"
+ ],
+ "youtube_title": "He Misused a Police Database for Cash — Not 'Hacking,' Said the Court 🦝⚖️",
+ "caption": "Van Buren v. United States (2021): an officer who sold a license-plate lookup didn't 'exceed authorized access' under the CFAA because he was allowed to access that data. Other laws and consequences still apply.",
+ "hashtags": [
+  "#legalloopholes",
+  "#supremecourt",
+  "#cybersecurity",
+  "#tech",
+  "#lawtok",
+  "#privacy"
+ ],
+ "script": "A police officer searched a database for money, and the Supreme Court threw out his computer crime conviction. This is Van Buren versus United States, twenty twenty-one. A police sergeant in Georgia ran a license plate search in a state law enforcement database in exchange for money. The request was actually an FBI sting. He used his own valid login, but the search broke department policy against personal use. He was convicted under the Computer Fraud and Abuse Act, for exceeding his authorized access. The Supreme Court reversed, six to three. The question was what exceeding authorized access means. The majority said it covers someone who gets information from parts of a computer system that are off-limits to them. Think of a locked door. It does not cover someone who's allowed into that part of the system but uses it for an improper reason. He was allowed to look up license plates, so this particular law didn't fit. Three justices dissented, saying forbidden use of a police database is a crime. Here's the limit. The ruling didn't make selling police information legal. Other criminal laws, job consequences and privacy rules are separate, and getting into areas you aren't allowed to access is still covered. [loop] So before you call every misuse of a login hacking, remember",
+ "publish_at": "2026-11-19T12:00:00-05:00",
+ "sources": [
+  "https://www.law.cornell.edu/supremecourt/text/19-783"
+ ],
+ "legal_status": "Statutory-scope ruling, 2021",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "bg-street",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "👮💻💵",
+     "text": ""
+    }
+   ]
+  },
+  {
+   "at": "this is van buren",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "doc",
+     "text": "Van Buren v. United States",
+     "sub": "U.S. Supreme Court"
+    }
+   ]
+  },
+  {
+   "at": "a police sergeant in georgia",
+   "bg": "bg-street",
+   "cast": [
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "card": "FBI STING",
+   "card_at": "fbi sting"
+  },
+  {
+   "at": "he used his own valid",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:pointing",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🔑",
+     "text": "Valid login"
+    }
+   ]
+  },
+  {
+   "at": "he was convicted under",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:concerned",
+     "x": 0.3
+    }
+   ],
+   "card": "COMPUTER FRAUD AND ABUSE ACT",
+   "card_at": "computer fraud"
+  },
+  {
+   "at": "the supreme court reversed",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:surprised",
+     "x": 0.3
+    }
+   ],
+   "card": "REVERSED 6–3",
+   "card_at": "reversed six to three",
+   "zooms": [
+    {
+     "at": "reversed",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "the majority said",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🚪🔒",
+     "text": "Off-limits areas"
+    }
+   ]
+  },
+  {
+   "at": "it does not cover",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🚪✅🤨",
+     "text": "Allowed in, bad motive"
+    }
+   ]
+  },
+  {
+   "at": "three justices dissented",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge-confused",
+     "x": 0.7
+    },
+    {
+     "id": "larry:thinking",
+     "x": 0.3
+    }
+   ],
+   "card": "DISSENT: IT'S A CRIME",
+   "card_at": "dissented"
+  },
+  {
+   "at": "here's the limit",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🚫💵",
+     "text": "Selling data: no"
+    }
+   ]
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so before you call every",
+   "bg": "bg-street",
+   "loop": true
+  }
+ ]
+}

@@ -1,0 +1,208 @@
+{
+ "video_id": "LLD-009",
+ "episode": "E09",
+ "hook": "14 DAYS OF TAX-FREE RENT?",
+ "highlight": [
+  "fifteen",
+  "income",
+  "home"
+ ],
+ "youtube_title": "Rent Your Home Under 15 Days and the IRS Lets the Rent Go Untaxed 🦝⚖️",
+ "caption": "IRS Publication 527: if you rent out a place you also use as your home for less than 15 days in a year, you don't include the rent in income — and you can't treat the costs as rental expenses. State and local rules can still apply.",
+ "hashtags": [
+  "#legalloopholes",
+  "#taxes",
+  "#irs",
+  "#realestate",
+  "#lawtok",
+  "#moneytips"
+ ],
+ "script": "Rent out your home for fewer than fifteen days a year, and under federal tax law, that rent can stay out of your income. This is a U.S. federal tax rule. Normally, rent is income, and the IRS wants it reported. But there's a special rule for a place you also use as your home. If you rent it out for fewer than fifteen days during the year, the IRS says: don't include that rent in your income. Picture a homeowner in a town hosting a big event, renting their place out for one busy weekend. If the total rental days stay under fifteen, that rent stays off their federal return. But hit fifteen days, and the normal rental rules kick in. Now the income has to be reported, and expenses have to be split between personal use and rental use. Here's the catch people miss. The place has to count as your home, based on how much you use it yourself. And because the rent isn't counted, the IRS says the costs of that short rental aren't treated as rental expenses either. So there's no stacking up write-offs from a two-week rental. And state taxes, local occupancy taxes, and short-term rental rules can still apply. [loop] So before you list your place for a fifteenth night, remember",
+ "publish_at": "2026-11-05T19:00:00-05:00",
+ "sources": [
+  "https://www.irs.gov/pub/irs-pdf/p527.pdf"
+ ],
+ "legal_status": "Current statutory exception",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "bg-neighborhood",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🏠📅",
+     "text": ""
+    }
+   ]
+  },
+  {
+   "at": "this is a us federal",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "doc",
+     "text": "Publication 527",
+     "sub": "IRS"
+    }
+   ]
+  },
+  {
+   "at": "normally rent is income",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "💵",
+     "text": "Rent = income"
+    }
+   ]
+  },
+  {
+   "at": "but there's a special rule",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🏠",
+     "text": "Your own home"
+    }
+   ]
+  },
+  {
+   "at": "if you rent it out",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:surprised"
+    }
+   ],
+   "card": "UNDER 15 DAYS → NOT INCOME",
+   "card_at": "don't include that rent",
+   "zooms": [
+    {
+     "at": "don't include that rent",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "picture a homeowner",
+   "bg": "bg-neighborhood",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "x": 0.68
+    },
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "card": "HYPOTHETICAL",
+   "card_at": "picture a homeowner"
+  },
+  {
+   "at": "but hit fifteen days",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:concerned",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📅",
+     "text": "Day 15: normal rules"
+    }
+   ]
+  },
+  {
+   "at": "here's the catch",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🏠",
+     "text": "Must be your home"
+    }
+   ]
+  },
+  {
+   "at": "and because the rent",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🚫🧾",
+     "text": "No rental write-offs"
+    }
+   ]
+  },
+  {
+   "at": "and state taxes",
+   "bg": "bg-neighborhood",
+   "cast": [
+    {
+     "id": "larry:concerned",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🏛️",
+     "text": "Local rules apply"
+    }
+   ]
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so before you list",
+   "bg": "bg-neighborhood",
+   "loop": true
+  }
+ ]
+}

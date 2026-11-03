@@ -1,0 +1,200 @@
+{
+ "video_id": "LLD-047",
+ "episode": "E47",
+ "hook": "THE MANSION SHIELD?",
+ "highlight": [
+  "homestead",
+  "acre",
+  "exceptions"
+ ],
+ "youtube_title": "Lose a Lawsuit — and Your Florida Mansion May Still Be Protected 🦝⚖️",
+ "caption": "Florida's constitutional homestead exemption limits protection by acreage — up to half an acre in a city — not by dollar value. Taxes, mortgages, repair and improvement debts, and federal and bankruptcy rules are exceptions.",
+ "hashtags": [
+  "#legalloopholes",
+  "#florida",
+  "#realestate",
+  "#homestead",
+  "#lawtok",
+  "#money"
+ ],
+ "script": "A creditor wins a judgment against you, but your Florida mansion might still be protected. This is Florida's Constitution, Article Ten, Section Four. It protects a homestead from forced sale by most creditors. And here's the unusual part. Instead of a dollar limit, it uses land limits. Outside a city, up to one hundred sixty acres of contiguous land. Inside a city, up to half an acre, limited to the residence of the owner or their family. There's no stated dollar ceiling. So a modest condo and a waterfront mansion on half an acre can both qualify. That's why Florida has a reputation as a place where a home can be hard for creditors to reach. But read the exceptions written into the same section. The protection doesn't apply to taxes and assessments on the property, to debts for buying, improving or repairing it, like a mortgage or a contractor's bill, or to labor performed on it. Federal law can also matter, and bankruptcy law has its own restrictions. And moving money into a mansion to dodge creditors can run into fraud rules. So it's a strong protection, not a guaranteed hiding place. [loop] So before you buy a Florida mansion to escape a judgment, remember",
+ "publish_at": "2026-11-24T19:00:00-05:00",
+ "sources": [
+  "https://www.flsenate.gov/Laws/Constitution",
+  "https://ballotpedia.org/Article_X,_Florida_Constitution"
+ ],
+ "legal_status": "Current protection with major exceptions",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "bg-neighborhood",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🏰🛡️",
+     "text": ""
+    }
+   ]
+  },
+  {
+   "at": "this is florida's constitution",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "doc",
+     "text": "Article X, Section 4",
+     "sub": "Florida Constitution"
+    }
+   ]
+  },
+  {
+   "at": "and here's the unusual part",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:surprised"
+    }
+   ],
+   "card": "NO DOLLAR LIMIT",
+   "card_at": "instead of a dollar limit",
+   "zooms": [
+    {
+     "at": "instead of a dollar limit",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "outside a city",
+   "bg": "bg-neighborhood",
+   "cast": [
+    {
+     "id": "larry:pointing",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🌾",
+     "text": "160 acres outside"
+    }
+   ]
+  },
+  {
+   "at": "inside a city",
+   "bg": "bg-neighborhood",
+   "cast": [
+    {
+     "id": "larry:pointing",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🏘️",
+     "text": "½ acre in a city"
+    }
+   ]
+  },
+  {
+   "at": "so a modest condo",
+   "bg": "bg-neighborhood",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "card": "CONDO OR MANSION",
+   "card_at": "waterfront mansion"
+  },
+  {
+   "at": "but read the exceptions",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🧾",
+     "text": "Taxes · mortgage"
+    }
+   ]
+  },
+  {
+   "at": "federal law can also",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:concerned",
+     "x": 0.3
+    }
+   ],
+   "card": "FEDERAL & BANKRUPTCY LIMITS",
+   "card_at": "federal law"
+  },
+  {
+   "at": "and moving money",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🚫💰",
+     "text": "Fraud rules apply"
+    }
+   ]
+  },
+  {
+   "at": "so it's a strong",
+   "bg": "bg-neighborhood",
+   "cast": [
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "card": "NOT A HIDING PLACE",
+   "card_at": "hiding place"
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so before you buy",
+   "bg": "bg-neighborhood",
+   "loop": true
+  }
+ ]
+}

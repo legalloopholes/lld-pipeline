@@ -1,0 +1,210 @@
+{
+ "video_id": "LLD-037",
+ "episode": "E37",
+ "hook": "SAME HEAT, DIFFERENT TAX",
+ "highlight": [
+  "hot",
+  "cooling",
+  "heated"
+ ],
+ "youtube_title": "Two Warm Pastries, Same Temperature, Different Tax 🦝⚖️",
+ "caption": "HMRC's hot takeaway rules look at why food is hot, not just its temperature: bakery items warm only because they're cooling can stay zero-rated, while items kept hot in heated cabinets are taxed.",
+ "hashtags": [
+  "#legalloopholes",
+  "#uk",
+  "#vat",
+  "#bakery",
+  "#tax",
+  "#lawtok"
+ ],
+ "script": "Two warm pastries can get different VAT treatment in the U.K., even at the same temperature. Here's the rule. In the U.K., hot takeaway food is generally taxed at the standard rate of VAT. And hot just means above the air temperature around it. So a pastry fresh out of the oven is technically hot. But that's not the end of it. HMRC's guidance asks how it got hot, and why. Was it heated so the customer can eat it hot? Is it kept hot afterward, in a heated cabinet, under heat lamps, or on a hot shelf? Is it handed over in special packaging that keeps it warm, like a foil-lined bag? Is it advertised as hot? The guidance says freshly baked bread and bakery products that just happen to be warm because they're cooling down, and are often eaten cold, stay zero-rated. Even calling them freshly baked doesn't count as marketing them as hot. So picture two identical warm pastries. One is cooling naturally on a rack. The other sits in a heated display cabinet to stay warm. Same temperature, different VAT. Here's the limit. Not every cooling pastry is zero-rated. Every test has to be checked, and what the customer prefers doesn't decide the tax. [loop] So the next time your pastry is still warm, remember",
+ "publish_at": "2026-11-19T19:00:00-05:00",
+ "sources": [
+  "https://www.gov.uk/guidance/catering-takeaway-food-and-vat-notice-7091"
+ ],
+ "legal_status": "Current classification exception",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "bg-shop",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🥐🥐",
+     "text": ""
+    }
+   ]
+  },
+  {
+   "at": "here's the rule",
+   "bg": "bg-shop",
+   "cast": [
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🔥🍲",
+     "text": "Hot takeaway: taxed"
+    }
+   ]
+  },
+  {
+   "at": "and hot just means",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🌡️",
+     "text": "Above air temp"
+    }
+   ]
+  },
+  {
+   "at": "so a pastry fresh",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:surprised"
+    }
+   ],
+   "card": "TECHNICALLY HOT",
+   "card_at": "technically hot",
+   "zooms": [
+    {
+     "at": "technically hot",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "but that's not the end",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:thinking"
+    }
+   ],
+   "props": [
+    {
+     "id": "doc",
+     "text": "VAT Notice 709/1",
+     "sub": "HMRC"
+    }
+   ]
+  },
+  {
+   "at": "is it kept hot afterward",
+   "bg": "bg-shop",
+   "cast": [
+    {
+     "id": "larry:pointing",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🔥📦",
+     "text": "Heated cabinet?"
+    }
+   ]
+  },
+  {
+   "at": "is it handed over",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🛍️",
+     "text": "Foil-lined bag?"
+    }
+   ]
+  },
+  {
+   "at": "the guidance says freshly",
+   "bg": "bg-shop",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "card": "COOLING NATURALLY: ZERO-RATED",
+   "card_at": "just happen to be warm"
+  },
+  {
+   "at": "so picture two identical",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "card": "HYPOTHETICAL",
+   "card_at": "picture two identical"
+  },
+  {
+   "at": "same temperature",
+   "bg": "bg-shop",
+   "cast": [
+    {
+     "id": "larry:surprised",
+     "x": 0.3
+    }
+   ],
+   "card": "SAME HEAT · DIFFERENT VAT",
+   "card_at": "different vat"
+  },
+  {
+   "at": "here's the limit",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "✅✅✅",
+     "text": "Check every test"
+    }
+   ]
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so the next time your pastry",
+   "bg": "bg-shop",
+   "loop": true
+  }
+ ]
+}

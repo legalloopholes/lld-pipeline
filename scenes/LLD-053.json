@@ -1,0 +1,201 @@
+{
+ "video_id": "LLD-053",
+ "episode": "E53",
+ "hook": "GIFTS… BUT NO 'OFFICIAL ACT'?",
+ "highlight": [
+  "official",
+  "meeting",
+  "vacated"
+ ],
+ "youtube_title": "A Governor Took Gifts and Loans — Why His Convictions Were Thrown Out 🦝⚖️",
+ "caption": "McDonnell v. United States (2016): the Supreme Court unanimously narrowed what counts as an 'official act' — arranging a meeting or hosting an event alone isn't enough — and vacated the former governor's convictions.",
+ "hashtags": [
+  "#legalloopholes",
+  "#supremecourt",
+  "#politics",
+  "#corruption",
+  "#lawtok",
+  "#government"
+ ],
+ "script": "A governor received gifts and loans, and the Supreme Court still threw out his corruption convictions. This is McDonnell versus United States, from twenty sixteen. Former Virginia Governor Robert McDonnell and his wife were charged over about one hundred seventy-five thousand dollars in loans, gifts and other benefits from a businessman who wanted state universities to study his company's supplement. Prosecutors pointed to things the governor did: arranging meetings, hosting events at the governor's mansion, and contacting other officials. The jury convicted. The key question was what counts as an official act under the federal law used in the case. The Supreme Court, unanimously, read it narrowly. It has to involve a formal exercise of government power, something like a lawsuit, an agency decision or a hearing, on a specific matter. And the official has to make, or agree to make, a decision or take action on it. Setting up a meeting, talking to another official, or organizing an event, without more, isn't enough. Because the jury instructions defined official acts too broadly, the convictions were vacated and the case was sent back. Here's the limit. This wasn't a ruling that accepting gifts is fine. Decisions, pressure on other officials, and other ethics and criminal laws still matter. [loop] So before you assume a gift case is open and shut, remember",
+ "publish_at": "2026-11-27T19:00:00-05:00",
+ "sources": [
+  "https://www.law.cornell.edu/supremecourt/text/15-474"
+ ],
+ "legal_status": "Statutory-scope ruling, 2016 (vacated and remanded)",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🎁🏛️",
+     "text": ""
+    }
+   ]
+  },
+  {
+   "at": "this is mcdonnell",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "doc",
+     "text": "McDonnell v. United States",
+     "sub": "U.S. Supreme Court"
+    }
+   ]
+  },
+  {
+   "at": "former virginia governor",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:concerned",
+     "x": 0.3
+    }
+   ],
+   "card": "~$175,000 IN GIFTS & LOANS",
+   "card_at": "loans gifts"
+  },
+  {
+   "at": "prosecutors pointed",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📅🍽️📞",
+     "text": "Meetings & events"
+    }
+   ]
+  },
+  {
+   "at": "the jury convicted",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:concerned",
+     "x": 0.3
+    }
+   ],
+   "card": "CONVICTED",
+   "card_at": "jury convicted"
+  },
+  {
+   "at": "the key question",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:thinking"
+    }
+   ],
+   "card": "WHAT'S AN “OFFICIAL ACT”?",
+   "card_at": "official act"
+  },
+  {
+   "at": "the supreme court unanimously",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "card": "FORMAL GOVERNMENT POWER",
+   "card_at": "formal exercise",
+   "zooms": [
+    {
+     "at": "read it narrowly",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "setting up a meeting",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:surprised"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📅❌",
+     "text": "Meeting alone: no"
+    }
+   ]
+  },
+  {
+   "at": "because the jury instructions",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:surprised",
+     "x": 0.3
+    }
+   ],
+   "card": "VACATED & SENT BACK",
+   "card_at": "vacated"
+  },
+  {
+   "at": "here's the limit",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🎁🚫",
+     "text": "Gifts still risky"
+    }
+   ]
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so before you assume a gift",
+   "bg": "bg-office",
+   "loop": true
+  }
+ ]
+}

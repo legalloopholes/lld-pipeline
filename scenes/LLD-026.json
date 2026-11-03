@@ -1,0 +1,223 @@
+{
+ "video_id": "LLD-026",
+ "episode": "E26",
+ "hook": "TOMATO: VEGETABLE (LEGALLY)",
+ "highlight": [
+  "tomato",
+  "vegetable",
+  "fruit"
+ ],
+ "youtube_title": "The Supreme Court Ruled a Tomato Is a Vegetable — Because of a Tax 🦝⚖️",
+ "caption": "In Nix v. Hedden (1893), importers argued tomatoes were fruit to avoid a vegetable tariff. The Supreme Court applied everyday meaning and treated them as vegetables under that law. Botany unchanged.",
+ "hashtags": [
+  "#legalloopholes",
+  "#tomato",
+  "#supremecourt",
+  "#history",
+  "#lawtok",
+  "#funfacts"
+ ],
+ "script": "The U.S. Supreme Court once ruled that a tomato is a vegetable, and a tax bill explains why. It's eighteen ninety-three. Under the Tariff Act of eighteen eighty-three, imported vegetables were taxed, but fruit wasn't on the list. So importers named Nix brought tomatoes into New York from the West Indies, paid the vegetable duty under protest, and sued the port's tax collector to get it back. Their argument: botanically, a tomato is a fruit. It grows from a flower and carries seeds. Dictionaries came up too. The Supreme Court wasn't persuaded. It agreed that botanically speaking, tomatoes are the fruit of a vine, just like cucumbers, squashes, beans and peas. But in the common language of the people, the Court said, all of those are vegetables. They're usually served with dinner, not as dessert like most fruit. Since the tariff law used everyday words, and there was no special trade meaning, everyday meaning won. So the importers lost, and the tax stayed. Here's the limit. This was about one old tariff statute. The Court didn't change botany, and it didn't decide what a tomato is for every law. To a botanist, it's still a fruit. [loop] So the next time someone tells you a tomato is a fruit, remember",
+ "publish_at": "2026-11-14T12:00:00-05:00",
+ "sources": [
+  "https://www.law.cornell.edu/supremecourt/text/149/304"
+ ],
+ "legal_status": "Failed tariff argument, 1893",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "bg-shop",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🍅",
+     "text": "Fruit? Vegetable?"
+    }
+   ]
+  },
+  {
+   "at": "it's eighteen",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "doc",
+     "text": "Tariff Act of 1883",
+     "sub": "United States"
+    }
+   ]
+  },
+  {
+   "at": "imported vegetables were taxed",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🥕💵 🍎🆓",
+     "text": "Veg taxed, fruit free"
+    }
+   ]
+  },
+  {
+   "at": "so importers named nix",
+   "bg": "bg-harbor",
+   "cast": [
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "card": "PAID UNDER PROTEST",
+   "card_at": "under protest"
+  },
+  {
+   "at": "their argument",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:smug"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🌸🍅",
+     "text": "Botany says fruit"
+    }
+   ]
+  },
+  {
+   "at": "the supreme court wasn't",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:concerned",
+     "x": 0.3
+    }
+   ],
+   "card": "NOT PERSUADED",
+   "card_at": "wasn't persuaded"
+  },
+  {
+   "at": "it agreed that botanically",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🥒🎃🫘",
+     "text": "All botanical fruit"
+    }
+   ]
+  },
+  {
+   "at": "but in the common language",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:surprised",
+     "x": 0.3
+    }
+   ],
+   "card": "COMMON LANGUAGE: VEGETABLES",
+   "card_at": "common language",
+   "zooms": [
+    {
+     "at": "all of those are vegetables",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "they're usually served",
+   "bg": "bg-shop",
+   "cast": [
+    {
+     "id": "larry:pointing",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🍽️",
+     "text": "Dinner, not dessert"
+    }
+   ]
+  },
+  {
+   "at": "so the importers lost",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "💵",
+     "text": "Tax stayed"
+    }
+   ]
+  },
+  {
+   "at": "here's the limit",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:smug"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🍅🔬",
+     "text": "Botany unchanged"
+    }
+   ]
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so the next time someone tells",
+   "bg": "bg-shop",
+   "loop": true
+  }
+ ]
+}

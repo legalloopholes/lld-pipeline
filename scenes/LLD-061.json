@@ -1,0 +1,195 @@
+{
+ "video_id": "LLD-061",
+ "episode": "E61",
+ "hook": "EXPIRED… STILL PAYING?",
+ "highlight": [
+  "royalty",
+  "expired",
+  "hospital"
+ ],
+ "youtube_title": "Peter Pan's Copyright Expired — but a Children's Hospital Still Gets Royalties 🦝⚖️",
+ "caption": "Peter Pan's UK copyright expired at the end of 1987, but section 301 of the Copyright, Designs and Patents Act 1988 gives Great Ormond Street Hospital a continuing royalty right for performances, publication and adaptations.",
+ "hashtags": [
+  "#legalloopholes",
+  "#peterpan",
+  "#copyright",
+  "#uk",
+  "#charity",
+  "#lawtok"
+ ],
+ "script": "Peter Pan's copyright expired in the U.K., and a children's hospital can still collect royalties. In nineteen twenty-nine, J.M. Barrie gave the rights to Peter Pan to Great Ormond Street Hospital, a children's hospital in London. Normally, when a copyright expires, the work enters the public domain, and anyone can use it without paying. In the U.K., the copyright in Peter Pan expired at the end of nineteen eighty-seven. But Parliament did something unusual. In the Copyright, Designs and Patents Act of nineteen eighty-eight, section three hundred one gives the hospital's trustees a right to a royalty for public performance, commercial publication, or communication to the public of the play, or any adaptation of it, even though the copyright had expired. So the copyright clock stopped, but a separate royalty stream kept flowing to the hospital. The hospital says all U.K. performances of Peter Pan support its charity, including theatre, school and pantomime productions. And it has never disclosed how much Peter Pan has raised, in keeping with Barrie's wishes. Here's the limit. This is a special royalty right created by U.K. law. It isn't a worldwide copyright that lasts forever, and it doesn't make anyone the owner of every fairy tale or flying boy. [loop] So the next time you see a Peter Pan pantomime, remember",
+ "publish_at": "2026-12-01T19:00:00-05:00",
+ "sources": [
+  "https://www.legislation.gov.uk/ukpga/1988/48/section/301/2003-10-31?view=plain",
+  "https://www.gosh.org/about-us/peter-pan/"
+ ],
+ "legal_status": "Special statutory exception",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:smug"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🏥🎭",
+     "text": ""
+    }
+   ]
+  },
+  {
+   "at": "barrie gave the rights",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🎁🏥",
+     "text": "1929 gift to GOSH"
+    }
+   ]
+  },
+  {
+   "at": "normally when a copyright",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🔓📚",
+     "text": "Public domain"
+    }
+   ]
+  },
+  {
+   "at": "in the uk the copyright",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "card": "EXPIRED: END OF 1987",
+   "card_at": "expired at the end"
+  },
+  {
+   "at": "but parliament did something",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:surprised"
+    }
+   ],
+   "props": [
+    {
+     "id": "doc",
+     "text": "CDPA 1988, s.301",
+     "sub": "United Kingdom"
+    }
+   ],
+   "zooms": [
+    {
+     "at": "something unusual",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "so the copyright clock stopped",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:smug"
+    }
+   ],
+   "card": "ROYALTIES KEEP FLOWING",
+   "card_at": "royalty stream"
+  },
+  {
+   "at": "the hospital says",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🎭💙",
+     "text": "UK shows support GOSH"
+    }
+   ]
+  },
+  {
+   "at": "and it has never disclosed",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:thinking"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🤫",
+     "text": "Never disclosed"
+    }
+   ]
+  },
+  {
+   "at": "here's the limit",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🇬🇧",
+     "text": "UK right only"
+    }
+   ]
+  },
+  {
+   "at": "it isn't a worldwide",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "card": "NOT A FOREVER COPYRIGHT",
+   "card_at": "flying boy"
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so the next time you see",
+   "bg": "white",
+   "loop": true
+  }
+ ]
+}

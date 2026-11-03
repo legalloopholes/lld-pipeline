@@ -1,0 +1,217 @@
+{
+ "video_id": "LLD-035",
+ "episode": "E35",
+ "hook": "THE 'PAID IN FULL' CHECK",
+ "highlight": [
+  "dispute",
+  "conspicuous",
+  "ninety"
+ ],
+ "youtube_title": "Cashing a 'Payment in Full' Check Can Settle a Disputed Bill 🦝⚖️",
+ "caption": "Under UCC 3-311 (Nebraska's version shown), a good-faith check clearly offered as full payment of a genuinely disputed claim can settle it once cashed — with exceptions for designated addresses and repayment within 90 days.",
+ "hashtags": [
+  "#legalloopholes",
+  "#money",
+  "#contracts",
+  "#debt",
+  "#lawtok",
+  "#smallbusiness"
+ ],
+ "script": "Cashing a check can sometimes settle a disputed bill, even when the check is for less. This comes from the Uniform Commercial Code, section three-three-eleven. Nebraska's version is a good example. It's called accord and satisfaction. Here's how it works. First, there has to be a genuine dispute about the amount owed, or an amount that isn't fixed. Second, the person paying offers a check in good faith, as full satisfaction of the claim. Third, the check, or a letter with it, has to clearly and conspicuously say it's offered as full payment. And fourth, the person who's owed money cashes it. Then the claim can be discharged. Picture a hypothetical. A contractor bills two thousand dollars. The customer honestly disputes the work, and sends a check for fifteen hundred, clearly marked as payment in full. If the contractor cashes it, the dispute may be over. But writing payment in full isn't magic. If there's no real dispute, and you simply owe the bill, it doesn't work. Companies can designate a special address for these checks, and if yours doesn't go there, the discharge may fail. And a creditor who cashes it can often undo the effect by paying the money back within ninety days. [loop] So before you cash that check marked payment in full, remember",
+ "publish_at": "2026-11-18T19:00:00-05:00",
+ "sources": [
+  "https://nebraskalegislature.gov/laws/ucc.php?code=3-311"
+ ],
+ "legal_status": "Conditional settlement rule",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🧾✅",
+     "text": "Payment in full"
+    }
+   ]
+  },
+  {
+   "at": "this comes from the uniform",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "doc",
+     "text": "UCC §3-311",
+     "sub": "Nebraska"
+    }
+   ]
+  },
+  {
+   "at": "it's called accord",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "card": "ACCORD & SATISFACTION",
+   "card_at": "accord and satisfaction"
+  },
+  {
+   "at": "first there has to be",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🤔",
+     "text": "1. Real dispute"
+    }
+   ]
+  },
+  {
+   "at": "second the person paying",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🤝",
+     "text": "2. Good faith"
+    }
+   ]
+  },
+  {
+   "at": "third the check",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🔍",
+     "text": "3. Clear notice"
+    }
+   ]
+  },
+  {
+   "at": "and fourth the person",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:surprised"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🏦",
+     "text": "4. Check cashed"
+    }
+   ],
+   "zooms": [
+    {
+     "at": "discharged",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "picture a hypothetical",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "x": 0.68
+    },
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "card": "HYPOTHETICAL",
+   "card_at": "picture a hypothetical"
+  },
+  {
+   "at": "but writing payment in full",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🪄❌",
+     "text": "Not magic"
+    }
+   ]
+  },
+  {
+   "at": "companies can designate",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:pointing",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📮",
+     "text": "Special address"
+    }
+   ]
+  },
+  {
+   "at": "and a creditor who cashes",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "card": "90 DAYS TO UNDO",
+   "card_at": "within ninety days"
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so before you cash",
+   "bg": "bg-office",
+   "loop": true
+  }
+ ]
+}

@@ -1,0 +1,224 @@
+{
+ "video_id": "LLD-020",
+ "episode": "E20",
+ "hook": "ARE PRINGLES CRISPS?",
+ "highlight": [
+  "potato",
+  "crisps",
+  "percent"
+ ],
+ "youtube_title": "Pringles Argued They Weren't Potato Crisps. Then Came the Appeal 🦝⚖️",
+ "caption": "Procter & Gamble won in the High Court arguing Regular Pringles weren't potato crisps for VAT — but in 2009 the Court of Appeal restored the tribunal's ruling that they're in the taxed category.",
+ "hashtags": [
+  "#legalloopholes",
+  "#pringles",
+  "#uk",
+  "#tax",
+  "#vat",
+  "#lawtok"
+ ],
+ "script": "Pringles tried to argue their way out of a tax category for potato snacks, and the final appeal went badly. In the U.K., most food is zero-rated for VAT. But potato crisps are an exception, and they're taxed at the standard rate. The law covers potato crisps, potato sticks, potato puffs, and similar products made from the potato, or from potato flour. Procter and Gamble, which made Pringles at the time, argued Regular Pringles didn't fit. Their potato content was only about forty-two percent, and the company argued they weren't really similar to crisps. A VAT tribunal disagreed. Then the High Court sided with Procter and Gamble and ruled the snacks zero-rated. That's where a lot of retellings stop. But in May two thousand nine, the Court of Appeal restored the tribunal's decision. The judges said made from the potato doesn't mean made wholly of potato. Even ordinary crisps aren't one hundred percent potato. With more than forty percent potato flour, the tribunal could reasonably decide Pringles were made from potato and similar to crisps. One judge added that courts shouldn't invent a minimum percentage the law doesn't contain. So Pringles stayed in the taxed category. The early win didn't last, and the mixed recipe didn't save them. [loop] So before you argue a Pringle isn't a crisp, remember",
+ "publish_at": "2026-11-11T12:00:00-05:00",
+ "sources": [
+  "https://www.bailii.org/ew/cases/EWCA/Civ/2009/407.html",
+  "https://caselaw.nationalarchives.gov.uk/ewca/civ/2009/407"
+ ],
+ "legal_status": "Failed argument, 2009",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "bg-shop",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🥔❓",
+     "text": ""
+    }
+   ]
+  },
+  {
+   "at": "in the uk most food",
+   "bg": "bg-shop",
+   "cast": [
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🥔",
+     "text": "Crisps: taxed"
+    }
+   ]
+  },
+  {
+   "at": "the law covers potato crisps",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "doc",
+     "text": "“…made from the potato”",
+     "sub": "UK VAT law"
+    }
+   ]
+  },
+  {
+   "at": "procter and gamble which made",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🥔",
+     "text": "Only ~42% potato"
+    }
+   ]
+  },
+  {
+   "at": "a vat tribunal disagreed",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:concerned",
+     "x": 0.3
+    }
+   ],
+   "card": "TRIBUNAL: TAXED",
+   "card_at": "tribunal disagreed"
+  },
+  {
+   "at": "then the high court",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:surprised",
+     "x": 0.3
+    }
+   ],
+   "card": "HIGH COURT: ZERO-RATED!",
+   "card_at": "sided with"
+  },
+  {
+   "at": "that's where a lot",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:smug"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "✋",
+     "text": "Wait…"
+    }
+   ]
+  },
+  {
+   "at": "but in may",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:surprised",
+     "x": 0.3
+    }
+   ],
+   "card": "COURT OF APPEAL: TAXED",
+   "card_at": "restored",
+   "zooms": [
+    {
+     "at": "restored",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "the judges said made",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🥔≠100%",
+     "text": "Not wholly potato"
+    }
+   ]
+  },
+  {
+   "at": "one judge added",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📏❌",
+     "text": "No minimum %"
+    }
+   ]
+  },
+  {
+   "at": "so pringles stayed",
+   "bg": "bg-shop",
+   "cast": [
+    {
+     "id": "larry:concerned",
+     "x": 0.3
+    }
+   ],
+   "card": "STILL TAXED",
+   "card_at": "stayed in the taxed"
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so before you argue",
+   "bg": "bg-shop",
+   "loop": true
+  }
+ ]
+}

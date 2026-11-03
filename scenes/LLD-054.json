@@ -1,0 +1,186 @@
+{
+ "video_id": "LLD-054",
+ "episode": "E54",
+ "hook": "LOSE ON PAPER, TRY AGAIN?",
+ "highlight": [
+  "trial",
+  "twenty",
+  "mycitations"
+ ],
+ "youtube_title": "Lose a California Traffic Ticket on Paper — and Get a Brand-New Trial? 🦝⚖️",
+ "caption": "In California, losing a traditional trial by written declaration can let you request a new trial (trial de novo) within 20 days — but not in courts that offer online trials by declaration through MyCitations.",
+ "hashtags": [
+  "#legalloopholes",
+  "#california",
+  "#trafficticket",
+  "#driving",
+  "#lawtok",
+  "#court"
+ ],
+ "script": "You can lose some California traffic cases on paper, and still get a brand-new trial. It starts with a trial by written declaration, where you contest a ticket by sending in your statement and evidence instead of going to court. If you lose, the California courts' own self-help guide says you may be able to ask for a trial de novo. That means a new trial, in the same court, with a different judge, where you can bring new witnesses and evidence. That's different from an appeal. An appeal goes to a higher court, involves no new evidence, and only checks for legal mistakes. Now the deadline. You have to file your request for a new trial within twenty calendar days of when the court mailed its decision. Under the California Rules of Court, if the request isn't on time, no new trial can be held. If it is, the clerk sets a trial date within forty-five days. But here's the big catch. If your court lets you use its online system, MyCitations, to ask for an online trial by declaration, you won't get a trial de novo, even if you file by mail or in person instead. So check your court's notice before you choose. [loop] So before you mail in your traffic defense, remember",
+ "publish_at": "2026-11-28T12:00:00-05:00",
+ "sources": [
+  "https://selfhelp.courts.ca.gov/traffic/trial-declaration",
+  "https://courts.ca.gov/cms/rules/index/four/rule4_210"
+ ],
+ "legal_status": "Current procedure with court-specific limits (rechecked 2026-11-02)",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "bg-street",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📝🚗",
+     "text": ""
+    }
+   ]
+  },
+  {
+   "at": "it starts with a trial",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "doc",
+     "text": "Trial by written declaration",
+     "sub": "California courts"
+    }
+   ]
+  },
+  {
+   "at": "if you lose",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:surprised",
+     "x": 0.3
+    }
+   ],
+   "card": "TRIAL DE NOVO",
+   "card_at": "trial de novo",
+   "zooms": [
+    {
+     "at": "trial de novo",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "that means a new trial",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🆕⚖️",
+     "text": "New judge + evidence"
+    }
+   ]
+  },
+  {
+   "at": "that's different from an appeal",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "⬆️⚖️",
+     "text": "Appeal: errors only"
+    }
+   ]
+  },
+  {
+   "at": "now the deadline",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "card": "20 CALENDAR DAYS",
+   "card_at": "twenty calendar days"
+  },
+  {
+   "at": "under the california rules",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:concerned",
+     "x": 0.3
+    }
+   ],
+   "card": "LATE = NO NEW TRIAL",
+   "card_at": "no new trial"
+  },
+  {
+   "at": "but here's the big catch",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:surprised"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "💻",
+     "text": "MyCitations courts"
+    }
+   ]
+  },
+  {
+   "at": "so check your court's notice",
+   "bg": "bg-street",
+   "cast": [
+    {
+     "id": "larry:pointing",
+     "x": 0.3
+    }
+   ],
+   "card": "CHECK YOUR COURT",
+   "card_at": "court's notice"
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so before you mail in",
+   "bg": "bg-street",
+   "loop": true
+  }
+ ]
+}

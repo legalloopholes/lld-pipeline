@@ -1,0 +1,199 @@
+{
+ "video_id": "LLD-048",
+ "episode": "E48",
+ "hook": "WHICH MICKEY IS FREE?",
+ "highlight": [
+  "public",
+  "domain",
+  "trademark"
+ ],
+ "youtube_title": "One Mickey Mouse Is Public Domain. Not Every Mickey 🦝⚖️",
+ "caption": "Steamboat Willie (1928) entered the U.S. public domain in 2024, freeing that early version of Mickey. Later versions stay protected, and trademark law still bars confusing people about Disney's involvement.",
+ "hashtags": [
+  "#legalloopholes",
+  "#publicdomain",
+  "#copyright",
+  "#animation",
+  "#lawtok",
+  "#trademark"
+ ],
+ "script": "One version of Mickey Mouse entered the public domain, and that doesn't mean every Mickey did. On January first, twenty twenty-four, the U.S. copyright on Steamboat Willie, the nineteen twenty-eight cartoon, expired. According to Duke's Center for the Study of the Public Domain, that frees the nineteen twenty-eight versions of Mickey and Minnie, as they appear in Steamboat Willie and in the silent cartoon Plane Crazy. People can share, adapt and remix those versions. But here's what didn't happen. Later versions of Mickey, like the one in Fantasia from nineteen forty, are still protected, at least for the new, original details added later. So a modern Mickey, with his later look, isn't free to copy. Then there's trademark. Disney still has trademarks on Mickey, mainly for merchandise. Those don't extend the copyright, but they can stop uses likely to confuse people about who made or endorsed a product. A clear disclaimer that Disney didn't make or approve a work helps. As Duke puts it, trademark rights can't be used to block the freedoms that the expiration of copyright allows. So yes, the old black-and-white Mickey is public domain. No, that doesn't make all Disney imagery free, or let anyone pretend Disney is behind their project. [loop] So before you put a mouse on your next T-shirt, remember",
+ "publish_at": "2026-11-25T12:00:00-05:00",
+ "sources": [
+  "https://cspd.law.duke.edu/mickey/"
+ ],
+ "legal_status": "Copyright expiration, 2024",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:smug"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🐭🎞️",
+     "text": "Public domain?"
+    }
+   ]
+  },
+  {
+   "at": "on january first",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📅",
+     "text": "January 1, 2024"
+    }
+   ]
+  },
+  {
+   "at": "according to duke's",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "doc",
+     "text": "The 1928 versions",
+     "sub": "Duke CSPD"
+    }
+   ]
+  },
+  {
+   "at": "people can share",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:smug"
+    }
+   ],
+   "card": "SHARE · ADAPT · REMIX",
+   "card_at": "share adapt and remix"
+  },
+  {
+   "at": "but here's what didn't",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🔒🎞️",
+     "text": "Later versions: locked"
+    }
+   ],
+   "zooms": [
+    {
+     "at": "still protected",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "then there's trademark",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "™️",
+     "text": "Trademarks remain"
+    }
+   ]
+  },
+  {
+   "at": "those don't extend",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🤔🏷️",
+     "text": "Don't confuse buyers"
+    }
+   ]
+  },
+  {
+   "at": "a clear disclaimer",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📝",
+     "text": "Disclaimer helps"
+    }
+   ]
+  },
+  {
+   "at": "as duke puts it",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:smug"
+    }
+   ],
+   "card": "TRADEMARK CAN'T UNDO EXPIRY",
+   "card_at": "trademark rights"
+  },
+  {
+   "at": "so yes the old",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🐭1928",
+     "text": "Only the 1928 version"
+    }
+   ]
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so before you put a mouse",
+   "bg": "white",
+   "loop": true
+  }
+ ]
+}

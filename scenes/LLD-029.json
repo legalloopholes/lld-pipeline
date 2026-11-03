@@ -1,0 +1,202 @@
+{
+ "video_id": "LLD-029",
+ "episode": "E29",
+ "hook": "KEEP THE MISTAKEN MONEY?",
+ "highlight": [
+  "mistake",
+  "position",
+  "inequitable"
+ ],
+ "youtube_title": "Money Sent by Mistake — and the Recipients Got to Keep It (This Time) 🦝⚖️",
+ "caption": "Australia's High Court (2014) let Hills and Bosch keep payments made to them by mistake because, in good faith, they had given up pursuing real debts in reliance on them. Not a license to spend a windfall.",
+ "hashtags": [
+  "#legalloopholes",
+  "#australia",
+  "#money",
+  "#banking",
+  "#lawtok",
+  "#didyouknow"
+ ],
+ "script": "Someone sent money by mistake, and the companies that received it won the right to keep it, in this particular case. This is Australia's High Court, in twenty fourteen. A finance company, AFSL, was tricked by a fraud. A director in a business group created false invoices for equipment from two suppliers, Hills Industries and Bosch Security Systems. AFSL paid those suppliers, then discovered the invoices were fake, and wanted its money back. Normally, money paid by mistake can be recovered. But Hills and Bosch weren't in on the fraud. When the money arrived, they treated it as payment of real debts the business group owed them. They stopped chasing those debts, and they kept trading with the group. They had changed their position because of that money. The High Court unanimously said they didn't have to repay. The test was whether keeping the money would be inequitable in all the circumstances, and given what they'd given up, it wasn't. Here's the limit. This defense depends on good faith, and on genuinely changing your position because of the payment. If a surprise deposit hits your account and you rush out to spend it, that's not this case, and you can still be made to pay it back. [loop] So if money ever lands in your account by mistake, remember",
+ "publish_at": "2026-11-15T19:00:00-05:00",
+ "sources": [
+  "https://www.hcourt.gov.au/assets/publications/judgment-summaries/2014/hca-14-2014-05-07.pdf"
+ ],
+ "legal_status": "Documented defence, 2014",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "💸❓",
+     "text": ""
+    }
+   ]
+  },
+  {
+   "at": "this is australia's",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🇦🇺",
+     "text": "High Court, 2014"
+    }
+   ]
+  },
+  {
+   "at": "a finance company afsl",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:concerned",
+     "x": 0.3
+    }
+   ],
+   "card": "FAKE INVOICES",
+   "card_at": "false invoices"
+  },
+  {
+   "at": "afsl paid those suppliers",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "💸",
+     "text": "Paid by mistake"
+    }
+   ]
+  },
+  {
+   "at": "normally money paid",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "↩️💵",
+     "text": "Usually: pay back"
+    }
+   ]
+  },
+  {
+   "at": "but hills and bosch",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "😇",
+     "text": "Not in on it"
+    }
+   ]
+  },
+  {
+   "at": "they stopped chasing",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:surprised"
+    }
+   ],
+   "card": "THEY GAVE UP REAL DEBTS",
+   "card_at": "stopped chasing",
+   "zooms": [
+    {
+     "at": "changed their position",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "the high court unanimously",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "card": "NO REPAYMENT",
+   "card_at": "didn't have to repay"
+  },
+  {
+   "at": "the test was",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:thinking"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "⚖️",
+     "text": "Inequitable?"
+    }
+   ]
+  },
+  {
+   "at": "here's the limit",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🛍️🚫",
+     "text": "Don't spend it"
+    }
+   ]
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so if money ever lands",
+   "bg": "bg-office",
+   "loop": true
+  }
+ ]
+}

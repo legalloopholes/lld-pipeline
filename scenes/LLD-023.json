@@ -1,0 +1,201 @@
+{
+ "video_id": "LLD-023",
+ "episode": "E23",
+ "hook": "SEATS… THEN NO SEATS",
+ "highlight": [
+  "seats",
+  "cargo",
+  "settlement",
+  "allegations"
+ ],
+ "youtube_title": "Ford's Vans Had Temporary Back Seats — Then a $365 Million Settlement 🦝⚖️",
+ "caption": "DOJ alleged Ford imported Transit Connect cargo vans with temporary rear seats to pay the 2.5% passenger-vehicle duty instead of 25%. Ford settled for $365 million in 2024 without admitting liability.",
+ "hashtags": [
+  "#legalloopholes",
+  "#ford",
+  "#tariffs",
+  "#customs",
+  "#lawtok",
+  "#business"
+ ],
+ "script": "Ford's cargo vans arrived at the border with temporary back seats, and it ended in a three hundred sixty-five million dollar settlement. This is about U.S. import duties. Passenger vehicles were taxed at two point five percent. Cargo vehicles faced twenty-five percent. That's ten times higher. The Justice Department alleged that from two thousand nine to two thousand thirteen, Ford imported Transit Connect vans from Turkey dressed up as passenger vehicles, with temporary rear seats and other passenger features. According to the government, those seats were never used to carry passengers. After the vans cleared customs, the seats were allegedly removed, and the vans went back to being two-seat cargo vans. The settlement also covered allegations that Ford under-declared the value of some vehicles. In March twenty twenty-four, Ford agreed to pay three hundred sixty-five million dollars. But notice the wording. Those were allegations. The Justice Department itself said there was no determination of liability, and Ford didn't admit any. So this isn't a story about a loophole that worked. It's about where creative tariff planning can run into enforcement. And the rates and years here are history, not a guide to importing anything today. [loop] So the next time you see a van with an extra row of seats, remember",
+ "publish_at": "2026-11-12T19:00:00-05:00",
+ "sources": [
+  "https://www.justice.gov/archives/opa/pr/ford-motor-company-agrees-pay-365m-settle-customs-civil-penalty-claims-relating",
+  "https://www.reuters.com/business/autos-transportation/ford-pay-365-million-us-import-tariff-evasion-case-2024-03-11/"
+ ],
+ "legal_status": "Failed tariff scheme allegation; 2024 settlement",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "bg-harbor",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🚐💺",
+     "text": ""
+    }
+   ]
+  },
+  {
+   "at": "this is about us import",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🚗",
+     "text": "Passenger: 2.5%"
+    }
+   ]
+  },
+  {
+   "at": "cargo vehicles faced",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:surprised"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🚚",
+     "text": "Cargo: 25%"
+    }
+   ],
+   "zooms": [
+    {
+     "at": "ten times higher",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "the justice department alleged",
+   "bg": "bg-harbor",
+   "cast": [
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "card": "ALLEGED",
+   "card_at": "alleged"
+  },
+  {
+   "at": "according to the government",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "💺❌",
+     "text": "Seats never used"
+    }
+   ]
+  },
+  {
+   "at": "after the vans cleared",
+   "bg": "bg-street",
+   "cast": [
+    {
+     "id": "larry:surprised",
+     "x": 0.3
+    }
+   ],
+   "card": "SEATS OUT AFTER CUSTOMS",
+   "card_at": "allegedly removed"
+  },
+  {
+   "at": "the settlement also covered",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "doc",
+     "text": "Settlement",
+     "sub": "U.S. Department of Justice"
+    }
+   ]
+  },
+  {
+   "at": "in march twenty",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:surprised",
+     "x": 0.3
+    }
+   ],
+   "card": "$365 MILLION",
+   "card_at": "agreed to pay"
+  },
+  {
+   "at": "but notice the wording",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "⚖️",
+     "text": "No liability found"
+    }
+   ]
+  },
+  {
+   "at": "so this isn't a story",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "card": "NOT A LOOPHOLE THAT WORKED",
+   "card_at": "loophole that worked"
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so the next time you see a van",
+   "bg": "bg-harbor",
+   "loop": true
+  }
+ ]
+}

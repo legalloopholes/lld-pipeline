@@ -1,0 +1,190 @@
+{
+ "video_id": "LLD-059",
+ "episode": "E59",
+ "hook": "NO CONVICTION NEEDED?",
+ "highlight": [
+  "conviction",
+  "property",
+  "innocent"
+ ],
+ "youtube_title": "Your Property Can Be Taken Without a Conviction? Civil Forfeiture 🦝⚖️",
+ "caption": "Federal civil forfeiture is a case against the property itself and doesn't require a criminal conviction — but the government must prove its case, and owners have defenses like innocent ownership and excessive-fines review.",
+ "hashtags": [
+  "#legalloopholes",
+  "#civilforfeiture",
+  "#knowyourrights",
+  "#law",
+  "#lawtok",
+  "#police"
+ ],
+ "script": "You don't always need a criminal conviction for the government to seek forfeiture of your property. Under federal law, there are a few kinds of forfeiture. Criminal forfeiture is part of a criminal case, and it requires a conviction. Civil forfeiture is different. It's a case against the property itself, not the person. The Justice Department describes it this way: the government is the plaintiff, and the property is the defendant. And no criminal conviction is required. But the government still has to make its case. Under federal law, it has to prove by a preponderance of the evidence that the property is subject to forfeiture. And if the claim is that the property was used in a crime, there has to be a substantial connection between the property and the offense. Owners have defenses. An innocent owner, for example someone who didn't know about the illegal conduct, can protect their interest, though they have to prove it. And a court can reduce or eliminate a forfeiture that's grossly disproportional to the offense. Here's the limit. A temporary seizure isn't the same as a final forfeiture, state rules vary, and none of this means police can keep anything without evidence. [loop] So before you assume property can only be taken after a conviction, remember",
+ "publish_at": "2026-11-30T19:00:00-05:00",
+ "sources": [
+  "https://www.law.cornell.edu/uscode/text/18/983",
+  "https://www.justice.gov/afp/types-federal-forfeiture"
+ ],
+ "legal_status": "Current legal mechanism",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "bg-street",
+   "cast": [
+    {
+     "id": "larry:concerned",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🚗⚖️",
+     "text": ""
+    }
+   ]
+  },
+  {
+   "at": "under federal law there are",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "⚖️👤",
+     "text": "Criminal: conviction"
+    }
+   ]
+  },
+  {
+   "at": "civil forfeiture is different",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:surprised"
+    }
+   ],
+   "card": "CASE AGAINST THE PROPERTY",
+   "card_at": "against the property itself",
+   "zooms": [
+    {
+     "at": "against the property itself",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "the justice department describes",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🏛️ v. 🚗",
+     "text": "Property = defendant"
+    }
+   ]
+  },
+  {
+   "at": "but the government still",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "card": "PREPONDERANCE OF EVIDENCE",
+   "card_at": "preponderance"
+  },
+  {
+   "at": "and if the claim",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🔗",
+     "text": "Substantial connection"
+    }
+   ]
+  },
+  {
+   "at": "owners have defenses",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "😇",
+     "text": "Innocent owner"
+    }
+   ]
+  },
+  {
+   "at": "and a court can reduce",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "card": "GROSSLY DISPROPORTIONAL? REDUCED",
+   "card_at": "grossly disproportional"
+  },
+  {
+   "at": "here's the limit",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "⏸️≠🏁",
+     "text": "Seizure ≠ forfeiture"
+    }
+   ]
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so before you assume property",
+   "bg": "bg-street",
+   "loop": true
+  }
+ ]
+}

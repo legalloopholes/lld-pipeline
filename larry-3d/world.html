@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; overflow: hidden; }
+  #stage { position: relative; width: 1080px; height: 1920px; }
+  canvas { display: block; }
+  #caption {
+    position: absolute; left: 0; right: 0; top: 1240px;
+    display: flex; justify-content: center; pointer-events: none;
+  }
+  #caption span.box {
+    font-family: "Inter Display", "Inter", sans-serif; font-weight: 900;
+    font-size: 84px; line-height: 1.1; letter-spacing: -1px;
+    color: #ffffff; background: #1d1d22; padding: 18px 36px; border-radius: 28px;
+    max-width: 900px; text-align: center; box-shadow: 0 10px 0 rgba(0,0,0,0.12);
+  }
+  #caption span.box:empty { display: none; }
+  #caption .hot { color: #ff3b3b; }
+</style>
+<script type="importmap">{ "imports": { "three": "/three.module.js" } }</script>
+</head>
+<body>
+<div id="stage"></div>
+<script type="module" src="/world.js"></script>
+</body>
+</html>

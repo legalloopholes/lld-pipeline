@@ -1,0 +1,207 @@
+{
+ "video_id": "LLD-042",
+ "episode": "E42",
+ "hook": "A PLANE IS NOT A CAR",
+ "highlight": [
+  "vehicle",
+  "aircraft",
+  "warning"
+ ],
+ "youtube_title": "The Stolen Airplane the Car-Theft Law Didn't Cover (1931) 🦝⚖️",
+ "caption": "McBoyle v. United States (1931): the Supreme Court held a stolen airplane wasn't a 'vehicle' under the motor-vehicle theft law of the time, citing fair warning. Federal law now expressly covers aircraft.",
+ "hashtags": [
+  "#legalloopholes",
+  "#supremecourt",
+  "#history",
+  "#aviation",
+  "#lawtok",
+  "#criminallaw"
+ ],
+ "script": "He transported a stolen airplane across state lines, and the federal vehicle theft law of the time didn't cover it. This is McBoyle versus United States, from nineteen thirty-one. A federal law made it a crime to move a stolen motor vehicle across state lines. Its definition listed an automobile, an automobile truck, an automobile wagon, a motorcycle, or any other self-propelled vehicle not designed for running on rails. McBoyle was convicted for transporting a stolen airplane. The Supreme Court reversed. Justice Oliver Wendell Holmes wrote that in everyday speech, a vehicle is something that runs on land, not something that flies. Congress hadn't mentioned airplanes. He also wrote that a fair warning should be given to the world in language that the common world will understand. Courts shouldn't stretch a criminal law to aircraft just because the same policy seems to apply. Here's the limit. The Court didn't say stealing an airplane was legal. And the gap is long closed. Today's federal law expressly covers transporting a stolen motor vehicle, vessel, or aircraft, with up to ten years in prison. So this is a history lesson about precise wording, not a loophole. [loop] So before you assume a law covers everything that moves, remember",
+ "publish_at": "2026-11-22T12:00:00-05:00",
+ "sources": [
+  "https://www.law.cornell.edu/supremecourt/text/283/25",
+  "https://www.law.cornell.edu/uscode/text/18/2312"
+ ],
+ "legal_status": "Historical statutory gap, 1931 (closed)",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "bg-street",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "✈️🚗",
+     "text": ""
+    }
+   ]
+  },
+  {
+   "at": "this is mcboyle",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "doc",
+     "text": "McBoyle v. United States",
+     "sub": "U.S. Supreme Court, 1931"
+    }
+   ]
+  },
+  {
+   "at": "a federal law made it",
+   "bg": "bg-street",
+   "cast": [
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🚗🚚🏍️",
+     "text": "Motor vehicles"
+    }
+   ]
+  },
+  {
+   "at": "mcboyle was convicted",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:concerned",
+     "x": 0.3
+    }
+   ],
+   "card": "A STOLEN AIRPLANE",
+   "card_at": "stolen airplane"
+  },
+  {
+   "at": "the supreme court reversed",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:surprised",
+     "x": 0.3
+    }
+   ],
+   "card": "REVERSED",
+   "card_at": "reversed",
+   "zooms": [
+    {
+     "at": "not something that flies",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "congress hadn't mentioned",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "✈️❓",
+     "text": "Not mentioned"
+    }
+   ]
+  },
+  {
+   "at": "he also wrote",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "card": "“A FAIR WARNING…”",
+   "card_at": "fair warning should be given"
+  },
+  {
+   "at": "courts shouldn't stretch",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:thinking"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📏",
+     "text": "Don't stretch it"
+    }
+   ]
+  },
+  {
+   "at": "here's the limit",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "✈️🚫",
+     "text": "Still not legal"
+    }
+   ]
+  },
+  {
+   "at": "today's federal law",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:pointing",
+     "x": 0.3
+    }
+   ],
+   "card": "NOW: VEHICLE, VESSEL OR AIRCRAFT",
+   "card_at": "vessel or aircraft"
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so before you assume a law",
+   "bg": "bg-street",
+   "loop": true
+  }
+ ]
+}

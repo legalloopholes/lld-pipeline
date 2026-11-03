@@ -1,0 +1,183 @@
+{
+ "video_id": "LLD-038",
+ "episode": "E38",
+ "hook": "HOOKED UP… NOT GONE YET",
+ "highlight": [
+  "release",
+  "property",
+  "half"
+ ],
+ "youtube_title": "Car Already Hooked to the Tow Truck? In California, It May Not Be Too Late 🦝⚖️",
+ "caption": "California Vehicle Code 22658: for private-property tows, the owner can demand release before the car leaves the property; if it's already hooked up, the fee is capped at half the regular towing charge.",
+ "hashtags": [
+  "#legalloopholes",
+  "#california",
+  "#towing",
+  "#cars",
+  "#lawtok",
+  "#consumerrights"
+ ],
+ "script": "Your car is already hooked up to a tow truck, but in California, that may still be early enough to get it released. This is a California Vehicle Code rule for tows from private property, like a store parking lot. Under the law, if the owner, or someone they've authorized, shows up and asks, the tow company has to immediately and unconditionally release a vehicle that hasn't yet been removed from the private property and is in transit. So the key moment is the property line. While the car is still on the lot, even if it's already hooked up or lifted, the owner can demand it back. But there can be a fee. If the truck has already hooked or lifted the car, the company can charge up to half its regular towing charge. The full charge starts once it's left the property. And once it's released, the owner has to immediately move it to a lawful location. Here's the limit. This is about private-property tows under this section. It's not a rule for police impounds, and it doesn't help once the car has already left the lot. And the best plan is still to just park legally. [loop] So the next time a tow truck backs up to your car, remember",
+ "publish_at": "2026-11-20T12:00:00-05:00",
+ "sources": [
+  "https://codes.findlaw.com/ca/vehicle-code/veh-sect-22658/"
+ ],
+ "legal_status": "Current consumer protection",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "bg-street",
+   "cast": [
+    {
+     "id": "larry:surprised",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🚗🪝🚚",
+     "text": ""
+    }
+   ]
+  },
+  {
+   "at": "this is a california vehicle",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "doc",
+     "text": "Vehicle Code §22658",
+     "sub": "California"
+    }
+   ]
+  },
+  {
+   "at": "under the law if the owner",
+   "bg": "bg-street",
+   "cast": [
+    {
+     "id": "larry:pointing",
+     "x": 0.3
+    }
+   ],
+   "card": "RELEASE IT — IMMEDIATELY",
+   "card_at": "immediately and unconditionally",
+   "zooms": [
+    {
+     "at": "unconditionally",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "so the key moment",
+   "bg": "bg-street",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "card": "THE PROPERTY LINE",
+   "card_at": "property line"
+  },
+  {
+   "at": "but there can be a fee",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "💵½",
+     "text": "Up to half"
+    }
+   ]
+  },
+  {
+   "at": "the full charge",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🚚💨",
+     "text": "Left lot: full fee"
+    }
+   ]
+  },
+  {
+   "at": "and once it's released",
+   "bg": "bg-street",
+   "cast": [
+    {
+     "id": "larry:concerned",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🅿️",
+     "text": "Move it legally"
+    }
+   ]
+  },
+  {
+   "at": "here's the limit",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "👮🚫",
+     "text": "Not police impounds"
+    }
+   ]
+  },
+  {
+   "at": "and the best plan",
+   "bg": "bg-street",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "card": "JUST PARK LEGALLY",
+   "card_at": "park legally"
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so the next time a tow truck",
+   "bg": "bg-street",
+   "loop": true
+  }
+ ]
+}

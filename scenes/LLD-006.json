@@ -1,0 +1,203 @@
+{
+ "video_id": "LLD-006",
+ "episode": "E06",
+ "hook": "X-MEN: OFFICIALLY NOT HUMAN?",
+ "highlight": [
+  "human",
+  "mutants",
+  "doll",
+  "tariff"
+ ],
+ "youtube_title": "X-Men Toys Were Ruled 'Not Human' — to Cut Import Duty 🦝⚖️",
+ "caption": "In Toy Biz v. United States (2003), the trade court held X-Men figures weren't 'dolls representing only human beings' because of non-human features — putting them in a lower-duty toy category under the tariff schedule of the time.",
+ "hashtags": [
+  "#legalloopholes",
+  "#xmen",
+  "#marvel",
+  "#tariffs",
+  "#lawtok",
+  "#toys"
+ ],
+ "script": "The company selling X-Men toys argued its action figures were not human. And it won. This was a U.S. trade court decision from twenty oh-three. Under the tariff schedule at the time, dolls, meaning figures representing only human beings, carried a twelve percent duty. Toys representing animals or non-human creatures, like robots and monsters, carried six point eight percent. Customs said the X-Men figures were dolls. The importer, Toy Biz, said: look closer. These are mutants. Wolverine has claws. Other figures had fangs or tentacles. The court agreed. It said even one non-human feature could keep a figure out of the doll category. And it pointed out that these characters are known for being more than, or different from, human. So the X-Men went into the lower-duty toy category. Not every figure won, by the way. A different toy in the same case was ruled a doll. Here's the limit. This was about physical toys and the tariff categories back then. By twenty oh-two, the schedule had already made all of these toy categories duty-free going forward. And it says nothing about anyone's actual humanity. [loop] So the next time someone calls your action figure a doll, remember",
+ "publish_at": "2026-11-04T12:00:00-05:00",
+ "sources": [
+  "https://law.justia.com/cases/federal/appellate-courts/cit/96-10/96-10-2003-01-03.html"
+ ],
+ "legal_status": "Historical ruling, 2003",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ]
+  },
+  {
+   "at": "this was a us",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "doc",
+     "text": "Tariff Schedule",
+     "sub": "U.S. Customs"
+    }
+   ]
+  },
+  {
+   "at": "under the tariff schedule",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🧍",
+     "text": "Human dolls: 12%"
+    }
+   ]
+  },
+  {
+   "at": "toys representing animals",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🤖👾",
+     "text": "Non-human toys: 6.8%"
+    }
+   ]
+  },
+  {
+   "at": "customs said",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:concerned",
+     "x": 0.3
+    }
+   ],
+   "card": "CUSTOMS: THEY'RE DOLLS",
+   "card_at": "were dolls"
+  },
+  {
+   "at": "the importer toy biz",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:smug"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🧬",
+     "text": "Mutants!"
+    }
+   ]
+  },
+  {
+   "at": "wolverine has claws",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:surprised"
+    }
+   ],
+   "card": "CLAWS. FANGS. TENTACLES.",
+   "card_at": "has claws",
+   "zooms": [
+    {
+     "at": "has claws",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "the court agreed",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "x": 0.7
+    },
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "card": "ONE NON-HUMAN FEATURE = NOT A DOLL",
+   "card_at": "could keep a figure out"
+  },
+  {
+   "at": "went into the",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:smug"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📦",
+     "text": "Lower duty: 6.8%"
+    }
+   ]
+  },
+  {
+   "at": "here's the limit",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🕰️",
+     "text": "Old tariffs only"
+    }
+   ]
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so the next time someone calls",
+   "bg": "bg-courtroom",
+   "loop": true
+  }
+ ]
+}

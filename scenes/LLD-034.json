@@ -1,0 +1,217 @@
+{
+ "video_id": "LLD-034",
+ "episode": "E34",
+ "hook": "SPEND MILLIONS, SELL NOTHING?",
+ "highlight": [
+  "borrow",
+  "basis",
+  "income"
+ ],
+ "youtube_title": "Buy, Borrow, Die: How the Rich Spend Without Selling 🦝⚖️",
+ "caption": "'Buy, borrow, die' describes how untaxed gains, tax-free loan proceeds and the date-of-death basis rule can interact. Interest, collateral calls, estate tax and repayment mean it's not a zero-tax guarantee.",
+ "hashtags": [
+  "#legalloopholes",
+  "#taxes",
+  "#wealth",
+  "#personalfinance",
+  "#lawtok",
+  "#billionaires"
+ ],
+ "script": "How can someone spend millions without selling the investments that made them rich? People call it buy, borrow, die. It's shorthand, not a legal term, for how a few long-standing U.S. tax rules can work together. Step one: buy assets, like stock or real estate, that grow in value. As long as you don't sell, that gain generally isn't taxed. Step two: borrow against those assets for spending money. Loan proceeds generally aren't income, because, as the IRS puts it, you have an obligation to repay the lender. Step three: when the owner dies, heirs generally get a tax basis equal to the property's fair market value on the date of death. So gains from before death may never be taxed as income. That's the theory. Now the reality check. Loans cost interest, and it has to be paid. If the assets fall, the lender can demand more collateral, or sell them. If a debt is forgiven, that can be taxable income. Death doesn't erase the loan; the estate still owes it. Large estates can face estate tax. And the basis rule works both ways: if the property lost value, the basis goes down too. So it's a planning concept, not a zero-tax guarantee, and not advice for anyone. [loop] So the next time you wonder how billionaires pay for things, remember",
+ "publish_at": "2026-11-18T12:00:00-05:00",
+ "sources": [
+  "https://www.irs.gov/pub/irs-tege/westernoctober2010.pdf",
+  "https://www.irs.gov/publications/p559",
+  "https://webarchive.library.unt.edu/eot2008/20080916061915/http:/www.irs.gov/faqs/faq4-7.html"
+ ],
+ "legal_status": "Current rules used in tax planning",
+ "scenes": [
+  {
+   "at": "start",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:smug",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "💰🏦⚰️",
+     "text": ""
+    }
+   ]
+  },
+  {
+   "at": "people call it buy",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "1️⃣2️⃣3️⃣",
+     "text": "Buy · Borrow · Die"
+    }
+   ]
+  },
+  {
+   "at": "step one buy assets",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:pointing",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📈",
+     "text": "Unsold gain: untaxed"
+    }
+   ]
+  },
+  {
+   "at": "step two borrow",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:explaining",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🏦💵",
+     "text": "Loans aren't income"
+    }
+   ]
+  },
+  {
+   "at": "step three when the owner",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:surprised"
+    }
+   ],
+   "card": "BASIS RESETS AT DEATH",
+   "card_at": "date of death",
+   "zooms": [
+    {
+     "at": "date of death",
+     "amount": 1.18,
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "at": "that's the theory",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "card": "REALITY CHECK",
+   "card_at": "reality check"
+  },
+  {
+   "at": "loans cost interest",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "💸",
+     "text": "Interest due"
+    }
+   ]
+  },
+  {
+   "at": "if the assets fall",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:surprised"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📉",
+     "text": "Collateral call"
+    }
+   ]
+  },
+  {
+   "at": "death doesn't erase",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:concerned",
+     "x": 0.3
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📜",
+     "text": "Estate owes it"
+    }
+   ]
+  },
+  {
+   "at": "and the basis rule works",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "⬆️⬇️",
+     "text": "Basis can drop"
+    }
+   ]
+  },
+  {
+   "at": "so it's a planning",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:concerned",
+     "x": 0.3
+    }
+   ],
+   "card": "NOT A ZERO-TAX GUARANTEE",
+   "card_at": "a planning concept"
+  },
+  {
+   "at": "make sure to like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:auto"
+    }
+   ]
+  },
+  {
+   "at": "so the next time you wonder",
+   "bg": "bg-office",
+   "loop": true
+  }
+ ]
+}
