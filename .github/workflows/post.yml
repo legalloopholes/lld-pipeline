@@ -134,6 +134,13 @@ jobs:
           path: ~/.n8n-files/music
           key: music-${{ hashFiles('assets/music.json') }}
 
+      - name: Sound effects cache (Freesound CC0, downloaded on first use)
+        if: steps.gate.outputs.go == 'yes'
+        uses: actions/cache@v4
+        with:
+          path: ~/.n8n-files/sfx-cache
+          key: sfx-${{ hashFiles('assets/sfx_sources.json') }}
+
       - name: Playwright browser cache
         if: steps.gate.outputs.go == 'yes'
         uses: actions/cache@v4

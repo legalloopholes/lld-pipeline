@@ -23,3 +23,8 @@ YouTube, Facebook and Instagram get a soft background track (Kevin MacLeod, inco
 each episode's vibe is `music_vibe` in `scenes/<ID>.json` (or force a track with `music_track`). TikTok gets the clean
 video. The required credit is added to the YouTube description and the Facebook/Instagram caption automatically.
 Set `"enabled": false` in `assets/music.json` to turn music off.
+
+## Sound effects
+Meme-style sound effects (vine-boom hit, "dun dun DUN" sting, record scratch, cash register, airhorn, sad trombone,
+crowd gasp, "bruh", "huh?") are CC0 recordings from Freesound.org, listed in `assets/sfx_sources.json` and downloaded
+on first use. If one can't be downloaded, the built-in synthesized version is used instead.

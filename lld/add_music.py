@@ -39,7 +39,8 @@ def fetch(title):
 
 
 def lufs(args):
-    log = subprocess.run([FFMPEG, '-hide_banner', '-nostats', *args, '-af', 'ebur128', '-f', 'null', '-'],
+    # measured on a mono fold-down: that is how a phone speaker plays it, and the worst case for the music level
+    log = subprocess.run([FFMPEG, '-hide_banner', '-nostats', *args, '-af', 'aformat=channel_layouts=mono,ebur128', '-f', 'null', '-'],
                          capture_output=True, text=True).stderr
     m = re.findall(r'I:\s+(-?[\d.]+) LUFS', log)
     return float(m[-1])
@@ -55,19 +56,28 @@ track = fetch(title)
 dur = duration(video)
 loop = duration(track) < dur + 0.5
 lp = ['-stream_loop', '-1'] if loop else []
-v_i = lufs(['-i', voice])
-m_i = lufs([*lp, '-t', f'{dur:.2f}', '-i', track])
-level = float(LIB.get('level_db', -15))
-gain = v_i + level - m_i
+tmp = out + '.bed.wav'
+def make_bed(gain_db):
+    fc = (f'[0:a]atrim=0:{dur:.3f},asetpts=N/SR/TB,aresample=48000,aformat=channel_layouts=stereo,'
+          f'afade=t=in:d={fi},afade=t=out:st={max(0, dur - fo):.3f}:d={fo},volume={gain_db:.2f}dB[m]')
+    subprocess.run([FFMPEG, '-loglevel', 'error', '-y', *lp, '-i', track, '-filter_complex', fc, '-map', '[m]',
+                    '-t', f'{dur:.3f}', '-c:a', 'pcm_f32le', tmp], check=True)
+    return lufs(['-i', tmp])
 fi, fo = float(LIB.get('fade_in', 1.0)), float(LIB.get('fade_out', 2.0))
-fc = (f'[1:a]atrim=0:{dur:.3f},asetpts=N/SR/TB,aresample=48000,aformat=channel_layouts=stereo,'
-      f'afade=t=in:d={fi},afade=t=out:st={max(0, dur - fo):.3f}:d={fo},volume={gain:.2f}dB[m];'
-      f'[0:a]aresample=48000,aformat=channel_layouts=stereo[v];'
-      f'[v][m]amix=inputs=2:duration=first:normalize=0,alimiter=limit=0.97:level=false[a]')
-subprocess.run([FFMPEG, '-loglevel', 'error', '-y', '-i', video, *lp, '-i', track, '-filter_complex', fc,
+level = float(LIB.get('level_db', -15))
+v_i = lufs(['-i', voice])
+m0 = make_bed(0.0)                                   # measure the bed exactly as it will be mixed (trim, fades, stereo)
+gain = v_i + level - m0
+m_i = make_bed(gain)                                 # verify, and correct once if the measurement moved
+if abs(m_i - (v_i + level)) > 0.5:
+    gain += (v_i + level) - m_i; m_i = make_bed(gain)
+fc = (f'[0:a]aresample=48000,aformat=channel_layouts=stereo[v];[1:a]aformat=channel_layouts=stereo[m];'
+      f'[v][m]amix=inputs=2:duration=first:normalize=0,alimiter=limit=0.99:attack=2:release=40:level=false[a]')
+subprocess.run([FFMPEG, '-loglevel', 'error', '-y', '-i', video, '-i', tmp, '-filter_complex', fc,
                 '-map', '0:v', '-map', '[a]', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '192k', '-movflags', '+faststart', out],
                check=True)
+os.remove(tmp)
 credit = (f'Music: "{title}" Kevin MacLeod (incompetech.com)\n'
           'Licensed under Creative Commons: By Attribution 4.0\nhttps://creativecommons.org/licenses/by/4.0/')
-print(json.dumps({'track': title, 'credit': credit, 'voice_lufs': round(v_i, 1), 'music_lufs_after': round(m_i + gain, 1),
+print(json.dumps({'track': title, 'credit': credit, 'voice_lufs': round(v_i, 1), 'music_lufs_after': round(m_i, 1),
                   'level_db': level, 'looped': loop}))

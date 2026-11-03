@@ -1,0 +1,101 @@
+{
+ "_about": "Sound effects from Freesound.org, all CC0 (public domain dedication, no credit required). Downloaded on first use into ~/.n8n-files/sfx-cache. dur = seconds kept after leading silence is trimmed; gain = playback level.",
+ "hit": {
+  "id": 802074,
+  "url": "https://cdn.freesound.org/previews/802/802074_15956618-hq.mp3",
+  "name": "Drama Boom 02 by modusmogulus",
+  "dur": 1.6,
+  "gain": 0.65
+ },
+ "boom": {
+  "id": 856795,
+  "url": "https://cdn.freesound.org/previews/856/856795_271153-hq.mp3",
+  "name": "Bass Impact - Deep Hit by _earthbound_",
+  "dur": 2.2,
+  "gain": 0.6
+ },
+ "stinger": {
+  "id": 411232,
+  "url": "https://cdn.freesound.org/previews/411/411232_6902174-hq.mp3",
+  "name": "Sarcastic Dramatic Sound Effect by Sean-TE0",
+  "dur": 1.6,
+  "gain": 0.55
+ },
+ "scratch": {
+  "id": 43404,
+  "url": "https://cdn.freesound.org/previews/43/43404_465423-hq.mp3",
+  "name": "record_scratch.wav by simkiott",
+  "dur": 1.0,
+  "gain": 0.5
+ },
+ "cash": {
+  "id": 209578,
+  "url": "https://cdn.freesound.org/previews/209/209578_2558531-hq.mp3",
+  "name": "Cash Register Purchase by Zott820",
+  "dur": 1.6,
+  "gain": 0.45
+ },
+ "whoosh": {
+  "id": 60013,
+  "url": "https://cdn.freesound.org/previews/60/60013_71257-hq.mp3",
+  "name": "Whoosh by qubodup",
+  "dur": 0.45,
+  "gain": 0.35
+ },
+ "pop": {
+  "id": 245646,
+  "url": "https://cdn.freesound.org/previews/245/245646_1038806-hq.mp3",
+  "name": "Cartoon Pop (Distorted) by unfa",
+  "dur": 0.3,
+  "gain": 0.45
+ },
+ "airhorn": {
+  "id": 528807,
+  "url": "https://cdn.freesound.org/previews/528/528807_3482490-hq.mp3",
+  "name": "DJ airhorn sound by pfranzen",
+  "dur": 1.8,
+  "gain": 0.3
+ },
+ "trombone": {
+  "id": 175409,
+  "url": "https://cdn.freesound.org/previews/175/175409_1326576-hq.mp3",
+  "name": "wah wah sad trombone by kirbydx",
+  "dur": 3.2,
+  "gain": 0.45
+ },
+ "gasp": {
+  "id": 264376,
+  "url": "https://cdn.freesound.org/previews/264/264376_1654262-hq.mp3",
+  "name": "small crowd gasp by HowardV",
+  "dur": 1.6,
+  "gain": 0.4
+ },
+ "huh": {
+  "id": 150505,
+  "url": "https://cdn.freesound.org/previews/150/150505_1883289-hq.mp3",
+  "name": "Huh? - Vocal by davdud101",
+  "dur": 0.9,
+  "gain": 0.6
+ },
+ "bruh": {
+  "id": 534387,
+  "url": "https://cdn.freesound.org/previews/534/534387_11868930-hq.mp3",
+  "name": "Bruh Sound Effect #1 by Autellaem",
+  "dur": 0.9,
+  "gain": 0.6
+ },
+ "ding": {
+  "id": 407258,
+  "url": "https://cdn.freesound.org/previews/407/407258_7941603-hq.mp3",
+  "name": "Ding! idea by Saya13",
+  "dur": 1.2,
+  "gain": 0.4
+ },
+ "correct": {
+  "id": 335908,
+  "url": "https://cdn.freesound.org/previews/335/335908_5865517-hq.mp3",
+  "name": "Correct by LittleRainySeasons",
+  "dur": 1.0,
+  "gain": 0.4
+ }
+}

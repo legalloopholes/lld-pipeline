@@ -195,8 +195,37 @@ FILE_GAIN = {'boom': 0.7, 'pop': 0.55, 'alert': 0.5, 'huh': 0.7, 'correct': 0.5,
 SFX_GAIN = {'pop': 0.42, 'whoosh': 0.42, 'boom': 0.6, 'hit': 0.55, 'ding': 0.45, 'wind': 0.32, 'gavel': 0.6,
             'boing': 0.42, 'step': 0.3, 'stinger': 0.55}
 _sfx_cache = {}
+try: SFX_SOURCES = {k: v for k, v in json.load(open(os.path.join(ASSETS, 'sfx_sources.json'))).items() if not k.startswith('_')}
+except Exception: SFX_SOURCES = {}
+SFX_CACHE = os.path.join(ROOT, 'sfx-cache')
+def _sourced(name):
+    """real (CC0, Freesound) recording for this sound; downloaded once, leading silence trimmed. None if unavailable."""
+    src = SFX_SOURCES.get(name)
+    if not src: return None
+    path = os.path.join(SFX_CACHE, f"{src['id']}.mp3")
+    try:
+        if not os.path.exists(path) or os.path.getsize(path) < 1000:
+            import urllib.request
+            os.makedirs(SFX_CACHE, exist_ok=True)
+            req = urllib.request.Request(src['url'], headers={'User-Agent': 'LLD-pipeline'})
+            with urllib.request.urlopen(req, timeout=60) as r, open(path + '.part', 'wb') as fh: fh.write(r.read())
+            os.replace(path + '.part', path)
+        d = float(src.get('dur', 1.0))
+        af = (f'silenceremove=start_periods=1:start_threshold=-45dB,atrim=0:{d},'
+              f'afade=t=out:st={d * 0.65:.3f}:d={d * 0.35:.3f}')
+        pcm = subprocess.run([FFMPEG, '-loglevel', 'error', '-i', path, '-af', af, '-f', 's16le', '-ac', '1', '-ar', str(SR_A), '-'],
+                             capture_output=True).stdout
+        x = np.frombuffer(pcm, np.int16).astype(np.float32) / 32768
+        if len(x) < 100: return None
+        return x / (np.abs(x).max() + 1e-9) * 0.9 * float(src.get('gain', 0.4)) / SFX_GAIN.get(name, 0.3)
+    except Exception as e:
+        print(json.dumps({'warning': f'sound effect {name} unavailable: {e}'}), file=sys.stderr)
+        return None
 def sfx_audio(name):
     if name in _sfx_cache: return _sfx_cache[name]
+    x = _sourced(name)
+    if x is not None:
+        _sfx_cache[name] = x; return x
     f = os.path.join(ASSETS, 'sfx', f'{name}.wav')
     if os.path.exists(f):
         pcm = subprocess.run([FFMPEG, '-loglevel', 'error', '-i', f, '-f', 's16le', '-ac', '1', '-ar', str(SR_A), '-'], capture_output=True).stdout
@@ -354,22 +383,34 @@ if SHARE_LINE:
     SHARE_T0 = words[hits[-1]][0] if hits else (HANDLE_T - 1.5 if HANDLE_T is not None else None)
     if SHARE_T0 is not None:
         SHARE_T1 = scenes[-1]['t'] - 0.05 if scenes[-1].get('loop') and scenes[-1]['t'] > SHARE_T0 + 1.5 else SHARE_T0 + 4.5
-        SFX_EVENTS.append((SHARE_T0, 'pop'))
+        SFX_EVENTS.append((SHARE_T0 + 0.2, 'airhorn'))
 # narration cues
 for s_ in sentences:
     txt = ' '.join(w[2] for w in s_).lower()
-    if re.search(r"^(so,? )?the (legal )?theory|here'?s the (thing|catch|kicker|twist|limit|problem)|the thing is|turns out|plot twist|"
-                 r"^but here'?s|the (supreme )?court (said|ruled|agreed|disagreed|reversed|sided)|^(and )?the answer", txt):
+    if re.search(r"^(so,? )?the (legal )?theory|the thing is|turns out|the (supreme )?court (said|ruled|agreed|disagreed|reversed|sided)|"
+                 r"^(and )?the answer", txt):
         SFX_EVENTS.append((s_[0][0], 'ding'))
+    if txt.rstrip().endswith('?') and s_[0][0] > 3:                    # rhetorical question -> meme boom right after it
+        SFX_EVENTS.append((s_[-1][1] + 0.05, 'hit'))
+    if re.search(r"here'?s the (catch|kicker|twist|limit|problem)|plot twist|^but\b|not so fast|there'?s a catch", txt):
+        SFX_EVENTS.append((s_[0][0], 'scratch'))
     if re.search(r'(have|has) not done anything|done nothing|never fixed|still exists', txt):
-        SFX_EVENTS.append((s_[-1][0], 'error'))
+        SFX_EVENTS.append((s_[-1][0], 'bruh'))
+    if re.search(r"\b(lost|rejected|went badly|didn'?t work|failed|said no)\b", txt):
+        SFX_EVENTS.append((s_[-1][1] + 0.1, 'trombone'))
+MONEY = {'dollars', 'dollar', 'million', 'millions', 'billion', 'billions', 'money', 'cash', 'royalties', 'rent', 'tax', 'taxes', 'paid', 'rich'}
+SHOCK = {'kill', 'killed', 'murder', 'death', 'destroyed', 'seized', 'arrested', 'prison', 'jail', 'escape', 'stolen'}
+for (a, b, wtxt), n_ in zip(words, wn):
+    if n_ in MONEY: SFX_EVENTS.append((b, 'cash'))
+    if n_ in SHOCK: SFX_EVENTS.append((b + 0.05, 'gasp'))
 # drama: a stinger right as the hook lands
 if sentences: SFX_EVENTS.append((sentences[0][-1][1] + 0.05, 'stinger'))
 # keep it tasteful: per-sound limits and no two sounds piled on top of each other
 LIMITS = {'boom': (3, 6), 'alert': (1, 99), 'huh': (2, 15), 'error': (1, 99), 'ding': (2, 15), 'quack': (1, 99),
-          'correct': (2, 15), 'boing': (2, 12), 'stinger': (2, 20), 'hit': (8, 5), 'gavel': (2, 10), 'wind': (1, 99)}
-PRIORITY = ['correct', 'boom', 'alert', 'stinger', 'error', 'huh', 'ding', 'gavel', 'boing', 'wind', 'correct', 'quack',
-            'click', 'pop', 'hit', 'whoosh', 'step']
+          'correct': (2, 15), 'boing': (2, 12), 'stinger': (2, 20), 'hit': (10, 4), 'scratch': (2, 10), 'bruh': (1, 99),
+          'trombone': (1, 99), 'cash': (3, 10), 'gasp': (2, 12), 'airhorn': (1, 99), 'gavel': (2, 10), 'wind': (1, 99)}
+PRIORITY = ['correct', 'airhorn', 'boom', 'alert', 'stinger', 'scratch', 'trombone', 'bruh', 'error', 'huh', 'ding', 'gavel',
+            'hit', 'cash', 'gasp', 'boing', 'wind', 'quack', 'click', 'pop', 'whoosh', 'step']
 rank = lambda n: PRIORITY.index(n) if n in PRIORITY else 50
 kept, count, times = [], {}, {}
 for t_, n_ in sorted(SFX_EVENTS, key=lambda e: (rank(e[1]), e[0])):      # important sounds claim their moment first
@@ -378,6 +419,17 @@ for t_, n_ in sorted(SFX_EVENTS, key=lambda e: (rank(e[1]), e[0])):      # impor
     if n_ not in ('step', 'whoosh') and any(abs(t_ - x) < 0.35 for x, m in kept if m not in ('step', 'whoosh')): continue
     kept.append((t_, n_)); count[n_] = count.get(n_, 0) + 1; times.setdefault(n_, []).append(t_)
 SFX_EVENTS = sorted(kept)
+# keep the energy up: if ~9 s pass with no feature sound, the next sentence lands with a meme boom
+_feat = sorted(t for t, n in SFX_EVENTS if n not in ('whoosh', 'pop', 'step'))
+_last = 0.0
+for s_ in sentences:
+    t0_ = s_[0][0]
+    if any(_last < x <= t0_ for x in _feat): _last = max(x for x in _feat if x <= t0_)
+    if t0_ - _last < 9 or (HANDLE_T is not None and t0_ > HANDLE_T - 3): continue
+    for te_ in (s_[-1][1] + 0.05, t0_):                              # end of the sentence, else its start
+        if te_ - _last >= 6 and all(abs(te_ - x) > 0.35 for x in _feat):
+            SFX_EVENTS.append((te_, 'hit')); _feat.append(te_); _last = te_; break
+SFX_EVENTS.sort()
 
 def scene_at(t):
     for sc in reversed(scenes):
@@ -692,9 +744,9 @@ def mix_audio(path):
         x = sfx_audio(name) * SFX_GAIN.get(name, 0.3); i = int(t0 * SR_A)
         if i >= len(mix): continue
         mix[i:i + len(x)] += x[:len(mix) - i]
-    k = 0.8                                                     # soft knee: loud sound-effect peaks get rounded off,
-    ax = np.abs(mix)                                            # the voice level itself is left alone
-    mix = np.where(ax > k, np.sign(mix) * (k + 0.18 * np.tanh((ax - k) / 0.18)), mix).astype(np.float32)
+    k = 0.72                                                    # soft knee: loud sound-effect peaks get rounded off
+    ax = np.abs(mix)                                            # (max ~0.88, leaving headroom for the music bed)
+    mix = np.where(ax > k, np.sign(mix) * (k + 0.16 * np.tanh((ax - k) / 0.16)), mix).astype(np.float32)
     import wave
     with wave.open(path, 'wb') as wf:
         wf.setnchannels(1); wf.setsampwidth(2); wf.setframerate(SR_A)
