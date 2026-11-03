@@ -1,7 +1,7 @@
 {
  "video_id": "LLD-018",
  "episode": "E18",
- "hook": "HOUSE OR SHIP?",
+ "hook": "THEY DESTROYED HIS HOME",
  "highlight": [
   "vessel",
   "floating",
@@ -17,7 +17,7 @@
   "#lawtok",
   "#weirdlaws"
  ],
- "script": "A city treated this man's floating home like a ship, and it was sold and destroyed before the Supreme Court said it was never a vessel. This is Lozman versus the City of Riviera Beach, from twenty thirteen. Fane Lozman lived in a floating home: a plywood, house-shaped structure, kept afloat by an empty space underneath. After disputes with the city's marina, the city sued in admiralty, the federal law of ships and the sea, seeking dockage fees and trespass damages. For that, the house had to count as a vessel. The lower courts said it did. It floats, and it can be towed. The home was ordered sold, and the city bought it at auction and had it destroyed. Then the Supreme Court ruled, seven to two. Not every floating structure is a vessel. The test is whether a reasonable observer would consider it designed, to a practical degree, for carrying people or things over water. This house had no steering, no engine, and looked like ordinary living quarters. So, not a vessel. The case wasn't moot, because a bond secured his possible recovery. But the ruling came too late for the house. And it doesn't exempt floating homes from regulation, or erase ordinary debts. [loop] So before you call your houseboat a ship, remember",
+ "script": "A city seized this man's home, called it a ship, and destroyed it. [disclaimer] This is Lozman versus the City of Riviera Beach, from twenty thirteen. Fane Lozman lived in a floating home: a plywood, house-shaped structure, kept afloat by an empty space underneath. After disputes with the city's marina, the city sued in admiralty, the federal law of ships and the sea, seeking dockage fees and trespass damages. For that, the house had to count as a vessel. The lower courts said it did. It floats, and it can be towed. The home was ordered sold, and the city bought it at auction and had it destroyed. Then the Supreme Court ruled, seven to two. Not every floating structure is a vessel. The test is whether a reasonable observer would consider it designed, to a practical degree, for carrying people or things over water. This house had no steering, no engine, and looked like ordinary living quarters. So, not a vessel. The case wasn't moot, because a bond secured his possible recovery. But the ruling came too late for the house. And it doesn't exempt floating homes from regulation, or erase ordinary debts. [loop] So before you call your houseboat a ship, remember",
  "publish_at": "2026-11-10T12:00:00-05:00",
  "sources": [
   "https://www.law.cornell.edu/supremecourt/text/11-626"
@@ -216,5 +216,7 @@
   }
  ],
  "music_vibe": "quirky",
- "share_line": "Send this to the friend who'd live on a boat to dodge rent"
+ "share_line": "Send this to the friend who'd live on a boat to dodge rent",
+ "hook_old": "HOUSE OR SHIP?",
+ "script_old": "A city treated this man's floating home like a ship, and it was sold and destroyed before the Supreme Court said it was never a vessel. This is Lozman versus the City of Riviera Beach, from twenty thirteen. Fane Lozman lived in a floating home: a plywood, house-shaped structure, kept afloat by an empty space underneath. After disputes with the city's marina, the city sued in admiralty, the federal law of ships and the sea, seeking dockage fees and trespass damages. For that, the house had to count as a vessel. The lower courts said it did. It floats, and it can be towed. The home was ordered sold, and the city bought it at auction and had it destroyed. Then the Supreme Court ruled, seven to two. Not every floating structure is a vessel. The test is whether a reasonable observer would consider it designed, to a practical degree, for carrying people or things over water. This house had no steering, no engine, and looked like ordinary living quarters. So, not a vessel. The case wasn't moot, because a bond secured his possible recovery. But the ruling came too late for the house. And it doesn't exempt floating homes from regulation, or erase ordinary debts. [loop] So before you call your houseboat a ship, remember"
 }

@@ -1,7 +1,7 @@
 {
  "video_id": "LLD-025",
  "episode": "E25",
- "hook": "SUED FOR AN AFFAIR?",
+ "hook": "SUE YOUR SPOUSE'S LOVER",
  "highlight": [
   "alienation",
   "affection",
@@ -17,7 +17,7 @@
   "#lawtok",
   "#relationships"
  ],
- "script": "In North Carolina, getting between a married couple can get you sued. It's called alienation of affection. Normally, a breakup or a divorce is a dispute between the two spouses. But this claim lets a spouse sue a third person, someone outside the marriage. Broadly, the spouse has to show there was real love and affection in the marriage, that the defendant interfered, and that this caused the affection to be lost. That's how an outsider can end up facing a civil lawsuit over someone else's marriage. But North Carolina has put limits in the statute. First, conduct that happens after the spouses physically separate, with the intent that the separation be permanent, can't create the claim. Second, there's a deadline. The lawsuit has to be filed within three years of the defendant's last act. And third, it can only be brought against a natural person, so not against a company. And not every affair or breakup meets the elements. The spouse suing still has to prove them in court. This is a civil claim, not a criminal charge, and other states treat this very differently. [loop] So before you get involved with someone who's married in North Carolina, remember",
+ "script": "In North Carolina, you can sue the person who broke up your marriage. [disclaimer] It's called alienation of affection. Normally, a breakup or a divorce is a dispute between the two spouses. But this claim lets a spouse sue a third person, someone outside the marriage. Broadly, the spouse has to show there was real love and affection in the marriage, that the defendant interfered, and that this caused the affection to be lost. That's how an outsider can end up facing a civil lawsuit over someone else's marriage. But North Carolina has put limits in the statute. First, conduct that happens after the spouses physically separate, with the intent that the separation be permanent, can't create the claim. Second, there's a deadline. The lawsuit has to be filed within three years of the defendant's last act. And third, it can only be brought against a natural person, so not against a company. And not every affair or breakup meets the elements. The spouse suing still has to prove them in court. This is a civil claim, not a criminal charge, and other states treat this very differently. [loop] So before you get involved with someone who's married in North Carolina, remember",
  "publish_at": "2026-11-13T19:00:00-05:00",
  "sources": [
   "https://www.ncleg.gov/enactedlegislation/statutes/html/bysection/chapter_52/gs_52-13.html",
@@ -209,5 +209,7 @@
   }
  ],
  "music_vibe": "quirky",
- "share_line": "Send this to the friend who'd steal your spouse"
+ "share_line": "Send this to the friend who'd steal your spouse",
+ "hook_old": "SUED FOR AN AFFAIR?",
+ "script_old": "In North Carolina, getting between a married couple can get you sued. It's called alienation of affection. Normally, a breakup or a divorce is a dispute between the two spouses. But this claim lets a spouse sue a third person, someone outside the marriage. Broadly, the spouse has to show there was real love and affection in the marriage, that the defendant interfered, and that this caused the affection to be lost. That's how an outsider can end up facing a civil lawsuit over someone else's marriage. But North Carolina has put limits in the statute. First, conduct that happens after the spouses physically separate, with the intent that the separation be permanent, can't create the claim. Second, there's a deadline. The lawsuit has to be filed within three years of the defendant's last act. And third, it can only be brought against a natural person, so not against a company. And not every affair or breakup meets the elements. The spouse suing still has to prove them in court. This is a civil claim, not a criminal charge, and other states treat this very differently. [loop] So before you get involved with someone who's married in North Carolina, remember"
 }

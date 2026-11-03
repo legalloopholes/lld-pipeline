@@ -1,7 +1,7 @@
 {
  "video_id": "LLD-006",
  "episode": "E06",
- "hook": "X-MEN: OFFICIALLY NOT HUMAN?",
+ "hook": "X-MEN: LEGALLY NOT HUMAN",
  "highlight": [
   "human",
   "mutants",
@@ -18,7 +18,7 @@
   "#lawtok",
   "#toys"
  ],
- "script": "The company selling X-Men toys argued its action figures were not human. And it won. This was a U.S. trade court decision from twenty oh-three. Under the tariff schedule at the time, dolls, meaning figures representing only human beings, carried a twelve percent duty. Toys representing animals or non-human creatures, like robots and monsters, carried six point eight percent. Customs said the X-Men figures were dolls. The importer, Toy Biz, said: look closer. These are mutants. Wolverine has claws. Other figures had fangs or tentacles. The court agreed. It said even one non-human feature could keep a figure out of the doll category. And it pointed out that these characters are known for being more than, or different from, human. So the X-Men went into the lower-duty toy category. Not every figure won, by the way. A different toy in the same case was ruled a doll. Here's the limit. This was about physical toys and the tariff categories back then. By twenty oh-two, the schedule had already made all of these toy categories duty-free going forward. And it says nothing about anyone's actual humanity. [loop] So the next time someone calls your action figure a doll, remember",
+ "script": "A toy company went to court to prove the X-Men aren't human, and won. [disclaimer] And it won. This was a U.S. trade court decision from twenty oh-three. Under the tariff schedule at the time, dolls, meaning figures representing only human beings, carried a twelve percent duty. Toys representing animals or non-human creatures, like robots and monsters, carried six point eight percent. Customs said the X-Men figures were dolls. The importer, Toy Biz, said: look closer. These are mutants. Wolverine has claws. Other figures had fangs or tentacles. The court agreed. It said even one non-human feature could keep a figure out of the doll category. And it pointed out that these characters are known for being more than, or different from, human. So the X-Men went into the lower-duty toy category. Not every figure won, by the way. A different toy in the same case was ruled a doll. Here's the limit. This was about physical toys and the tariff categories back then. By twenty oh-two, the schedule had already made all of these toy categories duty-free going forward. And it says nothing about anyone's actual humanity. [loop] So the next time someone calls your action figure a doll, remember",
  "publish_at": "2026-11-04T12:00:00-05:00",
  "sources": [
   "https://law.justia.com/cases/federal/appellate-courts/cit/96-10/96-10-2003-01-03.html"
@@ -201,5 +201,7 @@
   }
  ],
  "music_vibe": "quirky",
- "share_line": "Send this to the friend who is legally not human"
+ "share_line": "Send this to the friend who is legally not human",
+ "hook_old": "X-MEN: OFFICIALLY NOT HUMAN?",
+ "script_old": "The company selling X-Men toys argued its action figures were not human. And it won. This was a U.S. trade court decision from twenty oh-three. Under the tariff schedule at the time, dolls, meaning figures representing only human beings, carried a twelve percent duty. Toys representing animals or non-human creatures, like robots and monsters, carried six point eight percent. Customs said the X-Men figures were dolls. The importer, Toy Biz, said: look closer. These are mutants. Wolverine has claws. Other figures had fangs or tentacles. The court agreed. It said even one non-human feature could keep a figure out of the doll category. And it pointed out that these characters are known for being more than, or different from, human. So the X-Men went into the lower-duty toy category. Not every figure won, by the way. A different toy in the same case was ruled a doll. Here's the limit. This was about physical toys and the tariff categories back then. By twenty oh-two, the schedule had already made all of these toy categories duty-free going forward. And it says nothing about anyone's actual humanity. [loop] So the next time someone calls your action figure a doll, remember"
 }

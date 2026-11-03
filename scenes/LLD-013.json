@@ -1,7 +1,7 @@
 {
  "video_id": "LLD-013",
  "episode": "E13",
- "hook": "FREE LAND AFTER 10 YEARS?",
+ "hook": "THEIR LAND… NOW YOURS?",
  "highlight": [
   "ten",
   "counter",
@@ -17,7 +17,7 @@
   "#lawtok",
   "#squatters"
  ],
- "script": "Can land become yours without the owner ever selling it? In England and Wales, sometimes, but not the way the internet tells it. This is about registered land, under the Land Registration Act of two thousand two. The Land Registry says that after ten years of adverse possession, a squatter is entitled to apply to be registered as the owner. Picture a hypothetical. A neighbor fences in a strip of garden that the title map says belongs next door, and treats it as theirs for ten years. Can they apply? Yes. Do they automatically win? No. The registered owner gets notified and can serve a counter-notice. Once they do, the application is rejected unless the squatter fits one of three narrow conditions. One: it would be unconscionable to remove them, for example, if the owner knowingly let them build there. Two: they're entitled to the land for some other reason, like an inheritance. Three: a reasonable mistake about the boundary of land next to their own, lasting at least ten years. If the application is rejected and the squatter stays two more years, they can apply again, and then, subject to exceptions, objections won't stop it. And squatting in a residential building can itself be a crime in England and Wales. [loop] So before you move your fence a few feet, remember",
+ "script": "Can you take someone's land just by living on it long enough? [disclaimer] In England and Wales, sometimes, but not the way the internet tells it. This is about registered land, under the Land Registration Act of two thousand two. The Land Registry says that after ten years of adverse possession, a squatter is entitled to apply to be registered as the owner. Picture a hypothetical. A neighbor fences in a strip of garden that the title map says belongs next door, and treats it as theirs for ten years. Can they apply? Yes. Do they automatically win? No. The registered owner gets notified and can serve a counter-notice. Once they do, the application is rejected unless the squatter fits one of three narrow conditions. One: it would be unconscionable to remove them, for example, if the owner knowingly let them build there. Two: they're entitled to the land for some other reason, like an inheritance. Three: a reasonable mistake about the boundary of land next to their own, lasting at least ten years. If the application is rejected and the squatter stays two more years, they can apply again, and then, subject to exceptions, objections won't stop it. And squatting in a residential building can itself be a crime in England and Wales. [loop] So before you move your fence a few feet, remember",
  "publish_at": "2026-11-07T19:00:00-05:00",
  "sources": [
   "https://www.gov.uk/government/publications/adverse-possession-of-registered-land/practice-guide-4-adverse-possession-of-registered-land"
@@ -217,5 +217,7 @@
   }
  ],
  "music_vibe": "quirky",
- "share_line": "Send this to the friend who never leaves your place"
+ "share_line": "Send this to the friend who never leaves your place",
+ "hook_old": "FREE LAND AFTER 10 YEARS?",
+ "script_old": "Can land become yours without the owner ever selling it? In England and Wales, sometimes, but not the way the internet tells it. This is about registered land, under the Land Registration Act of two thousand two. The Land Registry says that after ten years of adverse possession, a squatter is entitled to apply to be registered as the owner. Picture a hypothetical. A neighbor fences in a strip of garden that the title map says belongs next door, and treats it as theirs for ten years. Can they apply? Yes. Do they automatically win? No. The registered owner gets notified and can serve a counter-notice. Once they do, the application is rejected unless the squatter fits one of three narrow conditions. One: it would be unconscionable to remove them, for example, if the owner knowingly let them build there. Two: they're entitled to the land for some other reason, like an inheritance. Three: a reasonable mistake about the boundary of land next to their own, lasting at least ten years. If the application is rejected and the squatter stays two more years, they can apply again, and then, subject to exceptions, objections won't stop it. And squatting in a residential building can itself be a crime in England and Wales. [loop] So before you move your fence a few feet, remember"
 }

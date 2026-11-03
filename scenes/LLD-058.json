@@ -1,7 +1,7 @@
 {
  "video_id": "LLD-058",
  "episode": "E58",
- "hook": "BEES… FOR A TAX BREAK?",
+ "hook": "BEES = TAX BREAK",
  "highlight": [
   "bees",
   "productivity",
@@ -17,7 +17,7 @@
   "#homestead",
   "#lawtok"
  ],
- "script": "In Texas, bees can change a landowner's property tax bill. Texas lets qualifying agricultural land be appraised based on what it can produce, called productivity value, instead of market value. And the state Comptroller says productivity value is usually lower than market value. To qualify, the land generally has to be devoted principally to agricultural use, to the degree of intensity that's generally accepted in the area, and it has to have been used for agriculture in at least five of the past seven years. Here's the bee part. Texas amended its tax code to include beekeeping in the definition of agricultural use. Land used to raise or keep bees for pollination, or for products like honey, can qualify, but only on land that's at least five and no more than twenty acres. Picture a hypothetical. Someone owns a ten-acre parcel and starts keeping bees there. If it genuinely meets the rules, the appraisal could shift toward agricultural value. But it's not an instant tax trick. Local appraisal districts set their own standards, including how many hives are required per acre. And the house itself doesn't vanish from the tax roll. This is about the land's agricultural use. [loop] So before you call a few beehives a tax strategy, remember",
+ "script": "In Texas, a few beehives can dramatically lower a landowner's property tax bill. [disclaimer] Texas lets qualifying agricultural land be appraised based on what it can produce, called productivity value, instead of market value. And the state Comptroller says productivity value is usually lower than market value. To qualify, the land generally has to be devoted principally to agricultural use, to the degree of intensity that's generally accepted in the area, and it has to have been used for agriculture in at least five of the past seven years. Here's the bee part. Texas amended its tax code to include beekeeping in the definition of agricultural use. Land used to raise or keep bees for pollination, or for products like honey, can qualify, but only on land that's at least five and no more than twenty acres. Picture a hypothetical. Someone owns a ten-acre parcel and starts keeping bees there. If it genuinely meets the rules, the appraisal could shift toward agricultural value. But it's not an instant tax trick. Local appraisal districts set their own standards, including how many hives are required per acre. And the house itself doesn't vanish from the tax roll. This is about the land's agricultural use. [loop] So before you call a few beehives a tax strategy, remember",
  "publish_at": "2026-11-30T12:00:00-05:00",
  "sources": [
   "https://comptroller.texas.gov/taxes/property-tax/ag-timber/",
@@ -181,5 +181,7 @@
   }
  ],
  "music_vibe": "upbeat",
- "share_line": "Send this to the friend who'd get bees just to dodge taxes"
+ "share_line": "Send this to the friend who'd get bees just to dodge taxes",
+ "hook_old": "BEES… FOR A TAX BREAK?",
+ "script_old": "In Texas, bees can change a landowner's property tax bill. Texas lets qualifying agricultural land be appraised based on what it can produce, called productivity value, instead of market value. And the state Comptroller says productivity value is usually lower than market value. To qualify, the land generally has to be devoted principally to agricultural use, to the degree of intensity that's generally accepted in the area, and it has to have been used for agriculture in at least five of the past seven years. Here's the bee part. Texas amended its tax code to include beekeeping in the definition of agricultural use. Land used to raise or keep bees for pollination, or for products like honey, can qualify, but only on land that's at least five and no more than twenty acres. Picture a hypothetical. Someone owns a ten-acre parcel and starts keeping bees there. If it genuinely meets the rules, the appraisal could shift toward agricultural value. But it's not an instant tax trick. Local appraisal districts set their own standards, including how many hives are required per acre. And the house itself doesn't vanish from the tax roll. This is about the land's agricultural use. [loop] So before you call a few beehives a tax strategy, remember"
 }

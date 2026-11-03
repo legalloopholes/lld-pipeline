@@ -1,7 +1,7 @@
 {
  "video_id": "LLD-008",
  "episode": "E08",
- "hook": "THE EVIDENCE WAS… FISH",
+ "hook": "THE EVIDENCE WAS FISH",
  "highlight": [
   "fish",
   "tangible",
@@ -17,7 +17,7 @@
   "#weirdlaws",
   "#criminallaw"
  ],
- "script": "He threw evidence into the ocean and still beat one federal charge, because the evidence was fish. This is a U.S. Supreme Court case from twenty fifteen. A Florida wildlife officer with federal authority boarded a commercial fishing boat in the Gulf of Mexico and found red grouper that were too small. He told the captain, John Yates, to keep those undersized fish separate until they got back to port. Instead, Yates had a crew member throw them overboard and swap in other fish. Prosecutors charged him under a law passed after the Enron scandal, part of the Sarbanes-Oxley Act. It punishes destroying a record, a document, or a tangible object to obstruct a federal investigation. A fish is a tangible object, right? Five justices said this charge didn't fit. The lead opinion said a tangible object under that law means something used to record or preserve information, like a hard drive or a ledger. Not a grouper. But here's what the clickbait leaves out. Yates was also convicted under a different law, for destroying property to prevent a federal seizure, and he didn't challenge that one. So destroying evidence did not become legal. He won on the one statute that was built for shredded records. [loop] So before you call a fish a document, remember",
+ "script": "He threw the evidence overboard, and the Supreme Court still let him off one charge. [disclaimer] This is a U.S. Supreme Court case from twenty fifteen. A Florida wildlife officer with federal authority boarded a commercial fishing boat in the Gulf of Mexico and found red grouper that were too small. He told the captain, John Yates, to keep those undersized fish separate until they got back to port. Instead, Yates had a crew member throw them overboard and swap in other fish. Prosecutors charged him under a law passed after the Enron scandal, part of the Sarbanes-Oxley Act. It punishes destroying a record, a document, or a tangible object to obstruct a federal investigation. A fish is a tangible object, right? Five justices said this charge didn't fit. The lead opinion said a tangible object under that law means something used to record or preserve information, like a hard drive or a ledger. Not a grouper. But here's what the clickbait leaves out. Yates was also convicted under a different law, for destroying property to prevent a federal seizure, and he didn't challenge that one. So destroying evidence did not become legal. He won on the one statute that was built for shredded records. [loop] So before you call a fish a document, remember",
  "publish_at": "2026-11-05T12:00:00-05:00",
  "sources": [
   "https://www.law.cornell.edu/supremecourt/text/13-7451"
@@ -218,5 +218,7 @@
   }
  ],
  "music_vibe": "tense",
- "share_line": "Send this to the friend who'd throw the evidence overboard"
+ "share_line": "Send this to the friend who'd throw the evidence overboard",
+ "hook_old": "THE EVIDENCE WAS… FISH",
+ "script_old": "He threw evidence into the ocean and still beat one federal charge, because the evidence was fish. This is a U.S. Supreme Court case from twenty fifteen. A Florida wildlife officer with federal authority boarded a commercial fishing boat in the Gulf of Mexico and found red grouper that were too small. He told the captain, John Yates, to keep those undersized fish separate until they got back to port. Instead, Yates had a crew member throw them overboard and swap in other fish. Prosecutors charged him under a law passed after the Enron scandal, part of the Sarbanes-Oxley Act. It punishes destroying a record, a document, or a tangible object to obstruct a federal investigation. A fish is a tangible object, right? Five justices said this charge didn't fit. The lead opinion said a tangible object under that law means something used to record or preserve information, like a hard drive or a ledger. Not a grouper. But here's what the clickbait leaves out. Yates was also convicted under a different law, for destroying property to prevent a federal seizure, and he didn't challenge that one. So destroying evidence did not become legal. He won on the one statute that was built for shredded records. [loop] So before you call a fish a document, remember"
 }

@@ -1,7 +1,7 @@
 {
  "video_id": "LLD-022",
  "episode": "E22",
- "hook": "WRONG… BUT FINAL?",
+ "hook": "WRONG… BUT FREE FOREVER",
  "highlight": [
   "acquittal",
   "jeopardy",
@@ -17,7 +17,7 @@
   "#lawtok",
   "#constitution"
  ],
- "script": "A judge misunderstood the crime, and prosecutors still couldn't retry the defendant. This is Evans versus Michigan, a U.S. Supreme Court case from twenty thirteen. A man was charged with burning other real property, a lesser arson charge in Michigan than burning a home. After the prosecution finished its case, the trial judge granted a directed verdict of acquittal. The judge believed the state had to prove the building wasn't a dwelling. But that wasn't actually an element of the crime. The judge added a requirement that didn't exist, and then found it unproven. Michigan's appeals courts said that wasn't a real acquittal, so the case could be tried again. The Supreme Court disagreed, eight to one. The double jeopardy rule bars a second trial after an acquittal, and an acquittal includes any ruling that the prosecution's evidence wasn't enough to establish criminal liability. Even if that ruling was legally wrong. The Court said the judge's error affects only the accuracy of the acquittal, not what it is. But here's the limit. This was a real acquittal on the evidence. It wasn't a dismissal over a typo or a technicality, and it's not a formula for beating charges. [loop] So the next time someone says a mistake can always be fixed, remember",
+ "script": "The judge got the law wrong, and the defendant walked free for good. [disclaimer] This is Evans versus Michigan, a U.S. Supreme Court case from twenty thirteen. A man was charged with burning other real property, a lesser arson charge in Michigan than burning a home. After the prosecution finished its case, the trial judge granted a directed verdict of acquittal. The judge believed the state had to prove the building wasn't a dwelling. But that wasn't actually an element of the crime. The judge added a requirement that didn't exist, and then found it unproven. Michigan's appeals courts said that wasn't a real acquittal, so the case could be tried again. The Supreme Court disagreed, eight to one. The double jeopardy rule bars a second trial after an acquittal, and an acquittal includes any ruling that the prosecution's evidence wasn't enough to establish criminal liability. Even if that ruling was legally wrong. The Court said the judge's error affects only the accuracy of the acquittal, not what it is. But here's the limit. This was a real acquittal on the evidence. It wasn't a dismissal over a typo or a technicality, and it's not a formula for beating charges. [loop] So the next time someone says a mistake can always be fixed, remember",
  "publish_at": "2026-11-12T12:00:00-05:00",
  "sources": [
   "https://supreme.justia.com/cases/federal/us/568/313/"
@@ -189,5 +189,7 @@
   }
  ],
  "music_vibe": "tense",
- "share_line": "Send this to the friend who always gets away with it"
+ "share_line": "Send this to the friend who always gets away with it",
+ "hook_old": "WRONG… BUT FINAL?",
+ "script_old": "A judge misunderstood the crime, and prosecutors still couldn't retry the defendant. This is Evans versus Michigan, a U.S. Supreme Court case from twenty thirteen. A man was charged with burning other real property, a lesser arson charge in Michigan than burning a home. After the prosecution finished its case, the trial judge granted a directed verdict of acquittal. The judge believed the state had to prove the building wasn't a dwelling. But that wasn't actually an element of the crime. The judge added a requirement that didn't exist, and then found it unproven. Michigan's appeals courts said that wasn't a real acquittal, so the case could be tried again. The Supreme Court disagreed, eight to one. The double jeopardy rule bars a second trial after an acquittal, and an acquittal includes any ruling that the prosecution's evidence wasn't enough to establish criminal liability. Even if that ruling was legally wrong. The Court said the judge's error affects only the accuracy of the acquittal, not what it is. But here's the limit. This was a real acquittal on the evidence. It wasn't a dismissal over a typo or a technicality, and it's not a formula for beating charges. [loop] So the next time someone says a mistake can always be fixed, remember"
 }

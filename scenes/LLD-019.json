@@ -1,7 +1,7 @@
 {
  "video_id": "LLD-019",
  "episode": "E19",
- "hook": "THIS THREAT DOESN'T WORK",
+ "hook": "THIS THREAT IS WORTHLESS",
  "highlight": [
   "unenforceable",
   "penalize",
@@ -200,5 +200,7 @@
   }
  ],
  "music_vibe": "quirky",
- "share_line": "Send this to the sibling already fighting over the will"
+ "share_line": "Send this to the sibling already fighting over the will",
+ "hook_old": "THIS THREAT DOESN'T WORK",
+ "script_old": "Your will says: challenge this and you get nothing. But in Florida, that threat is unenforceable. These are called no-contest clauses, and the idea is to scare relatives out of fighting over a will. Florida's statute on them is short. A provision in a will that tries to penalize any interested person for contesting the will, or for starting other proceedings about the estate, is unenforceable. That's it. One sentence. So picture a hypothetical will. I leave my son one hundred thousand dollars, but if he challenges this will, he gets nothing. In Florida, that penalty can't be enforced. He can bring his challenge without that threat hanging over him. But here's the crucial part. Taking away the penalty doesn't make the challenge any stronger. He still has to prove something is legally wrong with the will, like a problem with how it was signed, or undue influence. If he loses, the will stands as written. The statute just stops the will from punishing him for trying. And Florida's approach isn't universal. Other states treat no-contest clauses differently, so the answer really depends on where the estate is handled. If you're writing a will, or thinking of challenging one, that's a conversation for a lawyer in that state. [loop] So before you put a scary clause in your will, remember"
 }

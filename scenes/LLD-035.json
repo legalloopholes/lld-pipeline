@@ -1,7 +1,7 @@
 {
  "video_id": "LLD-035",
  "episode": "E35",
- "hook": "THE 'PAID IN FULL' CHECK",
+ "hook": "THE 'PAID IN FULL' TRAP",
  "highlight": [
   "dispute",
   "conspicuous",
@@ -17,7 +17,7 @@
   "#lawtok",
   "#smallbusiness"
  ],
- "script": "Cashing a check can sometimes settle a disputed bill, even when the check is for less. This comes from the Uniform Commercial Code, section three-three-eleven. Nebraska's version is a good example. It's called accord and satisfaction. Here's how it works. First, there has to be a genuine dispute about the amount owed, or an amount that isn't fixed. Second, the person paying offers a check in good faith, as full satisfaction of the claim. Third, the check, or a letter with it, has to clearly and conspicuously say it's offered as full payment. And fourth, the person who's owed money cashes it. Then the claim can be discharged. Picture a hypothetical. A contractor bills two thousand dollars. The customer honestly disputes the work, and sends a check for fifteen hundred, clearly marked as payment in full. If the contractor cashes it, the dispute may be over. But writing payment in full isn't magic. If there's no real dispute, and you simply owe the bill, it doesn't work. Companies can designate a special address for these checks, and if yours doesn't go there, the discharge may fail. And a creditor who cashes it can often undo the effect by paying the money back within ninety days. [loop] So before you cash that check marked payment in full, remember",
+ "script": "Cash one check, and you could wipe out the rest of a disputed bill. [disclaimer] This comes from the Uniform Commercial Code, section three-three-eleven. Nebraska's version is a good example. It's called accord and satisfaction. Here's how it works. First, there has to be a genuine dispute about the amount owed, or an amount that isn't fixed. Second, the person paying offers a check in good faith, as full satisfaction of the claim. Third, the check, or a letter with it, has to clearly and conspicuously say it's offered as full payment. And fourth, the person who's owed money cashes it. Then the claim can be discharged. Picture a hypothetical. A contractor bills two thousand dollars. The customer honestly disputes the work, and sends a check for fifteen hundred, clearly marked as payment in full. If the contractor cashes it, the dispute may be over. But writing payment in full isn't magic. If there's no real dispute, and you simply owe the bill, it doesn't work. Companies can designate a special address for these checks, and if yours doesn't go there, the discharge may fail. And a creditor who cashes it can often undo the effect by paying the money back within ninety days. [loop] So before you cash that check marked payment in full, remember",
  "publish_at": "2026-11-18T19:00:00-05:00",
  "sources": [
   "https://nebraskalegislature.gov/laws/ucc.php?code=3-311"
@@ -215,5 +215,7 @@
   }
  ],
  "music_vibe": "upbeat",
- "share_line": "Send this to the friend who still owes you for dinner"
+ "share_line": "Send this to the friend who still owes you for dinner",
+ "hook_old": "THE 'PAID IN FULL' CHECK",
+ "script_old": "Cashing a check can sometimes settle a disputed bill, even when the check is for less. This comes from the Uniform Commercial Code, section three-three-eleven. Nebraska's version is a good example. It's called accord and satisfaction. Here's how it works. First, there has to be a genuine dispute about the amount owed, or an amount that isn't fixed. Second, the person paying offers a check in good faith, as full satisfaction of the claim. Third, the check, or a letter with it, has to clearly and conspicuously say it's offered as full payment. And fourth, the person who's owed money cashes it. Then the claim can be discharged. Picture a hypothetical. A contractor bills two thousand dollars. The customer honestly disputes the work, and sends a check for fifteen hundred, clearly marked as payment in full. If the contractor cashes it, the dispute may be over. But writing payment in full isn't magic. If there's no real dispute, and you simply owe the bill, it doesn't work. Companies can designate a special address for these checks, and if yours doesn't go there, the discharge may fail. And a creditor who cashes it can often undo the effect by paying the money back within ninety days. [loop] So before you cash that check marked payment in full, remember"
 }

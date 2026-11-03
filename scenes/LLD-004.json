@@ -1,7 +1,7 @@
 {
  "video_id": "LLD-004",
  "episode": "E04",
- "hook": "BEES… LEGALLY FISH?",
+ "hook": "BEES ARE LEGALLY FISH?",
  "highlight": [
   "fish",
   "invertebrates",
@@ -17,7 +17,7 @@
   "#lawtok",
   "#weirdlaws"
  ],
- "script": "California found a way to protect bumble bees by fitting them into the legal definition of fish. Here's how. California's Endangered Species Act protects birds, mammals, fish, amphibians, reptiles and plants. Insects don't get their own category. But the state's Fish and Game Code defines fish to include invertebrates, along with things like mollusks and crustaceans. So, in twenty twenty-two, a California appeals court had to decide: can that definition reach a bee that has never lived in water? Its answer was yes. The court said the definition isn't limited to animals that live in water, so the state commission can list a land-dwelling invertebrate, like a bumble bee, if it meets the law's requirements. Even the case name sounds like a joke: Almond Alliance versus the Fish and Game Commission. When the California Supreme Court declined to review the case, the chief justice wrote that the denial should not be read as the court deciding that bumble bees are fish. And biologically, they obviously aren't. This is a legal classification for one wildlife law, not a rule that bees are fish everywhere in California. [loop] So if you ever spot a bee at the fish market, just remember",
+ "script": "A California court ruled that bumble bees can legally count as fish. [disclaimer] Here's how. California's Endangered Species Act protects birds, mammals, fish, amphibians, reptiles and plants. Insects don't get their own category. But the state's Fish and Game Code defines fish to include invertebrates, along with things like mollusks and crustaceans. So, in twenty twenty-two, a California appeals court had to decide: can that definition reach a bee that has never lived in water? Its answer was yes. The court said the definition isn't limited to animals that live in water, so the state commission can list a land-dwelling invertebrate, like a bumble bee, if it meets the law's requirements. Even the case name sounds like a joke: Almond Alliance versus the Fish and Game Commission. When the California Supreme Court declined to review the case, the chief justice wrote that the denial should not be read as the court deciding that bumble bees are fish. And biologically, they obviously aren't. This is a legal classification for one wildlife law, not a rule that bees are fish everywhere in California. [loop] So if you ever spot a bee at the fish market, just remember",
  "publish_at": "2026-11-03T12:00:00-05:00",
  "sources": [
   "https://www.courts.ca.gov/opinions/archive/C093542S.PDF"
@@ -201,5 +201,7 @@
   }
  ],
  "music_vibe": "quirky",
- "share_line": "Send this to the friend who is legally a fish"
+ "share_line": "Send this to the friend who is legally a fish",
+ "hook_old": "BEES… LEGALLY FISH?",
+ "script_old": "California found a way to protect bumble bees by fitting them into the legal definition of fish. Here's how. California's Endangered Species Act protects birds, mammals, fish, amphibians, reptiles and plants. Insects don't get their own category. But the state's Fish and Game Code defines fish to include invertebrates, along with things like mollusks and crustaceans. So, in twenty twenty-two, a California appeals court had to decide: can that definition reach a bee that has never lived in water? Its answer was yes. The court said the definition isn't limited to animals that live in water, so the state commission can list a land-dwelling invertebrate, like a bumble bee, if it meets the law's requirements. Even the case name sounds like a joke: Almond Alliance versus the Fish and Game Commission. When the California Supreme Court declined to review the case, the chief justice wrote that the denial should not be read as the court deciding that bumble bees are fish. And biologically, they obviously aren't. This is a legal classification for one wildlife law, not a rule that bees are fish everywhere in California. [loop] So if you ever spot a bee at the fish market, just remember"
 }

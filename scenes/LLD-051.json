@@ -1,7 +1,7 @@
 {
  "video_id": "LLD-051",
  "episode": "E51",
- "hook": "NO PURCHASE NECESSARY?",
+ "hook": "WHY 'NO PURCHASE NECESSARY'",
  "highlight": [
   "purchase",
   "chance",
@@ -17,7 +17,7 @@
   "#lawtok",
   "#consumer"
  ],
- "script": "Those three words in a giveaway's fine print, no purchase necessary, are doing serious legal work. In the U.S., lawyers generally describe a lottery as three pieces: a prize, chance, and something you have to pay to play, which they call consideration. Private lotteries are generally illegal. So how can a soda company run a giveaway where winners are picked by chance? By taking the payment out. The Federal Trade Commission's guidance says sweepstakes-type promotions that require a purchase are illegal in the United States. Its consumer advice says real sweepstakes are free and winning is by chance, and that sweepstakes mailings must say you don't have to pay to participate. That's why giveaways offer a free way to enter, like an online form or a mail-in entry. It removes the payment piece. But no purchase necessary isn't a magic spell. The free route has to be genuine. Each state has its own rules, which may require disclosures, licensing or a bond. Other agencies, like the Postal Service and the FCC, also enforce prize promotion laws. And skill contests are treated differently from sweepstakes. So printing three words on a box doesn't make any game legal. [loop] So the next time you see no purchase necessary in tiny print, remember",
+ "script": "Every giveaway says no purchase necessary, and there's a legal reason it has to. [disclaimer] In the U.S., lawyers generally describe a lottery as three pieces: a prize, chance, and something you have to pay to play, which they call consideration. Private lotteries are generally illegal. So how can a soda company run a giveaway where winners are picked by chance? By taking the payment out. The Federal Trade Commission's guidance says sweepstakes-type promotions that require a purchase are illegal in the United States. Its consumer advice says real sweepstakes are free and winning is by chance, and that sweepstakes mailings must say you don't have to pay to participate. That's why giveaways offer a free way to enter, like an online form or a mail-in entry. It removes the payment piece. But no purchase necessary isn't a magic spell. The free route has to be genuine. Each state has its own rules, which may require disclosures, licensing or a bond. Other agencies, like the Postal Service and the FCC, also enforce prize promotion laws. And skill contests are treated differently from sweepstakes. So printing three words on a box doesn't make any game legal. [loop] So the next time you see no purchase necessary in tiny print, remember",
  "publish_at": "2026-11-26T19:00:00-05:00",
  "sources": [
   "https://www.ftc.gov/business-guidance/resources/advertising-faqs-guide-small-business",
@@ -202,5 +202,7 @@
   }
  ],
  "music_vibe": "upbeat",
- "share_line": "Send this to the friend who enters every giveaway"
+ "share_line": "Send this to the friend who enters every giveaway",
+ "hook_old": "NO PURCHASE NECESSARY?",
+ "script_old": "Those three words in a giveaway's fine print, no purchase necessary, are doing serious legal work. In the U.S., lawyers generally describe a lottery as three pieces: a prize, chance, and something you have to pay to play, which they call consideration. Private lotteries are generally illegal. So how can a soda company run a giveaway where winners are picked by chance? By taking the payment out. The Federal Trade Commission's guidance says sweepstakes-type promotions that require a purchase are illegal in the United States. Its consumer advice says real sweepstakes are free and winning is by chance, and that sweepstakes mailings must say you don't have to pay to participate. That's why giveaways offer a free way to enter, like an online form or a mail-in entry. It removes the payment piece. But no purchase necessary isn't a magic spell. The free route has to be genuine. Each state has its own rules, which may require disclosures, licensing or a bond. Other agencies, like the Postal Service and the FCC, also enforce prize promotion laws. And skill contests are treated differently from sweepstakes. So printing three words on a box doesn't make any game legal. [loop] So the next time you see no purchase necessary in tiny print, remember"
 }

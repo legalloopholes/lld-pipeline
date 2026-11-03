@@ -1,7 +1,7 @@
 {
  "video_id": "LLD-032",
  "episode": "E32",
- "hook": "CLOCKED… BUT NO CONVICTION?",
+ "hook": "CLOCKED… NOT CONVICTED",
  "highlight": [
   "ten",
   "devices",
@@ -17,7 +17,7 @@
   "#lawtok",
   "#driving"
  ],
- "script": "A device can clock you speeding, and the law can still block a conviction based on that reading. This is Pennsylvania's Vehicle Code, section thirty-three sixty-eight. Part of it covers certain speed-timing devices: ones that time a car between two sensors on the road, or that calculate average speed between two points. For these devices, there are minimum thresholds. In general, a conviction based on their evidence needs a recorded speed of at least six miles per hour over the limit. And on roads where the limit is under fifty-five, a conviction based on one of these two-point devices can't rest on a reading of less than ten over. So, hypothetically, in a thirty-five zone, a reading of forty-three from one of these devices couldn't support a conviction under this rule. But read the fine print. This does not raise the speed limit. Going eight over is still speeding. The thresholds don't apply in school zones or active work zones. They're about these specific types of devices, not every radar or laser reading. And an officer could have other evidence. So it's a narrow evidence rule, not a license to drive faster. [loop] So before you do speedometer math in Pennsylvania, remember",
+ "script": "In Pennsylvania, getting clocked speeding doesn't always mean they can convict you. [disclaimer] This is Pennsylvania's Vehicle Code, section thirty-three sixty-eight. Part of it covers certain speed-timing devices: ones that time a car between two sensors on the road, or that calculate average speed between two points. For these devices, there are minimum thresholds. In general, a conviction based on their evidence needs a recorded speed of at least six miles per hour over the limit. And on roads where the limit is under fifty-five, a conviction based on one of these two-point devices can't rest on a reading of less than ten over. So, hypothetically, in a thirty-five zone, a reading of forty-three from one of these devices couldn't support a conviction under this rule. But read the fine print. This does not raise the speed limit. Going eight over is still speeding. The thresholds don't apply in school zones or active work zones. They're about these specific types of devices, not every radar or laser reading. And an officer could have other evidence. So it's a narrow evidence rule, not a license to drive faster. [loop] So before you do speedometer math in Pennsylvania, remember",
  "publish_at": "2026-11-17T12:00:00-05:00",
  "sources": [
   "https://www.legis.state.pa.us/WU01/LI/LI/CT/HTM/75/00.033..HTM",
@@ -197,5 +197,7 @@
   }
  ],
  "music_vibe": "quirky",
- "share_line": "Send this to the friend with a lead foot"
+ "share_line": "Send this to the friend with a lead foot",
+ "hook_old": "CLOCKED… BUT NO CONVICTION?",
+ "script_old": "A device can clock you speeding, and the law can still block a conviction based on that reading. This is Pennsylvania's Vehicle Code, section thirty-three sixty-eight. Part of it covers certain speed-timing devices: ones that time a car between two sensors on the road, or that calculate average speed between two points. For these devices, there are minimum thresholds. In general, a conviction based on their evidence needs a recorded speed of at least six miles per hour over the limit. And on roads where the limit is under fifty-five, a conviction based on one of these two-point devices can't rest on a reading of less than ten over. So, hypothetically, in a thirty-five zone, a reading of forty-three from one of these devices couldn't support a conviction under this rule. But read the fine print. This does not raise the speed limit. Going eight over is still speeding. The thresholds don't apply in school zones or active work zones. They're about these specific types of devices, not every radar or laser reading. And an officer could have other evidence. So it's a narrow evidence rule, not a license to drive faster. [loop] So before you do speedometer math in Pennsylvania, remember"
 }

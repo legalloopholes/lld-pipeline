@@ -29,7 +29,9 @@ HOT_RED = {'kill', 'killed', 'murder', 'death', 'die', 'dead', 'illegal', 'crime
 HOT_YELLOW = {'constitution', 'constitutional', 'constitutionally', 'congress', 'jury', 'jurors', 'law', 'loophole',
               'loopholes', 'amendment', 'federal', 'court', 'judge', 'legal', 'theory', 'technically', 'actually',
               'secret', 'free', 'million', 'billion', 'everyone', 'anyone', 'only'}
-ZOOM_WORDS = {'zero', 'impossible', 'never', 'death', 'murder', 'kill', 'nobody', 'illegal'}
+ZOOM_WORDS = {'zero', 'impossible', 'never', 'death', 'murder', 'kill', 'nobody', 'illegal', 'crime', 'prison', 'jail',
+              'arrested', 'guilty', 'sued', 'lawsuit', 'million', 'millions', 'billion', 'billions', 'banned', 'secret',
+              'loophole', 'escape', 'destroyed', 'seized', 'forever', 'worthless', 'nothing', 'free', 'void'}
 LEGAL_LINE = 'Educational content • Not legal advice'
 # Brand: assets/brand.json  {"handle": "@yourhandle", "handle_sfx": "correct", "handle_hold": 3.0}
 try: BRAND = json.load(open(os.path.join(ASSETS, 'brand.json')))
@@ -188,10 +190,10 @@ def _sfx(name):
     else:
         return np.zeros(1)
     return (x / (np.abs(x).max() + 1e-9) * 0.9).astype(np.float32)
-FILE_GAIN = {'boom': 0.55, 'pop': 0.45, 'alert': 0.4, 'huh': 0.6, 'correct': 0.4, 'error': 0.4, 'quack': 0.45,
-             'click': 0.6, 'ding': 0.4}
-SFX_GAIN = {'pop': 0.32, 'whoosh': 0.28, 'boom': 0.5, 'hit': 0.4, 'ding': 0.35, 'wind': 0.28, 'gavel': 0.55,
-            'boing': 0.35, 'step': 0.25, 'stinger': 0.45}
+FILE_GAIN = {'boom': 0.7, 'pop': 0.55, 'alert': 0.5, 'huh': 0.7, 'correct': 0.5, 'error': 0.5, 'quack': 0.55,
+             'click': 0.7, 'ding': 0.5}
+SFX_GAIN = {'pop': 0.42, 'whoosh': 0.42, 'boom': 0.6, 'hit': 0.55, 'ding': 0.45, 'wind': 0.32, 'gavel': 0.6,
+            'boing': 0.42, 'step': 0.3, 'stinger': 0.55}
 _sfx_cache = {}
 def sfx_audio(name):
     if name in _sfx_cache: return _sfx_cache[name]
@@ -305,7 +307,7 @@ for i, sc in enumerate(scenes):
 planned_z = [z['t'] for sc in scenes for z in sc['zooms']]
 last = -99
 for (a, b, wtxt), n_ in zip(words, wn):
-    if n_ in ZOOM_WORDS and a - last >= 6 and all(abs(a - p) > 4 for p in planned_z):
+    if n_ in ZOOM_WORDS and a - last >= 5 and all(abs(a - p) > 4 for p in planned_z):
         for sc in reversed(scenes):
             if sc['t'] <= a:
                 if not plan or plan.get('auto_zoom', True): sc['zooms'].append({'t': a, 'amount': 1.18, 'hold': 0.9, 'auto': True})
@@ -356,13 +358,16 @@ if SHARE_LINE:
 # narration cues
 for s_ in sentences:
     txt = ' '.join(w[2] for w in s_).lower()
-    if re.search(r"^(so,? )?the (legal )?theory|here'?s the (thing|catch|kicker)|the thing is|turns out", txt):
+    if re.search(r"^(so,? )?the (legal )?theory|here'?s the (thing|catch|kicker|twist|limit|problem)|the thing is|turns out|plot twist|"
+                 r"^but here'?s|the (supreme )?court (said|ruled|agreed|disagreed|reversed|sided)|^(and )?the answer", txt):
         SFX_EVENTS.append((s_[0][0], 'ding'))
     if re.search(r'(have|has) not done anything|done nothing|never fixed|still exists', txt):
         SFX_EVENTS.append((s_[-1][0], 'error'))
+# drama: a stinger right as the hook lands
+if sentences: SFX_EVENTS.append((sentences[0][-1][1] + 0.05, 'stinger'))
 # keep it tasteful: per-sound limits and no two sounds piled on top of each other
 LIMITS = {'boom': (3, 6), 'alert': (1, 99), 'huh': (2, 15), 'error': (1, 99), 'ding': (2, 15), 'quack': (1, 99),
-          'correct': (2, 15), 'boing': (2, 12), 'stinger': (1, 99), 'hit': (4, 6), 'gavel': (2, 10), 'wind': (1, 99)}
+          'correct': (2, 15), 'boing': (2, 12), 'stinger': (2, 20), 'hit': (8, 5), 'gavel': (2, 10), 'wind': (1, 99)}
 PRIORITY = ['correct', 'boom', 'alert', 'stinger', 'error', 'huh', 'ding', 'gavel', 'boing', 'wind', 'correct', 'quack',
             'click', 'pop', 'hit', 'whoosh', 'step']
 rank = lambda n: PRIORITY.index(n) if n in PRIORITY else 50
@@ -687,8 +692,9 @@ def mix_audio(path):
         x = sfx_audio(name) * SFX_GAIN.get(name, 0.3); i = int(t0 * SR_A)
         if i >= len(mix): continue
         mix[i:i + len(x)] += x[:len(mix) - i]
-    peak = np.abs(mix).max()
-    if peak > 0.98: mix *= 0.98 / peak
+    k = 0.8                                                     # soft knee: loud sound-effect peaks get rounded off,
+    ax = np.abs(mix)                                            # the voice level itself is left alone
+    mix = np.where(ax > k, np.sign(mix) * (k + 0.18 * np.tanh((ax - k) / 0.18)), mix).astype(np.float32)
     import wave
     with wave.open(path, 'wb') as wf:
         wf.setnchannels(1); wf.setsampwidth(2); wf.setframerate(SR_A)

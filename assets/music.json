@@ -1,5 +1,5 @@
 {
- "_about": "Background music for YouTube / Facebook / Instagram (TikTok gets the clean video). Kevin MacLeod, incompetech.com, CC BY 4.0. level_db = music loudness relative to Larry's voice (-15 dB ≈ 18% of the voice level).",
+ "_about": "Dark, playful background music (Dexter-style: plucked strings, bassoon, eerie bells) for YouTube / Facebook / Instagram (TikTok gets the clean video). Kevin MacLeod, incompetech.com, CC BY 4.0. level_db = music loudness relative to Larry's voice (-15 dB ≈ 18% of the voice level).",
  "enabled": true,
  "level_db": -15,
  "fade_in": 1.0,
@@ -7,47 +7,38 @@
  "base_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/",
  "tracks": {
   "Sneaky Snitch": "Sneaky Snitch.mp3",
-  "Investigations": "Investigations.mp3",
-  "Monkeys Spinning Monkeys": "Monkeys Spinning Monkeys.mp3",
   "Scheming Weasel (faster version)": "Scheming Weasel faster.mp3",
+  "Investigations": "Investigations.mp3",
   "The Builder": "The Builder.mp3",
-  "Pixel Peeker Polka - faster": "Pixel Peeker Polka - faster.mp3",
+  "Krampus Workshop": "Krampus Workshop.mp3",
+  "SCP-x4x (Mind Leech)": "SCP-x4x.mp3",
+  "Dark Walk": "Dark Walk.mp3",
+  "Stay the Course": "Stay the Course.mp3",
   "Spy Glass": "Spy Glass.mp3",
-  "Hitman": "Hitman.mp3",
-  "Night on the Docks - Sax": "Night on the Docks - Sax.mp3",
-  "Local Forecast - Elevator": "Local Forecast - Elevator.mp3",
-  "Carefree": "Carefree.mp3",
-  "Wallpaper": "Wallpaper.mp3",
-  "Mining by Moonlight": "Mining by Moonlight.mp3",
-  "Cipher": "Cipher2.mp3",
-  "Heartbreaking": "Heartbreaking.mp3",
-  "Sad Trio": "Sad Trio.mp3"
+  "SCP-x6x (Hopes)": "SCP-x6x.mp3",
+  "Heartbreaking": "Heartbreaking.mp3"
  },
  "vibes": {
   "quirky": [
    "Sneaky Snitch",
-   "Investigations",
-   "Monkeys Spinning Monkeys",
    "Scheming Weasel (faster version)",
+   "Investigations",
    "The Builder",
-   "Pixel Peeker Polka - faster"
+   "Krampus Workshop"
   ],
   "tense": [
-   "Spy Glass",
-   "Investigations",
-   "Night on the Docks - Sax",
-   "Hitman"
+   "SCP-x4x (Mind Leech)",
+   "Dark Walk",
+   "Stay the Course"
   ],
   "upbeat": [
-   "Local Forecast - Elevator",
-   "Carefree",
-   "Wallpaper",
-   "Mining by Moonlight",
-   "Cipher"
+   "Spy Glass",
+   "Sneaky Snitch",
+   "Scheming Weasel (faster version)"
   ],
   "serious": [
-   "Heartbreaking",
-   "Sad Trio"
+   "SCP-x6x (Hopes)",
+   "Heartbreaking"
   ]
  },
  "default_vibe": "quirky"

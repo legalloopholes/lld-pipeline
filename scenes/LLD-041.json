@@ -1,7 +1,7 @@
 {
  "video_id": "LLD-041",
  "episode": "E41",
- "hook": "NOT ALL 'STUDENT LOANS' ARE EQUAL",
+ "hook": "NOT ALL STUDENT LOANS ARE EQUAL",
  "highlight": [
   "categories",
   "hardship",
@@ -17,7 +17,7 @@
   "#lawtok",
   "#debt"
  ],
- "script": "Your lender calls it a student loan, but bankruptcy law may see it differently. In U.S. bankruptcy, most student loans are hard to wipe out. Under the Bankruptcy Code, they're excepted from discharge unless repaying them would impose an undue hardship on the debtor and their dependents. But that protection is defined by categories. One: loans made, insured or guaranteed by a government unit, or under government or nonprofit programs. Two: obligations to repay money received as an educational benefit, scholarship or stipend. Three: any other educational loan that counts as a qualified education loan under the tax code. A recent bankruptcy opinion described that third group as private loans to people attending eligible schools for certain qualified expenses. So the label on the loan isn't the test. The statute's categories are. A private loan that doesn't fit any of them may be treated like other unsecured debt. Here's the limit. Most federal loans, and many private ones, do fit, and then you'd still need to prove undue hardship. In that very opinion, the court found the debtor's loans did qualify, so they weren't discharged. Whether a loan fits depends on its details, so that's a question for a bankruptcy lawyer. [loop] So before you assume every student loan is the same in bankruptcy, remember",
+ "script": "That student loan might not be what your lender says it is, at least in bankruptcy court. [disclaimer] In U.S. bankruptcy, most student loans are hard to wipe out. Under the Bankruptcy Code, they're excepted from discharge unless repaying them would impose an undue hardship on the debtor and their dependents. But that protection is defined by categories. One: loans made, insured or guaranteed by a government unit, or under government or nonprofit programs. Two: obligations to repay money received as an educational benefit, scholarship or stipend. Three: any other educational loan that counts as a qualified education loan under the tax code. A recent bankruptcy opinion described that third group as private loans to people attending eligible schools for certain qualified expenses. So the label on the loan isn't the test. The statute's categories are. A private loan that doesn't fit any of them may be treated like other unsecured debt. Here's the limit. Most federal loans, and many private ones, do fit, and then you'd still need to prove undue hardship. In that very opinion, the court found the debtor's loans did qualify, so they weren't discharged. Whether a loan fits depends on its details, so that's a question for a bankruptcy lawyer. [loop] So before you assume every student loan is the same in bankruptcy, remember",
  "publish_at": "2026-11-21T19:00:00-05:00",
  "sources": [
   "https://www.law.cornell.edu/uscode/text/11/523",
@@ -205,5 +205,7 @@
   }
  ],
  "music_vibe": "quirky",
- "share_line": "Send this to the friend still paying for a degree they don't use"
+ "share_line": "Send this to the friend still paying for a degree they don't use",
+ "hook_old": "NOT ALL 'STUDENT LOANS' ARE EQUAL",
+ "script_old": "Your lender calls it a student loan, but bankruptcy law may see it differently. In U.S. bankruptcy, most student loans are hard to wipe out. Under the Bankruptcy Code, they're excepted from discharge unless repaying them would impose an undue hardship on the debtor and their dependents. But that protection is defined by categories. One: loans made, insured or guaranteed by a government unit, or under government or nonprofit programs. Two: obligations to repay money received as an educational benefit, scholarship or stipend. Three: any other educational loan that counts as a qualified education loan under the tax code. A recent bankruptcy opinion described that third group as private loans to people attending eligible schools for certain qualified expenses. So the label on the loan isn't the test. The statute's categories are. A private loan that doesn't fit any of them may be treated like other unsecured debt. Here's the limit. Most federal loans, and many private ones, do fit, and then you'd still need to prove undue hardship. In that very opinion, the court found the debtor's loans did qualify, so they weren't discharged. Whether a loan fits depends on its details, so that's a question for a bankruptcy lawyer. [loop] So before you assume every student loan is the same in bankruptcy, remember"
 }

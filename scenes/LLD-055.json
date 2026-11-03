@@ -1,7 +1,7 @@
 {
  "video_id": "LLD-055",
  "episode": "E55",
- "hook": "CHEAP BOOKS ABROAD → RESOLD",
+ "hook": "HE BEAT THE PUBLISHER",
  "highlight": [
   "first",
   "sale",
@@ -17,7 +17,7 @@
   "#lawtok",
   "#supremecourt"
  ],
- "script": "A student bought cheaper textbooks abroad and resold them in America, and the publisher lost at the Supreme Court. This is Kirtsaeng versus John Wiley and Sons, from twenty thirteen. Supap Kirtsaeng came from Thailand to study math in the U.S. His friends and family bought lower-priced foreign editions of Wiley textbooks in Thailand and mailed them to him. He resold them at a profit. Wiley sued for copyright infringement and won a jury verdict. The fight was over a doctrine called first sale. Normally, once you lawfully own a copy of a book, you can resell it without the copyright owner's permission. But the law covers copies lawfully made under this title, and Wiley argued that meant made in the United States. The Supreme Court disagreed, six to three. It said the first sale doctrine applies to copies lawfully made abroad, and that the statute's language says nothing about geography. So a genuine copy, bought legally, can be resold, even if the publisher wanted separate markets with separate prices. Here's the limit. This is about genuine physical copies. It doesn't allow pirated copies, making new copies, or transferring digital licenses. And import, trademark and contract issues are separate questions. [loop] So before you buy your textbooks at full price, remember",
+ "script": "A student resold cheap foreign textbooks, got sued, and beat the publisher at the Supreme Court. [disclaimer] This is Kirtsaeng versus John Wiley and Sons, from twenty thirteen. Supap Kirtsaeng came from Thailand to study math in the U.S. His friends and family bought lower-priced foreign editions of Wiley textbooks in Thailand and mailed them to him. He resold them at a profit. Wiley sued for copyright infringement and won a jury verdict. The fight was over a doctrine called first sale. Normally, once you lawfully own a copy of a book, you can resell it without the copyright owner's permission. But the law covers copies lawfully made under this title, and Wiley argued that meant made in the United States. The Supreme Court disagreed, six to three. It said the first sale doctrine applies to copies lawfully made abroad, and that the statute's language says nothing about geography. So a genuine copy, bought legally, can be resold, even if the publisher wanted separate markets with separate prices. Here's the limit. This is about genuine physical copies. It doesn't allow pirated copies, making new copies, or transferring digital licenses. And import, trademark and contract issues are separate questions. [loop] So before you buy your textbooks at full price, remember",
  "publish_at": "2026-11-28T19:00:00-05:00",
  "sources": [
   "https://www.law.cornell.edu/supremecourt/text/11-697"
@@ -205,5 +205,7 @@
   }
  ],
  "music_vibe": "quirky",
- "share_line": "Send this to the friend who resells everything online"
+ "share_line": "Send this to the friend who resells everything online",
+ "hook_old": "CHEAP BOOKS ABROAD → RESOLD",
+ "script_old": "A student bought cheaper textbooks abroad and resold them in America, and the publisher lost at the Supreme Court. This is Kirtsaeng versus John Wiley and Sons, from twenty thirteen. Supap Kirtsaeng came from Thailand to study math in the U.S. His friends and family bought lower-priced foreign editions of Wiley textbooks in Thailand and mailed them to him. He resold them at a profit. Wiley sued for copyright infringement and won a jury verdict. The fight was over a doctrine called first sale. Normally, once you lawfully own a copy of a book, you can resell it without the copyright owner's permission. But the law covers copies lawfully made under this title, and Wiley argued that meant made in the United States. The Supreme Court disagreed, six to three. It said the first sale doctrine applies to copies lawfully made abroad, and that the statute's language says nothing about geography. So a genuine copy, bought legally, can be resold, even if the publisher wanted separate markets with separate prices. Here's the limit. This is about genuine physical copies. It doesn't allow pirated copies, making new copies, or transferring digital licenses. And import, trademark and contract issues are separate questions. [loop] So before you buy your textbooks at full price, remember"
 }

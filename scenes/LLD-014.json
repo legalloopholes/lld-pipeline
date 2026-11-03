@@ -1,7 +1,7 @@
 {
  "video_id": "LLD-014",
  "episode": "E14",
- "hook": "ILLEGAL… BUT NO TRIAL?",
+ "hook": "ILLEGAL… BUT UNTOUCHABLE",
  "highlight": [
   "immunity",
   "waive",
@@ -17,7 +17,7 @@
   "#didyouknow",
   "#law"
  ],
- "script": "A crime can be clearly illegal, and the country where it happened still may not be able to put that person on trial. It's called diplomatic immunity, and it comes from an international treaty, the Vienna Convention on Diplomatic Relations. Here's how the U.S. State Department explains it. Accredited diplomatic agents have complete immunity from the criminal jurisdiction of the host country's courts. So the law still applies to them. The host country just can't prosecute them. That's the gap between breaking a law and being tried for it. But the immunity isn't the diplomat's to give away. The individual can't waive it. Their home country can, and the waiver has to be express. If there's no waiver in a serious case, like a felony or a violent crime, U.S. policy is to require that person to leave the country. And the treaty says immunity in the host country doesn't exempt a diplomat from the courts of their own country. Status matters too. Consular officers usually have immunity only for official acts, and consular employees have even less. A diplomatic-looking passport alone isn't enough. In the State Department's words, diplomatic immunity is not a license to flout the law. [loop] So before you assume a diplomat is above the law, remember",
+ "script": "Some people can break the law right in front of the police, and the country still can't put them on trial. [disclaimer] It's called diplomatic immunity, and it comes from an international treaty, the Vienna Convention on Diplomatic Relations. Here's how the U.S. State Department explains it. Accredited diplomatic agents have complete immunity from the criminal jurisdiction of the host country's courts. So the law still applies to them. The host country just can't prosecute them. That's the gap between breaking a law and being tried for it. But the immunity isn't the diplomat's to give away. The individual can't waive it. Their home country can, and the waiver has to be express. If there's no waiver in a serious case, like a felony or a violent crime, U.S. policy is to require that person to leave the country. And the treaty says immunity in the host country doesn't exempt a diplomat from the courts of their own country. Status matters too. Consular officers usually have immunity only for official acts, and consular employees have even less. A diplomatic-looking passport alone isn't enough. In the State Department's words, diplomatic immunity is not a license to flout the law. [loop] So before you assume a diplomat is above the law, remember",
  "publish_at": "2026-11-08T12:00:00-05:00",
  "sources": [
   "https://2017-2021.state.gov/wp-content/uploads/2019/09/19-04499-DipConImm_v2_web.pdf",
@@ -212,5 +212,7 @@
   }
  ],
  "music_vibe": "tense",
- "share_line": "Send this to the friend who'd claim diplomatic immunity"
+ "share_line": "Send this to the friend who'd claim diplomatic immunity",
+ "hook_old": "ILLEGAL… BUT NO TRIAL?",
+ "script_old": "A crime can be clearly illegal, and the country where it happened still may not be able to put that person on trial. It's called diplomatic immunity, and it comes from an international treaty, the Vienna Convention on Diplomatic Relations. Here's how the U.S. State Department explains it. Accredited diplomatic agents have complete immunity from the criminal jurisdiction of the host country's courts. So the law still applies to them. The host country just can't prosecute them. That's the gap between breaking a law and being tried for it. But the immunity isn't the diplomat's to give away. The individual can't waive it. Their home country can, and the waiver has to be express. If there's no waiver in a serious case, like a felony or a violent crime, U.S. policy is to require that person to leave the country. And the treaty says immunity in the host country doesn't exempt a diplomat from the courts of their own country. Status matters too. Consular officers usually have immunity only for official acts, and consular employees have even less. A diplomatic-looking passport alone isn't enough. In the State Department's words, diplomatic immunity is not a license to flout the law. [loop] So before you assume a diplomat is above the law, remember"
 }

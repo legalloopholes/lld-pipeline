@@ -1,7 +1,7 @@
 {
  "video_id": "LLD-054",
  "episode": "E54",
- "hook": "LOSE ON PAPER, TRY AGAIN?",
+ "hook": "LOSE… THEN TRY AGAIN",
  "highlight": [
   "trial",
   "twenty",
@@ -17,7 +17,7 @@
   "#lawtok",
   "#court"
  ],
- "script": "You can lose some California traffic cases on paper, and still get a brand-new trial. It starts with a trial by written declaration, where you contest a ticket by sending in your statement and evidence instead of going to court. If you lose, the California courts' own self-help guide says you may be able to ask for a trial de novo. That means a new trial, in the same court, with a different judge, where you can bring new witnesses and evidence. That's different from an appeal. An appeal goes to a higher court, involves no new evidence, and only checks for legal mistakes. Now the deadline. You have to file your request for a new trial within twenty calendar days of when the court mailed its decision. Under the California Rules of Court, if the request isn't on time, no new trial can be held. If it is, the clerk sets a trial date within forty-five days. But here's the big catch. If your court lets you use its online system, MyCitations, to ask for an online trial by declaration, you won't get a trial de novo, even if you file by mail or in person instead. So check your court's notice before you choose. [loop] So before you mail in your traffic defense, remember",
+ "script": "Lose your California traffic case, and you might get a brand-new trial. [disclaimer] It starts with a trial by written declaration, where you contest a ticket by sending in your statement and evidence instead of going to court. If you lose, the California courts' own self-help guide says you may be able to ask for a trial de novo. That means a new trial, in the same court, with a different judge, where you can bring new witnesses and evidence. That's different from an appeal. An appeal goes to a higher court, involves no new evidence, and only checks for legal mistakes. Now the deadline. You have to file your request for a new trial within twenty calendar days of when the court mailed its decision. Under the California Rules of Court, if the request isn't on time, no new trial can be held. If it is, the clerk sets a trial date within forty-five days. But here's the big catch. If your court lets you use its online system, MyCitations, to ask for an online trial by declaration, you won't get a trial de novo, even if you file by mail or in person instead. So check your court's notice before you choose. [loop] So before you mail in your traffic defense, remember",
  "publish_at": "2026-11-28T12:00:00-05:00",
  "sources": [
   "https://selfhelp.courts.ca.gov/traffic/trial-declaration",
@@ -184,5 +184,7 @@
   }
  ],
  "music_vibe": "quirky",
- "share_line": "Send this to the friend who'd fight a ticket to the death"
+ "share_line": "Send this to the friend who'd fight a ticket to the death",
+ "hook_old": "LOSE ON PAPER, TRY AGAIN?",
+ "script_old": "You can lose some California traffic cases on paper, and still get a brand-new trial. It starts with a trial by written declaration, where you contest a ticket by sending in your statement and evidence instead of going to court. If you lose, the California courts' own self-help guide says you may be able to ask for a trial de novo. That means a new trial, in the same court, with a different judge, where you can bring new witnesses and evidence. That's different from an appeal. An appeal goes to a higher court, involves no new evidence, and only checks for legal mistakes. Now the deadline. You have to file your request for a new trial within twenty calendar days of when the court mailed its decision. Under the California Rules of Court, if the request isn't on time, no new trial can be held. If it is, the clerk sets a trial date within forty-five days. But here's the big catch. If your court lets you use its online system, MyCitations, to ask for an online trial by declaration, you won't get a trial de novo, even if you file by mail or in person instead. So check your court's notice before you choose. [loop] So before you mail in your traffic defense, remember"
 }

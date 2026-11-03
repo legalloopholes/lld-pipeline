@@ -1,7 +1,7 @@
 {
  "video_id": "LLD-047",
  "episode": "E47",
- "hook": "THE MANSION SHIELD?",
+ "hook": "THE MANSION SHIELD",
  "highlight": [
   "homestead",
   "acre",
@@ -17,7 +17,7 @@
   "#lawtok",
   "#money"
  ],
- "script": "A creditor wins a judgment against you, but your Florida mansion might still be protected. This is Florida's Constitution, Article Ten, Section Four. It protects a homestead from forced sale by most creditors. And here's the unusual part. Instead of a dollar limit, it uses land limits. Outside a city, up to one hundred sixty acres of contiguous land. Inside a city, up to half an acre, limited to the residence of the owner or their family. There's no stated dollar ceiling. So a modest condo and a waterfront mansion on half an acre can both qualify. That's why Florida has a reputation as a place where a home can be hard for creditors to reach. But read the exceptions written into the same section. The protection doesn't apply to taxes and assessments on the property, to debts for buying, improving or repairing it, like a mortgage or a contractor's bill, or to labor performed on it. Federal law can also matter, and bankruptcy law has its own restrictions. And moving money into a mansion to dodge creditors can run into fraud rules. So it's a strong protection, not a guaranteed hiding place. [loop] So before you buy a Florida mansion to escape a judgment, remember",
+ "script": "Lose a lawsuit for millions, and in Florida, you might still keep your mansion. [disclaimer] This is Florida's Constitution, Article Ten, Section Four. It protects a homestead from forced sale by most creditors. And here's the unusual part. Instead of a dollar limit, it uses land limits. Outside a city, up to one hundred sixty acres of contiguous land. Inside a city, up to half an acre, limited to the residence of the owner or their family. There's no stated dollar ceiling. So a modest condo and a waterfront mansion on half an acre can both qualify. That's why Florida has a reputation as a place where a home can be hard for creditors to reach. But read the exceptions written into the same section. The protection doesn't apply to taxes and assessments on the property, to debts for buying, improving or repairing it, like a mortgage or a contractor's bill, or to labor performed on it. Federal law can also matter, and bankruptcy law has its own restrictions. And moving money into a mansion to dodge creditors can run into fraud rules. So it's a strong protection, not a guaranteed hiding place. [loop] So before you buy a Florida mansion to escape a judgment, remember",
  "publish_at": "2026-11-24T19:00:00-05:00",
  "sources": [
   "https://www.flsenate.gov/Laws/Constitution",
@@ -198,5 +198,7 @@
   }
  ],
  "music_vibe": "upbeat",
- "share_line": "Send this to the friend who'd hide from their debts in a mansion"
+ "share_line": "Send this to the friend who'd hide from their debts in a mansion",
+ "hook_old": "THE MANSION SHIELD?",
+ "script_old": "A creditor wins a judgment against you, but your Florida mansion might still be protected. This is Florida's Constitution, Article Ten, Section Four. It protects a homestead from forced sale by most creditors. And here's the unusual part. Instead of a dollar limit, it uses land limits. Outside a city, up to one hundred sixty acres of contiguous land. Inside a city, up to half an acre, limited to the residence of the owner or their family. There's no stated dollar ceiling. So a modest condo and a waterfront mansion on half an acre can both qualify. That's why Florida has a reputation as a place where a home can be hard for creditors to reach. But read the exceptions written into the same section. The protection doesn't apply to taxes and assessments on the property, to debts for buying, improving or repairing it, like a mortgage or a contractor's bill, or to labor performed on it. Federal law can also matter, and bankruptcy law has its own restrictions. And moving money into a mansion to dodge creditors can run into fraud rules. So it's a strong protection, not a guaranteed hiding place. [loop] So before you buy a Florida mansion to escape a judgment, remember"
 }

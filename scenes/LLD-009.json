@@ -1,7 +1,7 @@
 {
  "video_id": "LLD-009",
  "episode": "E09",
- "hook": "14 DAYS OF TAX-FREE RENT?",
+ "hook": "TAX-FREE RENT. REALLY.",
  "highlight": [
   "fifteen",
   "income",
@@ -17,7 +17,7 @@
   "#lawtok",
   "#moneytips"
  ],
- "script": "Rent out your home for fewer than fifteen days a year, and under federal tax law, that rent can stay out of your income. This is a U.S. federal tax rule. Normally, rent is income, and the IRS wants it reported. But there's a special rule for a place you also use as your home. If you rent it out for fewer than fifteen days during the year, the IRS says: don't include that rent in your income. Picture a homeowner in a town hosting a big event, renting their place out for one busy weekend. If the total rental days stay under fifteen, that rent stays off their federal return. But hit fifteen days, and the normal rental rules kick in. Now the income has to be reported, and expenses have to be split between personal use and rental use. Here's the catch people miss. The place has to count as your home, based on how much you use it yourself. And because the rent isn't counted, the IRS says the costs of that short rental aren't treated as rental expenses either. So there's no stacking up write-offs from a two-week rental. And state taxes, local occupancy taxes, and short-term rental rules can still apply. [loop] So before you list your place for a fifteenth night, remember",
+ "script": "There's a way to collect rent and owe zero federal income tax on it. [disclaimer] This is a U.S. federal tax rule. Normally, rent is income, and the IRS wants it reported. But there's a special rule for a place you also use as your home. If you rent it out for fewer than fifteen days during the year, the IRS says: don't include that rent in your income. Picture a homeowner in a town hosting a big event, renting their place out for one busy weekend. If the total rental days stay under fifteen, that rent stays off their federal return. But hit fifteen days, and the normal rental rules kick in. Now the income has to be reported, and expenses have to be split between personal use and rental use. Here's the catch people miss. The place has to count as your home, based on how much you use it yourself. And because the rent isn't counted, the IRS says the costs of that short rental aren't treated as rental expenses either. So there's no stacking up write-offs from a two-week rental. And state taxes, local occupancy taxes, and short-term rental rules can still apply. [loop] So before you list your place for a fifteenth night, remember",
  "publish_at": "2026-11-05T19:00:00-05:00",
  "sources": [
   "https://www.irs.gov/pub/irs-pdf/p527.pdf"
@@ -206,5 +206,7 @@
   }
  ],
  "music_vibe": "upbeat",
- "share_line": "Send this to the friend who'd rent you their couch tax-free"
+ "share_line": "Send this to the friend who'd rent you their couch tax-free",
+ "hook_old": "14 DAYS OF TAX-FREE RENT?",
+ "script_old": "Rent out your home for fewer than fifteen days a year, and under federal tax law, that rent can stay out of your income. This is a U.S. federal tax rule. Normally, rent is income, and the IRS wants it reported. But there's a special rule for a place you also use as your home. If you rent it out for fewer than fifteen days during the year, the IRS says: don't include that rent in your income. Picture a homeowner in a town hosting a big event, renting their place out for one busy weekend. If the total rental days stay under fifteen, that rent stays off their federal return. But hit fifteen days, and the normal rental rules kick in. Now the income has to be reported, and expenses have to be split between personal use and rental use. Here's the catch people miss. The place has to count as your home, based on how much you use it yourself. And because the rent isn't counted, the IRS says the costs of that short rental aren't treated as rental expenses either. So there's no stacking up write-offs from a two-week rental. And state taxes, local occupancy taxes, and short-term rental rules can still apply. [loop] So before you list your place for a fifteenth night, remember"
 }

@@ -1,7 +1,7 @@
 {
  "video_id": "LLD-010",
  "episode": "E10",
- "hook": "THEY BEAT THE LOTTERY… LEGALLY?",
+ "hook": "THEY BEAT THE LOTTERY",
  "highlight": [
   "roll",
   "expected",
@@ -17,7 +17,7 @@
   "#lawtok",
   "#truestory"
  ],
- "script": "These lottery players found a way to make the odds work for them, without rigging a single draw. This was Massachusetts, and a game called Cash WinFall, which launched in two thousand four. Most lotteries let the jackpot grow and grow. Once the jackpot pool reached two million dollars and nobody hit the top prize, the money rolled down to the smaller prizes, for matching fewer numbers. On those roll-down draws, the smaller prizes got much bigger. Some players did the math. If you bought a huge number of tickets on exactly those draws, the expected return could be worth more than you spent. Expected, not guaranteed. A state review identified four betting groups making enormous purchases during roll-downs, including a group of MIT students. It found no evidence of illicit activity or collusion among the bettors. But it did find that some retailers broke rules to help the big players, sometimes with the okay of some lottery officials. The state treasurer later said those steps should have come much sooner. And Cash WinFall is gone. The state ended the game. Most lotteries aren't built like this, and buying more tickets doesn't beat a normal draw. [loop] So the next time someone tells you nobody can beat the lottery, remember",
+ "script": "A group of players cracked a state lottery's math, and it was completely legal. [disclaimer] This was Massachusetts, and a game called Cash WinFall, which launched in two thousand four. Most lotteries let the jackpot grow and grow. Once the jackpot pool reached two million dollars and nobody hit the top prize, the money rolled down to the smaller prizes, for matching fewer numbers. On those roll-down draws, the smaller prizes got much bigger. Some players did the math. If you bought a huge number of tickets on exactly those draws, the expected return could be worth more than you spent. Expected, not guaranteed. A state review identified four betting groups making enormous purchases during roll-downs, including a group of MIT students. It found no evidence of illicit activity or collusion among the bettors. But it did find that some retailers broke rules to help the big players, sometimes with the okay of some lottery officials. The state treasurer later said those steps should have come much sooner. And Cash WinFall is gone. The state ended the game. Most lotteries aren't built like this, and buying more tickets doesn't beat a normal draw. [loop] So the next time someone tells you nobody can beat the lottery, remember",
  "publish_at": "2026-11-06T12:00:00-05:00",
  "sources": [
   "https://www.mass.gov/doc/letter-to-state-treasurer-steven-grossman-regarding-the-lottery-july-2012/download",
@@ -216,5 +216,7 @@
   }
  ],
  "music_vibe": "upbeat",
- "share_line": "Send this to the friend who'd rig the lottery"
+ "share_line": "Send this to the friend who'd rig the lottery",
+ "hook_old": "THEY BEAT THE LOTTERY… LEGALLY?",
+ "script_old": "These lottery players found a way to make the odds work for them, without rigging a single draw. This was Massachusetts, and a game called Cash WinFall, which launched in two thousand four. Most lotteries let the jackpot grow and grow. Once the jackpot pool reached two million dollars and nobody hit the top prize, the money rolled down to the smaller prizes, for matching fewer numbers. On those roll-down draws, the smaller prizes got much bigger. Some players did the math. If you bought a huge number of tickets on exactly those draws, the expected return could be worth more than you spent. Expected, not guaranteed. A state review identified four betting groups making enormous purchases during roll-downs, including a group of MIT students. It found no evidence of illicit activity or collusion among the bettors. But it did find that some retailers broke rules to help the big players, sometimes with the okay of some lottery officials. The state treasurer later said those steps should have come much sooner. And Cash WinFall is gone. The state ended the game. Most lotteries aren't built like this, and buying more tickets doesn't beat a normal draw. [loop] So the next time someone tells you nobody can beat the lottery, remember"
 }

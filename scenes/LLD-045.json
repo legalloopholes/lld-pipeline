@@ -1,7 +1,7 @@
 {
  "video_id": "LLD-045",
  "episode": "E45",
- "hook": "YOU CAN PROSECUTE?",
+ "hook": "PROSECUTE THEM YOURSELF",
  "highlight": [
   "private",
   "prosecution",
@@ -17,7 +17,7 @@
   "#lawtok",
   "#justice"
  ],
- "script": "The authorities decide not to prosecute, but in England and Wales, that may not be the end of the story. It's called a private prosecution. The U.K. government's own guidance says any adult has the right to apply to a magistrates' court to bring one. It's a criminal case, not a lawsuit for money, started by a private person instead of the Crown Prosecution Service. Here's how it starts. The person files an application form with a court office. A judge, a magistrate, or a legal adviser decides on the paperwork alone, so the form has to be complete and disclose all relevant information. If it's refused, the only route is judicial review in the High Court, for a mistake of law. Now the catches. Some offences restrict who can prosecute, and some need the Attorney General's consent. The Crown Prosecution Service can take over a private prosecution, and it can end it if it doesn't believe the case should have been brought. And it's expensive. Government figures put the average cost at around eight thousand five hundred pounds, and getting costs back isn't guaranteed. So it's a real right, but not a guaranteed prosecution, and definitely not a guaranteed conviction. [loop] So if you've heard that only the state can bring criminal charges, remember",
+ "script": "The police won't charge him? In England, you can prosecute him yourself. [disclaimer] It's called a private prosecution. The U.K. government's own guidance says any adult has the right to apply to a magistrates' court to bring one. It's a criminal case, not a lawsuit for money, started by a private person instead of the Crown Prosecution Service. Here's how it starts. The person files an application form with a court office. A judge, a magistrate, or a legal adviser decides on the paperwork alone, so the form has to be complete and disclose all relevant information. If it's refused, the only route is judicial review in the High Court, for a mistake of law. Now the catches. Some offences restrict who can prosecute, and some need the Attorney General's consent. The Crown Prosecution Service can take over a private prosecution, and it can end it if it doesn't believe the case should have been brought. And it's expensive. Government figures put the average cost at around eight thousand five hundred pounds, and getting costs back isn't guaranteed. So it's a real right, but not a guaranteed prosecution, and definitely not a guaranteed conviction. [loop] So if you've heard that only the state can bring criminal charges, remember",
  "publish_at": "2026-11-23T19:00:00-05:00",
  "sources": [
   "https://www.gov.uk/government/publications/private-prosecutions/private-prosecutions"
@@ -201,5 +201,7 @@
   }
  ],
  "music_vibe": "tense",
- "share_line": "Send this to the friend you'd take to court yourself"
+ "share_line": "Send this to the friend you'd take to court yourself",
+ "hook_old": "YOU CAN PROSECUTE?",
+ "script_old": "The authorities decide not to prosecute, but in England and Wales, that may not be the end of the story. It's called a private prosecution. The U.K. government's own guidance says any adult has the right to apply to a magistrates' court to bring one. It's a criminal case, not a lawsuit for money, started by a private person instead of the Crown Prosecution Service. Here's how it starts. The person files an application form with a court office. A judge, a magistrate, or a legal adviser decides on the paperwork alone, so the form has to be complete and disclose all relevant information. If it's refused, the only route is judicial review in the High Court, for a mistake of law. Now the catches. Some offences restrict who can prosecute, and some need the Attorney General's consent. The Crown Prosecution Service can take over a private prosecution, and it can end it if it doesn't believe the case should have been brought. And it's expensive. Government figures put the average cost at around eight thousand five hundred pounds, and getting costs back isn't guaranteed. So it's a real right, but not a guaranteed prosecution, and definitely not a guaranteed conviction. [loop] So if you've heard that only the state can bring criminal charges, remember"
 }

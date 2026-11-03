@@ -1,7 +1,7 @@
 {
  "video_id": "LLD-016",
  "episode": "E16",
- "hook": "A CONTRACT WITH AN UNDO BUTTON",
+ "hook": "THE UNDO-BUTTON CONTRACT",
  "highlight": [
   "disaffirming",
   "minor",
@@ -17,7 +17,7 @@
   "#lawtok",
   "#didyouknow"
  ],
- "script": "Some contracts come with an escape hatch, but only for the person who's under eighteen. This is California law. Under the state's Family Code, unless another statute says otherwise, a contract made by a minor can be canceled by the minor before turning eighteen, or within a reasonable time afterward. Lawyers call that disaffirming the contract. So imagine a sixteen-year-old signs a deal with an adult business. The adult is generally held to it. The minor may be able to walk away. That's not a glitch. It's a deliberate protection for minors. But there are big exceptions. A minor generally can't cancel a contract to pay the reasonable value of necessities, things needed for their support or their family's, if those things were actually provided, and the minor wasn't under the care of a parent or guardian who could provide them. And certain entertainment contracts can be approved by a court. Once a court approves one, it can't be canceled just because the person was a minor. Other statutes create more exceptions. And the escape hatch isn't a license for fraud, or a way to keep everything with no consequences. Other laws can still apply. So the hatch is real, but it's narrower than the internet makes it sound. [loop] So before you sign a deal with a sixteen-year-old, remember",
+ "script": "There's a contract you can walk away from whenever you want, if you're under eighteen. [disclaimer] This is California law. Under the state's Family Code, unless another statute says otherwise, a contract made by a minor can be canceled by the minor before turning eighteen, or within a reasonable time afterward. Lawyers call that disaffirming the contract. So imagine a sixteen-year-old signs a deal with an adult business. The adult is generally held to it. The minor may be able to walk away. That's not a glitch. It's a deliberate protection for minors. But there are big exceptions. A minor generally can't cancel a contract to pay the reasonable value of necessities, things needed for their support or their family's, if those things were actually provided, and the minor wasn't under the care of a parent or guardian who could provide them. And certain entertainment contracts can be approved by a court. Once a court approves one, it can't be canceled just because the person was a minor. Other statutes create more exceptions. And the escape hatch isn't a license for fraud, or a way to keep everything with no consequences. Other laws can still apply. So the hatch is real, but it's narrower than the internet makes it sound. [loop] So before you sign a deal with a sixteen-year-old, remember",
  "publish_at": "2026-11-09T12:00:00-05:00",
  "sources": [
   "https://law.justia.com/codes/california/code-fam/division-11/part-3/chapter-2/section-6710/",
@@ -202,5 +202,7 @@
   }
  ],
  "music_vibe": "quirky",
- "share_line": "Send this to the friend who still acts 17"
+ "share_line": "Send this to the friend who still acts 17",
+ "hook_old": "A CONTRACT WITH AN UNDO BUTTON",
+ "script_old": "Some contracts come with an escape hatch, but only for the person who's under eighteen. This is California law. Under the state's Family Code, unless another statute says otherwise, a contract made by a minor can be canceled by the minor before turning eighteen, or within a reasonable time afterward. Lawyers call that disaffirming the contract. So imagine a sixteen-year-old signs a deal with an adult business. The adult is generally held to it. The minor may be able to walk away. That's not a glitch. It's a deliberate protection for minors. But there are big exceptions. A minor generally can't cancel a contract to pay the reasonable value of necessities, things needed for their support or their family's, if those things were actually provided, and the minor wasn't under the care of a parent or guardian who could provide them. And certain entertainment contracts can be approved by a court. Once a court approves one, it can't be canceled just because the person was a minor. Other statutes create more exceptions. And the escape hatch isn't a license for fraud, or a way to keep everything with no consequences. Other laws can still apply. So the hatch is real, but it's narrower than the internet makes it sound. [loop] So before you sign a deal with a sixteen-year-old, remember"
 }
