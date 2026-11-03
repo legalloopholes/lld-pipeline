@@ -16,3 +16,10 @@ Runs start about 2 hours early because rendering on GitHub's computers takes rou
 - Scheduled posting only happens while the repository variable `LIVE` is `true` (`cutover.sh` sets it).
 - Manual runs: Actions → "Post next episode" → Run workflow → `test` (no posting) or `live` (posts the next episode now).
 - Fonts: free OFL stand-ins for Arial Rounded / Arial Black / Georgia (see `fonts/README.md`).
+
+## Music
+YouTube, Facebook and Instagram get a soft background track (Kevin MacLeod, incompetech.com, CC BY 4.0) at
+`level_db` (−15 dB ≈ 18% of Larry's voice level) — settings and the track list per vibe are in `assets/music.json`;
+each episode's vibe is `music_vibe` in `scenes/<ID>.json` (or force a track with `music_track`). TikTok gets the clean
+video. The required credit is added to the YouTube description and the Facebook/Instagram caption automatically.
+Set `"enabled": false` in `assets/music.json` to turn music off.

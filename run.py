@@ -97,6 +97,22 @@ def make(vid, script):
     yield 'video'
 
 
+def add_music(vid):
+    """YouTube / Facebook / Instagram copy with a soft Kevin MacLeod bed; TikTok keeps the clean video.
+    Returns (path, credit) - the clean video and no credit if music is off or fails."""
+    clean = os.path.join(ROOT, f'{vid}-video.mp4')
+    try: lib = json.load(open(os.path.join(ROOT, 'assets', 'music.json')))
+    except Exception: lib = {}
+    if not lib.get('enabled'): return clean, ''
+    out = os.path.join(ROOT, f'{vid}-video-music.mp4')
+    r = sh([PY, f'{HERE}/lld/add_music.py', clean, os.path.join(ROOT, f'{vid}-voiceover.wav'), vid, out], check=False)
+    info = last_json(r.stdout)
+    if r.returncode != 0 or not info.get('credit'):
+        log('WARNING: music step failed; posting without music'); return clean, ''
+    log('music:', {k: info.get(k) for k in ('track', 'voice_lufs', 'music_lufs_after', 'level_db')})
+    return out, info['credit']
+
+
 def post_text(vid, script):
     return last_json(sh([PY, f'{HERE}/lld/make_meta.py', vid, base64.b64encode(script.encode()).decode()]).stdout)
 
@@ -125,8 +141,11 @@ def live(force_now):
 
     wait = (slot - datetime.datetime.now(ET)).total_seconds()
     if wait > 0: log(f'Video ready. Waiting {round(wait / 60)} min for {slot:%H:%M}.'); time.sleep(wait)
-    video = os.path.join(ROOT, f'{vid}-video.mp4')
-    fb_ig_caption = 'b64:' + base64.b64encode((meta['caption'] + ' ' + meta['hashtags'] + ' #reels').encode()).decode()
+    video = os.path.join(ROOT, f'{vid}-video.mp4')                 # clean: TikTok (you add the sound in the app)
+    mvideo, credit = add_music(vid)                                  # with music: YouTube, Facebook, Instagram
+    desc = meta['description'] + ('\n\n' + credit if credit else '')
+    fb_ig_caption = 'b64:' + base64.b64encode((meta['caption'] + ' ' + meta['hashtags'] + ' #reels'
+                                               + ('\n\n' + credit if credit else '')).encode()).decode()
     results = {}
 
     r = sh([PY, f'{HERE}/lld/tiktok.py', 'draft', video], check=False)
@@ -135,12 +154,12 @@ def live(force_now):
                              if r.returncode == 0 else 'FAILED - see GitHub run ' + RUN_URL)
     gapi.update(vid, {'TikTok URL': results['TikTok URL']})
 
-    try: results['YouTube URL'] = 'https://youtube.com/shorts/' + gapi.youtube_upload(video, meta['title'], meta['description'])
+    try: results['YouTube URL'] = 'https://youtube.com/shorts/' + gapi.youtube_upload(mvideo, meta['title'], desc)
     except SystemExit as e: log(e); results['YouTube URL'] = 'FAILED - see GitHub run ' + RUN_URL
     gapi.update(vid, {'YouTube URL': results['YouTube URL']})
 
     for col, cmd in (('Facebook URL', 'fb'), ('Instagram URL', 'ig')):
-        r = sh([PY, f'{HERE}/lld/meta.py', cmd, video, fb_ig_caption], check=False)
+        r = sh([PY, f'{HERE}/lld/meta.py', cmd, mvideo, fb_ig_caption], check=False)
         out = last_json(r.stdout)
         results[col] = (out.get('url') or 'posted') if r.returncode == 0 else 'FAILED - see GitHub run ' + RUN_URL
         gapi.update(vid, {col: results[col]})
@@ -166,6 +185,8 @@ def test():
     t0 = time.time()
     for _ in make(vid, script): pass
     report['render_seconds'] = round(time.time() - t0)
+    mvideo, credit = add_music(vid)
+    report['music'] = credit.splitlines()[0] if credit else 'off or failed'
     report['post_text'] = post_text(vid, script)
     check('youtube', lambda: 'channel: ' + ', '.join(gapi.youtube_check()))
     check('meta', lambda: last_json(sh([PY, f'{HERE}/lld/meta.py', 'check']).stdout))
@@ -188,6 +209,7 @@ def test():
     # publish the test video for review on the test-output branch
     d = tempfile.mkdtemp()
     shutil.copy(os.path.join(ROOT, f'{vid}-video.mp4'), d)
+    if mvideo != os.path.join(ROOT, f'{vid}-video.mp4'): shutil.copy(mvideo, d)
     json.dump(report, open(os.path.join(d, 'report.json'), 'w'), indent=1)
     hdr = git('config', '--get', 'http.https://github.com/.extraheader').stdout.strip()
     url = git('remote', 'get-url', 'origin').stdout.strip()
