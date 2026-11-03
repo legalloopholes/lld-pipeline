@@ -201,7 +201,7 @@
    "card_at": "not an opinion"
   },
   {
-   "at": "make sure to like",
+   "at": "send this to",
    "bg": "white",
    "cast": [
     {
@@ -216,7 +216,7 @@
   }
  ],
  "music_vibe": "upbeat",
- "share_line": "Send this to the friend who calls themselves a 'fund manager'",
+ "share_line": "Send this to the friend who says they work in finance every five minutes",
  "hook_old": "NOT TAXED LIKE A PAYCHECK?",
  "script_old": "Why can part of a fund manager's pay be taxed differently from an ordinary paycheck? It's called carried interest. In many private equity and investment funds, the manager gets paid in two ways. A management fee, which is generally taxed as ordinary income. And a share of the fund's profits, often held as an interest in a partnership. That profits share is the carried interest. Because these funds are often partnerships, the character of the investment gains can flow through to the partners. So if the fund sells an investment at a long-term capital gain, the manager's share of that gain can keep its long-term character, which is generally taxed at lower rates than wages. That's the debate in one sentence. But Congress added a limit. For tax years after twenty seventeen, section ten sixty-one of the tax code says that for these interests, gain is generally long-term only if the underlying asset was held for more than three years. Otherwise, it's recharacterized as short-term, which is taxed like ordinary income. Here's the limit. Not all fund manager pay qualifies. Fees are still ordinary income, and the rules come with detailed reporting. This is an explanation of how the rules work, not an opinion on whether they should exist. [loop] So the next time someone says fund managers pay less tax, remember"
 }

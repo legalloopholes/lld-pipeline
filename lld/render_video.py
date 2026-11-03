@@ -190,7 +190,7 @@ def _sfx(name):
     else:
         return np.zeros(1)
     return (x / (np.abs(x).max() + 1e-9) * 0.9).astype(np.float32)
-FILE_GAIN = {'boom': 0.7, 'pop': 0.55, 'alert': 0.5, 'huh': 0.7, 'correct': 0.5, 'error': 0.5, 'quack': 0.55,
+FILE_GAIN = {'vine': 0.36, 'boom': 0.7, 'pop': 0.55, 'alert': 0.5, 'huh': 0.7, 'correct': 0.5, 'error': 0.5, 'quack': 0.55,
              'click': 0.7, 'ding': 0.5}
 SFX_GAIN = {'pop': 0.42, 'whoosh': 0.42, 'boom': 0.6, 'hit': 0.55, 'ding': 0.45, 'wind': 0.32, 'gavel': 0.6,
             'boing': 0.42, 'step': 0.3, 'stinger': 0.55}
@@ -221,12 +221,14 @@ def _sourced(name):
     except Exception as e:
         print(json.dumps({'warning': f'sound effect {name} unavailable: {e}'}), file=sys.stderr)
         return None
+FILE_ALIAS = {'vine': 'boom'}            # 'vine' events play your vine-boom file (assets/sfx/boom.wav)
 def sfx_audio(name):
     if name in _sfx_cache: return _sfx_cache[name]
-    x = _sourced(name)
-    if x is not None:
-        _sfx_cache[name] = x; return x
-    f = os.path.join(ASSETS, 'sfx', f'{name}.wav')
+    f = os.path.join(ASSETS, 'sfx', f'{FILE_ALIAS.get(name, name)}.wav')    # your own sound files come first
+    if not os.path.exists(f):
+        x = _sourced(name)                                                   # then the CC0 Freesound recordings
+        if x is not None:
+            _sfx_cache[name] = x; return x
     if os.path.exists(f):
         pcm = subprocess.run([FFMPEG, '-loglevel', 'error', '-i', f, '-f', 's16le', '-ac', '1', '-ar', str(SR_A), '-'], capture_output=True).stdout
         x = np.frombuffer(pcm, np.int16).astype(np.float32) / 32768 * FILE_GAIN.get(name, 0.4) / SFX_GAIN.get(name, 0.3)
@@ -306,7 +308,7 @@ if plan:
         idx = i0
         items = []
         if not scenes and plan.get('hook'):
-            items.append({'card': plan['hook'], 't': 0.0, 'hold': 2.6, 'sfx': 'boom', 'hook': True})
+            items.append({'card': plan['hook'], 't': 0.0, 'hold': 2.6, 'sfx': 'none', 'hook': True})
         for it in sc.get('props', []) + ([{'card': sc['card'], 'at': sc.get('card_at'), 'y': sc.get('card_y', 0.14)}] if sc.get('card') else []):
             ta = t0
             if it.get('at'):
@@ -351,10 +353,10 @@ for i, sc in enumerate(scenes):
         if not name:
             pid = it.get('id', '')
             name = ('wind' if it.get('anim') == 'roll' else 'gavel' if 'gavel' in pid else 'click' if pid.startswith('map') else
-                    'boom' if 'card' in it else 'pop')
+                    'pop')
         if name != 'none': SFX_EVENTS.append((it['t'], name))
     for z in sc['zooms']:
-        if z.get('sfx', 'hit') != 'none': SFX_EVENTS.append((z['t'], z.get('sfx', 'hit')))
+        if z.get('sfx', 'vine') != 'none': SFX_EVENTS.append((z['t'], 'vine' if z.get('sfx', 'hit') == 'hit' else z['sfx']))
     for c in sc.get('cast', []):
         if c.get('anim') == 'tiptoe':
             walk = max(0.6, (sc['end'] - sc['t']) * 0.7)
@@ -374,13 +376,23 @@ for ph in ('follow legal loopholes daily', 'legal loopholes daily'):
         HANDLE_T = words[hits[-1]][0]; break
 if HANDLE_T is not None and BRAND.get('handle_sfx', 'correct') != 'none':
     SFX_EVENTS.append((HANDLE_T, BRAND.get('handle_sfx', 'correct')))
-# share card: "Send this to the friend who..." on screen (not spoken) from the call to action until the loop ending
-SHARE_LINE = ((plan or {}).get('share_line') or '').strip()
+# call to action: Larry says the share line ("Send this to the friend who..."); the like/follow ask sits on a sign
+# above his head from that moment until the loop ending, with the @handle tag
+SHARE_LINE = BRAND.get('follow_sign', 'LIKE & FOLLOW FOR MORE LOOPHOLES') if (plan or {}).get('share_line') else ''
 SHARE_T0 = SHARE_T1 = None
 if SHARE_LINE:
-    toks = [norm(x) for x in 'make sure to like'.split()]
+    toks = [norm(x) for x in 'send this to'.split()]
     hits = [i for i in range(len(wn) - len(toks) + 1) if wn[i:i + len(toks)] == toks]
+    if not hits:
+        toks = [norm(x) for x in 'make sure to like'.split()]
+        hits = [i for i in range(len(wn) - len(toks) + 1) if wn[i:i + len(toks)] == toks]
     SHARE_T0 = words[hits[-1]][0] if hits else (HANDLE_T - 1.5 if HANDLE_T is not None else None)
+    if SHARE_T0 is not None:
+        _sh = next((s_ for s_ in sentences if s_[0][0] >= SHARE_T0 - 0.05), None)
+        if _sh: SFX_EVENTS.append((_sh[-1][1] + 0.05, 'quack'))          # Mac quack after "...who is this dumb."
+    if SHARE_T0 is not None and HANDLE_T is None:
+        HANDLE_T = SHARE_T0 + 0.6
+        if BRAND.get('handle_sfx', 'correct') != 'none': SFX_EVENTS.append((HANDLE_T, BRAND.get('handle_sfx', 'correct')))
     if SHARE_T0 is not None:
         SHARE_T1 = scenes[-1]['t'] - 0.05 if scenes[-1].get('loop') and scenes[-1]['t'] > SHARE_T0 + 1.5 else SHARE_T0 + 4.5
         SFX_EVENTS.append((SHARE_T0 + 0.2, 'airhorn'))
@@ -390,10 +402,14 @@ for s_ in sentences:
     if re.search(r"^(so,? )?the (legal )?theory|the thing is|turns out|the (supreme )?court (said|ruled|agreed|disagreed|reversed|sided)|"
                  r"^(and )?the answer", txt):
         SFX_EVENTS.append((s_[0][0], 'ding'))
-    if txt.rstrip().endswith('?') and s_[0][0] > 3:                    # rhetorical question -> meme boom right after it
-        SFX_EVENTS.append((s_[-1][1] + 0.05, 'hit'))
-    if re.search(r"here'?s the (catch|kicker|twist|limit|problem)|plot twist|^but\b|not so fast|there'?s a catch", txt):
+    if txt.rstrip().endswith('?') and s_[0][0] > 3:                    # rhetorical question -> "huh?"
+        SFX_EVENTS.append((s_[-1][1] + 0.05, 'huh'))
+    if re.search(r"here'?s the (catch|kicker|twist|limit|problem)|plot twist|not so fast|there'?s a catch", txt):
+        SFX_EVENTS.append((s_[0][0], 'alert'))                          # Metal Gear "!"
+    elif re.search(r"^but\b", txt):
         SFX_EVENTS.append((s_[0][0], 'scratch'))
+    if re.search(r"\b(threw out|thrown out|unenforceable|void|denied|reversed|invalid)\b", txt):
+        SFX_EVENTS.append((s_[-1][1] + 0.05, 'error'))
     if re.search(r'(have|has) not done anything|done nothing|never fixed|still exists', txt):
         SFX_EVENTS.append((s_[-1][0], 'bruh'))
     if re.search(r"\b(lost|rejected|went badly|didn'?t work|failed|said no)\b", txt):
@@ -403,18 +419,17 @@ SHOCK = {'kill', 'killed', 'murder', 'death', 'destroyed', 'seized', 'arrested',
 for (a, b, wtxt), n_ in zip(words, wn):
     if n_ in MONEY: SFX_EVENTS.append((b, 'cash'))
     if n_ in SHOCK: SFX_EVENTS.append((b + 0.05, 'gasp'))
-# drama: a stinger right as the hook lands
-if sentences: SFX_EVENTS.append((sentences[0][-1][1] + 0.05, 'stinger'))
 # keep it tasteful: per-sound limits and no two sounds piled on top of each other
-LIMITS = {'boom': (3, 6), 'alert': (1, 99), 'huh': (2, 15), 'error': (1, 99), 'ding': (2, 15), 'quack': (1, 99),
-          'correct': (2, 15), 'boing': (2, 12), 'stinger': (2, 20), 'hit': (10, 4), 'scratch': (2, 10), 'bruh': (1, 99),
+LIMITS = {'boom': (0, 6), 'alert': (2, 12), 'huh': (3, 10), 'error': (2, 12), 'ding': (2, 15),
+          'correct': (2, 15), 'boing': (2, 12), 'stinger': (0, 20), 'hit': (10, 4), 'vine': (8, 5), 'quack': (1, 99), 'scratch': (2, 10), 'bruh': (1, 99),
           'trombone': (1, 99), 'cash': (3, 10), 'gasp': (2, 12), 'airhorn': (1, 99), 'gavel': (2, 10), 'wind': (1, 99)}
 PRIORITY = ['correct', 'airhorn', 'boom', 'alert', 'stinger', 'scratch', 'trombone', 'bruh', 'error', 'huh', 'ding', 'gavel',
-            'hit', 'cash', 'gasp', 'boing', 'wind', 'quack', 'click', 'pop', 'whoosh', 'step']
+            'hit', 'vine', 'cash', 'gasp', 'boing', 'wind', 'quack', 'click', 'pop', 'whoosh', 'step']
 rank = lambda n: PRIORITY.index(n) if n in PRIORITY else 50
 kept, count, times = [], {}, {}
 for t_, n_ in sorted(SFX_EVENTS, key=lambda e: (rank(e[1]), e[0])):      # important sounds claim their moment first
     mx, gap_ = LIMITS.get(n_, (99, 0))
+    if n_ in ('vine', 'hit', 'boom') and t_ < 3: continue              # no booms over the opening hook
     if count.get(n_, 0) >= mx or any(abs(t_ - x) < gap_ for x in times.get(n_, [])): continue
     if n_ not in ('step', 'whoosh') and any(abs(t_ - x) < 0.35 for x, m in kept if m not in ('step', 'whoosh')): continue
     kept.append((t_, n_)); count[n_] = count.get(n_, 0) + 1; times.setdefault(n_, []).append(t_)
@@ -428,7 +443,7 @@ for s_ in sentences:
     if t0_ - _last < 9 or (HANDLE_T is not None and t0_ > HANDLE_T - 3): continue
     for te_ in (s_[-1][1] + 0.05, t0_):                              # end of the sentence, else its start
         if te_ - _last >= 6 and all(abs(te_ - x) > 0.35 for x in _feat):
-            SFX_EVENTS.append((te_, 'hit')); _feat.append(te_); _last = te_; break
+            SFX_EVENTS.append((te_, 'vine')); _feat.append(te_); _last = te_; break
 SFX_EVENTS.sort()
 
 def scene_at(t):

@@ -185,7 +185,7 @@
    ]
   },
   {
-   "at": "make sure to like",
+   "at": "send this to",
    "bg": "white",
    "cast": [
     {
@@ -200,7 +200,7 @@
   }
  ],
  "music_vibe": "upbeat",
- "share_line": "Send this to the friend who'd keep money sent by mistake",
+ "share_line": "Send this to the friend who would never give your money back",
  "hook_old": "KEEP THE MISTAKEN MONEY?",
  "script_old": "Someone sent money by mistake, and the companies that received it won the right to keep it, in this particular case. This is Australia's High Court, in twenty fourteen. A finance company, AFSL, was tricked by a fraud. A director in a business group created false invoices for equipment from two suppliers, Hills Industries and Bosch Security Systems. AFSL paid those suppliers, then discovered the invoices were fake, and wanted its money back. Normally, money paid by mistake can be recovered. But Hills and Bosch weren't in on the fraud. When the money arrived, they treated it as payment of real debts the business group owed them. They stopped chasing those debts, and they kept trading with the group. They had changed their position because of that money. The High Court unanimously said they didn't have to repay. The test was whether keeping the money would be inequitable in all the circumstances, and given what they'd given up, it wasn't. Here's the limit. This defense depends on good faith, and on genuinely changing your position because of the payment. If a surprise deposit hits your account and you rush out to spend it, that's not this case, and you can still be made to pay it back. [loop] So if money ever lands in your account by mistake, remember"
 }

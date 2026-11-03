@@ -190,7 +190,7 @@
    ]
   },
   {
-   "at": "make sure to like",
+   "at": "send this to",
    "bg": "white",
    "cast": [
     {
@@ -205,7 +205,7 @@
   }
  ],
  "music_vibe": "tense",
- "share_line": "Send this to the friend who snoops through your phone",
+ "share_line": "Send this to the friend who'd sell your secrets for twenty bucks",
  "hook_old": "NOT HACKING?",
  "script_old": "A police officer searched a database for money, and the Supreme Court threw out his computer crime conviction. This is Van Buren versus United States, twenty twenty-one. A police sergeant in Georgia ran a license plate search in a state law enforcement database in exchange for money. The request was actually an FBI sting. He used his own valid login, but the search broke department policy against personal use. He was convicted under the Computer Fraud and Abuse Act, for exceeding his authorized access. The Supreme Court reversed, six to three. The question was what exceeding authorized access means. The majority said it covers someone who gets information from parts of a computer system that are off-limits to them. Think of a locked door. It does not cover someone who's allowed into that part of the system but uses it for an improper reason. He was allowed to look up license plates, so this particular law didn't fit. Three justices dissented, saying forbidden use of a police database is a crime. Here's the limit. The ruling didn't make selling police information legal. Other criminal laws, job consequences and privacy rules are separate, and getting into areas you aren't allowed to access is still covered. [loop] So before you call every misuse of a login hacking, remember"
 }

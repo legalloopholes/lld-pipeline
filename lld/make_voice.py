@@ -33,6 +33,13 @@ if len(text.strip()) < 200 and '[loop]' not in text:
 # -> call to action -> loop line that leads back into the hook (voiced together with the hook's first words, then cut)
 DISCLAIMER_LINE = 'Quick disclaimer: this is not legal advice.'
 CTA = 'Make sure to like and follow Legal Loopholes Daily for more loopholes like this.'
+# Larry says the episode's share line instead ("Send this to the friend who..."); like/follow goes on a sign on screen
+try:
+    _vid2 = os.path.basename(out_wav).replace('-body.wav', '').replace('-voiceover.wav', '')
+    _share = (json.load(open(os.path.join(os.path.expanduser('~/.n8n-files'), 'scenes', f'{_vid2}.json'))).get('share_line') or '').strip()
+    if _share: CTA = _share.rstrip('.!?') + '.'
+except Exception:
+    pass
 DEFAULT_LOOP = 'But before you try anything, just remember'
 loop = DEFAULT_LOOP
 m = re.search(r'\[loop\](.*)$', text, flags=re.S | re.I)

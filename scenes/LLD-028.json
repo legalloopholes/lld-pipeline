@@ -181,7 +181,7 @@
    "card_at": "doesn't automatically count"
   },
   {
-   "at": "make sure to like",
+   "at": "send this to",
    "bg": "white",
    "cast": [
     {
@@ -196,7 +196,7 @@
   }
  ],
  "music_vibe": "upbeat",
- "share_line": "Send this to the friend who'd do anything to never pay taxes",
+ "share_line": "Send this to the friend who'd fake their own death to dodge taxes",
  "hook_old": "SWAP BUILDINGS, DELAY TAX",
  "script_old": "An investor can swap one property for another and put off the tax bill, but the details make or break it. This is section ten thirty-one of the U.S. tax code, the like-kind exchange. Normally, selling an investment property at a profit means tax on the gain. But in a qualifying exchange of real property held for business or investment, no gain is recognized at the time of the exchange. Picture a hypothetical. An investor trades one rental building for another through the exchange rules, instead of cashing out. If it qualifies, the tax is postponed. Here's what the shortcuts leave out. It's deferral, not forgiveness. The new property's tax basis is figured from the old one, so the gain is still waiting for later. Since twenty eighteen, it only works for real property. A home used solely as your personal residence doesn't qualify, and neither does property held mainly for resale. The deadlines are strict. In a deferred exchange, the replacement property has to be identified within forty-five days, and received within one hundred eighty days, or by your tax return's due date if that comes first. And cash you receive along the way can be taxed. Selling one place and buying another doesn't automatically count. [loop] So before you call your next property swap tax-free, remember"
 }

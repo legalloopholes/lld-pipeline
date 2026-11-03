@@ -183,7 +183,7 @@
    "card_at": "isn't available today"
   },
   {
-   "at": "make sure to like",
+   "at": "send this to",
    "bg": "white",
    "cast": [
     {
@@ -198,7 +198,7 @@
   }
  ],
  "music_vibe": "upbeat",
- "share_line": "Send this to the friend who's only Irish on St. Patrick's Day",
+ "share_line": "Send this to the friend who'd fake being Irish to dodge taxes",
  "hook_old": "IRISH ON PAPER… TAXED ELSEWHERE?",
  "script_old": "A company could be Irish on paper and tax resident somewhere else entirely, and that gap was worth enormous amounts. This is a historical story, and the loophole is closed. Here's the idea, simplified. For tax purposes, countries ask where a company is resident. For older Irish companies, the key test was where the company was centrally managed and controlled. So a company could be incorporated in Ireland but managed from somewhere else, and Ireland wouldn't treat it as Irish tax resident. Pair that with a second Irish company, route payments for intellectual property through them, and you get the name: the Double Irish. Ireland's Department of Finance says it changed the rules to shut down known structures like the Double Irish, which it said exploited gaps in U.S. tax rules. Under Revenue's rules, a company incorporated in Ireland on or after January first, twenty fifteen, is tax resident in Ireland, unless a tax treaty says otherwise. Companies incorporated before that got a transition period that ran until the end of twenty twenty. So label this one historical. It isn't available today, and it doesn't mean every company that used it paid zero tax. [loop] So the next time someone says a company's address tells you where it pays tax, remember"
 }
