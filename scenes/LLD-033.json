@@ -17,7 +17,7 @@
   "#lawtok",
   "#didyouknow"
  ],
- "script": "Some photos on government websites have no copyright at all. Anyone can use them. [disclaimer] Yep! It's in American copyright law. Stuff made by the federal government doesn't get a copyright. None! And that means something specific. Work made by a federal employee, as part of their job. So imagine a government website with two photos. One was taken by a federal worker on the job. That one generally has no copyright! You might be able to reuse it, even to make money. But the other photo was taken by an outside company, or bought from a photographer. That one can be fully protected, even though it's on a government website! The government can also own copyrights that someone gave it. So just being paid for by taxes isn't enough. And a dot gov website isn't proof! And copyright isn't the only rule. Government seals and logos have their own rules. You can't make it look like the government is endorsing you. Photos of people can raise privacy problems. There are a few small exceptions written into the law. And this is only about the federal government. States have their own rules. [loop] So before you assume that government photo is free to use, remember",
+ "script": "Some photos on government websites have no copyright at all. Anyone can use them. [disclaimer] Meet Gary. Gary is making a poster to sell, and he needs a great photo. He finds two amazing photos on a government website. In America, work made by a federal employee as part of their job doesn't get a copyright. None. So Gary grabs both photos. It's a dot gov website, so they must be free. The first photo was taken by a federal worker on the job. That one generally has no copyright. Gary can reuse it, even to make money. Wait. What about the second one? You see, a website is like a store shelf. The store didn't make everything on it. The second photo was bought from an outside photographer. And that one can be fully protected. Seals and logos have their own rules. You can't make it look like the government endorses you. Photos of people can raise privacy problems. And states have their own rules. So the photographer sends Gary a letter. Gary found the one free photo on the website, and then put the other one on the poster. [loop] So before you assume that government photo is free to use, remember",
  "publish_at": "2026-11-17T19:00:00-05:00",
  "sources": [
   "https://www.law.cornell.edu/uscode/text/17/105"
@@ -26,101 +26,95 @@
  "scenes": [
   {
    "at": "start",
-   "bg": "bg-capitol",
-   "cast": [
-    {
-     "id": "larry:smug",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🏛️🆓",
-     "text": ""
-    }
-   ]
-  },
-  {
-   "at": "it's in american copyright",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:explaining"
-    }
-   ],
-   "props": [
-    {
-     "id": "doc",
-     "text": "17 U.S.C. §105",
-     "sub": "Copyright Act"
-    }
-   ]
-  },
-  {
-   "at": "stuff made by the federal",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:surprised"
-    }
-   ],
-   "card": "NO COPYRIGHT FOR FEDERAL WORKS",
-   "card_at": "stuff made by the federal",
-   "zooms": [
-    {
-     "at": "stuff made by the federal",
-     "amount": 1.18,
-     "hold": 0.9
-    }
-   ]
-  },
-  {
-   "at": "and that means something",
    "bg": "bg-office",
    "cast": [
     {
-     "id": "larry:pointing",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🧑‍💼",
-     "text": "Employee, on the job"
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
     }
    ]
   },
   {
-   "at": "so imagine a government",
-   "bg": "white",
+   "at": "he finds",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "point",
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "at": "in america work made",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:explaining"
     }
    ],
-   "card": "HYPOTHETICAL",
-   "card_at": "so imagine a government"
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🏛️",
+     "text": "FEDERAL WORK"
+    }
+   ]
   },
   {
-   "at": "one was taken by",
-   "bg": "white",
+   "at": "so gary grabs both",
+   "bg": "bg-office",
    "cast": [
     {
-     "id": "larry:smug"
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "arms_up",
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "at": "photo was taken by",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:pointing"
     }
    ],
    "props": [
     {
      "id": "sign",
-     "icon": "📷✅",
-     "text": "Employee photo: free"
+     "icon": "📸",
+     "text": "PHOTO ONE: FREE"
     }
    ]
   },
   {
-   "at": "but the other photo",
+   "at": "wait what about the",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "surprised",
+     "gest": "think",
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "at": "you see a website",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ]
+  },
+  {
+   "at": "seals and logos have",
    "bg": "white",
    "cast": [
     {
@@ -130,63 +124,61 @@
    "props": [
     {
      "id": "sign",
-     "icon": "📷©️",
-     "text": "Contractor: protected"
+     "icon": "⚠️",
+     "text": "LOGOS HAVE RULES"
     }
    ]
   },
   {
-   "at": "so just being paid",
+   "at": "so the photographer sends",
    "bg": "bg-office",
    "cast": [
     {
-     "id": "larry:pointing",
+     "id": "char-politician",
+     "face": "angry",
+     "gest": "point",
      "x": 0.3
-    }
-   ],
-   "card": ".GOV ISN'T PROOF",
-   "card_at": "so just being paid"
-  },
-  {
-   "at": "and copyright isn't the only",
-   "bg": "white",
-   "cast": [
+    },
     {
-     "id": "larry:concerned"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🦅🚫",
-     "text": "Seals & endorsements"
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "none",
+     "x": 0.7
     }
    ]
   },
   {
-   "at": "and this is only about",
-   "bg": "bg-capitol",
+   "at": "gary found the",
+   "bg": "bg-office",
    "cast": [
     {
-     "id": "larry:explaining",
-     "x": 0.3
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "shrug",
+     "x": 0.5
     }
-   ],
-   "card": "STATES: DIFFERENT RULES",
-   "card_at": "and this is only about"
+   ]
   },
   {
    "at": "send this to",
    "bg": "white",
    "cast": [
     {
-     "id": "larry:auto"
+     "id": "larry:pointing"
     }
    ]
   },
   {
    "at": "so before you assume",
-   "bg": "bg-capitol",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
+    }
+   ],
    "loop": true
   }
  ],
@@ -194,5 +186,6 @@
  "share_line": "Send this to the friend who steals your memes and pretends they made them",
  "hook_old": "GOVERNMENT WORK = FREE?",
  "script_old": "Some work paid for by the U.S. government can be copied, even commercially, without a copyright license. It comes from section one-oh-five of the copyright statute: copyright protection is not available for any work of the United States government. And that phrase means something specific: a work prepared by a federal officer or employee as part of their official duties. So imagine a government website with two photos. One was taken by a federal employee on the job. Under this rule, it generally has no U.S. copyright, so you may be able to reuse it, even in a commercial project. The other was taken by an outside contractor, or licensed from a photographer. That one can be fully copyrighted, even though it sits on a government page. The government can also hold copyrights that are transferred to it. So federal funding alone isn't enough, and a dot-gov address isn't proof. And copyright isn't the only rule. Government seals and logos can have their own restrictions. You can't imply a government endorsement. Photos of people can raise privacy issues. There are narrow exceptions written into the statute, like certain scholarly works by faculty at some federal schools. And this is about federal works. State governments follow different rules. [loop] So before you assume that government photo is free to use, remember",
- "script_simple": true
+ "script_simple": true,
+ "story_format": true
 }

@@ -202,6 +202,13 @@ window.renderAt = (t, frame) => {
       }
       larry.root.updateMatrixWorld(true);
       larryHead = larry.parts.head.getWorldPosition(new THREE.Vector3()).add(new THREE.Vector3(0, 0.5, 0));
+    } else if (e.c.face || e.c.gest) {                         // story mode: plan sets this character's face and gesture
+      const ch = CAST[e.key];
+      applyFace(ch, e.c.face || 'neutral', tA, 1.1);
+      if (ch.parts.stick) ch.parts.stick.visible = false;
+      if (!e.sit) standLegs(ch);
+      applyArms(ch, e.c.gest || 'none', (sc.t === 0 || sc.loop) ? 1 : ease(age / 0.3), tA, { rx: 0, rz: 0, lx: 0, lz: 0, tilt: 0 });
+      ch.root.rotation.y = e.x > 0 ? -0.3 : 0.3;
     } else if (e.key === 'chimp') {
       applyFace(chimp, 'neutral', tA, 1.1);
       const P = chimp.parts;

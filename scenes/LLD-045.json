@@ -17,7 +17,7 @@
   "#lawtok",
   "#justice"
  ],
- "script": "In England, if the police won't charge someone, you can prosecute them yourself. [disclaimer] It's called a private prosecution! And the U.K. government's own website says any adult has the right to ask a court to start one. This is a real criminal case. Not a lawsuit for money! Except you start it, instead of the government's prosecutors. Here's how it starts. You fill out a form and send it to the court. A judge or a legal adviser decides just from the paperwork. So your form has to be complete, and you have to tell them everything that matters. Don't hide stuff! If they say no, the only way to fight it is in the High Court, and only for a legal mistake. Now the catches. Some crimes limit who can bring the case. Some need the Attorney General to say okay. The government's prosecutors can take over your case. And they can shut it down if they think it shouldn't have been brought. And it's expensive! The government says it costs around eight thousand five hundred pounds on average. And you might not get that money back. So it's a real right. But it doesn't guarantee a trial, and it definitely doesn't guarantee a guilty verdict. [loop] So if you've heard that only the state can bring criminal charges, remember",
+ "script": "In England, if the police won't charge someone, you can prosecute them yourself. [disclaimer] Meet Nigel. Someone wronged Nigel. The police looked into it, and nobody got charged. So Nigel decides, fine. I'll do it myself. It's called a private prosecution. The U.K. government's own website says any adult can ask a court to start one. This is a real criminal case. Not a lawsuit for money. Nigel starts it instead of the government's prosecutors. Nigel fills out a form and sends it to the court. A judge or legal adviser decides from the paperwork. He has to tell them everything that matters. Wait. A regular person can just start a criminal case? You see, it's like a fire alarm anyone can pull. Pulling it doesn't mean the building is on fire. Someone still checks. Some crimes limit who can bring the case. Some need the Attorney General's okay. And the government's prosecutors can take it over, or shut it down. And it's expensive. The government says around eight thousand five hundred pounds on average. And Nigel might not get it back. So Nigel gets to be the prosecutor. He also gets the prosecutor's bill. And there's still no promise of a trial. [loop] So if you've heard that only the state can bring criminal charges, remember",
  "publish_at": "2026-11-23T19:00:00-05:00",
  "sources": [
   "https://www.gov.uk/government/publications/private-prosecutions/private-prosecutions"
@@ -26,21 +26,31 @@
  "scenes": [
   {
    "at": "start",
-   "bg": "bg-courtroom",
+   "bg": "bg-street",
    "cast": [
     {
-     "id": "char-judge",
-     "x": 0.7
-    },
+     "id": "char-friend-chimp",
+     "face": "angry",
+     "gest": "point",
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "at": "so nigel decides fine",
+   "bg": "bg-street",
+   "cast": [
     {
-     "id": "larry:smug",
-     "x": 0.3
+     "id": "char-friend-chimp",
+     "face": "angry",
+     "gest": "arms_up",
+     "x": 0.5
     }
    ]
   },
   {
    "at": "it's called a private",
-   "bg": "white",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:explaining"
@@ -48,33 +58,15 @@
    ],
    "props": [
     {
-     "id": "doc",
-     "text": "Private prosecutions",
-     "sub": "UK government guidance"
+     "id": "sign",
+     "icon": "⚖️",
+     "text": "PRIVATE PROSECUTION"
     }
    ]
   },
   {
-   "at": "and the uk government's own",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:surprised"
-    }
-   ],
-   "card": "ANY ADULT CAN APPLY",
-   "card_at": "and the uk government's own",
-   "zooms": [
-    {
-     "at": "and the uk government's own",
-     "amount": 1.18,
-     "hold": 0.9
-    }
-   ]
-  },
-  {
-   "at": "this is a real criminal",
-   "bg": "white",
+   "at": "this is a real",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:pointing"
@@ -83,46 +75,52 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⚖️≠💵",
-     "text": "Criminal, not money"
+     "icon": "🚫",
+     "text": "NOT A LAWSUIT"
     }
    ]
   },
   {
-   "at": "here's how it starts",
+   "at": "nigel fills out a",
    "bg": "bg-office",
    "cast": [
     {
-     "id": "larry:explaining",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "📝",
-     "text": "Application form"
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "explain",
+     "x": 0.5
     }
    ]
   },
   {
-   "at": "if they say no",
+   "at": "wait a regular person",
    "bg": "bg-courtroom",
    "cast": [
     {
      "id": "char-judge",
-     "x": 0.7
+     "face": "surprised",
+     "gest": "think",
+     "x": 0.3
     },
     {
-     "id": "larry:concerned",
-     "x": 0.3
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "point",
+     "x": 0.22
     }
-   ],
-   "card": "REFUSED? HIGH COURT ONLY",
-   "card_at": "if they say no"
+   ]
   },
   {
-   "at": "now the catches",
+   "at": "you see it's like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ]
+  },
+  {
+   "at": "some crimes limit who",
    "bg": "white",
    "cast": [
     {
@@ -132,71 +130,65 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🔐",
-     "text": "Some need consent"
+     "icon": "⚠️",
+     "text": "BIG CATCHES"
     }
    ]
   },
   {
-   "at": "the government's prosecutors can",
-   "bg": "bg-courtroom",
+   "at": "and it's expensive the",
+   "bg": "bg-office",
    "cast": [
     {
-     "id": "char-judge",
-     "x": 0.7
-    },
-    {
-     "id": "larry:concerned",
-     "x": 0.3
-    }
-   ],
-   "card": "CPS CAN TAKE OVER — OR END IT",
-   "card_at": "the government's prosecutors can"
-  },
-  {
-   "at": "and it's expensive",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:surprised"
+     "id": "larry:concerned"
     }
    ],
    "props": [
     {
      "id": "sign",
      "icon": "💷",
-     "text": "~£8,500 average"
+     "text": "~£8,500 AVERAGE"
     }
    ]
   },
   {
-   "at": "so it's a real right",
+   "at": "so nigel gets to",
    "bg": "bg-courtroom",
    "cast": [
     {
      "id": "char-judge",
-     "x": 0.7
+     "face": "neutral",
+     "gest": "none",
+     "x": 0.3
     },
     {
-     "id": "larry:explaining",
-     "x": 0.3
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "shrug",
+     "x": 0.22
     }
-   ],
-   "card": "REAL RIGHT · NO GUARANTEES",
-   "card_at": "so it's a real right"
+   ]
   },
   {
    "at": "send this to",
    "bg": "white",
    "cast": [
     {
-     "id": "larry:auto"
+     "id": "larry:pointing"
     }
    ]
   },
   {
    "at": "so if you've heard",
-   "bg": "bg-courtroom",
+   "bg": "bg-street",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "angry",
+     "gest": "point",
+     "x": 0.5
+    }
+   ],
    "loop": true
   }
  ],
@@ -204,5 +196,6 @@
  "share_line": "Send this to the friend you'd happily drag to court yourself",
  "hook_old": "YOU CAN PROSECUTE?",
  "script_old": "The authorities decide not to prosecute, but in England and Wales, that may not be the end of the story. It's called a private prosecution. The U.K. government's own guidance says any adult has the right to apply to a magistrates' court to bring one. It's a criminal case, not a lawsuit for money, started by a private person instead of the Crown Prosecution Service. Here's how it starts. The person files an application form with a court office. A judge, a magistrate, or a legal adviser decides on the paperwork alone, so the form has to be complete and disclose all relevant information. If it's refused, the only route is judicial review in the High Court, for a mistake of law. Now the catches. Some offences restrict who can prosecute, and some need the Attorney General's consent. The Crown Prosecution Service can take over a private prosecution, and it can end it if it doesn't believe the case should have been brought. And it's expensive. Government figures put the average cost at around eight thousand five hundred pounds, and getting costs back isn't guaranteed. So it's a real right, but not a guaranteed prosecution, and definitely not a guaranteed conviction. [loop] So if you've heard that only the state can bring criminal charges, remember",
- "script_simple": true
+ "script_simple": true,
+ "story_format": true
 }

@@ -17,7 +17,7 @@
   "#lawtok",
   "#criminallaw"
  ],
- "script": "What if you just married the only witness to your crime? [disclaimer] Short answer? Not really. Here's why. This comes from a Supreme Court case from nineteen eighty, Trammel versus United States. A man was charged with smuggling heroin. His wife was in on it too. But she made a deal and agreed to testify against him. He said, you can't do that, she's my wife! Back then, the rule let the accused spouse block that. But the Supreme Court changed it. The Court said the choice belongs to the witness spouse. Nobody can force her to testify against her husband. But nobody can stop her either, if she wants to. So she testified. And he stayed convicted. Ouch! But there's a second, separate rule. Private conversations between married people, the stuff they say just to each other, still get protected. The Court left that rule alone. That's why the trial court kept out the couple's private talks, but still let her say what she saw, and what was said in front of other people. Here's the limit. Marriage doesn't go back in time and protect stuff from before the wedding. It doesn't cover everything a spouse sees. There are exceptions, states have different rules, and getting married never stops a prosecution. [loop] So before you plan a wedding as a legal strategy, remember",
+ "script": "What if you just married the only witness to your crime? [disclaimer] Meet Otis. Otis is on trial for smuggling heroin. This is a real Supreme Court case from nineteen eighty. His wife was in on it too. But she makes a deal. She agrees to testify against him. Otis jumps up. You can't do that! She's my wife! And back then, he had a point. The old rule let the accused spouse block that testimony. So Otis waits for the judge to shut her up. Wait. The Supreme Court changes the rule? You see, the Court said the choice belongs to the spouse on the stand. Nobody can force her to testify. But nobody can stop her either. It's like a key to a door. She holds it, not him. So she testifies. And Otis stays convicted. Now, there's a second rule. Private things a married couple says only to each other are still protected. But marriage doesn't protect what happened before the wedding. It doesn't cover everything a spouse sees. States have their own rules. And a wedding never stops a prosecution. So the rule Otis thought would protect him, is the exact rule that let his wife take the stand. [loop] So before you plan a wedding as a legal strategy, remember",
  "publish_at": "2026-11-06T19:00:00-05:00",
  "sources": [
   "https://www.law.cornell.edu/supremecourt/text/445/40"
@@ -30,17 +30,57 @@
    "cast": [
     {
      "id": "char-judge",
-     "x": 0.7
+     "face": "neutral",
+     "gest": "none",
+     "x": 0.3
     },
     {
-     "id": "larry:smug",
-     "x": 0.3
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.22
     }
    ]
   },
   {
-   "at": "this comes from",
-   "bg": "white",
+   "at": "his wife was in",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "face": "neutral",
+     "gest": "none",
+     "x": 0.3
+    },
+    {
+     "id": "char-politician",
+     "face": "worried",
+     "gest": "none",
+     "x": 0.22
+    }
+   ]
+  },
+  {
+   "at": "otis jumps up you",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "face": "neutral",
+     "gest": "think",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "angry",
+     "gest": "point",
+     "x": 0.22
+    }
+   ]
+  },
+  {
+   "at": "and back then he",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:explaining"
@@ -48,84 +88,78 @@
    ],
    "props": [
     {
-     "id": "doc",
-     "text": "Trammel v. United States",
-     "sub": "U.S. Supreme Court"
-    }
-   ]
-  },
-  {
-   "at": "a man was charged",
-   "bg": "bg-courtroom",
-   "cast": [
-    {
-     "id": "char-judge",
-     "x": 0.7
-    },
-    {
-     "id": "larry:explaining",
-     "x": 0.3
-    }
-   ]
-  },
-  {
-   "at": "he said you can't",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:thinking"
-    }
-   ],
-   "props": [
-    {
      "id": "sign",
-     "icon": "💍🤐",
-     "text": "Spouse can't testify?"
+     "icon": "💍",
+     "text": "THE SPOUSE RULE"
     }
    ]
   },
   {
-   "at": "but the supreme court changed",
+   "at": "so otis waits for",
    "bg": "bg-courtroom",
    "cast": [
     {
      "id": "char-judge",
-     "x": 0.7
+     "face": "smug",
+     "gest": "point",
+     "x": 0.3
     },
     {
-     "id": "larry:surprised",
-     "x": 0.3
-    }
-   ],
-   "card": "THE WITNESS SPOUSE DECIDES",
-   "card_at": "but the supreme court changed",
-   "zooms": [
-    {
-     "at": "but the supreme court changed",
-     "amount": 1.18,
-     "hold": 0.9
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "none",
+     "x": 0.22
     }
    ]
   },
   {
-   "at": "so she testified",
+   "at": "wait the supreme court",
    "bg": "bg-courtroom",
    "cast": [
     {
      "id": "char-judge",
-     "x": 0.7
+     "face": "surprised",
+     "gest": "think",
+     "x": 0.3
     },
     {
-     "id": "larry:concerned",
-     "x": 0.3
+     "id": "char-friend-chimp",
+     "face": "surprised",
+     "gest": "arms_up",
+     "x": 0.22
     }
-   ],
-   "card": "CONVICTION STOOD",
-   "card_at": "so she testified"
+   ]
   },
   {
-   "at": "but there's a second",
+   "at": "you see the court",
    "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ]
+  },
+  {
+   "at": "so she testifies and",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "point",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "scratch",
+     "x": 0.7
+    }
+   ]
+  },
+  {
+   "at": "now there's a",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:pointing"
@@ -134,29 +168,13 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🔒💬",
-     "text": "Private talk: safe"
+     "icon": "🤫",
+     "text": "PRIVATE TALK: SAFE"
     }
    ]
   },
   {
-   "at": "that's why the trial court",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:explaining"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "👀",
-     "text": "What she saw: allowed"
-    }
-   ]
-  },
-  {
-   "at": "here's the limit",
+   "at": "but marriage doesn't protect",
    "bg": "white",
    "cast": [
     {
@@ -166,39 +184,49 @@
    "props": [
     {
      "id": "sign",
-     "icon": "📅",
-     "text": "Before wedding: no"
+     "icon": "⚠️",
+     "text": "NO TIME TRAVEL"
     }
    ]
   },
   {
-   "at": "there are exceptions",
+   "at": "so the rule otis",
    "bg": "bg-courtroom",
    "cast": [
     {
-     "id": "char-judge",
-     "x": 0.7
-    },
-    {
-     "id": "larry:concerned",
-     "x": 0.3
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "none",
+     "x": 0.5
     }
-   ],
-   "card": "MARRIAGE ≠ IMMUNITY",
-   "card_at": "there are exceptions"
+   ]
   },
   {
    "at": "send this to",
    "bg": "white",
    "cast": [
     {
-     "id": "larry:auto"
+     "id": "larry:pointing"
     }
    ]
   },
   {
    "at": "so before you plan",
    "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "face": "neutral",
+     "gest": "none",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.22
+    }
+   ],
    "loop": true
   }
  ],
@@ -206,5 +234,6 @@
  "share_line": "Send this to the friend who'd marry anyone to stay out of jail",
  "hook_old": "MARRY THE WITNESS?",
  "script_old": "Can marrying your witness keep them quiet? In federal court, the answer has two very different parts. This comes from a U.S. Supreme Court case from nineteen eighty, Trammel versus United States. A man was charged with conspiring to import heroin. His wife had been involved too, and she agreed to cooperate and testify against him. He argued she couldn't, because they were married. Under the older rule, the accused spouse could block that kind of testimony. The Supreme Court changed that. It said this privilege belongs to the witness spouse. She can't be forced to testify against her husband, but she also can't be stopped if she chooses to. So her testimony came in, and his conviction stood. But there's a second, separate protection. Confidential communications between spouses, the private things they say to each other during the marriage, have their own privilege, and the Court left that rule in place. That's why the trial court kept out the couple's private conversations, but let her describe what she saw and what was said in front of other people. Here's the limit. Marriage doesn't reach back and protect conversations from before the wedding, or everything a spouse sees. There are exceptions, state rules differ, and marriage never stops a prosecution. [loop] So before you plan a wedding as a legal strategy, remember",
- "script_simple": true
+ "script_simple": true,
+ "story_format": true
 }

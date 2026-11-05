@@ -17,7 +17,7 @@
   "#homestead",
   "#lawtok"
  ],
- "script": "In Texas, keeping bees on your land can legally slash your property taxes. [disclaimer] Bees! Seriously! Here's how it works. Texas lets farm land be taxed based on what it can produce, instead of what it would sell for. And the state says that number is usually way lower. To qualify, the land usually has to be used mainly for farming, at the level that's normal in that area. And it has to have been farmed for at least five of the last seven years. Now here's the bee part. Texas changed its tax law to say that keeping bees counts as farming! Land used to raise bees, for pollination or for stuff like honey, can qualify. But only if the land is at least five acres and no more than twenty. So picture this. Someone owns ten acres and starts keeping bees on it. If it really meets all the rules, the land's tax value could drop toward the farm value. Buzz buzz, tax break! But it's not an instant trick. Local tax offices set their own rules, like how many hives you need per acre. And your house itself doesn't disappear from the tax bill. This is only about the land being used for farming. [loop] So before you call a few beehives a tax strategy, remember",
+ "script": "In Texas, keeping bees on your land can legally slash your property taxes. [disclaimer] Meet Gary. Gary owns ten acres in Texas. And a huge property tax bill. Texas lets farm land be taxed on what it can produce, instead of what it would sell for. And that number is usually way lower. And Texas changed its law to say that keeping bees counts as farming. For pollination, or stuff like honey. Wait. So Gary's land can count as a farm because of bees? You see, it's like a gym membership that counts yoga as exercise. You don't have to lift weights. You just have to really do the yoga. But the land has to be at least five acres and no more than twenty. It usually has to be farmed for at least five of the last seven years. And local tax offices set rules, like how many hives per acre. And the house itself doesn't disappear from the tax bill. This is only about the land. So Gary gets his hives. He has to keep them for years. He has to do it at the level that's normal in his area. So the secret to a smaller tax bill turns out to be a full time job with a few thousand tiny employees. [loop] So before you call a few beehives a tax strategy, remember",
  "publish_at": "2026-11-30T12:00:00-05:00",
  "sources": [
   "https://comptroller.texas.gov/taxes/property-tax/ag-timber/",
@@ -28,24 +28,19 @@
  "scenes": [
   {
    "at": "start",
-   "bg": "bg-neighborhood",
+   "bg": "bg-campsite",
    "cast": [
     {
-     "id": "larry:smug",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🐝🏡",
-     "text": ""
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
     }
    ]
   },
   {
-   "at": "here's how it works",
-   "bg": "white",
+   "at": "texas lets farm land",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:explaining"
@@ -55,90 +50,65 @@
     {
      "id": "sign",
      "icon": "🌾",
-     "text": "Productivity value"
+     "text": "FARM LAND RULE"
     }
    ]
   },
   {
-   "at": "and the state says",
-   "bg": "white",
+   "at": "and texas changed its",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:pointing"
-    }
-   ],
-   "card": "USUALLY LOWER THAN MARKET VALUE",
-   "card_at": "and the state says"
-  },
-  {
-   "at": "to qualify the land",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:explaining"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "📅",
-     "text": "5 of the past 7 years"
-    }
-   ]
-  },
-  {
-   "at": "now here's the bee part",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:surprised"
-    }
-   ],
-   "card": "BEEKEEPING = AGRICULTURE",
-   "card_at": "now here's the bee part",
-   "zooms": [
-    {
-     "at": "now here's the bee part",
-     "amount": 1.18,
-     "hold": 0.9
-    }
-   ]
-  },
-  {
-   "at": "land used to raise bees",
-   "bg": "bg-neighborhood",
-   "cast": [
-    {
-     "id": "larry:pointing",
-     "x": 0.3
     }
    ],
    "props": [
     {
      "id": "sign",
      "icon": "🐝",
-     "text": "5 to 20 acres"
+     "text": "BEES = FARMING"
     }
    ]
   },
   {
-   "at": "so picture this",
-   "bg": "bg-neighborhood",
+   "at": "wait so gary's land",
+   "bg": "bg-campsite",
    "cast": [
     {
      "id": "char-friend-chimp",
-     "x": 0.68
-    },
-    {
-     "id": "larry:explaining",
-     "x": 0.3
+     "face": "surprised",
+     "gest": "think",
+     "x": 0.5
     }
-   ],
-   "card": "HYPOTHETICAL",
-   "card_at": "so picture this"
+   ]
   },
   {
-   "at": "but it's not an instant",
+   "at": "you see it's like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ]
+  },
+  {
+   "at": "but the land has",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📏",
+     "text": "5 TO 20 ACRES"
+    }
+   ]
+  },
+  {
+   "at": "and the house itself",
    "bg": "white",
    "cast": [
     {
@@ -148,35 +118,55 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🐝🐝🐝",
-     "text": "Hives per acre"
+     "icon": "⚠️",
+     "text": "THE HOUSE STILL COUNTS"
     }
    ]
   },
   {
-   "at": "and your house itself",
-   "bg": "bg-neighborhood",
+   "at": "so gary gets his",
+   "bg": "bg-campsite",
    "cast": [
     {
-     "id": "larry:concerned",
-     "x": 0.3
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "arms_up",
+     "x": 0.5
     }
-   ],
-   "card": "THE HOUSE STILL COUNTS",
-   "card_at": "and your house itself"
+   ]
+  },
+  {
+   "at": "so the secret to",
+   "bg": "bg-campsite",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "shrug",
+     "x": 0.5
+    }
+   ]
   },
   {
    "at": "send this to",
    "bg": "white",
    "cast": [
     {
-     "id": "larry:auto"
+     "id": "larry:pointing"
     }
    ]
   },
   {
    "at": "so before you call",
-   "bg": "bg-neighborhood",
+   "bg": "bg-campsite",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
+    }
+   ],
    "loop": true
   }
  ],
@@ -184,5 +174,6 @@
  "share_line": "Send this to the friend who'd adopt a thousand bees just to dodge taxes",
  "hook_old": "BEES… FOR A TAX BREAK?",
  "script_old": "In Texas, bees can change a landowner's property tax bill. Texas lets qualifying agricultural land be appraised based on what it can produce, called productivity value, instead of market value. And the state Comptroller says productivity value is usually lower than market value. To qualify, the land generally has to be devoted principally to agricultural use, to the degree of intensity that's generally accepted in the area, and it has to have been used for agriculture in at least five of the past seven years. Here's the bee part. Texas amended its tax code to include beekeeping in the definition of agricultural use. Land used to raise or keep bees for pollination, or for products like honey, can qualify, but only on land that's at least five and no more than twenty acres. Picture a hypothetical. Someone owns a ten-acre parcel and starts keeping bees there. If it genuinely meets the rules, the appraisal could shift toward agricultural value. But it's not an instant tax trick. Local appraisal districts set their own standards, including how many hives are required per acre. And the house itself doesn't vanish from the tax roll. This is about the land's agricultural use. [loop] So before you call a few beehives a tax strategy, remember",
- "script_simple": true
+ "script_simple": true,
+ "story_format": true
 }

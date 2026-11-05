@@ -17,7 +17,7 @@
   "#personalfinance",
   "#lawtok"
  ],
- "script": "The IRS says you're too rich for a Roth IRA. Then it hands you the instructions to get one anyway. [disclaimer] People call it the backdoor! This is American tax law. A Roth IRA is a retirement account people love, because if you follow the rules, the money you take out later isn't taxed. Nice! But putting money straight into a Roth has income limits. Make too much money, and you can't put money in directly. Sorry! But converting is different. The IRS says, no matter how much you make, you may be able to move money from a regular IRA into a Roth. So the backdoor is just two steps. Step one, put money into a regular IRA, and don't take a tax deduction for it. Step two, convert that money into a Roth. Done! You report it on an IRS form, Form eighty six oh six. Here's what the quick videos skip. The normal yearly limits still apply. You need income from work to put money in at all. A conversion taxes any money that hasn't been taxed yet. And if you already have pre tax money sitting in regular IRAs, the IRS counts all of it together, so part of your conversion can still get taxed. And once you convert, there's no undo button. This is an explanation, not advice. Talk to a tax pro before moving retirement money. [loop] So if someone tells you high earners can't have a Roth, remember",
+ "script": "The IRS says you're too rich for a Roth IRA. Then it hands you the instructions to get one anyway. [disclaimer] Meet Brad. Brad makes a lot of money. And Brad wants a Roth IRA. A Roth is the retirement account people love. Follow the rules, and the money you take out later isn't taxed. But the bank tells Brad, sorry. You make too much. You can't put money in directly. And then, the same rules say, but you can convert. No matter how much you make. So people call it the backdoor. Step one, put money in a regular IRA and don't take a deduction. Step two, convert it to a Roth. You report it on an IRS form. Wait. So the front door is locked, and the IRS hands out the key to the back door? You see, it's like a club that says members only, but anyone can become a member at the side entrance. The normal yearly limits still apply. You need income from work. A conversion taxes money that was never taxed. And there's no undo button. Brad does both steps. He thinks the whole thing is tax free. But Brad already has old pre tax money in another IRA. And the IRS counts all of his IRAs together. So Brad walked through the backdoor, straight into a tax bill. [loop] So if someone tells you high earners can't have a Roth, remember",
  "publish_at": "2026-11-09T19:00:00-05:00",
  "sources": [
   "https://www.irs.gov/taxtopics/tc309",
@@ -31,21 +31,16 @@
    "bg": "bg-office",
    "cast": [
     {
-     "id": "larry:smug",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🚪💰",
-     "text": ""
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
     }
    ]
   },
   {
-   "at": "this is american tax law",
-   "bg": "white",
+   "at": "a roth is the",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:explaining"
@@ -55,107 +50,85 @@
     {
      "id": "sign",
      "icon": "🏦",
-     "text": "Roth IRA"
+     "text": "ROTH IRA"
     }
    ]
   },
   {
-   "at": "but putting money straight",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:concerned"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🚧",
-     "text": "Income limits"
-    }
-   ]
-  },
-  {
-   "at": "but converting is different",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:surprised"
-    }
-   ],
-   "card": "CONVERSIONS: NO INCOME LIMIT",
-   "card_at": "but converting is different",
-   "zooms": [
-    {
-     "at": "but converting is different",
-     "amount": 1.18,
-     "hold": 0.9
-    }
-   ]
-  },
-  {
-   "at": "so the backdoor is just",
+   "at": "but the bank tells",
    "bg": "bg-office",
    "cast": [
     {
-     "id": "larry:pointing",
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "point",
      "x": 0.3
-    }
-   ],
-   "props": [
+    },
     {
-     "id": "sign",
-     "icon": "1️⃣➡️2️⃣",
-     "text": "Contribute, convert"
+     "id": "char-friend-chimp",
+     "face": "surprised",
+     "gest": "none",
+     "x": 0.7
     }
    ]
   },
   {
-   "at": "you report it on",
+   "at": "and then the same",
    "bg": "bg-office",
    "cast": [
     {
-     "id": "larry:explaining",
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "explain",
      "x": 0.3
-    }
-   ],
-   "props": [
+    },
     {
-     "id": "doc",
-     "text": "Form 8606",
-     "sub": "IRS"
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "shrug",
+     "x": 0.7
     }
    ]
   },
   {
-   "at": "here's what the quick videos",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:concerned"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "📏",
-     "text": "Limits still apply"
-    }
-   ]
-  },
-  {
-   "at": "and if you already have",
-   "bg": "white",
+   "at": "so people call it",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:pointing"
     }
    ],
-   "card": "PRO-RATA: PART CAN BE TAXED",
-   "card_at": "and if you already have"
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🚪",
+     "text": "THE BACKDOOR"
+    }
+   ]
   },
   {
-   "at": "and once you convert",
+   "at": "wait so the front",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "surprised",
+     "gest": "think",
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "at": "you see it's like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ]
+  },
+  {
+   "at": "the normal yearly limits",
    "bg": "white",
    "cast": [
     {
@@ -165,35 +138,73 @@
    "props": [
     {
      "id": "sign",
-     "icon": "↩️❌",
-     "text": "No undo"
+     "icon": "⚠️",
+     "text": "LIMITS STILL APPLY"
     }
    ]
   },
   {
-   "at": "this is an explanation",
+   "at": "brad does both steps",
    "bg": "bg-office",
    "cast": [
     {
-     "id": "larry:concerned",
-     "x": 0.3
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "arms_up",
+     "x": 0.5
     }
-   ],
-   "card": "NOT A RECOMMENDATION",
-   "card_at": "this is an explanation"
+   ]
+  },
+  {
+   "at": "but brad already has",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "point",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "none",
+     "x": 0.7
+    }
+   ]
+  },
+  {
+   "at": "so brad walked through",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "scratch",
+     "x": 0.5
+    }
+   ]
   },
   {
    "at": "send this to",
    "bg": "white",
    "cast": [
     {
-     "id": "larry:auto"
+     "id": "larry:pointing"
     }
    ]
   },
   {
    "at": "so if someone tells",
    "bg": "bg-office",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
+    }
+   ],
    "loop": true
   }
  ],
@@ -201,5 +212,6 @@
  "share_line": "Send this to the friend who's broke but acts like a billionaire",
  "hook_old": "THE ROTH IRA BACKDOOR",
  "script_old": "Make too much money to put cash straight into a Roth IRA? There's a different legal route, and people call it the backdoor. This is U.S. federal tax law. A Roth IRA is popular because, if you follow the rules, qualified withdrawals aren't taxed. But direct contributions to a Roth come with income limits. Earn above them, and you can't contribute directly. Conversions are different. The IRS says that regardless of your income, you may be able to convert money from a traditional IRA into a Roth IRA. So the backdoor is really two steps. First, a contribution to a traditional IRA that you don't deduct. Then, a conversion of that money into a Roth. It's reported on an IRS form, Form eighty-six-oh-six. Here's what the shortcut videos skip. The normal yearly contribution limits still apply, and you need taxable compensation to contribute at all. A conversion taxes any untaxed money that's being converted. And if you already have pre-tax money in traditional IRAs, the IRS looks at all of them together, so part of your conversion can be taxable, even though your new contribution wasn't deducted. Once you convert, you can't undo it. This is an explanation, not a recommendation. Get professional tax advice before moving retirement money. [loop] So if someone tells you high earners can't have a Roth, remember",
- "script_simple": true
+ "script_simple": true,
+ "story_format": true
 }

@@ -17,7 +17,7 @@
   "#lawtok",
   "#business"
  ],
- "script": "Giant companies were set up in Ireland, and Ireland legally said they weren't Irish. [disclaimer] Heads up, this loophole is closed now. But it's a wild story! Here's the simple version. For taxes, countries ask, where does this company really live? And for older Irish companies, the answer depended on where the company was actually run from. Where the bosses made the decisions. So a company could be set up in Ireland, but run from somewhere else, and Ireland would say, you're not Irish for tax! Now add a second Irish company. Send payments for things like patents and software rights through the two of them. And that's how it got its famous name. The Double Irish! Ireland's finance department says it changed the rules to shut down tricks like this, which it said used gaps in American tax rules. Now, any company set up in Ireland from two thousand fifteen on counts as Irish for tax. Unless a tax treaty says otherwise. Older companies got some extra time, but that ran out at the end of twenty twenty. Game over! So this one is history. You can't do it today. And it doesn't mean every company that used it paid zero tax. [loop] So the next time someone says a company's address tells you where it pays tax, remember",
+ "script": "Giant companies were set up in Ireland, and Ireland legally said they weren't Irish. [disclaimer] Meet a giant tech company. It makes a fortune from patents and software rights. For taxes, countries ask, where does this company really live? For older Irish companies, the answer depended on where the company was actually run from. Where the bosses made the decisions. So the company sets up in Ireland, but runs it from somewhere else. And Ireland says, you're not Irish for tax. Wait. An Irish company that isn't Irish? You see, it's like having a house on paper in one town, but sleeping every night in another town. Each town thinks you belong to the other one. Add a second Irish company, send the payments through both, and you get its famous name. The Double Irish. Ireland's finance department said tricks like this used gaps in American tax rules. So Ireland changed the law. New companies set up in Ireland from twenty fifteen count as Irish, unless a treaty says otherwise. Older ones had until the end of twenty twenty. You can't do this today. And not every company that used it paid zero. So the trick only worked because Ireland said these companies weren't Irish. Ireland ended it by deciding they are. [loop] So the next time someone says a company's address tells you where it pays tax, remember",
  "publish_at": "2026-11-13T12:00:00-05:00",
  "sources": [
   "https://www.revenue.ie/en/companies-and-charities/corporation-tax-for-companies/corporation-tax/company-residency-rules.aspx",
@@ -31,169 +31,178 @@
    "bg": "bg-office",
    "cast": [
     {
-     "id": "larry:smug",
-     "x": 0.3
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "at": "for taxes countries ask",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:explaining"
     }
    ],
    "props": [
     {
      "id": "sign",
-     "icon": "🇮🇪📄",
-     "text": "Irish on paper"
+     "icon": "🌍",
+     "text": "WHERE DO YOU LIVE?"
     }
    ]
   },
   {
-   "at": "heads up this loophole",
+   "at": "for older irish companies",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🇮🇪",
+     "text": "OLD IRISH RULE"
+    }
+   ]
+  },
+  {
+   "at": "so the company sets",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "point",
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "at": "and ireland says you're",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "shrug",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "arms_up",
+     "x": 0.7
+    }
+   ]
+  },
+  {
+   "at": "wait an irish company",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "surprised",
+     "gest": "think",
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "at": "you see it's like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ]
+  },
+  {
+   "at": "add a",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:sneaky"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🇮🇪🇮🇪",
+     "text": "THE DOUBLE IRISH"
+    }
+   ]
+  },
+  {
+   "at": "ireland's finance department said",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "angry",
+     "gest": "point",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "surprised",
+     "gest": "none",
+     "x": 0.7
+    }
+   ]
+  },
+  {
+   "at": "new companies set up",
    "bg": "white",
    "cast": [
     {
      "id": "larry:concerned"
     }
    ],
-   "card": "HISTORICAL — NOW CLOSED",
-   "card_at": "heads up this loophole"
-  },
-  {
-   "at": "here's the simple version",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:explaining"
-    }
-   ],
    "props": [
     {
      "id": "sign",
-     "icon": "🏢❓",
-     "text": "Where's it resident?"
+     "icon": "⚠️",
+     "text": "CLOSED SINCE 2020"
     }
    ]
   },
   {
-   "at": "and for older irish companies",
+   "at": "so the trick only",
    "bg": "bg-office",
    "cast": [
     {
-     "id": "larry:pointing",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🧭",
-     "text": "Managed & controlled"
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "shrug",
+     "x": 0.5
     }
    ]
-  },
-  {
-   "at": "so a company could be",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:surprised"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🇮🇪➡️🌴",
-     "text": "Here ≠ resident"
-    }
-   ],
-   "zooms": [
-    {
-     "at": "so a company could be",
-     "amount": 1.18,
-     "hold": 0.9
-    }
-   ]
-  },
-  {
-   "at": "now add a second",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:explaining"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🏢🏢",
-     "text": "Two Irish companies"
-    }
-   ]
-  },
-  {
-   "at": "ireland's finance department says",
-   "bg": "bg-office",
-   "cast": [
-    {
-     "id": "larry:explaining",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "doc",
-     "text": "Corporation Tax Roadmap",
-     "sub": "Department of Finance"
-    }
-   ]
-  },
-  {
-   "at": "now any company set up",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:pointing"
-    }
-   ],
-   "card": "FROM 2015: INCORPORATED HERE = RESIDENT HERE",
-   "card_at": "now any company set up"
-  },
-  {
-   "at": "older companies got some",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:explaining"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "⏳",
-     "text": "Transition ended 2020"
-    }
-   ]
-  },
-  {
-   "at": "so this one is history",
-   "bg": "bg-office",
-   "cast": [
-    {
-     "id": "larry:concerned",
-     "x": 0.3
-    }
-   ],
-   "card": "NOT AVAILABLE TODAY",
-   "card_at": "so this one is history"
   },
   {
    "at": "send this to",
    "bg": "white",
    "cast": [
     {
-     "id": "larry:auto"
+     "id": "larry:pointing"
     }
    ]
   },
   {
    "at": "so the next time",
    "bg": "bg-office",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
+    }
+   ],
    "loop": true
   }
  ],
@@ -201,5 +210,6 @@
  "share_line": "Send this to the friend who'd fake being Irish to dodge taxes",
  "hook_old": "IRISH ON PAPER… TAXED ELSEWHERE?",
  "script_old": "A company could be Irish on paper and tax resident somewhere else entirely, and that gap was worth enormous amounts. This is a historical story, and the loophole is closed. Here's the idea, simplified. For tax purposes, countries ask where a company is resident. For older Irish companies, the key test was where the company was centrally managed and controlled. So a company could be incorporated in Ireland but managed from somewhere else, and Ireland wouldn't treat it as Irish tax resident. Pair that with a second Irish company, route payments for intellectual property through them, and you get the name: the Double Irish. Ireland's Department of Finance says it changed the rules to shut down known structures like the Double Irish, which it said exploited gaps in U.S. tax rules. Under Revenue's rules, a company incorporated in Ireland on or after January first, twenty fifteen, is tax resident in Ireland, unless a tax treaty says otherwise. Companies incorporated before that got a transition period that ran until the end of twenty twenty. So label this one historical. It isn't available today, and it doesn't mean every company that used it paid zero tax. [loop] So the next time someone says a company's address tells you where it pays tax, remember",
- "script_simple": true
+ "script_simple": true,
+ "story_format": true
 }

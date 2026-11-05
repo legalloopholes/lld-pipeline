@@ -17,7 +17,7 @@
   "#lawtok",
   "#constitution"
  ],
- "script": "A judge invented a rule that didn't exist, used it to acquit a man, and now he can never be retried. [disclaimer] This is a real Supreme Court case from twenty thirteen, Evans versus Michigan. A man was charged with burning down a building. Not a house, a different kind of building. That's a smaller arson charge in Michigan. After the prosecutors finished their case, the judge stopped the trial and said, not guilty! Why? The judge thought the state had to prove the building wasn't a home. But that wasn't even part of the crime! The judge made up a rule that didn't exist, and then said the prosecutors didn't prove it. Oops! Michigan's appeals courts said, that doesn't count as a real not guilty. Let's do the trial again. But the Supreme Court said no! Eight justices to one. The double jeopardy rule says once you're found not guilty, they can't try you again for the same crime. And that covers any ruling that the evidence wasn't enough. Even if the judge got the law totally wrong! The Court said a mistake makes the verdict wrong, but it's still a not guilty. And it's final. But here's the limit. This was a real not guilty, decided on the evidence. Not a typo or a technicality. And it's not a trick for beating charges. [loop] So the next time someone says a mistake can always be fixed, remember",
+ "script": "A judge invented a rule that didn't exist, used it to acquit a man, and now he can never be retried. [disclaimer] Meet Lamar Evans. He's on trial in Michigan for burning down a building. Not a house. A different kind of building. That's a smaller arson charge. The prosecutors finish their case. And the judge stops the trial. He says the state had to prove the building wasn't a home. They didn't. Not guilty. But that wasn't even part of the crime. The judge made up a rule and then said the prosecutors failed it. Michigan's appeals courts say, that's not a real not guilty. Do the trial again. Wait. The Supreme Court says no? Eight to one? You see, the double jeopardy rule says once you're found not guilty, they can't try you again for the same crime. Even if the judge got the law totally wrong. It's like a referee's final whistle. Bad call or not, the game is over. This was a real not guilty ruling on the evidence. It's not a trick for beating charges. So a judge's mistake made Lamar Evans free forever, and the only rule nobody could break was the one that kept him free. [loop] So the next time someone says a mistake can always be fixed, remember",
  "publish_at": "2026-11-12T12:00:00-05:00",
  "sources": [
   "https://supreme.justia.com/cases/federal/us/568/313/"
@@ -30,33 +30,21 @@
    "cast": [
     {
      "id": "char-judge",
-     "x": 0.7
+     "face": "neutral",
+     "gest": "none",
+     "x": 0.3
     },
     {
-     "id": "larry:smug",
-     "x": 0.3
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "none",
+     "x": 0.22
     }
    ]
   },
   {
-   "at": "this is a real supreme",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:explaining"
-    }
-   ],
-   "props": [
-    {
-     "id": "doc",
-     "text": "Evans v. Michigan",
-     "sub": "U.S. Supreme Court"
-    }
-   ]
-  },
-  {
-   "at": "a man was charged",
-   "bg": "white",
+   "at": "not a house a",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:explaining"
@@ -65,85 +53,50 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🔥🏚️",
-     "text": "Other real property"
+     "icon": "🔥",
+     "text": "NOT A HOUSE"
     }
    ]
   },
   {
-   "at": "after the prosecutors finished",
+   "at": "the prosecutors finish their",
    "bg": "bg-courtroom",
    "cast": [
     {
      "id": "char-judge",
-     "x": 0.7
+     "face": "smug",
+     "gest": "point",
+     "x": 0.3
     },
     {
-     "id": "larry:surprised",
-     "x": 0.3
-    }
-   ],
-   "card": "ACQUITTED",
-   "card_at": "after the prosecutors finished"
-  },
-  {
-   "at": "the judge thought the state",
-   "bg": "bg-courtroom",
-   "cast": [
-    {
-     "id": "char-judge-confused",
-     "x": 0.7
-    },
-    {
-     "id": "larry:pointing",
-     "x": 0.3
-    }
-   ],
-   "card": "A REQUIREMENT THAT DIDN'T EXIST",
-   "card_at": "the judge thought the state",
-   "zooms": [
-    {
-     "at": "the judge thought the state",
-     "amount": 1.18,
-     "hold": 0.9
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "none",
+     "x": 0.22
     }
    ]
   },
   {
-   "at": "michigan's appeals courts said",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:concerned"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🔁",
-     "text": "Try again?"
-    }
-   ]
-  },
-  {
-   "at": "but the supreme court said",
+   "at": "he says the state",
    "bg": "bg-courtroom",
    "cast": [
     {
      "id": "char-judge",
-     "x": 0.7
+     "face": "smug",
+     "gest": "explain",
+     "x": 0.3
     },
     {
-     "id": "larry:explaining",
-     "x": 0.3
+     "id": "char-friend-chimp",
+     "face": "surprised",
+     "gest": "arms_up",
+     "x": 0.22
     }
-   ],
-   "card": "NO RETRIAL",
-   "card_at": "but the supreme court said"
+   ]
   },
   {
-   "at": "even if the judge got",
-   "bg": "white",
+   "at": "but that wasn't even",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:surprised"
@@ -152,13 +105,58 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⚖️🔒",
-     "text": "Acquittal is final"
+     "icon": "❌",
+     "text": "THAT RULE ISN'T REAL"
     }
    ]
   },
   {
-   "at": "but here's the limit",
+   "at": "michigan's appeals courts say",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "angry",
+     "gest": "point",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "scratch",
+     "x": 0.7
+    }
+   ]
+  },
+  {
+   "at": "wait the supreme court",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "face": "surprised",
+     "gest": "think",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "surprised",
+     "gest": "none",
+     "x": 0.22
+    }
+   ]
+  },
+  {
+   "at": "you see the double",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ]
+  },
+  {
+   "at": "this was a real",
    "bg": "white",
    "cast": [
     {
@@ -168,8 +166,20 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🚫📝",
-     "text": "Not a typo trick"
+     "icon": "⚠️",
+     "text": "NOT A TRICK"
+    }
+   ]
+  },
+  {
+   "at": "so a judge's mistake",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "arms_up",
+     "x": 0.5
     }
    ]
   },
@@ -178,13 +188,27 @@
    "bg": "white",
    "cast": [
     {
-     "id": "larry:auto"
+     "id": "larry:pointing"
     }
    ]
   },
   {
    "at": "so the next time",
    "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "face": "neutral",
+     "gest": "none",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "none",
+     "x": 0.22
+    }
+   ],
    "loop": true
   }
  ],
@@ -192,5 +216,6 @@
  "share_line": "Send this to the friend who gets away with absolutely everything",
  "hook_old": "WRONG… BUT FINAL?",
  "script_old": "A judge misunderstood the crime, and prosecutors still couldn't retry the defendant. This is Evans versus Michigan, a U.S. Supreme Court case from twenty thirteen. A man was charged with burning other real property, a lesser arson charge in Michigan than burning a home. After the prosecution finished its case, the trial judge granted a directed verdict of acquittal. The judge believed the state had to prove the building wasn't a dwelling. But that wasn't actually an element of the crime. The judge added a requirement that didn't exist, and then found it unproven. Michigan's appeals courts said that wasn't a real acquittal, so the case could be tried again. The Supreme Court disagreed, eight to one. The double jeopardy rule bars a second trial after an acquittal, and an acquittal includes any ruling that the prosecution's evidence wasn't enough to establish criminal liability. Even if that ruling was legally wrong. The Court said the judge's error affects only the accuracy of the acquittal, not what it is. But here's the limit. This was a real acquittal on the evidence. It wasn't a dismissal over a typo or a technicality, and it's not a formula for beating charges. [loop] So the next time someone says a mistake can always be fixed, remember",
- "script_simple": true
+ "script_simple": true,
+ "story_format": true
 }

@@ -97,6 +97,24 @@ def make(vid, script):
     yield 'video'
 
 
+def loud(path, target=-14.0):
+    """normalize a finished video's audio to -14 LUFS (where short-form apps play everything), video untouched"""
+    if not os.path.exists(path): return
+    try:
+        r = subprocess.run(['ffmpeg', '-hide_banner', '-nostats', '-i', path, '-af',
+                            f'loudnorm=I={target}:TP=-1.5:LRA=11:print_format=json', '-f', 'null', '-'], capture_output=True, text=True)
+        m = json.loads(r.stderr[r.stderr.rindex('{'):r.stderr.rindex('}') + 1])
+        af = (f"loudnorm=I={target}:TP=-1.5:LRA=11:measured_I={m['input_i']}:measured_TP={m['input_tp']}:"
+              f"measured_LRA={m['input_lra']}:measured_thresh={m['input_thresh']}:offset={m['target_offset']}:linear=true")
+        tmp = path + '.loud.mp4'
+        subprocess.run(['ffmpeg', '-loglevel', 'error', '-y', '-i', path, '-af', af, '-ar', '48000', '-c:v', 'copy', '-c:a', 'aac',
+                        '-b:a', '192k', '-movflags', '+faststart', tmp], check=True)
+        os.replace(tmp, path)
+        log(f'loudness: {os.path.basename(path)} {m["input_i"]} -> {target} LUFS')
+    except Exception as e:
+        log('WARNING: loudness step failed:', e)
+
+
 def add_music(vid):
     """YouTube / Facebook / Instagram copy with a soft Kevin MacLeod bed; TikTok keeps the clean video.
     Returns (path, credit) - the clean video and no credit if music is off or fails."""
@@ -143,6 +161,8 @@ def live(force_now):
     if wait > 0: log(f'Video ready. Waiting {round(wait / 60)} min for {slot:%H:%M}.'); time.sleep(wait)
     video = os.path.join(ROOT, f'{vid}-video.mp4')                 # clean: TikTok (you add the sound in the app)
     mvideo, credit = add_music(vid)                                  # with music: YouTube, Facebook, Instagram
+    loud(mvideo)
+    if mvideo != video: loud(video)
     desc = meta['description'] + ('\n\n' + credit if credit else '')
     fb_ig_caption = 'b64:' + base64.b64encode((meta['caption'] + ' ' + meta['hashtags'] + ' #reels'
                                                + ('\n\n' + credit if credit else '')).encode()).decode()
@@ -186,6 +206,8 @@ def test():
     for _ in make(vid, script): pass
     report['render_seconds'] = round(time.time() - t0)
     mvideo, credit = add_music(vid)
+    loud(mvideo)
+    if mvideo != os.path.join(ROOT, f'{vid}-video.mp4'): loud(os.path.join(ROOT, f'{vid}-video.mp4'))
     report['music'] = credit.splitlines()[0] if credit else 'off or failed'
     report['post_text'] = post_text(vid, script)
     check('youtube', lambda: 'channel: ' + ', '.join(gapi.youtube_check()))

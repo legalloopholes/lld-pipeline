@@ -17,7 +17,7 @@
   "#lawtok",
   "#funfacts"
  ],
- "script": "A monkey took a selfie, and the U.S. Copyright Office says it won't register that photo for anyone. [disclaimer] In America, the answer is weird! The U.S. Copyright Office has a rulebook for what it will register. And it says it plainly. The Office will not register stuff made by nature, animals, or plants. Then it gives examples. And they're amazing! A photo taken by a monkey. A painting made by an elephant. Driftwood shaped by the ocean. Even a song that lists the Holy Spirit as the author! The rule is simple. Copyright protects creative work made by humans. Only humans! So imagine you set up a camera, and a monkey grabs it and snaps a picture. You might own the camera. You might own the memory card. But owning the camera doesn't make you the author of a photo the monkey took! The monkey took it. And the monkey can't own it either. Here's the limit. This doesn't mean every photo with an animal in it is free. If a photographer chooses the shot, the angle, and the moment, that's a human author. When a person and an animal both help, the human part gets looked at on its own. And this is just American copyright. Other countries can see it differently. And contracts can still matter. [loop] So the next time a monkey borrows your camera, remember",
+ "script": "A monkey took a selfie, and the U.S. Copyright Office says it won't register that photo for anyone. [disclaimer] Meet a photographer. He sets up a camera in the jungle, and walks away for a minute. A monkey grabs the camera. And snaps a perfect selfie. The photographer says, great, it's my camera, so it's my photo. But in America, the Copyright Office has a rulebook. It won't register work made by nature, animals, or plants. And it gives examples. A photo taken by a monkey. A painting made by an elephant. Driftwood shaped by the ocean. Wait. So the monkey owns it? You see, copyright protects creative work made by humans. Only humans. Owning the camera doesn't make you the author, just like owning a pen doesn't make you the writer of every note someone scribbles with it. This doesn't mean every animal photo is free. If a person picks the shot, the angle and the moment, that's a human author. And other countries can see it differently. So the photographer owns the camera. He owns the memory card. He owns the trip. And the best photo he ever got is the one photo the Copyright Office won't register for anybody. Not him. Not the monkey. [loop] So the next time a monkey borrows your camera, remember",
  "publish_at": "2026-11-16T19:00:00-05:00",
  "sources": [
   "https://www.copyright.gov/comp3/docs/compendium-12-22-14.pdf",
@@ -30,21 +30,40 @@
    "bg": "bg-campsite",
    "cast": [
     {
-     "id": "larry:smug",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🐒📸",
-     "text": ""
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
     }
    ]
   },
   {
-   "at": "in america the answer",
-   "bg": "white",
+   "at": "a monkey grabs the",
+   "bg": "bg-campsite",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "surprised",
+     "gest": "arms_up",
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "at": "the photographer says great",
+   "bg": "bg-campsite",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "point",
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "at": "but in america the",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:explaining"
@@ -52,33 +71,15 @@
    ],
    "props": [
     {
-     "id": "doc",
-     "text": "Compendium §313.2",
-     "sub": "U.S. Copyright Office"
+     "id": "sign",
+     "icon": "📸",
+     "text": "WHO IS THE AUTHOR?"
     }
    ]
   },
   {
-   "at": "and it says it plainly",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:surprised"
-    }
-   ],
-   "card": "NO REGISTRATION FOR ANIMAL WORKS",
-   "card_at": "and it says it plainly",
-   "zooms": [
-    {
-     "at": "and it says it plainly",
-     "amount": 1.18,
-     "hold": 0.9
-    }
-   ]
-  },
-  {
-   "at": "then it gives examples",
-   "bg": "white",
+   "at": "and it gives examples",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:pointing"
@@ -87,89 +88,34 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🐒📸",
-     "text": "Monkey photo"
+     "icon": "🐒",
+     "text": "MONKEY PHOTO: NO"
     }
    ]
   },
   {
-   "at": "a painting made by",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:smug"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🐘🎨",
-     "text": "Elephant mural"
-    }
-   ]
-  },
-  {
-   "at": "even a song that lists",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:surprised"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🎵👼",
-     "text": "Holy Spirit author?"
-    }
-   ]
-  },
-  {
-   "at": "the rule is simple",
-   "bg": "bg-office",
-   "cast": [
-    {
-     "id": "larry:explaining",
-     "x": 0.3
-    }
-   ],
-   "card": "HUMAN AUTHORSHIP",
-   "card_at": "the rule is simple"
-  },
-  {
-   "at": "so imagine you set up",
+   "at": "wait so the monkey",
    "bg": "bg-campsite",
    "cast": [
     {
      "id": "char-friend-chimp",
-     "x": 0.68
-    },
-    {
-     "id": "larry:explaining",
-     "x": 0.3
-    }
-   ],
-   "card": "HYPOTHETICAL",
-   "card_at": "so imagine you set up"
-  },
-  {
-   "at": "but owning the camera",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:pointing"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "📷≠✍️",
-     "text": "Owner ≠ author"
+     "face": "surprised",
+     "gest": "think",
+     "x": 0.5
     }
    ]
   },
   {
-   "at": "here's the limit",
+   "at": "you see copyright protects",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ]
+  },
+  {
+   "at": "this doesn't mean every",
    "bg": "white",
    "cast": [
     {
@@ -179,8 +125,32 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🧑‍🎨",
-     "text": "Your shot: protected"
+     "icon": "⚠️",
+     "text": "HUMANS CAN STILL OWN"
+    }
+   ]
+  },
+  {
+   "at": "so the photographer owns",
+   "bg": "bg-campsite",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "scratch",
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "at": "and the best photo",
+   "bg": "bg-campsite",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "shrug",
+     "x": 0.5
     }
    ]
   },
@@ -189,13 +159,21 @@
    "bg": "white",
    "cast": [
     {
-     "id": "larry:auto"
+     "id": "larry:pointing"
     }
    ]
   },
   {
    "at": "so the next time",
    "bg": "bg-campsite",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
+    }
+   ],
    "loop": true
   }
  ],
@@ -203,5 +181,6 @@
  "share_line": "Send this to the friend who takes worse photos than a monkey",
  "hook_old": "WHO OWNS A MONKEY'S PHOTO?",
  "script_old": "If a monkey takes the photo, who gets the copyright? Under U.S. law, the answer is awkward. The U.S. Copyright Office has a rulebook for what it will register, called the Compendium. And it says plainly: the Office will not register works produced by nature, animals, or plants. Then it gives examples. A photo taken by a monkey. A mural painted by an elephant. Driftwood shaped and smoothed by the ocean. Even a song application that names the Holy Spirit as its author. The principle is human authorship. Copyright protects creative work by people. So imagine you set up a camera, and a monkey grabs it and snaps a picture. You may own the camera. You may own the memory card. But owning the equipment doesn't make you the author of a photo the monkey took. Here's the limit. This doesn't mean every picture with an animal in it is unprotected. A photographer who chooses the shot, the framing and the moment is a human author. When a person and an animal both play a part, the human contribution has to be looked at on its own. And this is a U.S. copyright explanation. Other countries can see things differently, and other rights, like contracts, can still matter. [loop] So the next time a monkey borrows your camera, remember",
- "script_simple": true
+ "script_simple": true,
+ "story_format": true
 }

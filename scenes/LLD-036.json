@@ -17,7 +17,7 @@
   "#lawtok",
   "#privacy"
  ],
- "script": "A cop took cash to search a police database, and the Supreme Court said it wasn't hacking. [disclaimer] This is Van Buren versus United States, from twenty twenty one. A police sergeant in Georgia took money to look up a license plate in a police database. Plot twist! The whole thing was an FBI sting. He used his own real login. But looking it up for cash broke his department's rules. So he got convicted under a big federal hacking law, for going beyond his allowed access. But the Supreme Court flipped it! The question was simple. What does going beyond your allowed access actually mean? The majority said it means getting into parts of a computer system that are off limits to you. Think of a locked door you're not supposed to open. It does not mean using a part you're allowed into, for a bad reason. He was allowed to look up license plates. So this hacking law didn't fit! Not everyone agreed. Three justices said using a police database like that should count as a crime. Here's the limit. Selling police information did not become legal. Other criminal laws, getting fired, and privacy rules are a whole separate thing. And sneaking into parts of a system you aren't allowed into is still covered by the hacking law. [loop] So before you call every misuse of a login hacking, remember",
+ "script": "A cop took cash to search a police database, and the Supreme Court said it wasn't hacking. [disclaimer] Meet Nathan Van Buren. He's a police sergeant in Georgia. A man offers him money to look up a license plate in the police database. Van Buren logs in with his own real login. And does the search. Plot twist. The whole thing is an FBI sting. He gets convicted under a big federal hacking law, for going beyond his allowed access. Wait. Then in twenty twenty one, the Supreme Court flips it? You see, the majority said that law is about getting into parts of a computer that are off limits to you. Like opening a locked door. It's not about walking through a door you're allowed to use, for a bad reason. He was allowed to look up license plates. So this hacking law didn't fit. Not everyone agreed. Three justices said this should count as a crime. Selling police information did not become legal. Other laws, getting fired, and privacy rules are separate. And sneaking into parts you aren't allowed in is still covered. So the reason it wasn't hacking is that his own police department gave him the password. [loop] So before you call every misuse of a login hacking, remember",
  "publish_at": "2026-11-19T12:00:00-05:00",
  "sources": [
   "https://www.law.cornell.edu/supremecourt/text/19-783"
@@ -26,124 +26,112 @@
  "scenes": [
   {
    "at": "start",
-   "bg": "bg-street",
-   "cast": [
-    {
-     "id": "larry:smug",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "👮💻💵",
-     "text": ""
-    }
-   ]
-  },
-  {
-   "at": "this is van buren",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:explaining"
-    }
-   ],
-   "props": [
-    {
-     "id": "doc",
-     "text": "Van Buren v. United States",
-     "sub": "U.S. Supreme Court"
-    }
-   ]
-  },
-  {
-   "at": "a police sergeant in georgia",
-   "bg": "bg-street",
-   "cast": [
-    {
-     "id": "larry:explaining",
-     "x": 0.3
-    }
-   ],
-   "card": "FBI STING",
-   "card_at": "a police sergeant in georgia"
-  },
-  {
-   "at": "he used his own real",
    "bg": "bg-office",
    "cast": [
     {
-     "id": "larry:pointing",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🔑",
-     "text": "Valid login"
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
     }
    ]
   },
   {
-   "at": "so he got convicted",
-   "bg": "bg-courtroom",
+   "at": "a man offers him",
+   "bg": "bg-office",
    "cast": [
     {
-     "id": "char-judge",
-     "x": 0.7
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "explain",
+     "x": 0.3
     },
     {
-     "id": "larry:concerned",
-     "x": 0.3
-    }
-   ],
-   "card": "COMPUTER FRAUD AND ABUSE ACT",
-   "card_at": "so he got convicted"
-  },
-  {
-   "at": "but the supreme court flipped",
-   "bg": "bg-courtroom",
-   "cast": [
-    {
-     "id": "char-judge",
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "none",
      "x": 0.7
-    },
-    {
-     "id": "larry:surprised",
-     "x": 0.3
-    }
-   ],
-   "card": "REVERSED 6–3",
-   "card_at": "but the supreme court flipped",
-   "zooms": [
-    {
-     "at": "but the supreme court flipped",
-     "amount": 1.18,
-     "hold": 0.9
     }
    ]
   },
   {
-   "at": "the majority said",
+   "at": "van buren logs in",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "point",
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "at": "plot twist the whole",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "point",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "surprised",
+     "gest": "none",
+     "x": 0.7
+    }
+   ]
+  },
+  {
+   "at": "he gets convicted under",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "face": "angry",
+     "gest": "point",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "none",
+     "x": 0.22
+    }
+   ]
+  },
+  {
+   "at": "wait then in",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "face": "surprised",
+     "gest": "think",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "surprised",
+     "gest": "arms_up",
+     "x": 0.22
+    }
+   ]
+  },
+  {
+   "at": "you see the majority",
    "bg": "white",
    "cast": [
     {
      "id": "larry:explaining"
     }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🚪🔒",
-     "text": "Off-limits areas"
-    }
    ]
   },
   {
-   "at": "it does not mean",
-   "bg": "white",
+   "at": "he was allowed to",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:pointing"
@@ -152,29 +140,29 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🚪✅🤨",
-     "text": "Allowed in, bad motive"
+     "icon": "🔑",
+     "text": "HE HAD THE KEY"
     }
    ]
   },
   {
    "at": "not everyone agreed",
-   "bg": "bg-courtroom",
+   "bg": "bg-office",
    "cast": [
     {
-     "id": "char-judge-confused",
-     "x": 0.7
-    },
-    {
-     "id": "larry:thinking",
-     "x": 0.3
+     "id": "larry:concerned"
     }
    ],
-   "card": "DISSENT: IT'S A CRIME",
-   "card_at": "not everyone agreed"
+   "props": [
+    {
+     "id": "sign",
+     "icon": "⚖️",
+     "text": "3 JUSTICES DISAGREED"
+    }
+   ]
   },
   {
-   "at": "here's the limit",
+   "at": "selling police information did",
    "bg": "white",
    "cast": [
     {
@@ -184,8 +172,20 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🚫💵",
-     "text": "Selling data: no"
+     "icon": "⚠️",
+     "text": "STILL NOT LEGAL"
+    }
+   ]
+  },
+  {
+   "at": "so the reason it",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "shrug",
+     "x": 0.5
     }
    ]
   },
@@ -194,13 +194,21 @@
    "bg": "white",
    "cast": [
     {
-     "id": "larry:auto"
+     "id": "larry:pointing"
     }
    ]
   },
   {
    "at": "so before you call",
-   "bg": "bg-street",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
+    }
+   ],
    "loop": true
   }
  ],
@@ -208,5 +216,6 @@
  "share_line": "Send this to the friend who'd sell your secrets for twenty bucks",
  "hook_old": "NOT HACKING?",
  "script_old": "A police officer searched a database for money, and the Supreme Court threw out his computer crime conviction. This is Van Buren versus United States, twenty twenty-one. A police sergeant in Georgia ran a license plate search in a state law enforcement database in exchange for money. The request was actually an FBI sting. He used his own valid login, but the search broke department policy against personal use. He was convicted under the Computer Fraud and Abuse Act, for exceeding his authorized access. The Supreme Court reversed, six to three. The question was what exceeding authorized access means. The majority said it covers someone who gets information from parts of a computer system that are off-limits to them. Think of a locked door. It does not cover someone who's allowed into that part of the system but uses it for an improper reason. He was allowed to look up license plates, so this particular law didn't fit. Three justices dissented, saying forbidden use of a police database is a crime. Here's the limit. The ruling didn't make selling police information legal. Other criminal laws, job consequences and privacy rules are separate, and getting into areas you aren't allowed to access is still covered. [loop] So before you call every misuse of a login hacking, remember",
- "script_simple": true
+ "script_simple": true,
+ "story_format": true
 }

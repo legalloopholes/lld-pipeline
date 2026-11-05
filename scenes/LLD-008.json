@@ -17,7 +17,7 @@
   "#weirdlaws",
   "#criminallaw"
  ],
- "script": "A fisherman dumped the evidence overboard after a federal officer told him not to, and the Supreme Court ruled a fish isn't a tangible object. [disclaimer] This is a real Supreme Court case from twenty fifteen. A fishing captain named John Yates is out in the Gulf of Mexico. A wildlife officer climbs on board and checks his catch. Some of his red grouper are too small. Too small is illegal! So the officer tells him, keep those fish separate until we get back to shore. And what does Yates do? He has a crew member toss them overboard! Then swap in other fish. Bold move! So prosecutors hit him with a big law. It came after the Enron scandal. It punishes destroying a record, a document, or a tangible object to block an investigation. And a fish is a tangible object. Right? Well, the Court said no. Not for this law. They said tangible object here means stuff that holds information. Like a hard drive. Or a notebook. Not a fish! So he beat that charge. But here's what the clickbait leaves out. He was also convicted under a different law, for destroying stuff to stop the government from taking it. And he didn't fight that one. So destroying evidence did not become legal. He just won on the one law made for shredded records. [loop] So before you call a fish a document, remember",
+ "script": "A fisherman dumped the evidence overboard after a federal officer told him not to, and the Supreme Court ruled a fish isn't a tangible object. [disclaimer] Meet John Yates. He's a real fishing captain, out in the Gulf of Mexico. A wildlife officer climbs on his boat and measures his fish. Some of his red grouper are too small. That's illegal. The officer says, keep those little fish separate until we get to shore. So what does Yates do? He has a crew member throw them overboard. Then swaps in other fish. Prosecutors are furious. They charge him under a big law made after the Enron scandal. That law punishes destroying a record, a document, or a tangible object to block an investigation. And a fish is a tangible object. You can touch it. It's slimy. Wait. The Supreme Court says no? You see, the Court said this law is about things that hold information. Like a hard drive. Or a notebook. It's like a rule for shredding paperwork, and a fish has never been paperwork. So Yates wins. A fish is not a tangible object. At least, not for this law. But he was also convicted under a different law, for destroying stuff so the government couldn't take it. And he didn't fight that one. So he beat the charge for destroying a fish. And he's still guilty of destroying the fish. [loop] So before you call a fish a document, remember",
  "publish_at": "2026-11-05T12:00:00-05:00",
  "sources": [
   "https://www.law.cornell.edu/supremecourt/text/13-7451"
@@ -29,29 +29,10 @@
    "bg": "bg-harbor",
    "cast": [
     {
-     "id": "larry:smug",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🐟🗑️",
-     "text": ""
-    }
-   ]
-  },
-  {
-   "at": "this is a real supreme",
-   "bg": "bg-courtroom",
-   "cast": [
-    {
-     "id": "char-judge",
-     "x": 0.7
-    },
-    {
-     "id": "larry:explaining",
-     "x": 0.3
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
     }
    ]
   },
@@ -60,87 +41,70 @@
    "bg": "bg-harbor",
    "cast": [
     {
-     "id": "char-friend-chimp",
-     "x": 0.68
+     "id": "char-politician",
+     "face": "angry",
+     "gest": "point",
+     "x": 0.3
     },
     {
-     "id": "larry:explaining",
-     "x": 0.3
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "none",
+     "x": 0.7
     }
-   ],
-   "card": "UNDERSIZED RED GROUPER",
-   "card_at": "a wildlife officer climbs"
+   ]
   },
   {
-   "at": "he has a crew member",
+   "at": "the officer says keep",
    "bg": "bg-harbor",
    "cast": [
     {
-     "id": "larry:surprised",
+     "id": "char-politician",
+     "face": "angry",
+     "gest": "explain",
      "x": 0.3
-    }
-   ],
-   "card": "OVERBOARD!",
-   "card_at": "he has a crew member",
-   "zooms": [
+    },
     {
-     "at": "he has a crew member",
-     "amount": 1.18,
-     "hold": 0.9
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "shrug",
+     "x": 0.7
     }
    ]
   },
   {
-   "at": "so prosecutors hit him",
-   "bg": "white",
+   "at": "so what does yates",
+   "bg": "bg-harbor",
    "cast": [
     {
-     "id": "larry:explaining"
-    }
-   ],
-   "props": [
-    {
-     "id": "doc",
-     "text": "Sarbanes-Oxley",
-     "sub": "Passed after Enron"
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
     }
    ]
   },
   {
-   "at": "it punishes destroying",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:pointing"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "📄💾🐟?",
-     "text": "Tangible object?"
-    }
-   ]
-  },
-  {
-   "at": "not for this law",
+   "at": "prosecutors are furious they",
    "bg": "bg-courtroom",
    "cast": [
     {
      "id": "char-judge",
-     "x": 0.7
+     "face": "angry",
+     "gest": "point",
+     "x": 0.3
     },
     {
-     "id": "larry:surprised",
-     "x": 0.3
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "none",
+     "x": 0.22
     }
-   ],
-   "card": "CHARGE DOESN'T FIT",
-   "card_at": "not for this law"
+   ]
   },
   {
-   "at": "they said tangible object",
-   "bg": "white",
+   "at": "that law punishes destroying",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:explaining"
@@ -149,13 +113,58 @@
    "props": [
     {
      "id": "sign",
-     "icon": "💾📒",
-     "text": "Records info"
+     "icon": "📄",
+     "text": "RECORD OR OBJECT?"
     }
    ]
   },
   {
-   "at": "not a fish",
+   "at": "and a fish is",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "face": "smug",
+     "gest": "explain",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "scratch",
+     "x": 0.22
+    }
+   ]
+  },
+  {
+   "at": "wait the supreme court",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "face": "surprised",
+     "gest": "think",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "surprised",
+     "gest": "arms_up",
+     "x": 0.22
+    }
+   ]
+  },
+  {
+   "at": "you see the court",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ]
+  },
+  {
+   "at": "so yates wins a",
    "bg": "white",
    "cast": [
     {
@@ -166,39 +175,37 @@
     {
      "id": "sign",
      "icon": "🐟",
-     "text": "Not a record"
+     "text": "FISH ≠ DOCUMENT"
     }
    ]
   },
   {
-   "at": "but here's what the clickbait",
+   "at": "but he was also",
    "bg": "bg-courtroom",
    "cast": [
     {
      "id": "char-judge",
-     "x": 0.7
+     "face": "smug",
+     "gest": "point",
+     "x": 0.3
     },
     {
-     "id": "larry:concerned",
-     "x": 0.3
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "none",
+     "x": 0.22
     }
-   ],
-   "card": "OTHER CONVICTION STOOD",
-   "card_at": "but here's what the clickbait"
+   ]
   },
   {
-   "at": "so destroying evidence",
-   "bg": "white",
+   "at": "so he beat the",
+   "bg": "bg-harbor",
    "cast": [
     {
-     "id": "larry:concerned"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🚫",
-     "text": "Still illegal"
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "shrug",
+     "x": 0.5
     }
    ]
   },
@@ -207,13 +214,21 @@
    "bg": "white",
    "cast": [
     {
-     "id": "larry:auto"
+     "id": "larry:pointing"
     }
    ]
   },
   {
    "at": "so before you call",
    "bg": "bg-harbor",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
+    }
+   ],
    "loop": true
   }
  ],
@@ -221,5 +236,6 @@
  "share_line": "Send this to the friend who'd flush the evidence and then brag about it",
  "hook_old": "THE EVIDENCE WAS… FISH",
  "script_old": "He threw evidence into the ocean and still beat one federal charge, because the evidence was fish. This is a U.S. Supreme Court case from twenty fifteen. A Florida wildlife officer with federal authority boarded a commercial fishing boat in the Gulf of Mexico and found red grouper that were too small. He told the captain, John Yates, to keep those undersized fish separate until they got back to port. Instead, Yates had a crew member throw them overboard and swap in other fish. Prosecutors charged him under a law passed after the Enron scandal, part of the Sarbanes-Oxley Act. It punishes destroying a record, a document, or a tangible object to obstruct a federal investigation. A fish is a tangible object, right? Five justices said this charge didn't fit. The lead opinion said a tangible object under that law means something used to record or preserve information, like a hard drive or a ledger. Not a grouper. But here's what the clickbait leaves out. Yates was also convicted under a different law, for destroying property to prevent a federal seizure, and he didn't challenge that one. So destroying evidence did not become legal. He won on the one statute that was built for shredded records. [loop] So before you call a fish a document, remember",
- "script_simple": true
+ "script_simple": true,
+ "story_format": true
 }

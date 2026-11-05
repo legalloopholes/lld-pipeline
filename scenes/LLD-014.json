@@ -17,7 +17,7 @@
   "#didyouknow",
   "#law"
  ],
- "script": "Some people in America can commit a felony right in front of a cop, and the country can't put them on trial. [disclaimer] It's called diplomatic immunity! It comes from a big international treaty, the Vienna Convention. And here's how the U.S. State Department explains it. Top diplomats have total immunity from the criminal courts of the country they're working in. So the law still applies to them. The country just can't put them on trial. Wild, right? But here's the twist. The diplomat can't give that immunity up. Only their home country can. And it has to say so clearly. So what happens if a diplomat does something really serious, like a violent crime, and their country won't give up the immunity? In America, the policy is, you have to leave. Get out! And the treaty says something else. Being immune here doesn't protect them back home. Their own country's courts can still go after them. Also, not everyone at an embassy gets the full deal. Consular officers usually only get immunity for their official work, and their staff get even less. And a fancy diplomatic passport alone isn't enough. In the State Department's own words, diplomatic immunity is not a license to flout the law. [loop] So before you assume a diplomat is above the law, remember",
+ "script": "Some people in America can commit a felony right in front of a cop, and the country can't put them on trial. [disclaimer] Meet a top diplomat. He's working at his country's embassy in America. One day, he breaks the law. Right in front of a police officer. The officer goes for the handcuffs. And the diplomat just shows his ID. It's called diplomatic immunity. It comes from a big treaty called the Vienna Convention. Top diplomats can't be put on trial in the criminal courts of the country they work in. The law still applies to them. The country just can't prosecute. Wait. So he just walks away? You see, it's like a player from another team. The referee here can't punish him. But his own coach still can. The diplomat can't give up his immunity. Only his home country can. And if it won't, America's policy for serious crimes is simple. He has to leave. And not everyone at an embassy gets the full deal. Consular officers usually only get it for their official work. So the diplomat flies home, a free man. And the treaty says his own country's courts can still go after him there. [loop] So before you assume a diplomat is above the law, remember",
  "publish_at": "2026-11-08T12:00:00-05:00",
  "sources": [
   "https://2017-2021.state.gov/wp-content/uploads/2019/09/19-04499-DipConImm_v2_web.pdf",
@@ -31,79 +31,52 @@
    "bg": "bg-street",
    "cast": [
     {
-     "id": "larry:smug",
-     "x": 0.3
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
     }
-   ],
-   "props": [
+   ]
+  },
+  {
+   "at": "day he breaks the",
+   "bg": "bg-street",
+   "cast": [
     {
-     "id": "sign",
-     "icon": "🛂✨",
-     "text": ""
+     "id": "char-politician",
+     "face": "angry",
+     "gest": "point",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "shrug",
+     "x": 0.7
+    }
+   ]
+  },
+  {
+   "at": "the officer goes for",
+   "bg": "bg-street",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "surprised",
+     "gest": "arms_up",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "point",
+     "x": 0.7
     }
    ]
   },
   {
    "at": "it's called diplomatic immunity",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:explaining"
-    }
-   ],
-   "props": [
-    {
-     "id": "doc",
-     "text": "Vienna Convention",
-     "sub": "Diplomatic Relations, 1961"
-    }
-   ]
-  },
-  {
-   "at": "here's how the us state",
-   "bg": "bg-capitol",
-   "cast": [
-    {
-     "id": "larry:explaining",
-     "x": 0.3
-    }
-   ]
-  },
-  {
-   "at": "top diplomats have total",
-   "bg": "bg-courtroom",
-   "cast": [
-    {
-     "id": "char-judge",
-     "x": 0.7
-    },
-    {
-     "id": "larry:pointing",
-     "x": 0.3
-    }
-   ],
-   "card": "IMMUNE FROM HOST COURTS",
-   "card_at": "top diplomats have total"
-  },
-  {
-   "at": "so the law still applies",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:thinking"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "📜≠⚖️",
-     "text": "Law ≠ trial"
-    }
-   ]
-  },
-  {
-   "at": "but here's the twist",
-   "bg": "white",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:explaining"
@@ -112,49 +85,14 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🏳️",
-     "text": "Home country waives"
-    }
-   ],
-   "zooms": [
-    {
-     "at": "but here's the twist",
-     "amount": 1.18,
-     "hold": 0.9
+     "icon": "🛂",
+     "text": "DIPLOMATIC IMMUNITY"
     }
    ]
   },
   {
-   "at": "so what happens if",
-   "bg": "bg-street",
-   "cast": [
-    {
-     "id": "larry:concerned",
-     "x": 0.3
-    }
-   ],
-   "card": "REQUIRED TO LEAVE",
-   "card_at": "so what happens if"
-  },
-  {
-   "at": "and the treaty says",
-   "bg": "bg-courtroom",
-   "cast": [
-    {
-     "id": "char-judge",
-     "x": 0.7
-    },
-    {
-     "id": "larry:explaining",
-     "x": 0.3
-    }
-   ],
-   "card": "HOME COUNTRY COURTS STILL APPLY",
-   "card_at": "and the treaty says"
-  },
-  {
-   "at": "also not everyone",
-   "bg": "white",
+   "at": "top diplomats can't be",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:pointing"
@@ -163,51 +101,96 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🪪",
-     "text": "Consular: less"
+     "icon": "⚖️",
+     "text": "NO TRIAL HERE"
     }
    ]
   },
   {
-   "at": "passport alone",
+   "at": "wait so he just",
+   "bg": "bg-street",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "worried",
+     "gest": "think",
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "at": "you see it's like",
    "bg": "white",
    "cast": [
     {
-     "id": "larry:smug"
+     "id": "larry:explaining"
+    }
+   ]
+  },
+  {
+   "at": "the diplomat can't give",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:concerned"
     }
    ],
    "props": [
     {
      "id": "sign",
-     "icon": "🛂❌",
-     "text": "Passport isn't enough"
+     "icon": "🚪",
+     "text": "GET OUT"
     }
    ]
   },
   {
-   "at": "in the state department's own words",
-   "bg": "bg-capitol",
+   "at": "and not everyone at",
+   "bg": "white",
    "cast": [
     {
-     "id": "larry:concerned",
-     "x": 0.3
+     "id": "larry:concerned"
     }
    ],
-   "card": "“NOT A LICENSE TO FLOUT THE LAW”",
-   "card_at": "in the state department's own words"
+   "props": [
+    {
+     "id": "sign",
+     "icon": "⚠️",
+     "text": "NOT EVERYONE GETS IT"
+    }
+   ]
+  },
+  {
+   "at": "so the diplomat flies",
+   "bg": "bg-street",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "none",
+     "x": 0.5
+    }
+   ]
   },
   {
    "at": "send this to",
    "bg": "white",
    "cast": [
     {
-     "id": "larry:auto"
+     "id": "larry:pointing"
     }
    ]
   },
   {
    "at": "so before you assume",
    "bg": "bg-street",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
+    }
+   ],
    "loop": true
   }
  ],
@@ -215,5 +198,6 @@
  "share_line": "Send this to the friend who thinks the rules don't apply to them",
  "hook_old": "ILLEGAL… BUT NO TRIAL?",
  "script_old": "A crime can be clearly illegal, and the country where it happened still may not be able to put that person on trial. It's called diplomatic immunity, and it comes from an international treaty, the Vienna Convention on Diplomatic Relations. Here's how the U.S. State Department explains it. Accredited diplomatic agents have complete immunity from the criminal jurisdiction of the host country's courts. So the law still applies to them. The host country just can't prosecute them. That's the gap between breaking a law and being tried for it. But the immunity isn't the diplomat's to give away. The individual can't waive it. Their home country can, and the waiver has to be express. If there's no waiver in a serious case, like a felony or a violent crime, U.S. policy is to require that person to leave the country. And the treaty says immunity in the host country doesn't exempt a diplomat from the courts of their own country. Status matters too. Consular officers usually have immunity only for official acts, and consular employees have even less. A diplomatic-looking passport alone isn't enough. In the State Department's words, diplomatic immunity is not a license to flout the law. [loop] So before you assume a diplomat is above the law, remember",
- "script_simple": true
+ "script_simple": true,
+ "story_format": true
 }

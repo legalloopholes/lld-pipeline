@@ -17,7 +17,7 @@
   "#lawtok",
   "#ip"
  ],
- "script": "The U.S. government can use your patented invention without your permission, and you can't stop it. [disclaimer] Normally, a patent is like a stop sign. If someone uses your invention without a deal, you can go to court and make them stop. But there's a federal law with a different rule when the user is the U.S. government. If the government uses or makes your patented invention without a license, you can't stop it. Instead, you sue the United States in a special court, and you ask for fair payment. So you generally can't get an order blocking the government. The fight is about money! And it covers companies working for the government too, if the government said okay. Picture this. A company is building equipment for a federal agency. It uses someone's patented design. And the government signed off on it. The patent owner's claim is usually against the government, for payment. Not against the company! Here's the limit. This is not a free pass for any company to copy patents. It only covers use by or for the United States, with the government's permission. And the owner still gets paid. Think of it kind of like the government taking land for a highway. But for inventions! [loop] So before you assume a patent means nobody can use your invention, remember",
+ "script": "The U.S. government can use your patented invention without your permission, and you can't stop it. [disclaimer] Meet Gary. Gary invents a brilliant new design. And he patents it. Normally, a patent is like a stop sign. If someone uses your invention without a deal, you can go to court and make them stop. Then a company building equipment for a federal agency uses Gary's design. And the government signs off on it. Gary is furious. He wants a court order to stop them. But there's a federal law for when the user is the U.S. government. If the government uses or makes your invention without a license, you generally can't block it. Wait. So what does Gary get? You see, it's like the government taking land for a highway. You can't stop the highway. But you can make them pay for the land. Gary sues the United States in a special court, and asks for fair payment. His claim is usually against the government, not the company. This is not a free pass for any company to copy patents. It only covers use by or for the United States, with the government's permission. So Gary's patent can stop almost anyone in America, except the government that gave him the patent. [loop] So before you assume a patent means nobody can use your invention, remember",
  "publish_at": "2026-11-26T12:00:00-05:00",
  "sources": [
   "https://www.law.cornell.edu/uscode/text/28/1498"
@@ -29,21 +29,16 @@
    "bg": "bg-office",
    "cast": [
     {
-     "id": "larry:smug",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "💡🏛️",
-     "text": ""
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
     }
    ]
   },
   {
-   "at": "normally a patent",
-   "bg": "white",
+   "at": "normally a patent is",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:explaining"
@@ -53,13 +48,49 @@
     {
      "id": "sign",
      "icon": "🛑",
-     "text": "Patent = stop sign"
+     "text": "PATENT = STOP SIGN"
     }
    ]
   },
   {
-   "at": "but there's a federal law",
-   "bg": "white",
+   "at": "then a company building",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "explain",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "neutral",
+     "gest": "none",
+     "x": 0.7
+    }
+   ]
+  },
+  {
+   "at": "gary is furious he",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "angry",
+     "gest": "point",
+     "x": 0.3
+    },
+    {
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "shrug",
+     "x": 0.7
+    }
+   ]
+  },
+  {
+   "at": "but there's a federal",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:pointing"
@@ -67,86 +98,53 @@
    ],
    "props": [
     {
-     "id": "doc",
-     "text": "28 U.S.C. §1498",
-     "sub": "Government use"
-    }
-   ]
-  },
-  {
-   "at": "if the government uses",
-   "bg": "bg-courtroom",
-   "cast": [
-    {
-     "id": "char-judge",
-     "x": 0.7
-    },
-    {
-     "id": "larry:explaining",
-     "x": 0.3
-    }
-   ],
-   "card": "SUE FOR COMPENSATION",
-   "card_at": "if the government uses"
-  },
-  {
-   "at": "so you generally can't",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:surprised"
-    }
-   ],
-   "props": [
-    {
      "id": "sign",
-     "icon": "🛑➡️💵",
-     "text": "Money, not a block"
-    }
-   ],
-   "zooms": [
-    {
-     "at": "so you generally can't",
-     "amount": 1.18,
-     "hold": 0.9
+     "icon": "🏛️",
+     "text": "FEDERAL LAW: NO STOP"
     }
    ]
   },
   {
-   "at": "and it covers companies",
-   "bg": "bg-office",
-   "cast": [
-    {
-     "id": "larry:pointing",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🏗️",
-     "text": "Authorized contractors"
-    }
-   ]
-  },
-  {
-   "at": "picture this",
+   "at": "wait so what does",
    "bg": "bg-office",
    "cast": [
     {
      "id": "char-friend-chimp",
-     "x": 0.68
-    },
-    {
-     "id": "larry:explaining",
-     "x": 0.3
+     "face": "surprised",
+     "gest": "think",
+     "x": 0.5
     }
-   ],
-   "card": "HYPOTHETICAL",
-   "card_at": "picture this"
+   ]
   },
   {
-   "at": "here's the limit",
+   "at": "you see it's like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ]
+  },
+  {
+   "at": "gary sues the united",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "face": "neutral",
+     "gest": "point",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "none",
+     "x": 0.22
+    }
+   ]
+  },
+  {
+   "at": "this is not a",
    "bg": "white",
    "cast": [
     {
@@ -156,51 +154,43 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🏢🚫",
-     "text": "Not for companies"
+     "icon": "⚠️",
+     "text": "NOT A FREE PASS"
     }
    ]
   },
   {
-   "at": "it only covers use",
-   "bg": "white",
+   "at": "so gary's patent can",
+   "bg": "bg-office",
    "cast": [
     {
-     "id": "larry:pointing"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "💵",
-     "text": "Owner gets paid"
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "shrug",
+     "x": 0.5
     }
    ]
-  },
-  {
-   "at": "think of it kind of",
-   "bg": "bg-capitol",
-   "cast": [
-    {
-     "id": "larry:smug",
-     "x": 0.3
-    }
-   ],
-   "card": "LIKE EMINENT DOMAIN",
-   "card_at": "think of it kind of"
   },
   {
    "at": "send this to",
    "bg": "white",
    "cast": [
     {
-     "id": "larry:auto"
+     "id": "larry:pointing"
     }
    ]
   },
   {
    "at": "so before you assume",
    "bg": "bg-office",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
+    }
+   ],
    "loop": true
   }
  ],
@@ -208,5 +198,6 @@
  "share_line": "Send this to the friend who takes your stuff and calls it borrowing",
  "hook_old": "PATENTED… GOVERNMENT USES IT ANYWAY",
  "script_old": "The U.S. government can use a patented invention without asking first, and the inventor may get money instead of a court order. Normally, a patent lets the owner go to court to stop unlicensed use. But a federal law, section fourteen ninety-eight of title twenty-eight, sets a different rule when the user is the United States. If a patented invention is used or made by or for the U.S. government without a license, the patent owner's remedy is a lawsuit against the United States in the Court of Federal Claims, for reasonable compensation. So the owner generally can't get an order blocking that government use. Instead, the fight is about money. And by or for the government includes contractors, when the government has authorized or consented to the use. Picture a contractor building equipment for a federal agency using someone's patented design, with the government's okay. The patent owner's claim is generally against the government, for compensation. Here's the limit. This is not a free pass for any company to copy patents. It applies to use by or for the United States, with government authorization or consent, and the owner is still entitled to be paid. Think of it a bit like eminent domain for inventions. [loop] So before you assume a patent means nobody can use your invention, remember",
- "script_simple": true
+ "script_simple": true,
+ "story_format": true
 }

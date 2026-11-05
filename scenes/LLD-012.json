@@ -17,7 +17,7 @@
   "#lawtok",
   "#weirdlaws"
  ],
- "script": "The United States government went to court to argue that a Snuggie is clothing. And lost. [disclaimer] This is a real trade court case in America, from twenty seventeen. You know the Snuggie. It's that giant fleece blanket with sleeves. When it comes into the country, customs has to put it in a category, and the category decides the tax. Customs said, that's clothing! That meant a tax of almost fifteen percent. But the company, Allstar Marketing, said, no, it's a blanket! That's only eight and a half percent. So the court looked at the facts. The design came from regular blankets. There are no buttons and no zipper. Nothing is fitted. It's huge and loose. And stores sell it with the bedding and home stuff, not with the clothes. Even the company's paperwork called it a blanket. But what about the sleeves? The court said the sleeves are just extra. They keep the blanket on you while your hands are free. Final answer? The Snuggie is a blanket! So it got the cheaper blanket tax. Here's the limit. That was one product and one tax decision. Sewing sleeves onto a blanket doesn't magically change its taxes. And just calling something a blanket on the label isn't enough. [loop] So the next time you're wearing your blanket, remember",
+ "script": "The United States government went to court to argue that a Snuggie is clothing. And lost. [disclaimer] Meet Gary. Gary loves his Snuggie. It's that giant fleece blanket with sleeves. But when Snuggies come into the country, customs has to pick a category. And the category decides the tax. Customs takes one look and says, it has sleeves. That's clothing. Almost fifteen percent tax. The company, Allstar Marketing, says, no. It's a blanket. That's only eight and a half percent. So in twenty seventeen, a trade court looks at the facts. No buttons. No zipper. Nothing fitted. It's huge and loose. And stores sell it next to the bedding, not the clothes. Wait. But what about the sleeves? You see, the court said the sleeves are just extras. They keep the blanket on you while your hands are free. It's like putting a handle on a bucket. It's still a bucket. Final answer. The Snuggie is a blanket. Cheaper tax. That was one product and one tax decision. Sewing sleeves on a blanket doesn't magically change its taxes, and a label alone isn't enough. So the government lost, because of the sleeves. The one thing that makes a Snuggie a Snuggie legally doesn't count. [loop] So the next time you're wearing your blanket, remember",
  "publish_at": "2026-11-07T12:00:00-05:00",
  "sources": [
   "https://www.cit.uscourts.gov/sites/cit/files/17-15.pdf"
@@ -26,38 +26,49 @@
  "scenes": [
   {
    "at": "start",
+   "bg": "bg-neighborhood",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "at": "but when snuggies come",
    "bg": "bg-harbor",
    "cast": [
     {
-     "id": "larry:smug",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🛋️👘",
-     "text": "Blanket or clothing?"
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "point",
+     "x": 0.5
     }
    ]
   },
   {
-   "at": "this is a real trade",
-   "bg": "bg-courtroom",
+   "at": "customs takes",
+   "bg": "bg-harbor",
    "cast": [
     {
-     "id": "char-judge",
-     "x": 0.7
+     "id": "char-politician",
+     "face": "angry",
+     "gest": "point",
+     "x": 0.3
     },
     {
-     "id": "larry:explaining",
-     "x": 0.3
+     "id": "char-friend-chimp",
+     "face": "surprised",
+     "gest": "none",
+     "x": 0.7
     }
    ]
   },
   {
-   "at": "you know the snuggie",
-   "bg": "white",
+   "at": "the company allstar marketing",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:explaining"
@@ -66,30 +77,92 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🧣",
-     "text": "Blanket with sleeves"
+     "icon": "🧾",
+     "text": "CLOTHING: ~15% TAX"
     }
    ]
   },
   {
-   "at": "when it comes into",
-   "bg": "bg-harbor",
+   "at": "so in",
+   "bg": "bg-courtroom",
    "cast": [
     {
-     "id": "larry:pointing",
+     "id": "char-judge",
+     "face": "neutral",
+     "gest": "think",
      "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "shrug",
+     "x": 0.22
+    }
+   ]
+  },
+  {
+   "at": "no buttons no zipper",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:pointing"
     }
    ],
    "props": [
     {
      "id": "sign",
-     "icon": "📦⚓",
-     "text": "Tariff category"
+     "icon": "🧥",
+     "text": "NO BUTTONS. NO ZIPPER"
     }
    ]
   },
   {
-   "at": "customs said",
+   "at": "wait but what about",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "face": "surprised",
+     "gest": "think",
+     "x": 0.3
+    },
+    {
+     "id": "char-politician",
+     "face": "angry",
+     "gest": "arms_up",
+     "x": 0.22
+    }
+   ]
+  },
+  {
+   "at": "you see the court",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ]
+  },
+  {
+   "at": "final answer the snuggie",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "face": "smug",
+     "gest": "point",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "arms_up",
+     "x": 0.22
+    }
+   ]
+  },
+  {
+   "at": "that was",
    "bg": "white",
    "cast": [
     {
@@ -99,102 +172,20 @@
    "props": [
     {
      "id": "sign",
-     "icon": "👕",
-     "text": "Garment: 14.9%"
+     "icon": "⚠️",
+     "text": "ONE PRODUCT ONLY"
     }
    ]
   },
   {
-   "at": "but the company",
-   "bg": "white",
+   "at": "so the government lost",
+   "bg": "bg-neighborhood",
    "cast": [
     {
-     "id": "larry:smug"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🛏️",
-     "text": "Blanket: 8.5%"
-    }
-   ]
-  },
-  {
-   "at": "so the court looked",
-   "bg": "bg-courtroom",
-   "cast": [
-    {
-     "id": "char-judge",
-     "x": 0.7
-    },
-    {
-     "id": "larry:explaining",
-     "x": 0.3
-    }
-   ],
-   "card": "NO CLOSURE. NOT FITTED.",
-   "card_at": "so the court looked"
-  },
-  {
-   "at": "and stores sell it",
-   "bg": "bg-shop",
-   "cast": [
-    {
-     "id": "larry:pointing",
-     "x": 0.3
-    }
-   ],
-   "card": "SOLD AS BEDDING",
-   "card_at": "and stores sell it"
-  },
-  {
-   "at": "but what about the sleeves",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:thinking"
-    }
-   ],
-   "card": "SLEEVES: “INCIDENTAL”",
-   "card_at": "but what about the sleeves",
-   "zooms": [
-    {
-     "at": "but what about the sleeves",
-     "amount": 1.18,
-     "hold": 0.9
-    }
-   ]
-  },
-  {
-   "at": "final answer",
-   "bg": "bg-courtroom",
-   "cast": [
-    {
-     "id": "char-judge",
-     "x": 0.7
-    },
-    {
-     "id": "larry:surprised",
-     "x": 0.3
-    }
-   ],
-   "card": "VERDICT: BLANKET",
-   "card_at": "final answer"
-  },
-  {
-   "at": "here's the limit",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:concerned"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🏷️",
-     "text": "Label isn't enough"
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "none",
+     "x": 0.5
     }
    ]
   },
@@ -203,13 +194,21 @@
    "bg": "white",
    "cast": [
     {
-     "id": "larry:auto"
+     "id": "larry:pointing"
     }
    ]
   },
   {
    "at": "so the next time",
-   "bg": "bg-harbor",
+   "bg": "bg-neighborhood",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
+    }
+   ],
    "loop": true
   }
  ],
@@ -217,5 +216,6 @@
  "share_line": "Send this to the friend who hasn't taken off their Snuggie in years",
  "hook_old": "IS A SNUGGIE CLOTHING?",
  "script_old": "The government wanted to tax the Snuggie like clothing, but its sleeves weren't enough. This is a U.S. Court of International Trade decision from February twenty seventeen. The Snuggie is that oversized fleece blanket with sleeves. When it's imported, customs has to put it in a tariff category, and the category sets the duty. Customs called it a garment, at fourteen point nine percent. The importer, Allstar Marketing, said it's a blanket, at eight and a half percent. So the court looked at the evidence. The design came from existing blankets. There's no closure and nothing fitted about it. It's huge and loose. It's sold in bedding and housewares departments, not clothing. Allstar described it as a blanket on its invoices, and its trademark covers blankets and throws. And the sleeves? The court said they were incidental to its use as a blanket. They mostly keep it in place while your hands are free. The court's conclusion: the Snuggie is designed, used, and functions as a blanket. So it got the lower blanket rate. Here's the limit. That was one product and one tariff decision. Sewing sleeves onto a blanket doesn't automatically change its taxes, and calling something a blanket on the label isn't enough by itself. [loop] So the next time you're wearing your blanket, remember",
- "script_simple": true
+ "script_simple": true,
+ "story_format": true
 }

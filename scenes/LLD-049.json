@@ -17,7 +17,7 @@
   "#lawtok",
   "#constitution"
  ],
- "script": "For about one day, certain drugs stopped being illegal to possess in Ireland because of a court ruling. [disclaimer] This is a story about how laws get made. Not a guide to anything else! Ireland had a drug law from nineteen seventy seven. And that law let the government add new drugs to the banned list on its own. Over the years, the government used that power to ban lots of newer drugs. Then, in March twenty fifteen, a court looked at that power. And it ruled against it! According to Ireland's health department, that affected having certain newer drugs that had been added that way. It did not affect the older drugs, like heroin, cocaine or cannabis. Those were still illegal! And the department said selling these drugs was still a crime under other laws. But here's the thing. The government saw this coming. That same evening, it rushed in an emergency law, aiming to pass it in about a day. And it banned everything again, exactly like before the ruling. Done! So the gap was real. But it was super short. It never covered selling. And it's long closed. The lesson? How a law hands power to the government really matters. [loop] So when someone tells you a court legalized drugs overnight, remember",
+ "script": "For about one day, certain drugs stopped being illegal to possess in Ireland because of a court ruling. [disclaimer] Meet Ireland's government. It has a drug law from nineteen seventy seven. That law let the government add new drugs to the banned list on its own. And over the years, it did. A lot. Then, in March twenty fifteen, a court looks at that power. And it rules against it. Ireland's health department said that affected possessing certain newer drugs that had been added that way. Not heroin, cocaine or cannabis. Those stayed illegal. Wait. So some drugs were legal to have, just like that? You see, it's like a club where the manager kept adding names to the banned list, and then found out he never had the power to do that. The list falls apart. And selling these drugs was still a crime under other laws. But the government saw it coming. That same evening, it rushed in an emergency law, aiming to pass it in about a day. And it banned everything again, exactly like before. So the gap was real, but super short, and long closed. The lesson is about how a law hands power to the government. So the court's ruling didn't really change the list. It just made the government write the same list again. [loop] So when someone tells you a court legalized drugs overnight, remember",
  "publish_at": "2026-11-25T19:00:00-05:00",
  "sources": [
   "https://www.drugsandalcohol.ie/23570/",
@@ -27,34 +27,19 @@
  "scenes": [
   {
    "at": "start",
-   "bg": "white",
+   "bg": "bg-capitol",
    "cast": [
     {
-     "id": "larry:concerned"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🇮🇪📜",
-     "text": ""
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "explain",
+     "x": 0.5
     }
    ]
   },
   {
-   "at": "this is a story",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:concerned"
-    }
-   ],
-   "card": "ABOUT LAWMAKING",
-   "card_at": "this is a story"
-  },
-  {
-   "at": "ireland had a drug law",
-   "bg": "white",
+   "at": "that law let the",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:explaining"
@@ -62,25 +47,9 @@
    ],
    "props": [
     {
-     "id": "doc",
-     "text": "Misuse of Drugs Act 1977",
-     "sub": "Ireland"
-    }
-   ]
-  },
-  {
-   "at": "over the years",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:pointing"
-    }
-   ],
-   "props": [
-    {
      "id": "sign",
-     "icon": "➕📋",
-     "text": "Added by government"
+     "icon": "📜",
+     "text": "ADD TO THE LIST"
     }
    ]
   },
@@ -90,42 +59,39 @@
    "cast": [
     {
      "id": "char-judge",
-     "x": 0.7
+     "face": "neutral",
+     "gest": "think",
+     "x": 0.3
     },
     {
-     "id": "larry:surprised",
-     "x": 0.3
-    }
-   ],
-   "card": "COURT OF APPEAL RULING",
-   "card_at": "then in march",
-   "zooms": [
-    {
-     "at": "then in march",
-     "amount": 1.18,
-     "hold": 0.9
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "point",
+     "x": 0.22
     }
    ]
   },
   {
-   "at": "according to ireland's health",
-   "bg": "white",
+   "at": "and it rules against",
+   "bg": "bg-courtroom",
    "cast": [
     {
-     "id": "larry:explaining"
-    }
-   ],
-   "props": [
+     "id": "char-judge",
+     "face": "angry",
+     "gest": "point",
+     "x": 0.3
+    },
     {
-     "id": "sign",
-     "icon": "🧪",
-     "text": "Newer substances only"
+     "id": "char-politician",
+     "face": "surprised",
+     "gest": "arms_up",
+     "x": 0.22
     }
    ]
   },
   {
-   "at": "it did not affect",
-   "bg": "white",
+   "at": "ireland's health department said",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:pointing"
@@ -134,13 +100,74 @@
    "props": [
     {
      "id": "sign",
-     "icon": "📋✅",
-     "text": "Older drugs: unchanged"
+     "icon": "💊",
+     "text": "NEWER DRUGS ONLY"
     }
    ]
   },
   {
-   "at": "and the department said",
+   "at": "wait so some drugs",
+   "bg": "bg-capitol",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "worried",
+     "gest": "think",
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "at": "you see it's like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ]
+  },
+  {
+   "at": "and selling these drugs",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "⚠️",
+     "text": "SELLING: STILL A CRIME"
+    }
+   ]
+  },
+  {
+   "at": "but the government saw",
+   "bg": "bg-capitol",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "angry",
+     "gest": "arms_up",
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "at": "and it banned everything",
+   "bg": "bg-capitol",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "point",
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "at": "so the gap was",
    "bg": "white",
    "cast": [
     {
@@ -150,35 +177,20 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🚫",
-     "text": "Supply still illegal"
+     "icon": "📚",
+     "text": "THE REAL LESSON"
     }
    ]
   },
   {
-   "at": "but here's the thing",
-   "bg": "white",
+   "at": "so the court's ruling",
+   "bg": "bg-capitol",
    "cast": [
     {
-     "id": "larry:surprised"
-    }
-   ],
-   "card": "FIXED IN ~24 HOURS",
-   "card_at": "but here's the thing"
-  },
-  {
-   "at": "so the gap was real",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:concerned"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🔒",
-     "text": "Long closed"
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "shrug",
+     "x": 0.5
     }
    ]
   },
@@ -187,13 +199,21 @@
    "bg": "white",
    "cast": [
     {
-     "id": "larry:auto"
+     "id": "larry:pointing"
     }
    ]
   },
   {
    "at": "so when someone tells",
-   "bg": "white",
+   "bg": "bg-capitol",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "explain",
+     "x": 0.5
+    }
+   ],
    "loop": true
   }
  ],
@@ -201,5 +221,6 @@
  "share_line": "Send this to the friend who thinks every law has a loophole",
  "hook_old": "A GAP… FOR ONE DAY",
  "script_old": "A court ruling briefly knocked certain drugs out of Ireland's possession laws. This is a story about how laws get made, not a guide to anything else. Ireland's Misuse of Drugs Act of nineteen seventy-seven let the government add new substances to the list of controlled drugs. Over the years, successive governments used that power to control newer psychoactive substances. On March tenth, twenty fifteen, the Court of Appeal ruled on a challenge to that power, and the ruling went against it. According to Ireland's Department of Health, that affected possession of certain newer psychoactive substances that had been added that way. It did not affect the laws on older drugs like heroin, cocaine or cannabis. And the department said selling and supplying psychoactive substances was still an offense under other laws. The government had prepared for this outcome. Emergency legislation was introduced that same evening, with the aim of passing both houses of parliament within twenty-four hours, and it re-controlled everything that had been controlled before the ruling. So the gap was real, but it was very short, it never covered selling, and it's long closed. The lesson is how much depends on the way a law gives power to the government in the first place. [loop] So when someone tells you a court legalized drugs overnight, remember",
- "script_simple": true
+ "script_simple": true,
+ "story_format": true
 }

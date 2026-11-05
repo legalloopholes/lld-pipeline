@@ -17,7 +17,7 @@
   "#lawtok",
   "#police"
  ],
- "script": "The government can take your cash and your car, and you never have to be convicted of anything. [disclaimer] Wait, what? Here's how. Under federal law, there are different kinds of forfeiture. Criminal forfeiture is part of a criminal case, and they need a conviction. But civil forfeiture is different. It's a case against the property itself. Not the person! The Justice Department explains it like this. The government is the one suing. And the property, like your cash or your car, is the defendant! And no criminal conviction is needed. But the government still has to prove its case. It has to show it's more likely than not that the property should be taken. And if they say the property was used in a crime, there has to be a real, solid connection between the property and the crime. And owners can fight back. An innocent owner, like someone who had no idea about the illegal stuff, can protect what's theirs, but they have to prove it. And a judge can cut down or cancel a forfeiture that's wildly out of proportion to the crime. Here's the limit. A temporary seizure isn't the same as losing it for good. State rules are different. And none of this means police can keep anything they want without evidence. [loop] So before you assume property can only be taken after a conviction, remember",
+ "script": "The government can take your cash and your car, and you never have to be convicted of anything. [disclaimer] Meet Gary. Gary is driving with a lot of cash in his car. The government takes the cash. And the car. Gary says, I haven't been convicted of anything! Under federal law, there's criminal forfeiture, which needs a conviction. And there's civil forfeiture. A case against the property itself. The government is the one suing. And the cash or the car is the defendant. No conviction needed. Wait. Gary's car is on trial? You see, it's like the case is called the United States versus one blue car. The car can't hire a lawyer. So Gary has to show up for it. But the government still has to prove it's more likely than not that the property should be taken, with a real connection to a crime. Innocent owners can fight back, but they have to prove it. A judge can cut a forfeiture that's wildly out of proportion. And state rules are different. So Gary goes to court. Gary is never charged with anything. And he still has to go to court and fight for his car. [loop] So before you assume property can only be taken after a conviction, remember",
  "publish_at": "2026-11-30T19:00:00-05:00",
  "sources": [
   "https://www.law.cornell.edu/uscode/text/18/983",
@@ -30,21 +30,46 @@
    "bg": "bg-street",
    "cast": [
     {
-     "id": "larry:concerned",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🚗⚖️",
-     "text": ""
+     "id": "char-friend-chimp",
+     "face": "neutral",
+     "gest": "wave",
+     "x": 0.5
     }
    ]
   },
   {
-   "at": "under federal law there are",
-   "bg": "white",
+   "at": "the government takes the",
+   "bg": "bg-street",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "point",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "surprised",
+     "gest": "none",
+     "x": 0.7
+    }
+   ]
+  },
+  {
+   "at": "gary says i haven't",
+   "bg": "bg-street",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "angry",
+     "gest": "arms_up",
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "at": "under federal law there's",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:explaining"
@@ -53,32 +78,14 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⚖️👤",
-     "text": "Criminal: conviction"
+     "icon": "💵",
+     "text": "CIVIL FORFEITURE"
     }
    ]
   },
   {
-   "at": "but civil forfeiture is different",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:surprised"
-    }
-   ],
-   "card": "CASE AGAINST THE PROPERTY",
-   "card_at": "but civil forfeiture is different",
-   "zooms": [
-    {
-     "at": "but civil forfeiture is different",
-     "amount": 1.18,
-     "hold": 0.9
-    }
-   ]
-  },
-  {
-   "at": "the justice department explains",
-   "bg": "white",
+   "at": "the government is the",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:pointing"
@@ -87,77 +94,50 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🏛️ v. 🚗",
-     "text": "Property = defendant"
+     "icon": "🚗",
+     "text": "DEFENDANT: THE CAR"
     }
    ]
   },
   {
-   "at": "but the government still has",
-   "bg": "bg-courtroom",
+   "at": "wait gary's car is",
+   "bg": "bg-street",
    "cast": [
     {
-     "id": "char-judge",
-     "x": 0.7
-    },
-    {
-     "id": "larry:explaining",
-     "x": 0.3
-    }
-   ],
-   "card": "PREPONDERANCE OF EVIDENCE",
-   "card_at": "but the government still has"
-  },
-  {
-   "at": "and if they say",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:pointing"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🔗",
-     "text": "Substantial connection"
+     "id": "char-friend-chimp",
+     "face": "surprised",
+     "gest": "think",
+     "x": 0.5
     }
    ]
   },
   {
-   "at": "and owners can fight back",
+   "at": "you see it's like",
    "bg": "white",
    "cast": [
     {
      "id": "larry:explaining"
     }
+   ]
+  },
+  {
+   "at": "but the government still",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
    ],
    "props": [
     {
      "id": "sign",
-     "icon": "😇",
-     "text": "Innocent owner"
+     "icon": "⚖️",
+     "text": "GOVERNMENT MUST PROVE"
     }
    ]
   },
   {
-   "at": "and a judge can cut",
-   "bg": "bg-courtroom",
-   "cast": [
-    {
-     "id": "char-judge",
-     "x": 0.7
-    },
-    {
-     "id": "larry:smug",
-     "x": 0.3
-    }
-   ],
-   "card": "GROSSLY DISPROPORTIONAL? REDUCED",
-   "card_at": "and a judge can cut"
-  },
-  {
-   "at": "here's the limit",
+   "at": "innocent owners can fight",
    "bg": "white",
    "cast": [
     {
@@ -167,8 +147,38 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⏸️≠🏁",
-     "text": "Seizure ≠ forfeiture"
+     "icon": "⚠️",
+     "text": "OWNERS CAN FIGHT"
+    }
+   ]
+  },
+  {
+   "at": "so gary goes to",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "face": "neutral",
+     "gest": "point",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "none",
+     "x": 0.22
+    }
+   ]
+  },
+  {
+   "at": "gary is never charged",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "shrug",
+     "x": 0.5
     }
    ]
   },
@@ -177,13 +187,21 @@
    "bg": "white",
    "cast": [
     {
-     "id": "larry:auto"
+     "id": "larry:pointing"
     }
    ]
   },
   {
    "at": "so before you assume",
    "bg": "bg-street",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "neutral",
+     "gest": "wave",
+     "x": 0.5
+    }
+   ],
    "loop": true
   }
  ],
@@ -191,5 +209,6 @@
  "share_line": "Send this to the friend who carries way too much cash for no reason",
  "hook_old": "NO CONVICTION NEEDED?",
  "script_old": "You don't always need a criminal conviction for the government to seek forfeiture of your property. Under federal law, there are a few kinds of forfeiture. Criminal forfeiture is part of a criminal case, and it requires a conviction. Civil forfeiture is different. It's a case against the property itself, not the person. The Justice Department describes it this way: the government is the plaintiff, and the property is the defendant. And no criminal conviction is required. But the government still has to make its case. Under federal law, it has to prove by a preponderance of the evidence that the property is subject to forfeiture. And if the claim is that the property was used in a crime, there has to be a substantial connection between the property and the offense. Owners have defenses. An innocent owner, for example someone who didn't know about the illegal conduct, can protect their interest, though they have to prove it. And a court can reduce or eliminate a forfeiture that's grossly disproportional to the offense. Here's the limit. A temporary seizure isn't the same as a final forfeiture, state rules vary, and none of this means police can keep anything without evidence. [loop] So before you assume property can only be taken after a conviction, remember",
- "script_simple": true
+ "script_simple": true,
+ "story_format": true
 }

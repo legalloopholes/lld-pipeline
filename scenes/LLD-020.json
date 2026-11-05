@@ -17,7 +17,7 @@
   "#vat",
   "#lawtok"
  ],
- "script": "Pringles went to court to argue that Pringles are not potato chips. [disclaimer] Here's the setup. In the U.K., most food has no sales tax. But potato crisps are the exception! They get taxed. The law covers potato crisps, potato sticks, potato puffs, and similar snacks made from the potato, or from potato flour. And the company that made Pringles back then said, our snack doesn't fit! Only about forty two percent of it is potato. And it's not really like a crisp! First, a tax tribunal said, nope, it's taxed. Then a higher court said, actually, you're right, Pringles! No tax! And that's where a lot of videos stop the story. But wait! In two thousand nine, the Court of Appeal flipped it back. The judges said made from the potato doesn't mean made only of potato. Even normal crisps aren't pure potato! With more than forty percent potato flour, it was fair to say Pringles are made from potato and they're like crisps. One judge added that courts shouldn't make up a minimum percentage that the law never wrote. So Pringles stayed taxed. The early win didn't last, and the mixed recipe didn't save them. [loop] So before you argue a Pringle isn't a crisp, remember",
+ "script": "Pringles went to court to argue that Pringles are not potato chips. [disclaimer] Meet the company that made Pringles in the United Kingdom. In the U.K., most food has no sales tax. But potato crisps do. The law taxes crisps and similar snacks made from the potato, or from potato flour. And the company says, our snack is only about forty two percent potato. It's not really a crisp. The rest is things like corn, rice and wheat flour, plus fat. And it's pressed into a shape, not sliced from a potato. First, a tax tribunal says, nope, taxed. Then a higher court says, actually, you're right. No tax. Pringles wins. Wait. Then the Court of Appeal flips it back, in two thousand nine? You see, the judges said made from the potato doesn't mean made only of potato. Even normal crisps aren't pure potato. It's like a cake. It's made from flour, even with eggs and sugar in it. One judge added that courts shouldn't invent a minimum percentage the law never wrote. So Pringles stayed taxed. The company spent years in court proving its snack wasn't potato enough, and walked out officially potato enough. [loop] So before you argue a Pringle isn't a crisp, remember",
  "publish_at": "2026-11-11T12:00:00-05:00",
  "sources": [
   "https://www.bailii.org/ew/cases/EWCA/Civ/2009/407.html",
@@ -30,156 +30,122 @@
    "bg": "bg-shop",
    "cast": [
     {
-     "id": "larry:smug",
-     "x": 0.3
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "at": "in the uk most",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:explaining"
     }
    ],
    "props": [
     {
      "id": "sign",
-     "icon": "🥔❓",
-     "text": ""
+     "icon": "🥔",
+     "text": "CRISPS: TAXED"
     }
    ]
   },
   {
-   "at": "here's the setup",
+   "at": "the law taxes crisps",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📜",
+     "text": "MADE FROM THE POTATO"
+    }
+   ]
+  },
+  {
+   "at": "and the company says",
    "bg": "bg-shop",
    "cast": [
     {
-     "id": "larry:explaining",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🥔",
-     "text": "Crisps: taxed"
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "point",
+     "x": 0.5
     }
    ]
   },
   {
-   "at": "the law covers potato crisps",
-   "bg": "white",
+   "at": "a tax tribunal says",
+   "bg": "bg-courtroom",
    "cast": [
     {
-     "id": "larry:pointing"
-    }
-   ],
-   "props": [
+     "id": "char-judge",
+     "face": "neutral",
+     "gest": "point",
+     "x": 0.3
+    },
     {
-     "id": "doc",
-     "text": "“…made from the potato”",
-     "sub": "UK VAT law"
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "none",
+     "x": 0.22
     }
    ]
   },
   {
-   "at": "and the company that made",
+   "at": "then a higher court",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "face": "surprised",
+     "gest": "think",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "arms_up",
+     "x": 0.22
+    }
+   ]
+  },
+  {
+   "at": "wait then the court",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "face": "angry",
+     "gest": "point",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "surprised",
+     "gest": "none",
+     "x": 0.22
+    }
+   ]
+  },
+  {
+   "at": "you see the judges",
    "bg": "white",
    "cast": [
     {
      "id": "larry:explaining"
     }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🥔",
-     "text": "Only ~42% potato"
-    }
    ]
   },
   {
-   "at": "a tax tribunal said",
-   "bg": "bg-courtroom",
-   "cast": [
-    {
-     "id": "char-judge",
-     "x": 0.7
-    },
-    {
-     "id": "larry:concerned",
-     "x": 0.3
-    }
-   ],
-   "card": "TRIBUNAL: TAXED",
-   "card_at": "a tax tribunal said"
-  },
-  {
-   "at": "then a higher court said",
-   "bg": "bg-courtroom",
-   "cast": [
-    {
-     "id": "char-judge",
-     "x": 0.7
-    },
-    {
-     "id": "larry:surprised",
-     "x": 0.3
-    }
-   ],
-   "card": "HIGH COURT: ZERO-RATED!",
-   "card_at": "then a higher court said"
-  },
-  {
-   "at": "and that's where a lot",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:smug"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "✋",
-     "text": "Wait…"
-    }
-   ]
-  },
-  {
-   "at": "but wait",
-   "bg": "bg-courtroom",
-   "cast": [
-    {
-     "id": "char-judge",
-     "x": 0.7
-    },
-    {
-     "id": "larry:surprised",
-     "x": 0.3
-    }
-   ],
-   "card": "COURT OF APPEAL: TAXED",
-   "card_at": "but wait",
-   "zooms": [
-    {
-     "at": "but wait",
-     "amount": 1.18,
-     "hold": 0.9
-    }
-   ]
-  },
-  {
-   "at": "the judges said made",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:explaining"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🥔≠100%",
-     "text": "Not wholly potato"
-    }
-   ]
-  },
-  {
-   "at": "one judge added",
+   "at": "judge added that courts",
    "bg": "white",
    "cast": [
     {
@@ -189,35 +155,61 @@
    "props": [
     {
      "id": "sign",
-     "icon": "📏❌",
-     "text": "No minimum %"
+     "icon": "🚫",
+     "text": "NO MAGIC PERCENT"
     }
    ]
   },
   {
    "at": "so pringles stayed taxed",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "face": "smug",
+     "gest": "point",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "scratch",
+     "x": 0.22
+    }
+   ]
+  },
+  {
+   "at": "the company spent years",
    "bg": "bg-shop",
    "cast": [
     {
-     "id": "larry:concerned",
-     "x": 0.3
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "shrug",
+     "x": 0.5
     }
-   ],
-   "card": "STILL TAXED",
-   "card_at": "so pringles stayed taxed"
+   ]
   },
   {
    "at": "send this to",
    "bg": "white",
    "cast": [
     {
-     "id": "larry:auto"
+     "id": "larry:pointing"
     }
    ]
   },
   {
    "at": "so before you argue",
    "bg": "bg-shop",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
+    }
+   ],
    "loop": true
   }
  ],
@@ -225,5 +217,6 @@
  "share_line": "Send this to the friend who'd eat the Pringles can if they could",
  "hook_old": "ARE PRINGLES CRISPS?",
  "script_old": "Pringles tried to argue their way out of a tax category for potato snacks, and the final appeal went badly. In the U.K., most food is zero-rated for VAT. But potato crisps are an exception, and they're taxed at the standard rate. The law covers potato crisps, potato sticks, potato puffs, and similar products made from the potato, or from potato flour. Procter and Gamble, which made Pringles at the time, argued Regular Pringles didn't fit. Their potato content was only about forty-two percent, and the company argued they weren't really similar to crisps. A VAT tribunal disagreed. Then the High Court sided with Procter and Gamble and ruled the snacks zero-rated. That's where a lot of retellings stop. But in May two thousand nine, the Court of Appeal restored the tribunal's decision. The judges said made from the potato doesn't mean made wholly of potato. Even ordinary crisps aren't one hundred percent potato. With more than forty percent potato flour, the tribunal could reasonably decide Pringles were made from potato and similar to crisps. One judge added that courts shouldn't invent a minimum percentage the law doesn't contain. So Pringles stayed in the taxed category. The early win didn't last, and the mixed recipe didn't save them. [loop] So before you argue a Pringle isn't a crisp, remember",
- "script_simple": true
+ "script_simple": true,
+ "story_format": true
 }

@@ -17,7 +17,7 @@
   "#lawtok",
   "#government"
  ],
- "script": "A governor took a Rolex, loans and gifts from a businessman, and the Supreme Court threw out his convictions. [disclaimer] This is McDonnell versus United States, from twenty sixteen. Virginia's former governor, Bob McDonnell, and his wife got about one hundred seventy five thousand dollars in loans, gifts and perks. A Rolex! Designer clothes! All from a businessman who wanted state universities to study his supplement. Prosecutors pointed to what the governor did for him. Setting up meetings. Hosting events at the governor's mansion. Calling other officials. And the jury said guilty! But the big question was, what counts as an official act under this federal law? And the Supreme Court, every single justice, said it's narrower than that. It has to be a real use of government power. Like a lawsuit, an agency decision, or a hearing, on a specific issue. And the official has to make a decision on it, or agree to. Just setting up a meeting, making a phone call, or throwing an event isn't enough by itself. Because the jury was told the wrong definition, the convictions were tossed and the case went back. Here's the limit. This was not a ruling that taking gifts is fine! Actual decisions, pressuring other officials, and other ethics and criminal laws still matter. [loop] So before you assume a gift case is open and shut, remember",
+ "script": "A governor took a Rolex, loans and gifts from a businessman, and the Supreme Court threw out his convictions. [disclaimer] Meet Bob McDonnell. He's the governor of Virginia. A businessman wants state universities to study his supplement. And he's very generous. The governor and his wife get about one hundred seventy five thousand dollars in loans, gifts and perks. A Rolex. Designer clothes. And the governor sets up meetings, hosts events at the governor's mansion, and calls other officials. A jury says guilty. Wait. Then every single Supreme Court justice says the convictions can't stand? You see, the question was what counts as an official act under this federal law. The Court said it has to be a real use of government power on a specific issue. Like a decision on a lawsuit, an agency matter, or a hearing. Just setting up a meeting, making a call, or throwing an event isn't enough by itself. The jury was told the wrong definition. So the convictions were tossed. This was not a ruling that taking gifts is fine. Real decisions, pressuring officials, and other ethics laws still matter. So the governor's lawyers didn't argue the gifts were small. They argued the favors were. [loop] So before you assume a gift case is open and shut, remember",
  "publish_at": "2026-11-27T19:00:00-05:00",
  "sources": [
   "https://www.law.cornell.edu/supremecourt/text/15-474"
@@ -26,24 +26,37 @@
  "scenes": [
   {
    "at": "start",
-   "bg": "bg-office",
+   "bg": "bg-capitol",
    "cast": [
     {
-     "id": "larry:smug",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🎁🏛️",
-     "text": ""
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
     }
    ]
   },
   {
-   "at": "this is mcdonnell",
-   "bg": "white",
+   "at": "a businessman wants state",
+   "bg": "bg-capitol",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "point",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.7
+    }
+   ]
+  },
+  {
+   "at": "the governor and his",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:explaining"
@@ -51,27 +64,78 @@
    ],
    "props": [
     {
-     "id": "doc",
-     "text": "McDonnell v. United States",
-     "sub": "U.S. Supreme Court"
+     "id": "sign",
+     "icon": "⌚",
+     "text": "ROLEX. GIFTS. LOANS."
     }
    ]
   },
   {
-   "at": "virginia's former governor",
-   "bg": "bg-office",
+   "at": "and the governor sets",
+   "bg": "bg-capitol",
    "cast": [
     {
-     "id": "larry:concerned",
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "explain",
      "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "arms_up",
+     "x": 0.7
     }
-   ],
-   "card": "~$175,000 IN GIFTS & LOANS",
-   "card_at": "virginia's former governor"
+   ]
   },
   {
-   "at": "prosecutors pointed to",
+   "at": "a jury says guilty",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "face": "angry",
+     "gest": "point",
+     "x": 0.3
+    },
+    {
+     "id": "char-politician",
+     "face": "worried",
+     "gest": "none",
+     "x": 0.22
+    }
+   ]
+  },
+  {
+   "at": "wait then every single",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "face": "surprised",
+     "gest": "think",
+     "x": 0.3
+    },
+    {
+     "id": "char-politician",
+     "face": "surprised",
+     "gest": "arms_up",
+     "x": 0.22
+    }
+   ]
+  },
+  {
+   "at": "you see the question",
    "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ]
+  },
+  {
+   "at": "just setting up a",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:pointing"
@@ -80,95 +144,13 @@
    "props": [
     {
      "id": "sign",
-     "icon": "📅🍽️📞",
-     "text": "Meetings & events"
+     "icon": "📞",
+     "text": "A CALL ISN'T ENOUGH"
     }
    ]
   },
   {
-   "at": "and the jury said guilty",
-   "bg": "bg-courtroom",
-   "cast": [
-    {
-     "id": "char-judge",
-     "x": 0.7
-    },
-    {
-     "id": "larry:concerned",
-     "x": 0.3
-    }
-   ],
-   "card": "CONVICTED",
-   "card_at": "and the jury said guilty"
-  },
-  {
-   "at": "but the big question",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:thinking"
-    }
-   ],
-   "card": "WHAT'S AN “OFFICIAL ACT”?",
-   "card_at": "but the big question"
-  },
-  {
-   "at": "and the supreme court every",
-   "bg": "bg-courtroom",
-   "cast": [
-    {
-     "id": "char-judge",
-     "x": 0.7
-    },
-    {
-     "id": "larry:explaining",
-     "x": 0.3
-    }
-   ],
-   "card": "FORMAL GOVERNMENT POWER",
-   "card_at": "and the supreme court every",
-   "zooms": [
-    {
-     "at": "and the supreme court every",
-     "amount": 1.18,
-     "hold": 0.9
-    }
-   ]
-  },
-  {
-   "at": "just setting up a meeting",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:surprised"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "📅❌",
-     "text": "Meeting alone: no"
-    }
-   ]
-  },
-  {
-   "at": "because the jury was told",
-   "bg": "bg-courtroom",
-   "cast": [
-    {
-     "id": "char-judge",
-     "x": 0.7
-    },
-    {
-     "id": "larry:surprised",
-     "x": 0.3
-    }
-   ],
-   "card": "VACATED & SENT BACK",
-   "card_at": "because the jury was told"
-  },
-  {
-   "at": "here's the limit",
+   "at": "this was not a",
    "bg": "white",
    "cast": [
     {
@@ -178,8 +160,20 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🎁🚫",
-     "text": "Gifts still risky"
+     "icon": "⚠️",
+     "text": "GIFTS AREN'T FINE"
+    }
+   ]
+  },
+  {
+   "at": "so the governor's lawyers",
+   "bg": "bg-capitol",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "shrug",
+     "x": 0.5
     }
    ]
   },
@@ -188,13 +182,21 @@
    "bg": "white",
    "cast": [
     {
-     "id": "larry:auto"
+     "id": "larry:pointing"
     }
    ]
   },
   {
    "at": "so before you assume",
-   "bg": "bg-office",
+   "bg": "bg-capitol",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
+    }
+   ],
    "loop": true
   }
  ],
@@ -202,5 +204,6 @@
  "share_line": "Send this to the friend who'd sell their vote for a Rolex",
  "hook_old": "GIFTS… BUT NO 'OFFICIAL ACT'?",
  "script_old": "A governor received gifts and loans, and the Supreme Court still threw out his corruption convictions. This is McDonnell versus United States, from twenty sixteen. Former Virginia Governor Robert McDonnell and his wife were charged over about one hundred seventy-five thousand dollars in loans, gifts and other benefits from a businessman who wanted state universities to study his company's supplement. Prosecutors pointed to things the governor did: arranging meetings, hosting events at the governor's mansion, and contacting other officials. The jury convicted. The key question was what counts as an official act under the federal law used in the case. The Supreme Court, unanimously, read it narrowly. It has to involve a formal exercise of government power, something like a lawsuit, an agency decision or a hearing, on a specific matter. And the official has to make, or agree to make, a decision or take action on it. Setting up a meeting, talking to another official, or organizing an event, without more, isn't enough. Because the jury instructions defined official acts too broadly, the convictions were vacated and the case was sent back. Here's the limit. This wasn't a ruling that accepting gifts is fine. Decisions, pressure on other officials, and other ethics and criminal laws still matter. [loop] So before you assume a gift case is open and shut, remember",
- "script_simple": true
+ "script_simple": true,
+ "story_format": true
 }

@@ -852,7 +852,7 @@ def render_3d_base(nframes):
           'mouth': [int(bool(MOUTH[i])) if i < len(MOUTH) else 0 for i in range(nframes)],
           'poses': auto_seg,
           'scenes': [{'t': sc['t'], 'end': min(sc['end'], dur + 1), 'bg': sc.get('bg', 'white'), 'loop': bool(sc.get('loop')),
-                      'cast': [{k: v for k, v in c.items() if k in ('id', 'x', 'anim', 'from')} for c in sc.get('cast', [])],
+                      'cast': [{k: v for k, v in c.items() if k in ('id', 'x', 'anim', 'from', 'face', 'gest')} for c in sc.get('cast', [])],
                       'items': items_3d(sc), 'zooms': [{'t': z['t'], 'amount': z.get('amount', 1.18), 'hold': z.get('hold', 0.9)} for z in sc['zooms']]}
                      for sc in scenes],
           'share': None if SHARE_T0 is None else [SHARE_T0, SHARE_T1],   # camera pulls back to make room for the share card

@@ -17,7 +17,7 @@
   "#lawtok",
   "#supremecourt"
  ],
- "script": "A rap group was told no, parodied the song anyway, and the Supreme Court sided with the rappers. [disclaimer] Sort of! This is Campbell versus Acuff Rose, a Supreme Court case from nineteen ninety four. A rap group made a funny parody of Roy Orbison's song, Oh, Pretty Woman. They asked the music company for permission. The music company said no. So they put it out anyway! And it sold about a quarter of a million copies. A lower court said, you made money off it, so it's not fair use. That's basically a loss. But the Supreme Court said, every single justice, not so fast! Making money off a parody is just one thing to think about. Every parody has to go through all the fair use questions, one case at a time. And the Court said a parody sometimes needs the most famous part of the song, because that's exactly what it's making fun of. But here's the twist people miss. The Court didn't say the song was legal! It sent the case back to look harder at how much was copied, and whether it hurt sales of the original. So no, not every parody is allowed. And don't worry, there's none of that song in this video. [loop] So before you turn a hit song into a parody, remember",
+ "script": "A rap group was told no, parodied the song anyway, and the Supreme Court sided with the rappers. [disclaimer] Meet a rap group called Two Live Crew. They want to make a funny parody of Roy Orbison's song, Oh, Pretty Woman. They ask the music company for permission. The music company says no. So they put it out anyway. It sells about a quarter of a million copies. A lower court says, you made money off it, so it's not fair use. That's basically a loss. Wait. Then in nineteen ninety four, every Supreme Court justice says, not so fast? You see, making money is just one question. Every parody goes through all the fair use questions. And a parody sometimes needs the most famous part of a song, because that's exactly what it's making fun of. It's like a cartoon of a president. You need the face. But the Court didn't say the song was legal. It sent the case back to look at how much was copied, and whether it hurt sales. So not every parody is allowed. And there's none of that song in this video. So the music company said no. The rappers did it anyway. And that no turned into a Supreme Court case lawyers still study today. [loop] So before you turn a hit song into a parody, remember",
  "publish_at": "2026-11-20T19:00:00-05:00",
  "sources": [
   "https://www.law.cornell.edu/supremecourt/text/510/569"
@@ -29,134 +29,109 @@
    "bg": "white",
    "cast": [
     {
-     "id": "larry:smug"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🎤😂",
-     "text": ""
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
     }
    ]
   },
   {
-   "at": "this is campbell versus",
-   "bg": "white",
+   "at": "they ask the music",
+   "bg": "bg-office",
    "cast": [
     {
-     "id": "larry:explaining"
-    }
-   ],
-   "props": [
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "explain",
+     "x": 0.3
+    },
     {
-     "id": "doc",
-     "text": "Campbell v. Acuff-Rose",
-     "sub": "U.S. Supreme Court"
+     "id": "char-friend-chimp",
+     "face": "neutral",
+     "gest": "none",
+     "x": 0.7
     }
    ]
   },
   {
-   "at": "a rap group made",
-   "bg": "white",
+   "at": "the music company says",
+   "bg": "bg-office",
    "cast": [
     {
-     "id": "larry:explaining"
-    }
-   ],
-   "props": [
+     "id": "char-politician",
+     "face": "angry",
+     "gest": "point",
+     "x": 0.3
+    },
     {
-     "id": "sign",
-     "icon": "🎶😂",
-     "text": "A comedic parody"
+     "id": "char-friend-chimp",
+     "face": "surprised",
+     "gest": "none",
+     "x": 0.7
     }
    ]
   },
   {
-   "at": "the music company said no",
+   "at": "so they put it",
    "bg": "white",
    "cast": [
     {
-     "id": "larry:surprised"
-    }
-   ],
-   "card": "PERMISSION: DENIED",
-   "card_at": "the music company said no"
-  },
-  {
-   "at": "so they put it out",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:smug"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "💿",
-     "text": "~250,000 copies"
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "arms_up",
+     "x": 0.5
     }
    ]
   },
   {
-   "at": "a lower court said",
+   "at": "a lower court says",
    "bg": "bg-courtroom",
    "cast": [
     {
      "id": "char-judge",
-     "x": 0.7
+     "face": "angry",
+     "gest": "point",
+     "x": 0.3
     },
     {
-     "id": "larry:concerned",
-     "x": 0.3
-    }
-   ],
-   "card": "FOR PROFIT = UNFAIR?",
-   "card_at": "a lower court said"
-  },
-  {
-   "at": "but the supreme court said",
-   "bg": "bg-courtroom",
-   "cast": [
-    {
-     "id": "char-judge",
-     "x": 0.7
-    },
-    {
-     "id": "larry:surprised",
-     "x": 0.3
-    }
-   ],
-   "card": "ONLY ONE ELEMENT",
-   "card_at": "but the supreme court said",
-   "zooms": [
-    {
-     "at": "but the supreme court said",
-     "amount": 1.18,
-     "hold": 0.9
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "none",
+     "x": 0.22
     }
    ]
   },
   {
-   "at": "every parody has to go",
+   "at": "wait then in",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "face": "surprised",
+     "gest": "think",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "surprised",
+     "gest": "arms_up",
+     "x": 0.22
+    }
+   ]
+  },
+  {
+   "at": "you see making money",
    "bg": "white",
    "cast": [
     {
      "id": "larry:explaining"
     }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "⚖️",
-     "text": "Case by case"
-    }
    ]
   },
   {
-   "at": "and the court said a parody",
-   "bg": "white",
+   "at": "but the court didn't",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:pointing"
@@ -165,29 +140,13 @@
    "props": [
     {
      "id": "sign",
-     "icon": "❤️🎯",
-     "text": "Aims at the heart"
+     "icon": "↩️",
+     "text": "SENT BACK"
     }
    ]
   },
   {
-   "at": "but here's the twist",
-   "bg": "bg-courtroom",
-   "cast": [
-    {
-     "id": "char-judge-confused",
-     "x": 0.7
-    },
-    {
-     "id": "larry:concerned",
-     "x": 0.3
-    }
-   ],
-   "card": "SENT BACK — NOT DECLARED LEGAL",
-   "card_at": "but here's the twist"
-  },
-  {
-   "at": "so no not every parody",
+   "at": "so not every parody",
    "bg": "white",
    "cast": [
     {
@@ -197,8 +156,20 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🚫🎶",
-     "text": "No music used here"
+     "icon": "⚠️",
+     "text": "NOT EVERY PARODY"
+    }
+   ]
+  },
+  {
+   "at": "so the music company",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "shrug",
+     "x": 0.5
     }
    ]
   },
@@ -207,13 +178,21 @@
    "bg": "white",
    "cast": [
     {
-     "id": "larry:auto"
+     "id": "larry:pointing"
     }
    ]
   },
   {
    "at": "so before you turn",
    "bg": "white",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
+    }
+   ],
    "loop": true
   }
  ],
@@ -221,5 +200,6 @@
  "share_line": "Send this to the friend who genuinely thinks they can rap",
  "hook_old": "PARODY FOR PROFIT?",
  "script_old": "Can you parody a famous song, sell it, and still not need the songwriter's permission? Sometimes. This is Campbell versus Acuff-Rose, a U.S. Supreme Court case from nineteen ninety-four. A rap group made a comedic parody of Roy Orbison's song Oh, Pretty Woman. They asked the publisher for permission. The publisher said no. They released it anyway, and it sold about a quarter of a million copies. An appeals court said the parody's commercial purpose, the fact that it was sold for profit, weighed heavily against fair use. The Supreme Court unanimously disagreed. A parody's commercial character, the Court said, is only one element to weigh. Parody has to work its way through the fair use factors and be judged case by case. It added that a parody may need the heart of the original, because that's what it takes aim at. Here's the twist people miss. The Court didn't declare the song legal. It sent the case back for more work on how much was copied, and on harm to the market. So this isn't a rule that every parody is allowed. And there's none of that music in this video. [loop] So before you turn a hit song into a parody, remember",
- "script_simple": true
+ "script_simple": true,
+ "story_format": true
 }

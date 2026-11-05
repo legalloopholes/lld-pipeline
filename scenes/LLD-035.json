@@ -17,7 +17,7 @@
   "#lawtok",
   "#smallbusiness"
  ],
- "script": "Write payment in full on a check, and you might wipe out the rest of a bill you're fighting. [disclaimer] It's a real rule in American business law, and Nebraska's version is a good example. It's called accord and satisfaction. Fancy name, simple idea! Here's how it works. There has to be a real fight about how much is owed. Then the person paying sends a check in good faith as full payment. The check, or a note with it, has to clearly say it's payment in full. And then the person who's owed money cashes it. Boom. The rest of the bill can be wiped out! Picture this. A contractor bills you two thousand dollars. You honestly think the work was bad, so you send a check for fifteen hundred, clearly marked payment in full. If the contractor cashes it, the fight may be over! But writing payment in full isn't magic. If there's no real fight, and you just owe the bill, it doesn't work. Companies can set up a special address for these checks, and if yours doesn't go there, it may not count. And a company that cashes it can often undo it by paying the money back within ninety days. [loop] So before you cash that check marked payment in full, remember",
+ "script": "Write payment in full on a check, and you might wipe out the rest of a bill you're fighting. [disclaimer] Meet Gary. Gary hired a contractor to fix his deck. The contractor sends a bill for two thousand dollars. But Gary honestly thinks the work was bad. So Gary sends a check for fifteen hundred. And he writes on it, payment in full. It's a real rule in American business law. It's called accord and satisfaction. Nebraska's version is a good example. If there's a real fight about how much is owed, and the check clearly says payment in full, and the other side cashes it, the rest of the bill can be wiped out. The contractor doesn't read the check. He just cashes it. Wait. So the fight might be over? You see, it's like a deal in the mail. If you cash the deal, you took the deal. But it's not magic. If there's no real fight and you just owe the bill, it doesn't work. Companies can set a special address for these checks. And they can often undo it by paying the money back within ninety days. So the contractor got fifteen hundred dollars, and the hardest part of the deal for him was reading his own check. [loop] So before you cash that check marked payment in full, remember",
  "publish_at": "2026-11-18T19:00:00-05:00",
  "sources": [
   "https://nebraskalegislature.gov/laws/ucc.php?code=3-311"
@@ -26,137 +26,119 @@
  "scenes": [
   {
    "at": "start",
+   "bg": "bg-neighborhood",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "neutral",
+     "gest": "none",
+     "x": 0.7
+    }
+   ]
+  },
+  {
+   "at": "the contractor sends a",
+   "bg": "bg-neighborhood",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "angry",
+     "gest": "point",
+     "x": 0.3
+    },
+    {
+     "id": "char-politician",
+     "face": "surprised",
+     "gest": "none",
+     "x": 0.7
+    }
+   ]
+  },
+  {
+   "at": "so gary sends a",
    "bg": "bg-office",
    "cast": [
     {
-     "id": "larry:smug",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🧾✅",
-     "text": "Payment in full"
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "explain",
+     "x": 0.5
     }
    ]
   },
   {
    "at": "it's a real rule",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:explaining"
-    }
-   ],
-   "props": [
-    {
-     "id": "doc",
-     "text": "UCC §3-311",
-     "sub": "Nebraska"
-    }
-   ]
-  },
-  {
-   "at": "it's called accord",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:pointing"
-    }
-   ],
-   "card": "ACCORD & SATISFACTION",
-   "card_at": "it's called accord"
-  },
-  {
-   "at": "there has to be",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:explaining"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🤔",
-     "text": "1. Real dispute"
-    }
-   ]
-  },
-  {
-   "at": "then the person paying",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:explaining"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🤝",
-     "text": "2. Good faith"
-    }
-   ]
-  },
-  {
-   "at": "the check or a note",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:pointing"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🔍",
-     "text": "3. Clear notice"
-    }
-   ]
-  },
-  {
-   "at": "and then the person",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:surprised"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🏦",
-     "text": "4. Check cashed"
-    }
-   ],
-   "zooms": [
-    {
-     "at": "and then the person",
-     "amount": 1.18,
-     "hold": 0.9
-    }
-   ]
-  },
-  {
-   "at": "picture this",
    "bg": "bg-office",
    "cast": [
     {
-     "id": "char-friend-chimp",
-     "x": 0.68
-    },
-    {
-     "id": "larry:explaining",
-     "x": 0.3
+     "id": "larry:explaining"
     }
    ],
-   "card": "HYPOTHETICAL",
-   "card_at": "picture this"
+   "props": [
+    {
+     "id": "sign",
+     "icon": "✍️",
+     "text": "PAYMENT IN FULL"
+    }
+   ]
   },
   {
-   "at": "but writing payment in full",
+   "at": "if there's a real",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "💵",
+     "text": "CASH IT = DONE"
+    }
+   ]
+  },
+  {
+   "at": "the contractor doesn't read",
+   "bg": "bg-neighborhood",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "none",
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "at": "wait so the fight",
+   "bg": "bg-neighborhood",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "surprised",
+     "gest": "think",
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "at": "you see it's like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ]
+  },
+  {
+   "at": "but it's not magic",
    "bg": "white",
    "cast": [
     {
@@ -166,51 +148,49 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🪄❌",
-     "text": "Not magic"
+     "icon": "⚠️",
+     "text": "NEEDS A REAL FIGHT"
     }
    ]
   },
   {
-   "at": "companies can set up",
-   "bg": "bg-office",
+   "at": "so the contractor got",
+   "bg": "bg-neighborhood",
    "cast": [
     {
-     "id": "larry:pointing",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "📮",
-     "text": "Special address"
+     "id": "char-politician",
+     "face": "worried",
+     "gest": "scratch",
+     "x": 0.5
     }
    ]
-  },
-  {
-   "at": "and a company that cashes",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:concerned"
-    }
-   ],
-   "card": "90 DAYS TO UNDO",
-   "card_at": "and a company that cashes"
   },
   {
    "at": "send this to",
    "bg": "white",
    "cast": [
     {
-     "id": "larry:auto"
+     "id": "larry:pointing"
     }
    ]
   },
   {
    "at": "so before you cash",
-   "bg": "bg-office",
+   "bg": "bg-neighborhood",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "neutral",
+     "gest": "none",
+     "x": 0.7
+    }
+   ],
    "loop": true
   }
  ],
@@ -218,5 +198,6 @@
  "share_line": "Send this to the friend who still owes you for dinner from three years ago",
  "hook_old": "THE 'PAID IN FULL' CHECK",
  "script_old": "Cashing a check can sometimes settle a disputed bill, even when the check is for less. This comes from the Uniform Commercial Code, section three-three-eleven. Nebraska's version is a good example. It's called accord and satisfaction. Here's how it works. First, there has to be a genuine dispute about the amount owed, or an amount that isn't fixed. Second, the person paying offers a check in good faith, as full satisfaction of the claim. Third, the check, or a letter with it, has to clearly and conspicuously say it's offered as full payment. And fourth, the person who's owed money cashes it. Then the claim can be discharged. Picture a hypothetical. A contractor bills two thousand dollars. The customer honestly disputes the work, and sends a check for fifteen hundred, clearly marked as payment in full. If the contractor cashes it, the dispute may be over. But writing payment in full isn't magic. If there's no real dispute, and you simply owe the bill, it doesn't work. Companies can designate a special address for these checks, and if yours doesn't go there, the discharge may fail. And a creditor who cashes it can often undo the effect by paying the money back within ninety days. [loop] So before you cash that check marked payment in full, remember",
- "script_simple": true
+ "script_simple": true,
+ "story_format": true
 }

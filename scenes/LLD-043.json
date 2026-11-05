@@ -17,7 +17,7 @@
   "#lawtok",
   "#supremecourt"
  ],
- "script": "Marvel promised a man royalties forever, and the Supreme Court quoted Spider-Man when it let Marvel stop paying. [disclaimer] This is Kimble versus Marvel, a Supreme Court case from twenty fifteen. A guy named Stephen Kimble patented a Spider-Man toy that shoots webs. Marvel's company made a deal with him. It bought the patent for a big payment, plus three percent of future sales. Forever! No end date! But then Marvel found an old Supreme Court rule. It says once a patent runs out, you can't keep charging royalties for using that invention. And guess what? Kimble's patent ran out in twenty ten. So Marvel asked the courts, can we stop paying now? And the Supreme Court said yes! The majority kept the old rule. And it said, if you don't like it, go ask Congress, not us. And then Justice Kagan ended the opinion with a line straight from the comic where Spider-Man first showed up. In this world, with great power there must also come great responsibility. Legendary! Here's the limit. The Court said people can still set up deals in other ways. Payments for using the patent before it runs out can be spread out over time. And payments for things that aren't patents, like trade secrets, can work differently. So not every royalty deal ends with the patent. [loop] So before you sign a forever royalty deal on a patent, remember",
+ "script": "Marvel promised a man royalties forever, and the Supreme Court quoted Spider-Man when it let Marvel stop paying. [disclaimer] Meet Stephen Kimble. He invents a Spider-Man toy that shoots webs. And he patents it. Marvel's company makes a deal. A big payment, plus three percent of future sales. Forever. No end date. Kimble is set for life. But Marvel finds an old Supreme Court rule. Once a patent runs out, you can't keep charging royalties for using that invention. And Kimble's patent runs out in twenty ten. So Marvel asks the courts, can we stop paying now? Wait. In twenty fifteen, the Supreme Court says yes? You see, the majority kept the old rule and said, if you don't like it, ask Congress. A patent is like a lease. When it ends, you can't keep charging rent. And Justice Kagan ended the opinion with a famous line from the comic where Spider-Man first appeared, about great power and great responsibility. Deals can be set up other ways. Payments for patent years can be spread out. And things that aren't patents, like trade secrets, can work differently. So Kimble's forever deal ended because of Spider-Man's own law, written by the company that owns Spider-Man. [loop] So before you sign a forever royalty deal on a patent, remember",
  "publish_at": "2026-11-22T19:00:00-05:00",
  "sources": [
   "https://www.law.cornell.edu/supremecourt/text/13-720"
@@ -29,115 +29,62 @@
    "bg": "bg-office",
    "cast": [
     {
-     "id": "larry:smug",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🕸️💵♾️",
-     "text": ""
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
     }
    ]
   },
   {
-   "at": "this is kimble",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:explaining"
-    }
-   ],
-   "props": [
-    {
-     "id": "doc",
-     "text": "Kimble v. Marvel",
-     "sub": "U.S. Supreme Court"
-    }
-   ]
-  },
-  {
-   "at": "a guy named stephen kimble",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:explaining"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🕸️🧸",
-     "text": "Web-shooting toy"
-    }
-   ]
-  },
-  {
-   "at": "it bought the patent",
+   "at": "marvel's company makes a",
    "bg": "bg-office",
    "cast": [
     {
-     "id": "larry:pointing",
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "explain",
      "x": 0.3
-    }
-   ],
-   "card": "3% ROYALTY · NO END DATE",
-   "card_at": "it bought the patent"
-  },
-  {
-   "at": "but then marvel found",
-   "bg": "white",
-   "cast": [
+    },
     {
-     "id": "larry:surprised"
-    }
-   ],
-   "props": [
-    {
-     "id": "doc",
-     "text": "Brulotte rule",
-     "sub": "Older Supreme Court case"
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "arms_up",
+     "x": 0.7
     }
    ]
   },
   {
-   "at": "it says once a patent",
-   "bg": "white",
+   "at": "kimble is set for",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "point",
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "at": "but marvel finds an",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:explaining"
     }
    ],
-   "card": "NO ROYALTIES AFTER EXPIRATION",
-   "card_at": "it says once a patent",
-   "zooms": [
+   "props": [
     {
-     "at": "it says once a patent",
-     "amount": 1.18,
-     "hold": 0.9
+     "id": "sign",
+     "icon": "📜",
+     "text": "OLD SUPREME COURT RULE"
     }
    ]
   },
   {
-   "at": "and guess what",
-   "bg": "bg-courtroom",
-   "cast": [
-    {
-     "id": "char-judge",
-     "x": 0.7
-    },
-    {
-     "id": "larry:concerned",
-     "x": 0.3
-    }
-   ],
-   "card": "PAYMENTS STOP",
-   "card_at": "and guess what"
-  },
-  {
-   "at": "the majority kept",
-   "bg": "white",
+   "at": "and kimble's patent runs",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:pointing"
@@ -146,24 +93,76 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🏛️",
-     "text": "Ask Congress"
+     "icon": "⏰",
+     "text": "PATENT EXPIRED: 2010"
     }
    ]
   },
   {
-   "at": "and then justice kagan",
+   "at": "so marvel asks the",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "face": "neutral",
+     "gest": "think",
+     "x": 0.3
+    },
+    {
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "point",
+     "x": 0.22
+    }
+   ]
+  },
+  {
+   "at": "wait in",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "face": "smug",
+     "gest": "point",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "surprised",
+     "gest": "arms_up",
+     "x": 0.22
+    }
+   ]
+  },
+  {
+   "at": "you see the majority",
    "bg": "white",
    "cast": [
     {
-     "id": "larry:smug"
+     "id": "larry:explaining"
     }
-   ],
-   "card": "“WITH GREAT POWER…”",
-   "card_at": "and then justice kagan"
+   ]
   },
   {
-   "at": "here's the limit",
+   "at": "and justice kagan ended",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "face": "smug",
+     "gest": "explain",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "none",
+     "x": 0.22
+    }
+   ]
+  },
+  {
+   "at": "deals can be set",
    "bg": "white",
    "cast": [
     {
@@ -173,25 +172,20 @@
    "props": [
     {
      "id": "sign",
-     "icon": "📆",
-     "text": "Pre-expiry payments OK"
+     "icon": "⚠️",
+     "text": "OTHER DEALS CAN WORK"
     }
    ]
   },
   {
-   "at": "so not every royalty",
-   "bg": "bg-office",
+   "at": "so kimble's forever deal",
+   "bg": "bg-courtroom",
    "cast": [
     {
-     "id": "larry:explaining",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🔐",
-     "text": "Trade secrets differ"
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "shrug",
+     "x": 0.5
     }
    ]
   },
@@ -200,13 +194,21 @@
    "bg": "white",
    "cast": [
     {
-     "id": "larry:auto"
+     "id": "larry:pointing"
     }
    ]
   },
   {
    "at": "so before you sign",
    "bg": "bg-office",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
+    }
+   ],
    "loop": true
   }
  ],
@@ -214,5 +216,6 @@
  "share_line": "Send this to the friend who signs contracts without reading a single word",
  "hook_old": "FOREVER ROYALTIES? NOPE.",
  "script_old": "Marvel agreed to pay royalties with no end date, and patent law supplied one anyway. This is Kimble versus Marvel, a U.S. Supreme Court case from twenty fifteen. Stephen Kimble patented a Spider-Man web-shooting toy. Marvel's predecessor settled with him. It bought the patent for a lump sum, plus a three percent royalty on future sales, with no end date. Then Marvel found an older Supreme Court case called Brulotte. Its rule: a patent holder can't collect royalties for using an invention after the patent expires. Kimble's patent expired in twenty ten, so Marvel asked the courts to say it could stop paying. The Supreme Court agreed, six to three. The majority kept the old rule and said critics should ask Congress, not the Court, to change it. And Justice Kagan closed the opinion with a line from the comic where Spider-Man first appeared: in this world, with great power there must also come great responsibility. Here's the limit. The Court said parties can still structure deals differently. Payments for use before the patent expires can be spread out over time. And royalties tied to rights that aren't patents, like trade secrets, can work differently. So not every royalty deal automatically ends with a patent. [loop] So before you sign a forever royalty deal on a patent, remember",
- "script_simple": true
+ "script_simple": true,
+ "story_format": true
 }

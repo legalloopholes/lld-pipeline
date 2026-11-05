@@ -17,7 +17,7 @@
   "#lawtok",
   "#consumerrights"
  ],
- "script": "In New York, that gym waiver you signed might be legally meaningless. [disclaimer] Yes, the one you signed without reading! New York has a law aimed at this exact kind of fine print. If you pay to use a pool, a gym, an amusement park, or a place like that, any deal that says the owner isn't responsible for their own carelessness, or their staff's carelessness, is void. It's against public policy. It doesn't count! So picture this. You pay for a gym membership. You sign a waiver that says the gym isn't responsible for anything. Then you get hurt because the staff ignored a broken machine. Under this law, that waiver can't protect the gym from your claim. But this is where the internet goes too far. The law only covers certain places you pay to have fun at. Not every sports form or class falls under it. And getting hurt doesn't prove the gym messed up. You still have to show the gym was careless, and that the carelessness actually caused your injury. And the gym can still argue you accepted the normal risks of working out. You dropped the weight on your own foot? That's on you! So the waiver isn't magic. But neither is the law. [loop] So the next time you sign a stack of gym paperwork, remember",
+ "script": "In New York, that gym waiver you signed might be legally meaningless. [disclaimer] Meet Gary. Gary just joined a gym in New York. At the front desk, they hand him a waiver. It says the gym isn't responsible for anything. Gary signs it without reading. Two weeks later, a machine is broken. The staff knows. They ignore it. Gary gets hurt. The gym says, sorry, you signed a waiver. But New York has a law for this. If you pay to use a pool, a gym, or an amusement park, a deal that says the owner isn't responsible for its own carelessness is void. Wait. So the waiver everyone signs doesn't count? You see, it's like a restaurant sign that says not responsible if our food poisons you. Writing it down doesn't make it true. The law only covers certain places you pay to have fun at. And Gary still has to prove the gym was careless, and that it caused his injury. The gym can also argue Gary accepted the normal risks of working out. So the waiver can't protect the gym from its broken machine. But if Gary drops a weight on his own foot, that's still on Gary. [loop] So the next time you sign a stack of gym paperwork, remember",
  "publish_at": "2026-11-11T19:00:00-05:00",
  "sources": [
   "https://www.nysenate.gov/legislation/laws/GOB/5-326"
@@ -26,24 +26,67 @@
  "scenes": [
   {
    "at": "start",
-   "bg": "bg-office",
+   "bg": "bg-shop",
    "cast": [
     {
-     "id": "larry:smug",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🏋️📝",
-     "text": ""
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
     }
    ]
   },
   {
-   "at": "new york has a law",
-   "bg": "white",
+   "at": "at the front desk",
+   "bg": "bg-shop",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "explain",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "none",
+     "x": 0.7
+    }
+   ]
+  },
+  {
+   "at": "weeks later a machine",
+   "bg": "bg-shop",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "point",
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "at": "the gym says sorry",
+   "bg": "bg-shop",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "point",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "none",
+     "x": 0.7
+    }
+   ]
+  },
+  {
+   "at": "but new york has",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:explaining"
@@ -51,80 +94,35 @@
    ],
    "props": [
     {
-     "id": "doc",
-     "text": "GOL §5-326",
-     "sub": "New York"
-    }
-   ]
-  },
-  {
-   "at": "if you pay to use",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:pointing"
-    }
-   ],
-   "props": [
-    {
      "id": "sign",
-     "icon": "🏊🏋️🎢",
-     "text": "Paid recreation"
+     "icon": "📜",
+     "text": "NEW YORK LAW"
     }
    ]
   },
   {
-   "at": "it doesn't count",
+   "at": "wait so the waiver",
+   "bg": "bg-shop",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "surprised",
+     "gest": "arms_up",
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "at": "you see it's like",
    "bg": "white",
    "cast": [
     {
-     "id": "larry:surprised"
-    }
-   ],
-   "card": "VOID & UNENFORCEABLE",
-   "card_at": "it doesn't count",
-   "zooms": [
-    {
-     "at": "it doesn't count",
-     "amount": 1.18,
-     "hold": 0.9
+     "id": "larry:explaining"
     }
    ]
   },
   {
-   "at": "so picture this",
-   "bg": "bg-office",
-   "cast": [
-    {
-     "id": "char-friend-chimp",
-     "x": 0.68
-    },
-    {
-     "id": "larry:explaining",
-     "x": 0.3
-    }
-   ],
-   "card": "HYPOTHETICAL",
-   "card_at": "so picture this"
-  },
-  {
-   "at": "under this law",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:smug"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "📝❌",
-     "text": "Waiver can't shield"
-    }
-   ]
-  },
-  {
-   "at": "but this is where",
+   "at": "the law only covers",
    "bg": "white",
    "cast": [
     {
@@ -135,82 +133,60 @@
     {
      "id": "sign",
      "icon": "⚠️",
-     "text": "Oversold online"
+     "text": "NOT EVERY PLACE"
     }
    ]
   },
   {
-   "at": "not every sports form",
-   "bg": "white",
+   "at": "the gym can also",
+   "bg": "bg-shop",
    "cast": [
     {
-     "id": "larry:pointing"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🎓",
-     "text": "Not every program"
-    }
-   ]
-  },
-  {
-   "at": "and getting hurt doesn't",
-   "bg": "bg-courtroom",
-   "cast": [
-    {
-     "id": "char-judge",
-     "x": 0.7
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "point",
+     "x": 0.3
     },
     {
-     "id": "larry:explaining",
-     "x": 0.3
-    }
-   ],
-   "card": "INJURY ≠ NEGLIGENCE",
-   "card_at": "and getting hurt doesn't"
-  },
-  {
-   "at": "and the gym can still",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:thinking"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🎯",
-     "text": "Assumed risk"
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "scratch",
+     "x": 0.7
     }
    ]
   },
   {
-   "at": "so the waiver isn't magic",
-   "bg": "bg-office",
+   "at": "so the waiver can't",
+   "bg": "bg-shop",
    "cast": [
     {
-     "id": "larry:smug",
-     "x": 0.3
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "shrug",
+     "x": 0.5
     }
-   ],
-   "card": "NEITHER SIDE IS MAGIC",
-   "card_at": "so the waiver isn't magic"
+   ]
   },
   {
    "at": "send this to",
    "bg": "white",
    "cast": [
     {
-     "id": "larry:auto"
+     "id": "larry:pointing"
     }
    ]
   },
   {
    "at": "so the next time",
-   "bg": "bg-office",
+   "bg": "bg-shop",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
+    }
+   ],
    "loop": true
   }
  ],
@@ -218,5 +194,6 @@
  "share_line": "Send this to the friend who should be legally banned from every gym",
  "hook_old": "THE WAIVER MIGHT BE VOID",
  "script_old": "You signed the gym waiver, but in New York, that doesn't always mean the gym escapes a negligence claim. New York's General Obligations Law has a section aimed at a specific kind of fine print. If you pay to use a pool, a gym, an amusement park, or a similar recreational place, any agreement that exempts the owner or operator from liability for its own negligence, or its employees' negligence, is void as against public policy and wholly unenforceable. So picture a hypothetical. You pay for a gym membership and sign a waiver saying the gym isn't responsible for anything. Then you get hurt because staff ignored a broken machine. Under this law, that waiver can't shield the gym from your negligence claim. But this is where the internet oversells it. First, the law covers certain paid recreational facilities. Not every sports release or instructional program falls under it. Second, getting hurt doesn't prove negligence. You still have to show the gym was careless, and that the carelessness caused the injury. Third, the gym can still argue you accepted the normal risks of the activity. So the waiver isn't magic, but neither is the statute. [loop] So the next time you sign a stack of gym paperwork, remember",
- "script_simple": true
+ "script_simple": true,
+ "story_format": true
 }

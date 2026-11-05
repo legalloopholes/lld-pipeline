@@ -17,7 +17,7 @@
   "#lawtok",
   "#didyouknow"
  ],
- "script": "A company got money that was sent by mistake, and Australia's highest court said they could keep it. [disclaimer] This is Australia's top court, in twenty fourteen. A finance company got tricked by a scam. A businessman made fake bills for equipment from two suppliers, Hills Industries and Bosch. The finance company paid those suppliers. Then it found out the bills were fake! And it wanted the money back. Normally? If someone pays you by mistake, you have to give it back. But Hills and Bosch had no idea about the scam. When the money showed up, they thought it was payment for real debts that business owed them. So they stopped chasing those debts. And they kept doing business with that group. Because of that money, they gave something up. And the court said, every single judge, you don't have to pay it back! The question was whether keeping the money would be unfair, looking at everything. And since they'd given up real debts, it wasn't unfair. Here's the limit. This only works if you acted in good faith, and you truly gave something up because of the payment. If random money hits your bank account and you run out and spend it, that's not this case. You can still be forced to pay it back! [loop] So if money ever lands in your account by mistake, remember",
+ "script": "A company got money that was sent by mistake, and Australia's highest court said they could keep it. [disclaimer] Meet a businessman in Australia. He's running a scam. He makes fake bills for equipment from two real suppliers, Hills Industries and Bosch. A finance company pays those suppliers. Then it finds out the bills were fake. The finance company wants its money back. Normally, if someone pays you by mistake, you have to give it back. But Hills and Bosch had no idea about the scam. They thought the money was payment for real debts the business owed them. So they stopped chasing those debts. And they kept doing business with that group. Wait. In twenty fourteen, every judge on Australia's top court says they can keep it? You see, the question was whether keeping it would be unfair. They gave up real debts because of that money. It's like trading your bike for a car, and then being told to give back the car, but not get back the bike. This only works if you acted in good faith and truly gave something up. Random money in your account that you spend? You can still be forced to pay it back. So the scammer's fake bills ended up paying off his real debts. [loop] So if money ever lands in your account by mistake, remember",
  "publish_at": "2026-11-15T19:00:00-05:00",
  "sources": [
   "https://www.hcourt.gov.au/assets/publications/judgment-summaries/2014/hca-14-2014-05-07.pdf"
@@ -29,21 +29,16 @@
    "bg": "bg-office",
    "cast": [
     {
-     "id": "larry:smug",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "💸❓",
-     "text": ""
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
     }
    ]
   },
   {
-   "at": "this is australia's top court",
-   "bg": "white",
+   "at": "he makes fake bills",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:explaining"
@@ -52,43 +47,44 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🇦🇺",
-     "text": "High Court, 2014"
+     "icon": "🧾",
+     "text": "FAKE BILLS"
     }
    ]
   },
   {
-   "at": "a businessman made fake",
+   "at": "a finance company pays",
    "bg": "bg-office",
    "cast": [
     {
-     "id": "larry:concerned",
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "point",
      "x": 0.3
-    }
-   ],
-   "card": "FAKE INVOICES",
-   "card_at": "a businessman made fake"
-  },
-  {
-   "at": "the finance company paid",
-   "bg": "bg-office",
-   "cast": [
+    },
     {
-     "id": "larry:explaining",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "💸",
-     "text": "Paid by mistake"
+     "id": "char-friend-chimp",
+     "face": "neutral",
+     "gest": "none",
+     "x": 0.7
     }
    ]
   },
   {
-   "at": "normally",
-   "bg": "white",
+   "at": "the finance company wants",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "angry",
+     "gest": "point",
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "at": "normally if someone pays",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:pointing"
@@ -97,79 +93,64 @@
    "props": [
     {
      "id": "sign",
-     "icon": "↩️💵",
-     "text": "Usually: pay back"
+     "icon": "💸",
+     "text": "MISTAKE = PAY IT BACK"
     }
    ]
   },
   {
    "at": "but hills and bosch",
-   "bg": "white",
+   "bg": "bg-shop",
    "cast": [
     {
-     "id": "larry:explaining"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "😇",
-     "text": "Not in on it"
+     "id": "char-friend-chimp",
+     "face": "surprised",
+     "gest": "none",
+     "x": 0.5
     }
    ]
   },
   {
    "at": "so they stopped chasing",
-   "bg": "white",
+   "bg": "bg-shop",
    "cast": [
     {
-     "id": "larry:surprised"
-    }
-   ],
-   "card": "THEY GAVE UP REAL DEBTS",
-   "card_at": "so they stopped chasing",
-   "zooms": [
-    {
-     "at": "so they stopped chasing",
-     "amount": 1.18,
-     "hold": 0.9
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "shrug",
+     "x": 0.5
     }
    ]
   },
   {
-   "at": "and the court said every",
+   "at": "wait in",
    "bg": "bg-courtroom",
    "cast": [
     {
      "id": "char-judge",
-     "x": 0.7
+     "face": "surprised",
+     "gest": "think",
+     "x": 0.3
     },
     {
-     "id": "larry:explaining",
-     "x": 0.3
-    }
-   ],
-   "card": "NO REPAYMENT",
-   "card_at": "and the court said every"
-  },
-  {
-   "at": "the question was whether",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:thinking"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "⚖️",
-     "text": "Inequitable?"
+     "id": "char-friend-chimp",
+     "face": "surprised",
+     "gest": "none",
+     "x": 0.22
     }
    ]
   },
   {
-   "at": "here's the limit",
+   "at": "you see the question",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ]
+  },
+  {
+   "at": "this only works if",
    "bg": "white",
    "cast": [
     {
@@ -179,8 +160,20 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🛍️🚫",
-     "text": "Don't spend it"
+     "icon": "⚠️",
+     "text": "GOOD FAITH ONLY"
+    }
+   ]
+  },
+  {
+   "at": "so the scammer's fake",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "worried",
+     "gest": "scratch",
+     "x": 0.5
     }
    ]
   },
@@ -189,13 +182,21 @@
    "bg": "white",
    "cast": [
     {
-     "id": "larry:auto"
+     "id": "larry:pointing"
     }
    ]
   },
   {
    "at": "so if money ever",
    "bg": "bg-office",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
+    }
+   ],
    "loop": true
   }
  ],
@@ -203,5 +204,6 @@
  "share_line": "Send this to the friend who would never give your money back",
  "hook_old": "KEEP THE MISTAKEN MONEY?",
  "script_old": "Someone sent money by mistake, and the companies that received it won the right to keep it, in this particular case. This is Australia's High Court, in twenty fourteen. A finance company, AFSL, was tricked by a fraud. A director in a business group created false invoices for equipment from two suppliers, Hills Industries and Bosch Security Systems. AFSL paid those suppliers, then discovered the invoices were fake, and wanted its money back. Normally, money paid by mistake can be recovered. But Hills and Bosch weren't in on the fraud. When the money arrived, they treated it as payment of real debts the business group owed them. They stopped chasing those debts, and they kept trading with the group. They had changed their position because of that money. The High Court unanimously said they didn't have to repay. The test was whether keeping the money would be inequitable in all the circumstances, and given what they'd given up, it wasn't. Here's the limit. This defense depends on good faith, and on genuinely changing your position because of the payment. If a surprise deposit hits your account and you rush out to spend it, that's not this case, and you can still be made to pay it back. [loop] So if money ever lands in your account by mistake, remember",
- "script_simple": true
+ "script_simple": true,
+ "story_format": true
 }

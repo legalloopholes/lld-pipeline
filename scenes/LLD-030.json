@@ -17,7 +17,7 @@
   "#lawtok",
   "#traveltips"
  ],
- "script": "Your cruise stops at a random foreign port because of a law from eighteen eighty six. [disclaimer] It's called the Passenger Vessel Services Act. It limits foreign ships, like most big cruise ships, from carrying passengers from one American port to another. Customs has rules that explain how it works. If a foreign cruise ship only visits American ports, and you get off at a different American port, that breaks the rule. Busted! Now add a quick stop nearby, like Canada, Mexico, the Bahamas, or the Caribbean. If you end the trip back at the same port where you got on, that's okay! That's one reason so many round trip cruises throw in a quick foreign stop. But if you end the trip at a different American port, a nearby stop isn't enough. The ship would need to go somewhere far away, outside that nearby list. And there are special cases too, like Puerto Rico. Here's the limit. A foreign stop doesn't make every trip legal. And this is the passenger rule. It's not the Jones Act rules for cargo. Cruise lines can ask Customs for an official answer, and nothing here means any certain route is approved. [loop] So the next time your cruise makes a surprise stop abroad, remember",
+ "script": "Your cruise stops at a random foreign port because of a law from eighteen eighty six. [disclaimer] Meet Gary. Gary books a cruise from Florida, around the Caribbean, and back. On day three, the ship stops in a random little foreign port. For four hours. Gary asks why. Nobody on board seems to know. It's a law called the Passenger Vessel Services Act. It limits foreign ships, like most big cruise ships, from carrying passengers from one American port to another. If a foreign ship only visits American ports, and you get off at a different American port, that breaks the rule. Wait. So the stop is about the law, not the beach? You see, it's like a game where you have to touch the wall before you come back. A quick stop nearby, then back to the same port you started at, and that's okay. But ending at a different American port needs a stop somewhere far away. There are special cases, like Puerto Rico. And this is the passenger rule, not the Jones Act for cargo. So the ship stops, the passengers buy a T shirt, and everyone gets back on. So the most important stop on Gary's cruise is the one he didn't even want. [loop] So the next time your cruise makes a surprise stop abroad, remember",
  "publish_at": "2026-11-16T12:00:00-05:00",
  "sources": [
   "https://www.law.cornell.edu/cfr/text/19/4.80a"
@@ -29,21 +29,46 @@
    "bg": "bg-harbor",
    "cast": [
     {
-     "id": "larry:smug",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🛳️🗺️",
-     "text": ""
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
     }
    ]
   },
   {
-   "at": "it's called the passenger",
-   "bg": "white",
+   "at": "on day",
+   "bg": "bg-harbor",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "surprised",
+     "gest": "think",
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "at": "gary asks why nobody",
+   "bg": "bg-harbor",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "explain",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "surprised",
+     "gest": "none",
+     "x": 0.7
+    }
+   ]
+  },
+  {
+   "at": "it's a law called",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:explaining"
@@ -51,147 +76,115 @@
    ],
    "props": [
     {
-     "id": "doc",
-     "text": "Passenger Vessel Services Act",
-     "sub": "19 CFR 4.80a"
-    }
-   ]
-  },
-  {
-   "at": "customs has rules",
-   "bg": "bg-harbor",
-   "cast": [
-    {
-     "id": "larry:explaining",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
      "id": "sign",
-     "icon": "🇺🇸➡️🇺🇸",
-     "text": "US-only trip"
+     "icon": "🚢",
+     "text": "A LAW FROM 1886"
     }
    ]
   },
   {
-   "at": "that breaks the rule",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:surprised"
-    }
-   ],
-   "card": "VIOLATION",
-   "card_at": "that breaks the rule",
-   "zooms": [
-    {
-     "at": "that breaks the rule",
-     "amount": 1.18,
-     "hold": 0.9
-    }
-   ]
-  },
-  {
-   "at": "now add a quick stop",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:pointing"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🇨🇦🇲🇽🏝️",
-     "text": "Nearby foreign port"
-    }
-   ]
-  },
-  {
-   "at": "if you end the trip back",
-   "bg": "bg-harbor",
-   "cast": [
-    {
-     "id": "larry:smug",
-     "x": 0.3
-    }
-   ],
-   "card": "SAME PORT ROUND TRIP: OK",
-   "card_at": "if you end the trip back"
-  },
-  {
-   "at": "but if you end the trip",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:concerned"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🇺🇸➡️🇺🇸",
-     "text": "Different US port"
-    }
-   ]
-  },
-  {
-   "at": "the ship would need",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:pointing"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🌍",
-     "text": "Distant foreign port"
-    }
-   ]
-  },
-  {
-   "at": "here's the limit",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:concerned"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "📦≠🛳️",
-     "text": "Not the Jones Act"
-    }
-   ]
-  },
-  {
-   "at": "cruise lines can ask",
+   "at": "if a foreign ship",
    "bg": "bg-office",
    "cast": [
     {
-     "id": "larry:explaining",
-     "x": 0.3
+     "id": "larry:pointing"
     }
    ],
-   "card": "NO ROUTE APPROVAL IMPLIED",
-   "card_at": "cruise lines can ask"
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🇺🇸",
+     "text": "US TO US: NOT ALLOWED"
+    }
+   ]
+  },
+  {
+   "at": "wait so the stop",
+   "bg": "bg-harbor",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "surprised",
+     "gest": "arms_up",
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "at": "you see it's like",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ]
+  },
+  {
+   "at": "but ending at a",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "⚠️",
+     "text": "DIFFERENT PORT? HARDER"
+    }
+   ]
+  },
+  {
+   "at": "so the ship stops",
+   "bg": "bg-harbor",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "point",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "none",
+     "x": 0.7
+    }
+   ]
+  },
+  {
+   "at": "so the most important",
+   "bg": "bg-harbor",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "shrug",
+     "x": 0.5
+    }
+   ]
   },
   {
    "at": "send this to",
    "bg": "white",
    "cast": [
     {
-     "id": "larry:auto"
+     "id": "larry:pointing"
     }
    ]
   },
   {
    "at": "so the next time",
    "bg": "bg-harbor",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
+    }
+   ],
    "loop": true
   }
  ],
@@ -199,5 +192,6 @@
  "share_line": "Send this to the friend who'd only go on a cruise to destroy the buffet",
  "hook_old": "WHY THE FOREIGN STOP?",
  "script_old": "Why would a cruise between American ports bother stopping in another country? Sometimes, the law explains it. This is the Passenger Vessel Services Act, a U.S. law that limits carrying passengers between U.S. ports on ships that aren't qualified for that domestic trade, like foreign-flagged cruise ships. Customs regulations spell out how it works. If a cruise only visits U.S. ports, and passengers get off at a U.S. port, that's a violation. Now add a nearby foreign port, like one in Canada, Mexico, the Bahamas or the Caribbean. If passengers end the trip back at the same U.S. port where they boarded, the regulations don't treat that as a violation. That's one reason round-trip cruises often include a quick foreign stop. But if passengers end the trip at a different U.S. port, a nearby foreign stop isn't enough. The ship would need to visit a distant foreign port, one outside that nearby list. There are special cases too, like Puerto Rico. Here's the limit. A foreign stop doesn't make every itinerary legal, and this is the passenger rule, not the Jones Act rules for cargo. Cruise lines can ask Customs for an advisory ruling, and nothing here means any particular route is approved. [loop] So the next time your cruise makes a surprise stop abroad, remember",
- "script_simple": true
+ "script_simple": true,
+ "story_format": true
 }

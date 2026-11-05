@@ -18,7 +18,7 @@
   "#lawtok",
   "#business"
  ],
- "script": "The government says Ford put fake back seats in vans just to rip them out after customs. Ford paid three hundred sixty five million dollars. [disclaimer] Here's the story. When you bring cars into America, there's a tax at the border. Passenger cars? Two and a half percent. Cargo vans? Twenty five percent! That's ten times more. Now, the Justice Department said that for years, Ford shipped in Transit Connect vans from Turkey dressed up as passenger vans. Fake back seats and all! And according to the government, those seats never carried a single passenger. After the vans got through customs, the seats were allegedly ripped out, and the vans went right back to being two seat cargo vans. Sneaky! The deal also covered claims that Ford said some vans were worth less than they really were. And in twenty twenty four, Ford agreed to pay three hundred sixty five million dollars! But listen to the wording. Those were claims. Allegations. The Justice Department itself said there was no finding that Ford was liable, and Ford didn't admit anything. So this is not a story about a loophole that worked. It's about what happens when clever tax planning runs into the government. And these rates and years are history, not a guide to importing anything today. [loop] So the next time you see a van with an extra row of seats, remember",
+ "script": "The government says Ford put fake back seats in vans just to rip them out after customs. Ford paid three hundred sixty five million dollars. [disclaimer] Meet a border tax officer. His job is to tax cars coming into America. Passenger cars? Two and a half percent tax. Cargo vans? Twenty five percent. Ten times more. So for years, Transit Connect vans roll off ships from Turkey with back seats. Passenger vans. Low tax. But the government says those back seats never carried one single passenger. After customs, the seats were allegedly ripped out. And the vans went right back to being two seat cargo vans. Wait. So the seats were only there for the tax officer? You see, it's like wearing a fake mustache to get the kids' discount. It might get you through the door. Then somebody checks the photos. The Justice Department also said Ford claimed some vans were worth less than they really were. In twenty twenty four, Ford agreed to pay three hundred sixty five million dollars. But those were claims. The government said there was no finding that Ford was liable, and Ford didn't admit anything. And these rates are history, not a guide. So the government says the seats were fake. The bill was very real. [loop] So the next time you see a van with an extra row of seats, remember",
  "publish_at": "2026-11-12T19:00:00-05:00",
  "sources": [
   "https://www.justice.gov/archives/opa/pr/ford-motor-company-agrees-pay-365m-settle-customs-civil-penalty-claims-relating",
@@ -31,21 +31,16 @@
    "bg": "bg-harbor",
    "cast": [
     {
-     "id": "larry:smug",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🚐💺",
-     "text": ""
+     "id": "char-politician",
+     "face": "neutral",
+     "gest": "explain",
+     "x": 0.5
     }
    ]
   },
   {
-   "at": "here's the story",
-   "bg": "white",
+   "at": "passenger cars",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:explaining"
@@ -55,13 +50,13 @@
     {
      "id": "sign",
      "icon": "🚗",
-     "text": "Passenger: 2.5%"
+     "text": "PASSENGER CAR: 2.5%"
     }
    ]
   },
   {
    "at": "cargo vans",
-   "bg": "white",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:surprised"
@@ -70,33 +65,95 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🚚",
-     "text": "Cargo: 25%"
-    }
-   ],
-   "zooms": [
-    {
-     "at": "cargo vans",
-     "amount": 1.18,
-     "hold": 0.9
+     "icon": "🚐",
+     "text": "CARGO VAN: 25%"
     }
    ]
   },
   {
-   "at": "now the justice department said",
+   "at": "so for years transit",
    "bg": "bg-harbor",
    "cast": [
     {
-     "id": "larry:explaining",
-     "x": 0.3
+     "id": "char-politician",
+     "face": "surprised",
+     "gest": "point",
+     "x": 0.5
     }
-   ],
-   "card": "ALLEGED",
-   "card_at": "now the justice department said"
+   ]
   },
   {
-   "at": "and according to the government",
+   "at": "but the government says",
+   "bg": "bg-harbor",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.3
+    },
+    {
+     "id": "char-politician",
+     "face": "neutral",
+     "gest": "none",
+     "x": 0.7
+    }
+   ]
+  },
+  {
+   "at": "after customs the seats",
+   "bg": "bg-harbor",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "point",
+     "x": 0.3
+    },
+    {
+     "id": "char-politician",
+     "face": "surprised",
+     "gest": "arms_up",
+     "x": 0.7
+    }
+   ]
+  },
+  {
+   "at": "wait so the seats",
+   "bg": "bg-harbor",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "worried",
+     "gest": "think",
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "at": "you see it's like",
    "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ]
+  },
+  {
+   "at": "the justice department also",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "angry",
+     "gest": "point",
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "at": "ford agreed to pay",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:pointing"
@@ -105,54 +162,13 @@
    "props": [
     {
      "id": "sign",
-     "icon": "💺❌",
-     "text": "Seats never used"
+     "icon": "💰",
+     "text": "$365,000,000"
     }
    ]
   },
   {
-   "at": "after the vans got through",
-   "bg": "bg-street",
-   "cast": [
-    {
-     "id": "larry:surprised",
-     "x": 0.3
-    }
-   ],
-   "card": "SEATS OUT AFTER CUSTOMS",
-   "card_at": "after the vans got through"
-  },
-  {
-   "at": "the deal also covered",
-   "bg": "bg-office",
-   "cast": [
-    {
-     "id": "larry:explaining",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "doc",
-     "text": "Settlement",
-     "sub": "U.S. Department of Justice"
-    }
-   ]
-  },
-  {
-   "at": "and in twenty",
-   "bg": "bg-office",
-   "cast": [
-    {
-     "id": "larry:surprised",
-     "x": 0.3
-    }
-   ],
-   "card": "$365 MILLION",
-   "card_at": "and in twenty"
-  },
-  {
-   "at": "but listen to the wording",
+   "at": "but those were claims",
    "bg": "white",
    "cast": [
     {
@@ -162,39 +178,43 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⚖️",
-     "text": "No liability found"
+     "icon": "⚠️",
+     "text": "CLAIMS, NOT A RULING"
     }
    ]
   },
   {
-   "at": "so this is not a story",
-   "bg": "bg-courtroom",
+   "at": "so the government says",
+   "bg": "bg-harbor",
    "cast": [
     {
-     "id": "char-judge",
-     "x": 0.7
-    },
-    {
-     "id": "larry:explaining",
-     "x": 0.3
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "shrug",
+     "x": 0.5
     }
-   ],
-   "card": "NOT A LOOPHOLE THAT WORKED",
-   "card_at": "so this is not a story"
+   ]
   },
   {
    "at": "send this to",
    "bg": "white",
    "cast": [
     {
-     "id": "larry:auto"
+     "id": "larry:pointing"
     }
    ]
   },
   {
    "at": "so the next time",
    "bg": "bg-harbor",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "neutral",
+     "gest": "explain",
+     "x": 0.5
+    }
+   ],
    "loop": true
   }
  ],
@@ -202,5 +222,6 @@
  "share_line": "Send this to the friend who'd rip the seats out of your car for five bucks",
  "hook_old": "SEATS… THEN NO SEATS",
  "script_old": "Ford's cargo vans arrived at the border with temporary back seats, and it ended in a three hundred sixty-five million dollar settlement. This is about U.S. import duties. Passenger vehicles were taxed at two point five percent. Cargo vehicles faced twenty-five percent. That's ten times higher. The Justice Department alleged that from two thousand nine to two thousand thirteen, Ford imported Transit Connect vans from Turkey dressed up as passenger vehicles, with temporary rear seats and other passenger features. According to the government, those seats were never used to carry passengers. After the vans cleared customs, the seats were allegedly removed, and the vans went back to being two-seat cargo vans. The settlement also covered allegations that Ford under-declared the value of some vehicles. In March twenty twenty-four, Ford agreed to pay three hundred sixty-five million dollars. But notice the wording. Those were allegations. The Justice Department itself said there was no determination of liability, and Ford didn't admit any. So this isn't a story about a loophole that worked. It's about where creative tariff planning can run into enforcement. And the rates and years here are history, not a guide to importing anything today. [loop] So the next time you see a van with an extra row of seats, remember",
- "script_simple": true
+ "script_simple": true,
+ "story_format": true
 }

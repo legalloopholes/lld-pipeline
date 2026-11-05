@@ -17,7 +17,7 @@
   "#lawtok",
   "#money"
  ],
- "script": "In Florida, you can owe millions and still keep your mansion. There's no price limit. [disclaimer] It's written right into Florida's Constitution. Your main home is protected from being sold off by most people you owe money to. And here's the crazy part. There's no dollar limit! Instead, the limit is about land. Outside a city? Up to one hundred sixty acres. Inside a city? Up to half an acre, and it has to be where you or your family live. But no price cap at all! So a tiny condo and a giant waterfront mansion on half an acre can both be protected. That's why Florida has a reputation as a place where your house is really hard for creditors to touch. But read the exceptions, they're in the same section. It doesn't protect you from property taxes on the home. Or debts for buying it, fixing it, or improving it, like your mortgage or a contractor's bill. Or work done on the house. Federal law can still matter. Bankruptcy has its own rules. And if you shove money into a mansion just to dodge the people you owe, you can run into fraud rules. So it's a strong shield. Not a perfect hiding spot. [loop] So before you buy a Florida mansion to escape a judgment, remember",
+ "script": "In Florida, you can owe millions and still keep your mansion. There's no price limit. [disclaimer] Meet Chad. Chad owes people a lot of money. And Chad lives in a waterfront mansion in Florida. The people he owes win in court. They want to sell his house. But Florida's Constitution protects your main home from most people you owe money to. And there's no dollar limit. The limit is about land. Inside a city, up to half an acre, where you or your family live. Wait. So a tiny condo and a giant mansion can both be protected? You see, it's like a rule that says you can keep one plate of food, no matter what's on it. It just has to fit on the plate. But it doesn't protect you from property taxes on the home. Or from debts for buying it, fixing it, or improving it, like your mortgage or a contractor's bill. Bankruptcy has its own rules. And shoving money into a mansion just to dodge the people you owe can run into fraud rules. And Chad never paid the guy who built his pool. So the mansion is safe from almost everyone Chad owes, except the guy who built the pool. [loop] So before you buy a Florida mansion to escape a judgment, remember",
  "publish_at": "2026-11-24T19:00:00-05:00",
  "sources": [
   "https://www.flsenate.gov/Laws/Constitution",
@@ -27,24 +27,37 @@
  "scenes": [
   {
    "at": "start",
-   "bg": "bg-neighborhood",
+   "bg": "bg-harbor",
    "cast": [
     {
-     "id": "larry:smug",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🏰🛡️",
-     "text": ""
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
     }
    ]
   },
   {
-   "at": "it's written right into",
-   "bg": "white",
+   "at": "the people he owes",
+   "bg": "bg-harbor",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "angry",
+     "gest": "point",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "none",
+     "x": 0.7
+    }
+   ]
+  },
+  {
+   "at": "but florida's constitution protects",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:explaining"
@@ -52,78 +65,51 @@
    ],
    "props": [
     {
-     "id": "doc",
-     "text": "Article X, Section 4",
-     "sub": "Florida Constitution"
+     "id": "sign",
+     "icon": "🏠",
+     "text": "FLORIDA CONSTITUTION"
     }
    ]
   },
   {
-   "at": "and here's the crazy part",
+   "at": "and there's no dollar",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📏",
+     "text": "LAND LIMIT, NOT $"
+    }
+   ]
+  },
+  {
+   "at": "wait so a tiny",
+   "bg": "bg-harbor",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "surprised",
+     "gest": "think",
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "at": "you see it's like",
    "bg": "white",
    "cast": [
     {
-     "id": "larry:surprised"
-    }
-   ],
-   "card": "NO DOLLAR LIMIT",
-   "card_at": "and here's the crazy part",
-   "zooms": [
-    {
-     "at": "and here's the crazy part",
-     "amount": 1.18,
-     "hold": 0.9
+     "id": "larry:explaining"
     }
    ]
   },
   {
-   "at": "outside a city",
-   "bg": "bg-neighborhood",
-   "cast": [
-    {
-     "id": "larry:pointing",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🌾",
-     "text": "160 acres outside"
-    }
-   ]
-  },
-  {
-   "at": "inside a city",
-   "bg": "bg-neighborhood",
-   "cast": [
-    {
-     "id": "larry:pointing",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🏘️",
-     "text": "½ acre in a city"
-    }
-   ]
-  },
-  {
-   "at": "so a tiny condo",
-   "bg": "bg-neighborhood",
-   "cast": [
-    {
-     "id": "larry:smug",
-     "x": 0.3
-    }
-   ],
-   "card": "CONDO OR MANSION",
-   "card_at": "so a tiny condo"
-  },
-  {
-   "at": "but read the exceptions",
+   "at": "but it doesn't protect",
    "bg": "white",
    "cast": [
     {
@@ -133,67 +119,77 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🧾",
-     "text": "Taxes · mortgage"
+     "icon": "⚠️",
+     "text": "BIG EXCEPTIONS"
     }
    ]
   },
   {
-   "at": "federal law can still matter",
-   "bg": "bg-courtroom",
+   "at": "bankruptcy has its own",
+   "bg": "bg-office",
    "cast": [
     {
-     "id": "char-judge",
-     "x": 0.7
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🚨",
+     "text": "FRAUD RULES"
+    }
+   ]
+  },
+  {
+   "at": "and chad never paid",
+   "bg": "bg-harbor",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "point",
+     "x": 0.3
     },
     {
-     "id": "larry:concerned",
-     "x": 0.3
-    }
-   ],
-   "card": "FEDERAL & BANKRUPTCY LIMITS",
-   "card_at": "federal law can still matter"
-  },
-  {
-   "at": "and if you shove money",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:concerned"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🚫💰",
-     "text": "Fraud rules apply"
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "none",
+     "x": 0.7
     }
    ]
   },
   {
-   "at": "so it's a strong shield",
-   "bg": "bg-neighborhood",
+   "at": "so the mansion is",
+   "bg": "bg-harbor",
    "cast": [
     {
-     "id": "larry:explaining",
-     "x": 0.3
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "shrug",
+     "x": 0.5
     }
-   ],
-   "card": "NOT A HIDING PLACE",
-   "card_at": "so it's a strong shield"
+   ]
   },
   {
    "at": "send this to",
    "bg": "white",
    "cast": [
     {
-     "id": "larry:auto"
+     "id": "larry:pointing"
     }
    ]
   },
   {
    "at": "so before you buy",
-   "bg": "bg-neighborhood",
+   "bg": "bg-harbor",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
+    }
+   ],
    "loop": true
   }
  ],
@@ -201,5 +197,6 @@
  "share_line": "Send this to the friend who'd hide from their debts in a mansion",
  "hook_old": "THE MANSION SHIELD?",
  "script_old": "A creditor wins a judgment against you, but your Florida mansion might still be protected. This is Florida's Constitution, Article Ten, Section Four. It protects a homestead from forced sale by most creditors. And here's the unusual part. Instead of a dollar limit, it uses land limits. Outside a city, up to one hundred sixty acres of contiguous land. Inside a city, up to half an acre, limited to the residence of the owner or their family. There's no stated dollar ceiling. So a modest condo and a waterfront mansion on half an acre can both qualify. That's why Florida has a reputation as a place where a home can be hard for creditors to reach. But read the exceptions written into the same section. The protection doesn't apply to taxes and assessments on the property, to debts for buying, improving or repairing it, like a mortgage or a contractor's bill, or to labor performed on it. Federal law can also matter, and bankruptcy law has its own restrictions. And moving money into a mansion to dodge creditors can run into fraud rules. So it's a strong protection, not a guaranteed hiding place. [loop] So before you buy a Florida mansion to escape a judgment, remember",
- "script_simple": true
+ "script_simple": true,
+ "story_format": true
 }

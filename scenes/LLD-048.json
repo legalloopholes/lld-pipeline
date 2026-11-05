@@ -17,7 +17,7 @@
   "#lawtok",
   "#trademark"
  ],
- "script": "Mickey Mouse is public domain now. You can legally use him. Just not that Mickey. [disclaimer] On New Year's Day, twenty twenty four, the copyright on Steamboat Willie ran out. That's the cartoon from nineteen twenty eight! According to Duke's public domain experts, that frees the very first Mickey and Minnie, the way they look in Steamboat Willie and in another old silent cartoon, Plane Crazy. Anyone can share them, change them, and remix them! But here's what didn't happen. Newer versions of Mickey, like the one from Fantasia in nineteen forty, are still protected. At least the new stuff that was added later. So the modern Mickey you know? Not free! Then there's trademark. Disney still owns trademarks on Mickey, mostly for merch. Those don't stretch the copyright. But they can stop you from confusing people into thinking Disney made or approved your product. A clear note saying Disney had nothing to do with it helps. And Duke says trademark can't be used to block what the copyright ending allows. So yes, the old black and white Mickey is free. But no, that doesn't make all of Disney free. And you can't pretend Disney is behind your project. [loop] So before you put a mouse on your next T-shirt, remember",
+ "script": "Mickey Mouse is public domain now. You can legally use him. Just not that Mickey. [disclaimer] Meet Gary. Gary just read that Mickey Mouse is free. He's printing T shirts tonight. On New Year's Day, twenty twenty four, the copyright on Steamboat Willie ran out. That's the cartoon from nineteen twenty eight. Duke's public domain experts say that frees the very first Mickey and Minnie, the way they look in Steamboat Willie and another old silent cartoon. Gary is thrilled. He grabs a picture of modern Mickey, in full color, and starts printing. Wait. That's not the Mickey that got free? You see, the copyright ran out on the old black and white Mickey. Newer versions, and the new stuff added later, can still be protected. It's like a hand me down. You get the old jacket, not the new one. Disney still has trademarks on Mickey, mostly for merch. You can't confuse people into thinking Disney made or approved your product. So the old Mickey is free. But that doesn't make all of Disney free. Gary looks at his pile of shirts. So Mickey really did become free. Gary just printed the one Mickey that didn't. [loop] So before you put a mouse on your next T shirt, remember",
  "publish_at": "2026-11-25T12:00:00-05:00",
  "sources": [
   "https://cspd.law.duke.edu/mickey/"
@@ -29,20 +29,16 @@
    "bg": "white",
    "cast": [
     {
-     "id": "larry:smug"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🐭🎞️",
-     "text": "Public domain?"
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
     }
    ]
   },
   {
    "at": "on new year's day",
-   "bg": "white",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:explaining"
@@ -51,14 +47,14 @@
    "props": [
     {
      "id": "sign",
-     "icon": "📅",
-     "text": "January 1, 2024"
+     "icon": "🗓️",
+     "text": "JANUARY 1, 2024"
     }
    ]
   },
   {
-   "at": "according to duke's",
-   "bg": "white",
+   "at": "duke's public domain experts",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:pointing"
@@ -66,107 +62,63 @@
    ],
    "props": [
     {
-     "id": "doc",
-     "text": "The 1928 versions",
-     "sub": "Duke CSPD"
-    }
-   ]
-  },
-  {
-   "at": "anyone can share them",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:smug"
-    }
-   ],
-   "card": "SHARE · ADAPT · REMIX",
-   "card_at": "anyone can share them"
-  },
-  {
-   "at": "but here's what didn't",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:concerned"
-    }
-   ],
-   "props": [
-    {
      "id": "sign",
-     "icon": "🔒🎞️",
-     "text": "Later versions: locked"
-    }
-   ],
-   "zooms": [
-    {
-     "at": "but here's what didn't",
-     "amount": 1.18,
-     "hold": 0.9
+     "icon": "🐭",
+     "text": "OLD MICKEY: FREE"
     }
    ]
   },
   {
-   "at": "then there's trademark",
+   "at": "gary is thrilled he",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "arms_up",
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "at": "wait that's not the",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "surprised",
+     "gest": "think",
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "at": "you see the copyright",
    "bg": "white",
    "cast": [
     {
      "id": "larry:explaining"
+    }
+   ]
+  },
+  {
+   "at": "disney still has trademarks",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:concerned"
     }
    ],
    "props": [
     {
      "id": "sign",
      "icon": "™️",
-     "text": "Trademarks remain"
+     "text": "TRADEMARK STILL EXISTS"
     }
    ]
   },
   {
-   "at": "those don't stretch",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:pointing"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🤔🏷️",
-     "text": "Don't confuse buyers"
-    }
-   ]
-  },
-  {
-   "at": "a clear note saying",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:explaining"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "📝",
-     "text": "Disclaimer helps"
-    }
-   ]
-  },
-  {
-   "at": "and duke says trademark",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:smug"
-    }
-   ],
-   "card": "TRADEMARK CAN'T UNDO EXPIRY",
-   "card_at": "and duke says trademark"
-  },
-  {
-   "at": "so yes the old",
+   "at": "so the old mickey",
    "bg": "white",
    "cast": [
     {
@@ -176,8 +128,32 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🐭1928",
-     "text": "Only the 1928 version"
+     "icon": "⚠️",
+     "text": "OLD MICKEY ONLY"
+    }
+   ]
+  },
+  {
+   "at": "gary looks at his",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "scratch",
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "at": "so mickey really did",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "shrug",
+     "x": 0.5
     }
    ]
   },
@@ -186,13 +162,21 @@
    "bg": "white",
    "cast": [
     {
-     "id": "larry:auto"
+     "id": "larry:pointing"
     }
    ]
   },
   {
    "at": "so before you put",
    "bg": "white",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
+    }
+   ],
    "loop": true
   }
  ],
@@ -200,5 +184,6 @@
  "share_line": "Send this to the friend who'd get sued by Disney in under a week",
  "hook_old": "WHICH MICKEY IS FREE?",
  "script_old": "One version of Mickey Mouse entered the public domain, and that doesn't mean every Mickey did. On January first, twenty twenty-four, the U.S. copyright on Steamboat Willie, the nineteen twenty-eight cartoon, expired. According to Duke's Center for the Study of the Public Domain, that frees the nineteen twenty-eight versions of Mickey and Minnie, as they appear in Steamboat Willie and in the silent cartoon Plane Crazy. People can share, adapt and remix those versions. But here's what didn't happen. Later versions of Mickey, like the one in Fantasia from nineteen forty, are still protected, at least for the new, original details added later. So a modern Mickey, with his later look, isn't free to copy. Then there's trademark. Disney still has trademarks on Mickey, mainly for merchandise. Those don't extend the copyright, but they can stop uses likely to confuse people about who made or endorsed a product. A clear disclaimer that Disney didn't make or approve a work helps. As Duke puts it, trademark rights can't be used to block the freedoms that the expiration of copyright allows. So yes, the old black-and-white Mickey is public domain. No, that doesn't make all Disney imagery free, or let anyone pretend Disney is behind their project. [loop] So before you put a mouse on your next T-shirt, remember",
- "script_simple": true
+ "script_simple": true,
+ "story_format": true
 }

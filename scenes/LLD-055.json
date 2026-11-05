@@ -17,7 +17,7 @@
   "#lawtok",
   "#supremecourt"
  ],
- "script": "A student shipped in cheap textbooks, resold them, got sued, and beat the publisher at the Supreme Court. [disclaimer] This is a real Supreme Court case from twenty thirteen. A student named Supap Kirtsaeng came from Thailand to study math in America. And he noticed something. Textbooks in Thailand were way cheaper! So his friends and family bought cheap copies there and mailed them to him. And he resold them here, for a profit. Smart! The publisher, Wiley, sued him for copyright. And a jury said he owed money! The fight was about a rule called first sale. Normally, once you legally own a book, you can resell it, and nobody can stop you. But the publisher said that only counts for books made in America! The Supreme Court said no. It said the first sale rule works for copies made legally overseas too. The law doesn't say anything about where it was made. So a real copy, bought legally, can be resold, even if the publisher wanted different prices in different countries. Huge win! Here's the limit. This is about real, physical copies. It doesn't allow pirated copies, making your own copies, or reselling digital stuff. And import rules, trademarks and contracts are separate issues. [loop] So before you buy your textbooks at full price, remember",
+ "script": "A student shipped in cheap textbooks, resold them, got sued, and beat the publisher at the Supreme Court. [disclaimer] Meet Supap Kirtsaeng. He comes from Thailand to study math in America. And he notices something. The same textbooks are way cheaper in Thailand. So his friends and family buy cheap copies there and mail them to him. And he resells them here. For a profit. The publisher, Wiley, sues him for copyright. And a jury says he owes money. The fight is about a rule called first sale. Once you legally own a book, you can resell it. But the publisher says that only counts for books made in America. Wait. In twenty thirteen, the Supreme Court says no? You see, the law doesn't say anything about where the book was made. A real copy, bought legally, is yours to resell. It's like a used car. Nobody asks which country built it before you sell it. This is about real, physical copies. Not pirated copies, not making your own copies, and not digital stuff. So the publisher charged less in Thailand to sell more books, and ended up competing with its own cheap books in America. [loop] So before you buy your textbooks at full price, remember",
  "publish_at": "2026-11-28T19:00:00-05:00",
  "sources": [
   "https://www.law.cornell.edu/supremecourt/text/11-697"
@@ -26,24 +26,61 @@
  "scenes": [
   {
    "at": "start",
-   "bg": "bg-shop",
+   "bg": "bg-office",
    "cast": [
     {
-     "id": "larry:smug",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "📚🌏💵",
-     "text": ""
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
     }
    ]
   },
   {
-   "at": "this is a real supreme",
-   "bg": "white",
+   "at": "and he notices something",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "surprised",
+     "gest": "think",
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "at": "so his friends and",
+   "bg": "bg-harbor",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "point",
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "at": "the publisher wiley sues",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "face": "angry",
+     "gest": "point",
+     "x": 0.3
+    },
+    {
+     "id": "char-politician",
+     "face": "angry",
+     "gest": "point",
+     "x": 0.22
+    }
+   ]
+  },
+  {
+   "at": "the fight is about",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:explaining"
@@ -51,130 +88,59 @@
    ],
    "props": [
     {
-     "id": "doc",
-     "text": "Kirtsaeng v. John Wiley & Sons",
-     "sub": "U.S. Supreme Court"
+     "id": "sign",
+     "icon": "📚",
+     "text": "FIRST SALE RULE"
     }
    ]
   },
   {
-   "at": "a student named supap",
+   "at": "but the publisher says",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "explain",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "none",
+     "x": 0.7
+    }
+   ]
+  },
+  {
+   "at": "wait in",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "face": "surprised",
+     "gest": "think",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "surprised",
+     "gest": "arms_up",
+     "x": 0.22
+    }
+   ]
+  },
+  {
+   "at": "you see the law",
    "bg": "white",
    "cast": [
     {
      "id": "larry:explaining"
     }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🇹🇭📚",
-     "text": "Cheaper editions"
-    }
    ]
   },
   {
-   "at": "and he resold them",
-   "bg": "bg-shop",
-   "cast": [
-    {
-     "id": "larry:smug",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "💵",
-     "text": "Resold in the U.S."
-    }
-   ]
-  },
-  {
-   "at": "the publisher wiley sued",
-   "bg": "bg-courtroom",
-   "cast": [
-    {
-     "id": "char-judge",
-     "x": 0.7
-    },
-    {
-     "id": "larry:concerned",
-     "x": 0.3
-    }
-   ],
-   "card": "JURY: INFRINGEMENT",
-   "card_at": "the publisher wiley sued"
-  },
-  {
-   "at": "the fight was about",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:pointing"
-    }
-   ],
-   "card": "FIRST SALE DOCTRINE",
-   "card_at": "the fight was about"
-  },
-  {
-   "at": "but the publisher said",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:thinking"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🇺🇸❓",
-     "text": "Made in the U.S. only?"
-    }
-   ]
-  },
-  {
-   "at": "the supreme court said no",
-   "bg": "bg-courtroom",
-   "cast": [
-    {
-     "id": "char-judge",
-     "x": 0.7
-    },
-    {
-     "id": "larry:surprised",
-     "x": 0.3
-    }
-   ],
-   "card": "GEOGRAPHY DOESN'T MATTER",
-   "card_at": "the supreme court said no",
-   "zooms": [
-    {
-     "at": "the supreme court said no",
-     "amount": 1.18,
-     "hold": 0.9
-    }
-   ]
-  },
-  {
-   "at": "so a real copy",
-   "bg": "bg-shop",
-   "cast": [
-    {
-     "id": "larry:explaining",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "📚✅",
-     "text": "Genuine copy: resell"
-    }
-   ]
-  },
-  {
-   "at": "here's the limit",
+   "at": "this is about real",
    "bg": "white",
    "cast": [
     {
@@ -184,8 +150,20 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🏴‍☠️🚫",
-     "text": "No piracy"
+     "icon": "⚠️",
+     "text": "REAL COPIES ONLY"
+    }
+   ]
+  },
+  {
+   "at": "so the publisher charged",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "worried",
+     "gest": "shrug",
+     "x": 0.5
     }
    ]
   },
@@ -194,13 +172,21 @@
    "bg": "white",
    "cast": [
     {
-     "id": "larry:auto"
+     "id": "larry:pointing"
     }
    ]
   },
   {
    "at": "so before you buy",
-   "bg": "bg-shop",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
+    }
+   ],
    "loop": true
   }
  ],
@@ -208,5 +194,6 @@
  "share_line": "Send this to the friend who'd resell your birthday gift online",
  "hook_old": "CHEAP BOOKS ABROAD → RESOLD",
  "script_old": "A student bought cheaper textbooks abroad and resold them in America, and the publisher lost at the Supreme Court. This is Kirtsaeng versus John Wiley and Sons, from twenty thirteen. Supap Kirtsaeng came from Thailand to study math in the U.S. His friends and family bought lower-priced foreign editions of Wiley textbooks in Thailand and mailed them to him. He resold them at a profit. Wiley sued for copyright infringement and won a jury verdict. The fight was over a doctrine called first sale. Normally, once you lawfully own a copy of a book, you can resell it without the copyright owner's permission. But the law covers copies lawfully made under this title, and Wiley argued that meant made in the United States. The Supreme Court disagreed, six to three. It said the first sale doctrine applies to copies lawfully made abroad, and that the statute's language says nothing about geography. So a genuine copy, bought legally, can be resold, even if the publisher wanted separate markets with separate prices. Here's the limit. This is about genuine physical copies. It doesn't allow pirated copies, making new copies, or transferring digital licenses. And import, trademark and contract issues are separate questions. [loop] So before you buy your textbooks at full price, remember",
- "script_simple": true
+ "script_simple": true,
+ "story_format": true
 }

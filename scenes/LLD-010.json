@@ -17,7 +17,7 @@
   "#lawtok",
   "#truestory"
  ],
- "script": "A group of MIT students found a way to make a state lottery pay them. And it was legal. [disclaimer] This was Massachusetts, and a game called Cash WinFall. It started in two thousand four. Normally, a lottery jackpot just keeps growing until someone wins. But this game had a weird rule. Once the jackpot hit two million dollars and nobody won it, the money rolled down to the smaller prizes! On those special draws, the small prizes got way bigger. And some smart players did the math. If you bought a huge pile of tickets on exactly those days, you could expect to win back more than you spent. Expect. Not guaranteed! A state review found four big betting groups buying tickets like crazy on those days. One was a group of MIT students! And the review found no evidence that the players did anything illegal or teamed up to cheat. But it did find that some stores broke the rules to help the big players. Sometimes with the okay of lottery officials. Yikes! The state treasurer later said they should have stepped in much sooner. And the game? It's gone. The state shut it down. Most lotteries don't work like this, and buying more tickets won't beat a normal draw. [loop] So the next time someone tells you nobody can beat the lottery, remember",
+ "script": "A group of MIT students found a way to make a state lottery pay them. And it was legal. [disclaimer] Meet a group of college students in Massachusetts. They are looking at a lottery game called Cash WinFall. Most lotteries are simple. The jackpot grows until somebody wins it. But this game had a weird rule. If the jackpot hit two million dollars and nobody won, the money rolled down to the small prizes. Suddenly the small prizes get huge. And the students do the math. On those days, if you buy a giant pile of tickets, you can expect to win back more than you spend. So they buy tickets. Thousands of them. Over and over. Wait. Isn't that cheating? You see, it's like a store that accidentally prices its twenty dollar bills at fifteen. You're not stealing. You're just shopping. A state review found no evidence the players broke the law. But it found some stores broke the rules to help the big players. Sometimes with lottery officials saying okay. And this does not work on a normal lottery. More tickets won't beat a normal draw. So the state did the only thing it could. It shut the game down. The students didn't beat the lottery. The lottery's own rule did. [loop] So the next time someone tells you nobody can beat the lottery, remember",
  "publish_at": "2026-11-06T12:00:00-05:00",
  "sources": [
   "https://www.mass.gov/doc/letter-to-state-treasurer-steven-grossman-regarding-the-lottery-july-2012/download",
@@ -31,38 +31,28 @@
    "bg": "bg-shop",
    "cast": [
     {
-     "id": "larry:smug",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🎟️📈",
-     "text": ""
+     "id": "char-friend-chimp",
+     "face": "neutral",
+     "gest": "none",
+     "x": 0.5
     }
    ]
   },
   {
-   "at": "this was massachusetts",
+   "at": "most lotteries are simple",
    "bg": "bg-shop",
    "cast": [
     {
-     "id": "larry:explaining",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🎰",
-     "text": "Cash WinFall"
+     "id": "char-friend-chimp",
+     "face": "surprised",
+     "gest": "think",
+     "x": 0.5
     }
    ]
   },
   {
-   "at": "normally a lottery jackpot",
-   "bg": "white",
+   "at": "but this game had",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:explaining"
@@ -71,14 +61,26 @@
    "props": [
     {
      "id": "sign",
-     "icon": "💰⬆️",
-     "text": "Jackpot grows"
+     "icon": "💰",
+     "text": "JACKPOT: $2,000,000"
     }
    ]
   },
   {
-   "at": "once the jackpot hit",
-   "bg": "white",
+   "at": "suddenly the small prizes",
+   "bg": "bg-shop",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "surprised",
+     "gest": "arms_up",
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "at": "on those days if",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:pointing"
@@ -87,105 +89,76 @@
    "props": [
     {
      "id": "sign",
-     "icon": "💰⬇️",
-     "text": "Rolls down!"
+     "icon": "🎟️",
+     "text": "BUY A MOUNTAIN"
     }
    ]
   },
   {
-   "at": "the small prizes got",
-   "bg": "white",
+   "at": "so they buy tickets",
+   "bg": "bg-shop",
    "cast": [
     {
-     "id": "larry:surprised"
-    }
-   ],
-   "card": "SMALLER PRIZES GET BIGGER",
-   "card_at": "the small prizes got"
-  },
-  {
-   "at": "and some smart players",
-   "bg": "bg-office",
-   "cast": [
-    {
-     "id": "larry:thinking",
+     "id": "char-politician",
+     "face": "surprised",
+     "gest": "arms_up",
      "x": 0.3
-    }
-   ],
-   "props": [
+    },
     {
-     "id": "sign",
-     "icon": "🧮",
-     "text": "Expected value"
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "point",
+     "x": 0.7
     }
    ]
   },
   {
-   "at": "expect not guaranteed",
+   "at": "wait isn't that cheating",
+   "bg": "bg-shop",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "worried",
+     "gest": "think",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.7
+    }
+   ]
+  },
+  {
+   "at": "you see it's like",
    "bg": "white",
    "cast": [
     {
-     "id": "larry:concerned"
-    }
-   ],
-   "card": "EXPECTED ≠ GUARANTEED",
-   "card_at": "expect not guaranteed",
-   "zooms": [
-    {
-     "at": "expect not guaranteed",
-     "amount": 1.18,
-     "hold": 0.9
+     "id": "larry:explaining"
     }
    ]
   },
   {
    "at": "a state review found",
-   "bg": "bg-office",
+   "bg": "bg-courtroom",
    "cast": [
     {
-     "id": "larry:explaining",
+     "id": "char-judge",
+     "face": "neutral",
+     "gest": "explain",
      "x": 0.3
-    }
-   ],
-   "props": [
+    },
     {
-     "id": "doc",
-     "text": "State review",
-     "sub": "Massachusetts"
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "none",
+     "x": 0.22
     }
    ]
   },
   {
-   "at": "and the review found",
-   "bg": "bg-office",
-   "cast": [
-    {
-     "id": "larry:smug",
-     "x": 0.3
-    }
-   ],
-   "card": "NO EVIDENCE OF COLLUSION BY BETTORS",
-   "card_at": "and the review found"
-  },
-  {
-   "at": "but it did find",
-   "bg": "bg-shop",
-   "cast": [
-    {
-     "id": "larry:concerned",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "📋⚠️",
-     "text": "Rules bent"
-    }
-   ]
-  },
-  {
-   "at": "and the game",
+   "at": "and this does not",
    "bg": "white",
    "cast": [
     {
@@ -195,8 +168,38 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🛑",
-     "text": "Game ended"
+     "icon": "⚠️",
+     "text": "NORMAL LOTTERIES: NO"
+    }
+   ]
+  },
+  {
+   "at": "so the state did",
+   "bg": "bg-shop",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "angry",
+     "gest": "arms_up",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "shrug",
+     "x": 0.7
+    }
+   ]
+  },
+  {
+   "at": "the students didn't beat",
+   "bg": "bg-shop",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "shrug",
+     "x": 0.5
     }
    ]
   },
@@ -205,13 +208,21 @@
    "bg": "white",
    "cast": [
     {
-     "id": "larry:auto"
+     "id": "larry:pointing"
     }
    ]
   },
   {
    "at": "so the next time",
    "bg": "bg-shop",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "neutral",
+     "gest": "none",
+     "x": 0.5
+    }
+   ],
    "loop": true
   }
  ],
@@ -219,5 +230,6 @@
  "share_line": "Send this to the friend who'd sell their soul for a lottery ticket",
  "hook_old": "THEY BEAT THE LOTTERY… LEGALLY?",
  "script_old": "These lottery players found a way to make the odds work for them, without rigging a single draw. This was Massachusetts, and a game called Cash WinFall, which launched in two thousand four. Most lotteries let the jackpot grow and grow. Once the jackpot pool reached two million dollars and nobody hit the top prize, the money rolled down to the smaller prizes, for matching fewer numbers. On those roll-down draws, the smaller prizes got much bigger. Some players did the math. If you bought a huge number of tickets on exactly those draws, the expected return could be worth more than you spent. Expected, not guaranteed. A state review identified four betting groups making enormous purchases during roll-downs, including a group of MIT students. It found no evidence of illicit activity or collusion among the bettors. But it did find that some retailers broke rules to help the big players, sometimes with the okay of some lottery officials. The state treasurer later said those steps should have come much sooner. And Cash WinFall is gone. The state ended the game. Most lotteries aren't built like this, and buying more tickets doesn't beat a normal draw. [loop] So the next time someone tells you nobody can beat the lottery, remember",
- "script_simple": true
+ "script_simple": true,
+ "story_format": true
 }

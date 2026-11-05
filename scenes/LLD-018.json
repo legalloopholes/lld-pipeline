@@ -17,7 +17,7 @@
   "#lawtok",
   "#weirdlaws"
  ],
- "script": "A city took a man's house, declared it a boat, and destroyed it. Then the Supreme Court said it was never a boat. [disclaimer] This is a real Supreme Court case from twenty thirteen. Lozman versus the City of Riviera Beach. Fane Lozman lived in a floating home. Basically a plywood house sitting on an empty box that floats. He got into fights with the city marina. So the city sued him under the law of ships and the sea, for docking fees and trespassing. But to do that, his house had to count as a ship! And the lower courts said, sure, it's a ship. It floats. You can tow it. Done. So his home was ordered sold. The city bought it at auction. And then they destroyed it! Brutal! Then the Supreme Court stepped in. And it said, no. Not everything that floats is a ship. The real test is whether a normal person would look at it and think it's built to carry people or stuff across the water. This house had no steering. No engine. It just looked like a home. So it was not a ship! The case still mattered, because there was money set aside for him if he won. But the win came way too late for the house. And floating homes still have to follow the rules, and his normal debts didn't disappear. [loop] So before you call your houseboat a ship, remember",
+ "script": "A city took a man's house, declared it a boat, and destroyed it. Then the Supreme Court said it was never a boat. [disclaimer] Meet Fane Lozman. He lives in a floating home in Riviera Beach, Florida. It's basically a plywood house sitting on an empty box that floats. No engine. No steering. He keeps fighting with the city marina. So the city sues him. But they sue him under the law of ships and the sea. For that, his house has to count as a ship. The lower courts say, sure, it floats, you can tow it. It's a ship. His home is sold. The city buys it at auction. And then the city destroys it. Wait. The Supreme Court takes the case? You see, the Court said not everything that floats is a ship. A rubber duck floats. It's not a ship either. The test is whether a normal person would think it's built to carry people or stuff across the water. This looked like a home. So in twenty thirteen, the Court says, it was never a ship. Floating homes still have to follow the rules, and his normal debts didn't disappear. So Lozman won his case and proved his house was a house. There was just no house left to prove it with. [loop] So before you call your houseboat a ship, remember",
  "publish_at": "2026-11-10T12:00:00-05:00",
  "sources": [
   "https://www.law.cornell.edu/supremecourt/text/11-626"
@@ -29,189 +29,188 @@
    "bg": "bg-harbor",
    "cast": [
     {
-     "id": "larry:smug",
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "at": "it's basically a plywood",
+   "bg": "bg-harbor",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "point",
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "at": "he keeps fighting with",
+   "bg": "bg-harbor",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "angry",
+     "gest": "point",
      "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "angry",
+     "gest": "arms_up",
+     "x": 0.7
+    }
+   ]
+  },
+  {
+   "at": "but they sue him",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:explaining"
     }
    ],
    "props": [
     {
      "id": "sign",
-     "icon": "🏠🌊",
-     "text": ""
+     "icon": "⚓",
+     "text": "LAW OF THE SEA"
     }
    ]
   },
   {
-   "at": "this is a real supreme",
+   "at": "the lower courts say",
    "bg": "bg-courtroom",
    "cast": [
     {
      "id": "char-judge",
-     "x": 0.7
+     "face": "neutral",
+     "gest": "point",
+     "x": 0.3
     },
     {
-     "id": "larry:explaining",
-     "x": 0.3
+     "id": "char-friend-chimp",
+     "face": "surprised",
+     "gest": "none",
+     "x": 0.22
     }
    ]
   },
   {
-   "at": "fane lozman lived",
+   "at": "his home is sold",
    "bg": "bg-harbor",
    "cast": [
     {
-     "id": "larry:explaining",
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "arms_up",
      "x": 0.3
-    }
-   ],
-   "props": [
+    },
     {
-     "id": "sign",
-     "icon": "🏠",
-     "text": "Plywood floating home"
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "none",
+     "x": 0.7
     }
    ]
   },
   {
-   "at": "he got into fights",
-   "bg": "bg-harbor",
-   "cast": [
-    {
-     "id": "larry:concerned",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "doc",
-     "text": "Admiralty claim",
-     "sub": "Dockage + trespass"
-    }
-   ]
-  },
-  {
-   "at": "but to do that",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:thinking"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🚢❓",
-     "text": "Vessel?"
-    }
-   ]
-  },
-  {
-   "at": "and the lower courts said",
+   "at": "wait the supreme court",
    "bg": "bg-courtroom",
    "cast": [
     {
      "id": "char-judge",
-     "x": 0.7
+     "face": "surprised",
+     "gest": "think",
+     "x": 0.3
     },
     {
-     "id": "larry:concerned",
-     "x": 0.3
-    }
-   ],
-   "card": "IT FLOATS → VESSEL",
-   "card_at": "and the lower courts said"
-  },
-  {
-   "at": "so his home was ordered",
-   "bg": "bg-harbor",
-   "cast": [
-    {
-     "id": "larry:surprised",
-     "x": 0.3
-    }
-   ],
-   "card": "SOLD. DESTROYED.",
-   "card_at": "so his home was ordered",
-   "zooms": [
-    {
-     "at": "so his home was ordered",
-     "amount": 1.18,
-     "hold": 0.9
+     "id": "char-friend-chimp",
+     "face": "surprised",
+     "gest": "arms_up",
+     "x": 0.22
     }
    ]
   },
   {
-   "at": "then the supreme court stepped",
+   "at": "you see the court",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ]
+  },
+  {
+   "at": "this looked like a",
    "bg": "bg-courtroom",
    "cast": [
     {
      "id": "char-judge",
-     "x": 0.7
+     "face": "smug",
+     "gest": "point",
+     "x": 0.3
     },
     {
-     "id": "larry:explaining",
-     "x": 0.3
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "arms_up",
+     "x": 0.22
     }
-   ],
-   "card": "NOT EVERY FLOATING THING IS A VESSEL",
-   "card_at": "then the supreme court stepped"
+   ]
   },
   {
-   "at": "the real test is",
+   "at": "floating homes still have",
    "bg": "white",
    "cast": [
     {
-     "id": "larry:pointing"
+     "id": "larry:concerned"
     }
    ],
    "props": [
     {
      "id": "sign",
-     "icon": "🧭",
-     "text": "Designed to carry?"
+     "icon": "⚠️",
+     "text": "STILL FOLLOW THE RULES"
     }
    ]
   },
   {
-   "at": "this house had no steering",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:smug"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🚫⚙️",
-     "text": "No steering, no engine"
-    }
-   ]
-  },
-  {
-   "at": "but the win came",
+   "at": "so lozman won his",
    "bg": "bg-harbor",
    "cast": [
     {
-     "id": "larry:concerned",
-     "x": 0.3
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "shrug",
+     "x": 0.5
     }
-   ],
-   "card": "TOO LATE FOR THE HOUSE",
-   "card_at": "but the win came"
+   ]
   },
   {
    "at": "send this to",
    "bg": "white",
    "cast": [
     {
-     "id": "larry:auto"
+     "id": "larry:pointing"
     }
    ]
   },
   {
    "at": "so before you call",
    "bg": "bg-harbor",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
+    }
+   ],
    "loop": true
   }
  ],
@@ -219,5 +218,6 @@
  "share_line": "Send this to the friend whose apartment is basically a sinking boat",
  "hook_old": "HOUSE OR SHIP?",
  "script_old": "A city treated this man's floating home like a ship, and it was sold and destroyed before the Supreme Court said it was never a vessel. This is Lozman versus the City of Riviera Beach, from twenty thirteen. Fane Lozman lived in a floating home: a plywood, house-shaped structure, kept afloat by an empty space underneath. After disputes with the city's marina, the city sued in admiralty, the federal law of ships and the sea, seeking dockage fees and trespass damages. For that, the house had to count as a vessel. The lower courts said it did. It floats, and it can be towed. The home was ordered sold, and the city bought it at auction and had it destroyed. Then the Supreme Court ruled, seven to two. Not every floating structure is a vessel. The test is whether a reasonable observer would consider it designed, to a practical degree, for carrying people or things over water. This house had no steering, no engine, and looked like ordinary living quarters. So, not a vessel. The case wasn't moot, because a bond secured his possible recovery. But the ruling came too late for the house. And it doesn't exempt floating homes from regulation, or erase ordinary debts. [loop] So before you call your houseboat a ship, remember",
- "script_simple": true
+ "script_simple": true,
+ "story_format": true
 }

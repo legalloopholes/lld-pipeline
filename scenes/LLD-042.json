@@ -17,7 +17,7 @@
   "#lawtok",
   "#criminallaw"
  ],
- "script": "A man stole a plane, and the Supreme Court threw out his conviction because a plane isn't a car. [disclaimer] This is McBoyle versus United States, from nineteen thirty one. A federal law made it a crime to move a stolen motor vehicle across state lines. And it listed what counts. Cars. Trucks. Wagons. Motorcycles. And any other vehicle that moves on its own and doesn't run on rails. McBoyle got convicted for moving a stolen airplane! But the Supreme Court threw it out. Justice Oliver Wendell Holmes wrote that when normal people say vehicle, they mean something that drives on land. Not something that flies! And the law never said airplane. Not once! He also wrote that people deserve a fair warning, in words regular people understand. So courts shouldn't stretch a crime law to cover planes, just because it kind of seems like it should. Here's the limit. The Court never said stealing a plane was legal. Obviously! And that gap got closed a long time ago. Today's federal law clearly covers stolen cars, boats, and aircraft, with up to ten years in prison. So this is a history lesson about writing laws carefully. Not a loophole! So please, whatever you do, do not steal a plane. It is still a crime! [loop] So before you assume a law covers everything that moves, remember",
+ "script": "A man stole a plane, and the Supreme Court threw out his conviction because a plane isn't a car. [disclaimer] Meet William McBoyle. It's nineteen thirty one. McBoyle gets convicted for moving a stolen airplane across state lines. He was charged under a federal law about moving stolen motor vehicles across state lines. The law listed what counts. Cars. Trucks. Wagons. Motorcycles. And any other self moving vehicle that doesn't run on rails. Wait. The Supreme Court throws it out? You see, Justice Oliver Wendell Holmes wrote that when normal people say vehicle, they mean something that moves on land. Not something that flies. It's like a sign that says no dogs in the store. Nobody reads that as no parrots. And the law never said airplane. Not once. He wrote that people deserve a fair warning, in words regular people understand. The Court never said stealing a plane was legal. That gap closed long ago. Today's federal law covers stolen cars, boats, and aircraft, with up to ten years in prison. So please, do not steal a plane. So McBoyle's conviction was thrown out. He stole something so much bigger than a car that the car law didn't fit. [loop] So before you assume a law covers everything that moves, remember",
  "publish_at": "2026-11-22T12:00:00-05:00",
  "sources": [
   "https://www.law.cornell.edu/supremecourt/text/283/25",
@@ -30,21 +30,28 @@
    "bg": "bg-street",
    "cast": [
     {
-     "id": "larry:smug",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "✈️🚗",
-     "text": ""
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
     }
    ]
   },
   {
-   "at": "this is mcboyle",
-   "bg": "white",
+   "at": "mcboyle gets convicted for",
+   "bg": "bg-street",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "point",
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "at": "he was charged under",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:explaining"
@@ -52,71 +59,15 @@
    ],
    "props": [
     {
-     "id": "doc",
-     "text": "McBoyle v. United States",
-     "sub": "U.S. Supreme Court, 1931"
-    }
-   ]
-  },
-  {
-   "at": "a federal law made",
-   "bg": "bg-street",
-   "cast": [
-    {
-     "id": "larry:explaining",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
      "id": "sign",
-     "icon": "🚗🚚🏍️",
-     "text": "Motor vehicles"
+     "icon": "🚗",
+     "text": "STOLEN VEHICLE LAW"
     }
    ]
   },
   {
-   "at": "mcboyle got convicted",
-   "bg": "bg-courtroom",
-   "cast": [
-    {
-     "id": "char-judge",
-     "x": 0.7
-    },
-    {
-     "id": "larry:concerned",
-     "x": 0.3
-    }
-   ],
-   "card": "A STOLEN AIRPLANE",
-   "card_at": "mcboyle got convicted"
-  },
-  {
-   "at": "but the supreme court threw",
-   "bg": "bg-courtroom",
-   "cast": [
-    {
-     "id": "char-judge",
-     "x": 0.7
-    },
-    {
-     "id": "larry:surprised",
-     "x": 0.3
-    }
-   ],
-   "card": "REVERSED",
-   "card_at": "but the supreme court threw",
-   "zooms": [
-    {
-     "at": "but the supreme court threw",
-     "amount": 1.18,
-     "hold": 0.9
-    }
-   ]
-  },
-  {
-   "at": "and the law never said",
-   "bg": "white",
+   "at": "the law listed what",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:pointing"
@@ -125,40 +76,56 @@
    "props": [
     {
      "id": "sign",
-     "icon": "✈️❓",
-     "text": "Not mentioned"
+     "icon": "🚙",
+     "text": "CARS. TRUCKS. WAGONS."
     }
    ]
   },
   {
-   "at": "he also wrote that",
+   "at": "wait the supreme court",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "face": "surprised",
+     "gest": "think",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "surprised",
+     "gest": "arms_up",
+     "x": 0.22
+    }
+   ]
+  },
+  {
+   "at": "you see justice oliver",
    "bg": "white",
    "cast": [
     {
      "id": "larry:explaining"
     }
-   ],
-   "card": "“A FAIR WARNING…”",
-   "card_at": "he also wrote that"
+   ]
   },
   {
-   "at": "so courts shouldn't stretch",
-   "bg": "white",
+   "at": "and the law never",
+   "bg": "bg-office",
    "cast": [
     {
-     "id": "larry:thinking"
+     "id": "larry:pointing"
     }
    ],
    "props": [
     {
      "id": "sign",
-     "icon": "📏",
-     "text": "Don't stretch it"
+     "icon": "✈️",
+     "text": "NEVER SAYS AIRPLANE"
     }
    ]
   },
   {
-   "at": "here's the limit",
+   "at": "the court never said",
    "bg": "white",
    "cast": [
     {
@@ -168,39 +135,61 @@
    "props": [
     {
      "id": "sign",
-     "icon": "✈️🚫",
-     "text": "Still not legal"
+     "icon": "⚠️",
+     "text": "STILL A CRIME TODAY"
     }
    ]
   },
   {
-   "at": "today's federal law clearly",
+   "at": "so mcboyle's conviction was",
    "bg": "bg-courtroom",
    "cast": [
     {
      "id": "char-judge",
-     "x": 0.7
+     "face": "smug",
+     "gest": "point",
+     "x": 0.3
     },
     {
-     "id": "larry:pointing",
-     "x": 0.3
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "arms_up",
+     "x": 0.22
     }
-   ],
-   "card": "NOW: VEHICLE, VESSEL OR AIRCRAFT",
-   "card_at": "today's federal law clearly"
+   ]
+  },
+  {
+   "at": "he stole something so",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "shrug",
+     "x": 0.5
+    }
+   ]
   },
   {
    "at": "send this to",
    "bg": "white",
    "cast": [
     {
-     "id": "larry:auto"
+     "id": "larry:pointing"
     }
    ]
   },
   {
    "at": "so before you assume",
    "bg": "bg-street",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
+    }
+   ],
    "loop": true
   }
  ],
@@ -208,5 +197,6 @@
  "share_line": "Send this to the friend who would absolutely steal a plane",
  "hook_old": "A PLANE IS NOT A CAR",
  "script_old": "He transported a stolen airplane across state lines, and the federal vehicle theft law of the time didn't cover it. This is McBoyle versus United States, from nineteen thirty-one. A federal law made it a crime to move a stolen motor vehicle across state lines. Its definition listed an automobile, an automobile truck, an automobile wagon, a motorcycle, or any other self-propelled vehicle not designed for running on rails. McBoyle was convicted for transporting a stolen airplane. The Supreme Court reversed. Justice Oliver Wendell Holmes wrote that in everyday speech, a vehicle is something that runs on land, not something that flies. Congress hadn't mentioned airplanes. He also wrote that a fair warning should be given to the world in language that the common world will understand. Courts shouldn't stretch a criminal law to aircraft just because the same policy seems to apply. Here's the limit. The Court didn't say stealing an airplane was legal. And the gap is long closed. Today's federal law expressly covers transporting a stolen motor vehicle, vessel, or aircraft, with up to ten years in prison. So this is a history lesson about precise wording, not a loophole. [loop] So before you assume a law covers everything that moves, remember",
- "script_simple": true
+ "script_simple": true,
+ "story_format": true
 }

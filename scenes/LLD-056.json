@@ -17,7 +17,7 @@
   "#lawtok",
   "#knowyourrights"
  ],
- "script": "Police found crack cocaine in a man's pocket, and the Supreme Court said they weren't allowed to. [disclaimer] This is a real Supreme Court case from nineteen ninety three, Minnesota versus Dickerson. Police in Minneapolis stopped a man and patted him down for weapons. Police are allowed to do that in some situations. But no weapon. Nothing! Then the officer felt a tiny lump in his jacket pocket. And he only figured out it was crack cocaine after squeezing it, sliding it, and messing with it. So the Court said two things. Thing one. If an officer is doing a legal patdown and feels something that's obviously illegal right away, they can take it. They call it plain feel! But thing two. That's not what happened here. The officer already knew the lump wasn't a weapon. And all that squeezing had nothing to do with checking for weapons. So it turned into an illegal search, and the drugs got thrown out of the case. A patdown for weapons has to stay a patdown for weapons! Here's the limit. Plain feel is still real. If something illegal is obvious right away by touch during a legal patdown, police can take it. And every one of these cases depends on the exact facts. [loop] So before you assume a patdown means anything goes, remember",
+ "script": "Police found crack cocaine in a man's pocket, and the Supreme Court said they weren't allowed to. [disclaimer] Meet a man walking in Minneapolis. It's nineteen ninety three. Police stop him and pat him down for weapons. Police are allowed to do that in some situations. No weapon. Nothing. Then the officer feels a tiny lump in a jacket pocket. He squeezes it. Slides it. Messes with it. Only then does he figure out it's crack cocaine. The Supreme Court said if an officer doing a legal patdown feels something that's obviously illegal right away, they can take it. It's called plain feel. Wait. So why weren't they allowed to take this? You see, the officer already knew the lump wasn't a weapon. All that squeezing wasn't a weapons check anymore. It's like a security guard checking your bag for a bomb, then reading your diary. So it turned into an illegal search. And the drugs got thrown out of the case. Plain feel is still real. And every case like this depends on the exact facts. So the case created the rule that lets police take things they can feel. And in this case, the officer felt too much. [loop] So before you assume a patdown means anything goes, remember",
  "publish_at": "2026-11-29T12:00:00-05:00",
  "sources": [
   "https://www.law.cornell.edu/supremecourt/text/508/366"
@@ -29,136 +29,82 @@
    "bg": "bg-street",
    "cast": [
     {
-     "id": "larry:smug",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "👮✋",
-     "text": ""
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "none",
+     "x": 0.5
     }
    ]
   },
   {
-   "at": "this is a real supreme",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:explaining"
-    }
-   ],
-   "props": [
-    {
-     "id": "doc",
-     "text": "Minnesota v. Dickerson",
-     "sub": "U.S. Supreme Court"
-    }
-   ]
-  },
-  {
-   "at": "police in minneapolis stopped",
+   "at": "police stop him and",
    "bg": "bg-street",
    "cast": [
     {
-     "id": "larry:explaining",
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "point",
      "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🔍🗡️",
-     "text": "Weapons patdown"
-    }
-   ]
-  },
-  {
-   "at": "but no weapon",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:surprised"
-    }
-   ],
-   "card": "NO WEAPON",
-   "card_at": "but no weapon"
-  },
-  {
-   "at": "then the officer felt",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:concerned"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🤏",
-     "text": "Squeeze, slide…"
-    }
-   ],
-   "zooms": [
-    {
-     "at": "then the officer felt",
-     "amount": 1.18,
-     "hold": 0.9
-    }
-   ]
-  },
-  {
-   "at": "so the court said",
-   "bg": "bg-courtroom",
-   "cast": [
-    {
-     "id": "char-judge",
-     "x": 0.7
     },
     {
-     "id": "larry:explaining",
-     "x": 0.3
-    }
-   ],
-   "card": "“PLAIN FEEL”",
-   "card_at": "so the court said"
-  },
-  {
-   "at": "that's not what happened",
-   "bg": "bg-courtroom",
-   "cast": [
-    {
-     "id": "char-judge",
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "none",
      "x": 0.7
-    },
-    {
-     "id": "larry:pointing",
-     "x": 0.3
-    }
-   ],
-   "card": "SEARCH WENT TOO FAR",
-   "card_at": "that's not what happened"
-  },
-  {
-   "at": "so it turned into",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:surprised"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🚫",
-     "text": "Evidence suppressed"
     }
    ]
   },
   {
-   "at": "a patdown for weapons",
-   "bg": "white",
+   "at": "no weapon nothing",
+   "bg": "bg-street",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "surprised",
+     "gest": "think",
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "at": "then the officer feels",
+   "bg": "bg-street",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "explain",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "scratch",
+     "x": 0.7
+    }
+   ]
+  },
+  {
+   "at": "only then does he",
+   "bg": "bg-street",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "arms_up",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "surprised",
+     "gest": "none",
+     "x": 0.7
+    }
+   ]
+  },
+  {
+   "at": "the supreme court said",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:explaining"
@@ -167,13 +113,58 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🎯",
-     "text": "Purpose limits scope"
+     "icon": "✋",
+     "text": "PLAIN FEEL"
     }
    ]
   },
   {
-   "at": "here's the limit",
+   "at": "wait so why weren't",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "face": "surprised",
+     "gest": "think",
+     "x": 0.3
+    },
+    {
+     "id": "char-politician",
+     "face": "worried",
+     "gest": "none",
+     "x": 0.22
+    }
+   ]
+  },
+  {
+   "at": "you see the officer",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ]
+  },
+  {
+   "at": "so it turned into",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "face": "smug",
+     "gest": "point",
+     "x": 0.3
+    },
+    {
+     "id": "char-politician",
+     "face": "worried",
+     "gest": "shrug",
+     "x": 0.22
+    }
+   ]
+  },
+  {
+   "at": "plain feel is still",
    "bg": "white",
    "cast": [
     {
@@ -183,8 +174,26 @@
    "props": [
     {
      "id": "sign",
-     "icon": "✋✅",
-     "text": "Plain feel is real"
+     "icon": "⚠️",
+     "text": "PLAIN FEEL IS REAL"
+    }
+   ]
+  },
+  {
+   "at": "so the case created",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "face": "smug",
+     "gest": "none",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "surprised",
+     "gest": "none",
+     "x": 0.22
     }
    ]
   },
@@ -193,13 +202,21 @@
    "bg": "white",
    "cast": [
     {
-     "id": "larry:auto"
+     "id": "larry:pointing"
     }
    ]
   },
   {
    "at": "so before you assume",
    "bg": "bg-street",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "none",
+     "x": 0.5
+    }
+   ],
    "loop": true
   }
  ],
@@ -207,5 +224,6 @@
  "share_line": "Send this to the friend who panics every time they see a cop",
  "hook_old": "ONE SQUEEZE TOO MANY",
  "script_old": "The officer found the drugs, and the extra squeezing helped make the search unconstitutional. This is Minnesota versus Dickerson, a U.S. Supreme Court case from nineteen ninety-three. Officers in Minneapolis stopped a man and patted him down for weapons, which police can do in certain situations under an earlier case called Terry. The patdown found no weapon. But the officer felt a small lump in his jacket pocket, and only concluded it was crack cocaine after squeezing, sliding and manipulating it. The Court did two things. First, it recognized what's called plain feel. During a lawful protective patdown, if an officer feels an object whose criminal nature is immediately apparent, the officer can seize it, a lot like something in plain view. But second, that's not what happened here. The officer had already determined the lump wasn't a weapon. His continued exploration of the pocket had nothing to do with the protective purpose of the patdown. So it became an unlawful search, and the cocaine was suppressed. The purpose of a search limits its scope. Here's the limit. Plain feel is still real. If contraband is immediately obvious by touch during a lawful frisk, it can be seized. And these cases turn on specific facts. [loop] So before you assume a patdown means anything goes, remember",
- "script_simple": true
+ "script_simple": true,
+ "story_format": true
 }

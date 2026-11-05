@@ -17,7 +17,7 @@
   "#lawtok",
   "#funfacts"
  ],
- "script": "The Supreme Court of the United States officially ruled that a tomato is a vegetable. [disclaimer] For real! It's eighteen ninety three. Back then, America taxed vegetables coming into the country. But fruit? No tax! So a family of importers named Nix brought tomatoes into New York. They paid the vegetable tax, but they were mad about it. So they sued to get their money back. Their argument? Science! A tomato grows from a flower and has seeds. That makes it a fruit! They even brought out the dictionaries. But the Supreme Court said, nice try. The Court agreed that science calls a tomato a fruit. Same with cucumbers, squash, beans and peas. But the Court said, regular people call all of those vegetables! You eat them with dinner. Not for dessert, like most fruit. And since the tax law used everyday words, everyday meaning wins. Science loses! So the importers lost, the tomato tax stayed, and the tomato officially became a vegetable. At least for taxes! Here's the limit. This was about one old tax law. The Court didn't change science, and it didn't decide what a tomato is for every law. To a scientist, a tomato is still a fruit. [loop] So the next time someone tells you a tomato is a fruit, remember",
+ "script": "The Supreme Court of the United States officially ruled that a tomato is a vegetable. [disclaimer] Meet the Nix family. It's eighteen ninety three, and they import tomatoes into New York. Back then, America taxed vegetables coming into the country. Fruit? No tax. The tax collector charges them the vegetable tax. The Nix family is furious. So they sue. Their argument? Science. A tomato grows from a flower and has seeds. That makes it a fruit. They even bring dictionaries into court. Wait. The Supreme Court agrees it's a fruit, and still says no? You see, the Court said science calls it a fruit, but regular people call it a vegetable. You eat it with dinner, not for dessert. It's like calling a hot dog a sandwich. Technically, maybe. Nobody orders it that way. And the Court said the same about cucumbers, squash, beans and peas. Science says fruit. Dinner says vegetable. The tax law used everyday words, so everyday meaning won. This was about one old tax law. It didn't change science, and it didn't decide what a tomato is for every law. So the Nix family proved the tomato is a fruit, and still had to pay the vegetable tax. [loop] So the next time someone tells you a tomato is a fruit, remember",
  "publish_at": "2026-11-14T12:00:00-05:00",
  "sources": [
   "https://www.law.cornell.edu/supremecourt/text/149/304"
@@ -26,24 +26,19 @@
  "scenes": [
   {
    "at": "start",
-   "bg": "bg-shop",
+   "bg": "bg-harbor",
    "cast": [
     {
-     "id": "larry:smug",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🍅",
-     "text": "Fruit? Vegetable?"
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
     }
    ]
   },
   {
-   "at": "it's eighteen",
-   "bg": "white",
+   "at": "back then america taxed",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:explaining"
@@ -51,15 +46,96 @@
    ],
    "props": [
     {
-     "id": "doc",
-     "text": "Tariff Act of 1883",
-     "sub": "United States"
+     "id": "sign",
+     "icon": "🥕",
+     "text": "VEGETABLES: TAXED"
     }
    ]
   },
   {
-   "at": "back then america taxed",
+   "at": "the tax collector charges",
+   "bg": "bg-harbor",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "point",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "angry",
+     "gest": "arms_up",
+     "x": 0.7
+    }
+   ]
+  },
+  {
+   "at": "so they sue their",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "face": "neutral",
+     "gest": "think",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "explain",
+     "x": 0.22
+    }
+   ]
+  },
+  {
+   "at": "they even bring dictionaries",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "face": "neutral",
+     "gest": "none",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "point",
+     "x": 0.22
+    }
+   ]
+  },
+  {
+   "at": "wait the supreme court",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "face": "smug",
+     "gest": "point",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "surprised",
+     "gest": "none",
+     "x": 0.22
+    }
+   ]
+  },
+  {
+   "at": "you see the court",
    "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ]
+  },
+  {
+   "at": "the tax law used",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:pointing"
@@ -68,113 +144,13 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🥕💵 🍎🆓",
-     "text": "Veg taxed, fruit free"
+     "icon": "📖",
+     "text": "EVERYDAY WORDS WIN"
     }
    ]
   },
   {
-   "at": "so a family of importers",
-   "bg": "bg-harbor",
-   "cast": [
-    {
-     "id": "larry:explaining",
-     "x": 0.3
-    }
-   ],
-   "card": "PAID UNDER PROTEST",
-   "card_at": "so a family of importers"
-  },
-  {
-   "at": "their argument",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:smug"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🌸🍅",
-     "text": "Botany says fruit"
-    }
-   ]
-  },
-  {
-   "at": "but the supreme court said",
-   "bg": "bg-courtroom",
-   "cast": [
-    {
-     "id": "char-judge",
-     "x": 0.7
-    },
-    {
-     "id": "larry:concerned",
-     "x": 0.3
-    }
-   ],
-   "card": "NOT PERSUADED",
-   "card_at": "but the supreme court said"
-  },
-  {
-   "at": "the court agreed that science",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:explaining"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🥒🎃🫘",
-     "text": "All botanical fruit"
-    }
-   ]
-  },
-  {
-   "at": "but the court said regular",
-   "bg": "bg-courtroom",
-   "cast": [
-    {
-     "id": "char-judge",
-     "x": 0.7
-    },
-    {
-     "id": "larry:surprised",
-     "x": 0.3
-    }
-   ],
-   "card": "COMMON LANGUAGE: VEGETABLES",
-   "card_at": "but the court said regular",
-   "zooms": [
-    {
-     "at": "but the court said regular",
-     "amount": 1.18,
-     "hold": 0.9
-    }
-   ]
-  },
-  {
-   "at": "you eat them with dinner",
-   "bg": "bg-shop",
-   "cast": [
-    {
-     "id": "larry:pointing",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🍽️",
-     "text": "Dinner, not dessert"
-    }
-   ]
-  },
-  {
-   "at": "so the importers lost",
+   "at": "this was about",
    "bg": "white",
    "cast": [
     {
@@ -184,24 +160,26 @@
    "props": [
     {
      "id": "sign",
-     "icon": "💵",
-     "text": "Tax stayed"
+     "icon": "⚠️",
+     "text": "SCIENCE DIDN'T CHANGE"
     }
    ]
   },
   {
-   "at": "here's the limit",
-   "bg": "white",
+   "at": "so the nix family",
+   "bg": "bg-courtroom",
    "cast": [
     {
-     "id": "larry:smug"
-    }
-   ],
-   "props": [
+     "id": "char-judge",
+     "face": "smug",
+     "gest": "none",
+     "x": 0.3
+    },
     {
-     "id": "sign",
-     "icon": "🍅🔬",
-     "text": "Botany unchanged"
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "shrug",
+     "x": 0.22
     }
    ]
   },
@@ -210,13 +188,21 @@
    "bg": "white",
    "cast": [
     {
-     "id": "larry:auto"
+     "id": "larry:pointing"
     }
    ]
   },
   {
    "at": "so the next time",
-   "bg": "bg-shop",
+   "bg": "bg-harbor",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
+    }
+   ],
    "loop": true
   }
  ],
@@ -224,5 +210,6 @@
  "share_line": "Send this to the friend who thinks ketchup counts as a smoothie",
  "hook_old": "TOMATO: VEGETABLE (LEGALLY)",
  "script_old": "The U.S. Supreme Court once ruled that a tomato is a vegetable, and a tax bill explains why. It's eighteen ninety-three. Under the Tariff Act of eighteen eighty-three, imported vegetables were taxed, but fruit wasn't on the list. So importers named Nix brought tomatoes into New York from the West Indies, paid the vegetable duty under protest, and sued the port's tax collector to get it back. Their argument: botanically, a tomato is a fruit. It grows from a flower and carries seeds. Dictionaries came up too. The Supreme Court wasn't persuaded. It agreed that botanically speaking, tomatoes are the fruit of a vine, just like cucumbers, squashes, beans and peas. But in the common language of the people, the Court said, all of those are vegetables. They're usually served with dinner, not as dessert like most fruit. Since the tariff law used everyday words, and there was no special trade meaning, everyday meaning won. So the importers lost, and the tax stayed. Here's the limit. This was about one old tariff statute. The Court didn't change botany, and it didn't decide what a tomato is for every law. To a botanist, it's still a fruit. [loop] So the next time someone tells you a tomato is a fruit, remember",
- "script_simple": true
+ "script_simple": true,
+ "story_format": true
 }

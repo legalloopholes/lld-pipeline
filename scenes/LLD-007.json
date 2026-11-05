@@ -17,7 +17,7 @@
   "#lawtok",
   "#didyouknow"
  ],
- "script": "In New York, you could owe someone a fortune, and they still might not be able to touch your million dollar Bible. [disclaimer] In New York, the wording of the law makes that a real question! Here's how it works. If you lose a lawsuit and owe money, the winner can go after your stuff. But New York says some stuff is off limits. They can't take everything. Cash and bank accounts? Only a small amount is protected. Ordinary books? Up to five hundred dollars' worth. Okay, normal. But then, right in that same line, the law lists religious books, family pictures, and school books. And for those? It doesn't give a dollar limit at all. None! So on paper, the family Bible sits in its own protected group. Which makes you wonder. What if that Bible is a super rare antique worth a fortune? Here's the honest answer. Nobody has proven this works in court. It's just a weird gap in the wording. And there are big catches. The book has to actually be used by you or your family. It doesn't count if the debt is for the book itself. And if you dump your money into a fancy Bible just to hide it from the people you owe, you can run into fraud rules and bankruptcy rules. That's a whole new problem! [loop] So before you go shopping for the world's most expensive Bible, remember",
+ "script": "In New York, you could owe someone a fortune, and they still might not be able to touch your million dollar Bible. [disclaimer] Meet Gary. Gary owes his neighbor Frank a lot of money. Frank sues him. Frank wins. Now Frank is allowed to go after Gary's stuff. He wants the car. He wants the bank account. He even wants the TV. But New York has a list of things a winner is not allowed to take. Regular books? Only about five hundred dollars' worth are safe. But in that same line, the law lists the family Bible. And it gives no dollar limit at all. Wait. So what if Gary's Bible is a super rare antique worth a fortune? Frank reaches for it. Gary just points at the law and smiles. You see, it's like a store where every shelf has a price cap, except one shelf that just says, no limit. Now, nobody has proven this works in court. The book has to really be used by the family. And buying a fancy Bible just to hide money from people you owe can get you in fraud trouble. And there's one more rule. If the money you owe is for the Bible itself, the Bible isn't protected at all. Which is bad news for Gary. Because the money he owes Frank is for the Bible. [loop] So before you go shopping for the world's most expensive Bible, remember",
  "publish_at": "2026-11-04T19:00:00-05:00",
  "sources": [
   "https://www.nysenate.gov/legislation/laws/CVP/5205"
@@ -26,24 +26,55 @@
  "scenes": [
   {
    "at": "start",
-   "bg": "bg-office",
+   "bg": "bg-neighborhood",
    "cast": [
     {
-     "id": "larry:smug",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "📖💎",
-     "text": ""
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
     }
    ]
   },
   {
-   "at": "in new york the wording",
-   "bg": "white",
+   "at": "frank sues him frank",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "face": "angry",
+     "gest": "point",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "none",
+     "x": 0.22
+    }
+   ]
+  },
+  {
+   "at": "he wants the car",
+   "bg": "bg-neighborhood",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "point",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "shrug",
+     "x": 0.7
+    }
+   ]
+  },
+  {
+   "at": "but new york has",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:explaining"
@@ -51,82 +82,31 @@
    ],
    "props": [
     {
-     "id": "doc",
-     "text": "CPLR 5205",
-     "sub": "New York"
-    }
-   ]
-  },
-  {
-   "at": "if you lose a lawsuit",
-   "bg": "bg-courtroom",
-   "cast": [
-    {
-     "id": "char-judge",
-     "x": 0.7
-    },
-    {
-     "id": "larry:explaining",
-     "x": 0.3
-    }
-   ],
-   "card": "PAY UP",
-   "card_at": "if you lose a lawsuit"
-  },
-  {
-   "at": "but new york says",
-   "bg": "bg-office",
-   "cast": [
-    {
-     "id": "larry:pointing",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
      "id": "sign",
-     "icon": "🛡️",
-     "text": "Protected property"
+     "icon": "📜",
+     "text": "NEW YORK DEBT LAW"
     }
    ]
   },
   {
-   "at": "cash and bank accounts",
+   "at": "regular books only about",
    "bg": "bg-office",
    "cast": [
     {
-     "id": "larry:explaining",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "💵",
-     "text": "Cash: limited"
-    }
-   ]
-  },
-  {
-   "at": "ordinary books",
-   "bg": "bg-office",
-   "cast": [
-    {
-     "id": "larry:pointing",
-     "x": 0.3
+     "id": "larry:pointing"
     }
    ],
    "props": [
     {
      "id": "sign",
      "icon": "📚",
-     "text": "Other books: $500"
+     "text": "BOOKS: $500 MAX"
     }
    ]
   },
   {
-   "at": "but then right in",
-   "bg": "white",
+   "at": "but in that same",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:surprised"
@@ -136,30 +116,51 @@
     {
      "id": "sign",
      "icon": "📖",
-     "text": "Religious: no cap"
-    }
-   ],
-   "zooms": [
-    {
-     "at": "but then right in",
-     "amount": 1.18,
-     "hold": 0.9
+     "text": "BIBLE: NO LIMIT"
     }
    ]
   },
   {
-   "at": "which makes you wonder",
+   "at": "wait so what if",
+   "bg": "bg-neighborhood",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "surprised",
+     "gest": "think",
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "at": "frank reaches for it",
+   "bg": "bg-neighborhood",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "angry",
+     "gest": "arms_up",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "shrug",
+     "x": 0.7
+    }
+   ]
+  },
+  {
+   "at": "you see it's like",
    "bg": "white",
    "cast": [
     {
-     "id": "larry:thinking"
+     "id": "larry:explaining"
     }
-   ],
-   "card": "A PRICELESS ANTIQUE?",
-   "card_at": "which makes you wonder"
+   ]
   },
   {
-   "at": "here's the honest answer",
+   "at": "now nobody has proven",
    "bg": "white",
    "cast": [
     {
@@ -170,23 +171,37 @@
     {
      "id": "sign",
      "icon": "⚠️",
-     "text": "Not a tested strategy"
+     "text": "NEVER TESTED IN COURT"
     }
    ]
   },
   {
-   "at": "the book has to actually",
-   "bg": "white",
+   "at": "and there's",
+   "bg": "bg-neighborhood",
    "cast": [
     {
-     "id": "larry:concerned"
-    }
-   ],
-   "props": [
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "point",
+     "x": 0.3
+    },
     {
-     "id": "doc",
-     "text": "Exceptions",
-     "sub": "Fraudulent transfer · Bankruptcy"
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "scratch",
+     "x": 0.7
+    }
+   ]
+  },
+  {
+   "at": "which is bad news",
+   "bg": "bg-neighborhood",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "none",
+     "x": 0.5
     }
    ]
   },
@@ -195,13 +210,21 @@
    "bg": "white",
    "cast": [
     {
-     "id": "larry:auto"
+     "id": "larry:pointing"
     }
    ]
   },
   {
    "at": "so before you go",
-   "bg": "bg-office",
+   "bg": "bg-neighborhood",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
+    }
+   ],
    "loop": true
   }
  ],
@@ -209,5 +232,6 @@
  "share_line": "Send this to the friend who owes you money and thinks you forgot",
  "hook_old": "A BIBLE SAFER THAN CASH?",
  "script_old": "Could a rare Bible be harder for a creditor to take than your cash? In New York, the wording of the law makes that a real question. When someone loses a lawsuit and owes money, the winner can try to collect from their property. But New York's civil practice law protects certain things from being taken. Cash and bank accounts? Only a limited amount. Ordinary books? Up to five hundred dollars' worth. But in that same line, the law separately lists religious texts, family pictures and school books used by the debtor or the family. And for those, it doesn't state a dollar limit. So on paper, a religious text the family uses sits in its own protected category. Which raises the obvious question: what if that book is a priceless antique? Here's the honest answer. Don't treat this as a court-approved strategy. It's a quirk in the wording. The book has to actually be used by the debtor or the family. The protection doesn't apply if the debt is for the price of the book itself. And moving money into assets to dodge creditors can run into fraudulent transfer laws and bankruptcy rules. [loop] So before you go shopping for the world's most expensive Bible, remember",
- "script_simple": true
+ "script_simple": true,
+ "story_format": true
 }

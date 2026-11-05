@@ -17,7 +17,7 @@
   "#lawtok",
   "#driving"
  ],
- "script": "In Pennsylvania, you can get clocked going eight over, and that reading alone still can't convict you. [disclaimer] This is Pennsylvania traffic law. Part of it covers certain speed timers. The kind that time your car between two lines on the road, or check your average speed between two points. And for these devices, there are minimum numbers. Usually, to convict you with one, it has to show you going at least six miles over the limit. And on roads where the limit is under fifty five, it has to show at least ten over! So, hypothetically, you're driving in a thirty five zone. One of these timers says you did forty three. That's eight over! But under this rule, that reading alone can't convict you. Wait, really? Yep! That's the law on the books. But read the fine print. This does not raise the speed limit. Going eight over is still speeding! It doesn't apply in school zones or work zones. It's only about these specific devices, not every radar gun or laser. And the officer could have other evidence against you, like their own eyes, or a different device that doesn't follow this rule. So it's a tiny rule about evidence. Not permission to drive faster! [loop] So before you do speedometer math in Pennsylvania, remember",
+ "script": "In Pennsylvania, you can get clocked going eight over, and that reading alone still can't convict you. [disclaimer] Meet Gary. Gary is driving in Pennsylvania, in a thirty five zone. A speed timer measures his car between two lines on the road. It says forty three. That's eight over. The officer is already writing the ticket. Gary is sure he's done. He has never heard of the rule that could help him. But Pennsylvania has a rule for these specific timing devices. To convict you with one, it usually has to show at least six over. And where the limit is under fifty five, at least ten over. Wait. So eight over on that device isn't enough? You see, it's like a scale that's only trusted for big differences. Small readings get a little room for error. But this doesn't raise the speed limit. Eight over is still speeding. It doesn't apply in school zones or work zones. And it's only about these devices, not every radar gun. And the officer can have other evidence, like their own eyes, or a different device. So the rule can stop that one reading from convicting Gary, and Gary is still the one who was speeding. [loop] So before you do speedometer math in Pennsylvania, remember",
  "publish_at": "2026-11-17T12:00:00-05:00",
  "sources": [
   "https://www.legis.state.pa.us/WU01/LI/LI/CT/HTM/75/00.033..HTM",
@@ -30,21 +30,52 @@
    "bg": "bg-street",
    "cast": [
     {
-     "id": "larry:smug",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🚗💨⏱️",
-     "text": ""
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
     }
    ]
   },
   {
-   "at": "this is pennsylvania traffic law",
-   "bg": "white",
+   "at": "a speed timer measures",
+   "bg": "bg-street",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "point",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "none",
+     "x": 0.7
+    }
+   ]
+  },
+  {
+   "at": "over the officer is",
+   "bg": "bg-street",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "explain",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "none",
+     "x": 0.7
+    }
+   ]
+  },
+  {
+   "at": "but pennsylvania has a",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:explaining"
@@ -52,77 +83,51 @@
    ],
    "props": [
     {
-     "id": "doc",
-     "text": "§3368 Speed Timing Devices",
-     "sub": "Pennsylvania Vehicle Code"
+     "id": "sign",
+     "icon": "📜",
+     "text": "PENNSYLVANIA LAW"
     }
    ]
   },
   {
-   "at": "part of it covers",
-   "bg": "bg-street",
+   "at": "to convict you with",
+   "bg": "bg-office",
    "cast": [
     {
-     "id": "larry:pointing",
-     "x": 0.3
+     "id": "larry:pointing"
     }
    ],
    "props": [
     {
      "id": "sign",
-     "icon": "📍⏱️📍",
-     "text": "Two-point timing"
+     "icon": "🚗",
+     "text": "UNDER 55? 10 OVER"
     }
    ]
   },
   {
-   "at": "and for these devices",
+   "at": "wait so",
+   "bg": "bg-street",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "surprised",
+     "gest": "think",
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "at": "you see it's like",
    "bg": "white",
    "cast": [
     {
      "id": "larry:explaining"
     }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "6️⃣",
-     "text": "6+ mph over"
-    }
    ]
   },
   {
-   "at": "and on roads where",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:surprised"
-    }
-   ],
-   "card": "UNDER 55 MPH ZONE: 10+ OVER",
-   "card_at": "and on roads where",
-   "zooms": [
-    {
-     "at": "and on roads where",
-     "amount": 1.18,
-     "hold": 0.9
-    }
-   ]
-  },
-  {
-   "at": "so hypothetically",
-   "bg": "bg-street",
-   "cast": [
-    {
-     "id": "larry:thinking",
-     "x": 0.3
-    }
-   ],
-   "card": "HYPOTHETICAL: 43 IN A 35",
-   "card_at": "so hypothetically"
-  },
-  {
-   "at": "but read the fine print",
+   "at": "but this doesn't raise",
    "bg": "white",
    "cast": [
     {
@@ -132,67 +137,61 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🚫",
-     "text": "Limit unchanged"
+     "icon": "⚠️",
+     "text": "STILL SPEEDING"
     }
    ]
   },
   {
-   "at": "it doesn't apply in school",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:pointing"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🏫🚧",
-     "text": "Not in these zones"
-    }
-   ]
-  },
-  {
-   "at": "it's only about these",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:explaining"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "📡",
-     "text": "Not all radar"
-    }
-   ]
-  },
-  {
-   "at": "so it's a tiny rule",
+   "at": "and the officer can",
    "bg": "bg-street",
    "cast": [
     {
-     "id": "larry:concerned",
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "point",
      "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "scratch",
+     "x": 0.7
     }
-   ],
-   "card": "NOT A LICENSE TO SPEED",
-   "card_at": "so it's a tiny rule"
+   ]
+  },
+  {
+   "at": "so the rule can",
+   "bg": "bg-street",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "shrug",
+     "x": 0.5
+    }
+   ]
   },
   {
    "at": "send this to",
    "bg": "white",
    "cast": [
     {
-     "id": "larry:auto"
+     "id": "larry:pointing"
     }
    ]
   },
   {
    "at": "so before you do",
    "bg": "bg-street",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
+    }
+   ],
    "loop": true
   }
  ],
@@ -200,5 +199,6 @@
  "share_line": "Send this to the friend who drives like they stole the car",
  "hook_old": "CLOCKED… BUT NO CONVICTION?",
  "script_old": "A device can clock you speeding, and the law can still block a conviction based on that reading. This is Pennsylvania's Vehicle Code, section thirty-three sixty-eight. Part of it covers certain speed-timing devices: ones that time a car between two sensors on the road, or that calculate average speed between two points. For these devices, there are minimum thresholds. In general, a conviction based on their evidence needs a recorded speed of at least six miles per hour over the limit. And on roads where the limit is under fifty-five, a conviction based on one of these two-point devices can't rest on a reading of less than ten over. So, hypothetically, in a thirty-five zone, a reading of forty-three from one of these devices couldn't support a conviction under this rule. But read the fine print. This does not raise the speed limit. Going eight over is still speeding. The thresholds don't apply in school zones or active work zones. They're about these specific types of devices, not every radar or laser reading. And an officer could have other evidence. So it's a narrow evidence rule, not a license to drive faster. [loop] So before you do speedometer math in Pennsylvania, remember",
- "script_simple": true
+ "script_simple": true,
+ "story_format": true
 }

@@ -17,7 +17,7 @@
   "#lawtok",
   "#consumer"
  ],
- "script": "Every giveaway says no purchase necessary, because without it, it might be an illegal lottery. [disclaimer] Here's the secret. In America, lawyers say a lottery has three parts. A prize. Luck. And paying to play. And private lotteries are generally illegal! So how can a soda company run a giveaway where winners are picked by luck? Easy. They take out the paying part! The Federal Trade Commission says contests like this that make you buy something are illegal in the United States. It says real sweepstakes are free, and winning is by chance. And sweepstakes mail has to say you don't have to pay to enter. That's why every giveaway has a free way in, like an online form or mailing in a card. It kills the paying part! But no purchase necessary isn't a magic spell. The free way has to be real. Each state has its own rules, and some need extra fine print, a license, or even a bond. Other agencies, like the Post Office and the FCC, also go after shady prize games. And skill contests are a whole different thing. So just printing three words on a box doesn't make any game legal. [loop] So the next time you see no purchase necessary in tiny print, remember",
+ "script": "Every giveaway says no purchase necessary, because without it, it might be an illegal lottery. [disclaimer] Meet a soda company. It wants to run a giant giveaway. Buy a bottle, check the cap, win a car. In America, lawyers say a lottery has three parts. A prize. Luck. And paying to play. And private lotteries are generally illegal. Wait. So the soda giveaway is an illegal lottery? Not if they take out the paying part. The Federal Trade Commission says real sweepstakes are free, and winning is by chance. So the company adds a free way in. An online form, or mailing in a card. No purchase necessary. You see, it's like a three legged stool. Take away one leg, and it's not a lottery stool anymore. But the free way has to be real. Each state has its own rules, and some need extra fine print, a license, or even a bond. And skill contests are a whole different thing. So Gary enters for free. Every single day. Without ever buying a soda. So the tiny words nobody reads are the only reason the giant giveaway is legal. [loop] So the next time you see no purchase necessary in tiny print, remember",
  "publish_at": "2026-11-26T19:00:00-05:00",
  "sources": [
   "https://www.ftc.gov/business-guidance/resources/advertising-faqs-guide-small-business",
@@ -30,21 +30,16 @@
    "bg": "bg-shop",
    "cast": [
     {
-     "id": "larry:smug",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🎁🔍",
-     "text": "No purchase necessary"
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
     }
    ]
   },
   {
-   "at": "here's the secret",
-   "bg": "white",
+   "at": "in america lawyers say",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:explaining"
@@ -53,14 +48,14 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🏆🎲💵",
-     "text": "Prize · Chance · Pay"
+     "icon": "🎰",
+     "text": "PRIZE. LUCK. PAYING."
     }
    ]
   },
   {
    "at": "and private lotteries are",
-   "bg": "white",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:concerned"
@@ -69,33 +64,26 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🚫🎰",
-     "text": "Generally illegal"
+     "icon": "🚫",
+     "text": "PRIVATE LOTTERY"
     }
    ]
   },
   {
-   "at": "so how can a soda",
+   "at": "wait so the soda",
    "bg": "bg-shop",
    "cast": [
     {
-     "id": "larry:thinking",
-     "x": 0.3
-    }
-   ],
-   "card": "REMOVE THE PAYMENT",
-   "card_at": "so how can a soda",
-   "zooms": [
-    {
-     "at": "so how can a soda",
-     "amount": 1.18,
-     "hold": 0.9
+     "id": "char-politician",
+     "face": "worried",
+     "gest": "think",
+     "x": 0.5
     }
    ]
   },
   {
-   "at": "the federal trade commission says",
-   "bg": "white",
+   "at": "not if they take",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:pointing"
@@ -103,47 +91,35 @@
    ],
    "props": [
     {
-     "id": "doc",
-     "text": "FTC guidance",
-     "sub": "Contests & sweepstakes"
+     "id": "sign",
+     "icon": "✂️",
+     "text": "CUT THE PAYING PART"
     }
    ]
   },
   {
-   "at": "it says real sweepstakes",
+   "at": "so the company adds",
+   "bg": "bg-shop",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "point",
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "at": "you see it's like",
    "bg": "white",
    "cast": [
     {
      "id": "larry:explaining"
     }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🆓🎲",
-     "text": "Free + chance"
-    }
    ]
   },
   {
-   "at": "that's why every giveaway",
-   "bg": "bg-shop",
-   "cast": [
-    {
-     "id": "larry:smug",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "✉️💻",
-     "text": "Free entry route"
-    }
-   ]
-  },
-  {
-   "at": "but no purchase necessary",
+   "at": "but the free way",
    "bg": "white",
    "cast": [
     {
@@ -153,51 +129,61 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🪄❌",
-     "text": "Not magic"
+     "icon": "⚠️",
+     "text": "NOT A MAGIC SPELL"
     }
    ]
   },
   {
-   "at": "each state has its own",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:pointing"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🗺️",
-     "text": "State rules"
-    }
-   ]
-  },
-  {
-   "at": "so just printing three words",
+   "at": "so gary enters for",
    "bg": "bg-shop",
    "cast": [
     {
-     "id": "larry:concerned",
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
      "x": 0.3
+    },
+    {
+     "id": "char-politician",
+     "face": "surprised",
+     "gest": "none",
+     "x": 0.7
     }
-   ],
-   "card": "NOT AUTOMATICALLY LEGAL",
-   "card_at": "so just printing three words"
+   ]
+  },
+  {
+   "at": "so the tiny words",
+   "bg": "bg-shop",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "arms_up",
+     "x": 0.5
+    }
+   ]
   },
   {
    "at": "send this to",
    "bg": "white",
    "cast": [
     {
-     "id": "larry:auto"
+     "id": "larry:pointing"
     }
    ]
   },
   {
    "at": "so the next time",
    "bg": "bg-shop",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "wave",
+     "x": 0.5
+    }
+   ],
    "loop": true
   }
  ],
@@ -205,5 +191,6 @@
  "share_line": "Send this to the friend who enters every giveaway and has never won once",
  "hook_old": "NO PURCHASE NECESSARY?",
  "script_old": "Those three words in a giveaway's fine print, no purchase necessary, are doing serious legal work. In the U.S., lawyers generally describe a lottery as three pieces: a prize, chance, and something you have to pay to play, which they call consideration. Private lotteries are generally illegal. So how can a soda company run a giveaway where winners are picked by chance? By taking the payment out. The Federal Trade Commission's guidance says sweepstakes-type promotions that require a purchase are illegal in the United States. Its consumer advice says real sweepstakes are free and winning is by chance, and that sweepstakes mailings must say you don't have to pay to participate. That's why giveaways offer a free way to enter, like an online form or a mail-in entry. It removes the payment piece. But no purchase necessary isn't a magic spell. The free route has to be genuine. Each state has its own rules, which may require disclosures, licensing or a bond. Other agencies, like the Postal Service and the FCC, also enforce prize promotion laws. And skill contests are treated differently from sweepstakes. So printing three words on a box doesn't make any game legal. [loop] So the next time you see no purchase necessary in tiny print, remember",
- "script_simple": true
+ "script_simple": true,
+ "story_format": true
 }
