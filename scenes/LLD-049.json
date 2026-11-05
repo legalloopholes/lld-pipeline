@@ -33,6 +33,7 @@
      "id": "char-politician",
      "face": "smug",
      "gest": "explain",
+     "name": "GOVERNMENT",
      "x": 0.5
     }
    ]
@@ -61,13 +62,15 @@
      "id": "char-judge",
      "face": "neutral",
      "gest": "think",
+     "name": "JUDGE",
      "x": 0.3
     },
     {
      "id": "char-politician",
      "face": "smug",
      "gest": "point",
-     "x": 0.22
+     "name": "GOVERNMENT",
+     "x": 0.2
     }
    ]
   },
@@ -79,13 +82,15 @@
      "id": "char-judge",
      "face": "angry",
      "gest": "point",
+     "name": "JUDGE",
      "x": 0.3
     },
     {
      "id": "char-politician",
      "face": "surprised",
      "gest": "arms_up",
-     "x": 0.22
+     "name": "GOVERNMENT",
+     "x": 0.2
     }
    ]
   },
@@ -113,6 +118,7 @@
      "id": "char-politician",
      "face": "worried",
      "gest": "think",
+     "name": "GOVERNMENT",
      "x": 0.5
     }
    ]
@@ -150,6 +156,7 @@
      "id": "char-politician",
      "face": "angry",
      "gest": "arms_up",
+     "name": "GOVERNMENT",
      "x": 0.5
     }
    ]
@@ -162,6 +169,7 @@
      "id": "char-politician",
      "face": "smug",
      "gest": "point",
+     "name": "GOVERNMENT",
      "x": 0.5
     }
    ]
@@ -190,6 +198,7 @@
      "id": "char-politician",
      "face": "smug",
      "gest": "shrug",
+     "name": "GOVERNMENT",
      "x": 0.5
     }
    ]
@@ -211,6 +220,7 @@
      "id": "char-politician",
      "face": "smug",
      "gest": "explain",
+     "name": "GOVERNMENT",
      "x": 0.5
     }
    ],

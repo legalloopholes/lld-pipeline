@@ -32,6 +32,7 @@
      "id": "char-friend-chimp",
      "face": "smug",
      "gest": "wave",
+     "name": "GARY",
      "x": 0.5
     }
    ]
@@ -42,15 +43,24 @@
    "cast": [
     {
      "id": "char-judge",
-     "face": "angry",
-     "gest": "point",
-     "x": 0.3
+     "face": "neutral",
+     "gest": "none",
+     "name": "JUDGE",
+     "x": 0.2
     },
     {
      "id": "char-friend-chimp",
      "face": "worried",
      "gest": "none",
-     "x": 0.22
+     "name": "GARY",
+     "x": 0.2
+    },
+    {
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "point",
+     "name": "FRANK",
+     "x": 0.53
     }
    ]
   },
@@ -62,12 +72,14 @@
      "id": "char-politician",
      "face": "smug",
      "gest": "point",
+     "name": "FRANK",
      "x": 0.3
     },
     {
      "id": "char-friend-chimp",
      "face": "worried",
      "gest": "shrug",
+     "name": "GARY",
      "x": 0.7
     }
    ]
@@ -128,6 +140,7 @@
      "id": "char-friend-chimp",
      "face": "surprised",
      "gest": "think",
+     "name": "GARY",
      "x": 0.5
     }
    ]
@@ -140,12 +153,14 @@
      "id": "char-politician",
      "face": "angry",
      "gest": "arms_up",
+     "name": "FRANK",
      "x": 0.3
     },
     {
      "id": "char-friend-chimp",
      "face": "smug",
      "gest": "shrug",
+     "name": "GARY",
      "x": 0.7
     }
    ]
@@ -183,12 +198,14 @@
      "id": "char-politician",
      "face": "smug",
      "gest": "point",
+     "name": "FRANK",
      "x": 0.3
     },
     {
      "id": "char-friend-chimp",
      "face": "worried",
      "gest": "scratch",
+     "name": "GARY",
      "x": 0.7
     }
    ]
@@ -201,6 +218,7 @@
      "id": "char-friend-chimp",
      "face": "worried",
      "gest": "none",
+     "name": "GARY",
      "x": 0.5
     }
    ]
@@ -222,6 +240,7 @@
      "id": "char-friend-chimp",
      "face": "smug",
      "gest": "wave",
+     "name": "GARY",
      "x": 0.5
     }
    ],

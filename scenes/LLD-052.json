@@ -32,6 +32,7 @@
      "id": "char-politician",
      "face": "smug",
      "gest": "wave",
+     "name": "MCDONALD'S",
      "x": 0.5
     }
    ]
@@ -76,12 +77,14 @@
      "id": "char-friend-chimp",
      "face": "smug",
      "gest": "point",
+     "name": "IRISH CHAIN",
      "x": 0.3
     },
     {
      "id": "char-politician",
      "face": "surprised",
      "gest": "none",
+     "name": "MCDONALD'S",
      "x": 0.7
     }
    ]
@@ -94,13 +97,15 @@
      "id": "char-judge",
      "face": "neutral",
      "gest": "think",
+     "name": "JUDGE",
      "x": 0.3
     },
     {
      "id": "char-politician",
      "face": "smug",
      "gest": "explain",
-     "x": 0.22
+     "name": "MCDONALD'S",
+     "x": 0.2
     }
    ]
   },
@@ -112,13 +117,15 @@
      "id": "char-judge",
      "face": "angry",
      "gest": "point",
+     "name": "JUDGE",
      "x": 0.3
     },
     {
      "id": "char-politician",
      "face": "worried",
      "gest": "none",
-     "x": 0.22
+     "name": "MCDONALD'S",
+     "x": 0.2
     }
    ]
   },
@@ -130,13 +137,15 @@
      "id": "char-judge",
      "face": "surprised",
      "gest": "think",
+     "name": "JUDGE",
      "x": 0.3
     },
     {
      "id": "char-politician",
      "face": "surprised",
      "gest": "arms_up",
-     "x": 0.22
+     "name": "MCDONALD'S",
+     "x": 0.2
     }
    ]
   },
@@ -189,6 +198,7 @@
      "id": "char-politician",
      "face": "worried",
      "gest": "shrug",
+     "name": "MCDONALD'S",
      "x": 0.5
     }
    ]
@@ -210,6 +220,7 @@
      "id": "char-politician",
      "face": "smug",
      "gest": "wave",
+     "name": "MCDONALD'S",
      "x": 0.5
     }
    ],

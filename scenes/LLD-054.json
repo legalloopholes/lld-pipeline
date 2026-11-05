@@ -33,6 +33,7 @@
      "id": "char-friend-chimp",
      "face": "worried",
      "gest": "none",
+     "name": "GARY",
      "x": 0.5
     }
    ]
@@ -45,6 +46,7 @@
      "id": "char-friend-chimp",
      "face": "smug",
      "gest": "explain",
+     "name": "GARY",
      "x": 0.5
     }
    ]
@@ -73,13 +75,15 @@
      "id": "char-judge",
      "face": "angry",
      "gest": "point",
+     "name": "JUDGE",
      "x": 0.3
     },
     {
      "id": "char-friend-chimp",
      "face": "worried",
      "gest": "none",
-     "x": 0.22
+     "name": "GARY",
+     "x": 0.2
     }
    ]
   },
@@ -107,13 +111,15 @@
      "id": "char-judge",
      "face": "surprised",
      "gest": "think",
+     "name": "JUDGE",
      "x": 0.3
     },
     {
      "id": "char-friend-chimp",
      "face": "surprised",
      "gest": "arms_up",
-     "x": 0.22
+     "name": "GARY",
+     "x": 0.2
     }
    ]
   },
@@ -166,13 +172,15 @@
      "id": "char-judge",
      "face": "smug",
      "gest": "none",
+     "name": "JUDGE",
      "x": 0.3
     },
     {
      "id": "char-friend-chimp",
      "face": "smug",
      "gest": "arms_up",
-     "x": 0.22
+     "name": "GARY",
+     "x": 0.2
     }
    ]
   },
@@ -184,6 +192,7 @@
      "id": "char-friend-chimp",
      "face": "smug",
      "gest": "shrug",
+     "name": "GARY",
      "x": 0.5
     }
    ]
@@ -205,6 +214,7 @@
      "id": "char-friend-chimp",
      "face": "worried",
      "gest": "none",
+     "name": "GARY",
      "x": 0.5
     }
    ],

@@ -32,6 +32,7 @@
      "id": "char-friend-chimp",
      "face": "smug",
      "gest": "wave",
+     "name": "FANE LOZMAN",
      "x": 0.5
     }
    ]
@@ -44,6 +45,7 @@
      "id": "char-friend-chimp",
      "face": "smug",
      "gest": "point",
+     "name": "FANE LOZMAN",
      "x": 0.5
     }
    ]
@@ -56,12 +58,14 @@
      "id": "char-politician",
      "face": "angry",
      "gest": "point",
+     "name": "CITY",
      "x": 0.3
     },
     {
      "id": "char-friend-chimp",
      "face": "angry",
      "gest": "arms_up",
+     "name": "FANE LOZMAN",
      "x": 0.7
     }
    ]
@@ -90,13 +94,15 @@
      "id": "char-judge",
      "face": "neutral",
      "gest": "point",
+     "name": "JUDGE",
      "x": 0.3
     },
     {
      "id": "char-friend-chimp",
      "face": "surprised",
      "gest": "none",
-     "x": 0.22
+     "name": "FANE LOZMAN",
+     "x": 0.2
     }
    ]
   },
@@ -108,12 +114,14 @@
      "id": "char-politician",
      "face": "smug",
      "gest": "arms_up",
+     "name": "CITY",
      "x": 0.3
     },
     {
      "id": "char-friend-chimp",
      "face": "worried",
      "gest": "none",
+     "name": "FANE LOZMAN",
      "x": 0.7
     }
    ]
@@ -126,13 +134,15 @@
      "id": "char-judge",
      "face": "surprised",
      "gest": "think",
+     "name": "JUDGE",
      "x": 0.3
     },
     {
      "id": "char-friend-chimp",
      "face": "surprised",
      "gest": "arms_up",
-     "x": 0.22
+     "name": "FANE LOZMAN",
+     "x": 0.2
     }
    ]
   },
@@ -153,13 +163,15 @@
      "id": "char-judge",
      "face": "smug",
      "gest": "point",
+     "name": "JUDGE",
      "x": 0.3
     },
     {
      "id": "char-friend-chimp",
      "face": "smug",
      "gest": "arms_up",
-     "x": 0.22
+     "name": "FANE LOZMAN",
+     "x": 0.2
     }
    ]
   },
@@ -187,6 +199,7 @@
      "id": "char-friend-chimp",
      "face": "worried",
      "gest": "shrug",
+     "name": "FANE LOZMAN",
      "x": 0.5
     }
    ]
@@ -208,6 +221,7 @@
      "id": "char-friend-chimp",
      "face": "smug",
      "gest": "wave",
+     "name": "FANE LOZMAN",
      "x": 0.5
     }
    ],

@@ -33,6 +33,7 @@
      "id": "char-politician",
      "face": "smug",
      "gest": "wave",
+     "name": "SODA COMPANY",
      "x": 0.5
     }
    ]
@@ -77,6 +78,7 @@
      "id": "char-politician",
      "face": "worried",
      "gest": "think",
+     "name": "SODA COMPANY",
      "x": 0.5
     }
    ]
@@ -105,6 +107,7 @@
      "id": "char-politician",
      "face": "smug",
      "gest": "point",
+     "name": "SODA COMPANY",
      "x": 0.5
     }
    ]
@@ -142,12 +145,14 @@
      "id": "char-friend-chimp",
      "face": "smug",
      "gest": "wave",
+     "name": "GARY",
      "x": 0.3
     },
     {
      "id": "char-politician",
      "face": "surprised",
      "gest": "none",
+     "name": "SODA COMPANY",
      "x": 0.7
     }
    ]
@@ -160,6 +165,7 @@
      "id": "char-friend-chimp",
      "face": "smug",
      "gest": "arms_up",
+     "name": "GARY",
      "x": 0.5
     }
    ]
@@ -181,6 +187,7 @@
      "id": "char-politician",
      "face": "smug",
      "gest": "wave",
+     "name": "SODA COMPANY",
      "x": 0.5
     }
    ],

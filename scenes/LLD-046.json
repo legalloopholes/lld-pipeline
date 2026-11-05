@@ -33,6 +33,7 @@
      "id": "char-friend-chimp",
      "face": "smug",
      "gest": "wave",
+     "name": "JOHN LEONARD",
      "x": 0.5
     }
    ]
@@ -61,6 +62,7 @@
      "id": "char-friend-chimp",
      "face": "surprised",
      "gest": "arms_up",
+     "name": "JOHN LEONARD",
      "x": 0.5
     }
    ]
@@ -73,6 +75,7 @@
      "id": "char-friend-chimp",
      "face": "smug",
      "gest": "point",
+     "name": "JOHN LEONARD",
      "x": 0.5
     }
    ]
@@ -85,12 +88,14 @@
      "id": "char-politician",
      "face": "smug",
      "gest": "shrug",
+     "name": "PEPSI",
      "x": 0.3
     },
     {
      "id": "char-friend-chimp",
      "face": "surprised",
      "gest": "none",
+     "name": "JOHN LEONARD",
      "x": 0.7
     }
    ]
@@ -103,13 +108,15 @@
      "id": "char-judge",
      "face": "neutral",
      "gest": "think",
+     "name": "JUDGE",
      "x": 0.3
     },
     {
      "id": "char-friend-chimp",
      "face": "angry",
      "gest": "point",
-     "x": 0.22
+     "name": "JOHN LEONARD",
+     "x": 0.2
     }
    ]
   },
@@ -121,13 +128,15 @@
      "id": "char-judge",
      "face": "smug",
      "gest": "point",
+     "name": "JUDGE",
      "x": 0.3
     },
     {
      "id": "char-friend-chimp",
      "face": "worried",
      "gest": "none",
-     "x": 0.22
+     "name": "JOHN LEONARD",
+     "x": 0.2
     }
    ]
   },
@@ -180,6 +189,7 @@
      "id": "char-friend-chimp",
      "face": "worried",
      "gest": "shrug",
+     "name": "JOHN LEONARD",
      "x": 0.5
     }
    ]
@@ -201,6 +211,7 @@
      "id": "char-friend-chimp",
      "face": "smug",
      "gest": "wave",
+     "name": "JOHN LEONARD",
      "x": 0.5
     }
    ],

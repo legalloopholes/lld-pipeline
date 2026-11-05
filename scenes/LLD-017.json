@@ -34,6 +34,7 @@
      "id": "char-friend-chimp",
      "face": "smug",
      "gest": "wave",
+     "name": "BRAD",
      "x": 0.5
     }
    ]
@@ -62,12 +63,14 @@
      "id": "char-politician",
      "face": "smug",
      "gest": "point",
+     "name": "BANK",
      "x": 0.3
     },
     {
      "id": "char-friend-chimp",
      "face": "surprised",
      "gest": "none",
+     "name": "BRAD",
      "x": 0.7
     }
    ]
@@ -80,12 +83,14 @@
      "id": "char-politician",
      "face": "smug",
      "gest": "explain",
+     "name": "IRS RULES",
      "x": 0.3
     },
     {
      "id": "char-friend-chimp",
      "face": "worried",
      "gest": "shrug",
+     "name": "BRAD",
      "x": 0.7
     }
    ]
@@ -114,6 +119,7 @@
      "id": "char-friend-chimp",
      "face": "surprised",
      "gest": "think",
+     "name": "BRAD",
      "x": 0.5
     }
    ]
@@ -151,6 +157,7 @@
      "id": "char-friend-chimp",
      "face": "smug",
      "gest": "arms_up",
+     "name": "BRAD",
      "x": 0.5
     }
    ]
@@ -163,12 +170,14 @@
      "id": "char-politician",
      "face": "smug",
      "gest": "point",
+     "name": "IRS",
      "x": 0.3
     },
     {
      "id": "char-friend-chimp",
      "face": "worried",
      "gest": "none",
+     "name": "BRAD",
      "x": 0.7
     }
    ]
@@ -181,6 +190,7 @@
      "id": "char-friend-chimp",
      "face": "worried",
      "gest": "scratch",
+     "name": "BRAD",
      "x": 0.5
     }
    ]
@@ -202,6 +212,7 @@
      "id": "char-friend-chimp",
      "face": "smug",
      "gest": "wave",
+     "name": "BRAD",
      "x": 0.5
     }
    ],

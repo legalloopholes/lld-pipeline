@@ -32,6 +32,7 @@
      "id": "char-friend-chimp",
      "face": "smug",
      "gest": "wave",
+     "name": "KIRTSAENG",
      "x": 0.5
     }
    ]
@@ -44,6 +45,7 @@
      "id": "char-friend-chimp",
      "face": "surprised",
      "gest": "think",
+     "name": "KIRTSAENG",
      "x": 0.5
     }
    ]
@@ -56,6 +58,7 @@
      "id": "char-friend-chimp",
      "face": "smug",
      "gest": "point",
+     "name": "KIRTSAENG",
      "x": 0.5
     }
    ]
@@ -68,13 +71,15 @@
      "id": "char-judge",
      "face": "angry",
      "gest": "point",
+     "name": "JUDGE",
      "x": 0.3
     },
     {
      "id": "char-politician",
      "face": "angry",
      "gest": "point",
-     "x": 0.22
+     "name": "WILEY",
+     "x": 0.2
     }
    ]
   },
@@ -102,12 +107,14 @@
      "id": "char-politician",
      "face": "smug",
      "gest": "explain",
+     "name": "WILEY",
      "x": 0.3
     },
     {
      "id": "char-friend-chimp",
      "face": "worried",
      "gest": "none",
+     "name": "KIRTSAENG",
      "x": 0.7
     }
    ]
@@ -120,13 +127,15 @@
      "id": "char-judge",
      "face": "surprised",
      "gest": "think",
+     "name": "JUDGE",
      "x": 0.3
     },
     {
      "id": "char-friend-chimp",
      "face": "surprised",
      "gest": "arms_up",
-     "x": 0.22
+     "name": "KIRTSAENG",
+     "x": 0.2
     }
    ]
   },
@@ -163,6 +172,7 @@
      "id": "char-politician",
      "face": "worried",
      "gest": "shrug",
+     "name": "WILEY",
      "x": 0.5
     }
    ]
@@ -184,6 +194,7 @@
      "id": "char-friend-chimp",
      "face": "smug",
      "gest": "wave",
+     "name": "KIRTSAENG",
      "x": 0.5
     }
    ],

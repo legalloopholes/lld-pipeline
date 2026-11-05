@@ -33,6 +33,7 @@
      "id": "char-friend-chimp",
      "face": "smug",
      "gest": "wave",
+     "name": "MCBOYLE",
      "x": 0.5
     }
    ]
@@ -45,6 +46,7 @@
      "id": "char-friend-chimp",
      "face": "smug",
      "gest": "point",
+     "name": "MCBOYLE",
      "x": 0.5
     }
    ]
@@ -89,13 +91,15 @@
      "id": "char-judge",
      "face": "surprised",
      "gest": "think",
+     "name": "JUDGE",
      "x": 0.3
     },
     {
      "id": "char-friend-chimp",
      "face": "surprised",
      "gest": "arms_up",
-     "x": 0.22
+     "name": "MCBOYLE",
+     "x": 0.2
     }
    ]
   },
@@ -148,13 +152,15 @@
      "id": "char-judge",
      "face": "smug",
      "gest": "point",
+     "name": "JUDGE",
      "x": 0.3
     },
     {
      "id": "char-friend-chimp",
      "face": "smug",
      "gest": "arms_up",
-     "x": 0.22
+     "name": "MCBOYLE",
+     "x": 0.2
     }
    ]
   },
@@ -166,6 +172,7 @@
      "id": "char-friend-chimp",
      "face": "smug",
      "gest": "shrug",
+     "name": "MCBOYLE",
      "x": 0.5
     }
    ]
@@ -187,6 +194,7 @@
      "id": "char-friend-chimp",
      "face": "smug",
      "gest": "wave",
+     "name": "MCBOYLE",
      "x": 0.5
     }
    ],

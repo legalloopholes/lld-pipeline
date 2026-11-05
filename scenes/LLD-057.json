@@ -32,6 +32,7 @@
      "id": "char-politician",
      "face": "smug",
      "gest": "wave",
+     "name": "FRANK",
      "x": 0.5
     }
    ]
@@ -44,6 +45,7 @@
      "id": "char-friend-chimp",
      "face": "smug",
      "gest": "point",
+     "name": "GARY",
      "x": 0.5
     }
    ]
@@ -56,6 +58,7 @@
      "id": "char-politician",
      "face": "worried",
      "gest": "think",
+     "name": "FRANK",
      "x": 0.5
     }
    ]
@@ -100,6 +103,7 @@
      "id": "char-politician",
      "face": "surprised",
      "gest": "arms_up",
+     "name": "FRANK",
      "x": 0.5
     }
    ]
@@ -137,6 +141,7 @@
      "id": "char-politician",
      "face": "worried",
      "gest": "scratch",
+     "name": "FRANK",
      "x": 0.5
     }
    ]
@@ -149,6 +154,7 @@
      "id": "char-politician",
      "face": "worried",
      "gest": "shrug",
+     "name": "FRANK",
      "x": 0.5
     }
    ]
@@ -170,6 +176,7 @@
      "id": "char-politician",
      "face": "smug",
      "gest": "wave",
+     "name": "FRANK",
      "x": 0.5
     }
    ],

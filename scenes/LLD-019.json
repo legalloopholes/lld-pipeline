@@ -32,6 +32,7 @@
      "id": "char-politician",
      "face": "smug",
      "gest": "explain",
+     "name": "GRANDMA ROSE",
      "x": 0.5
     }
    ]
@@ -60,6 +61,7 @@
      "id": "char-politician",
      "face": "smug",
      "gest": "point",
+     "name": "GRANDMA ROSE",
      "x": 0.5
     }
    ]
@@ -104,6 +106,7 @@
      "id": "char-friend-chimp",
      "face": "surprised",
      "gest": "think",
+     "name": "KEVIN",
      "x": 0.5
     }
    ]
@@ -125,13 +128,15 @@
      "id": "char-judge",
      "face": "neutral",
      "gest": "point",
+     "name": "JUDGE",
      "x": 0.3
     },
     {
      "id": "char-friend-chimp",
      "face": "worried",
      "gest": "none",
-     "x": 0.22
+     "name": "KEVIN",
+     "x": 0.2
     }
    ]
   },
@@ -159,13 +164,15 @@
      "id": "char-judge",
      "face": "smug",
      "gest": "none",
+     "name": "JUDGE",
      "x": 0.3
     },
     {
      "id": "char-friend-chimp",
      "face": "worried",
      "gest": "shrug",
-     "x": 0.22
+     "name": "KEVIN",
+     "x": 0.2
     }
    ]
   },
@@ -177,6 +184,7 @@
      "id": "char-friend-chimp",
      "face": "smug",
      "gest": "arms_up",
+     "name": "KEVIN",
      "x": 0.5
     }
    ]
@@ -198,6 +206,7 @@
      "id": "char-politician",
      "face": "smug",
      "gest": "explain",
+     "name": "GRANDMA ROSE",
      "x": 0.5
     }
    ],

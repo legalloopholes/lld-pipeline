@@ -34,6 +34,7 @@
      "id": "char-friend-chimp",
      "face": "neutral",
      "gest": "none",
+     "name": "MIT STUDENTS",
      "x": 0.5
     }
    ]
@@ -46,6 +47,7 @@
      "id": "char-friend-chimp",
      "face": "surprised",
      "gest": "think",
+     "name": "MIT STUDENTS",
      "x": 0.5
     }
    ]
@@ -74,6 +76,7 @@
      "id": "char-friend-chimp",
      "face": "surprised",
      "gest": "arms_up",
+     "name": "MIT STUDENTS",
      "x": 0.5
     }
    ]
@@ -102,12 +105,14 @@
      "id": "char-politician",
      "face": "surprised",
      "gest": "arms_up",
+     "name": "LOTTERY",
      "x": 0.3
     },
     {
      "id": "char-friend-chimp",
      "face": "smug",
      "gest": "point",
+     "name": "MIT STUDENTS",
      "x": 0.7
     }
    ]
@@ -120,12 +125,14 @@
      "id": "char-politician",
      "face": "worried",
      "gest": "think",
+     "name": "LOTTERY",
      "x": 0.3
     },
     {
      "id": "char-friend-chimp",
      "face": "smug",
      "gest": "wave",
+     "name": "MIT STUDENTS",
      "x": 0.7
     }
    ]
@@ -147,13 +154,15 @@
      "id": "char-judge",
      "face": "neutral",
      "gest": "explain",
+     "name": "STATE REVIEW",
      "x": 0.3
     },
     {
      "id": "char-friend-chimp",
      "face": "smug",
      "gest": "none",
-     "x": 0.22
+     "name": "MIT STUDENTS",
+     "x": 0.2
     }
    ]
   },
@@ -181,12 +190,14 @@
      "id": "char-politician",
      "face": "angry",
      "gest": "arms_up",
+     "name": "LOTTERY",
      "x": 0.3
     },
     {
      "id": "char-friend-chimp",
      "face": "worried",
      "gest": "shrug",
+     "name": "MIT STUDENTS",
      "x": 0.7
     }
    ]
@@ -199,6 +210,7 @@
      "id": "char-friend-chimp",
      "face": "smug",
      "gest": "shrug",
+     "name": "MIT STUDENTS",
      "x": 0.5
     }
    ]
@@ -220,6 +232,7 @@
      "id": "char-friend-chimp",
      "face": "neutral",
      "gest": "none",
+     "name": "MIT STUDENTS",
      "x": 0.5
     }
    ],

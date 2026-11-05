@@ -32,6 +32,7 @@
      "id": "char-friend-chimp",
      "face": "smug",
      "gest": "wave",
+     "name": "LINDA",
      "x": 0.5
     }
    ]
@@ -76,12 +77,14 @@
      "id": "char-friend-chimp",
      "face": "smug",
      "gest": "point",
+     "name": "LINDA",
      "x": 0.3
     },
     {
      "id": "char-politician",
      "face": "smug",
      "gest": "wave",
+     "name": "SELLER",
      "x": 0.7
     }
    ]
@@ -94,6 +97,7 @@
      "id": "char-politician",
      "face": "surprised",
      "gest": "think",
+     "name": "IRS",
      "x": 0.5
     }
    ]
@@ -147,6 +151,7 @@
      "id": "char-friend-chimp",
      "face": "smug",
      "gest": "none",
+     "name": "LINDA",
      "x": 0.5
     }
    ]
@@ -159,12 +164,14 @@
      "id": "char-friend-chimp",
      "face": "worried",
      "gest": "scratch",
+     "name": "LINDA",
      "x": 0.3
     },
     {
      "id": "char-politician",
      "face": "smug",
      "gest": "point",
+     "name": "IRS",
      "x": 0.7
     }
    ]
@@ -202,6 +209,7 @@
      "id": "char-friend-chimp",
      "face": "smug",
      "gest": "wave",
+     "name": "LINDA",
      "x": 0.5
     }
    ],

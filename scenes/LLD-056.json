@@ -32,6 +32,7 @@
      "id": "char-friend-chimp",
      "face": "worried",
      "gest": "none",
+     "name": "THE MAN",
      "x": 0.5
     }
    ]
@@ -44,12 +45,14 @@
      "id": "char-politician",
      "face": "smug",
      "gest": "point",
+     "name": "OFFICER",
      "x": 0.3
     },
     {
      "id": "char-friend-chimp",
      "face": "worried",
      "gest": "none",
+     "name": "THE MAN",
      "x": 0.7
     }
    ]
@@ -62,6 +65,7 @@
      "id": "char-politician",
      "face": "surprised",
      "gest": "think",
+     "name": "OFFICER",
      "x": 0.5
     }
    ]
@@ -74,12 +78,14 @@
      "id": "char-politician",
      "face": "smug",
      "gest": "explain",
+     "name": "OFFICER",
      "x": 0.3
     },
     {
      "id": "char-friend-chimp",
      "face": "worried",
      "gest": "scratch",
+     "name": "THE MAN",
      "x": 0.7
     }
    ]
@@ -92,12 +98,14 @@
      "id": "char-politician",
      "face": "smug",
      "gest": "arms_up",
+     "name": "OFFICER",
      "x": 0.3
     },
     {
      "id": "char-friend-chimp",
      "face": "surprised",
      "gest": "none",
+     "name": "THE MAN",
      "x": 0.7
     }
    ]
@@ -126,13 +134,15 @@
      "id": "char-judge",
      "face": "surprised",
      "gest": "think",
+     "name": "JUDGE",
      "x": 0.3
     },
     {
      "id": "char-politician",
      "face": "worried",
      "gest": "none",
-     "x": 0.22
+     "name": "OFFICER",
+     "x": 0.2
     }
    ]
   },
@@ -153,13 +163,15 @@
      "id": "char-judge",
      "face": "smug",
      "gest": "point",
+     "name": "JUDGE",
      "x": 0.3
     },
     {
      "id": "char-politician",
      "face": "worried",
      "gest": "shrug",
-     "x": 0.22
+     "name": "OFFICER",
+     "x": 0.2
     }
    ]
   },
@@ -187,13 +199,15 @@
      "id": "char-judge",
      "face": "smug",
      "gest": "none",
+     "name": "JUDGE",
      "x": 0.3
     },
     {
      "id": "char-friend-chimp",
      "face": "surprised",
      "gest": "none",
-     "x": 0.22
+     "name": "THE MAN",
+     "x": 0.2
     }
    ]
   },
@@ -214,6 +228,7 @@
      "id": "char-friend-chimp",
      "face": "worried",
      "gest": "none",
+     "name": "THE MAN",
      "x": 0.5
     }
    ],

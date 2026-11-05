@@ -126,7 +126,7 @@ function layoutScene(sc) {
     else if (key === 'gorilla' && spots.judge) { [e.x, e.y, e.z] = spots.judge; }
     else if (key === 'larry') {
       e.x = c.x != null ? wx(c.x) : 0;
-      if (hasBoard && (c.x == null || c.x < 0.5)) e.x = isLectern(board[0]) ? -1.0 : -1.25;
+      if (hasBoard && (c.x == null || c.x < 0.5)) e.x = isLectern(board[0]) ? -1.0 : -1.45;
       if (c.anim === 'tiptoe') e.z = spots.log ? -0.7 : 0.4;
     } else { e.x = c.x != null ? wx(c.x) : 0.9; }
     L.cast.push(e);
@@ -241,7 +241,7 @@ window.renderAt = (t, frame) => {
     if (a < 0 || t >= end) return;
     const p = getProp(it), isMap = !isLectern(it);
     p.root.visible = true;
-    if (L.set === 'courtroom') p.root.position.set(0.6, 0, 1.0); else p.root.position.set(isMap ? 1.15 : 1.0, 0, isMap ? -0.8 : 0.2);
+    if (L.set === 'courtroom') p.root.position.set(0.6, 0, 1.0); else p.root.position.set(isMap ? 1.32 : 1.0, 0, isMap ? -0.8 : 0.2);
     let k = Math.min(1, a / 0.35); if (end - t < 0.18) k = Math.min(k, (end - t) / 0.18);
     p.pop(k);
     if (p.knock) p.knock((a - 0.45) / 0.35);
@@ -295,6 +295,31 @@ window.renderAt = (t, frame) => {
   if (roll) camera.rotateZ(roll);
   camera.updateMatrixWorld(true);
   renderer.render(scene, camera);
+  // name tags: a label over each named character so viewers know who is who
+  let used = 0;
+  for (const e of L.cast) {
+    if (!e.c.name || e.key === 'larry') continue;
+    const ch = CAST[e.key]; if (!ch || !ch.root.visible) continue;
+    ch.root.updateMatrixWorld(true);
+    const p = ch.parts.head.getWorldPosition(new THREE.Vector3()).add(new THREE.Vector3(0, 1.05, 0)).project(camera);
+    const tag = nameTag(used++);
+    tag.textContent = e.c.name;
+    tag.style.display = 'block';
+    tag.style.left = ((p.x + 1) / 2 * W) + 'px';
+    tag.style.top = Math.max(300, (1 - p.y) / 2 * H) + 'px';
+  }
+  for (let i = used; i < TAGS.length; i++) TAGS[i].style.display = 'none';
   return true;
 };
+const TAGS = [];
+function nameTag(i) {
+  while (TAGS.length <= i) {
+    const d = document.createElement('div');
+    Object.assign(d.style, { position: 'absolute', transform: 'translate(-50%, -100%)', padding: '10px 26px', borderRadius: '22px',
+      background: '#ffffff', color: '#1d1d22', border: '5px solid #1d1d22', font: '900 46px "Archivo Black", "Inter", sans-serif',
+      letterSpacing: '1px', whiteSpace: 'nowrap', boxShadow: '0 8px 0 rgba(0,0,0,0.18)', display: 'none', pointerEvents: 'none' });
+    document.getElementById('stage').appendChild(d); TAGS.push(d);
+  }
+  return TAGS[i];
+}
 window.worldReady = true;

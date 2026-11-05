@@ -34,6 +34,7 @@
      "id": "char-friend-chimp",
      "face": "smug",
      "gest": "wave",
+     "name": "DIPLOMAT",
      "x": 0.5
     }
    ]
@@ -46,12 +47,14 @@
      "id": "char-politician",
      "face": "angry",
      "gest": "point",
+     "name": "OFFICER",
      "x": 0.3
     },
     {
      "id": "char-friend-chimp",
      "face": "smug",
      "gest": "shrug",
+     "name": "DIPLOMAT",
      "x": 0.7
     }
    ]
@@ -64,12 +67,14 @@
      "id": "char-politician",
      "face": "surprised",
      "gest": "arms_up",
+     "name": "OFFICER",
      "x": 0.3
     },
     {
      "id": "char-friend-chimp",
      "face": "smug",
      "gest": "point",
+     "name": "DIPLOMAT",
      "x": 0.7
     }
    ]
@@ -114,6 +119,7 @@
      "id": "char-politician",
      "face": "worried",
      "gest": "think",
+     "name": "OFFICER",
      "x": 0.5
     }
    ]
@@ -167,6 +173,7 @@
      "id": "char-friend-chimp",
      "face": "worried",
      "gest": "none",
+     "name": "DIPLOMAT",
      "x": 0.5
     }
    ]
@@ -188,6 +195,7 @@
      "id": "char-friend-chimp",
      "face": "smug",
      "gest": "wave",
+     "name": "DIPLOMAT",
      "x": 0.5
     }
    ],
