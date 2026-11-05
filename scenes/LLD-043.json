@@ -1,7 +1,7 @@
 {
  "video_id": "LLD-043",
  "episode": "E43",
- "hook": "FOREVER? PATENT LAW SAYS NO",
+ "hook": "FOREVER? NOPE.",
  "highlight": [
   "royalties",
   "expires",
@@ -17,7 +17,7 @@
   "#lawtok",
   "#supremecourt"
  ],
- "script": "Marvel promised to pay royalties forever, and patent law said no. [disclaimer] This is Kimble versus Marvel, a U.S. Supreme Court case from twenty fifteen. Stephen Kimble patented a Spider-Man web-shooting toy. Marvel's predecessor settled with him. It bought the patent for a lump sum, plus a three percent royalty on future sales, with no end date. Then Marvel found an older Supreme Court case called Brulotte. Its rule: a patent holder can't collect royalties for using an invention after the patent expires. Kimble's patent expired in twenty ten, so Marvel asked the courts to say it could stop paying. The Supreme Court agreed, six to three. The majority kept the old rule and said critics should ask Congress, not the Court, to change it. And Justice Kagan closed the opinion with a line from the comic where Spider-Man first appeared: in this world, with great power there must also come great responsibility. Here's the limit. The Court said parties can still structure deals differently. Payments for use before the patent expires can be spread out over time. And royalties tied to rights that aren't patents, like trade secrets, can work differently. So not every royalty deal automatically ends with a patent. [loop] So before you sign a forever royalty deal on a patent, remember",
+ "script": "Marvel promised a man royalties forever, and the Supreme Court quoted Spider-Man when it let Marvel stop paying. [disclaimer] This is Kimble versus Marvel, a Supreme Court case from twenty fifteen. A guy named Stephen Kimble patented a Spider-Man toy that shoots webs. Marvel's company made a deal with him. It bought the patent for a big payment, plus three percent of future sales. Forever! No end date! But then Marvel found an old Supreme Court rule. It says once a patent runs out, you can't keep charging royalties for using that invention. And guess what? Kimble's patent ran out in twenty ten. So Marvel asked the courts, can we stop paying now? And the Supreme Court said yes! The majority kept the old rule. And it said, if you don't like it, go ask Congress, not us. And then Justice Kagan ended the opinion with a line straight from the comic where Spider-Man first showed up. In this world, with great power there must also come great responsibility. Legendary! Here's the limit. The Court said people can still set up deals in other ways. Payments for using the patent before it runs out can be spread out over time. And payments for things that aren't patents, like trade secrets, can work differently. So not every royalty deal ends with the patent. [loop] So before you sign a forever royalty deal on a patent, remember",
  "publish_at": "2026-11-22T19:00:00-05:00",
  "sources": [
   "https://www.law.cornell.edu/supremecourt/text/13-720"
@@ -58,7 +58,7 @@
    ]
   },
   {
-   "at": "stephen kimble patented",
+   "at": "a guy named stephen kimble",
    "bg": "white",
    "cast": [
     {
@@ -83,10 +83,10 @@
     }
    ],
    "card": "3% ROYALTY · NO END DATE",
-   "card_at": "no end date"
+   "card_at": "it bought the patent"
   },
   {
-   "at": "then marvel found",
+   "at": "but then marvel found",
    "bg": "white",
    "cast": [
     {
@@ -102,7 +102,7 @@
    ]
   },
   {
-   "at": "its rule",
+   "at": "it says once a patent",
    "bg": "white",
    "cast": [
     {
@@ -110,17 +110,17 @@
     }
    ],
    "card": "NO ROYALTIES AFTER EXPIRATION",
-   "card_at": "after the patent expires",
+   "card_at": "it says once a patent",
    "zooms": [
     {
-     "at": "after the patent expires",
+     "at": "it says once a patent",
      "amount": 1.18,
      "hold": 0.9
     }
    ]
   },
   {
-   "at": "kimble's patent expired",
+   "at": "and guess what",
    "bg": "bg-courtroom",
    "cast": [
     {
@@ -133,7 +133,7 @@
     }
    ],
    "card": "PAYMENTS STOP",
-   "card_at": "stop paying"
+   "card_at": "and guess what"
   },
   {
    "at": "the majority kept",
@@ -152,7 +152,7 @@
    ]
   },
   {
-   "at": "and justice kagan closed",
+   "at": "and then justice kagan",
    "bg": "white",
    "cast": [
     {
@@ -160,7 +160,7 @@
     }
    ],
    "card": "“WITH GREAT POWER…”",
-   "card_at": "with great power"
+   "card_at": "and then justice kagan"
   },
   {
    "at": "here's the limit",
@@ -213,5 +213,6 @@
  "music_vibe": "quirky",
  "share_line": "Send this to the friend who signs contracts without reading a single word",
  "hook_old": "FOREVER ROYALTIES? NOPE.",
- "script_old": "Marvel agreed to pay royalties with no end date, and patent law supplied one anyway. This is Kimble versus Marvel, a U.S. Supreme Court case from twenty fifteen. Stephen Kimble patented a Spider-Man web-shooting toy. Marvel's predecessor settled with him. It bought the patent for a lump sum, plus a three percent royalty on future sales, with no end date. Then Marvel found an older Supreme Court case called Brulotte. Its rule: a patent holder can't collect royalties for using an invention after the patent expires. Kimble's patent expired in twenty ten, so Marvel asked the courts to say it could stop paying. The Supreme Court agreed, six to three. The majority kept the old rule and said critics should ask Congress, not the Court, to change it. And Justice Kagan closed the opinion with a line from the comic where Spider-Man first appeared: in this world, with great power there must also come great responsibility. Here's the limit. The Court said parties can still structure deals differently. Payments for use before the patent expires can be spread out over time. And royalties tied to rights that aren't patents, like trade secrets, can work differently. So not every royalty deal automatically ends with a patent. [loop] So before you sign a forever royalty deal on a patent, remember"
+ "script_old": "Marvel agreed to pay royalties with no end date, and patent law supplied one anyway. This is Kimble versus Marvel, a U.S. Supreme Court case from twenty fifteen. Stephen Kimble patented a Spider-Man web-shooting toy. Marvel's predecessor settled with him. It bought the patent for a lump sum, plus a three percent royalty on future sales, with no end date. Then Marvel found an older Supreme Court case called Brulotte. Its rule: a patent holder can't collect royalties for using an invention after the patent expires. Kimble's patent expired in twenty ten, so Marvel asked the courts to say it could stop paying. The Supreme Court agreed, six to three. The majority kept the old rule and said critics should ask Congress, not the Court, to change it. And Justice Kagan closed the opinion with a line from the comic where Spider-Man first appeared: in this world, with great power there must also come great responsibility. Here's the limit. The Court said parties can still structure deals differently. Payments for use before the patent expires can be spread out over time. And royalties tied to rights that aren't patents, like trade secrets, can work differently. So not every royalty deal automatically ends with a patent. [loop] So before you sign a forever royalty deal on a patent, remember",
+ "script_simple": true
 }

@@ -11,5 +11,8 @@
   "#viral"
  ],
  "renderer": "3d",
- "min_seconds": 60
+ "min_seconds": 60,
+ "voice_speed": 1.08,
+ "spoken_disclaimer": false,
+ "stickers": true
 }

@@ -1,7 +1,7 @@
 {
  "video_id": "LLD-012",
  "episode": "E12",
- "hook": "SNUGGIE VS THE GOVERNMENT",
+ "hook": "SNUGGIE 1, GOVERNMENT 0",
  "highlight": [
   "blanket",
   "garment",
@@ -17,7 +17,7 @@
   "#lawtok",
   "#weirdlaws"
  ],
- "script": "The government tried to tax the Snuggie as clothing, and lost. [disclaimer] This is a U.S. Court of International Trade decision from February twenty seventeen. The Snuggie is that oversized fleece blanket with sleeves. When it's imported, customs has to put it in a tariff category, and the category sets the duty. Customs called it a garment, at fourteen point nine percent. The importer, Allstar Marketing, said it's a blanket, at eight and a half percent. So the court looked at the evidence. The design came from existing blankets. There's no closure and nothing fitted about it. It's huge and loose. It's sold in bedding and housewares departments, not clothing. Allstar described it as a blanket on its invoices, and its trademark covers blankets and throws. And the sleeves? The court said they were incidental to its use as a blanket. They mostly keep it in place while your hands are free. The court's conclusion: the Snuggie is designed, used, and functions as a blanket. So it got the lower blanket rate. Here's the limit. That was one product and one tariff decision. Sewing sleeves onto a blanket doesn't automatically change its taxes, and calling something a blanket on the label isn't enough by itself. [loop] So the next time you're wearing your blanket, remember",
+ "script": "The United States government went to court to argue that a Snuggie is clothing. And lost. [disclaimer] This is a real trade court case in America, from twenty seventeen. You know the Snuggie. It's that giant fleece blanket with sleeves. When it comes into the country, customs has to put it in a category, and the category decides the tax. Customs said, that's clothing! That meant a tax of almost fifteen percent. But the company, Allstar Marketing, said, no, it's a blanket! That's only eight and a half percent. So the court looked at the facts. The design came from regular blankets. There are no buttons and no zipper. Nothing is fitted. It's huge and loose. And stores sell it with the bedding and home stuff, not with the clothes. Even the company's paperwork called it a blanket. But what about the sleeves? The court said the sleeves are just extra. They keep the blanket on you while your hands are free. Final answer? The Snuggie is a blanket! So it got the cheaper blanket tax. Here's the limit. That was one product and one tax decision. Sewing sleeves onto a blanket doesn't magically change its taxes. And just calling something a blanket on the label isn't enough. [loop] So the next time you're wearing your blanket, remember",
  "publish_at": "2026-11-07T12:00:00-05:00",
  "sources": [
   "https://www.cit.uscourts.gov/sites/cit/files/17-15.pdf"
@@ -42,7 +42,7 @@
    ]
   },
   {
-   "at": "this is a us court",
+   "at": "this is a real trade",
    "bg": "bg-courtroom",
    "cast": [
     {
@@ -56,7 +56,7 @@
    ]
   },
   {
-   "at": "the snuggie is that",
+   "at": "you know the snuggie",
    "bg": "white",
    "cast": [
     {
@@ -72,7 +72,7 @@
    ]
   },
   {
-   "at": "when it's imported",
+   "at": "when it comes into",
    "bg": "bg-harbor",
    "cast": [
     {
@@ -89,7 +89,7 @@
    ]
   },
   {
-   "at": "customs called it a garment",
+   "at": "customs said",
    "bg": "white",
    "cast": [
     {
@@ -105,7 +105,7 @@
    ]
   },
   {
-   "at": "the importer allstar",
+   "at": "but the company",
    "bg": "white",
    "cast": [
     {
@@ -134,10 +134,10 @@
     }
    ],
    "card": "NO CLOSURE. NOT FITTED.",
-   "card_at": "no closure"
+   "card_at": "so the court looked"
   },
   {
-   "at": "it's sold in bedding",
+   "at": "and stores sell it",
    "bg": "bg-shop",
    "cast": [
     {
@@ -146,10 +146,10 @@
     }
    ],
    "card": "SOLD AS BEDDING",
-   "card_at": "bedding and housewares"
+   "card_at": "and stores sell it"
   },
   {
-   "at": "and the sleeves",
+   "at": "but what about the sleeves",
    "bg": "white",
    "cast": [
     {
@@ -157,17 +157,17 @@
     }
    ],
    "card": "SLEEVES: “INCIDENTAL”",
-   "card_at": "incidental",
+   "card_at": "but what about the sleeves",
    "zooms": [
     {
-     "at": "incidental",
+     "at": "but what about the sleeves",
      "amount": 1.18,
      "hold": 0.9
     }
    ]
   },
   {
-   "at": "the court's conclusion",
+   "at": "final answer",
    "bg": "bg-courtroom",
    "cast": [
     {
@@ -180,7 +180,7 @@
     }
    ],
    "card": "VERDICT: BLANKET",
-   "card_at": "functions as a blanket"
+   "card_at": "final answer"
   },
   {
    "at": "here's the limit",
@@ -208,7 +208,7 @@
    ]
   },
   {
-   "at": "so the next time you're wearing",
+   "at": "so the next time",
    "bg": "bg-harbor",
    "loop": true
   }
@@ -216,5 +216,6 @@
  "music_vibe": "quirky",
  "share_line": "Send this to the friend who hasn't taken off their Snuggie in years",
  "hook_old": "IS A SNUGGIE CLOTHING?",
- "script_old": "The government wanted to tax the Snuggie like clothing, but its sleeves weren't enough. This is a U.S. Court of International Trade decision from February twenty seventeen. The Snuggie is that oversized fleece blanket with sleeves. When it's imported, customs has to put it in a tariff category, and the category sets the duty. Customs called it a garment, at fourteen point nine percent. The importer, Allstar Marketing, said it's a blanket, at eight and a half percent. So the court looked at the evidence. The design came from existing blankets. There's no closure and nothing fitted about it. It's huge and loose. It's sold in bedding and housewares departments, not clothing. Allstar described it as a blanket on its invoices, and its trademark covers blankets and throws. And the sleeves? The court said they were incidental to its use as a blanket. They mostly keep it in place while your hands are free. The court's conclusion: the Snuggie is designed, used, and functions as a blanket. So it got the lower blanket rate. Here's the limit. That was one product and one tariff decision. Sewing sleeves onto a blanket doesn't automatically change its taxes, and calling something a blanket on the label isn't enough by itself. [loop] So the next time you're wearing your blanket, remember"
+ "script_old": "The government wanted to tax the Snuggie like clothing, but its sleeves weren't enough. This is a U.S. Court of International Trade decision from February twenty seventeen. The Snuggie is that oversized fleece blanket with sleeves. When it's imported, customs has to put it in a tariff category, and the category sets the duty. Customs called it a garment, at fourteen point nine percent. The importer, Allstar Marketing, said it's a blanket, at eight and a half percent. So the court looked at the evidence. The design came from existing blankets. There's no closure and nothing fitted about it. It's huge and loose. It's sold in bedding and housewares departments, not clothing. Allstar described it as a blanket on its invoices, and its trademark covers blankets and throws. And the sleeves? The court said they were incidental to its use as a blanket. They mostly keep it in place while your hands are free. The court's conclusion: the Snuggie is designed, used, and functions as a blanket. So it got the lower blanket rate. Here's the limit. That was one product and one tariff decision. Sewing sleeves onto a blanket doesn't automatically change its taxes, and calling something a blanket on the label isn't enough by itself. [loop] So the next time you're wearing your blanket, remember",
+ "script_simple": true
 }

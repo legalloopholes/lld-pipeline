@@ -1,7 +1,7 @@
 {
  "video_id": "LLD-056",
  "episode": "E56",
- "hook": "ONE SQUEEZE TOO MANY",
+ "hook": "FOUND IT. NOT ALLOWED.",
  "highlight": [
   "plain",
   "feel",
@@ -17,7 +17,7 @@
   "#lawtok",
   "#knowyourrights"
  ],
- "script": "The officer found the drugs, and the search was still ruled unconstitutional. [disclaimer] This is Minnesota versus Dickerson, a U.S. Supreme Court case from nineteen ninety-three. Officers in Minneapolis stopped a man and patted him down for weapons, which police can do in certain situations under an earlier case called Terry. The patdown found no weapon. But the officer felt a small lump in his jacket pocket, and only concluded it was crack cocaine after squeezing, sliding and manipulating it. The Court did two things. First, it recognized what's called plain feel. During a lawful protective patdown, if an officer feels an object whose criminal nature is immediately apparent, the officer can seize it, a lot like something in plain view. But second, that's not what happened here. The officer had already determined the lump wasn't a weapon. His continued exploration of the pocket had nothing to do with the protective purpose of the patdown. So it became an unlawful search, and the cocaine was suppressed. The purpose of a search limits its scope. Here's the limit. Plain feel is still real. If contraband is immediately obvious by touch during a lawful frisk, it can be seized. And these cases turn on specific facts. [loop] So before you assume a patdown means anything goes, remember",
+ "script": "Police found crack cocaine in a man's pocket, and the Supreme Court said they weren't allowed to. [disclaimer] This is a real Supreme Court case from nineteen ninety three, Minnesota versus Dickerson. Police in Minneapolis stopped a man and patted him down for weapons. Police are allowed to do that in some situations. But no weapon. Nothing! Then the officer felt a tiny lump in his jacket pocket. And he only figured out it was crack cocaine after squeezing it, sliding it, and messing with it. So the Court said two things. Thing one. If an officer is doing a legal patdown and feels something that's obviously illegal right away, they can take it. They call it plain feel! But thing two. That's not what happened here. The officer already knew the lump wasn't a weapon. And all that squeezing had nothing to do with checking for weapons. So it turned into an illegal search, and the drugs got thrown out of the case. A patdown for weapons has to stay a patdown for weapons! Here's the limit. Plain feel is still real. If something illegal is obvious right away by touch during a legal patdown, police can take it. And every one of these cases depends on the exact facts. [loop] So before you assume a patdown means anything goes, remember",
  "publish_at": "2026-11-29T12:00:00-05:00",
  "sources": [
   "https://www.law.cornell.edu/supremecourt/text/508/366"
@@ -42,7 +42,7 @@
    ]
   },
   {
-   "at": "this is minnesota",
+   "at": "this is a real supreme",
    "bg": "white",
    "cast": [
     {
@@ -58,7 +58,7 @@
    ]
   },
   {
-   "at": "officers in minneapolis",
+   "at": "police in minneapolis stopped",
    "bg": "bg-street",
    "cast": [
     {
@@ -75,7 +75,7 @@
    ]
   },
   {
-   "at": "the patdown found no weapon",
+   "at": "but no weapon",
    "bg": "white",
    "cast": [
     {
@@ -83,10 +83,10 @@
     }
    ],
    "card": "NO WEAPON",
-   "card_at": "found no weapon"
+   "card_at": "but no weapon"
   },
   {
-   "at": "but the officer felt",
+   "at": "then the officer felt",
    "bg": "white",
    "cast": [
     {
@@ -102,14 +102,14 @@
    ],
    "zooms": [
     {
-     "at": "squeezing",
+     "at": "then the officer felt",
      "amount": 1.18,
      "hold": 0.9
     }
    ]
   },
   {
-   "at": "the court did two things",
+   "at": "so the court said",
    "bg": "bg-courtroom",
    "cast": [
     {
@@ -122,10 +122,10 @@
     }
    ],
    "card": "“PLAIN FEEL”",
-   "card_at": "plain feel"
+   "card_at": "so the court said"
   },
   {
-   "at": "but second",
+   "at": "that's not what happened",
    "bg": "bg-courtroom",
    "cast": [
     {
@@ -138,10 +138,10 @@
     }
    ],
    "card": "SEARCH WENT TOO FAR",
-   "card_at": "continued exploration"
+   "card_at": "that's not what happened"
   },
   {
-   "at": "so it became an unlawful",
+   "at": "so it turned into",
    "bg": "white",
    "cast": [
     {
@@ -157,7 +157,7 @@
    ]
   },
   {
-   "at": "the purpose of a search",
+   "at": "a patdown for weapons",
    "bg": "white",
    "cast": [
     {
@@ -198,7 +198,7 @@
    ]
   },
   {
-   "at": "so before you assume a patdown",
+   "at": "so before you assume",
    "bg": "bg-street",
    "loop": true
   }
@@ -206,5 +206,6 @@
  "music_vibe": "tense",
  "share_line": "Send this to the friend who panics every time they see a cop",
  "hook_old": "ONE SQUEEZE TOO MANY",
- "script_old": "The officer found the drugs, and the extra squeezing helped make the search unconstitutional. This is Minnesota versus Dickerson, a U.S. Supreme Court case from nineteen ninety-three. Officers in Minneapolis stopped a man and patted him down for weapons, which police can do in certain situations under an earlier case called Terry. The patdown found no weapon. But the officer felt a small lump in his jacket pocket, and only concluded it was crack cocaine after squeezing, sliding and manipulating it. The Court did two things. First, it recognized what's called plain feel. During a lawful protective patdown, if an officer feels an object whose criminal nature is immediately apparent, the officer can seize it, a lot like something in plain view. But second, that's not what happened here. The officer had already determined the lump wasn't a weapon. His continued exploration of the pocket had nothing to do with the protective purpose of the patdown. So it became an unlawful search, and the cocaine was suppressed. The purpose of a search limits its scope. Here's the limit. Plain feel is still real. If contraband is immediately obvious by touch during a lawful frisk, it can be seized. And these cases turn on specific facts. [loop] So before you assume a patdown means anything goes, remember"
+ "script_old": "The officer found the drugs, and the extra squeezing helped make the search unconstitutional. This is Minnesota versus Dickerson, a U.S. Supreme Court case from nineteen ninety-three. Officers in Minneapolis stopped a man and patted him down for weapons, which police can do in certain situations under an earlier case called Terry. The patdown found no weapon. But the officer felt a small lump in his jacket pocket, and only concluded it was crack cocaine after squeezing, sliding and manipulating it. The Court did two things. First, it recognized what's called plain feel. During a lawful protective patdown, if an officer feels an object whose criminal nature is immediately apparent, the officer can seize it, a lot like something in plain view. But second, that's not what happened here. The officer had already determined the lump wasn't a weapon. His continued exploration of the pocket had nothing to do with the protective purpose of the patdown. So it became an unlawful search, and the cocaine was suppressed. The purpose of a search limits its scope. Here's the limit. Plain feel is still real. If contraband is immediately obvious by touch during a lawful frisk, it can be seized. And these cases turn on specific facts. [loop] So before you assume a patdown means anything goes, remember",
+ "script_simple": true
 }

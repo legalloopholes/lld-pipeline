@@ -11,6 +11,12 @@ import numpy as np, soundfile as sf
 TTS_URL = 'http://localhost:8300/api/tts'
 VOICE = 'am_puck'        # chosen by ear (Kokoro grade C+; am_liam was D)
 SPEED = 0.95
+try:   # faster, punchier read (brand.json: voice_speed, min_seconds)
+    _brand = json.load(open(os.path.join(os.path.expanduser('~/.n8n-files'), 'assets', 'brand.json')))
+except Exception:
+    _brand = {}
+SPEED = float(_brand.get('voice_speed', 1.08))
+MIN_SECONDS = float(_brand.get('min_seconds', 60))
 DEFAULT_PAUSE = 0.25
 SR = 24000
 FFMPEG = next((p for p in ['/opt/homebrew/bin/ffmpeg', shutil.which('ffmpeg')] if p and os.path.exists(p)), 'ffmpeg')
@@ -57,7 +63,10 @@ else:
     hook, body = (text[:m2.end()], text[m2.end():]) if m2 else (text, '')
 hook, body = hook.strip(), body.strip()
 hook_start = ' '.join(re.sub(r'\[pause[^\]]*\]', '', hook).split()[:4])
-text = f'{hook} [pause 0.15] {DISCLAIMER_LINE} [pause 0.15] {body} {CTA} {loop} [cut] {hook_start}'
+if _brand.get('spoken_disclaimer', False):      # off: the on-screen "Educational content - Not legal advice" line covers it
+    text = f'{hook} [pause 0.15] {DISCLAIMER_LINE} [pause 0.15] {body} {CTA} {loop} [cut] {hook_start}'
+else:
+    text = f'{hook} {body} {CTA} {loop} [cut] {hook_start}'
 
 parts = re.split(r'\[pause(?:\s+([0-9]*\.?[0-9]+))?\]', text, flags=re.I)
 # parts = [text, secs, text, secs, text, ...]
@@ -147,35 +156,63 @@ def sentences(t):
 
 
 def gap_after(s):
-    return 0.34 if s.endswith('?') else (0.18 if len(s.split()) <= 4 else 0.26)
+    if s.endswith('?'): return 0.28
+    if s.endswith('!'): return 0.16
+    return 0.12 if len(s.split()) <= 4 else 0.18
 
 
 def speed_for(s, first):
-    if first: return round(SPEED + 0.07, 2)                 # hook lands a touch quicker
-    if len(s.split()) <= 4: return round(SPEED - 0.04, 2)   # short punchlines a touch slower
+    if first: return round(SPEED + 0.05, 2)                 # hook lands a touch quicker
+    if s.rstrip('"\u201d\u2019\')').endswith('!'): return round(SPEED + 0.07, 2)
+    if s.rstrip('"\u201d\u2019\')').endswith('?'): return round(SPEED + 0.03, 2)
+    if len(s.split()) <= 4: return round(SPEED - 0.03, 2)   # short punchlines a touch slower
     return SPEED
 
 
-audio, n_spoken, first = [], 0, True
-for chunk, pause in pieces:
-    if chunk:
-        tail = None
-        if re.search(r'\[cut\]', chunk, flags=re.I):
-            chunk, tail = [c.strip() for c in re.split(r'\[cut\]', chunk, maxsplit=1, flags=re.I)]
-        sents = sentences(clean(chunk, terminal=tail is None))
-        for j, s_ in enumerate(sents):
-            last = j == len(sents) - 1
-            if last and tail:                                 # loop line: voiced with the hook's start, then cut
-                audio.append(cut_before(tts(s_ + ' ' + tail, speed_for(s_, first)), s_, tail))
-            else:
-                audio.append(tts(s_, speed_for(s_, first)))
-                if not last: audio.append(np.zeros(int(gap_after(s_) * SR), dtype=np.int16))
-            first = False
-            n_spoken += 1
-    if pause > 0:
-        audio.append(np.zeros(int(pause * SR), dtype=np.int16))
+def pop(a):
+    """exclamations pop: about a semitone and a half higher and louder, same length"""
+    x = subprocess.run([FFMPEG, '-loglevel', 'error', '-f', 's16le', '-ar', str(SR), '-ac', '1', '-i', 'pipe:0',
+                        '-af', f'asetrate={int(SR * 1.1)},aresample={SR},atempo={1 / 1.1:.5f},volume=1.3',
+                        '-f', 's16le', '-ar', str(SR), '-ac', '1', 'pipe:1'],
+                       input=a.astype(np.int16).tobytes(), capture_output=True, check=True).stdout
+    y = np.frombuffer(x, np.int16).astype(np.float32)
+    pk = np.abs(y).max() if len(y) else 0
+    if pk > 32000: y *= 32000 / pk
+    return y.astype(np.int16)
 
+
+def is_excl(s): return s.rstrip('"\u201d\u2019\')').endswith('!')
+
+
+def synth():
+  audio, n_spoken, first = [], 0, True
+  for chunk, pause in pieces:
+      if chunk:
+          tail = None
+          if re.search(r'\[cut\]', chunk, flags=re.I):
+              chunk, tail = [c.strip() for c in re.split(r'\[cut\]', chunk, maxsplit=1, flags=re.I)]
+          sents = sentences(clean(chunk, terminal=tail is None))
+          for j, s_ in enumerate(sents):
+              last = j == len(sents) - 1
+              if last and tail:                                 # loop line: voiced with the hook's start, then cut
+                  audio.append(cut_before(tts(s_ + ' ' + tail, speed_for(s_, first)), s_, tail))
+              else:
+                  a_ = tts(s_, speed_for(s_, first))
+                  audio.append(pop(a_) if is_excl(s_) else a_)
+                  if not last: audio.append(np.zeros(int(gap_after(s_) * SR), dtype=np.int16))
+              first = False
+              n_spoken += 1
+      if pause > 0:
+          audio.append(np.zeros(int(pause * SR), dtype=np.int16))
+  return audio, n_spoken
+
+
+audio, n_spoken = synth()
+_dur = sum(len(x) for x in audio) / SR
+if _dur < MIN_SECONDS + 1.5 and SPEED > 0.9:          # never fall under the minimum length: slow down a bit and redo
+    SPEED = max(0.9, round(SPEED * _dur / (MIN_SECONDS + 2.5), 3))
+    audio, n_spoken = synth()
 full = np.concatenate(audio) if audio else np.zeros(0, dtype=np.int16)
 sf.write(out_wav, full, SR, subtype='PCM_16')
-print(json.dumps({'wav': out_wav, 'pieces': n_spoken,
+print(json.dumps({'wav': out_wav, 'pieces': n_spoken, 'speed': SPEED,
                   'pauses': sum(1 for _, p in pieces if p > 0), 'seconds': round(len(full) / SR, 2)}))

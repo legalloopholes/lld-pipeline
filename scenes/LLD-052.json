@@ -17,7 +17,7 @@
   "#lawtok",
   "#branding"
  ],
- "script": "McDonald's lost part of its Big Mac trademark in Europe, to a small Irish chain. [disclaimer] This is the European Union's General Court, in June twenty twenty-four. In the EU, a registered trademark can be revoked for goods or services where it hasn't been genuinely used over a five-year period. McDonald's Big Mac registration covered more than burgers. It also listed things like chicken sandwiches, foods made from poultry, and services for operating restaurants. A challenge was brought, and the court looked at the evidence from twenty twelve to twenty seventeen. For chicken sandwiches, McDonald's had advertising posters, a TV ad and some social media screenshots. But the court said the evidence didn't show the extent of the mark's use for chicken sandwiches: how much, how often, how regularly. So that part was revoked, along with poultry foods. For restaurant services, the court said using Big Mac for a meat sandwich can't prove use for running restaurants. So that part went too. But the burger side survived. Protection for meat sandwiches, and related sandwich and meat food categories, stayed in place. So this wasn't McDonald's losing the Big Mac. It was a lesson in use it or lose it, one category at a time. [loop] So before you register a trademark for everything under the sun, remember",
+ "script": "McDonald's lost the Big Mac name for chicken sandwiches in Europe. To a tiny Irish chain. [disclaimer] Yes, really! This is a top European court, in twenty twenty four. In Europe, if you register a trademark and then don't really use it for five years, you can lose it. Use it or lose it! And McDonald's Big Mac registration covered way more than burgers. It also listed chicken sandwiches, chicken foods, and even running restaurants. So a challenge was brought, and the court looked at the proof from twenty twelve to twenty seventeen. For chicken sandwiches, McDonald's had some posters, a TV ad, and a few social media screenshots. That's it! And the court said that doesn't show how much, how often, or how regularly the name was really used on chicken sandwiches. So the chicken part? Gone! Same with the chicken foods. And for running restaurants, the court said using Big Mac for a beef sandwich doesn't prove you use it for restaurants. So that part went too! But the burger survived. The protection for meat sandwiches and related foods stayed. So McDonald's did not lose the Big Mac. It was a lesson in use it or lose it, one category at a time. [loop] So before you register a trademark for everything under the sun, remember",
  "publish_at": "2026-11-27T12:00:00-05:00",
  "sources": [
   "https://www.euipo.europa.eu/cs/law/recent-case-law/big-mac-is-used-for-burgers-not-restaurants"
@@ -42,7 +42,7 @@
    ]
   },
   {
-   "at": "this is the european union's",
+   "at": "this is a top european",
    "bg": "white",
    "cast": [
     {
@@ -58,7 +58,7 @@
    ]
   },
   {
-   "at": "in the eu a registered",
+   "at": "in europe if you register",
    "bg": "white",
    "cast": [
     {
@@ -66,10 +66,10 @@
     }
    ],
    "card": "USE IT OR LOSE IT",
-   "card_at": "genuinely used"
+   "card_at": "in europe if you register"
   },
   {
-   "at": "mcdonald's big mac registration",
+   "at": "and mcdonald's big mac",
    "bg": "white",
    "cast": [
     {
@@ -85,7 +85,7 @@
    ]
   },
   {
-   "at": "a challenge was brought",
+   "at": "so a challenge was brought",
    "bg": "bg-courtroom",
    "cast": [
     {
@@ -98,7 +98,7 @@
     }
    ],
    "card": "EVIDENCE: 2012–2017",
-   "card_at": "looked at the evidence"
+   "card_at": "so a challenge was brought"
   },
   {
    "at": "for chicken sandwiches",
@@ -117,7 +117,7 @@
    ]
   },
   {
-   "at": "but the court said",
+   "at": "and the court said that",
    "bg": "bg-courtroom",
    "cast": [
     {
@@ -130,17 +130,17 @@
     }
    ],
    "card": "CHICKEN: REVOKED",
-   "card_at": "that part was revoked",
+   "card_at": "and the court said that",
    "zooms": [
     {
-     "at": "that part was revoked",
+     "at": "and the court said that",
      "amount": 1.18,
      "hold": 0.9
     }
    ]
   },
   {
-   "at": "for restaurant services",
+   "at": "and for running restaurants",
    "bg": "white",
    "cast": [
     {
@@ -156,7 +156,7 @@
    ]
   },
   {
-   "at": "but the burger side survived",
+   "at": "but the burger survived",
    "bg": "bg-shop",
    "cast": [
     {
@@ -165,10 +165,10 @@
     }
    ],
    "card": "MEAT SANDWICHES: KEPT",
-   "card_at": "burger side survived"
+   "card_at": "but the burger survived"
   },
   {
-   "at": "so this wasn't mcdonald's",
+   "at": "so mcdonald's did not lose",
    "bg": "white",
    "cast": [
     {
@@ -201,5 +201,6 @@
  "music_vibe": "quirky",
  "share_line": "Send this to the friend who'd go to war with McDonald's over a burger",
  "hook_old": "BIG MAC… PARTLY LOST?",
- "script_old": "Even McDonald's can lose trademark protection when it can't prove the right kind of use. This is the European Union's General Court, in June twenty twenty-four. In the EU, a registered trademark can be revoked for goods or services where it hasn't been genuinely used over a five-year period. McDonald's Big Mac registration covered more than burgers. It also listed things like chicken sandwiches, foods made from poultry, and services for operating restaurants. A challenge was brought, and the court looked at the evidence from twenty twelve to twenty seventeen. For chicken sandwiches, McDonald's had advertising posters, a TV ad and some social media screenshots. But the court said the evidence didn't show the extent of the mark's use for chicken sandwiches: how much, how often, how regularly. So that part was revoked, along with poultry foods. For restaurant services, the court said using Big Mac for a meat sandwich can't prove use for running restaurants. So that part went too. But the burger side survived. Protection for meat sandwiches, and related sandwich and meat food categories, stayed in place. So this wasn't McDonald's losing the Big Mac. It was a lesson in use it or lose it, one category at a time. [loop] So before you register a trademark for everything under the sun, remember"
+ "script_old": "Even McDonald's can lose trademark protection when it can't prove the right kind of use. This is the European Union's General Court, in June twenty twenty-four. In the EU, a registered trademark can be revoked for goods or services where it hasn't been genuinely used over a five-year period. McDonald's Big Mac registration covered more than burgers. It also listed things like chicken sandwiches, foods made from poultry, and services for operating restaurants. A challenge was brought, and the court looked at the evidence from twenty twelve to twenty seventeen. For chicken sandwiches, McDonald's had advertising posters, a TV ad and some social media screenshots. But the court said the evidence didn't show the extent of the mark's use for chicken sandwiches: how much, how often, how regularly. So that part was revoked, along with poultry foods. For restaurant services, the court said using Big Mac for a meat sandwich can't prove use for running restaurants. So that part went too. But the burger side survived. Protection for meat sandwiches, and related sandwich and meat food categories, stayed in place. So this wasn't McDonald's losing the Big Mac. It was a lesson in use it or lose it, one category at a time. [loop] So before you register a trademark for everything under the sun, remember",
+ "script_simple": true
 }

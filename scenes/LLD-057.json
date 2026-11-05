@@ -1,7 +1,7 @@
 {
  "video_id": "LLD-057",
  "episode": "E57",
- "hook": "BINDING… STILL IN THE MAIL",
+ "hook": "LOCKED IN… BY MAIL",
  "highlight": [
   "sent",
   "acceptance",
@@ -17,7 +17,7 @@
   "#lawtok",
   "#didyouknow"
  ],
- "script": "Your contract can be binding while your yes is still in the mail. [disclaimer] It's called the mailbox rule, a default rule of contract law in the United States. Under it, an acceptance sent by an authorized method takes effect when it's sent, not when it arrives. The Restatement of Contracts says it counts once it's out of your hands. Picture a hypothetical. Someone offers to sell you a piece of equipment, and you mail back your acceptance on Monday. On Tuesday, before your letter arrives, they change their mind and try to withdraw the offer. Under the mailbox rule, there may already be a contract, because your acceptance took effect when you sent it. So the person who made the offer carries the risk of a slow delivery. Here's where it gets complicated. The rule only applies if the offer doesn't say otherwise, and an offer can require that acceptance actually be received. Option contracts, where someone has paid to keep an offer open, generally need the acceptance to be received, though some states treat that differently. The rule has been applied to things like email, but electronic messages raise their own questions, and the details vary by state. So don't assume hitting send always creates a contract. [loop] So before you drop your acceptance in the mailbox, remember",
+ "script": "You can be legally locked into a contract before the other person even reads your answer. [disclaimer] It's called the mailbox rule! It's a basic rule of contract law in America. When you accept an offer, and you send your yes the right way, it counts the second you send it. Not when it shows up! The moment it leaves your hands, it's done. So picture this. Someone offers to sell you a machine, and on Monday, you mail back, yes, deal! On Tuesday, before your letter even gets there, they change their mind and try to take back the offer. Too late! Under the mailbox rule, you may already have a deal, because your yes counted when you sent it. So the person who made the offer takes the risk of slow mail. But here's where it gets messy. The rule only works if the offer doesn't say otherwise. The offer can say, your yes only counts when I actually get it. And option deals, where someone paid to keep an offer open, usually need the yes to actually arrive. Though some states see that differently. Courts have used this rule for things like email, but electronic messages raise their own questions, and the details change from state to state. So don't assume hitting send always makes a contract. [loop] So before you drop your acceptance in the mailbox, remember",
  "publish_at": "2026-11-29T19:00:00-05:00",
  "sources": [
   "https://www.law.cornell.edu/wex/mailbox_rule"
@@ -58,7 +58,7 @@
    ]
   },
   {
-   "at": "under it an acceptance",
+   "at": "when you accept an offer",
    "bg": "white",
    "cast": [
     {
@@ -66,17 +66,17 @@
     }
    ],
    "card": "EFFECTIVE WHEN SENT",
-   "card_at": "when it's sent",
+   "card_at": "when you accept an offer",
    "zooms": [
     {
-     "at": "when it's sent",
+     "at": "when you accept an offer",
      "amount": 1.18,
      "hold": 0.9
     }
    ]
   },
   {
-   "at": "the restatement of contracts",
+   "at": "the moment it leaves",
    "bg": "white",
    "cast": [
     {
@@ -92,7 +92,7 @@
    ]
   },
   {
-   "at": "picture a hypothetical",
+   "at": "so picture this",
    "bg": "bg-neighborhood",
    "cast": [
     {
@@ -105,10 +105,10 @@
     }
    ],
    "card": "HYPOTHETICAL",
-   "card_at": "picture a hypothetical"
+   "card_at": "so picture this"
   },
   {
-   "at": "on tuesday before",
+   "at": "on tuesday before your letter",
    "bg": "bg-neighborhood",
    "cast": [
     {
@@ -117,7 +117,7 @@
     }
    ],
    "card": "TOO LATE TO WITHDRAW?",
-   "card_at": "withdraw the offer"
+   "card_at": "on tuesday before your letter"
   },
   {
    "at": "so the person who made",
@@ -136,7 +136,7 @@
    ]
   },
   {
-   "at": "here's where it gets",
+   "at": "but here's where it gets",
    "bg": "white",
    "cast": [
     {
@@ -152,7 +152,7 @@
    ]
   },
   {
-   "at": "option contracts",
+   "at": "and option deals",
    "bg": "white",
    "cast": [
     {
@@ -168,7 +168,7 @@
    ]
   },
   {
-   "at": "the rule has been applied",
+   "at": "courts have used this rule",
    "bg": "white",
    "cast": [
     {
@@ -201,5 +201,6 @@
  "music_vibe": "quirky",
  "share_line": "Send this to the friend who leaves you on read for a week",
  "hook_old": "BINDING… WHILE STILL IN THE MAIL?",
- "script_old": "A contract can become binding before the other side even receives your yes. It's called the mailbox rule, a default rule of contract law in the United States. Under it, an acceptance sent by an authorized method takes effect when it's sent, not when it arrives. The Restatement of Contracts says it counts once it's out of your hands. Picture a hypothetical. Someone offers to sell you a piece of equipment, and you mail back your acceptance on Monday. On Tuesday, before your letter arrives, they change their mind and try to withdraw the offer. Under the mailbox rule, there may already be a contract, because your acceptance took effect when you sent it. So the person who made the offer carries the risk of a slow delivery. Here's where it gets complicated. The rule only applies if the offer doesn't say otherwise, and an offer can require that acceptance actually be received. Option contracts, where someone has paid to keep an offer open, generally need the acceptance to be received, though some states treat that differently. The rule has been applied to things like email, but electronic messages raise their own questions, and the details vary by state. So don't assume hitting send always creates a contract. [loop] So before you drop your acceptance in the mailbox, remember"
+ "script_old": "A contract can become binding before the other side even receives your yes. It's called the mailbox rule, a default rule of contract law in the United States. Under it, an acceptance sent by an authorized method takes effect when it's sent, not when it arrives. The Restatement of Contracts says it counts once it's out of your hands. Picture a hypothetical. Someone offers to sell you a piece of equipment, and you mail back your acceptance on Monday. On Tuesday, before your letter arrives, they change their mind and try to withdraw the offer. Under the mailbox rule, there may already be a contract, because your acceptance took effect when you sent it. So the person who made the offer carries the risk of a slow delivery. Here's where it gets complicated. The rule only applies if the offer doesn't say otherwise, and an offer can require that acceptance actually be received. Option contracts, where someone has paid to keep an offer open, generally need the acceptance to be received, though some states treat that differently. The rule has been applied to things like email, but electronic messages raise their own questions, and the details vary by state. So don't assume hitting send always creates a contract. [loop] So before you drop your acceptance in the mailbox, remember",
+ "script_simple": true
 }

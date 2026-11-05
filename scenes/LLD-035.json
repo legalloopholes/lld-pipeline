@@ -1,7 +1,7 @@
 {
  "video_id": "LLD-035",
  "episode": "E35",
- "hook": "THE 'PAID IN FULL' TRAP",
+ "hook": "THE 'PAID IN FULL' TRICK",
  "highlight": [
   "dispute",
   "conspicuous",
@@ -17,7 +17,7 @@
   "#lawtok",
   "#smallbusiness"
  ],
- "script": "Cash one check, and you could wipe out the rest of a disputed bill. [disclaimer] This comes from the Uniform Commercial Code, section three-three-eleven. Nebraska's version is a good example. It's called accord and satisfaction. Here's how it works. First, there has to be a genuine dispute about the amount owed, or an amount that isn't fixed. Second, the person paying offers a check in good faith, as full satisfaction of the claim. Third, the check, or a letter with it, has to clearly and conspicuously say it's offered as full payment. And fourth, the person who's owed money cashes it. Then the claim can be discharged. Picture a hypothetical. A contractor bills two thousand dollars. The customer honestly disputes the work, and sends a check for fifteen hundred, clearly marked as payment in full. If the contractor cashes it, the dispute may be over. But writing payment in full isn't magic. If there's no real dispute, and you simply owe the bill, it doesn't work. Companies can designate a special address for these checks, and if yours doesn't go there, the discharge may fail. And a creditor who cashes it can often undo the effect by paying the money back within ninety days. [loop] So before you cash that check marked payment in full, remember",
+ "script": "Write payment in full on a check, and you might wipe out the rest of a bill you're fighting. [disclaimer] It's a real rule in American business law, and Nebraska's version is a good example. It's called accord and satisfaction. Fancy name, simple idea! Here's how it works. There has to be a real fight about how much is owed. Then the person paying sends a check in good faith as full payment. The check, or a note with it, has to clearly say it's payment in full. And then the person who's owed money cashes it. Boom. The rest of the bill can be wiped out! Picture this. A contractor bills you two thousand dollars. You honestly think the work was bad, so you send a check for fifteen hundred, clearly marked payment in full. If the contractor cashes it, the fight may be over! But writing payment in full isn't magic. If there's no real fight, and you just owe the bill, it doesn't work. Companies can set up a special address for these checks, and if yours doesn't go there, it may not count. And a company that cashes it can often undo it by paying the money back within ninety days. [loop] So before you cash that check marked payment in full, remember",
  "publish_at": "2026-11-18T19:00:00-05:00",
  "sources": [
   "https://nebraskalegislature.gov/laws/ucc.php?code=3-311"
@@ -42,7 +42,7 @@
    ]
   },
   {
-   "at": "this comes from the uniform",
+   "at": "it's a real rule",
    "bg": "white",
    "cast": [
     {
@@ -66,10 +66,10 @@
     }
    ],
    "card": "ACCORD & SATISFACTION",
-   "card_at": "accord and satisfaction"
+   "card_at": "it's called accord"
   },
   {
-   "at": "first there has to be",
+   "at": "there has to be",
    "bg": "white",
    "cast": [
     {
@@ -85,7 +85,7 @@
    ]
   },
   {
-   "at": "second the person paying",
+   "at": "then the person paying",
    "bg": "white",
    "cast": [
     {
@@ -101,7 +101,7 @@
    ]
   },
   {
-   "at": "third the check",
+   "at": "the check or a note",
    "bg": "white",
    "cast": [
     {
@@ -117,7 +117,7 @@
    ]
   },
   {
-   "at": "and fourth the person",
+   "at": "and then the person",
    "bg": "white",
    "cast": [
     {
@@ -133,14 +133,14 @@
    ],
    "zooms": [
     {
-     "at": "discharged",
+     "at": "and then the person",
      "amount": 1.18,
      "hold": 0.9
     }
    ]
   },
   {
-   "at": "picture a hypothetical",
+   "at": "picture this",
    "bg": "bg-office",
    "cast": [
     {
@@ -153,7 +153,7 @@
     }
    ],
    "card": "HYPOTHETICAL",
-   "card_at": "picture a hypothetical"
+   "card_at": "picture this"
   },
   {
    "at": "but writing payment in full",
@@ -172,7 +172,7 @@
    ]
   },
   {
-   "at": "companies can designate",
+   "at": "companies can set up",
    "bg": "bg-office",
    "cast": [
     {
@@ -189,7 +189,7 @@
    ]
   },
   {
-   "at": "and a creditor who cashes",
+   "at": "and a company that cashes",
    "bg": "white",
    "cast": [
     {
@@ -197,7 +197,7 @@
     }
    ],
    "card": "90 DAYS TO UNDO",
-   "card_at": "within ninety days"
+   "card_at": "and a company that cashes"
   },
   {
    "at": "send this to",
@@ -217,5 +217,6 @@
  "music_vibe": "upbeat",
  "share_line": "Send this to the friend who still owes you for dinner from three years ago",
  "hook_old": "THE 'PAID IN FULL' CHECK",
- "script_old": "Cashing a check can sometimes settle a disputed bill, even when the check is for less. This comes from the Uniform Commercial Code, section three-three-eleven. Nebraska's version is a good example. It's called accord and satisfaction. Here's how it works. First, there has to be a genuine dispute about the amount owed, or an amount that isn't fixed. Second, the person paying offers a check in good faith, as full satisfaction of the claim. Third, the check, or a letter with it, has to clearly and conspicuously say it's offered as full payment. And fourth, the person who's owed money cashes it. Then the claim can be discharged. Picture a hypothetical. A contractor bills two thousand dollars. The customer honestly disputes the work, and sends a check for fifteen hundred, clearly marked as payment in full. If the contractor cashes it, the dispute may be over. But writing payment in full isn't magic. If there's no real dispute, and you simply owe the bill, it doesn't work. Companies can designate a special address for these checks, and if yours doesn't go there, the discharge may fail. And a creditor who cashes it can often undo the effect by paying the money back within ninety days. [loop] So before you cash that check marked payment in full, remember"
+ "script_old": "Cashing a check can sometimes settle a disputed bill, even when the check is for less. This comes from the Uniform Commercial Code, section three-three-eleven. Nebraska's version is a good example. It's called accord and satisfaction. Here's how it works. First, there has to be a genuine dispute about the amount owed, or an amount that isn't fixed. Second, the person paying offers a check in good faith, as full satisfaction of the claim. Third, the check, or a letter with it, has to clearly and conspicuously say it's offered as full payment. And fourth, the person who's owed money cashes it. Then the claim can be discharged. Picture a hypothetical. A contractor bills two thousand dollars. The customer honestly disputes the work, and sends a check for fifteen hundred, clearly marked as payment in full. If the contractor cashes it, the dispute may be over. But writing payment in full isn't magic. If there's no real dispute, and you simply owe the bill, it doesn't work. Companies can designate a special address for these checks, and if yours doesn't go there, the discharge may fail. And a creditor who cashes it can often undo the effect by paying the money back within ninety days. [loop] So before you cash that check marked payment in full, remember",
+ "script_simple": true
 }

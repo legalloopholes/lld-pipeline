@@ -1,7 +1,7 @@
 {
  "video_id": "LLD-038",
  "episode": "E38",
- "hook": "NOT TOWED YET",
+ "hook": "THEY HAVE TO GIVE IT BACK",
  "highlight": [
   "release",
   "property",
@@ -17,7 +17,7 @@
   "#lawtok",
   "#consumerrights"
  ],
- "script": "Your car is already on the tow truck, and in California, it may not be too late. [disclaimer] This is a California Vehicle Code rule for tows from private property, like a store parking lot. Under the law, if the owner, or someone they've authorized, shows up and asks, the tow company has to immediately and unconditionally release a vehicle that hasn't yet been removed from the private property and is in transit. So the key moment is the property line. While the car is still on the lot, even if it's already hooked up or lifted, the owner can demand it back. But there can be a fee. If the truck has already hooked or lifted the car, the company can charge up to half its regular towing charge. The full charge starts once it's left the property. And once it's released, the owner has to immediately move it to a lawful location. Here's the limit. This is about private-property tows under this section. It's not a rule for police impounds, and it doesn't help once the car has already left the lot. And the best plan is still to just park legally. [loop] So the next time a tow truck backs up to your car, remember",
+ "script": "In California, if your car is hooked to a tow truck but still in the lot, they have to give it back. [disclaimer] This is a California rule for tows from private property, like a store parking lot. Here's the deal. If you, the owner, show up and ask for your car back, and the truck hasn't left the property yet, the tow company has to give it back. Right away. No arguing! So the magic moment is the edge of the property. As long as your car is still on that lot, even if it's already hooked up, or even lifted off the ground, you can demand it back. Get it back! But it might cost you something. If the truck already hooked or lifted your car, the company can charge you up to half its normal towing price. Still better than the full price! The full charge kicks in once the car leaves the property. And once they let it go, you have to move it right away to a legal spot. Don't park it there again! Here's the limit. This is only about tows from private property under this law. It's not about police tows. And it won't help once your car is already gone down the street. And honestly, the best plan is still to just park legally. [loop] So the next time a tow truck backs up to your car, remember",
  "publish_at": "2026-11-20T12:00:00-05:00",
  "sources": [
   "https://codes.findlaw.com/ca/vehicle-code/veh-sect-22658/"
@@ -42,7 +42,7 @@
    ]
   },
   {
-   "at": "this is a california vehicle",
+   "at": "this is a california rule",
    "bg": "white",
    "cast": [
     {
@@ -58,7 +58,7 @@
    ]
   },
   {
-   "at": "under the law if the owner",
+   "at": "here's the deal",
    "bg": "bg-street",
    "cast": [
     {
@@ -67,17 +67,17 @@
     }
    ],
    "card": "RELEASE IT — IMMEDIATELY",
-   "card_at": "immediately and unconditionally",
+   "card_at": "here's the deal",
    "zooms": [
     {
-     "at": "unconditionally",
+     "at": "here's the deal",
      "amount": 1.18,
      "hold": 0.9
     }
    ]
   },
   {
-   "at": "so the key moment",
+   "at": "so the magic moment",
    "bg": "bg-street",
    "cast": [
     {
@@ -86,10 +86,10 @@
     }
    ],
    "card": "THE PROPERTY LINE",
-   "card_at": "property line"
+   "card_at": "so the magic moment"
   },
   {
-   "at": "but there can be a fee",
+   "at": "but it might cost",
    "bg": "white",
    "cast": [
     {
@@ -105,7 +105,7 @@
    ]
   },
   {
-   "at": "the full charge",
+   "at": "the full charge kicks",
    "bg": "white",
    "cast": [
     {
@@ -121,7 +121,7 @@
    ]
   },
   {
-   "at": "and once it's released",
+   "at": "and once they let it",
    "bg": "bg-street",
    "cast": [
     {
@@ -154,7 +154,7 @@
    ]
   },
   {
-   "at": "and the best plan",
+   "at": "and honestly the best plan",
    "bg": "bg-street",
    "cast": [
     {
@@ -163,7 +163,7 @@
     }
    ],
    "card": "JUST PARK LEGALLY",
-   "card_at": "park legally"
+   "card_at": "and honestly the best plan"
   },
   {
    "at": "send this to",
@@ -175,7 +175,7 @@
    ]
   },
   {
-   "at": "so the next time a tow truck",
+   "at": "so the next time",
    "bg": "bg-street",
    "loop": true
   }
@@ -183,5 +183,6 @@
  "music_vibe": "quirky",
  "share_line": "Send this to the friend whose car gets towed every single weekend",
  "hook_old": "HOOKED UP… NOT GONE YET",
- "script_old": "Your car is already hooked up to a tow truck, but in California, that may still be early enough to get it released. This is a California Vehicle Code rule for tows from private property, like a store parking lot. Under the law, if the owner, or someone they've authorized, shows up and asks, the tow company has to immediately and unconditionally release a vehicle that hasn't yet been removed from the private property and is in transit. So the key moment is the property line. While the car is still on the lot, even if it's already hooked up or lifted, the owner can demand it back. But there can be a fee. If the truck has already hooked or lifted the car, the company can charge up to half its regular towing charge. The full charge starts once it's left the property. And once it's released, the owner has to immediately move it to a lawful location. Here's the limit. This is about private-property tows under this section. It's not a rule for police impounds, and it doesn't help once the car has already left the lot. And the best plan is still to just park legally. [loop] So the next time a tow truck backs up to your car, remember"
+ "script_old": "Your car is already hooked up to a tow truck, but in California, that may still be early enough to get it released. This is a California Vehicle Code rule for tows from private property, like a store parking lot. Under the law, if the owner, or someone they've authorized, shows up and asks, the tow company has to immediately and unconditionally release a vehicle that hasn't yet been removed from the private property and is in transit. So the key moment is the property line. While the car is still on the lot, even if it's already hooked up or lifted, the owner can demand it back. But there can be a fee. If the truck has already hooked or lifted the car, the company can charge up to half its regular towing charge. The full charge starts once it's left the property. And once it's released, the owner has to immediately move it to a lawful location. Here's the limit. This is about private-property tows under this section. It's not a rule for police impounds, and it doesn't help once the car has already left the lot. And the best plan is still to just park legally. [loop] So the next time a tow truck backs up to your car, remember",
+ "script_simple": true
 }

@@ -17,7 +17,7 @@
   "#vat",
   "#lawtok"
  ],
- "script": "Ireland's Supreme Court ruled that Subway's bread isn't legally bread, at least for tax. [disclaimer] Here's the background. In Ireland, bread can qualify for a zero rate of VAT. But the tax law defines bread narrowly. Ingredients like sugar and fat can't be more than two percent of the weight of the flour. A Subway franchisee, a company called Bookfinders, wanted VAT refunds from two thousand four and two thousand five, on bread, hot sandwiches, tea and coffee. The tax office said no. The company lost at every level: the appeal commissioner, the High Court, the Court of Appeal, and finally the Supreme Court, in September twenty twenty. The key fact? Subway's recipe called for sugar at about ten percent of the flour's weight. That's five times the limit. And the court said that if even one ingredient goes over its limit, the product falls outside the legal definition of bread. It added that tax exemptions are read strictly. The argument about the hot sandwiches failed too, because it depended on the bread qualifying. So the headlines said Subway bread isn't bread. More precisely, this recipe didn't fit Ireland's VAT definition of bread. The court didn't ban the bread, and it wasn't ruling on baking. [loop] So the next time you order a sandwich in Ireland, remember",
+ "script": "A Supreme Court officially ruled that Subway bread has too much sugar to legally be bread. [disclaimer] Yes, really! Here's the background. In Ireland, real bread gets a special zero percent tax. But the law is super picky about what counts as bread. Stuff like sugar and fat can't be more than two percent of the weight of the flour. A Subway franchise owner wanted a tax refund from two thousand four and two thousand five, for its bread, hot sandwiches, tea and coffee. The tax office said no. So the company fought it. And lost. Then lost again. And again. All the way up to the Supreme Court, in twenty twenty. So what was the problem? The sugar! Subway's recipe had sugar at about ten percent of the flour's weight. That's five times the limit! And the court said if even one ingredient goes over, it's not bread under the law. Tax breaks are read strictly. Period. And the hot sandwich argument? It failed too, because it needed the bread to count first. So the headlines screamed, Subway bread isn't bread! More exactly, this recipe didn't fit Ireland's tax definition of bread. Nobody banned the bread. The refund was just denied. [loop] So the next time you order a sandwich in Ireland, remember",
  "publish_at": "2026-11-08T19:00:00-05:00",
  "sources": [
   "https://www.bailii.org/ie/cases/IESC/2020/2020IESC60.html",
@@ -60,7 +60,7 @@
    ]
   },
   {
-   "at": "but the tax law defines",
+   "at": "but the law is",
    "bg": "white",
    "cast": [
     {
@@ -76,7 +76,7 @@
    ]
   },
   {
-   "at": "a subway franchisee",
+   "at": "a subway franchise owner",
    "bg": "bg-office",
    "cast": [
     {
@@ -93,7 +93,7 @@
    ]
   },
   {
-   "at": "the tax office said no",
+   "at": "the tax office said",
    "bg": "bg-courtroom",
    "cast": [
     {
@@ -106,10 +106,10 @@
     }
    ],
    "card": "LOST AT EVERY LEVEL",
-   "card_at": "lost at every level"
+   "card_at": "the tax office said"
   },
   {
-   "at": "the key fact",
+   "at": "so what was the problem",
    "bg": "white",
    "cast": [
     {
@@ -117,10 +117,10 @@
     }
    ],
    "card": "SUGAR ≈ 10% OF FLOUR",
-   "card_at": "about ten percent",
+   "card_at": "so what was the problem",
    "zooms": [
     {
-     "at": "five times the limit",
+     "at": "so what was the problem",
      "amount": 1.18,
      "hold": 0.9
     }
@@ -140,10 +140,10 @@
     }
    ],
    "card": "ONE INGREDIENT OVER = NOT BREAD",
-   "card_at": "falls outside"
+   "card_at": "and the court said"
   },
   {
-   "at": "the argument about the hot",
+   "at": "and the hot sandwich",
    "bg": "bg-shop",
    "cast": [
     {
@@ -160,7 +160,7 @@
    ]
   },
   {
-   "at": "so the headlines said",
+   "at": "so the headlines screamed",
    "bg": "white",
    "cast": [
     {
@@ -176,7 +176,7 @@
    ]
   },
   {
-   "at": "more precisely",
+   "at": "more exactly",
    "bg": "white",
    "cast": [
     {
@@ -201,7 +201,7 @@
    ]
   },
   {
-   "at": "so the next time you order",
+   "at": "so the next time",
    "bg": "bg-shop",
    "loop": true
   }
@@ -209,5 +209,6 @@
  "music_vibe": "quirky",
  "share_line": "Send this to the friend who thinks a footlong counts as a vegetable",
  "hook_old": "NOT LEGALLY BREAD?",
- "script_old": "Ireland's Supreme Court said this Subway bread didn't count as bread, at least for one tax rule. Here's the background. In Ireland, bread can qualify for a zero rate of VAT. But the tax law defines bread narrowly. Ingredients like sugar and fat can't be more than two percent of the weight of the flour. A Subway franchisee, a company called Bookfinders, wanted VAT refunds from two thousand four and two thousand five, on bread, hot sandwiches, tea and coffee. The tax office said no. The company lost at every level: the appeal commissioner, the High Court, the Court of Appeal, and finally the Supreme Court, in September twenty twenty. The key fact? Subway's recipe called for sugar at about ten percent of the flour's weight. That's five times the limit. And the court said that if even one ingredient goes over its limit, the product falls outside the legal definition of bread. It added that tax exemptions are read strictly. The argument about the hot sandwiches failed too, because it depended on the bread qualifying. So the headlines said Subway bread isn't bread. More precisely, this recipe didn't fit Ireland's VAT definition of bread. The court didn't ban the bread, and it wasn't ruling on baking. [loop] So the next time you order a sandwich in Ireland, remember"
+ "script_old": "Ireland's Supreme Court said this Subway bread didn't count as bread, at least for one tax rule. Here's the background. In Ireland, bread can qualify for a zero rate of VAT. But the tax law defines bread narrowly. Ingredients like sugar and fat can't be more than two percent of the weight of the flour. A Subway franchisee, a company called Bookfinders, wanted VAT refunds from two thousand four and two thousand five, on bread, hot sandwiches, tea and coffee. The tax office said no. The company lost at every level: the appeal commissioner, the High Court, the Court of Appeal, and finally the Supreme Court, in September twenty twenty. The key fact? Subway's recipe called for sugar at about ten percent of the flour's weight. That's five times the limit. And the court said that if even one ingredient goes over its limit, the product falls outside the legal definition of bread. It added that tax exemptions are read strictly. The argument about the hot sandwiches failed too, because it depended on the bread qualifying. So the headlines said Subway bread isn't bread. More precisely, this recipe didn't fit Ireland's VAT definition of bread. The court didn't ban the bread, and it wasn't ruling on baking. [loop] So the next time you order a sandwich in Ireland, remember",
+ "script_simple": true
 }

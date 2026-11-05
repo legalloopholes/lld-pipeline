@@ -1,7 +1,7 @@
 {
  "video_id": "LLD-007",
  "episode": "E07",
- "hook": "THE BIBLE THEY CAN'T TAKE?",
+ "hook": "THE MILLION-DOLLAR BIBLE?",
  "highlight": [
   "religious",
   "exempt",
@@ -17,7 +17,7 @@
   "#lawtok",
   "#didyouknow"
  ],
- "script": "A debt collector can take your cash. But your Bible? [disclaimer] In New York, the wording of the law makes that a real question. When someone loses a lawsuit and owes money, the winner can try to collect from their property. But New York's civil practice law protects certain things from being taken. Cash and bank accounts? Only a limited amount. Ordinary books? Up to five hundred dollars' worth. But in that same line, the law separately lists religious texts, family pictures and school books used by the debtor or the family. And for those, it doesn't state a dollar limit. So on paper, a religious text the family uses sits in its own protected category. Which raises the obvious question: what if that book is a priceless antique? Here's the honest answer. Don't treat this as a court-approved strategy. It's a quirk in the wording. The book has to actually be used by the debtor or the family. The protection doesn't apply if the debt is for the price of the book itself. And moving money into assets to dodge creditors can run into fraudulent transfer laws and bankruptcy rules. [loop] So before you go shopping for the world's most expensive Bible, remember",
+ "script": "In New York, you could owe someone a fortune, and they still might not be able to touch your million dollar Bible. [disclaimer] In New York, the wording of the law makes that a real question! Here's how it works. If you lose a lawsuit and owe money, the winner can go after your stuff. But New York says some stuff is off limits. They can't take everything. Cash and bank accounts? Only a small amount is protected. Ordinary books? Up to five hundred dollars' worth. Okay, normal. But then, right in that same line, the law lists religious books, family pictures, and school books. And for those? It doesn't give a dollar limit at all. None! So on paper, the family Bible sits in its own protected group. Which makes you wonder. What if that Bible is a super rare antique worth a fortune? Here's the honest answer. Nobody has proven this works in court. It's just a weird gap in the wording. And there are big catches. The book has to actually be used by you or your family. It doesn't count if the debt is for the book itself. And if you dump your money into a fancy Bible just to hide it from the people you owe, you can run into fraud rules and bankruptcy rules. That's a whole new problem! [loop] So before you go shopping for the world's most expensive Bible, remember",
  "publish_at": "2026-11-04T19:00:00-05:00",
  "sources": [
   "https://www.nysenate.gov/legislation/laws/CVP/5205"
@@ -58,7 +58,7 @@
    ]
   },
   {
-   "at": "when someone loses",
+   "at": "if you lose a lawsuit",
    "bg": "bg-courtroom",
    "cast": [
     {
@@ -71,10 +71,10 @@
     }
    ],
    "card": "PAY UP",
-   "card_at": "owes money"
+   "card_at": "if you lose a lawsuit"
   },
   {
-   "at": "but new york's civil",
+   "at": "but new york says",
    "bg": "bg-office",
    "cast": [
     {
@@ -125,7 +125,7 @@
    ]
   },
   {
-   "at": "but in that same line",
+   "at": "but then right in",
    "bg": "white",
    "cast": [
     {
@@ -141,14 +141,14 @@
    ],
    "zooms": [
     {
-     "at": "doesn't state a dollar limit",
+     "at": "but then right in",
      "amount": 1.18,
      "hold": 0.9
     }
    ]
   },
   {
-   "at": "which raises the obvious",
+   "at": "which makes you wonder",
    "bg": "white",
    "cast": [
     {
@@ -156,7 +156,7 @@
     }
    ],
    "card": "A PRICELESS ANTIQUE?",
-   "card_at": "priceless antique"
+   "card_at": "which makes you wonder"
   },
   {
    "at": "here's the honest answer",
@@ -200,7 +200,7 @@
    ]
   },
   {
-   "at": "so before you go shopping",
+   "at": "so before you go",
    "bg": "bg-office",
    "loop": true
   }
@@ -208,5 +208,6 @@
  "music_vibe": "quirky",
  "share_line": "Send this to the friend who owes you money and thinks you forgot",
  "hook_old": "A BIBLE SAFER THAN CASH?",
- "script_old": "Could a rare Bible be harder for a creditor to take than your cash? In New York, the wording of the law makes that a real question. When someone loses a lawsuit and owes money, the winner can try to collect from their property. But New York's civil practice law protects certain things from being taken. Cash and bank accounts? Only a limited amount. Ordinary books? Up to five hundred dollars' worth. But in that same line, the law separately lists religious texts, family pictures and school books used by the debtor or the family. And for those, it doesn't state a dollar limit. So on paper, a religious text the family uses sits in its own protected category. Which raises the obvious question: what if that book is a priceless antique? Here's the honest answer. Don't treat this as a court-approved strategy. It's a quirk in the wording. The book has to actually be used by the debtor or the family. The protection doesn't apply if the debt is for the price of the book itself. And moving money into assets to dodge creditors can run into fraudulent transfer laws and bankruptcy rules. [loop] So before you go shopping for the world's most expensive Bible, remember"
+ "script_old": "Could a rare Bible be harder for a creditor to take than your cash? In New York, the wording of the law makes that a real question. When someone loses a lawsuit and owes money, the winner can try to collect from their property. But New York's civil practice law protects certain things from being taken. Cash and bank accounts? Only a limited amount. Ordinary books? Up to five hundred dollars' worth. But in that same line, the law separately lists religious texts, family pictures and school books used by the debtor or the family. And for those, it doesn't state a dollar limit. So on paper, a religious text the family uses sits in its own protected category. Which raises the obvious question: what if that book is a priceless antique? Here's the honest answer. Don't treat this as a court-approved strategy. It's a quirk in the wording. The book has to actually be used by the debtor or the family. The protection doesn't apply if the debt is for the price of the book itself. And moving money into assets to dodge creditors can run into fraudulent transfer laws and bankruptcy rules. [loop] So before you go shopping for the world's most expensive Bible, remember",
+ "script_simple": true
 }

@@ -17,7 +17,7 @@
   "#lawtok",
   "#court"
  ],
- "script": "Lose your California traffic case, and you might get a brand-new trial. [disclaimer] It starts with a trial by written declaration, where you contest a ticket by sending in your statement and evidence instead of going to court. If you lose, the California courts' own self-help guide says you may be able to ask for a trial de novo. That means a new trial, in the same court, with a different judge, where you can bring new witnesses and evidence. That's different from an appeal. An appeal goes to a higher court, involves no new evidence, and only checks for legal mistakes. Now the deadline. You have to file your request for a new trial within twenty calendar days of when the court mailed its decision. Under the California Rules of Court, if the request isn't on time, no new trial can be held. If it is, the clerk sets a trial date within forty-five days. But here's the big catch. If your court lets you use its online system, MyCitations, to ask for an online trial by declaration, you won't get a trial de novo, even if you file by mail or in person instead. So check your court's notice before you choose. [loop] So before you mail in your traffic defense, remember",
+ "script": "In California, you can lose your traffic case and then get a whole new trial with a new judge. [disclaimer] Here's how it works. In California, you can fight a ticket by mail. You send in your side of the story and your evidence, and you never have to go to court. It's called a trial by written declaration. And if you lose? The California courts' own guide says you may be able to ask for a brand new trial. In the same court, with a different judge, and you can bring new witnesses and new evidence. A whole second shot! And that's different from an appeal. An appeal goes to a higher court, there's no new evidence, and they only look for legal mistakes. Now the deadline. You have to ask for the new trial within twenty days of when the court mailed you its decision. And the court rules say, if you're late, there's no new trial. Period! If you're on time, the clerk sets a trial date within forty five days. But here's the big catch. If your court lets you fight the ticket online, through its online system, you won't get a new trial at all. Even if you mail it in instead! So check your court's notice before you pick. [loop] So before you mail in your traffic defense, remember",
  "publish_at": "2026-11-28T12:00:00-05:00",
  "sources": [
   "https://selfhelp.courts.ca.gov/traffic/trial-declaration",
@@ -43,7 +43,7 @@
    ]
   },
   {
-   "at": "it starts with a trial",
+   "at": "here's how it works",
    "bg": "white",
    "cast": [
     {
@@ -59,7 +59,7 @@
    ]
   },
   {
-   "at": "if you lose",
+   "at": "and if you lose",
    "bg": "bg-courtroom",
    "cast": [
     {
@@ -72,17 +72,17 @@
     }
    ],
    "card": "TRIAL DE NOVO",
-   "card_at": "trial de novo",
+   "card_at": "and if you lose",
    "zooms": [
     {
-     "at": "trial de novo",
+     "at": "and if you lose",
      "amount": 1.18,
      "hold": 0.9
     }
    ]
   },
   {
-   "at": "that means a new trial",
+   "at": "in the same court",
    "bg": "white",
    "cast": [
     {
@@ -98,7 +98,7 @@
    ]
   },
   {
-   "at": "that's different from an appeal",
+   "at": "and that's different from",
    "bg": "white",
    "cast": [
     {
@@ -122,10 +122,10 @@
     }
    ],
    "card": "20 CALENDAR DAYS",
-   "card_at": "twenty calendar days"
+   "card_at": "now the deadline"
   },
   {
-   "at": "under the california rules",
+   "at": "and the court rules say",
    "bg": "bg-courtroom",
    "cast": [
     {
@@ -138,7 +138,7 @@
     }
    ],
    "card": "LATE = NO NEW TRIAL",
-   "card_at": "no new trial"
+   "card_at": "and the court rules say"
   },
   {
    "at": "but here's the big catch",
@@ -166,7 +166,7 @@
     }
    ],
    "card": "CHECK YOUR COURT",
-   "card_at": "court's notice"
+   "card_at": "so check your court's notice"
   },
   {
    "at": "send this to",
@@ -178,7 +178,7 @@
    ]
   },
   {
-   "at": "so before you mail in",
+   "at": "so before you mail",
    "bg": "bg-street",
    "loop": true
   }
@@ -186,5 +186,6 @@
  "music_vibe": "quirky",
  "share_line": "Send this to the friend who'd fight a parking ticket to the death",
  "hook_old": "LOSE ON PAPER, TRY AGAIN?",
- "script_old": "You can lose some California traffic cases on paper, and still get a brand-new trial. It starts with a trial by written declaration, where you contest a ticket by sending in your statement and evidence instead of going to court. If you lose, the California courts' own self-help guide says you may be able to ask for a trial de novo. That means a new trial, in the same court, with a different judge, where you can bring new witnesses and evidence. That's different from an appeal. An appeal goes to a higher court, involves no new evidence, and only checks for legal mistakes. Now the deadline. You have to file your request for a new trial within twenty calendar days of when the court mailed its decision. Under the California Rules of Court, if the request isn't on time, no new trial can be held. If it is, the clerk sets a trial date within forty-five days. But here's the big catch. If your court lets you use its online system, MyCitations, to ask for an online trial by declaration, you won't get a trial de novo, even if you file by mail or in person instead. So check your court's notice before you choose. [loop] So before you mail in your traffic defense, remember"
+ "script_old": "You can lose some California traffic cases on paper, and still get a brand-new trial. It starts with a trial by written declaration, where you contest a ticket by sending in your statement and evidence instead of going to court. If you lose, the California courts' own self-help guide says you may be able to ask for a trial de novo. That means a new trial, in the same court, with a different judge, where you can bring new witnesses and evidence. That's different from an appeal. An appeal goes to a higher court, involves no new evidence, and only checks for legal mistakes. Now the deadline. You have to file your request for a new trial within twenty calendar days of when the court mailed its decision. Under the California Rules of Court, if the request isn't on time, no new trial can be held. If it is, the clerk sets a trial date within forty-five days. But here's the big catch. If your court lets you use its online system, MyCitations, to ask for an online trial by declaration, you won't get a trial de novo, even if you file by mail or in person instead. So check your court's notice before you choose. [loop] So before you mail in your traffic defense, remember",
+ "script_simple": true
 }

@@ -17,7 +17,7 @@
   "#lawtok",
   "#truestory"
  ],
- "script": "A group of players cracked a state lottery's math, and it was completely legal. [disclaimer] This was Massachusetts, and a game called Cash WinFall, which launched in two thousand four. Most lotteries let the jackpot grow and grow. Once the jackpot pool reached two million dollars and nobody hit the top prize, the money rolled down to the smaller prizes, for matching fewer numbers. On those roll-down draws, the smaller prizes got much bigger. Some players did the math. If you bought a huge number of tickets on exactly those draws, the expected return could be worth more than you spent. Expected, not guaranteed. A state review identified four betting groups making enormous purchases during roll-downs, including a group of MIT students. It found no evidence of illicit activity or collusion among the bettors. But it did find that some retailers broke rules to help the big players, sometimes with the okay of some lottery officials. The state treasurer later said those steps should have come much sooner. And Cash WinFall is gone. The state ended the game. Most lotteries aren't built like this, and buying more tickets doesn't beat a normal draw. [loop] So the next time someone tells you nobody can beat the lottery, remember",
+ "script": "A group of MIT students found a way to make a state lottery pay them. And it was legal. [disclaimer] This was Massachusetts, and a game called Cash WinFall. It started in two thousand four. Normally, a lottery jackpot just keeps growing until someone wins. But this game had a weird rule. Once the jackpot hit two million dollars and nobody won it, the money rolled down to the smaller prizes! On those special draws, the small prizes got way bigger. And some smart players did the math. If you bought a huge pile of tickets on exactly those days, you could expect to win back more than you spent. Expect. Not guaranteed! A state review found four big betting groups buying tickets like crazy on those days. One was a group of MIT students! And the review found no evidence that the players did anything illegal or teamed up to cheat. But it did find that some stores broke the rules to help the big players. Sometimes with the okay of lottery officials. Yikes! The state treasurer later said they should have stepped in much sooner. And the game? It's gone. The state shut it down. Most lotteries don't work like this, and buying more tickets won't beat a normal draw. [loop] So the next time someone tells you nobody can beat the lottery, remember",
  "publish_at": "2026-11-06T12:00:00-05:00",
  "sources": [
   "https://www.mass.gov/doc/letter-to-state-treasurer-steven-grossman-regarding-the-lottery-july-2012/download",
@@ -61,7 +61,7 @@
    ]
   },
   {
-   "at": "most lotteries let",
+   "at": "normally a lottery jackpot",
    "bg": "white",
    "cast": [
     {
@@ -77,7 +77,7 @@
    ]
   },
   {
-   "at": "once the jackpot pool",
+   "at": "once the jackpot hit",
    "bg": "white",
    "cast": [
     {
@@ -93,7 +93,7 @@
    ]
   },
   {
-   "at": "the smaller prizes got",
+   "at": "the small prizes got",
    "bg": "white",
    "cast": [
     {
@@ -101,10 +101,10 @@
     }
    ],
    "card": "SMALLER PRIZES GET BIGGER",
-   "card_at": "got much bigger"
+   "card_at": "the small prizes got"
   },
   {
-   "at": "some players did the math",
+   "at": "and some smart players",
    "bg": "bg-office",
    "cast": [
     {
@@ -121,7 +121,7 @@
    ]
   },
   {
-   "at": "expected not guaranteed",
+   "at": "expect not guaranteed",
    "bg": "white",
    "cast": [
     {
@@ -129,17 +129,17 @@
     }
    ],
    "card": "EXPECTED ≠ GUARANTEED",
-   "card_at": "expected not guaranteed",
+   "card_at": "expect not guaranteed",
    "zooms": [
     {
-     "at": "expected not guaranteed",
+     "at": "expect not guaranteed",
      "amount": 1.18,
      "hold": 0.9
     }
    ]
   },
   {
-   "at": "a state review identified",
+   "at": "a state review found",
    "bg": "bg-office",
    "cast": [
     {
@@ -156,7 +156,7 @@
    ]
   },
   {
-   "at": "it found no evidence",
+   "at": "and the review found",
    "bg": "bg-office",
    "cast": [
     {
@@ -165,7 +165,7 @@
     }
    ],
    "card": "NO EVIDENCE OF COLLUSION BY BETTORS",
-   "card_at": "no evidence"
+   "card_at": "and the review found"
   },
   {
    "at": "but it did find",
@@ -185,7 +185,7 @@
    ]
   },
   {
-   "at": "and cash winfall is gone",
+   "at": "and the game",
    "bg": "white",
    "cast": [
     {
@@ -210,7 +210,7 @@
    ]
   },
   {
-   "at": "so the next time someone tells",
+   "at": "so the next time",
    "bg": "bg-shop",
    "loop": true
   }
@@ -218,5 +218,6 @@
  "music_vibe": "upbeat",
  "share_line": "Send this to the friend who'd sell their soul for a lottery ticket",
  "hook_old": "THEY BEAT THE LOTTERY… LEGALLY?",
- "script_old": "These lottery players found a way to make the odds work for them, without rigging a single draw. This was Massachusetts, and a game called Cash WinFall, which launched in two thousand four. Most lotteries let the jackpot grow and grow. Once the jackpot pool reached two million dollars and nobody hit the top prize, the money rolled down to the smaller prizes, for matching fewer numbers. On those roll-down draws, the smaller prizes got much bigger. Some players did the math. If you bought a huge number of tickets on exactly those draws, the expected return could be worth more than you spent. Expected, not guaranteed. A state review identified four betting groups making enormous purchases during roll-downs, including a group of MIT students. It found no evidence of illicit activity or collusion among the bettors. But it did find that some retailers broke rules to help the big players, sometimes with the okay of some lottery officials. The state treasurer later said those steps should have come much sooner. And Cash WinFall is gone. The state ended the game. Most lotteries aren't built like this, and buying more tickets doesn't beat a normal draw. [loop] So the next time someone tells you nobody can beat the lottery, remember"
+ "script_old": "These lottery players found a way to make the odds work for them, without rigging a single draw. This was Massachusetts, and a game called Cash WinFall, which launched in two thousand four. Most lotteries let the jackpot grow and grow. Once the jackpot pool reached two million dollars and nobody hit the top prize, the money rolled down to the smaller prizes, for matching fewer numbers. On those roll-down draws, the smaller prizes got much bigger. Some players did the math. If you bought a huge number of tickets on exactly those draws, the expected return could be worth more than you spent. Expected, not guaranteed. A state review identified four betting groups making enormous purchases during roll-downs, including a group of MIT students. It found no evidence of illicit activity or collusion among the bettors. But it did find that some retailers broke rules to help the big players, sometimes with the okay of some lottery officials. The state treasurer later said those steps should have come much sooner. And Cash WinFall is gone. The state ended the game. Most lotteries aren't built like this, and buying more tickets doesn't beat a normal draw. [loop] So the next time someone tells you nobody can beat the lottery, remember",
+ "script_simple": true
 }

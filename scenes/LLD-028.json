@@ -1,7 +1,7 @@
 {
  "video_id": "LLD-028",
  "episode": "E28",
- "hook": "SWAP AND SKIP THE TAX (FOR NOW)",
+ "hook": "SWAP AND SKIP THE TAX",
  "highlight": [
   "deferral",
   "exchange",
@@ -17,7 +17,7 @@
   "#lawtok",
   "#investing"
  ],
- "script": "Real estate investors can sell at a big profit and push the tax bill down the road, legally. [disclaimer] This is section ten thirty-one of the U.S. tax code, the like-kind exchange. Normally, selling an investment property at a profit means tax on the gain. But in a qualifying exchange of real property held for business or investment, no gain is recognized at the time of the exchange. Picture a hypothetical. An investor trades one rental building for another through the exchange rules, instead of cashing out. If it qualifies, the tax is postponed. Here's what the shortcuts leave out. It's deferral, not forgiveness. The new property's tax basis is figured from the old one, so the gain is still waiting for later. Since twenty eighteen, it only works for real property. A home used solely as your personal residence doesn't qualify, and neither does property held mainly for resale. The deadlines are strict. In a deferred exchange, the replacement property has to be identified within forty-five days, and received within one hundred eighty days, or by your tax return's due date if that comes first. And cash you receive along the way can be taxed. Selling one place and buying another doesn't automatically count. [loop] So before you call your next property swap tax-free, remember",
+ "script": "Investors can sell a building for millions in profit and legally not pay the tax. For now. [disclaimer] It's called a ten thirty one exchange! Normally, if you sell an investment property and make a profit, you pay tax on that profit. Simple. But if you trade it for another investment property, and you follow the rules, you don't pay that tax right now! Picture this. An investor owns a rental building. Instead of selling it and cashing out, they trade it for a different rental building, using the exchange rules. If it qualifies, the tax waits. Sweet! But here's what the quick videos leave out. The tax is delayed, not erased. The profit is still waiting for you later. Since twenty eighteen, it only works for real estate. Your own home doesn't count. And property you bought just to flip doesn't count either. The deadlines are super strict. You get forty five days to pick the new property. And one hundred eighty days to actually get it, or until your tax return is due if that comes first. Miss it? You pay! And any cash you pocket along the way can be taxed. Just selling one place and buying another doesn't automatically count. [loop] So before you call your next property swap tax-free, remember",
  "publish_at": "2026-11-15T12:00:00-05:00",
  "sources": [
   "https://www.irs.gov/instructions/i8824"
@@ -42,7 +42,7 @@
    ]
   },
   {
-   "at": "this is section",
+   "at": "it's called a ten",
    "bg": "bg-office",
    "cast": [
     {
@@ -59,7 +59,7 @@
    ]
   },
   {
-   "at": "normally selling an investment",
+   "at": "normally if you sell",
    "bg": "white",
    "cast": [
     {
@@ -75,7 +75,7 @@
    ]
   },
   {
-   "at": "but in a qualifying exchange",
+   "at": "but if you trade it",
    "bg": "white",
    "cast": [
     {
@@ -83,17 +83,17 @@
     }
    ],
    "card": "NO GAIN RECOGNIZED… YET",
-   "card_at": "no gain is recognized",
+   "card_at": "but if you trade it",
    "zooms": [
     {
-     "at": "no gain is recognized",
+     "at": "but if you trade it",
      "amount": 1.18,
      "hold": 0.9
     }
    ]
   },
   {
-   "at": "picture a hypothetical",
+   "at": "picture this",
    "bg": "bg-neighborhood",
    "cast": [
     {
@@ -106,10 +106,10 @@
     }
    ],
    "card": "HYPOTHETICAL",
-   "card_at": "picture a hypothetical"
+   "card_at": "picture this"
   },
   {
-   "at": "here's what the shortcuts",
+   "at": "but here's what the quick",
    "bg": "white",
    "cast": [
     {
@@ -141,7 +141,7 @@
    ]
   },
   {
-   "at": "the deadlines are strict",
+   "at": "the deadlines are super strict",
    "bg": "bg-office",
    "cast": [
     {
@@ -150,10 +150,10 @@
     }
    ],
    "card": "45 DAYS · 180 DAYS",
-   "card_at": "has to be identified"
+   "card_at": "the deadlines are super strict"
   },
   {
-   "at": "and cash you receive",
+   "at": "and any cash you pocket",
    "bg": "white",
    "cast": [
     {
@@ -169,7 +169,7 @@
    ]
   },
   {
-   "at": "selling one place",
+   "at": "just selling one place",
    "bg": "bg-neighborhood",
    "cast": [
     {
@@ -178,7 +178,7 @@
     }
    ],
    "card": "NOT AUTOMATIC",
-   "card_at": "doesn't automatically count"
+   "card_at": "just selling one place"
   },
   {
    "at": "send this to",
@@ -190,7 +190,7 @@
    ]
   },
   {
-   "at": "so before you call your next",
+   "at": "so before you call",
    "bg": "bg-neighborhood",
    "loop": true
   }
@@ -198,5 +198,6 @@
  "music_vibe": "upbeat",
  "share_line": "Send this to the friend who'd fake their own death to dodge taxes",
  "hook_old": "SWAP BUILDINGS, DELAY TAX",
- "script_old": "An investor can swap one property for another and put off the tax bill, but the details make or break it. This is section ten thirty-one of the U.S. tax code, the like-kind exchange. Normally, selling an investment property at a profit means tax on the gain. But in a qualifying exchange of real property held for business or investment, no gain is recognized at the time of the exchange. Picture a hypothetical. An investor trades one rental building for another through the exchange rules, instead of cashing out. If it qualifies, the tax is postponed. Here's what the shortcuts leave out. It's deferral, not forgiveness. The new property's tax basis is figured from the old one, so the gain is still waiting for later. Since twenty eighteen, it only works for real property. A home used solely as your personal residence doesn't qualify, and neither does property held mainly for resale. The deadlines are strict. In a deferred exchange, the replacement property has to be identified within forty-five days, and received within one hundred eighty days, or by your tax return's due date if that comes first. And cash you receive along the way can be taxed. Selling one place and buying another doesn't automatically count. [loop] So before you call your next property swap tax-free, remember"
+ "script_old": "An investor can swap one property for another and put off the tax bill, but the details make or break it. This is section ten thirty-one of the U.S. tax code, the like-kind exchange. Normally, selling an investment property at a profit means tax on the gain. But in a qualifying exchange of real property held for business or investment, no gain is recognized at the time of the exchange. Picture a hypothetical. An investor trades one rental building for another through the exchange rules, instead of cashing out. If it qualifies, the tax is postponed. Here's what the shortcuts leave out. It's deferral, not forgiveness. The new property's tax basis is figured from the old one, so the gain is still waiting for later. Since twenty eighteen, it only works for real property. A home used solely as your personal residence doesn't qualify, and neither does property held mainly for resale. The deadlines are strict. In a deferred exchange, the replacement property has to be identified within forty-five days, and received within one hundred eighty days, or by your tax return's due date if that comes first. And cash you receive along the way can be taxed. Selling one place and buying another doesn't automatically count. [loop] So before you call your next property swap tax-free, remember",
+ "script_simple": true
 }

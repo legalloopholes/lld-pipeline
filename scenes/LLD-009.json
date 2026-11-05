@@ -1,7 +1,7 @@
 {
  "video_id": "LLD-009",
  "episode": "E09",
- "hook": "TAX-FREE RENT. REALLY.",
+ "hook": "TAX-FREE RENT. LEGALLY.",
  "highlight": [
   "fifteen",
   "income",
@@ -17,7 +17,7 @@
   "#lawtok",
   "#moneytips"
  ],
- "script": "There's a way to collect rent and owe zero federal income tax on it. [disclaimer] This is a U.S. federal tax rule. Normally, rent is income, and the IRS wants it reported. But there's a special rule for a place you also use as your home. If you rent it out for fewer than fifteen days during the year, the IRS says: don't include that rent in your income. Picture a homeowner in a town hosting a big event, renting their place out for one busy weekend. If the total rental days stay under fifteen, that rent stays off their federal return. But hit fifteen days, and the normal rental rules kick in. Now the income has to be reported, and expenses have to be split between personal use and rental use. Here's the catch people miss. The place has to count as your home, based on how much you use it yourself. And because the rent isn't counted, the IRS says the costs of that short rental aren't treated as rental expenses either. So there's no stacking up write-offs from a two-week rental. And state taxes, local occupancy taxes, and short-term rental rules can still apply. [loop] So before you list your place for a fifteenth night, remember",
+ "script": "You can rent your house to strangers for two weeks and not report a single dollar to the IRS. [disclaimer] And it's totally legal! This is a real IRS rule in America. Normally, rent is income. You get paid, the IRS wants its cut. Simple. But there's a special rule for a place that's also your home. Rent it out for fewer than fifteen days in a year, and the IRS says, don't even report that rent. Seriously! Picture this. Your town is hosting a giant event. Every hotel is packed. You rent out your house for one crazy weekend and make a bunch of money. If your total rental days stay under fifteen, that rent stays off your federal tax return. Nice! But hit fifteen days? Normal rules kick in. Now you report all of it, and you have to split your costs between your own use and the rental. Here's the catch people miss. The place has to really count as your home, based on how much you live there yourself. And since the rent doesn't count, the costs of that short rental don't count either. No stacking up write-offs! And your state, your city, and local rental rules can still apply. [loop] So before you list your place for a fifteenth night, remember",
  "publish_at": "2026-11-05T19:00:00-05:00",
  "sources": [
   "https://www.irs.gov/pub/irs-pdf/p527.pdf"
@@ -42,7 +42,7 @@
    ]
   },
   {
-   "at": "this is a us federal",
+   "at": "this is a real irs",
    "bg": "bg-office",
    "cast": [
     {
@@ -91,7 +91,7 @@
    ]
   },
   {
-   "at": "if you rent it out",
+   "at": "rent it out for fewer",
    "bg": "white",
    "cast": [
     {
@@ -99,17 +99,17 @@
     }
    ],
    "card": "UNDER 15 DAYS → NOT INCOME",
-   "card_at": "don't include that rent",
+   "card_at": "rent it out for fewer",
    "zooms": [
     {
-     "at": "don't include that rent",
+     "at": "rent it out for fewer",
      "amount": 1.18,
      "hold": 0.9
     }
    ]
   },
   {
-   "at": "picture a homeowner",
+   "at": "picture this",
    "bg": "bg-neighborhood",
    "cast": [
     {
@@ -122,10 +122,10 @@
     }
    ],
    "card": "HYPOTHETICAL",
-   "card_at": "picture a homeowner"
+   "card_at": "picture this"
   },
   {
-   "at": "but hit fifteen days",
+   "at": "normal rules kick in",
    "bg": "bg-office",
    "cast": [
     {
@@ -158,7 +158,7 @@
    ]
   },
   {
-   "at": "and because the rent",
+   "at": "and since the rent",
    "bg": "white",
    "cast": [
     {
@@ -174,7 +174,7 @@
    ]
   },
   {
-   "at": "and state taxes",
+   "at": "and your state",
    "bg": "bg-neighborhood",
    "cast": [
     {
@@ -208,5 +208,6 @@
  "music_vibe": "upbeat",
  "share_line": "Send this to the friend who'd rent out their own grandma",
  "hook_old": "14 DAYS OF TAX-FREE RENT?",
- "script_old": "Rent out your home for fewer than fifteen days a year, and under federal tax law, that rent can stay out of your income. This is a U.S. federal tax rule. Normally, rent is income, and the IRS wants it reported. But there's a special rule for a place you also use as your home. If you rent it out for fewer than fifteen days during the year, the IRS says: don't include that rent in your income. Picture a homeowner in a town hosting a big event, renting their place out for one busy weekend. If the total rental days stay under fifteen, that rent stays off their federal return. But hit fifteen days, and the normal rental rules kick in. Now the income has to be reported, and expenses have to be split between personal use and rental use. Here's the catch people miss. The place has to count as your home, based on how much you use it yourself. And because the rent isn't counted, the IRS says the costs of that short rental aren't treated as rental expenses either. So there's no stacking up write-offs from a two-week rental. And state taxes, local occupancy taxes, and short-term rental rules can still apply. [loop] So before you list your place for a fifteenth night, remember"
+ "script_old": "Rent out your home for fewer than fifteen days a year, and under federal tax law, that rent can stay out of your income. This is a U.S. federal tax rule. Normally, rent is income, and the IRS wants it reported. But there's a special rule for a place you also use as your home. If you rent it out for fewer than fifteen days during the year, the IRS says: don't include that rent in your income. Picture a homeowner in a town hosting a big event, renting their place out for one busy weekend. If the total rental days stay under fifteen, that rent stays off their federal return. But hit fifteen days, and the normal rental rules kick in. Now the income has to be reported, and expenses have to be split between personal use and rental use. Here's the catch people miss. The place has to count as your home, based on how much you use it yourself. And because the rent isn't counted, the IRS says the costs of that short rental aren't treated as rental expenses either. So there's no stacking up write-offs from a two-week rental. And state taxes, local occupancy taxes, and short-term rental rules can still apply. [loop] So before you list your place for a fifteenth night, remember",
+ "script_simple": true
 }

@@ -17,7 +17,7 @@
   "#lawtok",
   "#ip"
  ],
- "script": "The federal government can use your patent without asking, and you can't stop it. [disclaimer] Normally, a patent lets the owner go to court to stop unlicensed use. But a federal law, section fourteen ninety-eight of title twenty-eight, sets a different rule when the user is the United States. If a patented invention is used or made by or for the U.S. government without a license, the patent owner's remedy is a lawsuit against the United States in the Court of Federal Claims, for reasonable compensation. So the owner generally can't get an order blocking that government use. Instead, the fight is about money. And by or for the government includes contractors, when the government has authorized or consented to the use. Picture a contractor building equipment for a federal agency using someone's patented design, with the government's okay. The patent owner's claim is generally against the government, for compensation. Here's the limit. This is not a free pass for any company to copy patents. It applies to use by or for the United States, with government authorization or consent, and the owner is still entitled to be paid. Think of it a bit like eminent domain for inventions. [loop] So before you assume a patent means nobody can use your invention, remember",
+ "script": "The U.S. government can use your patented invention without your permission, and you can't stop it. [disclaimer] Normally, a patent is like a stop sign. If someone uses your invention without a deal, you can go to court and make them stop. But there's a federal law with a different rule when the user is the U.S. government. If the government uses or makes your patented invention without a license, you can't stop it. Instead, you sue the United States in a special court, and you ask for fair payment. So you generally can't get an order blocking the government. The fight is about money! And it covers companies working for the government too, if the government said okay. Picture this. A company is building equipment for a federal agency. It uses someone's patented design. And the government signed off on it. The patent owner's claim is usually against the government, for payment. Not against the company! Here's the limit. This is not a free pass for any company to copy patents. It only covers use by or for the United States, with the government's permission. And the owner still gets paid. Think of it kind of like the government taking land for a highway. But for inventions! [loop] So before you assume a patent means nobody can use your invention, remember",
  "publish_at": "2026-11-26T12:00:00-05:00",
  "sources": [
   "https://www.law.cornell.edu/uscode/text/28/1498"
@@ -58,7 +58,7 @@
    ]
   },
   {
-   "at": "but a federal law",
+   "at": "but there's a federal law",
    "bg": "white",
    "cast": [
     {
@@ -74,7 +74,7 @@
    ]
   },
   {
-   "at": "if a patented invention",
+   "at": "if the government uses",
    "bg": "bg-courtroom",
    "cast": [
     {
@@ -87,10 +87,10 @@
     }
    ],
    "card": "SUE FOR COMPENSATION",
-   "card_at": "reasonable compensation"
+   "card_at": "if the government uses"
   },
   {
-   "at": "so the owner generally",
+   "at": "so you generally can't",
    "bg": "white",
    "cast": [
     {
@@ -106,14 +106,14 @@
    ],
    "zooms": [
     {
-     "at": "the fight is about money",
+     "at": "so you generally can't",
      "amount": 1.18,
      "hold": 0.9
     }
    ]
   },
   {
-   "at": "and by or for",
+   "at": "and it covers companies",
    "bg": "bg-office",
    "cast": [
     {
@@ -130,7 +130,7 @@
    ]
   },
   {
-   "at": "picture a contractor",
+   "at": "picture this",
    "bg": "bg-office",
    "cast": [
     {
@@ -143,7 +143,7 @@
     }
    ],
    "card": "HYPOTHETICAL",
-   "card_at": "picture a contractor"
+   "card_at": "picture this"
   },
   {
    "at": "here's the limit",
@@ -162,7 +162,7 @@
    ]
   },
   {
-   "at": "it applies to use",
+   "at": "it only covers use",
    "bg": "white",
    "cast": [
     {
@@ -178,7 +178,7 @@
    ]
   },
   {
-   "at": "think of it a bit",
+   "at": "think of it kind of",
    "bg": "bg-capitol",
    "cast": [
     {
@@ -187,7 +187,7 @@
     }
    ],
    "card": "LIKE EMINENT DOMAIN",
-   "card_at": "eminent domain"
+   "card_at": "think of it kind of"
   },
   {
    "at": "send this to",
@@ -199,7 +199,7 @@
    ]
   },
   {
-   "at": "so before you assume a patent",
+   "at": "so before you assume",
    "bg": "bg-office",
    "loop": true
   }
@@ -207,5 +207,6 @@
  "music_vibe": "quirky",
  "share_line": "Send this to the friend who takes your stuff and calls it borrowing",
  "hook_old": "PATENTED… GOVERNMENT USES IT ANYWAY",
- "script_old": "The U.S. government can use a patented invention without asking first, and the inventor may get money instead of a court order. Normally, a patent lets the owner go to court to stop unlicensed use. But a federal law, section fourteen ninety-eight of title twenty-eight, sets a different rule when the user is the United States. If a patented invention is used or made by or for the U.S. government without a license, the patent owner's remedy is a lawsuit against the United States in the Court of Federal Claims, for reasonable compensation. So the owner generally can't get an order blocking that government use. Instead, the fight is about money. And by or for the government includes contractors, when the government has authorized or consented to the use. Picture a contractor building equipment for a federal agency using someone's patented design, with the government's okay. The patent owner's claim is generally against the government, for compensation. Here's the limit. This is not a free pass for any company to copy patents. It applies to use by or for the United States, with government authorization or consent, and the owner is still entitled to be paid. Think of it a bit like eminent domain for inventions. [loop] So before you assume a patent means nobody can use your invention, remember"
+ "script_old": "The U.S. government can use a patented invention without asking first, and the inventor may get money instead of a court order. Normally, a patent lets the owner go to court to stop unlicensed use. But a federal law, section fourteen ninety-eight of title twenty-eight, sets a different rule when the user is the United States. If a patented invention is used or made by or for the U.S. government without a license, the patent owner's remedy is a lawsuit against the United States in the Court of Federal Claims, for reasonable compensation. So the owner generally can't get an order blocking that government use. Instead, the fight is about money. And by or for the government includes contractors, when the government has authorized or consented to the use. Picture a contractor building equipment for a federal agency using someone's patented design, with the government's okay. The patent owner's claim is generally against the government, for compensation. Here's the limit. This is not a free pass for any company to copy patents. It applies to use by or for the United States, with government authorization or consent, and the owner is still entitled to be paid. Think of it a bit like eminent domain for inventions. [loop] So before you assume a patent means nobody can use your invention, remember",
+ "script_simple": true
 }

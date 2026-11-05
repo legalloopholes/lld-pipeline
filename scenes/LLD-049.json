@@ -17,7 +17,7 @@
   "#lawtok",
   "#constitution"
  ],
- "script": "For about a day, a court ruling knocked certain drugs out of Ireland's possession laws. [disclaimer] This is a story about how laws get made, not a guide to anything else. Ireland's Misuse of Drugs Act of nineteen seventy-seven let the government add new substances to the list of controlled drugs. Over the years, successive governments used that power to control newer psychoactive substances. On March tenth, twenty fifteen, the Court of Appeal ruled on a challenge to that power, and the ruling went against it. According to Ireland's Department of Health, that affected possession of certain newer psychoactive substances that had been added that way. It did not affect the laws on older drugs like heroin, cocaine or cannabis. And the department said selling and supplying psychoactive substances was still an offense under other laws. The government had prepared for this outcome. Emergency legislation was introduced that same evening, with the aim of passing both houses of parliament within twenty-four hours, and it re-controlled everything that had been controlled before the ruling. So the gap was real, but it was very short, it never covered selling, and it's long closed. The lesson is how much depends on the way a law gives power to the government in the first place. [loop] So when someone tells you a court legalized drugs overnight, remember",
+ "script": "For about one day, certain drugs stopped being illegal to possess in Ireland because of a court ruling. [disclaimer] This is a story about how laws get made. Not a guide to anything else! Ireland had a drug law from nineteen seventy seven. And that law let the government add new drugs to the banned list on its own. Over the years, the government used that power to ban lots of newer drugs. Then, in March twenty fifteen, a court looked at that power. And it ruled against it! According to Ireland's health department, that affected having certain newer drugs that had been added that way. It did not affect the older drugs, like heroin, cocaine or cannabis. Those were still illegal! And the department said selling these drugs was still a crime under other laws. But here's the thing. The government saw this coming. That same evening, it rushed in an emergency law, aiming to pass it in about a day. And it banned everything again, exactly like before the ruling. Done! So the gap was real. But it was super short. It never covered selling. And it's long closed. The lesson? How a law hands power to the government really matters. [loop] So when someone tells you a court legalized drugs overnight, remember",
  "publish_at": "2026-11-25T19:00:00-05:00",
  "sources": [
   "https://www.drugsandalcohol.ie/23570/",
@@ -50,10 +50,10 @@
     }
    ],
    "card": "ABOUT LAWMAKING",
-   "card_at": "how laws get made"
+   "card_at": "this is a story"
   },
   {
-   "at": "ireland's misuse of drugs act",
+   "at": "ireland had a drug law",
    "bg": "white",
    "cast": [
     {
@@ -85,7 +85,7 @@
    ]
   },
   {
-   "at": "on march tenth",
+   "at": "then in march",
    "bg": "bg-courtroom",
    "cast": [
     {
@@ -98,17 +98,17 @@
     }
    ],
    "card": "COURT OF APPEAL RULING",
-   "card_at": "court of appeal",
+   "card_at": "then in march",
    "zooms": [
     {
-     "at": "went against it",
+     "at": "then in march",
      "amount": 1.18,
      "hold": 0.9
     }
    ]
   },
   {
-   "at": "according to ireland's department",
+   "at": "according to ireland's health",
    "bg": "white",
    "cast": [
     {
@@ -156,7 +156,7 @@
    ]
   },
   {
-   "at": "the government had prepared",
+   "at": "but here's the thing",
    "bg": "white",
    "cast": [
     {
@@ -164,7 +164,7 @@
     }
    ],
    "card": "FIXED IN ~24 HOURS",
-   "card_at": "same evening"
+   "card_at": "but here's the thing"
   },
   {
    "at": "so the gap was real",
@@ -192,7 +192,7 @@
    ]
   },
   {
-   "at": "so when someone tells you a court",
+   "at": "so when someone tells",
    "bg": "white",
    "loop": true
   }
@@ -200,5 +200,6 @@
  "music_vibe": "tense",
  "share_line": "Send this to the friend who thinks every law has a loophole",
  "hook_old": "A GAP… FOR ONE DAY",
- "script_old": "A court ruling briefly knocked certain drugs out of Ireland's possession laws. This is a story about how laws get made, not a guide to anything else. Ireland's Misuse of Drugs Act of nineteen seventy-seven let the government add new substances to the list of controlled drugs. Over the years, successive governments used that power to control newer psychoactive substances. On March tenth, twenty fifteen, the Court of Appeal ruled on a challenge to that power, and the ruling went against it. According to Ireland's Department of Health, that affected possession of certain newer psychoactive substances that had been added that way. It did not affect the laws on older drugs like heroin, cocaine or cannabis. And the department said selling and supplying psychoactive substances was still an offense under other laws. The government had prepared for this outcome. Emergency legislation was introduced that same evening, with the aim of passing both houses of parliament within twenty-four hours, and it re-controlled everything that had been controlled before the ruling. So the gap was real, but it was very short, it never covered selling, and it's long closed. The lesson is how much depends on the way a law gives power to the government in the first place. [loop] So when someone tells you a court legalized drugs overnight, remember"
+ "script_old": "A court ruling briefly knocked certain drugs out of Ireland's possession laws. This is a story about how laws get made, not a guide to anything else. Ireland's Misuse of Drugs Act of nineteen seventy-seven let the government add new substances to the list of controlled drugs. Over the years, successive governments used that power to control newer psychoactive substances. On March tenth, twenty fifteen, the Court of Appeal ruled on a challenge to that power, and the ruling went against it. According to Ireland's Department of Health, that affected possession of certain newer psychoactive substances that had been added that way. It did not affect the laws on older drugs like heroin, cocaine or cannabis. And the department said selling and supplying psychoactive substances was still an offense under other laws. The government had prepared for this outcome. Emergency legislation was introduced that same evening, with the aim of passing both houses of parliament within twenty-four hours, and it re-controlled everything that had been controlled before the ruling. So the gap was real, but it was very short, it never covered selling, and it's long closed. The lesson is how much depends on the way a law gives power to the government in the first place. [loop] So when someone tells you a court legalized drugs overnight, remember",
+ "script_simple": true
 }

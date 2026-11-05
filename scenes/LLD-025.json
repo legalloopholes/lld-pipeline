@@ -1,7 +1,7 @@
 {
  "video_id": "LLD-025",
  "episode": "E25",
- "hook": "SUE YOUR SPOUSE'S LOVER",
+ "hook": "SUE THEM FOR STEALING LOVE",
  "highlight": [
   "alienation",
   "affection",
@@ -17,7 +17,7 @@
   "#lawtok",
   "#relationships"
  ],
- "script": "In North Carolina, you can sue the person who broke up your marriage. [disclaimer] It's called alienation of affection. Normally, a breakup or a divorce is a dispute between the two spouses. But this claim lets a spouse sue a third person, someone outside the marriage. Broadly, the spouse has to show there was real love and affection in the marriage, that the defendant interfered, and that this caused the affection to be lost. That's how an outsider can end up facing a civil lawsuit over someone else's marriage. But North Carolina has put limits in the statute. First, conduct that happens after the spouses physically separate, with the intent that the separation be permanent, can't create the claim. Second, there's a deadline. The lawsuit has to be filed within three years of the defendant's last act. And third, it can only be brought against a natural person, so not against a company. And not every affair or breakup meets the elements. The spouse suing still has to prove them in court. This is a civil claim, not a criminal charge, and other states treat this very differently. [loop] So before you get involved with someone who's married in North Carolina, remember",
+ "script": "In North Carolina, you can sue the person your spouse fell for, for stealing your spouse's love. For money. [disclaimer] It's called alienation of affection! And yes, it's real. Normally, a breakup or a divorce is a fight between the two people who were married. But this lets a husband or wife sue someone outside the marriage. The other person! Basically, the spouse has to show three things. There was real love in the marriage. The other person got in the way. And that's why the love was lost. That's how a total outsider can get dragged into a lawsuit over someone else's marriage. Yikes! But North Carolina put some limits on it. Anything that happens after the couple splits up and moves apart for good doesn't count. There's also a deadline. You have to sue within three years of the other person's last act. And you can only sue a real person, not a company. And not every affair or breakup is enough. The spouse suing still has to prove all of it in court. This is a lawsuit for money, not a crime. Nobody goes to jail. And other states handle this very differently. Most don't allow it at all. [loop] So before you get involved with someone who's married in North Carolina, remember",
  "publish_at": "2026-11-13T19:00:00-05:00",
  "sources": [
   "https://www.ncleg.gov/enactedlegislation/statutes/html/bysection/chapter_52/gs_52-13.html",
@@ -75,7 +75,7 @@
    ]
   },
   {
-   "at": "but this claim lets",
+   "at": "but this lets a husband",
    "bg": "bg-courtroom",
    "cast": [
     {
@@ -88,17 +88,17 @@
     }
    ],
    "card": "SUE THE THIRD PERSON",
-   "card_at": "third person",
+   "card_at": "but this lets a husband",
    "zooms": [
     {
-     "at": "third person",
+     "at": "but this lets a husband",
      "amount": 1.18,
      "hold": 0.9
     }
    ]
   },
   {
-   "at": "broadly the spouse",
+   "at": "basically the spouse has",
    "bg": "white",
    "cast": [
     {
@@ -114,7 +114,7 @@
    ]
   },
   {
-   "at": "but north carolina has",
+   "at": "but north carolina put",
    "bg": "white",
    "cast": [
     {
@@ -130,7 +130,7 @@
    ]
   },
   {
-   "at": "first conduct that happens",
+   "at": "anything that happens after",
    "bg": "white",
    "cast": [
     {
@@ -146,7 +146,7 @@
    ]
   },
   {
-   "at": "second there's a deadline",
+   "at": "there's also a deadline",
    "bg": "white",
    "cast": [
     {
@@ -162,7 +162,7 @@
    ]
   },
   {
-   "at": "and third it can only",
+   "at": "and you can only sue",
    "bg": "white",
    "cast": [
     {
@@ -191,7 +191,7 @@
     }
    ],
    "card": "MUST STILL BE PROVED",
-   "card_at": "prove them"
+   "card_at": "and not every affair"
   },
   {
    "at": "send this to",
@@ -203,7 +203,7 @@
    ]
   },
   {
-   "at": "so before you get involved",
+   "at": "so before you get",
    "bg": "bg-neighborhood",
    "loop": true
   }
@@ -211,5 +211,6 @@
  "music_vibe": "quirky",
  "share_line": "Send this to the friend who'd steal your spouse in a heartbeat",
  "hook_old": "SUED FOR AN AFFAIR?",
- "script_old": "In North Carolina, getting between a married couple can get you sued. It's called alienation of affection. Normally, a breakup or a divorce is a dispute between the two spouses. But this claim lets a spouse sue a third person, someone outside the marriage. Broadly, the spouse has to show there was real love and affection in the marriage, that the defendant interfered, and that this caused the affection to be lost. That's how an outsider can end up facing a civil lawsuit over someone else's marriage. But North Carolina has put limits in the statute. First, conduct that happens after the spouses physically separate, with the intent that the separation be permanent, can't create the claim. Second, there's a deadline. The lawsuit has to be filed within three years of the defendant's last act. And third, it can only be brought against a natural person, so not against a company. And not every affair or breakup meets the elements. The spouse suing still has to prove them in court. This is a civil claim, not a criminal charge, and other states treat this very differently. [loop] So before you get involved with someone who's married in North Carolina, remember"
+ "script_old": "In North Carolina, getting between a married couple can get you sued. It's called alienation of affection. Normally, a breakup or a divorce is a dispute between the two spouses. But this claim lets a spouse sue a third person, someone outside the marriage. Broadly, the spouse has to show there was real love and affection in the marriage, that the defendant interfered, and that this caused the affection to be lost. That's how an outsider can end up facing a civil lawsuit over someone else's marriage. But North Carolina has put limits in the statute. First, conduct that happens after the spouses physically separate, with the intent that the separation be permanent, can't create the claim. Second, there's a deadline. The lawsuit has to be filed within three years of the defendant's last act. And third, it can only be brought against a natural person, so not against a company. And not every affair or breakup meets the elements. The spouse suing still has to prove them in court. This is a civil claim, not a criminal charge, and other states treat this very differently. [loop] So before you get involved with someone who's married in North Carolina, remember",
+ "script_simple": true
 }

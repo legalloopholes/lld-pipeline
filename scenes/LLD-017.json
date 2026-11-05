@@ -17,7 +17,7 @@
   "#personalfinance",
   "#lawtok"
  ],
- "script": "Too rich for a Roth IRA? The tax code left a door open. [disclaimer] There's a different legal route, and people call it the backdoor. This is U.S. federal tax law. A Roth IRA is popular because, if you follow the rules, qualified withdrawals aren't taxed. But direct contributions to a Roth come with income limits. Earn above them, and you can't contribute directly. Conversions are different. The IRS says that regardless of your income, you may be able to convert money from a traditional IRA into a Roth IRA. So the backdoor is really two steps. First, a contribution to a traditional IRA that you don't deduct. Then, a conversion of that money into a Roth. It's reported on an IRS form, Form eighty-six-oh-six. Here's what the shortcut videos skip. The normal yearly contribution limits still apply, and you need taxable compensation to contribute at all. A conversion taxes any untaxed money that's being converted. And if you already have pre-tax money in traditional IRAs, the IRS looks at all of them together, so part of your conversion can be taxable, even though your new contribution wasn't deducted. Once you convert, you can't undo it. This is an explanation, not a recommendation. Get professional tax advice before moving retirement money. [loop] So if someone tells you high earners can't have a Roth, remember",
+ "script": "The IRS says you're too rich for a Roth IRA. Then it hands you the instructions to get one anyway. [disclaimer] People call it the backdoor! This is American tax law. A Roth IRA is a retirement account people love, because if you follow the rules, the money you take out later isn't taxed. Nice! But putting money straight into a Roth has income limits. Make too much money, and you can't put money in directly. Sorry! But converting is different. The IRS says, no matter how much you make, you may be able to move money from a regular IRA into a Roth. So the backdoor is just two steps. Step one, put money into a regular IRA, and don't take a tax deduction for it. Step two, convert that money into a Roth. Done! You report it on an IRS form, Form eighty six oh six. Here's what the quick videos skip. The normal yearly limits still apply. You need income from work to put money in at all. A conversion taxes any money that hasn't been taxed yet. And if you already have pre tax money sitting in regular IRAs, the IRS counts all of it together, so part of your conversion can still get taxed. And once you convert, there's no undo button. This is an explanation, not advice. Talk to a tax pro before moving retirement money. [loop] So if someone tells you high earners can't have a Roth, remember",
  "publish_at": "2026-11-09T19:00:00-05:00",
  "sources": [
   "https://www.irs.gov/taxtopics/tc309",
@@ -44,7 +44,7 @@
    ]
   },
   {
-   "at": "this is us federal tax law",
+   "at": "this is american tax law",
    "bg": "white",
    "cast": [
     {
@@ -60,7 +60,7 @@
    ]
   },
   {
-   "at": "but direct contributions",
+   "at": "but putting money straight",
    "bg": "white",
    "cast": [
     {
@@ -76,7 +76,7 @@
    ]
   },
   {
-   "at": "conversions are different",
+   "at": "but converting is different",
    "bg": "white",
    "cast": [
     {
@@ -84,17 +84,17 @@
     }
    ],
    "card": "CONVERSIONS: NO INCOME LIMIT",
-   "card_at": "regardless of your income",
+   "card_at": "but converting is different",
    "zooms": [
     {
-     "at": "regardless of your income",
+     "at": "but converting is different",
      "amount": 1.18,
      "hold": 0.9
     }
    ]
   },
   {
-   "at": "so the backdoor is really",
+   "at": "so the backdoor is just",
    "bg": "bg-office",
    "cast": [
     {
@@ -111,7 +111,7 @@
    ]
   },
   {
-   "at": "it's reported on",
+   "at": "you report it on",
    "bg": "bg-office",
    "cast": [
     {
@@ -128,7 +128,7 @@
    ]
   },
   {
-   "at": "here's what the shortcut",
+   "at": "here's what the quick videos",
    "bg": "white",
    "cast": [
     {
@@ -152,10 +152,10 @@
     }
    ],
    "card": "PRO-RATA: PART CAN BE TAXED",
-   "card_at": "looks at all of them together"
+   "card_at": "and if you already have"
   },
   {
-   "at": "once you convert",
+   "at": "and once you convert",
    "bg": "white",
    "cast": [
     {
@@ -180,7 +180,7 @@
     }
    ],
    "card": "NOT A RECOMMENDATION",
-   "card_at": "not a recommendation"
+   "card_at": "this is an explanation"
   },
   {
    "at": "send this to",
@@ -192,7 +192,7 @@
    ]
   },
   {
-   "at": "so if someone tells you",
+   "at": "so if someone tells",
    "bg": "bg-office",
    "loop": true
   }
@@ -200,5 +200,6 @@
  "music_vibe": "upbeat",
  "share_line": "Send this to the friend who's broke but acts like a billionaire",
  "hook_old": "THE ROTH IRA BACKDOOR",
- "script_old": "Make too much money to put cash straight into a Roth IRA? There's a different legal route, and people call it the backdoor. This is U.S. federal tax law. A Roth IRA is popular because, if you follow the rules, qualified withdrawals aren't taxed. But direct contributions to a Roth come with income limits. Earn above them, and you can't contribute directly. Conversions are different. The IRS says that regardless of your income, you may be able to convert money from a traditional IRA into a Roth IRA. So the backdoor is really two steps. First, a contribution to a traditional IRA that you don't deduct. Then, a conversion of that money into a Roth. It's reported on an IRS form, Form eighty-six-oh-six. Here's what the shortcut videos skip. The normal yearly contribution limits still apply, and you need taxable compensation to contribute at all. A conversion taxes any untaxed money that's being converted. And if you already have pre-tax money in traditional IRAs, the IRS looks at all of them together, so part of your conversion can be taxable, even though your new contribution wasn't deducted. Once you convert, you can't undo it. This is an explanation, not a recommendation. Get professional tax advice before moving retirement money. [loop] So if someone tells you high earners can't have a Roth, remember"
+ "script_old": "Make too much money to put cash straight into a Roth IRA? There's a different legal route, and people call it the backdoor. This is U.S. federal tax law. A Roth IRA is popular because, if you follow the rules, qualified withdrawals aren't taxed. But direct contributions to a Roth come with income limits. Earn above them, and you can't contribute directly. Conversions are different. The IRS says that regardless of your income, you may be able to convert money from a traditional IRA into a Roth IRA. So the backdoor is really two steps. First, a contribution to a traditional IRA that you don't deduct. Then, a conversion of that money into a Roth. It's reported on an IRS form, Form eighty-six-oh-six. Here's what the shortcut videos skip. The normal yearly contribution limits still apply, and you need taxable compensation to contribute at all. A conversion taxes any untaxed money that's being converted. And if you already have pre-tax money in traditional IRAs, the IRS looks at all of them together, so part of your conversion can be taxable, even though your new contribution wasn't deducted. Once you convert, you can't undo it. This is an explanation, not a recommendation. Get professional tax advice before moving retirement money. [loop] So if someone tells you high earners can't have a Roth, remember",
+ "script_simple": true
 }

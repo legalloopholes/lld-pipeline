@@ -17,7 +17,7 @@
   "#lawtok",
   "#government"
  ],
- "script": "A governor took luxury gifts and loans, and the Supreme Court threw out his corruption convictions. [disclaimer] This is McDonnell versus United States, from twenty sixteen. Former Virginia Governor Robert McDonnell and his wife were charged over about one hundred seventy-five thousand dollars in loans, gifts and other benefits from a businessman who wanted state universities to study his company's supplement. Prosecutors pointed to things the governor did: arranging meetings, hosting events at the governor's mansion, and contacting other officials. The jury convicted. The key question was what counts as an official act under the federal law used in the case. The Supreme Court, unanimously, read it narrowly. It has to involve a formal exercise of government power, something like a lawsuit, an agency decision or a hearing, on a specific matter. And the official has to make, or agree to make, a decision or take action on it. Setting up a meeting, talking to another official, or organizing an event, without more, isn't enough. Because the jury instructions defined official acts too broadly, the convictions were vacated and the case was sent back. Here's the limit. This wasn't a ruling that accepting gifts is fine. Decisions, pressure on other officials, and other ethics and criminal laws still matter. [loop] So before you assume a gift case is open and shut, remember",
+ "script": "A governor took a Rolex, loans and gifts from a businessman, and the Supreme Court threw out his convictions. [disclaimer] This is McDonnell versus United States, from twenty sixteen. Virginia's former governor, Bob McDonnell, and his wife got about one hundred seventy five thousand dollars in loans, gifts and perks. A Rolex! Designer clothes! All from a businessman who wanted state universities to study his supplement. Prosecutors pointed to what the governor did for him. Setting up meetings. Hosting events at the governor's mansion. Calling other officials. And the jury said guilty! But the big question was, what counts as an official act under this federal law? And the Supreme Court, every single justice, said it's narrower than that. It has to be a real use of government power. Like a lawsuit, an agency decision, or a hearing, on a specific issue. And the official has to make a decision on it, or agree to. Just setting up a meeting, making a phone call, or throwing an event isn't enough by itself. Because the jury was told the wrong definition, the convictions were tossed and the case went back. Here's the limit. This was not a ruling that taking gifts is fine! Actual decisions, pressuring other officials, and other ethics and criminal laws still matter. [loop] So before you assume a gift case is open and shut, remember",
  "publish_at": "2026-11-27T19:00:00-05:00",
  "sources": [
   "https://www.law.cornell.edu/supremecourt/text/15-474"
@@ -58,7 +58,7 @@
    ]
   },
   {
-   "at": "former virginia governor",
+   "at": "virginia's former governor",
    "bg": "bg-office",
    "cast": [
     {
@@ -67,10 +67,10 @@
     }
    ],
    "card": "~$175,000 IN GIFTS & LOANS",
-   "card_at": "loans gifts"
+   "card_at": "virginia's former governor"
   },
   {
-   "at": "prosecutors pointed",
+   "at": "prosecutors pointed to",
    "bg": "white",
    "cast": [
     {
@@ -86,7 +86,7 @@
    ]
   },
   {
-   "at": "the jury convicted",
+   "at": "and the jury said guilty",
    "bg": "bg-courtroom",
    "cast": [
     {
@@ -99,10 +99,10 @@
     }
    ],
    "card": "CONVICTED",
-   "card_at": "jury convicted"
+   "card_at": "and the jury said guilty"
   },
   {
-   "at": "the key question",
+   "at": "but the big question",
    "bg": "white",
    "cast": [
     {
@@ -110,10 +110,10 @@
     }
    ],
    "card": "WHAT'S AN “OFFICIAL ACT”?",
-   "card_at": "official act"
+   "card_at": "but the big question"
   },
   {
-   "at": "the supreme court unanimously",
+   "at": "and the supreme court every",
    "bg": "bg-courtroom",
    "cast": [
     {
@@ -126,17 +126,17 @@
     }
    ],
    "card": "FORMAL GOVERNMENT POWER",
-   "card_at": "formal exercise",
+   "card_at": "and the supreme court every",
    "zooms": [
     {
-     "at": "read it narrowly",
+     "at": "and the supreme court every",
      "amount": 1.18,
      "hold": 0.9
     }
    ]
   },
   {
-   "at": "setting up a meeting",
+   "at": "just setting up a meeting",
    "bg": "white",
    "cast": [
     {
@@ -152,7 +152,7 @@
    ]
   },
   {
-   "at": "because the jury instructions",
+   "at": "because the jury was told",
    "bg": "bg-courtroom",
    "cast": [
     {
@@ -165,7 +165,7 @@
     }
    ],
    "card": "VACATED & SENT BACK",
-   "card_at": "vacated"
+   "card_at": "because the jury was told"
   },
   {
    "at": "here's the limit",
@@ -193,7 +193,7 @@
    ]
   },
   {
-   "at": "so before you assume a gift",
+   "at": "so before you assume",
    "bg": "bg-office",
    "loop": true
   }
@@ -201,5 +201,6 @@
  "music_vibe": "tense",
  "share_line": "Send this to the friend who'd sell their vote for a Rolex",
  "hook_old": "GIFTS… BUT NO 'OFFICIAL ACT'?",
- "script_old": "A governor received gifts and loans, and the Supreme Court still threw out his corruption convictions. This is McDonnell versus United States, from twenty sixteen. Former Virginia Governor Robert McDonnell and his wife were charged over about one hundred seventy-five thousand dollars in loans, gifts and other benefits from a businessman who wanted state universities to study his company's supplement. Prosecutors pointed to things the governor did: arranging meetings, hosting events at the governor's mansion, and contacting other officials. The jury convicted. The key question was what counts as an official act under the federal law used in the case. The Supreme Court, unanimously, read it narrowly. It has to involve a formal exercise of government power, something like a lawsuit, an agency decision or a hearing, on a specific matter. And the official has to make, or agree to make, a decision or take action on it. Setting up a meeting, talking to another official, or organizing an event, without more, isn't enough. Because the jury instructions defined official acts too broadly, the convictions were vacated and the case was sent back. Here's the limit. This wasn't a ruling that accepting gifts is fine. Decisions, pressure on other officials, and other ethics and criminal laws still matter. [loop] So before you assume a gift case is open and shut, remember"
+ "script_old": "A governor received gifts and loans, and the Supreme Court still threw out his corruption convictions. This is McDonnell versus United States, from twenty sixteen. Former Virginia Governor Robert McDonnell and his wife were charged over about one hundred seventy-five thousand dollars in loans, gifts and other benefits from a businessman who wanted state universities to study his company's supplement. Prosecutors pointed to things the governor did: arranging meetings, hosting events at the governor's mansion, and contacting other officials. The jury convicted. The key question was what counts as an official act under the federal law used in the case. The Supreme Court, unanimously, read it narrowly. It has to involve a formal exercise of government power, something like a lawsuit, an agency decision or a hearing, on a specific matter. And the official has to make, or agree to make, a decision or take action on it. Setting up a meeting, talking to another official, or organizing an event, without more, isn't enough. Because the jury instructions defined official acts too broadly, the convictions were vacated and the case was sent back. Here's the limit. This wasn't a ruling that accepting gifts is fine. Decisions, pressure on other officials, and other ethics and criminal laws still matter. [loop] So before you assume a gift case is open and shut, remember",
+ "script_simple": true
 }

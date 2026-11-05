@@ -17,7 +17,7 @@
   "#lawtok",
   "#constitution"
  ],
- "script": "The judge got the law wrong, and the defendant walked free for good. [disclaimer] This is Evans versus Michigan, a U.S. Supreme Court case from twenty thirteen. A man was charged with burning other real property, a lesser arson charge in Michigan than burning a home. After the prosecution finished its case, the trial judge granted a directed verdict of acquittal. The judge believed the state had to prove the building wasn't a dwelling. But that wasn't actually an element of the crime. The judge added a requirement that didn't exist, and then found it unproven. Michigan's appeals courts said that wasn't a real acquittal, so the case could be tried again. The Supreme Court disagreed, eight to one. The double jeopardy rule bars a second trial after an acquittal, and an acquittal includes any ruling that the prosecution's evidence wasn't enough to establish criminal liability. Even if that ruling was legally wrong. The Court said the judge's error affects only the accuracy of the acquittal, not what it is. But here's the limit. This was a real acquittal on the evidence. It wasn't a dismissal over a typo or a technicality, and it's not a formula for beating charges. [loop] So the next time someone says a mistake can always be fixed, remember",
+ "script": "A judge invented a rule that didn't exist, used it to acquit a man, and now he can never be retried. [disclaimer] This is a real Supreme Court case from twenty thirteen, Evans versus Michigan. A man was charged with burning down a building. Not a house, a different kind of building. That's a smaller arson charge in Michigan. After the prosecutors finished their case, the judge stopped the trial and said, not guilty! Why? The judge thought the state had to prove the building wasn't a home. But that wasn't even part of the crime! The judge made up a rule that didn't exist, and then said the prosecutors didn't prove it. Oops! Michigan's appeals courts said, that doesn't count as a real not guilty. Let's do the trial again. But the Supreme Court said no! Eight justices to one. The double jeopardy rule says once you're found not guilty, they can't try you again for the same crime. And that covers any ruling that the evidence wasn't enough. Even if the judge got the law totally wrong! The Court said a mistake makes the verdict wrong, but it's still a not guilty. And it's final. But here's the limit. This was a real not guilty, decided on the evidence. Not a typo or a technicality. And it's not a trick for beating charges. [loop] So the next time someone says a mistake can always be fixed, remember",
  "publish_at": "2026-11-12T12:00:00-05:00",
  "sources": [
   "https://supreme.justia.com/cases/federal/us/568/313/"
@@ -39,7 +39,7 @@
    ]
   },
   {
-   "at": "this is evans",
+   "at": "this is a real supreme",
    "bg": "white",
    "cast": [
     {
@@ -71,7 +71,7 @@
    ]
   },
   {
-   "at": "after the prosecution finished",
+   "at": "after the prosecutors finished",
    "bg": "bg-courtroom",
    "cast": [
     {
@@ -84,10 +84,10 @@
     }
    ],
    "card": "ACQUITTED",
-   "card_at": "directed verdict"
+   "card_at": "after the prosecutors finished"
   },
   {
-   "at": "the judge believed",
+   "at": "the judge thought the state",
    "bg": "bg-courtroom",
    "cast": [
     {
@@ -100,17 +100,17 @@
     }
    ],
    "card": "A REQUIREMENT THAT DIDN'T EXIST",
-   "card_at": "didn't exist",
+   "card_at": "the judge thought the state",
    "zooms": [
     {
-     "at": "didn't exist",
+     "at": "the judge thought the state",
      "amount": 1.18,
      "hold": 0.9
     }
    ]
   },
   {
-   "at": "michigan's appeals courts",
+   "at": "michigan's appeals courts said",
    "bg": "white",
    "cast": [
     {
@@ -126,7 +126,7 @@
    ]
   },
   {
-   "at": "the supreme court disagreed",
+   "at": "but the supreme court said",
    "bg": "bg-courtroom",
    "cast": [
     {
@@ -139,10 +139,10 @@
     }
    ],
    "card": "NO RETRIAL",
-   "card_at": "disagreed"
+   "card_at": "but the supreme court said"
   },
   {
-   "at": "even if that ruling",
+   "at": "even if the judge got",
    "bg": "white",
    "cast": [
     {
@@ -183,7 +183,7 @@
    ]
   },
   {
-   "at": "so the next time someone says",
+   "at": "so the next time",
    "bg": "bg-courtroom",
    "loop": true
   }
@@ -191,5 +191,6 @@
  "music_vibe": "tense",
  "share_line": "Send this to the friend who gets away with absolutely everything",
  "hook_old": "WRONG… BUT FINAL?",
- "script_old": "A judge misunderstood the crime, and prosecutors still couldn't retry the defendant. This is Evans versus Michigan, a U.S. Supreme Court case from twenty thirteen. A man was charged with burning other real property, a lesser arson charge in Michigan than burning a home. After the prosecution finished its case, the trial judge granted a directed verdict of acquittal. The judge believed the state had to prove the building wasn't a dwelling. But that wasn't actually an element of the crime. The judge added a requirement that didn't exist, and then found it unproven. Michigan's appeals courts said that wasn't a real acquittal, so the case could be tried again. The Supreme Court disagreed, eight to one. The double jeopardy rule bars a second trial after an acquittal, and an acquittal includes any ruling that the prosecution's evidence wasn't enough to establish criminal liability. Even if that ruling was legally wrong. The Court said the judge's error affects only the accuracy of the acquittal, not what it is. But here's the limit. This was a real acquittal on the evidence. It wasn't a dismissal over a typo or a technicality, and it's not a formula for beating charges. [loop] So the next time someone says a mistake can always be fixed, remember"
+ "script_old": "A judge misunderstood the crime, and prosecutors still couldn't retry the defendant. This is Evans versus Michigan, a U.S. Supreme Court case from twenty thirteen. A man was charged with burning other real property, a lesser arson charge in Michigan than burning a home. After the prosecution finished its case, the trial judge granted a directed verdict of acquittal. The judge believed the state had to prove the building wasn't a dwelling. But that wasn't actually an element of the crime. The judge added a requirement that didn't exist, and then found it unproven. Michigan's appeals courts said that wasn't a real acquittal, so the case could be tried again. The Supreme Court disagreed, eight to one. The double jeopardy rule bars a second trial after an acquittal, and an acquittal includes any ruling that the prosecution's evidence wasn't enough to establish criminal liability. Even if that ruling was legally wrong. The Court said the judge's error affects only the accuracy of the acquittal, not what it is. But here's the limit. This was a real acquittal on the evidence. It wasn't a dismissal over a typo or a technicality, and it's not a formula for beating charges. [loop] So the next time someone says a mistake can always be fixed, remember",
+ "script_simple": true
 }

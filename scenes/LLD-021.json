@@ -17,7 +17,7 @@
   "#lawtok",
   "#consumerrights"
  ],
- "script": "That gym waiver you signed might be worth nothing in New York. [disclaimer] New York's General Obligations Law has a section aimed at a specific kind of fine print. If you pay to use a pool, a gym, an amusement park, or a similar recreational place, any agreement that exempts the owner or operator from liability for its own negligence, or its employees' negligence, is void as against public policy and wholly unenforceable. So picture a hypothetical. You pay for a gym membership and sign a waiver saying the gym isn't responsible for anything. Then you get hurt because staff ignored a broken machine. Under this law, that waiver can't shield the gym from your negligence claim. But this is where the internet oversells it. First, the law covers certain paid recreational facilities. Not every sports release or instructional program falls under it. Second, getting hurt doesn't prove negligence. You still have to show the gym was careless, and that the carelessness caused the injury. Third, the gym can still argue you accepted the normal risks of the activity. So the waiver isn't magic, but neither is the statute. [loop] So the next time you sign a stack of gym paperwork, remember",
+ "script": "In New York, that gym waiver you signed might be legally meaningless. [disclaimer] Yes, the one you signed without reading! New York has a law aimed at this exact kind of fine print. If you pay to use a pool, a gym, an amusement park, or a place like that, any deal that says the owner isn't responsible for their own carelessness, or their staff's carelessness, is void. It's against public policy. It doesn't count! So picture this. You pay for a gym membership. You sign a waiver that says the gym isn't responsible for anything. Then you get hurt because the staff ignored a broken machine. Under this law, that waiver can't protect the gym from your claim. But this is where the internet goes too far. The law only covers certain places you pay to have fun at. Not every sports form or class falls under it. And getting hurt doesn't prove the gym messed up. You still have to show the gym was careless, and that the carelessness actually caused your injury. And the gym can still argue you accepted the normal risks of working out. You dropped the weight on your own foot? That's on you! So the waiver isn't magic. But neither is the law. [loop] So the next time you sign a stack of gym paperwork, remember",
  "publish_at": "2026-11-11T19:00:00-05:00",
  "sources": [
   "https://www.nysenate.gov/legislation/laws/GOB/5-326"
@@ -42,7 +42,7 @@
    ]
   },
   {
-   "at": "new york's general obligations",
+   "at": "new york has a law",
    "bg": "white",
    "cast": [
     {
@@ -74,7 +74,7 @@
    ]
   },
   {
-   "at": "is void as against",
+   "at": "it doesn't count",
    "bg": "white",
    "cast": [
     {
@@ -82,17 +82,17 @@
     }
    ],
    "card": "VOID & UNENFORCEABLE",
-   "card_at": "wholly unenforceable",
+   "card_at": "it doesn't count",
    "zooms": [
     {
-     "at": "wholly unenforceable",
+     "at": "it doesn't count",
      "amount": 1.18,
      "hold": 0.9
     }
    ]
   },
   {
-   "at": "so picture a hypothetical",
+   "at": "so picture this",
    "bg": "bg-office",
    "cast": [
     {
@@ -105,7 +105,7 @@
     }
    ],
    "card": "HYPOTHETICAL",
-   "card_at": "picture a hypothetical"
+   "card_at": "so picture this"
   },
   {
    "at": "under this law",
@@ -140,7 +140,7 @@
    ]
   },
   {
-   "at": "not every sports release",
+   "at": "not every sports form",
    "bg": "white",
    "cast": [
     {
@@ -156,7 +156,7 @@
    ]
   },
   {
-   "at": "second getting hurt",
+   "at": "and getting hurt doesn't",
    "bg": "bg-courtroom",
    "cast": [
     {
@@ -169,10 +169,10 @@
     }
    ],
    "card": "INJURY ≠ NEGLIGENCE",
-   "card_at": "doesn't prove negligence"
+   "card_at": "and getting hurt doesn't"
   },
   {
-   "at": "third the gym can still",
+   "at": "and the gym can still",
    "bg": "white",
    "cast": [
     {
@@ -197,7 +197,7 @@
     }
    ],
    "card": "NEITHER SIDE IS MAGIC",
-   "card_at": "neither is the statute"
+   "card_at": "so the waiver isn't magic"
   },
   {
    "at": "send this to",
@@ -209,7 +209,7 @@
    ]
   },
   {
-   "at": "so the next time you sign",
+   "at": "so the next time",
    "bg": "bg-office",
    "loop": true
   }
@@ -217,5 +217,6 @@
  "music_vibe": "quirky",
  "share_line": "Send this to the friend who should be legally banned from every gym",
  "hook_old": "THE WAIVER MIGHT BE VOID",
- "script_old": "You signed the gym waiver, but in New York, that doesn't always mean the gym escapes a negligence claim. New York's General Obligations Law has a section aimed at a specific kind of fine print. If you pay to use a pool, a gym, an amusement park, or a similar recreational place, any agreement that exempts the owner or operator from liability for its own negligence, or its employees' negligence, is void as against public policy and wholly unenforceable. So picture a hypothetical. You pay for a gym membership and sign a waiver saying the gym isn't responsible for anything. Then you get hurt because staff ignored a broken machine. Under this law, that waiver can't shield the gym from your negligence claim. But this is where the internet oversells it. First, the law covers certain paid recreational facilities. Not every sports release or instructional program falls under it. Second, getting hurt doesn't prove negligence. You still have to show the gym was careless, and that the carelessness caused the injury. Third, the gym can still argue you accepted the normal risks of the activity. So the waiver isn't magic, but neither is the statute. [loop] So the next time you sign a stack of gym paperwork, remember"
+ "script_old": "You signed the gym waiver, but in New York, that doesn't always mean the gym escapes a negligence claim. New York's General Obligations Law has a section aimed at a specific kind of fine print. If you pay to use a pool, a gym, an amusement park, or a similar recreational place, any agreement that exempts the owner or operator from liability for its own negligence, or its employees' negligence, is void as against public policy and wholly unenforceable. So picture a hypothetical. You pay for a gym membership and sign a waiver saying the gym isn't responsible for anything. Then you get hurt because staff ignored a broken machine. Under this law, that waiver can't shield the gym from your negligence claim. But this is where the internet oversells it. First, the law covers certain paid recreational facilities. Not every sports release or instructional program falls under it. Second, getting hurt doesn't prove negligence. You still have to show the gym was careless, and that the carelessness caused the injury. Third, the gym can still argue you accepted the normal risks of the activity. So the waiver isn't magic, but neither is the statute. [loop] So the next time you sign a stack of gym paperwork, remember",
+ "script_simple": true
 }

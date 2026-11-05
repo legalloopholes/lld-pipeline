@@ -17,7 +17,7 @@
   "#lawtok",
   "#billionaires"
  ],
- "script": "The ultra-rich spend millions without selling a thing, and the tax rules let them. [disclaimer] People call it buy, borrow, die. It's shorthand, not a legal term, for how a few long-standing U.S. tax rules can work together. Step one: buy assets, like stock or real estate, that grow in value. As long as you don't sell, that gain generally isn't taxed. Step two: borrow against those assets for spending money. Loan proceeds generally aren't income, because, as the IRS puts it, you have an obligation to repay the lender. Step three: when the owner dies, heirs generally get a tax basis equal to the property's fair market value on the date of death. So gains from before death may never be taxed as income. That's the theory. Now the reality check. Loans cost interest, and it has to be paid. If the assets fall, the lender can demand more collateral, or sell them. If a debt is forgiven, that can be taxable income. Death doesn't erase the loan; the estate still owes it. Large estates can face estate tax. And the basis rule works both ways: if the property lost value, the basis goes down too. So it's a planning concept, not a zero-tax guarantee, and not advice for anyone. [loop] So the next time you wonder how billionaires pay for things, remember",
+ "script": "Billionaires buy yachts without selling anything, then die, and the gains may never get taxed. [disclaimer] People call it buy, borrow, die! It's not a legal term. It's a nickname for how a few old American tax rules work together. Step one. Buy stuff that goes up in value, like stock or real estate. As long as you don't sell, you generally don't pay tax on that growth. Step two. Borrow money against that stuff, and spend the loan! A loan generally isn't income, because you have to pay it back. Step three. When the owner dies, the heirs generally get the property at its value on the day of death. So all that growth from before? It may never get taxed as income. Wild, right? That's the theory. Now here's the reality check. Loans cost interest, and someone has to pay it. If the stock crashes, the bank can demand more, or sell it. If a debt gets forgiven, that can be taxed. Dying doesn't erase the loan. The estate still owes it! Big estates can owe estate tax. And the rule cuts both ways. If the property lost value, that resets lower too. So it's a planning idea, not a guarantee of zero tax, and not advice for anyone. [loop] So the next time you wonder how billionaires pay for things, remember",
  "publish_at": "2026-11-18T12:00:00-05:00",
  "sources": [
   "https://www.irs.gov/pub/irs-tege/westernoctober2010.pdf",
@@ -60,7 +60,7 @@
    ]
   },
   {
-   "at": "step one buy assets",
+   "at": "buy stuff that goes up",
    "bg": "bg-office",
    "cast": [
     {
@@ -77,7 +77,7 @@
    ]
   },
   {
-   "at": "step two borrow",
+   "at": "borrow money against that",
    "bg": "bg-office",
    "cast": [
     {
@@ -94,7 +94,7 @@
    ]
   },
   {
-   "at": "step three when the owner",
+   "at": "when the owner dies",
    "bg": "white",
    "cast": [
     {
@@ -102,10 +102,10 @@
     }
    ],
    "card": "BASIS RESETS AT DEATH",
-   "card_at": "date of death",
+   "card_at": "when the owner dies",
    "zooms": [
     {
-     "at": "date of death",
+     "at": "when the owner dies",
      "amount": 1.18,
      "hold": 0.9
     }
@@ -120,7 +120,7 @@
     }
    ],
    "card": "REALITY CHECK",
-   "card_at": "reality check"
+   "card_at": "that's the theory"
   },
   {
    "at": "loans cost interest",
@@ -139,7 +139,7 @@
    ]
   },
   {
-   "at": "if the assets fall",
+   "at": "if the stock crashes",
    "bg": "white",
    "cast": [
     {
@@ -155,7 +155,7 @@
    ]
   },
   {
-   "at": "death doesn't erase",
+   "at": "dying doesn't erase the loan",
    "bg": "bg-office",
    "cast": [
     {
@@ -172,7 +172,7 @@
    ]
   },
   {
-   "at": "and the basis rule works",
+   "at": "and the rule cuts",
    "bg": "white",
    "cast": [
     {
@@ -188,7 +188,7 @@
    ]
   },
   {
-   "at": "so it's a planning",
+   "at": "so it's a planning idea",
    "bg": "bg-office",
    "cast": [
     {
@@ -197,7 +197,7 @@
     }
    ],
    "card": "NOT A ZERO-TAX GUARANTEE",
-   "card_at": "a planning concept"
+   "card_at": "so it's a planning idea"
   },
   {
    "at": "send this to",
@@ -209,7 +209,7 @@
    ]
   },
   {
-   "at": "so the next time you wonder",
+   "at": "so the next time",
    "bg": "bg-office",
    "loop": true
   }
@@ -217,5 +217,6 @@
  "music_vibe": "upbeat",
  "share_line": "Send this to the friend who borrows money and plans to die owing you",
  "hook_old": "SPEND MILLIONS, SELL NOTHING?",
- "script_old": "How can someone spend millions without selling the investments that made them rich? People call it buy, borrow, die. It's shorthand, not a legal term, for how a few long-standing U.S. tax rules can work together. Step one: buy assets, like stock or real estate, that grow in value. As long as you don't sell, that gain generally isn't taxed. Step two: borrow against those assets for spending money. Loan proceeds generally aren't income, because, as the IRS puts it, you have an obligation to repay the lender. Step three: when the owner dies, heirs generally get a tax basis equal to the property's fair market value on the date of death. So gains from before death may never be taxed as income. That's the theory. Now the reality check. Loans cost interest, and it has to be paid. If the assets fall, the lender can demand more collateral, or sell them. If a debt is forgiven, that can be taxable income. Death doesn't erase the loan; the estate still owes it. Large estates can face estate tax. And the basis rule works both ways: if the property lost value, the basis goes down too. So it's a planning concept, not a zero-tax guarantee, and not advice for anyone. [loop] So the next time you wonder how billionaires pay for things, remember"
+ "script_old": "How can someone spend millions without selling the investments that made them rich? People call it buy, borrow, die. It's shorthand, not a legal term, for how a few long-standing U.S. tax rules can work together. Step one: buy assets, like stock or real estate, that grow in value. As long as you don't sell, that gain generally isn't taxed. Step two: borrow against those assets for spending money. Loan proceeds generally aren't income, because, as the IRS puts it, you have an obligation to repay the lender. Step three: when the owner dies, heirs generally get a tax basis equal to the property's fair market value on the date of death. So gains from before death may never be taxed as income. That's the theory. Now the reality check. Loans cost interest, and it has to be paid. If the assets fall, the lender can demand more collateral, or sell them. If a debt is forgiven, that can be taxable income. Death doesn't erase the loan; the estate still owes it. Large estates can face estate tax. And the basis rule works both ways: if the property lost value, the basis goes down too. So it's a planning concept, not a zero-tax guarantee, and not advice for anyone. [loop] So the next time you wonder how billionaires pay for things, remember",
+ "script_simple": true
 }

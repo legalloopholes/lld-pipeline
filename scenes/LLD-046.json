@@ -17,7 +17,7 @@
   "#lawtok",
   "#truestory"
  ],
- "script": "Pepsi put a fighter jet in an ad, and one man actually tried to collect it. [disclaimer] This is Leonard versus PepsiCo. In the nineteen nineties, a Pepsi Stuff commercial showed a teenager flying a Harrier jet to school, with the on-screen text: Harrier fighter, seven million Pepsi points. The catalog didn't list a jet. John Leonard raised about seven hundred thousand dollars. He sent an order form for one Harrier jet, fifteen original Pepsi points, and a check for seven hundred thousand eight dollars and fifty cents, to cover the rest of the points. PepsiCo sent the check back. Leonard sued. In nineteen ninety-nine, a federal court ruled for PepsiCo, for three reasons. First, the commercial was an advertisement, not an offer. Second, no reasonable person would think the jet was serious. The court called it zany humor, and said that price for a jet worth about twenty-three million dollars was a deal too good to be true. Third, there was no signed writing to satisfy the statute of frauds. In two thousand, the appeals court affirmed. So he didn't get the jet. Here's the nuance. Some ads can be real offers, if they're specific enough. This one just wasn't. [loop] So the next time an ad promises you a fighter jet, remember",
+ "script": "A man sent Pepsi a check for seven hundred thousand dollars to claim a fighter jet. Then he sued. [disclaimer] This is Leonard versus PepsiCo. Back in the nineties, Pepsi ran a commercial where a teenager flies a fighter jet to school! And the screen says, Harrier fighter, seven million Pepsi points. But the prize catalog didn't have a jet in it. So a guy named John Leonard raised about seven hundred thousand dollars. He sent in the order form, fifteen Pepsi points, and a check for the rest. A check for seven hundred thousand dollars! For a jet! Pepsi sent the check back. So he sued! And in nineteen ninety nine, a federal court sided with Pepsi, for three reasons. Reason one, the commercial was an ad, not a real offer. Reason two, no reasonable person would think the jet was serious. The court called it zany humor, and said that price for a jet worth about twenty three million dollars was way too good to be true. Reason three, there was no signed paperwork, which a deal that size needed. An appeals court agreed later. So no jet! Here's the nuance. Some ads can be real offers, if they're specific enough. This one just wasn't. [loop] So the next time an ad promises you a fighter jet, remember",
  "publish_at": "2026-11-24T12:00:00-05:00",
  "sources": [
   "https://law.justia.com/cases/federal/district-courts/FSupp2/88/116/2579076/",
@@ -59,7 +59,7 @@
    ]
   },
   {
-   "at": "in the nineteen nineties",
+   "at": "back in the nineties",
    "bg": "white",
    "cast": [
     {
@@ -75,7 +75,7 @@
    ]
   },
   {
-   "at": "the catalog didn't list",
+   "at": "but the prize catalog",
    "bg": "white",
    "cast": [
     {
@@ -91,7 +91,7 @@
    ]
   },
   {
-   "at": "john leonard raised",
+   "at": "so a guy named",
    "bg": "bg-office",
    "cast": [
     {
@@ -100,17 +100,17 @@
     }
    ],
    "card": "A $700,008.50 CHECK",
-   "card_at": "check for",
+   "card_at": "so a guy named",
    "zooms": [
     {
-     "at": "check for",
+     "at": "so a guy named",
      "amount": 1.18,
      "hold": 0.9
     }
    ]
   },
   {
-   "at": "pepsico sent the check back",
+   "at": "pepsi sent the check",
    "bg": "bg-courtroom",
    "cast": [
     {
@@ -123,10 +123,10 @@
     }
    ],
    "card": "LEONARD SUES",
-   "card_at": "leonard sued"
+   "card_at": "pepsi sent the check"
   },
   {
-   "at": "first the commercial",
+   "at": "reason one the commercial",
    "bg": "white",
    "cast": [
     {
@@ -142,7 +142,7 @@
    ]
   },
   {
-   "at": "second no reasonable person",
+   "at": "reason two no reasonable",
    "bg": "bg-courtroom",
    "cast": [
     {
@@ -155,10 +155,10 @@
     }
    ],
    "card": "“ZANY HUMOR”",
-   "card_at": "zany humor"
+   "card_at": "reason two no reasonable"
   },
   {
-   "at": "third there was no",
+   "at": "reason three there was no",
    "bg": "white",
    "cast": [
     {
@@ -174,7 +174,7 @@
    ]
   },
   {
-   "at": "in two thousand",
+   "at": "an appeals court agreed",
    "bg": "bg-courtroom",
    "cast": [
     {
@@ -187,7 +187,7 @@
     }
    ],
    "card": "NO JET",
-   "card_at": "didn't get the jet"
+   "card_at": "an appeals court agreed"
   },
   {
    "at": "here's the nuance",
@@ -215,7 +215,7 @@
    ]
   },
   {
-   "at": "so the next time an ad",
+   "at": "so the next time",
    "bg": "bg-shop",
    "loop": true
   }
@@ -223,5 +223,6 @@
  "music_vibe": "quirky",
  "share_line": "Send this to the friend dumb enough to try to buy a fighter jet with soda",
  "hook_old": "7,000,000 POINTS = A JET?",
- "script_old": "A Pepsi ad showed a fighter jet for points, and one man actually tried to collect. This is Leonard versus PepsiCo. In the nineteen nineties, a Pepsi Stuff commercial showed a teenager flying a Harrier jet to school, with the on-screen text: Harrier fighter, seven million Pepsi points. The catalog didn't list a jet. John Leonard raised about seven hundred thousand dollars. He sent an order form for one Harrier jet, fifteen original Pepsi points, and a check for seven hundred thousand eight dollars and fifty cents, to cover the rest of the points. PepsiCo sent the check back. Leonard sued. In nineteen ninety-nine, a federal court ruled for PepsiCo, for three reasons. First, the commercial was an advertisement, not an offer. Second, no reasonable person would think the jet was serious. The court called it zany humor, and said that price for a jet worth about twenty-three million dollars was a deal too good to be true. Third, there was no signed writing to satisfy the statute of frauds. In two thousand, the appeals court affirmed. So he didn't get the jet. Here's the nuance. Some ads can be real offers, if they're specific enough. This one just wasn't. [loop] So the next time an ad promises you a fighter jet, remember"
+ "script_old": "A Pepsi ad showed a fighter jet for points, and one man actually tried to collect. This is Leonard versus PepsiCo. In the nineteen nineties, a Pepsi Stuff commercial showed a teenager flying a Harrier jet to school, with the on-screen text: Harrier fighter, seven million Pepsi points. The catalog didn't list a jet. John Leonard raised about seven hundred thousand dollars. He sent an order form for one Harrier jet, fifteen original Pepsi points, and a check for seven hundred thousand eight dollars and fifty cents, to cover the rest of the points. PepsiCo sent the check back. Leonard sued. In nineteen ninety-nine, a federal court ruled for PepsiCo, for three reasons. First, the commercial was an advertisement, not an offer. Second, no reasonable person would think the jet was serious. The court called it zany humor, and said that price for a jet worth about twenty-three million dollars was a deal too good to be true. Third, there was no signed writing to satisfy the statute of frauds. In two thousand, the appeals court affirmed. So he didn't get the jet. Here's the nuance. Some ads can be real offers, if they're specific enough. This one just wasn't. [loop] So the next time an ad promises you a fighter jet, remember",
+ "script_simple": true
 }

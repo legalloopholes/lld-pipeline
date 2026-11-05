@@ -254,6 +254,12 @@ window.renderAt = (t, frame) => {
     const q = Math.min(1, (t - TL.share[0]) / 0.35), e = q * q * (3 - 2 * q);
     pos.sub(tgt).multiplyScalar(1 + 0.32 * e).add(tgt);
   }
+  // whip pan into every new scene (not the opening, not the loop ending)
+  const si = TL.scenes.indexOf(sc);
+  if (si > 0 && !sc.loop && age < 0.24) {
+    const q = 1 - age / 0.24, ang = (si % 2 ? 1 : -1) * 0.42 * q * q;
+    const d = pos.clone().sub(tgt); d.applyAxisAngle(new THREE.Vector3(0, 1, 0), ang); pos.copy(tgt).add(d);
+  }
   const basePos = pos.clone(), baseTgt = tgt.clone();
   const z = zoomAmount(sc, t);
   if (z > 1.001 && larryHead) {                               // move toward Larry's face, keep the same angle
@@ -265,7 +271,22 @@ window.renderAt = (t, frame) => {
   camera.updateProjectionMatrix();
   v3.set(L.anchorX, 0, L.anchorZ).project(camera);
   const off = ((1 - (v3.y + 1) / 2) * H - FEET_FRAC * H) / z;
-  camera.position.copy(pos); camera.lookAt(tgt); camera.setViewOffset(W, H, 0, off, W, H); camera.updateMatrixWorld(true);
+  camera.position.copy(pos); camera.lookAt(tgt); camera.setViewOffset(W, H, 0, off, W, H);
+  // shakes on the big sound hits, quick dutch tilts on exclamations
+  let roll = 0;
+  for (const s0 of TL.shakes || []) {
+    const a = t - s0; if (a < 0 || a > 0.38) continue;
+    const k = (1 - a / 0.38) ** 2;
+    camera.position.x += 0.22 * k * Math.sin(a * 83); camera.position.y += 0.16 * k * Math.sin(a * 61 + 1.3);
+    roll += 0.035 * k * Math.sin(a * 71);
+  }
+  for (const tl of TL.tilts || []) {
+    const a = t - tl.t; if (a < 0 || a > 1.1) continue;
+    const k = a < 0.12 ? a / 0.12 : (a < 0.85 ? 1 : Math.max(0, 1 - (a - 0.85) / 0.25));
+    roll += (tl.dir || 1) * 0.065 * k;
+  }
+  if (roll) camera.rotateZ(roll);
+  camera.updateMatrixWorld(true);
   renderer.render(scene, camera);
   return true;
 };

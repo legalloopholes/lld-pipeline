@@ -419,6 +419,28 @@ SHOCK = {'kill', 'killed', 'murder', 'death', 'destroyed', 'seized', 'arrested',
 for (a, b, wtxt), n_ in zip(words, wn):
     if n_ in MONEY: SFX_EVENTS.append((b, 'cash'))
     if n_ in SHOCK: SFX_EVENTS.append((b + 0.05, 'gasp'))
+# energy: every exclamation gets a quick punch-in and a dutch tilt (no sound of its own)
+TILTS = []
+_planned = [z['t'] for sc in scenes for z in sc['zooms']]
+# the recognizer rarely writes "!", so the exclamations come from the episode script itself
+EXCL_T, _pos = [], 0
+_scr = re.sub(r'\[[^\]]*\]', ' ', ((plan or {}).get('script') or '').split('[loop]')[0])
+for _sent in re.findall(r'[^.?!]+[.?!]+', _scr):
+    _w = [x for x in _sent.split() if norm(x)][:4]
+    if len(_w) < 1: continue
+    _t, _i = find(' '.join(_w), _pos)
+    if _t is None or _i < _pos: continue
+    _pos = _i + 1
+    if _sent.strip().endswith('!'): EXCL_T.append(_t)
+for t0_ in EXCL_T:
+    if t0_ < 2.5: continue
+    if SHARE_T0 is not None and t0_ >= SHARE_T0 - 0.5: continue
+    TILTS.append({'t': t0_, 'dir': 1 if len(TILTS) % 2 == 0 else -1})
+    if all(abs(t0_ - p) > 1.2 for p in _planned):
+        for sc in reversed(scenes):
+            if sc['t'] <= t0_ and not sc.get('loop'):
+                sc['zooms'].append({'t': t0_, 'amount': 1.1, 'hold': 0.55, 'sfx': 'none', 'auto': True}); _planned.append(t0_); break
+
 # keep it tasteful: per-sound limits and no two sounds piled on top of each other
 LIMITS = {'boom': (0, 6), 'alert': (2, 12), 'huh': (3, 10), 'error': (2, 12), 'ding': (2, 15),
           'correct': (2, 15), 'boing': (2, 12), 'stinger': (0, 20), 'hit': (10, 4), 'vine': (8, 5), 'quack': (1, 99), 'scratch': (2, 10), 'bruh': (1, 99),
@@ -445,6 +467,14 @@ for s_ in sentences:
         if te_ - _last >= 6 and all(abs(te_ - x) > 0.35 for x in _feat):
             SFX_EVENTS.append((te_, 'vine')); _feat.append(te_); _last = te_; break
 SFX_EVENTS.sort()
+# reaction stickers: a big emoji pops beside the caption on the moments that already have a sound
+STICKER_FOR = {'gasp': '\U0001F631', 'cash': '\U0001F4B0', 'huh': '\U0001F914', 'alert': '\u2757', 'error': '\u274C',
+               'quack': '\U0001F921', 'scratch': '\U0001F62C', 'trombone': '\U0001F62D', 'bruh': '\U0001F480', 'vine': '\U0001F4A5'}
+STICKERS = []
+for t_, n_ in SFX_EVENTS:
+    if n_ in STICKER_FOR and t_ > 2.5 and (not STICKERS or t_ - STICKERS[-1][0] >= 2.5) and len(STICKERS) < 14 \
+            and not (BRAND.get('stickers', True) is False):
+        STICKERS.append((t_, STICKER_FOR[n_], len(STICKERS) % 2))
 
 def scene_at(t):
     for sc in reversed(scenes):
@@ -668,14 +698,14 @@ def apply_zoom(frame, sc, t):
 _legal = None
 def draw_legal(frame, t):
     global _legal
-    if t > 3.5: return
+    if t > float(BRAND.get('legal_line_seconds', 9999)): return
     if _legal is None:
         f = load_font(34); d0 = ImageDraw.Draw(Image.new('RGBA', (1, 1)))
         bb = d0.textbbox((0, 0), LEGAL_LINE, font=f, stroke_width=4)
         _legal = Image.new('RGBA', (bb[2] - bb[0] + 10, bb[3] - bb[1] + 10), (0, 0, 0, 0))
         ImageDraw.Draw(_legal).text((5 - bb[0], 5 - bb[1]), LEGAL_LINE, font=f, fill=(255, 255, 255, 235),
                                     stroke_width=4, stroke_fill=(11, 16, 32, 220))
-    a = 1.0 if t < 3.0 else max(0.0, (3.5 - t) / 0.5)
+    a = 1.0 if t < 3.0 else 0.8                             # stays up the whole video (the spoken disclaimer is gone)
     im = _legal if a >= 1 else Image.fromarray((np.array(_legal) * np.array([1, 1, 1, a])).astype(np.uint8), 'RGBA')
     frame.alpha_composite(im, ((W - im.width) // 2, 24))
 
@@ -702,6 +732,39 @@ def draw_handle(frame, t):
 
 _share = None
 def share_active(t): return SHARE_T0 is not None and SHARE_T0 <= t < SHARE_T1
+_emoji_font, _emoji_cache = None, {}
+def _emoji(ch):
+    global _emoji_font
+    if ch in _emoji_cache: return _emoji_cache[ch]
+    if _emoji_font is None:
+        for f, sz in (('/usr/share/fonts/truetype/noto/NotoColorEmoji.ttf', 109), ('/System/Library/Fonts/Apple Color Emoji.ttc', 160)):
+            try: _emoji_font = ImageFont.truetype(f, sz); break
+            except Exception: pass
+        if _emoji_font is None: _emoji_font = False
+    if not _emoji_font: _emoji_cache[ch] = None; return None
+    im = Image.new('RGBA', (220, 220), (0, 0, 0, 0))
+    try: ImageDraw.Draw(im).text((110, 110), ch, font=_emoji_font, embedded_color=True, anchor='mm')
+    except Exception: _emoji_cache[ch] = None; return None
+    bb = im.getbbox()
+    im = im.crop(bb) if bb else im
+    im = im.resize((170, round(im.height * 170 / max(1, im.width))), Image.LANCZOS)
+    _emoji_cache[ch] = im
+    return im
+def draw_stickers(frame, t):
+    for t0_, ch, side in STICKERS:
+        a = t - t0_
+        if a < 0 or a > 1.0: continue
+        im = _emoji(ch)
+        if im is None: return
+        s_ = (a / 0.12) * 1.25 if a < 0.12 else (1.25 - 0.25 * min(1, (a - 0.12) / 0.1))
+        if a > 0.85: s_ *= max(0.0, (1.0 - a) / 0.15)
+        if s_ <= 0.03: continue
+        rot = 12 * math.sin(a * 9) * (1 if side else -1)
+        im2 = im.resize((max(1, round(im.width * s_)), max(1, round(im.height * s_))), Image.BILINEAR).rotate(rot, expand=True, resample=Image.BILINEAR)
+        cx = W * (0.84 if side else 0.16)
+        frame.alpha_composite(im2, (round(cx - im2.width / 2), round(CAP_Y_STICKER - im2.height / 2)))
+CAP_Y_STICKER = 1245
+
 def draw_share(frame, t):
     global _share
     if not share_active(t): return
@@ -792,7 +855,9 @@ def render_3d_base(nframes):
                       'cast': [{k: v for k, v in c.items() if k in ('id', 'x', 'anim', 'from')} for c in sc.get('cast', [])],
                       'items': items_3d(sc), 'zooms': [{'t': z['t'], 'amount': z.get('amount', 1.18), 'hold': z.get('hold', 0.9)} for z in sc['zooms']]}
                      for sc in scenes],
-          'share': None if SHARE_T0 is None else [SHARE_T0, SHARE_T1]}   # camera pulls back to make room for the share card
+          'share': None if SHARE_T0 is None else [SHARE_T0, SHARE_T1],   # camera pulls back to make room for the share card
+          'shakes': [t_ for t_, n_ in SFX_EVENTS if n_ in ('vine', 'hit', 'boom', 'scratch', 'airhorn')],
+          'tilts': TILTS}
     tl_path, base = os.path.abspath(out + '.timeline.json'), os.path.abspath(out + '.base3d.mp4')
     json.dump(tl, open(tl_path, 'w'))
     if os.environ.get('LLD_TIMELINE_ONLY'): raise SystemExit(0)
@@ -854,6 +919,7 @@ for fi in range(nframes):
         frame = apply_zoom(frame, sc, t)
     draw_legal(frame, t)
     draw_share(frame, t)
+    draw_stickers(frame, t)
     draw_handle(frame, t)
     proc.stdin.write(frame.convert('RGB').tobytes())
 proc.stdin.close()

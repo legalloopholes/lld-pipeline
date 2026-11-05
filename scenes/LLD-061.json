@@ -17,7 +17,7 @@
   "#charity",
   "#lawtok"
  ],
- "script": "Peter Pan's copyright ran out, and a children's hospital still gets paid. [disclaimer] In nineteen twenty-nine, J.M. Barrie gave the rights to Peter Pan to Great Ormond Street Hospital, a children's hospital in London. Normally, when a copyright expires, the work enters the public domain, and anyone can use it without paying. In the U.K., the copyright in Peter Pan expired at the end of nineteen eighty-seven. But Parliament did something unusual. In the Copyright, Designs and Patents Act of nineteen eighty-eight, section three hundred one gives the hospital's trustees a right to a royalty for public performance, commercial publication, or communication to the public of the play, or any adaptation of it, even though the copyright had expired. So the copyright clock stopped, but a separate royalty stream kept flowing to the hospital. The hospital says all U.K. performances of Peter Pan support its charity, including theatre, school and pantomime productions. And it has never disclosed how much Peter Pan has raised, in keeping with Barrie's wishes. Here's the limit. This is a special royalty right created by U.K. law. It isn't a worldwide copyright that lasts forever, and it doesn't make anyone the owner of every fairy tale or flying boy. [loop] So the next time you see a Peter Pan pantomime, remember",
+ "script": "Peter Pan's copyright expired decades ago, and a hospital in London still gets paid when it's performed in the U.K. [disclaimer] Here's the story. In nineteen twenty nine, the author of Peter Pan, J M Barrie, gave the rights to a children's hospital in London, Great Ormond Street. Amazing, right? Normally, when a copyright runs out, anyone can use the story for free. And in the U.K., the copyright on Peter Pan ran out at the end of nineteen eighty seven. But then Parliament did something really unusual. In a law from nineteen eighty eight, it gave the hospital a special right. A right to get paid when the play is performed in public, published for money, or shared with the public. Even adaptations! Even though the copyright was over. So the copyright clock stopped, but the money kept flowing to the hospital! The hospital says every U.K. performance of Peter Pan supports its charity. Theater shows, school plays, all of it. And it has never said how much Peter Pan has raised, because that's what Barrie wanted. Here's the limit. This is a special right created by U.K. law. It's not a forever copyright around the world. And it doesn't make anyone the owner of every fairy tale or flying boy. [loop] So the next time you see a Peter Pan pantomime, remember",
  "publish_at": "2026-12-01T19:00:00-05:00",
  "sources": [
   "https://www.legislation.gov.uk/ukpga/1988/48/section/301/2003-10-31?view=plain",
@@ -42,7 +42,7 @@
    ]
   },
   {
-   "at": "barrie gave the rights",
+   "at": "the author of peter pan",
    "bg": "white",
    "cast": [
     {
@@ -74,7 +74,7 @@
    ]
   },
   {
-   "at": "in the uk the copyright",
+   "at": "and in the uk the copyright",
    "bg": "white",
    "cast": [
     {
@@ -82,10 +82,10 @@
     }
    ],
    "card": "EXPIRED: END OF 1987",
-   "card_at": "expired at the end"
+   "card_at": "and in the uk the copyright"
   },
   {
-   "at": "but parliament did something",
+   "at": "but then parliament did",
    "bg": "white",
    "cast": [
     {
@@ -101,7 +101,7 @@
    ],
    "zooms": [
     {
-     "at": "something unusual",
+     "at": "but then parliament did",
      "amount": 1.18,
      "hold": 0.9
     }
@@ -116,10 +116,10 @@
     }
    ],
    "card": "ROYALTIES KEEP FLOWING",
-   "card_at": "royalty stream"
+   "card_at": "so the copyright clock stopped"
   },
   {
-   "at": "the hospital says",
+   "at": "the hospital says every",
    "bg": "white",
    "cast": [
     {
@@ -135,7 +135,7 @@
    ]
   },
   {
-   "at": "and it has never disclosed",
+   "at": "and it has never said",
    "bg": "white",
    "cast": [
     {
@@ -167,7 +167,7 @@
    ]
   },
   {
-   "at": "it isn't a worldwide",
+   "at": "it's not a forever",
    "bg": "white",
    "cast": [
     {
@@ -175,7 +175,7 @@
     }
    ],
    "card": "NOT A FOREVER COPYRIGHT",
-   "card_at": "flying boy"
+   "card_at": "it's not a forever"
   },
   {
    "at": "send this to",
@@ -187,7 +187,7 @@
    ]
   },
   {
-   "at": "so the next time you see",
+   "at": "so the next time",
    "bg": "white",
    "loop": true
   }
@@ -195,5 +195,6 @@
  "music_vibe": "quirky",
  "share_line": "Send this to the friend who flat out refuses to grow up",
  "hook_old": "EXPIRED… STILL PAYING?",
- "script_old": "Peter Pan's copyright expired in the U.K., and a children's hospital can still collect royalties. In nineteen twenty-nine, J.M. Barrie gave the rights to Peter Pan to Great Ormond Street Hospital, a children's hospital in London. Normally, when a copyright expires, the work enters the public domain, and anyone can use it without paying. In the U.K., the copyright in Peter Pan expired at the end of nineteen eighty-seven. But Parliament did something unusual. In the Copyright, Designs and Patents Act of nineteen eighty-eight, section three hundred one gives the hospital's trustees a right to a royalty for public performance, commercial publication, or communication to the public of the play, or any adaptation of it, even though the copyright had expired. So the copyright clock stopped, but a separate royalty stream kept flowing to the hospital. The hospital says all U.K. performances of Peter Pan support its charity, including theatre, school and pantomime productions. And it has never disclosed how much Peter Pan has raised, in keeping with Barrie's wishes. Here's the limit. This is a special royalty right created by U.K. law. It isn't a worldwide copyright that lasts forever, and it doesn't make anyone the owner of every fairy tale or flying boy. [loop] So the next time you see a Peter Pan pantomime, remember"
+ "script_old": "Peter Pan's copyright expired in the U.K., and a children's hospital can still collect royalties. In nineteen twenty-nine, J.M. Barrie gave the rights to Peter Pan to Great Ormond Street Hospital, a children's hospital in London. Normally, when a copyright expires, the work enters the public domain, and anyone can use it without paying. In the U.K., the copyright in Peter Pan expired at the end of nineteen eighty-seven. But Parliament did something unusual. In the Copyright, Designs and Patents Act of nineteen eighty-eight, section three hundred one gives the hospital's trustees a right to a royalty for public performance, commercial publication, or communication to the public of the play, or any adaptation of it, even though the copyright had expired. So the copyright clock stopped, but a separate royalty stream kept flowing to the hospital. The hospital says all U.K. performances of Peter Pan support its charity, including theatre, school and pantomime productions. And it has never disclosed how much Peter Pan has raised, in keeping with Barrie's wishes. Here's the limit. This is a special royalty right created by U.K. law. It isn't a worldwide copyright that lasts forever, and it doesn't make anyone the owner of every fairy tale or flying boy. [loop] So the next time you see a Peter Pan pantomime, remember",
+ "script_simple": true
 }

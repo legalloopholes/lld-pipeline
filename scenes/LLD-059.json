@@ -17,7 +17,7 @@
   "#lawtok",
   "#police"
  ],
- "script": "The government can take your property, even if you're never convicted of a crime. [disclaimer] Under federal law, there are a few kinds of forfeiture. Criminal forfeiture is part of a criminal case, and it requires a conviction. Civil forfeiture is different. It's a case against the property itself, not the person. The Justice Department describes it this way: the government is the plaintiff, and the property is the defendant. And no criminal conviction is required. But the government still has to make its case. Under federal law, it has to prove by a preponderance of the evidence that the property is subject to forfeiture. And if the claim is that the property was used in a crime, there has to be a substantial connection between the property and the offense. Owners have defenses. An innocent owner, for example someone who didn't know about the illegal conduct, can protect their interest, though they have to prove it. And a court can reduce or eliminate a forfeiture that's grossly disproportional to the offense. Here's the limit. A temporary seizure isn't the same as a final forfeiture, state rules vary, and none of this means police can keep anything without evidence. [loop] So before you assume property can only be taken after a conviction, remember",
+ "script": "The government can take your cash and your car, and you never have to be convicted of anything. [disclaimer] Wait, what? Here's how. Under federal law, there are different kinds of forfeiture. Criminal forfeiture is part of a criminal case, and they need a conviction. But civil forfeiture is different. It's a case against the property itself. Not the person! The Justice Department explains it like this. The government is the one suing. And the property, like your cash or your car, is the defendant! And no criminal conviction is needed. But the government still has to prove its case. It has to show it's more likely than not that the property should be taken. And if they say the property was used in a crime, there has to be a real, solid connection between the property and the crime. And owners can fight back. An innocent owner, like someone who had no idea about the illegal stuff, can protect what's theirs, but they have to prove it. And a judge can cut down or cancel a forfeiture that's wildly out of proportion to the crime. Here's the limit. A temporary seizure isn't the same as losing it for good. State rules are different. And none of this means police can keep anything they want without evidence. [loop] So before you assume property can only be taken after a conviction, remember",
  "publish_at": "2026-11-30T19:00:00-05:00",
  "sources": [
   "https://www.law.cornell.edu/uscode/text/18/983",
@@ -59,7 +59,7 @@
    ]
   },
   {
-   "at": "civil forfeiture is different",
+   "at": "but civil forfeiture is different",
    "bg": "white",
    "cast": [
     {
@@ -67,17 +67,17 @@
     }
    ],
    "card": "CASE AGAINST THE PROPERTY",
-   "card_at": "against the property itself",
+   "card_at": "but civil forfeiture is different",
    "zooms": [
     {
-     "at": "against the property itself",
+     "at": "but civil forfeiture is different",
      "amount": 1.18,
      "hold": 0.9
     }
    ]
   },
   {
-   "at": "the justice department describes",
+   "at": "the justice department explains",
    "bg": "white",
    "cast": [
     {
@@ -93,7 +93,7 @@
    ]
   },
   {
-   "at": "but the government still",
+   "at": "but the government still has",
    "bg": "bg-courtroom",
    "cast": [
     {
@@ -106,10 +106,10 @@
     }
    ],
    "card": "PREPONDERANCE OF EVIDENCE",
-   "card_at": "preponderance"
+   "card_at": "but the government still has"
   },
   {
-   "at": "and if the claim",
+   "at": "and if they say",
    "bg": "white",
    "cast": [
     {
@@ -125,7 +125,7 @@
    ]
   },
   {
-   "at": "owners have defenses",
+   "at": "and owners can fight back",
    "bg": "white",
    "cast": [
     {
@@ -141,7 +141,7 @@
    ]
   },
   {
-   "at": "and a court can reduce",
+   "at": "and a judge can cut",
    "bg": "bg-courtroom",
    "cast": [
     {
@@ -154,7 +154,7 @@
     }
    ],
    "card": "GROSSLY DISPROPORTIONAL? REDUCED",
-   "card_at": "grossly disproportional"
+   "card_at": "and a judge can cut"
   },
   {
    "at": "here's the limit",
@@ -182,7 +182,7 @@
    ]
   },
   {
-   "at": "so before you assume property",
+   "at": "so before you assume",
    "bg": "bg-street",
    "loop": true
   }
@@ -190,5 +190,6 @@
  "music_vibe": "tense",
  "share_line": "Send this to the friend who carries way too much cash for no reason",
  "hook_old": "NO CONVICTION NEEDED?",
- "script_old": "You don't always need a criminal conviction for the government to seek forfeiture of your property. Under federal law, there are a few kinds of forfeiture. Criminal forfeiture is part of a criminal case, and it requires a conviction. Civil forfeiture is different. It's a case against the property itself, not the person. The Justice Department describes it this way: the government is the plaintiff, and the property is the defendant. And no criminal conviction is required. But the government still has to make its case. Under federal law, it has to prove by a preponderance of the evidence that the property is subject to forfeiture. And if the claim is that the property was used in a crime, there has to be a substantial connection between the property and the offense. Owners have defenses. An innocent owner, for example someone who didn't know about the illegal conduct, can protect their interest, though they have to prove it. And a court can reduce or eliminate a forfeiture that's grossly disproportional to the offense. Here's the limit. A temporary seizure isn't the same as a final forfeiture, state rules vary, and none of this means police can keep anything without evidence. [loop] So before you assume property can only be taken after a conviction, remember"
+ "script_old": "You don't always need a criminal conviction for the government to seek forfeiture of your property. Under federal law, there are a few kinds of forfeiture. Criminal forfeiture is part of a criminal case, and it requires a conviction. Civil forfeiture is different. It's a case against the property itself, not the person. The Justice Department describes it this way: the government is the plaintiff, and the property is the defendant. And no criminal conviction is required. But the government still has to make its case. Under federal law, it has to prove by a preponderance of the evidence that the property is subject to forfeiture. And if the claim is that the property was used in a crime, there has to be a substantial connection between the property and the offense. Owners have defenses. An innocent owner, for example someone who didn't know about the illegal conduct, can protect their interest, though they have to prove it. And a court can reduce or eliminate a forfeiture that's grossly disproportional to the offense. Here's the limit. A temporary seizure isn't the same as a final forfeiture, state rules vary, and none of this means police can keep anything without evidence. [loop] So before you assume property can only be taken after a conviction, remember",
+ "script_simple": true
 }

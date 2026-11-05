@@ -1,7 +1,7 @@
 {
  "video_id": "LLD-020",
  "episode": "E20",
- "hook": "PRINGLES: NOT CRISPS?",
+ "hook": "PRINGLES: NOT CHIPS?",
  "highlight": [
   "potato",
   "crisps",
@@ -17,7 +17,7 @@
   "#vat",
   "#lawtok"
  ],
- "script": "Pringles went to court to argue they aren't really potato crisps. [disclaimer] In the U.K., most food is zero-rated for VAT. But potato crisps are an exception, and they're taxed at the standard rate. The law covers potato crisps, potato sticks, potato puffs, and similar products made from the potato, or from potato flour. Procter and Gamble, which made Pringles at the time, argued Regular Pringles didn't fit. Their potato content was only about forty-two percent, and the company argued they weren't really similar to crisps. A VAT tribunal disagreed. Then the High Court sided with Procter and Gamble and ruled the snacks zero-rated. That's where a lot of retellings stop. But in May two thousand nine, the Court of Appeal restored the tribunal's decision. The judges said made from the potato doesn't mean made wholly of potato. Even ordinary crisps aren't one hundred percent potato. With more than forty percent potato flour, the tribunal could reasonably decide Pringles were made from potato and similar to crisps. One judge added that courts shouldn't invent a minimum percentage the law doesn't contain. So Pringles stayed in the taxed category. The early win didn't last, and the mixed recipe didn't save them. [loop] So before you argue a Pringle isn't a crisp, remember",
+ "script": "Pringles went to court to argue that Pringles are not potato chips. [disclaimer] Here's the setup. In the U.K., most food has no sales tax. But potato crisps are the exception! They get taxed. The law covers potato crisps, potato sticks, potato puffs, and similar snacks made from the potato, or from potato flour. And the company that made Pringles back then said, our snack doesn't fit! Only about forty two percent of it is potato. And it's not really like a crisp! First, a tax tribunal said, nope, it's taxed. Then a higher court said, actually, you're right, Pringles! No tax! And that's where a lot of videos stop the story. But wait! In two thousand nine, the Court of Appeal flipped it back. The judges said made from the potato doesn't mean made only of potato. Even normal crisps aren't pure potato! With more than forty percent potato flour, it was fair to say Pringles are made from potato and they're like crisps. One judge added that courts shouldn't make up a minimum percentage that the law never wrote. So Pringles stayed taxed. The early win didn't last, and the mixed recipe didn't save them. [loop] So before you argue a Pringle isn't a crisp, remember",
  "publish_at": "2026-11-11T12:00:00-05:00",
  "sources": [
   "https://www.bailii.org/ew/cases/EWCA/Civ/2009/407.html",
@@ -43,7 +43,7 @@
    ]
   },
   {
-   "at": "in the uk most food",
+   "at": "here's the setup",
    "bg": "bg-shop",
    "cast": [
     {
@@ -76,7 +76,7 @@
    ]
   },
   {
-   "at": "procter and gamble which made",
+   "at": "and the company that made",
    "bg": "white",
    "cast": [
     {
@@ -92,7 +92,7 @@
    ]
   },
   {
-   "at": "a vat tribunal disagreed",
+   "at": "a tax tribunal said",
    "bg": "bg-courtroom",
    "cast": [
     {
@@ -105,10 +105,10 @@
     }
    ],
    "card": "TRIBUNAL: TAXED",
-   "card_at": "tribunal disagreed"
+   "card_at": "a tax tribunal said"
   },
   {
-   "at": "then the high court",
+   "at": "then a higher court said",
    "bg": "bg-courtroom",
    "cast": [
     {
@@ -121,10 +121,10 @@
     }
    ],
    "card": "HIGH COURT: ZERO-RATED!",
-   "card_at": "sided with"
+   "card_at": "then a higher court said"
   },
   {
-   "at": "that's where a lot",
+   "at": "and that's where a lot",
    "bg": "white",
    "cast": [
     {
@@ -140,7 +140,7 @@
    ]
   },
   {
-   "at": "but in may",
+   "at": "but wait",
    "bg": "bg-courtroom",
    "cast": [
     {
@@ -153,10 +153,10 @@
     }
    ],
    "card": "COURT OF APPEAL: TAXED",
-   "card_at": "restored",
+   "card_at": "but wait",
    "zooms": [
     {
-     "at": "restored",
+     "at": "but wait",
      "amount": 1.18,
      "hold": 0.9
     }
@@ -195,7 +195,7 @@
    ]
   },
   {
-   "at": "so pringles stayed",
+   "at": "so pringles stayed taxed",
    "bg": "bg-shop",
    "cast": [
     {
@@ -204,7 +204,7 @@
     }
    ],
    "card": "STILL TAXED",
-   "card_at": "stayed in the taxed"
+   "card_at": "so pringles stayed taxed"
   },
   {
    "at": "send this to",
@@ -224,5 +224,6 @@
  "music_vibe": "quirky",
  "share_line": "Send this to the friend who'd eat the Pringles can if they could",
  "hook_old": "ARE PRINGLES CRISPS?",
- "script_old": "Pringles tried to argue their way out of a tax category for potato snacks, and the final appeal went badly. In the U.K., most food is zero-rated for VAT. But potato crisps are an exception, and they're taxed at the standard rate. The law covers potato crisps, potato sticks, potato puffs, and similar products made from the potato, or from potato flour. Procter and Gamble, which made Pringles at the time, argued Regular Pringles didn't fit. Their potato content was only about forty-two percent, and the company argued they weren't really similar to crisps. A VAT tribunal disagreed. Then the High Court sided with Procter and Gamble and ruled the snacks zero-rated. That's where a lot of retellings stop. But in May two thousand nine, the Court of Appeal restored the tribunal's decision. The judges said made from the potato doesn't mean made wholly of potato. Even ordinary crisps aren't one hundred percent potato. With more than forty percent potato flour, the tribunal could reasonably decide Pringles were made from potato and similar to crisps. One judge added that courts shouldn't invent a minimum percentage the law doesn't contain. So Pringles stayed in the taxed category. The early win didn't last, and the mixed recipe didn't save them. [loop] So before you argue a Pringle isn't a crisp, remember"
+ "script_old": "Pringles tried to argue their way out of a tax category for potato snacks, and the final appeal went badly. In the U.K., most food is zero-rated for VAT. But potato crisps are an exception, and they're taxed at the standard rate. The law covers potato crisps, potato sticks, potato puffs, and similar products made from the potato, or from potato flour. Procter and Gamble, which made Pringles at the time, argued Regular Pringles didn't fit. Their potato content was only about forty-two percent, and the company argued they weren't really similar to crisps. A VAT tribunal disagreed. Then the High Court sided with Procter and Gamble and ruled the snacks zero-rated. That's where a lot of retellings stop. But in May two thousand nine, the Court of Appeal restored the tribunal's decision. The judges said made from the potato doesn't mean made wholly of potato. Even ordinary crisps aren't one hundred percent potato. With more than forty percent potato flour, the tribunal could reasonably decide Pringles were made from potato and similar to crisps. One judge added that courts shouldn't invent a minimum percentage the law doesn't contain. So Pringles stayed in the taxed category. The early win didn't last, and the mixed recipe didn't save them. [loop] So before you argue a Pringle isn't a crisp, remember",
+ "script_simple": true
 }

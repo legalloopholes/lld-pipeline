@@ -18,7 +18,7 @@
   "#lawtok",
   "#business"
  ],
- "script": "Ford ripped the back seats out of brand-new vans, and it ended in a three hundred sixty-five million dollar settlement. [disclaimer] This is about U.S. import duties. Passenger vehicles were taxed at two point five percent. Cargo vehicles faced twenty-five percent. That's ten times higher. The Justice Department alleged that from two thousand nine to two thousand thirteen, Ford imported Transit Connect vans from Turkey dressed up as passenger vehicles, with temporary rear seats and other passenger features. According to the government, those seats were never used to carry passengers. After the vans cleared customs, the seats were allegedly removed, and the vans went back to being two-seat cargo vans. The settlement also covered allegations that Ford under-declared the value of some vehicles. In March twenty twenty-four, Ford agreed to pay three hundred sixty-five million dollars. But notice the wording. Those were allegations. The Justice Department itself said there was no determination of liability, and Ford didn't admit any. So this isn't a story about a loophole that worked. It's about where creative tariff planning can run into enforcement. And the rates and years here are history, not a guide to importing anything today. [loop] So the next time you see a van with an extra row of seats, remember",
+ "script": "The government says Ford put fake back seats in vans just to rip them out after customs. Ford paid three hundred sixty five million dollars. [disclaimer] Here's the story. When you bring cars into America, there's a tax at the border. Passenger cars? Two and a half percent. Cargo vans? Twenty five percent! That's ten times more. Now, the Justice Department said that for years, Ford shipped in Transit Connect vans from Turkey dressed up as passenger vans. Fake back seats and all! And according to the government, those seats never carried a single passenger. After the vans got through customs, the seats were allegedly ripped out, and the vans went right back to being two seat cargo vans. Sneaky! The deal also covered claims that Ford said some vans were worth less than they really were. And in twenty twenty four, Ford agreed to pay three hundred sixty five million dollars! But listen to the wording. Those were claims. Allegations. The Justice Department itself said there was no finding that Ford was liable, and Ford didn't admit anything. So this is not a story about a loophole that worked. It's about what happens when clever tax planning runs into the government. And these rates and years are history, not a guide to importing anything today. [loop] So the next time you see a van with an extra row of seats, remember",
  "publish_at": "2026-11-12T19:00:00-05:00",
  "sources": [
   "https://www.justice.gov/archives/opa/pr/ford-motor-company-agrees-pay-365m-settle-customs-civil-penalty-claims-relating",
@@ -44,7 +44,7 @@
    ]
   },
   {
-   "at": "this is about us import",
+   "at": "here's the story",
    "bg": "white",
    "cast": [
     {
@@ -60,7 +60,7 @@
    ]
   },
   {
-   "at": "cargo vehicles faced",
+   "at": "cargo vans",
    "bg": "white",
    "cast": [
     {
@@ -76,14 +76,14 @@
    ],
    "zooms": [
     {
-     "at": "ten times higher",
+     "at": "cargo vans",
      "amount": 1.18,
      "hold": 0.9
     }
    ]
   },
   {
-   "at": "the justice department alleged",
+   "at": "now the justice department said",
    "bg": "bg-harbor",
    "cast": [
     {
@@ -92,10 +92,10 @@
     }
    ],
    "card": "ALLEGED",
-   "card_at": "alleged"
+   "card_at": "now the justice department said"
   },
   {
-   "at": "according to the government",
+   "at": "and according to the government",
    "bg": "white",
    "cast": [
     {
@@ -111,7 +111,7 @@
    ]
   },
   {
-   "at": "after the vans cleared",
+   "at": "after the vans got through",
    "bg": "bg-street",
    "cast": [
     {
@@ -120,10 +120,10 @@
     }
    ],
    "card": "SEATS OUT AFTER CUSTOMS",
-   "card_at": "allegedly removed"
+   "card_at": "after the vans got through"
   },
   {
-   "at": "the settlement also covered",
+   "at": "the deal also covered",
    "bg": "bg-office",
    "cast": [
     {
@@ -140,7 +140,7 @@
    ]
   },
   {
-   "at": "in march twenty",
+   "at": "and in twenty",
    "bg": "bg-office",
    "cast": [
     {
@@ -149,10 +149,10 @@
     }
    ],
    "card": "$365 MILLION",
-   "card_at": "agreed to pay"
+   "card_at": "and in twenty"
   },
   {
-   "at": "but notice the wording",
+   "at": "but listen to the wording",
    "bg": "white",
    "cast": [
     {
@@ -168,7 +168,7 @@
    ]
   },
   {
-   "at": "so this isn't a story",
+   "at": "so this is not a story",
    "bg": "bg-courtroom",
    "cast": [
     {
@@ -181,7 +181,7 @@
     }
    ],
    "card": "NOT A LOOPHOLE THAT WORKED",
-   "card_at": "loophole that worked"
+   "card_at": "so this is not a story"
   },
   {
    "at": "send this to",
@@ -193,7 +193,7 @@
    ]
   },
   {
-   "at": "so the next time you see a van",
+   "at": "so the next time",
    "bg": "bg-harbor",
    "loop": true
   }
@@ -201,5 +201,6 @@
  "music_vibe": "quirky",
  "share_line": "Send this to the friend who'd rip the seats out of your car for five bucks",
  "hook_old": "SEATS… THEN NO SEATS",
- "script_old": "Ford's cargo vans arrived at the border with temporary back seats, and it ended in a three hundred sixty-five million dollar settlement. This is about U.S. import duties. Passenger vehicles were taxed at two point five percent. Cargo vehicles faced twenty-five percent. That's ten times higher. The Justice Department alleged that from two thousand nine to two thousand thirteen, Ford imported Transit Connect vans from Turkey dressed up as passenger vehicles, with temporary rear seats and other passenger features. According to the government, those seats were never used to carry passengers. After the vans cleared customs, the seats were allegedly removed, and the vans went back to being two-seat cargo vans. The settlement also covered allegations that Ford under-declared the value of some vehicles. In March twenty twenty-four, Ford agreed to pay three hundred sixty-five million dollars. But notice the wording. Those were allegations. The Justice Department itself said there was no determination of liability, and Ford didn't admit any. So this isn't a story about a loophole that worked. It's about where creative tariff planning can run into enforcement. And the rates and years here are history, not a guide to importing anything today. [loop] So the next time you see a van with an extra row of seats, remember"
+ "script_old": "Ford's cargo vans arrived at the border with temporary back seats, and it ended in a three hundred sixty-five million dollar settlement. This is about U.S. import duties. Passenger vehicles were taxed at two point five percent. Cargo vehicles faced twenty-five percent. That's ten times higher. The Justice Department alleged that from two thousand nine to two thousand thirteen, Ford imported Transit Connect vans from Turkey dressed up as passenger vehicles, with temporary rear seats and other passenger features. According to the government, those seats were never used to carry passengers. After the vans cleared customs, the seats were allegedly removed, and the vans went back to being two-seat cargo vans. The settlement also covered allegations that Ford under-declared the value of some vehicles. In March twenty twenty-four, Ford agreed to pay three hundred sixty-five million dollars. But notice the wording. Those were allegations. The Justice Department itself said there was no determination of liability, and Ford didn't admit any. So this isn't a story about a loophole that worked. It's about where creative tariff planning can run into enforcement. And the rates and years here are history, not a guide to importing anything today. [loop] So the next time you see a van with an extra row of seats, remember",
+ "script_simple": true
 }

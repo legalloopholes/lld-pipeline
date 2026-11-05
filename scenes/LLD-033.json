@@ -1,7 +1,7 @@
 {
  "video_id": "LLD-033",
  "episode": "E33",
- "hook": "FREE TO REUSE",
+ "hook": "NO COPYRIGHT AT ALL",
  "highlight": [
   "copyright",
   "employee",
@@ -17,7 +17,7 @@
   "#lawtok",
   "#didyouknow"
  ],
- "script": "Some work paid for with your tax dollars has no copyright at all, and you can reuse it. [disclaimer] It comes from section one-oh-five of the copyright statute: copyright protection is not available for any work of the United States government. And that phrase means something specific: a work prepared by a federal officer or employee as part of their official duties. So imagine a government website with two photos. One was taken by a federal employee on the job. Under this rule, it generally has no U.S. copyright, so you may be able to reuse it, even in a commercial project. The other was taken by an outside contractor, or licensed from a photographer. That one can be fully copyrighted, even though it sits on a government page. The government can also hold copyrights that are transferred to it. So federal funding alone isn't enough, and a dot-gov address isn't proof. And copyright isn't the only rule. Government seals and logos can have their own restrictions. You can't imply a government endorsement. Photos of people can raise privacy issues. There are narrow exceptions written into the statute, like certain scholarly works by faculty at some federal schools. And this is about federal works. State governments follow different rules. [loop] So before you assume that government photo is free to use, remember",
+ "script": "Some photos on government websites have no copyright at all. Anyone can use them. [disclaimer] Yep! It's in American copyright law. Stuff made by the federal government doesn't get a copyright. None! And that means something specific. Work made by a federal employee, as part of their job. So imagine a government website with two photos. One was taken by a federal worker on the job. That one generally has no copyright! You might be able to reuse it, even to make money. But the other photo was taken by an outside company, or bought from a photographer. That one can be fully protected, even though it's on a government website! The government can also own copyrights that someone gave it. So just being paid for by taxes isn't enough. And a dot gov website isn't proof! And copyright isn't the only rule. Government seals and logos have their own rules. You can't make it look like the government is endorsing you. Photos of people can raise privacy problems. There are a few small exceptions written into the law. And this is only about the federal government. States have their own rules. [loop] So before you assume that government photo is free to use, remember",
  "publish_at": "2026-11-17T19:00:00-05:00",
  "sources": [
   "https://www.law.cornell.edu/uscode/text/17/105"
@@ -42,7 +42,7 @@
    ]
   },
   {
-   "at": "it comes from section",
+   "at": "it's in american copyright",
    "bg": "white",
    "cast": [
     {
@@ -58,7 +58,7 @@
    ]
   },
   {
-   "at": "copyright protection is not available",
+   "at": "stuff made by the federal",
    "bg": "white",
    "cast": [
     {
@@ -66,17 +66,17 @@
     }
    ],
    "card": "NO COPYRIGHT FOR FEDERAL WORKS",
-   "card_at": "not available",
+   "card_at": "stuff made by the federal",
    "zooms": [
     {
-     "at": "not available",
+     "at": "stuff made by the federal",
      "amount": 1.18,
      "hold": 0.9
     }
    ]
   },
   {
-   "at": "and that phrase means",
+   "at": "and that means something",
    "bg": "bg-office",
    "cast": [
     {
@@ -101,10 +101,10 @@
     }
    ],
    "card": "HYPOTHETICAL",
-   "card_at": "so imagine"
+   "card_at": "so imagine a government"
   },
   {
-   "at": "one was taken by a federal",
+   "at": "one was taken by",
    "bg": "white",
    "cast": [
     {
@@ -120,7 +120,7 @@
    ]
   },
   {
-   "at": "the other was taken",
+   "at": "but the other photo",
    "bg": "white",
    "cast": [
     {
@@ -136,7 +136,7 @@
    ]
   },
   {
-   "at": "so federal funding alone",
+   "at": "so just being paid",
    "bg": "bg-office",
    "cast": [
     {
@@ -145,7 +145,7 @@
     }
    ],
    "card": ".GOV ISN'T PROOF",
-   "card_at": "isn't proof"
+   "card_at": "so just being paid"
   },
   {
    "at": "and copyright isn't the only",
@@ -164,7 +164,7 @@
    ]
   },
   {
-   "at": "and this is about federal",
+   "at": "and this is only about",
    "bg": "bg-capitol",
    "cast": [
     {
@@ -173,7 +173,7 @@
     }
    ],
    "card": "STATES: DIFFERENT RULES",
-   "card_at": "different rules"
+   "card_at": "and this is only about"
   },
   {
    "at": "send this to",
@@ -193,5 +193,6 @@
  "music_vibe": "quirky",
  "share_line": "Send this to the friend who steals your memes and pretends they made them",
  "hook_old": "GOVERNMENT WORK = FREE?",
- "script_old": "Some work paid for by the U.S. government can be copied, even commercially, without a copyright license. It comes from section one-oh-five of the copyright statute: copyright protection is not available for any work of the United States government. And that phrase means something specific: a work prepared by a federal officer or employee as part of their official duties. So imagine a government website with two photos. One was taken by a federal employee on the job. Under this rule, it generally has no U.S. copyright, so you may be able to reuse it, even in a commercial project. The other was taken by an outside contractor, or licensed from a photographer. That one can be fully copyrighted, even though it sits on a government page. The government can also hold copyrights that are transferred to it. So federal funding alone isn't enough, and a dot-gov address isn't proof. And copyright isn't the only rule. Government seals and logos can have their own restrictions. You can't imply a government endorsement. Photos of people can raise privacy issues. There are narrow exceptions written into the statute, like certain scholarly works by faculty at some federal schools. And this is about federal works. State governments follow different rules. [loop] So before you assume that government photo is free to use, remember"
+ "script_old": "Some work paid for by the U.S. government can be copied, even commercially, without a copyright license. It comes from section one-oh-five of the copyright statute: copyright protection is not available for any work of the United States government. And that phrase means something specific: a work prepared by a federal officer or employee as part of their official duties. So imagine a government website with two photos. One was taken by a federal employee on the job. Under this rule, it generally has no U.S. copyright, so you may be able to reuse it, even in a commercial project. The other was taken by an outside contractor, or licensed from a photographer. That one can be fully copyrighted, even though it sits on a government page. The government can also hold copyrights that are transferred to it. So federal funding alone isn't enough, and a dot-gov address isn't proof. And copyright isn't the only rule. Government seals and logos can have their own restrictions. You can't imply a government endorsement. Photos of people can raise privacy issues. There are narrow exceptions written into the statute, like certain scholarly works by faculty at some federal schools. And this is about federal works. State governments follow different rules. [loop] So before you assume that government photo is free to use, remember",
+ "script_simple": true
 }

@@ -17,7 +17,7 @@
   "#lawtok",
   "#driving"
  ],
- "script": "In Pennsylvania, getting clocked speeding doesn't always mean they can convict you. [disclaimer] This is Pennsylvania's Vehicle Code, section thirty-three sixty-eight. Part of it covers certain speed-timing devices: ones that time a car between two sensors on the road, or that calculate average speed between two points. For these devices, there are minimum thresholds. In general, a conviction based on their evidence needs a recorded speed of at least six miles per hour over the limit. And on roads where the limit is under fifty-five, a conviction based on one of these two-point devices can't rest on a reading of less than ten over. So, hypothetically, in a thirty-five zone, a reading of forty-three from one of these devices couldn't support a conviction under this rule. But read the fine print. This does not raise the speed limit. Going eight over is still speeding. The thresholds don't apply in school zones or active work zones. They're about these specific types of devices, not every radar or laser reading. And an officer could have other evidence. So it's a narrow evidence rule, not a license to drive faster. [loop] So before you do speedometer math in Pennsylvania, remember",
+ "script": "In Pennsylvania, you can get clocked going eight over, and that reading alone still can't convict you. [disclaimer] This is Pennsylvania traffic law. Part of it covers certain speed timers. The kind that time your car between two lines on the road, or check your average speed between two points. And for these devices, there are minimum numbers. Usually, to convict you with one, it has to show you going at least six miles over the limit. And on roads where the limit is under fifty five, it has to show at least ten over! So, hypothetically, you're driving in a thirty five zone. One of these timers says you did forty three. That's eight over! But under this rule, that reading alone can't convict you. Wait, really? Yep! That's the law on the books. But read the fine print. This does not raise the speed limit. Going eight over is still speeding! It doesn't apply in school zones or work zones. It's only about these specific devices, not every radar gun or laser. And the officer could have other evidence against you, like their own eyes, or a different device that doesn't follow this rule. So it's a tiny rule about evidence. Not permission to drive faster! [loop] So before you do speedometer math in Pennsylvania, remember",
  "publish_at": "2026-11-17T12:00:00-05:00",
  "sources": [
   "https://www.legis.state.pa.us/WU01/LI/LI/CT/HTM/75/00.033..HTM",
@@ -43,7 +43,7 @@
    ]
   },
   {
-   "at": "this is pennsylvania's",
+   "at": "this is pennsylvania traffic law",
    "bg": "white",
    "cast": [
     {
@@ -76,7 +76,7 @@
    ]
   },
   {
-   "at": "for these devices",
+   "at": "and for these devices",
    "bg": "white",
    "cast": [
     {
@@ -100,10 +100,10 @@
     }
    ],
    "card": "UNDER 55 MPH ZONE: 10+ OVER",
-   "card_at": "less than ten over",
+   "card_at": "and on roads where",
    "zooms": [
     {
-     "at": "less than ten over",
+     "at": "and on roads where",
      "amount": 1.18,
      "hold": 0.9
     }
@@ -119,7 +119,7 @@
     }
    ],
    "card": "HYPOTHETICAL: 43 IN A 35",
-   "card_at": "hypothetically"
+   "card_at": "so hypothetically"
   },
   {
    "at": "but read the fine print",
@@ -138,7 +138,7 @@
    ]
   },
   {
-   "at": "the thresholds don't apply",
+   "at": "it doesn't apply in school",
    "bg": "white",
    "cast": [
     {
@@ -154,7 +154,7 @@
    ]
   },
   {
-   "at": "they're about these specific",
+   "at": "it's only about these",
    "bg": "white",
    "cast": [
     {
@@ -170,7 +170,7 @@
    ]
   },
   {
-   "at": "so it's a narrow",
+   "at": "so it's a tiny rule",
    "bg": "bg-street",
    "cast": [
     {
@@ -179,7 +179,7 @@
     }
    ],
    "card": "NOT A LICENSE TO SPEED",
-   "card_at": "license to drive faster"
+   "card_at": "so it's a tiny rule"
   },
   {
    "at": "send this to",
@@ -199,5 +199,6 @@
  "music_vibe": "quirky",
  "share_line": "Send this to the friend who drives like they stole the car",
  "hook_old": "CLOCKED… BUT NO CONVICTION?",
- "script_old": "A device can clock you speeding, and the law can still block a conviction based on that reading. This is Pennsylvania's Vehicle Code, section thirty-three sixty-eight. Part of it covers certain speed-timing devices: ones that time a car between two sensors on the road, or that calculate average speed between two points. For these devices, there are minimum thresholds. In general, a conviction based on their evidence needs a recorded speed of at least six miles per hour over the limit. And on roads where the limit is under fifty-five, a conviction based on one of these two-point devices can't rest on a reading of less than ten over. So, hypothetically, in a thirty-five zone, a reading of forty-three from one of these devices couldn't support a conviction under this rule. But read the fine print. This does not raise the speed limit. Going eight over is still speeding. The thresholds don't apply in school zones or active work zones. They're about these specific types of devices, not every radar or laser reading. And an officer could have other evidence. So it's a narrow evidence rule, not a license to drive faster. [loop] So before you do speedometer math in Pennsylvania, remember"
+ "script_old": "A device can clock you speeding, and the law can still block a conviction based on that reading. This is Pennsylvania's Vehicle Code, section thirty-three sixty-eight. Part of it covers certain speed-timing devices: ones that time a car between two sensors on the road, or that calculate average speed between two points. For these devices, there are minimum thresholds. In general, a conviction based on their evidence needs a recorded speed of at least six miles per hour over the limit. And on roads where the limit is under fifty-five, a conviction based on one of these two-point devices can't rest on a reading of less than ten over. So, hypothetically, in a thirty-five zone, a reading of forty-three from one of these devices couldn't support a conviction under this rule. But read the fine print. This does not raise the speed limit. Going eight over is still speeding. The thresholds don't apply in school zones or active work zones. They're about these specific types of devices, not every radar or laser reading. And an officer could have other evidence. So it's a narrow evidence rule, not a license to drive faster. [loop] So before you do speedometer math in Pennsylvania, remember",
+ "script_simple": true
 }
