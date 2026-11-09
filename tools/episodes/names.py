@@ -1,5 +1,7 @@
 # who each character plays, per episode: defaults, then {scene_index: {who: name}} overrides
 N = {
+1: ('GARY', 'RANGER'), 2: ('KLAUS', 'JONAS'), 3: ('KEVIN', 'OAKHURST DAIRY'), 4: ('GARY', 'CALIFORNIA'),
+5: ('JAFFA CAKE MAKER', 'TAX OFFICE'), 6: ('TOY BIZ', 'CUSTOMS'),
 7: ('GARY', 'FRANK'), 8: ('JOHN YATES', 'OFFICER'), 9: ('GARY', 'GUEST'), 10: ('MIT STUDENTS', 'LOTTERY'),
 11: ('OTIS', 'HIS WIFE'), 12: ('GARY', 'CUSTOMS'), 13: ('NIGEL', 'NEIGHBOR'), 14: ('DIPLOMAT', 'OFFICER'),
 15: ('SUBWAY OWNER', 'TAX OFFICE'), 16: ('BUYER, AGE 16', 'CAR DEALER'), 17: ('BRAD', 'BANK'), 18: ('FANE LOZMAN', 'CITY'),

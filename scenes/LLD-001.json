@@ -3,174 +3,156 @@
  "scenes": [
   {
    "at": "start",
-   "bg": "bg-campsite",
-   "cast": [
-    {
-     "id": "char-friend-chimp",
-     "x": 0.66
-    },
-    {
-     "id": "larry:sneaky",
-     "x": 0.33,
-     "anim": "tiptoe"
-    }
-   ]
-  },
-  {
-   "at": "quick disclaimer",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:neutral"
-    }
-   ],
-   "sfx": "none"
-  },
-  {
-   "at": "well what if",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:explaining"
-    }
-   ],
-   "props": [
-    {
-     "id": "map-us",
-     "at": "a place in the united",
-     "hold": 3.2,
-     "h": 0.3
-    },
-    {
-     "id": "prop-constitution",
-     "at": "constitution could"
-    }
-   ]
-  },
-  {
-   "at": "this is the yellowstone",
    "bg": "bg-yellowstone",
    "cast": [
     {
-     "id": "larry:smug"
-    }
-   ],
-   "card": "ZONE OF DEATH",
-   "card_at": "zone of death",
-   "zooms": [
-    {
-     "at": "zone of death",
-     "amount": 1.15,
-     "hold": 0.8,
-     "sfx": "none"
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "name": "GARY",
+     "x": 0.5
     }
    ]
   },
   {
-   "at": "most of yellowstone",
-   "bg": "white",
+   "at": "gary steals a park",
+   "bg": "bg-yellowstone",
    "cast": [
     {
-     "id": "larry:explaining"
-    }
-   ],
-   "props": [
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "point",
+     "name": "GARY",
+     "x": 0.3
+    },
     {
-     "id": "map-yellowstone",
-     "h": 0.3
+     "id": "char-politician",
+     "face": "surprised",
+     "gest": "none",
+     "name": "RANGER",
+     "x": 0.7
     }
    ]
   },
   {
-   "at": "congress put all",
-   "bg": "bg-capitol",
-   "cast": [
-    {
-     "id": "larry:pointing",
-     "x": 0.35
-    }
-   ]
-  },
-  {
-   "at": "the sixth amendment",
+   "at": "so gary goes to",
    "bg": "bg-courtroom",
    "cast": [
     {
      "id": "char-judge",
-     "x": 0.7
+     "face": "neutral",
+     "gest": "none",
+     "name": "JUDGE",
+     "x": 0.3
     },
     {
-     "id": "larry:explaining",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "prop-constitution",
-     "hold": 3
+     "id": "char-friend-chimp",
+     "face": "neutral",
+     "gest": "none",
+     "name": "GARY",
+     "x": 0.2
     }
    ]
   },
   {
-   "at": "so if the crime",
+   "at": "the sixth amendment says",
+   "bg": "bg-office",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "📜",
+     "text": "SIXTH AMENDMENT"
+    }
+   ]
+  },
+  {
+   "at": "but congress put all",
+   "bg": "bg-capitol",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "🗺️",
+     "text": "ALL OF IT = WYOMING"
+    }
+   ]
+  },
+  {
+   "at": "so gary's jurors have",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "face": "worried",
+     "gest": "think",
+     "name": "JUDGE",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "shrug",
+     "name": "GARY",
+     "x": 0.2
+    }
+   ]
+  },
+  {
+   "at": "the only place that",
+   "bg": "bg-yellowstone",
+   "cast": [
+    {
+     "id": "larry:concerned"
+    }
+   ],
+   "props": [
+    {
+     "id": "sign",
+     "icon": "👥",
+     "text": "ELIGIBLE JURORS: 0"
+    }
+   ]
+  },
+  {
+   "at": "wait so nobody in",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "face": "surprised",
+     "gest": "scratch",
+     "name": "JUDGE",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "arms_up",
+     "name": "GARY",
+     "x": 0.2
+    }
+   ]
+  },
+  {
+   "at": "you see it's like",
    "bg": "white",
    "cast": [
     {
-     "id": "larry:auto"
-    }
-   ],
-   "props": [
-    {
-     "id": "map-zone",
-     "h": 0.3
+     "id": "larry:explaining"
     }
    ]
   },
   {
-   "at": "the population of this",
-   "bg": "bg-courtroom",
-   "cast": [
-    {
-     "id": "larry:surprised",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "prop-tumbleweed",
-     "at": "basically zero",
-     "anim": "roll",
-     "roll_time": 2.6,
-     "h": 0.15
-    }
-   ],
-   "card": "POPULATION: 0",
-   "card_at": "basically zero",
-   "zooms": [
-    {
-     "at": "basically zero",
-     "amount": 1.25,
-     "hold": 1.1,
-     "sfx": "stinger"
-    }
-   ]
-  },
-  {
-   "at": "so the legal theory",
-   "bg": "bg-courtroom",
-   "cast": [
-    {
-     "id": "char-judge-confused",
-     "x": 0.7
-    },
-    {
-     "id": "larry:explaining",
-     "x": 0.3
-    }
-   ]
-  },
-  {
-   "at": "for the record",
+   "at": "this is a law",
    "bg": "white",
    "cast": [
     {
@@ -179,47 +161,56 @@
    ],
    "props": [
     {
-     "id": "prop-gavel",
-     "at": "a court could"
+     "id": "sign",
+     "icon": "⚠️",
+     "text": "UNTESTED THEORY"
     }
    ]
   },
   {
-   "at": "the thing is congress",
+   "at": "congress has known about",
    "bg": "bg-capitol",
    "cast": [
     {
-     "id": "char-politician",
-     "x": 0.7
-    },
-    {
-     "id": "larry:smug",
-     "x": 0.3
+     "id": "larry:smug"
     }
    ]
   },
   {
-   "at": "make sure to like",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:auto"
-    }
-   ]
-  },
-  {
-   "at": "so before you pick",
-   "bg": "bg-campsite",
+   "at": "so gary's whole defense",
+   "bg": "bg-yellowstone",
    "cast": [
     {
      "id": "char-friend-chimp",
-     "x": 0.66
-    },
-    {
-     "id": "larry:sneaky",
-     "x": 0.33
+     "face": "worried",
+     "gest": "none",
+     "name": "GARY",
+     "x": 0.5
     }
    ]
+  },
+  {
+   "at": "send this to",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:pointing"
+    }
+   ]
+  },
+  {
+   "at": "so before you go",
+   "bg": "bg-yellowstone",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "name": "GARY",
+     "x": 0.5
+    }
+   ],
+   "loop": true
   }
  ],
  "hook": "THE U.S. ZONE WHERE NO JURY EXISTS",
@@ -240,5 +231,7 @@
   "#sixthamendment"
  ],
  "music_vibe": "tense",
- "share_line": "Send this to a friend you'd kill (in Idaho)"
+ "share_line": "Send this to a friend you'd kill (in Idaho)",
+ "script": "There is a corner of America where, in theory, it's impossible to find a jury for your crime. [disclaimer] Meet Gary. Gary is camping in Yellowstone. In the small part of the park that sits inside Idaho. Gary steals a park ranger's truck. That's a serious federal crime. Real prison time. So Gary goes to federal court. And federal court has a rule that comes straight from the Constitution. The Sixth Amendment says your jury has to come from the state and the district where the crime happened. But Congress put all of Yellowstone in the federal district of Wyoming. Even the parts in Idaho and Montana. So Gary's jurors have to live in Idaho. And in the district of Wyoming. At the same time. The only place that is both is the Idaho part of the park. And nobody lives there. Trees. Bison. Geysers. Zero people. Wait. So nobody in the country can legally sit on Gary's jury? You see, it's like a club that only lets in people born on February thirtieth. The rules are real. The members don't exist. This is a law professor's theory. No court has ever accepted it, a judge could find a way around it, and smaller charges don't need a jury at all. Congress has known about this for years. It still hasn't fixed it. So Gary's whole defense comes down to a head count of bison. And no court has ever bought it. [loop] So before you go camping in Idaho, remember",
+ "story_format": true
 }

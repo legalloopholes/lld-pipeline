@@ -18,7 +18,7 @@
   "#vat",
   "#lawtok"
  ],
- "script": "An entire tax trial came down to one question: is this snack a cake? [disclaimer] Here's why it mattered. In Britain, most food is zero-rated for VAT. But biscuits covered in chocolate are taxed at the standard rate, while cakes, even with chocolate on them, are not. Jaffa Cakes have a sponge base, an orange layer and a chocolate top. So the tax authority decided they were really chocolate-covered biscuits, and should be taxed. The maker, United Biscuits, took it to a VAT tribunal. And the tribunal went through the evidence like a trial. The name? Only a minor point. The ingredients? An egg, flour and sugar batter, like a sponge cake. The texture? Soft sponge, not a crisp snap. And the famous one: when a Jaffa Cake goes stale, it goes hard, like a cake. A stale biscuit goes soft. Some factors pointed the other way: the size, the packaging, and the fact that shops sell them next to biscuits. But on balance, the tribunal said: cake. So Jaffa Cakes stayed zero-rated. Going hard when stale wasn't the whole test, just one factor among many. And this is one VAT result, not a rule that any snack can call itself a cake. [loop] So before you call it a biscuit, remember",
+ "script": "A company went to trial to prove its chocolate biscuit is legally a cake. And it won. [disclaimer] Meet the makers of Jaffa Cakes. A sponge base, an orange layer, and chocolate on top. In Britain, most food has no VAT. That includes cakes. Even cakes with chocolate on them. But a biscuit covered in chocolate pays the full tax. So the tax office looks at a Jaffa Cake and says, that's a chocolate biscuit. Pay up. The company takes it to a tax tribunal. And the tribunal examines a snack like a suspect. The size, the packaging, and the shop shelf all say biscuit. The name says cake, but that barely counts. The batter is eggs, flour and sugar. Like a sponge cake. Soft, not crunchy. Then the famous clue. When a Jaffa Cake goes stale, it gets hard. Like a cake. A stale biscuit goes soft. Wait. A tax trial comes down to how a snack goes stale? You see, the tribunal didn't pick one clue. It weighed all of them, like a detective with a pile of evidence. And most of it pointed to cake. Final answer. Jaffa Cakes are cakes. No VAT. Going hard was one factor, not the whole test. And this was one tax ruling, not a rule that any snack can call itself a cake. So the tax office lost a whole trial to a snack that proved itself by going stale. [loop] So before you call it a biscuit, remember",
  "publish_at": "2026-11-03T19:00:00-05:00",
  "sources": [
   "https://www.gov.uk/hmrc-internal-manuals/vat-food/vfood6260"
@@ -30,38 +30,34 @@
    "bg": "bg-shop",
    "cast": [
     {
-     "id": "larry:smug",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🍰❓🍪",
-     "text": ""
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "look": "proboscis.chef",
+     "name": "JAFFA CAKE MAKER",
+     "x": 0.5
     }
    ]
   },
   {
-   "at": "here's why it mattered",
-   "bg": "bg-shop",
+   "at": "in britain most food",
+   "bg": "bg-office",
    "cast": [
     {
-     "id": "larry:explaining",
-     "x": 0.3
+     "id": "larry:explaining"
     }
    ],
    "props": [
     {
      "id": "sign",
-     "icon": "🇬🇧",
-     "text": "Most food: zero VAT"
+     "icon": "🧾",
+     "text": "CAKE = NO VAT"
     }
    ]
   },
   {
-   "at": "but biscuits covered",
-   "bg": "white",
+   "at": "but a biscuit covered",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:pointing"
@@ -70,124 +66,167 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🍫🍪",
-     "text": "Choc biscuit = taxed"
+     "icon": "🍪",
+     "text": "CHOC BISCUIT = VAT"
     }
    ]
   },
   {
-   "at": "jaffa cakes have",
-   "bg": "white",
+   "at": "so the tax office",
+   "bg": "bg-shop",
    "cast": [
     {
-     "id": "larry:thinking"
-    }
-   ],
-   "props": [
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "point",
+     "name": "TAX OFFICE",
+     "x": 0.3
+    },
     {
-     "id": "sign",
-     "icon": "🍊🍫",
-     "text": "Sponge + orange"
+     "id": "char-friend-chimp",
+     "face": "surprised",
+     "gest": "none",
+     "look": "proboscis.chef",
+     "name": "JAFFA CAKE MAKER",
+     "x": 0.7
     }
    ]
   },
   {
-   "at": "so the tax authority",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:surprised"
-    }
-   ],
-   "card": "TAX IT LIKE A BISCUIT!",
-   "card_at": "should be taxed"
-  },
-  {
-   "at": "the maker united biscuits",
+   "at": "the company takes it",
    "bg": "bg-courtroom",
    "cast": [
     {
      "id": "char-judge",
-     "x": 0.7
+     "face": "neutral",
+     "gest": "think",
+     "name": "JUDGE",
+     "x": 0.3
     },
     {
-     "id": "larry:explaining",
-     "x": 0.3
-    }
-   ],
-   "card": "CAKE v. BISCUIT",
-   "card_at": "vat tribunal"
-  },
-  {
-   "at": "the ingredients",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:pointing"
-    }
-   ],
-   "props": [
-    {
-     "id": "doc",
-     "text": "Exhibit A: sponge batter",
-     "sub": "Evidence"
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "explain",
+     "look": "proboscis.chef",
+     "name": "JAFFA CAKE MAKER",
+     "x": 0.2
     }
    ]
   },
   {
-   "at": "and the famous one",
-   "bg": "bg-shop",
-   "cast": [
-    {
-     "id": "larry:smug",
-     "x": 0.3
-    }
-   ],
-   "card": "STALE CAKE → HARD",
-   "card_at": "goes hard",
-   "zooms": [
-    {
-     "at": "goes hard",
-     "amount": 1.18,
-     "hold": 0.9
-    }
-   ]
-  },
-  {
-   "at": "some factors pointed",
-   "bg": "bg-shop",
-   "cast": [
-    {
-     "id": "larry:thinking",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "📦",
-     "text": "Size · box · shelf"
-    }
-   ]
-  },
-  {
-   "at": "but on balance",
+   "at": "the size the packaging",
    "bg": "bg-courtroom",
    "cast": [
     {
      "id": "char-judge",
-     "x": 0.7
+     "face": "neutral",
+     "gest": "think",
+     "name": "JUDGE",
+     "x": 0.3
     },
     {
-     "id": "larry:surprised",
-     "x": 0.3
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "shrug",
+     "name": "TAX OFFICE",
+     "x": 0.2
     }
-   ],
-   "card": "VERDICT: CAKE",
-   "card_at": "said cake"
+   ]
   },
   {
-   "at": "going hard when stale",
+   "at": "the batter is eggs",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "face": "surprised",
+     "gest": "think",
+     "name": "JUDGE",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "point",
+     "look": "proboscis.chef",
+     "name": "JAFFA CAKE MAKER",
+     "x": 0.2
+    }
+   ]
+  },
+  {
+   "at": "then the famous clue",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "face": "surprised",
+     "gest": "scratch",
+     "name": "JUDGE",
+     "x": 0.3
+    },
+    {
+     "id": "char-politician",
+     "face": "worried",
+     "gest": "none",
+     "name": "TAX OFFICE",
+     "x": 0.2
+    }
+   ]
+  },
+  {
+   "at": "wait a tax trial",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "face": "surprised",
+     "gest": "think",
+     "name": "JUDGE",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "arms_up",
+     "look": "proboscis.chef",
+     "name": "JAFFA CAKE MAKER",
+     "x": 0.2
+    }
+   ]
+  },
+  {
+   "at": "you see the tribunal",
+   "bg": "white",
+   "cast": [
+    {
+     "id": "larry:explaining"
+    }
+   ]
+  },
+  {
+   "at": "final answer jaffa cakes",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "face": "smug",
+     "gest": "point",
+     "name": "JUDGE",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "look": "proboscis.chef",
+     "name": "JAFFA CAKE MAKER",
+     "x": 0.2
+    }
+   ]
+  },
+  {
+   "at": "going hard was",
    "bg": "white",
    "cast": [
     {
@@ -197,8 +236,21 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⚖️",
-     "text": "One factor only"
+     "icon": "⚠️",
+     "text": "ONE PRODUCT ONLY"
+    }
+   ]
+  },
+  {
+   "at": "so the tax office",
+   "bg": "bg-shop",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "worried",
+     "gest": "scratch",
+     "name": "TAX OFFICE",
+     "x": 0.5
     }
    ]
   },
@@ -207,18 +259,29 @@
    "bg": "white",
    "cast": [
     {
-     "id": "larry:auto"
+     "id": "larry:pointing"
     }
    ]
   },
   {
    "at": "so before you call",
    "bg": "bg-shop",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "look": "proboscis.chef",
+     "name": "JAFFA CAKE MAKER",
+     "x": 0.5
+    }
+   ],
    "loop": true
   }
  ],
  "music_vibe": "quirky",
  "share_line": "Send this to the friend who'd lose an argument to a biscuit",
  "hook_old": "CAKE OR BISCUIT? THE TAX TRIAL",
- "script_old": "In the U.K., this snack's tax bill depended on one question: is it a cake, or a biscuit? Here's why it mattered. In Britain, most food is zero-rated for VAT. But biscuits covered in chocolate are taxed at the standard rate, while cakes, even with chocolate on them, are not. Jaffa Cakes have a sponge base, an orange layer and a chocolate top. So the tax authority decided they were really chocolate-covered biscuits, and should be taxed. The maker, United Biscuits, took it to a VAT tribunal. And the tribunal went through the evidence like a trial. The name? Only a minor point. The ingredients? An egg, flour and sugar batter, like a sponge cake. The texture? Soft sponge, not a crisp snap. And the famous one: when a Jaffa Cake goes stale, it goes hard, like a cake. A stale biscuit goes soft. Some factors pointed the other way: the size, the packaging, and the fact that shops sell them next to biscuits. But on balance, the tribunal said: cake. So Jaffa Cakes stayed zero-rated. Going hard when stale wasn't the whole test, just one factor among many. And this is one VAT result, not a rule that any snack can call itself a cake. [loop] So before you call it a biscuit, remember"
+ "script_old": "In the U.K., this snack's tax bill depended on one question: is it a cake, or a biscuit? Here's why it mattered. In Britain, most food is zero-rated for VAT. But biscuits covered in chocolate are taxed at the standard rate, while cakes, even with chocolate on them, are not. Jaffa Cakes have a sponge base, an orange layer and a chocolate top. So the tax authority decided they were really chocolate-covered biscuits, and should be taxed. The maker, United Biscuits, took it to a VAT tribunal. And the tribunal went through the evidence like a trial. The name? Only a minor point. The ingredients? An egg, flour and sugar batter, like a sponge cake. The texture? Soft sponge, not a crisp snap. And the famous one: when a Jaffa Cake goes stale, it goes hard, like a cake. A stale biscuit goes soft. Some factors pointed the other way: the size, the packaging, and the fact that shops sell them next to biscuits. But on balance, the tribunal said: cake. So Jaffa Cakes stayed zero-rated. Going hard when stale wasn't the whole test, just one factor among many. And this is one VAT result, not a rule that any snack can call itself a cake. [loop] So before you call it a biscuit, remember",
+ "story_format": true
 }

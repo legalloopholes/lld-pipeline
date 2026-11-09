@@ -250,7 +250,7 @@ export function makePrimate(parent, look) {
 // ---------- automatic casting from the name tag (the role the plan already gives each character) ----------
 // First match wins. Episodes can override with an explicit look in the markup (C:smug.point=mandrill.chef).
 const ROLES = [
-  [/OFFICER|POLICE|COP|SHERIFF|DETECTIVE|TROOPER/, 'baboon.cop'],
+  [/OFFICER|POLICE|COP|SHERIFF|DETECTIVE|TROOPER|RANGER|GUARD/, 'baboon.cop'],
   [/CUSTOMS|BORDER/, 'macaque.customs'],
   [/\bIRS\b|TAX/, 'macaque.irs'],
   [/CONTRACTOR|CREW|BUILDER|TOW|MECHANIC|PLUMBER/, 'bonobo.hardhat'],
