@@ -1,5 +1,5 @@
 E = {
-41: """Some student loans can be wiped out in bankruptcy like a credit card. Most can't. [disclaimer]
+41: """Some student loans can vanish in bankruptcy like a credit card bill. Yours probably can't. [disclaimer]
 {office; C:worried.none} Meet Gary. Gary has student loans, a credit card bill, and no money. He files for bankruptcy.
 {office; L:explaining; 💳 CREDIT CARD: WIPED} In American bankruptcy, a lot of normal debt, like credit cards, can be wiped out.
 {office; L:concerned; 🎓 STUDENT LOANS: HARD} But most student loans are really hard to wipe out. You usually have to prove paying them would cause a huge hardship.
@@ -11,7 +11,7 @@ E = {
 {studio; L:concerned; ⚠️ MOST LOANS FIT} But most federal loans fit. A lot of private loans fit too. In one recent case, the judge said the loans fit, so they were not wiped out. Ask a bankruptcy lawyer.
 {office; C:worried.shrug} So the question that decides Gary's future isn't how much he owes. It's what kind of loan he signed. [loop] So before you assume every student loan is the same in bankruptcy, remember""",
 
-42: """A man stole a plane, and the Supreme Court threw out his conviction because a plane isn't a car. [disclaimer]
+42: """A man stole a plane, and the Supreme Court threw out his conviction. Because a plane is not a car. [disclaimer]
 {street; C:smug.wave} Meet William McBoyle. It's nineteen thirty one.
 {street; C:smug.point} McBoyle gets convicted for moving a stolen airplane across state lines.
 {office; L:explaining; 🚗 STOLEN VEHICLE LAW} He was charged under a federal law about moving stolen motor vehicles across state lines.
@@ -23,7 +23,7 @@ E = {
 {courtroom; J:smug.point, C:smug.arms_up} So McBoyle's conviction was thrown out.
 {courtroom; C:smug.shrug} He stole something so much bigger than a car that the car law didn't fit. [loop] So before you assume a law covers everything that moves, remember""",
 
-43: """Marvel promised a man royalties forever, and the Supreme Court quoted Spider-Man when it let Marvel stop paying. [disclaimer]
+43: """Marvel promised a man royalties forever. The Supreme Court let Marvel stop paying, and quoted Spider-Man while doing it. [disclaimer]
 {office; C:smug.wave} Meet Stephen Kimble. He invents a Spider-Man toy that shoots webs. And he patents it.
 {office; P:smug.explain, C:smug.arms_up} Marvel's company makes a deal. A big payment, plus three percent of future sales. Forever. No end date.
 {office; C:smug.point} Kimble is set for life.
@@ -36,7 +36,7 @@ E = {
 {studio; L:concerned; ⚠️ OTHER DEALS CAN WORK} Deals can be set up other ways. Payments for patent years can be spread out. And things that aren't patents, like trade secrets, can work differently.
 {courtroom; C:worried.shrug} So Kimble's forever deal ended because of Spider-Man's own law, written by the company that owns Spider-Man. [loop] So before you sign a forever royalty deal on a patent, remember""",
 
-44: """Some Wall Street managers pay a lower tax rate on part of their pay than you pay on your salary. [disclaimer]
+44: """Some Wall Street managers pay a lower tax rate on millions in pay than you pay on your salary. [disclaimer]
 {office; C:neutral.wave} Meet Gary. Gary has a normal job, and his paycheck is taxed like normal income.
 {office; P:smug.wave, C:neutral.none} Meet Chad. Chad runs a private investment fund. And Chad gets paid two ways.
 {office; L:explaining; 💼 FEE = PAYCHECK TAX} First, a management fee. That's taxed like normal income. Just like Gary's paycheck.
@@ -49,7 +49,7 @@ E = {
 {studio; L:concerned; ⚠️ NOT AN OPINION} The fees are still taxed like a paycheck. And this is how the rules work, not an opinion on them.
 {office; P:smug.shrug, C:worried.none} So the person with the bigger paycheck can pay the lower rate, as long as he can wait three years. [loop] So the next time someone says fund managers pay less tax, remember""",
 
-45: """In England, if the police won't charge someone, you can prosecute them yourself. [disclaimer]
+45: """In England, if the police won't charge someone, you can drag them to court and prosecute them yourself. [disclaimer]
 {street; C:angry.point} Meet Nigel. Someone wronged Nigel. The police looked into it, and nobody got charged.
 {street; C:angry.arms_up} So Nigel decides, fine. I'll do it myself.
 {office; L:explaining; ⚖️ PRIVATE PROSECUTION} It's called a private prosecution. The U.K. government's own website says any adult can ask a court to start one.
@@ -61,7 +61,7 @@ E = {
 {office; L:concerned; 💷 ~£8,500 AVERAGE} And it's expensive. The government says around eight thousand five hundred pounds on average. And Nigel might not get it back.
 {courtroom; J:neutral.none, C:worried.shrug} So Nigel gets to be the prosecutor. He also gets the prosecutor's bill. And there's still no promise of a trial. [loop] So if you've heard that only the state can bring criminal charges, remember""",
 
-46: """A man sent Pepsi a check for seven hundred thousand dollars to claim a fighter jet. Then he sued. [disclaimer]
+46: """A man sent Pepsi a check for seven hundred thousand dollars to claim the fighter jet from a commercial. Then he sued. [disclaimer]
 {street; C:smug.wave} Meet John Leonard. He's watching TV in the nineties.
 {office; L:explaining; ✈️ 7,000,000 POINTS} A Pepsi commercial shows a teenager flying a fighter jet to school. The screen says, Harrier fighter, seven million Pepsi points.
 {street; C:surprised.arms_up} The prize catalog has no jet in it. But Leonard does the math.
@@ -98,7 +98,7 @@ E = {
 {studio; C:worried.scratch} Gary looks at his pile of shirts.
 {studio; C:worried.shrug} So Mickey really did become free. Gary just printed the one Mickey that didn't. [loop] So before you put a mouse on your next T shirt, remember""",
 
-49: """For about one day, certain drugs stopped being illegal to possess in Ireland because of a court ruling. [disclaimer]
+49: """For about one day, ecstasy and other drugs were legal to possess in Ireland. Because of a court ruling. [disclaimer]
 {capitol; P:smug.explain} Meet Ireland's government. It has a drug law from nineteen seventy seven.
 {office; L:explaining; 📜 ADD TO THE LIST} That law let the government add new drugs to the banned list on its own. And over the years, it did. A lot.
 {courtroom; J:neutral.think, P:smug.point} Then, in March twenty fifteen, a court looks at that power.

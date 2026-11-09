@@ -1,5 +1,5 @@
 E = {
-17: """The IRS says you're too rich for a Roth IRA. Then it hands you the instructions to get one anyway. [disclaimer]
+17: """The IRS says you're too rich for a Roth IRA. Then it tells you exactly how to sneak in the back door. [disclaimer]
 {office; C:smug.wave} Meet Brad. Brad makes a lot of money. And Brad wants a Roth IRA.
 {office; L:explaining; 🏦 ROTH IRA} A Roth is the retirement account people love. Follow the rules, and the money you take out later isn't taxed.
 {office; P:smug.point, C:surprised.none} But the bank tells Brad, sorry. You make too much. You can't put money in directly.
@@ -12,7 +12,7 @@ E = {
 {office; P:smug.point, C:worried.none} But Brad already has old pre tax money in another IRA. And the IRS counts all of his IRAs together.
 {office; C:worried.scratch} So Brad walked through the backdoor, straight into a tax bill. [loop] So if someone tells you high earners can't have a Roth, remember""",
 
-18: """A city took a man's house, declared it a boat, and destroyed it. Then the Supreme Court said it was never a boat. [disclaimer]
+18: """A city declared a man's house was a boat, seized it, and destroyed it. Then the Supreme Court looked at it and said, that's a house. [disclaimer]
 {harbor; C:smug.wave} Meet Fane Lozman. He lives in a floating home in Riviera Beach, Florida.
 {harbor; C:smug.point} It's basically a plywood house sitting on an empty box that floats. No engine. No steering.
 {harbor; P:angry.point, C:angry.arms_up} He keeps fighting with the city marina. So the city sues him.
@@ -25,7 +25,7 @@ E = {
 {studio; L:concerned; ⚠️ STILL FOLLOW THE RULES} Floating homes still have to follow the rules, and his normal debts didn't disappear.
 {harbor; C:worried.shrug} So Lozman won his case and proved his house was a house. There was just no house left to prove it with. [loop] So before you call your houseboat a ship, remember""",
 
-19: """Grandma's will says if you fight it, you get nothing. In Florida, that sentence is legally worthless. [disclaimer]
+19: """Grandma's will says, fight this and you get nothing. In Florida, that threat is legally worth nothing. [disclaimer]
 {office; P:smug.explain} Meet Grandma Rose. Grandma Rose is writing her will in Florida.
 {office; L:explaining; 📜 $100,000 TO KEVIN} She leaves her grandson Kevin one hundred thousand dollars.
 {office; P:smug.point} Then she adds one more line. If Kevin challenges this will, he gets nothing.
@@ -38,7 +38,7 @@ E = {
 {courtroom; J:smug.none, C:worried.shrug} Kevin challenges the will. And Kevin loses. So the will stays exactly as it was written.
 {neighborhood; C:smug.arms_up} Which means Kevin still gets his hundred thousand dollars. Grandma's threat was the only part of the will that didn't count. [loop] So before you put a scary clause in your will, remember""",
 
-20: """Pringles went to court to argue that Pringles are not potato chips. [disclaimer]
+20: """Pringles went to court and argued, with a straight face, that Pringles are not potato crisps. [disclaimer]
 {shop; C:smug.wave} Meet the company that made Pringles in the United Kingdom.
 {office; L:explaining; 🥔 CRISPS: TAXED} In the U.K., most food has no sales tax. But potato crisps do.
 {office; L:pointing; 📜 MADE FROM THE POTATO} The law taxes crisps and similar snacks made from the potato, or from potato flour.
@@ -51,7 +51,7 @@ E = {
 {courtroom; J:smug.point, C:worried.scratch} So Pringles stayed taxed.
 {shop; C:worried.shrug} The company spent years in court proving its snack wasn't potato enough, and walked out officially potato enough. [loop] So before you argue a Pringle isn't a crisp, remember""",
 
-21: """In New York, that gym waiver you signed might be legally meaningless. [disclaimer]
+21: """In New York, that gym waiver you signed, the one that says they're never responsible, might be legally worthless. [disclaimer]
 {shop; C:smug.wave} Meet Gary. Gary just joined a gym in New York.
 {shop; P:smug.explain, C:smug.none} At the front desk, they hand him a waiver. It says the gym isn't responsible for anything. Gary signs it without reading.
 {shop; C:worried.point} Two weeks later, a machine is broken. The staff knows. They ignore it. Gary gets hurt.
@@ -63,7 +63,7 @@ E = {
 {shop; P:smug.point, C:worried.scratch} The gym can also argue Gary accepted the normal risks of working out.
 {shop; C:worried.shrug} So the waiver can't protect the gym from its broken machine. But if Gary drops a weight on his own foot, that's still on Gary. [loop] So the next time you sign a stack of gym paperwork, remember""",
 
-22: """A judge invented a rule that didn't exist, used it to acquit a man, and now he can never be retried. [disclaimer]
+22: """A judge made up a rule that doesn't exist, acquitted a man with it, and now he can never be tried again. [disclaimer]
 {courtroom; J:neutral.none, C:worried.none} Meet Lamar Evans. He's on trial in Michigan for burning down a building.
 {office; L:explaining; 🔥 NOT A HOUSE} Not a house. A different kind of building. That's a smaller arson charge.
 {courtroom; J:smug.point, C:worried.none} The prosecutors finish their case. And the judge stops the trial.

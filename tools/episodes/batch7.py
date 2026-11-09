@@ -1,5 +1,5 @@
 E = {
-50: """The U.S. government can use your patented invention without your permission, and you can't stop it. [disclaimer]
+50: """The U.S. government can use your patented invention without asking, and you can't stop it. You can only send them a bill. [disclaimer]
 {office; C:smug.wave} Meet Gary. Gary invents a brilliant new design. And he patents it.
 {office; L:explaining; 🛑 PATENT = STOP SIGN} Normally, a patent is like a stop sign. If someone uses your invention without a deal, you can go to court and make them stop.
 {office; P:smug.explain, C:neutral.none} Then a company building equipment for a federal agency uses Gary's design. And the government signs off on it.
@@ -11,7 +11,7 @@ E = {
 {studio; L:concerned; ⚠️ NOT A FREE PASS} This is not a free pass for any company to copy patents. It only covers use by or for the United States, with the government's permission.
 {office; C:worried.shrug} So Gary's patent can stop almost anyone in America, except the government that gave him the patent. [loop] So before you assume a patent means nobody can use your invention, remember""",
 
-51: """Every giveaway says no purchase necessary, because without it, it might be an illegal lottery. [disclaimer]
+51: """Every giveaway says no purchase necessary. Without those three words, it might be an illegal lottery. [disclaimer]
 {shop; P:smug.wave} Meet a soda company. It wants to run a giant giveaway. Buy a bottle, check the cap, win a car.
 {office; L:explaining; 🎰 PRIZE. LUCK. PAYING.} In America, lawyers say a lottery has three parts. A prize. Luck. And paying to play.
 {office; L:concerned; 🚫 PRIVATE LOTTERY} And private lotteries are generally illegal.
@@ -61,7 +61,7 @@ E = {
 {courtroom; J:smug.none, C:smug.arms_up} Gary asks on day nineteen. His new trial is set.
 {courtroom; C:smug.shrug} So the easiest way to get a second chance in traffic court is to lose the first one by mail. [loop] So before you mail in your traffic defense, remember""",
 
-55: """A student shipped in cheap textbooks, resold them, got sued, and beat the publisher at the Supreme Court. [disclaimer]
+55: """A student imported cheap textbooks, resold them, got sued, and beat the publisher at the Supreme Court. [disclaimer]
 {office; C:smug.wave} Meet Supap Kirtsaeng. He comes from Thailand to study math in America.
 {office; C:surprised.think} And he notices something. The same textbooks are way cheaper in Thailand.
 {harbor; C:smug.point} So his friends and family buy cheap copies there and mail them to him. And he resells them here. For a profit.
@@ -73,7 +73,7 @@ E = {
 {studio; L:concerned; ⚠️ REAL COPIES ONLY} This is about real, physical copies. Not pirated copies, not making your own copies, and not digital stuff.
 {courtroom; P:worried.shrug} So the publisher charged less in Thailand to sell more books, and ended up competing with its own cheap books in America. [loop] So before you buy your textbooks at full price, remember""",
 
-56: """Police found crack cocaine in a man's pocket, and the Supreme Court said they weren't allowed to. [disclaimer]
+56: """Police found crack in a man's pocket, and the Supreme Court said they weren't allowed to find it. [disclaimer]
 {street; C:worried.none} Meet a man walking in Minneapolis. It's nineteen ninety three.
 {street; P:smug.point, C:worried.none} Police stop him and pat him down for weapons. Police are allowed to do that in some situations.
 {street; P:surprised.think} No weapon. Nothing.
@@ -86,7 +86,7 @@ E = {
 {studio; L:concerned; ⚠️ PLAIN FEEL IS REAL} Plain feel is still real. And every case like this depends on the exact facts.
 {courtroom; J:smug.none, C:surprised.none} So the case created the rule that lets police take things they can feel. And in this case, the officer felt too much. [loop] So before you assume a patdown means anything goes, remember""",
 
-57: """You can be legally locked into a contract before the other person even reads your answer. [disclaimer]
+57: """You can be legally locked into a contract before the other person has even read your answer. [disclaimer]
 {office; P:smug.wave} Meet Frank. Frank offers to sell Gary a machine. Gary has a few days to think about it. Gary thinks about it for about four seconds.
 {neighborhood; C:smug.point} On Monday, Gary mails back his answer. Yes. Deal.
 {office; P:worried.think} On Tuesday, before Gary's letter even arrives, Frank changes his mind. He found a buyer who will pay more. He tries to take back the offer.
@@ -98,7 +98,7 @@ E = {
 {office; P:worried.scratch} Frank's offer didn't say any of that.
 {office; P:worried.shrug} So Frank changed his mind first, but Gary's letter got to the deal before Frank did. [loop] So before you drop your acceptance in the mailbox, remember""",
 
-58: """In Texas, keeping bees on your land can legally slash your property taxes. [disclaimer]
+58: """In Texas, a few boxes of bees can legally slash your property taxes. [disclaimer]
 {campsite; C:smug.wave} Meet Gary. Gary owns ten acres in Texas. And a huge property tax bill.
 {office; L:explaining; 🌾 FARM LAND RULE} Texas lets farm land be taxed on what it can produce, instead of what it would sell for. And that number is usually way lower.
 {office; L:pointing; 🐝 BEES = FARMING} And Texas changed its law to say that keeping bees counts as farming. For pollination, or stuff like honey.
@@ -109,7 +109,7 @@ E = {
 {campsite; C:smug.arms_up} So Gary gets his hives. He has to keep them for years. He has to do it at the level that's normal in his area.
 {campsite; C:smug.shrug} So the secret to a smaller tax bill turns out to be a full time job with a few thousand tiny employees. [loop] So before you call a few beehives a tax strategy, remember""",
 
-59: """The government can take your cash and your car, and you never have to be convicted of anything. [disclaimer]
+59: """The government can take your cash and your car, and you never have to be convicted of anything. Or even charged. [disclaimer]
 {street; C:neutral.wave} Meet Gary. Gary is driving with a lot of cash in his car.
 {street; P:smug.point, C:surprised.none} The government takes the cash. And the car.
 {street; C:angry.arms_up} Gary says, I haven't been convicted of anything!

@@ -1,5 +1,5 @@
 E = {
-7: """In New York, you could owe someone a fortune, and they still might not be able to touch your million dollar Bible. [disclaimer]
+7: """In New York, you can owe someone a fortune, and they still can't touch your million dollar Bible. [disclaimer]
 {neighborhood; C:smug.wave} Meet Gary. Gary owes his neighbor Frank a lot of money.
 {courtroom; J:neutral.none, C:worried.none, P:smug.point} Frank sues him. Frank wins. Now Frank is allowed to go after Gary's stuff.
 {neighborhood; P:smug.point, C:worried.shrug} He wants the car. He wants the bank account. He even wants the TV.
@@ -13,7 +13,7 @@ E = {
 {neighborhood; P:smug.point, C:worried.scratch} And there's one more rule. If the money you owe is for the Bible itself, the Bible isn't protected at all.
 {neighborhood; C:worried.none} Which is bad news for Gary. Because the money he owes Frank is for the Bible. [loop] So before you go shopping for the world's most expensive Bible, remember""",
 
-8: """A fisherman dumped the evidence overboard after a federal officer told him not to, and the Supreme Court ruled a fish isn't a tangible object. [disclaimer]
+8: """A man threw the evidence overboard, and the Supreme Court said that under that law, it didn't count. Because it was a fish. [disclaimer]
 {harbor; C:smug.wave} Meet John Yates. He's a real fishing captain, out in the Gulf of Mexico.
 {harbor; P:angry.point, C:worried.none} A wildlife officer climbs on his boat and measures his fish. Some of his red grouper are too small. That's illegal.
 {harbor; P:angry.explain, C:smug.shrug} The officer says, keep those little fish separate until we get to shore.
@@ -27,7 +27,7 @@ E = {
 {courtroom; J:smug.point, C:worried.none} But he was also convicted under a different law, for destroying stuff so the government couldn't take it. And he didn't fight that one.
 {harbor; C:worried.shrug} So he beat the charge for destroying a fish. And he's still guilty of destroying the fish. [loop] So before you call a fish a document, remember""",
 
-9: """You can rent your house to strangers for two weeks and not report a single dollar to the IRS. [disclaimer]
+9: """You can rent your house to total strangers for two weeks, and the IRS legally doesn't want a dollar of it. [disclaimer]
 {neighborhood; C:smug.wave} Meet Gary. Gary has a house in a quiet little town.
 {street; P:surprised.arms_up, C:surprised.none} Then the town gets picked for a giant event. Every hotel is sold out.
 {neighborhood; P:smug.wave, C:smug.point} Strangers start begging to rent Gary's house. He says yes. For a crazy amount of money.
@@ -40,7 +40,7 @@ E = {
 {neighborhood; C:smug.point} Gary says, sure, it's just one more night.
 {office; L:surprised; 🧾 DAY 15: REPORT IT ALL} But on day fifteen, the rule is gone. Now Gary has to report the rent from every single night. [loop] So before you list your place for a fifteenth night, remember""",
 
-10: """A group of MIT students found a way to make a state lottery pay them. And it was legal. [disclaimer]
+10: """A group of college students beat a state lottery with math, made millions, and it was completely legal. [disclaimer]
 {shop; C:neutral.none} Meet a group of college students in Massachusetts. They are looking at a lottery game called Cash WinFall.
 {shop; C:surprised.think} Most lotteries are simple. The jackpot grows until somebody wins it.
 {office; L:explaining; 💰 JACKPOT: $2,000,000} But this game had a weird rule. If the jackpot hit two million dollars and nobody won, the money rolled down to the small prizes.

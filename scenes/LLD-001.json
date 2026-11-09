@@ -10,12 +10,19 @@
      "face": "smug",
      "gest": "wave",
      "name": "GARY",
-     "x": 0.5
+     "x": 0.3
+    },
+    {
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "none",
+     "name": "CHAD",
+     "x": 0.7
     }
    ]
   },
   {
-   "at": "gary steals a park",
+   "at": "only gary comes back",
    "bg": "bg-yellowstone",
    "cast": [
     {
@@ -23,19 +30,12 @@
      "face": "smug",
      "gest": "point",
      "name": "GARY",
-     "x": 0.3
-    },
-    {
-     "id": "char-politician",
-     "face": "surprised",
-     "gest": "none",
-     "name": "RANGER",
-     "x": 0.7
+     "x": 0.5
     }
    ]
   },
   {
-   "at": "so gary goes to",
+   "at": "gary is charged with",
    "bg": "bg-courtroom",
    "cast": [
     {
@@ -207,13 +207,20 @@
      "face": "smug",
      "gest": "wave",
      "name": "GARY",
-     "x": 0.5
+     "x": 0.3
+    },
+    {
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "none",
+     "name": "CHAD",
+     "x": 0.7
     }
    ],
    "loop": true
   }
  ],
- "hook": "THE U.S. ZONE WHERE NO JURY EXISTS",
+ "hook": "THE ZONE OF DEATH",
  "highlight": [
   "yellowstone",
   "idaho",
@@ -231,7 +238,7 @@
   "#sixthamendment"
  ],
  "music_vibe": "tense",
- "share_line": "Send this to a friend you'd kill (in Idaho)",
- "script": "There is a corner of America where, in theory, it's impossible to find a jury for your crime. [disclaimer] Meet Gary. Gary is camping in Yellowstone. In the small part of the park that sits inside Idaho. Gary steals a park ranger's truck. That's a serious federal crime. Real prison time. So Gary goes to federal court. And federal court has a rule that comes straight from the Constitution. The Sixth Amendment says your jury has to come from the state and the district where the crime happened. But Congress put all of Yellowstone in the federal district of Wyoming. Even the parts in Idaho and Montana. So Gary's jurors have to live in Idaho. And in the district of Wyoming. At the same time. The only place that is both is the Idaho part of the park. And nobody lives there. Trees. Bison. Geysers. Zero people. Wait. So nobody in the country can legally sit on Gary's jury? You see, it's like a club that only lets in people born on February thirtieth. The rules are real. The members don't exist. This is a law professor's theory. No court has ever accepted it, a judge could find a way around it, and smaller charges don't need a jury at all. Congress has known about this for years. It still hasn't fixed it. So Gary's whole defense comes down to a head count of bison. And no court has ever bought it. [loop] So before you go camping in Idaho, remember",
+ "share_line": "Send this to the friend you'd take camping in the Zone of Death",
+ "script": "There is a fifty square mile patch of America where, in theory, you could kill your best friend and no jury could ever legally convict you. They call it the Zone of Death. [disclaimer] Meet Gary. And Gary's best friend, Chad. Gary takes Chad camping in Yellowstone. In the small part of the park that sits inside Idaho. Only Gary comes back. Gary is charged with murder. A federal crime. So he goes to federal court. And federal court has a rule that comes straight from the Constitution. The Sixth Amendment says your jury has to come from the state and the district where the crime happened. But Congress put all of Yellowstone in the federal district of Wyoming. Even the parts in Idaho and Montana. So Gary's jurors have to live in Idaho. And in the district of Wyoming. At the same time. The only place that is both is the Idaho part of the park. And nobody lives there. Trees. Bison. Geysers. Zero people. Wait. So nobody in the country can legally sit on Gary's jury? You see, it's like a club that only lets in people born on February thirtieth. The rules are real. The members don't exist. This is a law professor's theory. No court has ever accepted it, a judge could find a way around it, and smaller charges don't need a jury at all. Congress has known about this for years. It still hasn't fixed it. So Gary's whole defense comes down to a head count of bison. And Chad is still not answering his phone. [loop] So before you go camping in Idaho, remember",
  "story_format": true
 }

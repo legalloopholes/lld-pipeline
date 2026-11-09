@@ -1,8 +1,8 @@
 E = {
-1: """There is a corner of America where, in theory, it's impossible to find a jury for your crime. [disclaimer]
-{yellowstone; C:smug.wave} Meet Gary. Gary is camping in Yellowstone. In the small part of the park that sits inside Idaho.
-{yellowstone; C:smug.point, P:surprised.none} Gary steals a park ranger's truck. That's a serious federal crime. Real prison time.
-{courtroom; J:neutral.none, C:neutral.none} So Gary goes to federal court. And federal court has a rule that comes straight from the Constitution.
+1: """There is a fifty square mile patch of America where, in theory, you could kill your best friend and no jury could ever legally convict you. They call it the Zone of Death. [disclaimer]
+{yellowstone; C:smug.wave, P:smug.none} Meet Gary. And Gary's best friend, Chad. Gary takes Chad camping in Yellowstone. In the small part of the park that sits inside Idaho.
+{yellowstone; C:smug.point} Only Gary comes back.
+{courtroom; J:neutral.none, C:neutral.none} Gary is charged with murder. A federal crime. So he goes to federal court. And federal court has a rule that comes straight from the Constitution.
 {office; L:explaining; 📜 SIXTH AMENDMENT} The Sixth Amendment says your jury has to come from the state and the district where the crime happened.
 {capitol; L:pointing; 🗺️ ALL OF IT = WYOMING} But Congress put all of Yellowstone in the federal district of Wyoming. Even the parts in Idaho and Montana.
 {courtroom; J:worried.think, C:smug.shrug} So Gary's jurors have to live in Idaho. And in the district of Wyoming. At the same time.
@@ -11,9 +11,9 @@ E = {
 {studio; L:explaining} You see, it's like a club that only lets in people born on February thirtieth. The rules are real. The members don't exist.
 {studio; L:concerned; ⚠️ UNTESTED THEORY} This is a law professor's theory. No court has ever accepted it, a judge could find a way around it, and smaller charges don't need a jury at all.
 {capitol; L:smug} Congress has known about this for years. It still hasn't fixed it.
-{yellowstone; C:worried.none} So Gary's whole defense comes down to a head count of bison. And no court has ever bought it. [loop] So before you go camping in Idaho, remember""",
+{yellowstone; C:worried.none} So Gary's whole defense comes down to a head count of bison. And Chad is still not answering his phone. [loop] So before you go camping in Idaho, remember""",
 
-2: """In Germany, breaking out of prison is not a crime. Giving the escapee a ride is. [disclaimer]
+2: """In Germany, you can break out of prison and it's not a new crime. But the friend who drives the getaway car? He's the criminal. [disclaimer]
 {prison; C:neutral.none} Meet Klaus. Klaus is serving a sentence in a German prison.
 {prison; C:surprised.point} One night, Klaus finds a door left unlocked. And he walks out.
 {street; C:smug.wave, P:smug.none=macaque.tracksuit} His friend Jonas is waiting outside with a car. Klaus gets in.
@@ -26,7 +26,7 @@ E = {
 {studio; L:concerned; ⚠️ ESCAPE CANCELS NOTHING} The sentence still stands. Klaus gets brought back, faces prison discipline, and early release gets harder. Damage the bars or hurt a guard, and that's its own crime.
 {prison; C:worried.none} So Klaus goes back to his cell with no new charge. And the only new criminal in the story is the guy who gave him a ride. [loop] So if you ever hear someone say breaking out is legal, remember""",
 
-3: """One missing comma ended up costing a dairy company five million dollars. [disclaimer]
+3: """A dairy company lost five million dollars because somebody skipped one comma. [disclaimer]
 {street; C:smug.wave} Meet Kevin. Kevin drives a milk truck in Maine. He delivers milk all day.
 {office; C:worried.none, P:smug.none=mandrill.suit} Kevin works long weeks. But his company, Oakhurst Dairy, doesn't pay him overtime.
 {office; P:smug.point=mandrill.suit, C:surprised.none} The dairy points to state law. In Maine, some food jobs don't get overtime.
@@ -41,7 +41,7 @@ E = {
 {studio; L:concerned; ⚠️ NOT A PAYOUT} The ruling itself paid nobody. It sent the case back to court. And Maine later rewrote the law with semicolons.
 {office; P:worried.scratch=mandrill.suit} So the dairy settles for five million dollars. Because of a comma nobody typed. [loop] So the next time someone says punctuation doesn't matter, remember""",
 
-4: """In California, a bumble bee can legally count as a fish. [disclaimer]
+4: """In California, a bumble bee is legally a fish. A court said so. [disclaimer]
 {neighborhood; C:smug.wave} Meet Gary. Gary grows almonds. And Gary's farm runs on bees.
 {capitol; P:smug.point} Then California wants to protect four kinds of bumble bees under its endangered species law.
 {neighborhood; C:worried.scratch} Protected species come with rules. And farmers like Gary worry those rules will reach their fields.
@@ -55,7 +55,7 @@ E = {
 {studio; L:concerned; ⚠️ ONE LAW ONLY} This is one wildlife law. When the state supreme court declined to review it, the chief justice wrote that this doesn't mean bees are fish. And biologically, they obviously aren't.
 {neighborhood; C:worried.none} So Gary's farm runs on bees, and his side lost the case because of fish. [loop] So if you ever see a bee at the fish market, remember""",
 
-5: """A company went to trial to prove its chocolate biscuit is legally a cake. And it won. [disclaimer]
+5: """A British tax trial was decided by watching a snack go stale. And the snack won. [disclaimer]
 {shop; C:smug.wave=proboscis.chef} Meet the makers of Jaffa Cakes. A sponge base, an orange layer, and chocolate on top.
 {office; L:explaining; 🧾 CAKE = NO VAT} In Britain, most food has no VAT. That includes cakes. Even cakes with chocolate on them.
 {office; L:pointing; 🍪 CHOC BISCUIT = VAT} But a biscuit covered in chocolate pays the full tax.
@@ -70,7 +70,7 @@ E = {
 {studio; L:concerned; ⚠️ ONE PRODUCT ONLY} Going hard was one factor, not the whole test. And this was one tax ruling, not a rule that any snack can call itself a cake.
 {shop; P:worried.scratch} So the tax office lost a whole trial to a snack that proved itself by going stale. [loop] So before you call it a biscuit, remember""",
 
-6: """Marvel's own toy company went to court to prove the X-Men aren't human. And it won. [disclaimer]
+6: """Marvel's own toy company stood in court and swore the X-Men aren't human. To pay less tax. [disclaimer]
 {shop; C:smug.wave=capuchin.suit} Meet Toy Biz. Toy Biz makes Marvel action figures. Wolverine, Storm, the whole team.
 {harbor; P:smug.point, C:neutral.none=capuchin.suit} The toys are made overseas. So they come in through customs. And customs has to pick a category.
 {office; L:explaining; 🧸 DOLLS = 12% TAX} Back then, a doll that shows a human being pays twelve percent at the border.

@@ -1,5 +1,5 @@
 E = {
-31: """A monkey took a selfie, and the U.S. Copyright Office says it won't register that photo for anyone. [disclaimer]
+31: """A monkey took a selfie, and the U.S. Copyright Office won't register it for anyone. Not the photographer. Not the monkey. [disclaimer]
 {campsite; C:smug.wave} Meet a photographer. He sets up a camera in the jungle, and walks away for a minute.
 {campsite; C:surprised.arms_up} A monkey grabs the camera. And snaps a perfect selfie.
 {campsite; C:smug.point} The photographer says, great, it's my camera, so it's my photo.
@@ -11,7 +11,7 @@ E = {
 {campsite; C:worried.scratch} So the photographer owns the camera. He owns the memory card. He owns the trip.
 {campsite; C:worried.shrug} And the best photo he ever got is the one photo the Copyright Office won't register for anybody. Not him. Not the monkey. [loop] So the next time a monkey borrows your camera, remember""",
 
-32: """In Pennsylvania, you can get clocked going eight over, and that reading alone still can't convict you. [disclaimer]
+32: """In Pennsylvania, a cop can clock you going eight over, and that reading alone can't convict you. [disclaimer]
 {street; C:smug.wave} Meet Gary. Gary is driving in Pennsylvania, in a thirty five zone.
 {street; P:smug.point, C:smug.none} A speed timer measures his car between two lines on the road. It says forty three.
 {street; P:smug.explain, C:worried.none} That's eight over. The officer is already writing the ticket. Gary is sure he's done. He has never heard of the rule that could help him.
@@ -23,7 +23,7 @@ E = {
 {street; P:smug.point, C:worried.scratch} And the officer can have other evidence, like their own eyes, or a different device.
 {street; C:worried.shrug} So the rule can stop that one reading from convicting Gary, and Gary is still the one who was speeding. [loop] So before you do speedometer math in Pennsylvania, remember""",
 
-33: """Some photos on government websites have no copyright at all. Anyone can use them. [disclaimer]
+33: """Some photos made by the U.S. government have no copyright at all. Anyone can use them. [disclaimer]
 {office; C:smug.wave} Meet Gary. Gary is making a poster to sell, and he needs a great photo.
 {office; C:smug.point} He finds two amazing photos on a government website.
 {office; L:explaining; 🏛️ FEDERAL WORK} In America, work made by a federal employee as part of their job doesn't get a copyright. None.
@@ -35,7 +35,7 @@ E = {
 {office; P:angry.point, C:worried.none} So the photographer sends Gary a letter.
 {office; C:worried.shrug} Gary found the one free photo on the website, and then put the other one on the poster. [loop] So before you assume that government photo is free to use, remember""",
 
-34: """Billionaires buy yachts without selling anything, then die, and the gains may never get taxed. [disclaimer]
+34: """Billionaires buy yachts without selling a single share, then die, and the gains may never get taxed. [disclaimer]
 {harbor; C:smug.wave} Meet Chad. Chad is very rich. And Chad wants a yacht.
 {office; L:explaining; 📈 STEP 1: BUY} Step one, Chad buys stock and never sells it. As long as he doesn't sell, he generally doesn't pay tax on the growth.
 {office; P:smug.explain, C:smug.point} Step two, Chad borrows money against the stock. A loan generally isn't income, because he has to pay it back.
@@ -47,7 +47,7 @@ E = {
 {office; P:smug.point, C:worried.none} And dying doesn't erase the loan.
 {harbor; C:worried.shrug} So Chad never paid tax on the growth. His kids inherited the stock, the yacht, and an estate that still owes the loan for the yacht. [loop] So the next time you wonder how billionaires pay for things, remember""",
 
-35: """Write payment in full on a check, and you might wipe out the rest of a bill you're fighting. [disclaimer]
+35: """Write three words on a check, and you might legally wipe out the rest of a bill you're fighting. [disclaimer]
 {neighborhood; P:smug.wave, C:neutral.none} Meet Gary. Gary hired a contractor to fix his deck.
 {neighborhood; C:angry.point, P:surprised.none} The contractor sends a bill for two thousand dollars. But Gary honestly thinks the work was bad.
 {office; C:smug.explain} So Gary sends a check for fifteen hundred. And he writes on it, payment in full.
@@ -59,7 +59,7 @@ E = {
 {studio; L:concerned; ⚠️ NEEDS A REAL FIGHT} But it's not magic. If there's no real fight and you just owe the bill, it doesn't work. Companies can set a special address for these checks. And they can often undo it by paying the money back within ninety days.
 {neighborhood; P:worried.scratch} So the contractor got fifteen hundred dollars, and the hardest part of the deal for him was reading his own check. [loop] So before you cash that check marked payment in full, remember""",
 
-36: """A cop took cash to search a police database, and the Supreme Court said it wasn't hacking. [disclaimer]
+36: """A cop took cash to look someone up in a police database, and the Supreme Court said that's not hacking. [disclaimer]
 {office; C:smug.wave} Meet Nathan Van Buren. He's a police sergeant in Georgia.
 {office; P:smug.explain, C:smug.none} A man offers him money to look up a license plate in the police database.
 {office; C:smug.point} Van Buren logs in with his own real login. And does the search.
@@ -72,7 +72,7 @@ E = {
 {studio; L:concerned; ⚠️ STILL NOT LEGAL} Selling police information did not become legal. Other laws, getting fired, and privacy rules are separate. And sneaking into parts you aren't allowed in is still covered.
 {courtroom; C:worried.shrug} So the reason it wasn't hacking is that his own police department gave him the password. [loop] So before you call every misuse of a login hacking, remember""",
 
-37: """In Britain, the same pastry can be taxed or tax free depending on which shelf it's sitting on. [disclaimer]
+37: """In Britain, the exact same pastry can be taxed or tax free, depending on how warm it is. [disclaimer]
 {shop; C:smug.wave} Meet Nigel. Nigel runs a bakery in the U.K.
 {office; L:explaining; 🔥 HOT FOOD = TAXED} In the U.K., hot takeaway food usually gets taxed. And hot just means warmer than the air.
 {shop; C:surprised.think} So a pastry fresh out of the oven is technically hot.
@@ -84,7 +84,7 @@ E = {
 {studio; L:concerned; ⚠️ EVERY QUESTION MATTERS} Not every cooling pastry escapes the tax. Every one of those questions matters, and how the customer likes to eat it doesn't.
 {shop; C:smug.none} So Nigel's cheapest move is turning off the heater. The only thing that makes a pastry taxable here is trying to keep it warm. [loop] So the next time your pastry is still warm, remember""",
 
-38: """In California, if your car is hooked to a tow truck but still in the lot, they have to give it back. [disclaimer]
+38: """In California, if your car is already hooked to the tow truck but hasn't left the lot, they have to give it back. [disclaimer]
 {street; C:smug.wave} Meet Gary. Gary parks in a store parking lot in California, where he definitely should not park.
 {street; P:smug.point} A tow truck shows up. It hooks Gary's car. It lifts it off the ground.
 {street; C:surprised.arms_up, P:smug.none} Gary comes running out of the store. Wait! That's my car!
@@ -96,7 +96,7 @@ E = {
 {street; P:worried.shrug, C:smug.point} So the tow truck lowers Gary's car. And Gary has to move it right away to a legal spot.
 {street; C:smug.none} So Gary saved half the towing price by running, and the only thing he had to do was park legally in the first place. [loop] So the next time a tow truck backs up to your car, remember""",
 
-39: """A rap group was told no, parodied the song anyway, and the Supreme Court sided with the rappers. [disclaimer]
+39: """A rap group asked to parody a song, got told no, did it anyway, and won at the Supreme Court. [disclaimer]
 {studio; C:smug.wave} Meet a rap group called Two Live Crew. They want to make a funny parody of Roy Orbison's song, Oh, Pretty Woman.
 {office; P:smug.explain, C:neutral.none} They ask the music company for permission.
 {office; P:angry.point, C:surprised.none} The music company says no.

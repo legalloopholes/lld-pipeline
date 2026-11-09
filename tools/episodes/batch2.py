@@ -12,7 +12,7 @@ E = {
 {studio; L:concerned; ⚠️ NO TIME TRAVEL} But marriage doesn't protect what happened before the wedding. It doesn't cover everything a spouse sees. States have their own rules. And a wedding never stops a prosecution.
 {courtroom; C:worried.none} So the rule Otis thought would protect him, is the exact rule that let his wife take the stand. [loop] So before you plan a wedding as a legal strategy, remember""",
 
-12: """The United States government went to court to argue that a Snuggie is clothing. And lost. [disclaimer]
+12: """The United States government went to court to prove a Snuggie is clothing. It lost. To a blanket with sleeves. [disclaimer]
 {neighborhood; C:smug.wave} Meet Gary. Gary loves his Snuggie. It's that giant fleece blanket with sleeves.
 {harbor; P:smug.point} But when Snuggies come into the country, customs has to pick a category. And the category decides the tax.
 {harbor; P:angry.point, C:surprised.none} Customs takes one look and says, it has sleeves. That's clothing. Almost fifteen percent tax.
@@ -25,7 +25,7 @@ E = {
 {studio; L:concerned; ⚠️ ONE PRODUCT ONLY} That was one product and one tax decision. Sewing sleeves on a blanket doesn't magically change its taxes, and a label alone isn't enough.
 {neighborhood; C:smug.none} So the government lost, because of the sleeves. The one thing that makes a Snuggie a Snuggie legally doesn't count. [loop] So the next time you're wearing your blanket, remember""",
 
-13: """In England, if you take over your neighbor's garden for ten years, you can apply to make it yours. [disclaimer]
+13: """In England, you can take over your neighbor's garden, keep it for ten years, and then ask the government to make it yours. [disclaimer]
 {neighborhood; C:smug.wave, P:neutral.none} Meet Nigel. Nigel lives in England, next to a neighbor who never checks her garden.
 {neighborhood; C:smug.point} One day, Nigel moves his fence a few feet. Onto her land.
 {neighborhood; C:smug.arms_up} He plants roses. He mows it. He treats it like it's his. For ten whole years.
@@ -38,7 +38,7 @@ E = {
 {studio; L:concerned; ⚠️ SQUATTING IN A HOME} And squatting in someone's home can actually be a crime in England and Wales.
 {neighborhood; C:worried.shrug} So Nigel spent ten years growing roses, and one letter from the neighbor took the whole garden back. [loop] So before you move your fence a few feet, remember""",
 
-14: """Some people in America can commit a felony right in front of a cop, and the country can't put them on trial. [disclaimer]
+14: """Some people in America can commit a crime right in front of a cop, and the country can't put them on trial. Because of a treaty. [disclaimer]
 {street; C:smug.wave} Meet a top diplomat. He's working at his country's embassy in America.
 {street; P:angry.point, C:smug.shrug} One day, he breaks the law. Right in front of a police officer.
 {street; P:surprised.arms_up, C:smug.point} The officer goes for the handcuffs. And the diplomat just shows his ID.
@@ -50,7 +50,7 @@ E = {
 {studio; L:concerned; ⚠️ NOT EVERYONE GETS IT} And not everyone at an embassy gets the full deal. Consular officers usually only get it for their official work.
 {street; C:worried.none} So the diplomat flies home, a free man. And the treaty says his own country's courts can still go after him there. [loop] So before you assume a diplomat is above the law, remember""",
 
-15: """A Supreme Court officially ruled that Subway bread has too much sugar to legally be bread. [disclaimer]
+15: """Ireland's Supreme Court ruled that Subway's bread has so much sugar, it's legally not bread. [disclaimer]
 {shop; C:smug.wave} Meet a Subway franchise owner in Ireland. He wants a tax refund on the bread, hot sandwiches, tea and coffee he sold years ago.
 {office; L:explaining; 🍞 REAL BREAD: 0% TAX} In Ireland, real bread gets a special zero percent tax rate. And he says, my bread is bread.
 {office; P:angry.point, C:surprised.none} The tax office says no. Not that bread.
@@ -62,7 +62,7 @@ E = {
 {studio; L:concerned; ⚠️ NOT BANNED} Nobody banned the bread. This recipe just didn't fit Ireland's tax definition, so the refund was denied.
 {courtroom; J:smug.point, C:worried.scratch} So Subway went all the way to the Supreme Court to save money on its bread. And walked out with a ruling that it isn't bread. [loop] So the next time you order a sandwich in Ireland, remember""",
 
-16: """In California, a sixteen year old can sign a contract, take the deal, and then legally cancel it. [disclaimer]
+16: """In California, a sixteen year old can sign a contract, and then just undo it. Legally. [disclaimer]
 {shop; P:smug.explain} Meet a car dealer in California. He just sold a car to a buyer who signed every page.
 {shop; P:smug.point, C:smug.wave} The buyer is sixteen.
 {shop; C:smug.shrug, P:surprised.none} A few months later, the buyer comes back and says, I'm canceling the deal.

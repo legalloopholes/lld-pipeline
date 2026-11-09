@@ -13,7 +13,7 @@ E = {
 {studio; L:concerned; ⚠️ CLAIMS, NOT A RULING} But those were claims. The government said there was no finding that Ford was liable, and Ford didn't admit anything. And these rates are history, not a guide.
 {harbor; P:smug.shrug} So the government says the seats were fake. The bill was very real. [loop] So the next time you see a van with an extra row of seats, remember""",
 
-24: """Giant companies were set up in Ireland, and Ireland legally said they weren't Irish. [disclaimer]
+24: """Some of the biggest companies on earth were set up in Ireland, and Ireland said that for tax, they weren't Irish. [disclaimer]
 {office; C:smug.wave} Meet a giant tech company. It makes a fortune from patents and software rights.
 {office; L:explaining; 🌍 WHERE DO YOU LIVE?} For taxes, countries ask, where does this company really live?
 {office; L:pointing; 🇮🇪 OLD IRISH RULE} For older Irish companies, the answer depended on where the company was actually run from. Where the bosses made the decisions.
@@ -26,7 +26,7 @@ E = {
 {studio; L:concerned; ⚠️ CLOSED SINCE 2020} New companies set up in Ireland from twenty fifteen count as Irish, unless a treaty says otherwise. Older ones had until the end of twenty twenty. You can't do this today. And not every company that used it paid zero.
 {office; C:worried.shrug} So the trick only worked because Ireland said these companies weren't Irish. Ireland ended it by deciding they are. [loop] So the next time someone says a company's address tells you where it pays tax, remember""",
 
-25: """In North Carolina, you can sue the person your spouse fell for, for stealing your spouse's love. For money. [disclaimer]
+25: """In North Carolina, if someone steals your spouse, you can sue them. For money. And people have won millions. [disclaimer]
 {neighborhood; C:smug.wave} Meet Dave. Dave is married. Dave lives in North Carolina.
 {neighborhood; C:worried.none, P:smug.wave} Then Dave's wife falls for Steve. And the marriage falls apart.
 {neighborhood; C:angry.point, P:surprised.none} Normally, a breakup is a fight between the two people who were married. But Dave goes after Steve.
@@ -39,7 +39,7 @@ E = {
 {studio; L:concerned; ⚠️ MOST STATES: NO} And most states don't allow this kind of lawsuit at all.
 {courtroom; J:smug.none, P:worried.scratch} So in this love triangle, the person who was married isn't the one being sued. The outsider is. [loop] So before you get involved with someone who's married in North Carolina, remember""",
 
-26: """The Supreme Court of the United States officially ruled that a tomato is a vegetable. [disclaimer]
+26: """The Supreme Court of the United States ruled that a tomato is a vegetable. Officially. [disclaimer]
 {harbor; C:smug.wave} Meet the Nix family. It's eighteen ninety three, and they import tomatoes into New York.
 {office; L:explaining; 🥕 VEGETABLES: TAXED} Back then, America taxed vegetables coming into the country. Fruit? No tax.
 {harbor; P:smug.point, C:angry.arms_up} The tax collector charges them the vegetable tax. The Nix family is furious.
@@ -51,7 +51,7 @@ E = {
 {studio; L:concerned; ⚠️ SCIENCE DIDN'T CHANGE} This was about one old tax law. It didn't change science, and it didn't decide what a tomato is for every law.
 {courtroom; J:smug.none, C:worried.shrug} So the Nix family proved the tomato is a fruit, and still had to pay the vegetable tax. [loop] So the next time someone tells you a tomato is a fruit, remember""",
 
-27: """A company planted fake people in its phone book to catch a copycat. It caught them. Then it lost at the Supreme Court. [disclaimer]
+27: """A phone company invented fake people to catch a copycat. It caught them red handed. And still lost at the Supreme Court. [disclaimer]
 {office; C:smug.wave} Meet Rural Telephone. It's a small phone company in Kansas, and it makes a phone book.
 {office; P:smug.explain, C:neutral.none} Another company, Feist, makes a bigger phone book. It asks to use Rural's listings.
 {office; C:angry.point, P:surprised.none} Rural says no. Make your own phone book.
@@ -64,7 +64,7 @@ E = {
 {studio; L:concerned; ⚠️ NOT A COPY PASS} Creative writing and choices can still be protected. And this isn't permission to copy websites. Contracts and privacy laws are separate.
 {courtroom; J:smug.point, C:worried.shrug} So Rural's trap worked perfectly. It proved Feist copied. It just copied something nobody owns. [loop] So before you copy someone's phone book, remember""",
 
-28: """Investors can sell a building for millions in profit and legally not pay the tax. For now. [disclaimer]
+28: """You can sell a building for millions in profit, and legally not pay a cent of tax on it. For now. [disclaimer]
 {street; C:smug.wave} Meet Linda. Linda owns a rental building that's worth way more than she paid.
 {office; L:explaining; 💸 PROFIT = TAX} Normally, if she sells it, she pays tax on the profit. Simple.
 {office; L:pointing; 🔁 THE 1031 SWAP} But there's a rule called a ten thirty one exchange. Trade it for another investment property, follow the rules, and the tax waits.
@@ -77,7 +77,7 @@ E = {
 {street; C:worried.scratch, P:smug.point} On day forty six, she finally picks one.
 {office; L:concerned; 🧾 MISSED IT. PAY IT.} So Linda's tax free swap became a regular sale, and the alarm she snoozed went off all at once. [loop] So before you call your next property swap tax free, remember""",
 
-29: """A company got money that was sent by mistake, and Australia's highest court said they could keep it. [disclaimer]
+29: """A company got money sent to them by mistake, and Australia's highest court said, keep it. [disclaimer]
 {office; P:smug.wave} Meet a businessman in Australia. He's running a scam.
 {office; L:explaining; 🧾 FAKE BILLS} He makes fake bills for equipment from two real suppliers, Hills Industries and Bosch.
 {office; P:smug.point, C:neutral.none} A finance company pays those suppliers. Then it finds out the bills were fake.
@@ -90,7 +90,7 @@ E = {
 {studio; L:concerned; ⚠️ GOOD FAITH ONLY} This only works if you acted in good faith and truly gave something up. Random money in your account that you spend? You can still be forced to pay it back.
 {office; P:worried.scratch} So the scammer's fake bills ended up paying off his real debts. [loop] So if money ever lands in your account by mistake, remember""",
 
-30: """Your cruise stops at a random foreign port because of a law from eighteen eighty six. [disclaimer]
+30: """That random foreign stop on your cruise? It's there because of a law from eighteen eighty six. [disclaimer]
 {harbor; C:smug.wave} Meet Gary. Gary books a cruise from Florida, around the Caribbean, and back.
 {harbor; C:surprised.think} On day three, the ship stops in a random little foreign port. For four hours.
 {harbor; P:smug.explain, C:surprised.none} Gary asks why. Nobody on board seems to know.
