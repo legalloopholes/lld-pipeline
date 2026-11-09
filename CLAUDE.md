@@ -17,6 +17,8 @@ This repository is **public**: never commit secrets, tokens, personal emails or 
 - Be concise and factual; say "I don't know" rather than guess. Legal content must be accurate, with the real limits kept
   (compressed to one line, but present). Ideas in the sheet were verified by the owner.
 - Look: 3D renders, colored skies/sets, **no white backgrounds**, **no bobbing/floating characters**.
+  Render style (2026-11-09): **`cinematic`** — the realistic shader look (`larry-3d/styles.js`). Owner tried toon and
+  **rejected it**; wants realistic, not cartoon outlines.
 - Hooks: absurd, deadpan, "wtf did I just hear" — **not** cartoonish, childish or goofy.
   Language: extremely simple. **No childish interjections** ("Yikes!", "Ouch!", "Sweet!", "Buzz buzz…") — he hates them.
 - **No spoken disclaimer.** The on-screen line "Educational content • Not legal advice" stays for the whole video.
@@ -32,8 +34,10 @@ This repository is **public**: never commit secrets, tokens, personal emails or 
 
 ## How a post is made (`run.py`)
 1. `python run.py window` — gate: is a posting slot ~2 h away and not yet claimed (`state/last_slot.txt`)?
-2. Voice: `lld/make_voice.py` → local Kokoro TTS server `lld/tts_server.py` (voice `am_puck`, `voice_speed` 1.08,
-   exclamations get a pitch/volume "pop"). Script comes from `scenes/<ID>.json` → `script`
+2. Voice: `lld/make_voice.py` → local TTS server on :8300. Since 2026-11-09 Larry is **Chatterbox** (`lld/tts_chatterbox.py`,
+   chatterbox-tts==0.1.7 in its own venv, exaggeration 0.75 / cfg 0.35 = audition #6, picked by the owner by ear;
+   speed via atempo, `voice_speed` 1.08; no pitch "pop": `voice_pop` false). `brand.json` `"tts": "kokoro"` falls back
+   to the old Kokoro `am_puck` server (`lld/tts_server.py`). Script comes from `scenes/<ID>.json` → `script`
    (`[disclaimer]` marker after the hook, `[loop]` before the loop line; the share line is `share_line`).
 3. Captions: Parakeet via sherpa-onnx (`lld/make_captions.py`), one word at a time.
 4. Video: `lld/render_video.py` builds a timeline from the scene plan + captions, `larry-3d/render3d.mjs` renders it
@@ -49,25 +53,37 @@ This repository is **public**: never commit secrets, tokens, personal emails or 
   The rotating TikTok token is saved encrypted in `state/tiktok.json.enc`. Repo variable `LIVE=true` enables posting.
 - The old Mac n8n workflow is retired (unpublished). The Mac copy at `~/.n8n-files/lld-pipeline` is a git clone.
 
+## Look and cast (`larry-3d/`)
+- `styles.js`: `classic | toon | diorama | noir | cinematic`, chosen by `brand.json` `"style"` (or `LLD_STYLE`).
+  `cinematic` = rounded edges, image-based light, grain bump, warm sun + cool fill + rim, light bloom, slight depth
+  of field, filmic grade. GTAO ambient occlusion is **off** (it leaves a dark box in the courtroom); `style_on: ['ao']`
+  in a timeline forces it for experiments. Vignette `darkness` must stay ≤ 1 (above it colours go negative).
+- `primates.js`: character kit, `"<species>.<outfit>"` — species baboon mandrill capuchin macaque gibbon proboscis
+  tarsier bonobo; outfits cop customs suit irs hardhat chef cardigan dress hoodie tracksuit tourist overalls.
+  Story characters are cast **automatically from their name tag** (`ROLES` in primates.js: OFFICER/RANGER → baboon cop,
+  IRS/TAX → macaque irs, BANK/companies → mandrill suit, WIFE → bonobo dress, GRANDMA → capuchin cardigan…).
+  Leads (Gary, Chad…) stay the chimp, the judge stays the gorilla, government stays the orangutan, Larry is the only lemur.
+  Override in markup: `P:smug.point=mandrill.chef`.
+
 ## Deploying changes
 - From the Mac clone: `bash ~/.n8n-files/lld-pipeline/update.sh` = commit + pull --rebase + push + start a test run.
 - Then review `test-output` (download the mp4, check frames with ffmpeg, check `report.json`).
 - Renders for a slot start ~2 h early (≈10:05 and ≈17:05 ET). Push changes before then or they apply to the next slot.
 
 ## Episodes: the story format (current)
-All episodes LLD-007…061 except 040/060 use the "viral story" structure (`story_format: true` in the JSON):
+All episodes LLD-001…061 except 040/060 use (001–006 rewritten in `batch0.py` for the relaunch) the "viral story" structure (`story_format: true` in the JSON):
 deadpan paradox hook → a named everyman (Gary, Nigel, Chad…) living it in present tense, acted out by characters →
 3–6 escalation beats → a "Wait…?" beat → "You see," pivot where Larry explains with an everyday analogy →
 caveats in one line → ironic twist ending → share line → loop line. ~3.55 spoken words/s.
 
 Scene plans are generated from a compact markup in `tools/episodes/`:
-- `batch1.py … batch7.py` hold `E = {episode_number: markup}`; `names.py` holds who each character plays per episode.
+- `batch0.py … batch7.py` hold `E = {episode_number: markup}`; `names.py` holds who each character plays per episode.
 - `python3 tools/episodes/story.py tools/episodes/batch1.py` validates; add `--write` to rewrite `scenes/LLD-*.json`
   (it keeps the other fields of each JSON: hook card, share_line, music_vibe, caption…).
 - Markup: `hook [disclaimer] body [loop] loop line`; put `{set; cast; sign}` before a sentence to start a new shot.
   - sets: studio courtroom office shop street neighborhood harbor capitol campsite prison yellowstone
   - cast: `L:<pose>` Larry (explaining concerned pointing smug surprised thinking sneaky);
-    `C:<face>.<gest>` chimp, `J:` gorilla judge, `P:` orangutan. faces: neutral surprised smug worried angry;
+    `C:<face>.<gest>` chimp, `J:` gorilla judge, `P:` orangutan (add `=species.outfit` for a kit look). faces: neutral surprised smug worried angry;
     gestures: none explain point think shrug arms_up wave scratch. One of each character per shot, max 3.
   - sign: `"<emoji> TEXT"` ≤ 22 chars, **only when Larry is alone** in the shot.
 - Each non-Larry character gets a name tag over its head (`name` in the cast entry, from `names.py`) so viewers know
@@ -86,15 +102,16 @@ Scene plans are generated from a compact markup in `tools/episodes/`:
 - TikTok: only 3 posts recorded (Nov 3–4), 76–87 views each, avg watch 9–22 s. Unknown whether later drafts were posted.
 - YouTube: Metricool returns no Shorts stats; check YouTube Studio ("Viewed vs swiped away").
 
+## Relaunch (started 2026-11-09)
+- Owner restarted the run from LLD-001 with the new voice, cast, cinematic look and story scripts.
+- Posting paused: repo variable `LIVE=false` until the owner approves a test video; set it back with
+  `gh variable set LIVE --body true -R legalloopholes/lld-pipeline`.
+- Sheet: LLD-001…014 set back to SCRIPTED; their old post links/Video File cleared (list kept locally in
+  `previews/old_posts.md`, git-ignored). Owner archives/hides the old posts himself (not delete).
+- Work lives on branch `voice-audition` until merged into `main`.
+
 ## Open items (as of 2026-11-09)
-1. **Voice upgrade** — owner believes the voice is the biggest problem; must stay zero-cost. Candidates:
-   Chatterbox (MIT, open source, expressive, `exaggeration` dial, `[laugh]`-style tags in Turbo; retired/unmaintained
-   since Aug 2026 so pin the version) and Google Cloud TTS Chirp 3 HD (free up to 1M chars/month; needs a billing
-   account — add a quota cap). Audition: `bash voices.sh` copies `tools/voices.yml` into `.github/workflows/` on the
-   `voice-audition` branch and pushes it (the push starts it; main untouched); samples land on **`voice-samples`**.
-   Hugging Face is reachable from GitHub Actions (not from Claude's cloud sandbox).
-2. **Length** — decided 2026-11-09: stay ≥ 60 s. Improve retention inside 60 s (pacing, hooks, visuals) instead.
-5. **World building** — owner wants new animation styles and more characters than the 4 reusable primates
-   (Larry, chimp, gorilla judge, orangutan). Larry stays central.
-3. **Queue order** — consider moving relatable money/crime/relationship episodes ahead of niche trade cases.
-4. **TikTok** — confirm the owner is posting the inbox drafts consistently.
+1. **Render time** — cinematic + Chatterbox add time on CPU runners; a slot render must finish inside ~2 h.
+   Check `render_seconds` in the test `report.json`.
+2. **Queue order** — consider moving relatable money/crime/relationship episodes ahead of niche trade cases.
+3. **TikTok** — confirm the owner is posting the inbox drafts consistently.
