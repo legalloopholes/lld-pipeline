@@ -22,6 +22,7 @@ const types = { '.html': 'text/html', '.js': 'text/javascript' };
 const server = http.createServer((req, res) => {
   let p = req.url.split('?')[0];
   if (p === '/three.module.js') p = '/node_modules/three/build/three.module.js';
+  else if (p.startsWith('/addons/')) p = '/node_modules/three/examples/jsm/' + p.slice(8);
   const f = path.join(here, path.normalize(p).replace(/^(\.\.[/\\])+/, ''));
   if (!f.startsWith(here) || !fs.existsSync(f) || fs.statSync(f).isDirectory()) { res.writeHead(404); return res.end(); }
   res.writeHead(200, { 'content-type': types[path.extname(f)] || 'application/octet-stream' });

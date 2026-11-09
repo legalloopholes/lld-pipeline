@@ -6,6 +6,8 @@ Batch file defines E = {n: markup}. Markup: hook [disclaimer] body [loop] loop-l
   cast : comma list. L:<pose> (Larry: explaining concerned pointing smug surprised thinking sneaky)
          C:<face>.<gest> chimp, J:<face>.<gest> gorilla/judge, P:<face>.<gest> orangutan/official
          faces: neutral surprised smug worried angry ; gestures: none explain point think shrug arms_up wave scratch
+         optional look from the character kit (larry-3d/primates.js): C:smug.point=mandrill.chef
+         (without one, world.js picks a look from the name tag's role: OFFICER -> baboon cop, IRS -> macaque, ...)
   sign : "<emoji> TEXT" (Larry alone only, text <= 22 chars)
 """
 import json, re, sys, importlib.util
@@ -22,6 +24,8 @@ BG = {'studio': 'white', 'courtroom': 'bg-courtroom', 'office': 'bg-office', 'sh
       'prison': 'bg-prison', 'yellowstone': 'bg-yellowstone'}
 CID = {'C': 'char-friend-chimp', 'J': 'char-judge', 'P': 'char-politician'}
 FACES = {'neutral', 'surprised', 'smug', 'worried', 'angry'}
+SPECIES = {'baboon', 'mandrill', 'capuchin', 'macaque', 'gibbon', 'proboscis', 'tarsier', 'bonobo'}
+OUTFITS = {'cop', 'customs', 'suit', 'irs', 'hardhat', 'chef', 'cardigan', 'dress', 'hoodie', 'tracksuit', 'tourist', 'overalls'}
 GESTS = {'none', 'explain', 'point', 'think', 'shrug', 'arms_up', 'wave', 'scratch'}
 LPOSE = {'explaining', 'concerned', 'pointing', 'smug', 'surprised', 'thinking', 'sneaky', 'auto'}
 NUMW = set('one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty thirty forty fifty sixty seventy eighty ninety hundred thousand million billion first second third'.split())
@@ -39,10 +43,15 @@ def cast_of(spec, n, si=0):
             assert pose in LPOSE, (n, pose)
             c = {'id': f'larry:{pose}'}
         else:
+            pose, _, look = pose.partition('=')
             face, _, gest = pose.partition('.')
             face, gest = face or 'neutral', gest or 'none'
             assert who in CID and face in FACES and gest in GESTS, (n, t)
             c = {'id': CID[who], 'face': face, 'gest': gest}
+            if look:
+                sp, _, of = look.partition('.')
+                assert sp in SPECIES and of in OUTFITS, (n, 'unknown look', look)
+                c['look'] = look
             dc, dp = N.get(n, ('', ''))
             nm = O.get(n, {}).get(si, {}).get(who) or {'C': dc, 'P': dp, 'J': 'JUDGE'}[who]
             if nm: c['name'] = nm

@@ -1,10 +1,10 @@
 name: Voice audition
 
 # Renders the same Larry lines in several free voices and puts them on the voice-samples branch (posts nothing).
-# Runs on every push to the voice-audition branch (a dispatch-only workflow can't start from a non-default branch).
+# Start with: bash voices.sh  — it pushes the current commit to the voice-audition-run branch, which runs this once.
 on:
   push:
-    branches: [voice-audition]
+    branches: [voice-audition-run]
   workflow_dispatch:
 
 permissions:
