@@ -18,7 +18,7 @@ ROOT = os.path.expanduser('~/.n8n-files')
 PY = sys.executable
 ET = ZoneInfo('America/New_York')
 SLOTS = [(12, 0), (19, 0)]
-EARLY, LATE = 250, 150                       # minutes before / after a slot in which a run may act (cinematic render ~1.5 h)
+EARLY, LATE = 130, 150                       # minutes before / after a slot in which a run may act (pixel render ~35 min, 3 tries ~1 h 40)
 RUN_URL = f"{os.environ.get('GITHUB_SERVER_URL', 'https://github.com')}/{os.environ.get('GITHUB_REPOSITORY', '')}/actions/runs/{os.environ.get('GITHUB_RUN_ID', '')}"
 STATE = os.path.join(HERE, 'state')
 

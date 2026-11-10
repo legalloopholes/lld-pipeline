@@ -83,7 +83,8 @@ This repository is **public**: never commit secrets, tokens, personal emails or 
 ## Deploying changes
 - From the Mac clone: `bash ~/.n8n-files/lld-pipeline/update.sh` = commit + pull --rebase + push + start a test run.
 - Then review `test-output` (download the mp4, check frames with ffmpeg, check `report.json`).
-- Renders for a slot start ~4 h early (≈08:05 and ≈15:05 ET; `EARLY` in run.py, cron in post.yml). Push changes before
+- Renders for a slot start ~2 h early (≈10:05 and ≈17:05 ET, backup run 30 min later; `EARLY` 130 in run.py, cron in post.yml;
+  owner 2026-11-10: pixel renders take ~35 min, no need for 4 h). Push changes before
   then or they apply to the next slot.
 
 ## Episodes: the story format (current)
@@ -129,7 +130,7 @@ Scene plans are generated from a compact markup in `tools/episodes/`:
 
 ## Open items (as of 2026-11-09)
 1. **Render time** — first cinematic test ran 2.5 h+ on the runner. Fixed 2026-11-09: DOF/MSAA off (−44% per frame,
-   measured locally with `LLD_SOFTGL=1`), renders start 4 h early. Check `render_seconds` in the test `report.json`.
+   measured locally with `LLD_SOFTGL=1`), renders started 4 h early (now 2 h, since the pixel style). Check `render_seconds` in the test `report.json`.
    Next lever if needed: image-based light (~0.2 s/frame) or rendering in parallel browser pages.
 2. **Queue order** — consider moving relatable money/crime/relationship episodes ahead of niche trade cases.
 3. **TikTok** — confirm the owner is posting the inbox drafts consistently.
