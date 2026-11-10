@@ -17,6 +17,7 @@ import { VignetteShader } from 'three/addons/shaders/VignetteShader.js';
 import { GTAOPass } from 'three/addons/postprocessing/GTAOPass.js';
 import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
 import { BokehPass } from 'three/addons/postprocessing/BokehPass.js';
+import { SMAAPass } from 'three/addons/postprocessing/SMAAPass.js';
 import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 
@@ -99,7 +100,10 @@ export function makeStyler({ renderer, scene, camera, hemi, amb, sun, W, H }) {
       hemi.intensity = 1.25; amb.intensity = 0.25; sun.intensity = 2.6;
       return;
     }
-    const rt = new THREE.WebGLRenderTarget(W, H, { type: THREE.HalfFloatType, samples: 4 });   // keep MSAA edges
+    // Edge smoothing: 4x MSAA is ~5x slower in software WebGL (the cloud runners), so the default is one SMAA pass at the end.
+    // on: ['msaa'] brings MSAA back; on: ['dof'] the depth-of-field blur (it re-renders the whole scene every frame).
+    const msaa = on.includes('msaa');
+    const rt = new THREE.WebGLRenderTarget(W, H, { type: THREE.HalfFloatType, samples: msaa ? 4 : 0 });
     composer = new EffectComposer(renderer, rt);
     composer.setPixelRatio(1); composer.setSize(W, H);
     composer.addPass(new RenderPass(scene, camera));
@@ -114,12 +118,14 @@ export function makeStyler({ renderer, scene, camera, hemi, amb, sun, W, H }) {
       sun.shadow.mapSize.set(4096, 4096); sun.shadow.radius = 4; sun.shadow.bias = -0.0004; sun.shadow.normalBias = 0.02;
       const fill = new THREE.DirectionalLight('#a9c8ff', 0.6); fill.position.set(6, 3, 5); scene.add(fill); extra.push(fill);
       const rim = new THREE.DirectionalLight('#fff1dc', 1.4); rim.position.set(2, 6, -9); scene.add(rim); extra.push(rim);
-      const ao = new GTAOPass(scene, camera, W, H);
-      ao.updateGtaoMaterial({ radius: 0.45, distanceExponent: 1.5, thickness: 1.0, scale: 1.0, samples: 16 });
-      ao.blendIntensity = 0.9; if (on.includes('ao')) composer.addPass(ao);   // off by default: GTAO leaves a dark box artifact in the courtroom
+      if (on.includes('ao')) {                     // off by default: GTAO leaves a dark box artifact in the courtroom
+        const ao = new GTAOPass(scene, camera, W, H);
+        ao.updateGtaoMaterial({ radius: 0.45, distanceExponent: 1.5, thickness: 1.0, scale: 1.0, samples: 16 });
+        ao.blendIntensity = 0.9; composer.addPass(ao);
+      }
       if (!off.includes('bloom')) composer.addPass(new UnrealBloomPass(new THREE.Vector2(W, H), 0.08, 0.4, 1.0));
-      const dof = new BokehPass(scene, camera, { focus: 15.0, aperture: 0.0009, maxblur: 0.006 });  // background softens a little
-      if (!off.includes('dof')) composer.addPass(dof);
+      if (on.includes('dof') && !off.includes('dof'))   // background softens a little; off by default (render time)
+        composer.addPass(new BokehPass(scene, camera, { focus: 15.0, aperture: 0.0009, maxblur: 0.006 }));
       const g = new ShaderPass(GRADE); g.uniforms.sat.value = 1.12; g.uniforms.contrast.value = 1.08; g.uniforms.tint.value.set(1.02, 1.0, 0.97);
       composer.addPass(g);
       const vig = new ShaderPass(VignetteShader); vig.uniforms.offset.value = 1.0; vig.uniforms.darkness.value = 0.55; composer.addPass(vig);
@@ -146,6 +152,7 @@ export function makeStyler({ renderer, scene, camera, hemi, amb, sun, W, H }) {
       const vig = new ShaderPass(VignetteShader); vig.uniforms.offset.value = 1.25; vig.uniforms.darkness.value = 0.95; composer.addPass(vig);
     }
     composer.addPass(new OutputPass());
+    if (!msaa) composer.addPass(new SMAAPass(W, H));
   }
 
   // after the set's sky/fog is applied each frame: noir swaps in its own night sky

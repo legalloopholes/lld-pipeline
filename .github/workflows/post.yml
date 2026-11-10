@@ -1,11 +1,11 @@
 name: Post next episode
 
-# Runs about 2 hours before each posting time (12:00 and 7:00 pm New York time). Two UTC hours are listed for each
+# Runs about 4 hours before each posting time (12:00 and 7:00 pm New York time). Two UTC hours are listed for each
 # slot because GitHub's schedule is in UTC and New York changes clocks; run.py works out the real slot, skips runs
 # outside a posting window and makes sure each slot is handled once.
 on:
   schedule:
-    - cron: '5 14,15,21,22 * * *'
+    - cron: '5 12,13,19,20 * * *'
   workflow_dispatch:
     inputs:
       mode:

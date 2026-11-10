@@ -56,7 +56,8 @@ This repository is **public**: never commit secrets, tokens, personal emails or 
 ## Look and cast (`larry-3d/`)
 - `styles.js`: `classic | toon | diorama | noir | cinematic`, chosen by `brand.json` `"style"` (or `LLD_STYLE`).
   `cinematic` = rounded edges, image-based light, grain bump, warm sun + cool fill + rim, light bloom, slight depth
-  of field, filmic grade. GTAO ambient occlusion is **off** (it leaves a dark box in the courtroom); `style_on: ['ao']`
+  filmic grade. Depth of field and 4x MSAA are **off** by default (each ~0.28 s/frame in software WebGL; SMAA does the
+  edges); `style_on: ['dof','msaa']` brings them back. GTAO ambient occlusion is **off** (it leaves a dark box in the courtroom); `style_on: ['ao']`
   in a timeline forces it for experiments. Vignette `darkness` must stay ≤ 1 (above it colours go negative).
 - `primates.js`: character kit, `"<species>.<outfit>"` — species baboon mandrill capuchin macaque gibbon proboscis
   tarsier bonobo; outfits cop customs suit irs hardhat chef cardigan dress hoodie tracksuit tourist overalls.
@@ -68,7 +69,8 @@ This repository is **public**: never commit secrets, tokens, personal emails or 
 ## Deploying changes
 - From the Mac clone: `bash ~/.n8n-files/lld-pipeline/update.sh` = commit + pull --rebase + push + start a test run.
 - Then review `test-output` (download the mp4, check frames with ffmpeg, check `report.json`).
-- Renders for a slot start ~2 h early (≈10:05 and ≈17:05 ET). Push changes before then or they apply to the next slot.
+- Renders for a slot start ~4 h early (≈08:05 and ≈15:05 ET; `EARLY` in run.py, cron in post.yml). Push changes before
+  then or they apply to the next slot.
 
 ## Episodes: the story format (current)
 All episodes LLD-001…061 except 040/060 use (001–006 rewritten in `batch0.py` for the relaunch) the "viral story" structure (`story_format: true` in the JSON):
@@ -111,7 +113,8 @@ Scene plans are generated from a compact markup in `tools/episodes/`:
 - Work lives on branch `voice-audition` until merged into `main`.
 
 ## Open items (as of 2026-11-09)
-1. **Render time** — cinematic + Chatterbox add time on CPU runners; a slot render must finish inside ~2 h.
-   Check `render_seconds` in the test `report.json`.
+1. **Render time** — first cinematic test ran 2.5 h+ on the runner. Fixed 2026-11-09: DOF/MSAA off (−44% per frame,
+   measured locally with `LLD_SOFTGL=1`), renders start 4 h early. Check `render_seconds` in the test `report.json`.
+   Next lever if needed: image-based light (~0.2 s/frame) or rendering in parallel browser pages.
 2. **Queue order** — consider moving relatable money/crime/relationship episodes ahead of niche trade cases.
 3. **TikTok** — confirm the owner is posting the inbox drafts consistently.
