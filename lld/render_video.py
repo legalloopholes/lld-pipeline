@@ -827,7 +827,7 @@ def mix_audio(path):
     pcm = subprocess.run([FFMPEG, '-loglevel', 'error', '-i', wav, '-f', 's16le', '-ac', '1', '-ar', str(SR_A), '-'], capture_output=True).stdout
     voice = np.frombuffer(pcm, np.int16).astype(np.float32) / 32768
     mix = voice.copy()
-    for t0, name in SFX_EVENTS:
+    for t0, name in ([] if os.environ.get('LLD_NO_SFX') else SFX_EVENTS):   # LLD_NO_SFX: the voice track already has them (tests)
         x = sfx_audio(name) * SFX_GAIN.get(name, 0.3); i = int(t0 * SR_A)
         if i >= len(mix): continue
         mix[i:i + len(x)] += x[:len(mix) - i]
