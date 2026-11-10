@@ -16,9 +16,12 @@ This repository is **public**: never commit secrets, tokens, personal emails or 
 - **Never enter or handle credentials/passwords.** The owner types secrets himself (`setup.sh` puts them in GitHub Secrets).
 - Be concise and factual; say "I don't know" rather than guess. Legal content must be accurate, with the real limits kept
   (compressed to one line, but present). Ideas in the sheet were verified by the owner.
-- Look: 3D renders, colored skies/sets, **no white backgrounds**, **no bobbing/floating characters**.
-  Render style (2026-11-09): **`cinematic`** — the realistic shader look (`larry-3d/styles.js`). Owner tried toon and
-  **rejected it**; wants realistic, not cartoon outlines.
+- Look (2026-11-10): **Pixel RPG** (`brand.json` `"style": "rpg"`, `larry-3d/pixel/`), chosen by the owner over the
+  3D cinematic look. Everything is drawn in code: `kit.js` (cute Larry with monocle, the primate cast, idle actions),
+  `sets.js` (11 sets), `life.js` (animals, passers-by, traffic, props). The owner wants **lots of idle life**
+  ("the more the merrier"): characters breathe/blink/act (smoke, phone, coffee, gavel...), sets always move.
+  Larry must stay **cute** (big glossy eyes, never the old amber/black "terrifying" eyes). No white backgrounds.
+  The 3D styles (`cinematic` etc.) still work if `style` is changed back.
 - Hooks: absurd, deadpan, "wtf did I just hear" — **not** cartoonish, childish or goofy.
   Language: extremely simple. **No childish interjections** ("Yikes!", "Ouch!", "Sweet!", "Buzz buzz…") — he hates them.
 - **No spoken disclaimer.** The on-screen line "Educational content • Not legal advice" stays for the whole video.
@@ -32,6 +35,13 @@ This repository is **public**: never commit secrets, tokens, personal emails or 
   Sign markup still accepts `"<emoji> TEXT"` but the icon is dropped; `make_meta.py` strips emojis from post text.
   The owner's own files (`assets/sfx/*.wav`, git-ignored) reach the cloud as `assets/sfx.tgz.enc`, decrypted with the
   `SFX_KEY` secret; the owner re-runs `bash tools/sfx_pack.sh` after changing them. Without it only Freesound sounds play.
+- **Quality gate (owner, 2026-11-10: no errors in voice or captions, no random loud noises, natural pace).**
+  `make_voice.py` listens to every line with Parakeet and re-takes it (up to `voice_takes`) until every word is right;
+  one/two-word sentences are read together; tempo is set so the whole read is ~`words_per_second` 3.4.
+  Captions show the **script's words** (`<ID>-spoken.txt`), timed by the recognizer (`lld/textcheck.py`).
+  Sound effects are levelled under Larry's voice; no filler booms. `lld/qc.py` checks voice vs script, captions vs
+  script, pace, dead air, loud moments and the share line; a failing episode is marked **QC FAILED** in the sheet and
+  the next one takes the slot (`qc_attempts`). Thresholds: `brand.json` `qc`.
 - Videos are **≥ 60 s** (`min_seconds` in `assets/brand.json`). Owner reconfirmed 2026-11-09 — don't propose shorter.
 - LLD-040 (Nebraska safe haven) and LLD-060 (Thirteenth Amendment) keep a **serious tone**; never joke about children,
   slavery or incarceration.

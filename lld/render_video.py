@@ -837,7 +837,7 @@ def mix_audio(path):
         if i >= len(mix) or not len(x): continue
         m_ = len(x) // w
         pk = float(np.sqrt((x[:m_ * w].reshape(m_, w) ** 2).mean(1)).max()) if m_ else float(np.abs(x).max())
-        x = x * (ref * SFX_REL.get(name, 0.5) / max(pk, 1e-4))
+        x = x * (ref * SFX_REL.get(name, 0.45) / max(pk, 1e-4))
         mix[i:i + len(x)] += x[:len(mix) - i]
     k = 0.72                                                    # soft knee: loud sound-effect peaks get rounded off
     ax = np.abs(mix)                                            # (max ~0.88, leaving headroom for the music bed)
@@ -946,7 +946,7 @@ proc.stdin.close()
 if proc.wait() != 0: raise SystemExit('ffmpeg failed')
 if RENDER3D:
     dec.stdout.close(); dec.wait()
-for p_ in (ass_path, mix_path) + ((base3d, base3d.replace('.base3d.mp4', '.timeline.json')) if base3d and not os.environ.get('LLD_KEEP') else ()):
+for p_ in (ass_path, mix_path) + ((base3d,) if base3d and not os.environ.get('LLD_KEEP') else ()):   # the timeline stays: qc.py checks the shots
     try: os.remove(p_)
     except OSError: pass
 

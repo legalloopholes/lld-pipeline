@@ -49,6 +49,7 @@ def spoken_keys(word):
             if m.group(2) in ('st', 'nd', 'rd', 'th'): ws = ordinal(ws)
             out += ws.split()
         else:
+            part = re.sub(r"'(d|ll|ve|re)$", '', part)              # the recognizer often drops these ("you'd" -> "you")
             k = re.sub(r'[^a-z0-9]', '', part)
             if k: out.append(k)
     return out

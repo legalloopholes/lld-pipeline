@@ -204,8 +204,9 @@ def checked(s_, speed):
         quiet = env < 120; run = longest = 0
         for q in quiet: run = run + 1 if q else 0; longest = max(longest, run)
         dead = longest * 0.01
-        ok = sc >= 0.999 and (n < 5 or 1.8 <= rate <= 4.8) and dead <= 0.9
-        key = (ok, round(sc, 3), -abs(rate - 3.4))
+        ok = sc >= 0.999 and (n < 5 or 1.6 <= rate / speed <= 5.4) and dead <= 0.9   # rushed/garbled or dragging reads are re-taken
+        key = (ok, round(sc, 3), -abs(rate / speed - 4.2))
+        print(f'  take {take} {"OK " if ok else "BAD"} score={sc:.3f} rate={rate:.2f} dead={dead:.2f} {diffs[:3]} | {s_[:60]}', file=sys.stderr, flush=True)
         if best is None or key > best[0]: best = (key, take, a_, sc, diffs, rate, dead)
         if ok: break
     _, take, a_, sc, diffs, rate, dead = best
