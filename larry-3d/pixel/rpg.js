@@ -21,9 +21,9 @@ const wind = (t, x = 0) => Math.sin(t * 1.5 - x * 0.045) * 0.6 + Math.sin(t * 0.
 // so every frame renders on its own and two characters never move in lockstep.
 const ACTS = { judge: ['gavel', 'papers', 'glare', 'gavel', 'look'], cop: ['notepad', 'look', 'watch'], suit: ['phone', 'coffee', 'watch', 'look'],
                lead: ['smoke', 'phone', 'scratch', 'look', 'stretch', 'coffee'] };
-function actFor(t, kind, gest, seed) {
+function actFor(t, kind, gest, seed, age = 9) {
   const glance = [Math.sin(t * 0.6 + seed) > 0.75 ? 1 : Math.sin(t * 0.6 + seed) < -0.75 ? -1 : 0, 0];
-  if ((gest && gest !== 'none') || TL.calm) return { act: '', look: glance };
+  if ((gest && gest !== 'none' && age < 2.4) || TL.calm) return { act: '', look: glance };   // the story beat first, then idle life
   const per = 3.6, u = (t + seed * 1.7) / per, n = Math.floor(u), p = frac(u);
   if (hashN(seed, n) < 0.25) return { act: '', look: glance };
   const list = ACTS[kind] || ACTS.lead, a = list[Math.floor(hashN(seed + 3, n) * list.length)];
@@ -35,10 +35,10 @@ function actFor(t, kind, gest, seed) {
   return { act: a };
 }
 const kindOf = (sp, of) => of === 'robe' ? 'judge' : of === 'cop' ? 'cop' : ['suit', 'irs', 'dress'].includes(of) ? 'suit' : 'lead';
-function npc(c, sp, of, t, k) {                           // -> [canvas, meta, act state]
-  const id = idle(t, k), seed = hashS((c.name || c.id) + sp), a = actFor(t, kindOf(sp, of), c.gest, seed);
+function npc(c, sp, of, t, k, age) {                      // -> [canvas, meta, act state]
+  const id = idle(t, k), seed = hashS((c.name || c.id) + sp), a = actFor(t, kindOf(sp, of), c.gest, seed, age);
   const look = a.look || [0, 0], key = `p|${sp}|${of}|${c.face}|${c.gest}|${id.breath}|${id.blink}|${id.sway}|${a.act}|${look}`;
-  const [im, m] = sprM(key, () => primate({ species: sp, outfit: of, face: c.face, gest: c.gest, ...id, act: a.act, look }));
+  const [im, m] = sprM(key, () => primate({ species: sp, outfit: of, face: c.face, gest: a.act ? 'none' : c.gest, ...id, act: a.act, look }));
   return [im, m, a, id];
 }
 function drawFx(a, m, sx, sy, breath, t) {                    // smoke and gavel impacts, in set pixels (sx, sy = sprite top-left)
@@ -95,7 +95,7 @@ window.renderAt = (t, frame) => {
   const L = cast.find(c => c.id.startsWith('larry'));
   // judge behind the bench (courtroom), then the bench in front
   if (judge) {
-    const [sp, of] = lookOf(judge), [im, m, a, id] = npc(judge, sp, of, t, 7);
+    const [sp, of] = lookOf(judge), [im, m, a, id] = npc(judge, sp, of, t, 7, age);
     const jx = set.judgeX ?? 130, jy = (set.judgeY ?? FEET) - 82; wg.drawImage(im, jx - 32, jy); tags.push([judge.name || 'JUDGE', jx, jy + 6]);
     judgeFx = [a, m, jx - 32, jy, id.breath];
   }
@@ -104,7 +104,7 @@ window.renderAt = (t, frame) => {
   // the rest of the cast, left to right by their x
   const slots = others.length === 1 ? [judge ? 46 : 70] : others.length === 2 ? [judge ? 34 : 50, judge ? 74 : 128] : [32, 90, 148];
   others.forEach((c, i) => {
-    const [sp, of] = lookOf(c), [im, m, a, id] = npc(c, sp, of, t, i + 1);
+    const [sp, of] = lookOf(c), [im, m, a, id] = npc(c, sp, of, t, i + 1, age);
     const x = judge ? slots[i] : (c.x != null && others.length > 1 ? Math.round(c.x * PW) : slots[i]);
     wg.drawImage(im, x - 32, FEET - 82); drawFx(a, m, x - 32, FEET - 82, id.breath, t); if (c.name) tags.push([c.name, x, FEET - 82 + 4]);
   });

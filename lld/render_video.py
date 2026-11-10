@@ -870,6 +870,7 @@ def render_3d_base(nframes):
           'share': None if SHARE_T0 is None else [SHARE_T0, SHARE_T1],   # camera pulls back to make room for the share card
           'shakes': [],                     # owner 2026-11-10: no camera shakes
           'tilts': TILTS,
+          'calm': video_id in ('LLD-040', 'LLD-060'),   # serious episodes: characters only glance, no smoking/stretching
           'style': os.environ.get('LLD_STYLE') or BRAND.get('style', 'classic')}   # classic | toon | diorama | noir
     tl_path, base = os.path.abspath(out + '.timeline.json'), os.path.abspath(out + '.base3d.mp4')
     json.dump(tl, open(tl_path, 'w'))
