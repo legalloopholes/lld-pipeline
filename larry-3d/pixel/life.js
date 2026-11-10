@@ -189,3 +189,122 @@ export function officeDesk(x, y) {                         // desk with a monito
     const flick = Math.round(Math.sin(t * 2.2) * 2); D.px(cx - 7, cy - 2, '#e08a3a'); D.px(cx - 8, cy - 3 + flick * 0.5, '#e08a3a'); D.px(cx - 9, cy - 4 + flick, '#e08a3a');
     if (frac(t / 4) < 0.5) { const q = frac(t / 2); D.px(cx + 10 + q * 4, cy - 12 - q * 6, '#f4f1e8'); } };
 }
+
+// ---------- town ----------
+const CARS = [['#d8342c', '#9a1e1a'], ['#2d6fd6', '#1d4a9a'], ['#f2c230', '#b88a1a'], ['#e8eef4', '#9aa4b0'], ['#3f7a4e', '#2c5a36'], ['#2a2e36', '#14161a']];
+export function car(D, x, y, col, dir = 1, kind = 'car') {        // ~30 x 14, y = road line under the wheels
+  const [c, d] = CARS[col % CARS.length], L = kind === 'bus' ? 46 : kind === 'van' ? 34 : 30, X = i => dir > 0 ? x + i : x + L - i;
+  for (let i = 0; i < L; i++) for (let j = 4; j < 10; j++) D.px(X(i), y - j, j < 5 ? d : c);
+  const r0 = kind === 'car' ? 7 : 2, r1 = kind === 'car' ? L - 9 : L - 3, top = kind === 'bus' ? 16 : 14;
+  for (let i = r0; i < r1; i++) for (let j = 10; j < top; j++) D.px(X(i), y - j, c);
+  for (let i = r0 + 2; i < r1 - 1; i++) if ((i - r0) % (kind === 'bus' ? 7 : 9) !== 0) for (let j = 11; j < top - 1; j++) D.px(X(i), y - j, '#9fd3f0');
+  D.px(X(L - 1), y - 7, '#ffe8a0'); D.px(X(0), y - 7, '#e2482a');
+  for (const wx of [5, L - 7]) { const cx = X(wx); D.rect(cx - 2, y - 4, 4, 4, '#1a1418'); D.px(cx, y - 2, '#8a8a90'); }
+}
+export function traffic(list) {                            // [y, period, offset, dir, color, kind]
+  return (D, t) => list.forEach(([y, per, off, dir, col, kind]) => { const p = frac((t + off) / per); if (p > 0.5) return; const q = p / 0.5, L = 50;
+    car(D, Math.round(dir > 0 ? -L + q * (180 + L) : 180 - q * (180 + L)), y, col, dir, kind || 'car'); });
+}
+export function trafficLight(x, y) {
+  return (D, t) => { D.rect(x, y - 40, 2, 40, '#2a2e36'); D.rect(x - 3, y - 52, 8, 14, '#1a1c22'); const ph = frac(t / 12);
+    D.rect(x - 1, y - 50, 4, 3, ph < 0.45 ? '#ff4a3a' : '#4a1a1a'); D.rect(x - 1, y - 46, 4, 3, ph >= 0.45 && ph < 0.55 ? '#ffd24a' : '#4a3a1a'); D.rect(x - 1, y - 42, 4, 3, ph >= 0.55 ? '#5aff7a' : '#1a3a1a'); };
+}
+export function manholeSteam(x, y) {
+  return (D, t) => { D.rect(x - 5, y - 1, 11, 2, '#3a3e46'); for (let k = 0; k < 5; k++) { const q = frac(t * 0.4 + k / 5), r = Math.round(1 + q * 4);
+    for (let j = -r; j <= r; j++) for (let i = -r; i <= r; i++) if (i * i + j * j <= r * r) D.px(x + i + wind(t) * q * 6, y - 3 - q * 26 + j, `rgba(230,234,240,${(0.5 * (1 - q)).toFixed(2)})`); } };
+}
+export function windowsLife(list) {                        // lit windows: someone walks past now and then, lights go off and on
+  return (D, t) => list.forEach(([x, y, w, h], i) => { const on = frac(t / 9 + hash(i)) < 0.85;
+    D.rect(x, y, w, h, on ? '#f2dc8a' : '#3a4a66'); if (!on) return;
+    const p = frac(t / (6 + hash(i, 1) * 6) + hash(i, 2)); if (p < 0.5) { const sx = Math.max(x, Math.min(x + w - 3, Math.round(x - 3 + p * 2 * (w + 3)))); D.rect(sx, y + h - 6, 3, 6, '#5a4a3a'); D.rect(sx, y + h - 8, 3, 2, '#5a4a3a'); }
+    D.rect(x, y, 1, h, '#c84a3a'); D.rect(x + w - 1, y, 1, h, '#c84a3a'); });
+}
+export function dog(x, y, look = 0) {                      // sits, wags, barks now and then
+  return (D, t) => { const c = ['#b07a3a', '#2a2420', '#e8dcc0'][look % 3], d = ['#7a5222', '#141210', '#b8a888'][look % 3];
+    D.rect(x - 5, y - 6, 9, 5, c); D.rect(x + 2, y - 11, 6, 6, c); D.rect(x + 7, y - 9, 2, 2, d); D.px(x + 6, y - 10, '#111'); D.rect(x + 2, y - 12, 2, 3, d);
+    D.rect(x - 4, y - 1, 2, 1, d); D.rect(x + 1, y - 1, 2, 1, d); const wag = Math.round(Math.sin(t * 14) * 2); D.px(x - 6, y - 7 + Math.round(wag * 0.5), c); D.px(x - 7, y - 8 + wag, c);
+    if (frac(t / 5.5) < 0.12 && Math.floor(t * 8) % 2) { D.px(x + 10, y - 10, '#fff'); D.px(x + 12, y - 11, '#fff'); D.px(x + 11, y - 9, '#fff'); } };
+}
+export function mower(y, per = 20) {                       // a neighbour mowing back and forth
+  return (D, t) => { const p = pingpong(t, per), x = Math.round(20 + p * 140), dir = frac(t / per) < 0.5 ? 1 : -1;
+    person(D, x - dir * 7, y, 2, Math.floor(t * 5) % 2, dir); D.rect(x - 4, y - 5, 9, 4, '#d8342c'); D.rect(x - 3, y - 1, 2, 1, '#111'); D.rect(x + 2, y - 1, 2, 1, '#111');
+    D.px(x - dir * 4, y - 6, '#2a2e36'); D.px(x - dir * 5, y - 7, '#2a2e36'); if (Math.floor(t * 9) % 2) D.px(x - dir * 6, y - 2, '#8ac05a'); };
+}
+export function sprinkler(x, y) {
+  return (D, t) => { D.rect(x - 1, y - 3, 3, 3, '#5a6a7a'); const a = Math.sin(t * 1.6) * 1.1;
+    for (let k = 0; k < 16; k++) { const q = frac(t * 1.5 + k / 16), dx = Math.sin(a + (k % 3 - 1) * 0.15) * q * 26, dy = -Math.sin(q * Math.PI) * 16; D.px(x + dx, y - 4 + dy, q > 0.8 ? '#cfe8ff' : '#7fc4e8'); } };
+}
+export function cyclist(y, per = 15, off = 0, dir = 1, look = 1) {
+  return (D, t) => { const p = frac((t + off) / per); if (p > 0.4) return; const q = p / 0.4, x = Math.round(dir > 0 ? -12 + q * 204 : 192 - q * 204);
+    for (const wx of [-5, 5]) { D.rect(x + wx - 2, y - 4, 5, 5, '#2a2e36'); D.px(x + wx, y - 2, '#8a8a90'); }
+    D.rect(x - 4, y - 6, 9, 1, '#d8342c'); person(D, x, y - 4, look, Math.floor(t * 6) % 2, dir); };
+}
+
+// ---------- store ----------
+export function fluorescent(list) {                        // ceiling tubes, one of them flickers
+  return (D, t) => list.forEach(([x, y, w], i) => { const bad = i === 1 && frac(t / 3.7) < 0.08 && Math.floor(t * 30) % 2; D.rect(x, y, w, 2, bad ? '#8a8a80' : '#fbfaf0');
+    if (!bad) for (let j = 2; j < 18; j += 2) D.rect(x - j, y + 2 + j, w + j * 2, 1, 'rgba(255,255,240,0.05)'); });
+}
+export function cashier(x, y, look = 5) {                  // scans items: item slides over, red scanner flash
+  return (D, t) => { const [fur, skin, shirt] = LOOKS[look % LOOKS.length];
+    D.rect(x - 5, y - 22, 11, 12, shirt); D.rect(x - 4, y - 32, 9, 10, fur); D.rect(x - 3, y - 29, 7, 6, skin); D.px(x - 1, y - 27, '#1a120e'); D.px(x + 1, y - 27, '#1a120e');
+    D.rect(x - 4, y - 21, 9, 3, '#d8342c');
+    const p = frac(t / 1.6), ix = Math.round(x + 14 - p * 26); D.rect(ix, y - 13, 5, 4, ['#f2c230', '#2d6fd6', '#3f9a4a', '#e866a8'][Math.floor(t / 1.6) % 4]);
+    D.rect(ix - 1, y - 12, 2, 2, skin); if (p > 0.45 && p < 0.55) { D.rect(x - 1, y - 11, 4, 1, '#ff4a3a'); D.px(x + 4, y - 16, '#ff4a3a'); } };
+}
+export function secCam(x, y) {
+  return (D, t) => { const a = Math.round(Math.sin(t * 0.5) * 3); D.rect(x - 1, y - 4, 2, 4, '#6a6e78'); D.rect(x - 4 + a, y, 9, 4, '#e8eef4'); D.rect(x - 5 + a + (a > 0 ? 8 : 0), y + 1, 2, 2, '#2a2e36');
+    if (frac(t) < 0.5) D.px(x + 3 + a, y + 1, '#ff3a2a'); };
+}
+export function shoppers(list) {                           // [y, period, offset, dir, look]: walk pushing a cart
+  return (D, t) => list.forEach(([y, per, off, dir, look]) => { const p = frac((t + off) / per); if (p > 0.75) return; const q = p / 0.75, x = Math.round(dir > 0 ? -20 + q * 220 : 200 - q * 220);
+    person(D, x, y, look, Math.floor(t * 5 + look) % 2, dir); const cx = x + dir * 9; D.rect(cx - 4, y - 9, 9, 6, '#b8c0cc'); for (let i = -3; i <= 3; i += 2) D.px(cx + i, y - 8, '#6a7280');
+    D.rect(cx - 3, y - 12, 4, 3, '#f2c230'); D.px(cx - 3, y - 1, '#2a2e36'); D.px(cx + 3, y - 1, '#2a2e36'); });
+}
+
+// ---------- water ----------
+export function sea(y0, y1) {                               // rolling waves with glints
+  return (D, t) => { for (let y = y0; y < y1; y++) { const k = (y - y0) / (y1 - y0); D.rect(0, y, 180, 1, k < 0.3 ? '#3a8ac8' : k < 0.7 ? '#2a72b0' : '#1f5e98'); }
+    for (let r = 0; r < (y1 - y0) / 6; r++) { const y = y0 + 3 + r * 6, sp = 4 + r * 2; for (let x = 0; x < 196; x += 14) { const xx = ((x + t * sp * (r % 2 ? 1 : -1)) % 196 + 196) % 196; D.rect(xx - 8, y + Math.round(Math.sin(t * 2 + x) * 0.6), 5, 1, '#7fc4e8'); } }
+    for (let g = 0; g < 8; g++) if (frac(t * 0.9 + hash(g)) < 0.3) D.px(hash(g, 1) * 180, y0 + hash(g, 2) * (y1 - y0), '#ffffff'); };
+}
+export function boat(x0, y, kind = 0, drift = 0) {          // sailboat / tugboat rocking on the swell, drifting slowly
+  return (D, t) => { const x = Math.round(x0 + Math.sin(t * 0.15) * drift), rock = Math.round(Math.sin(t * 1.4 + x0));
+    if (kind === 0) { for (let i = 0; i < 22; i++) D.rect(x + i, Math.round(y - 4 + rock * (i - 11) / 11), 1, 4, '#f4f1e8'); D.rect(x + 2, y - 1, 18, 1, '#c23030');
+      D.rect(x + 10, y - 26, 1, 22, '#5a3a20'); for (let j = 0; j < 18; j++) { D.rect(x + 11, y - 25 + j, Math.round(j * 0.55), 1, '#ffffff'); D.rect(x + 10 - Math.round(j * 0.3), y - 22 + j, Math.round(j * 0.3), 1, '#f2e8d0'); } }
+    else { D.rect(x, y - 6 + rock, 30, 6, '#c23030'); D.rect(x, y - 2 + rock, 30, 2, '#2a2e36'); D.rect(x + 8, y - 13 + rock, 12, 7, '#f4f1e8'); D.rect(x + 10, y - 11 + rock, 3, 2, '#5fa8e0'); D.rect(x + 15, y - 11 + rock, 3, 2, '#5fa8e0');
+      D.rect(x + 13, y - 19 + rock, 3, 6, '#2a2e36'); for (let k = 0; k < 4; k++) { const q = frac(t * 0.5 + k / 4); D.px(x + 14 + q * 8, y - 21 + rock - q * 12, `rgba(90,90,96,${(0.7 * (1 - q)).toFixed(2)})`); } } };
+}
+function birdAt(D, x, y, up, c) { D.px(x, y, c); D.px(x - 1, y, c); D.px(x + 1, y, c);
+  if (up) { D.px(x - 2, y - 1, c); D.px(x - 3, y - 2, c); D.px(x + 2, y - 1, c); D.px(x + 3, y - 2, c); } else { D.px(x - 2, y, c); D.px(x - 3, y + 1, c); D.px(x + 2, y, c); D.px(x + 3, y + 1, c); } }
+export function gulls(list) {                              // white birds gliding in loops
+  return (D, t) => list.forEach(([cx, cy, r, sp], i) => { const a = t * sp + i * 2; birdAt(D, Math.round(cx + Math.cos(a) * r), Math.round(cy + Math.sin(a * 0.7) * r * 0.25), Math.floor(t * 4 + i) % 3 === 0, '#f4f6f8'); });
+}
+export function crane(x, y) {                              // dock crane swinging a container back and forth
+  return (D, t) => { D.rect(x, y - 70, 4, 70, '#d8a030'); for (let j = 0; j < 70; j += 6) D.rect(x - 1, y - 70 + j, 6, 1, '#a87a20');
+    const p = pingpong(t, 14), arm = 40, hx = x + 2 + Math.round(-arm + p * arm * 1.6); D.rect(x - arm, y - 72, arm * 2, 3, '#d8a030'); D.rect(x - 8, y - 78, 20, 6, '#c23030');
+    const drop = 20 + Math.round(Math.sin(p * Math.PI) * 6); D.rect(hx, y - 69, 1, drop, '#2a2e36'); D.rect(hx - 9, y - 69 + drop, 19, 9, ['#2d6fd6', '#d8342c', '#3f9a4a'][Math.floor(t / 28) % 3]);
+    for (let i = -8; i < 10; i += 3) D.rect(hx + i, y - 68 + drop, 1, 7, 'rgba(0,0,0,0.25)'); };
+}
+export function lighthouse(x, y) {
+  return (D, t) => { for (let j = 0; j < 46; j++) { const w = 6 - Math.floor(j / 12); D.rect(x - w, y - j, w * 2, 1, Math.floor(j / 8) % 2 ? '#c23030' : '#f4f1e8'); }
+    D.rect(x - 5, y - 52, 10, 6, '#2a2e36'); D.rect(x - 3, y - 51, 6, 4, '#fff6a0'); D.rect(x - 4, y - 55, 8, 3, '#c23030');
+    const s = Math.cos(t * 1.2); if (Math.abs(s) > 0.2) for (let i = 4; i < 60; i++) for (let k = -Math.floor(i / 10); k <= Math.floor(i / 10); k++) if ((i + k) % 2 === 0) D.px(x + Math.sign(s) * i, y - 49 + k, `rgba(255,246,160,${(0.35 * Math.abs(s) * (1 - i / 60)).toFixed(2)})`); };
+}
+export function fishJump(x, y, per = 7) {
+  return (D, t) => { const p = frac(t / per); if (p > 0.15) { if (p < 0.25) { const r = Math.round((p - 0.15) * 60); for (let i = -r; i <= r; i++) D.px(x + 6 + i, y, '#cfe8ff'); } return; }
+    const q = p / 0.15, fx = Math.round(x + q * 12), fy = Math.round(y - Math.sin(q * Math.PI) * 9); D.rect(fx - 2, fy - 1, 5, 2, '#b8c4cc'); D.px(fx - 3, fy - 2, '#8a9aa4'); D.px(fx - 3, fy + 1, '#8a9aa4'); };
+}
+
+// ---------- outside the prison walls (neutral, no jokes) ----------
+export function searchlight(x, y, per = 10) {
+  return (D, t) => { const a = -Math.PI / 2 + Math.sin(t * 2 * Math.PI / per) * 0.9;
+    for (let i = 4; i < 110; i++) { const w = Math.floor(i * 0.12); for (let k = -w; k <= w; k++) { const px = Math.round(x + Math.cos(a) * i - Math.sin(a) * k), py = Math.round(y + Math.sin(a) * i + Math.cos(a) * k); if ((px + py) % 2 === 0) D.px(px, py, 'rgba(255,250,210,0.12)'); } }
+    D.rect(x - 3, y - 2, 6, 4, '#e8eef4'); };
+}
+export function patrol(y, per = 24, look = 1) {           // a guard walking along the wall
+  return (D, t) => { const p = pingpong(t, per), x = Math.round(16 + p * 148), dir = frac(t / per) < 0.5 ? 1 : -1; person(D, x, y, look, Math.floor(t * 4) % 2, dir); D.rect(x - 2, y - 17, 5, 2, '#1d2f6b'); };
+}
+export function flagpole(x, y, cols = ['#141218', '#d8342c', '#f2c230']) {     // flag on a pole (black-red-gold for Germany by default)
+  return (D, t) => { D.rect(x, y - 44, 1, 44, '#8a8a90'); for (let c = 0; c < 14; c++) { const off = Math.round(Math.sin(t * 5 - c * 0.5) * (c / 14) * 1.6); for (let r = 0; r < 9; r++) D.px(x + 1 + c, y - 44 + r + off, cols[Math.floor(r / 3)]); } };
+}
