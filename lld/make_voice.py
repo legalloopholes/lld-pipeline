@@ -88,8 +88,9 @@ def tts(chunk, speed=None, take=0):
     a = np.frombuffer(pcm, dtype=np.int16)
     loud = np.where(np.abs(a) > 300)[0]
     if len(loud) == 0: return a
-    pad = int(0.03 * SR)
-    return a[max(0, loud[0] - pad):loud[-1] + pad]
+    soft = np.where(np.abs(a) > 60)[0]                     # quiet final sounds ("th" in Death, "k" in park) must not be cut off
+    end = min(len(a), max(loud[-1] + int(0.06 * SR), (soft[-1] if len(soft) else loud[-1]) + int(0.04 * SR), loud[-1] + int(0.15 * SR)))
+    return a[max(0, loud[0] - int(0.03 * SR)):end]
 
 MODEL = os.path.expanduser('~/.n8n-files/aligner-models/sherpa-onnx-nemo-parakeet-tdt-0.6b-v2-int8/')
 _rec = None
@@ -157,9 +158,9 @@ def sentences(t):
 
 
 def gap_after(s):                                # a breath between sentences (owner: not rushed, not slow)
-    if s.endswith('?'): return 0.32
-    if s.endswith('!'): return 0.22
-    return 0.18 if len(s.split()) <= 4 else 0.26
+    if s.endswith('?'): return 0.24
+    if s.endswith('!'): return 0.14
+    return 0.10 if len(s.split()) <= 4 else 0.16             # each line also keeps ~0.15 s of its own tail
 
 
 def speed_for(s, first):
@@ -191,11 +192,12 @@ import textcheck as TC
 MAX_TAKES = int(_brand.get('voice_takes', 5))
 TAKES, CHECK = {}, []
 
+FIRST = {}                                         # line -> first take to try (raised when the whole-read check rejects a take)
 def checked(s_, speed):
     """best take of one line: all words right, sane pace, no long dead air inside"""
     if s_ in TAKES: return tts(s_, speed, TAKES[s_])
     best = None
-    for take in range(MAX_TAKES):
+    for take in range(FIRST.get(s_, 0), FIRST.get(s_, 0) + MAX_TAKES):
         a_ = tts(s_, speed, take)
         sc, diffs = TC.score(s_, TC.heard(a_, SR))
         n = len(TC.keys_of(s_)); dur = len(a_) / SR
@@ -283,11 +285,26 @@ if abs(_new - SPEED) / SPEED > 0.015:                 # takes are kept; only the
     SPEED = _new
     audio, n_spoken = synth()
 full = np.concatenate(audio) if audio else np.zeros(0, dtype=np.int16)
+# whole-read check: a word that is still wrong when its own seconds are re-checked gets its line re-taken
+for _round in range(2):
+    bad = TC.confirmed_diffs(full, SR, ' '.join(SPOKEN))
+    if not bad: break
+    starts_tok, li = [], []
+    for k_, l_ in enumerate(SPOKEN): li += [k_] * len(TC.tokens(l_))
+    redo = sorted({SPOKEN[li[i]] for i, *_ in bad if li[i] < len(SPOKEN) - 1})       # the loop line is cut, leave it
+    print(f'  whole-read check: {[(w, t, h[-40:]) for _, w, t, h in bad]} -> re-take {redo}', file=sys.stderr, flush=True)
+    if not redo: break
+    for l_ in redo:
+        FIRST[l_] = TAKES.pop(l_, 0) + 1
+        CHECK[:] = [c for c in CHECK if c['line'] != l_]
+    audio, n_spoken = synth()
+    full = np.concatenate(audio)
+WHOLE = TC.confirmed_diffs(full, SR, ' '.join(SPOKEN))
 sf.write(out_wav, full, SR, subtype='PCM_16')
 _base = re.sub(r'-(body|voiceover)\.wav$', '', out_wav)
 open(_base + '-spoken.txt', 'w').write(' '.join(SPOKEN) + '\n')          # exactly what Larry says: captions use these words
 _wps = len(TC.keys_of(' '.join(SPOKEN))) / (len(full) / SR)
-json.dump({'speed': SPEED, 'words_per_second': round(_wps, 2), 'seconds': round(len(full) / SR, 2),
+json.dump({'speed': SPEED, 'words_per_second': round(_wps, 2), 'whole_read_errors': [(w, t, h) for _, w, t, h in WHOLE], 'seconds': round(len(full) / SR, 2),
            'bad_lines': [c for c in CHECK if not c['ok']], 'retakes': sum(1 for c in CHECK if c['take'] > 0), 'lines': CHECK},
           open(_base + '-voicecheck.json', 'w'), indent=1)
 print(json.dumps({'wav': out_wav, 'pieces': n_spoken, 'speed': SPEED, 'wps': round(_wps, 2), 'retakes': sum(1 for c in CHECK if c['take'] > 0),

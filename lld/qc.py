@@ -44,7 +44,11 @@ else:
     sc, diffs = TC.score(spoken, heard)
     m['voice_score'] = round(sc, 3); m['voice_differences'] = diffs[:20]
     if sc < QC['min_voice_score']: fails.append(f'voice does not match the script well enough ({sc:.3f}): {diffs[:8]}')
-    elif diffs: warns.append(f'small differences heard (often the recognizer, not the voice): {diffs[:8]}')
+    elif diffs:
+        conf = TC.confirmed_diffs(voice, 16000, spoken, heard)       # re-check each spot on its own: recognizer slips drop out
+        m['confirmed_word_errors'] = [(w, t, h) for _, w, t, h in conf]
+        if conf: fails.append('words Larry says wrong: ' + '; '.join(f'"{w}" at {t}s (heard: ...{h[-40:]})' for _, w, t, h in conf[:5]))
+        else: warns.append(f'recognizer slips only (each re-checked and fine): {diffs[:8]}')
     try:
         vc = json.load(open(P('voicecheck.json')))
         m['retakes'] = vc.get('retakes'); m['speed'] = vc.get('speed')

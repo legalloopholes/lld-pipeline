@@ -144,3 +144,24 @@ def align(toks, words, total=None):
     for k in range(1, len(start)):                         # keep them in order
         if start[k] <= start[k - 1]: start[k] = start[k - 1] + 0.05
     return start, len(known) / len(toks)
+
+
+def confirmed_diffs(audio, sr, spoken, words=None):
+    """words the full-read recognizer got wrong that are STILL wrong when their own few seconds are re-checked.
+    Returns [(token_index, display_word, start_seconds, heard_in_clip)]. Context-free misses (phone/bone) drop out."""
+    toks = tokens(spoken)
+    if words is None: words = heard(audio, sr)
+    flat = [(i, k) for i, (_, ks) in enumerate(toks) for k in ks]
+    hk = heard_keys(words)
+    starts, _ = align(toks, words, len(audio) / sr)
+    sm = difflib.SequenceMatcher(None, [k for _, k in flat], [k for k, _ in hk], autojunk=False)
+    bad = sorted({flat[j][0] for op, a1, a2, b1, b2 in sm.get_opcodes() if op in ('replace', 'delete') for j in range(a1, a2)})
+    out = []
+    for i in bad:
+        t = starts[i] or 0.0; want = toks[i][1]; got = ''
+        for lo, hi in ((1.8, 1.6), (2.6, 1.0), (1.0, 2.4)):           # three windows: any one hearing it right is enough
+            g = [k for k, _ in heard_keys(heard(audio[int(max(0, t - lo) * sr):int((t + hi) * sr)], sr))]
+            got = ' '.join(g)
+            if all(k in g for k in want): break
+        else: out.append((i, toks[i][0], round(t, 2), got))
+    return out
