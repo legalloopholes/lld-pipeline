@@ -38,6 +38,42 @@ function gradientTex(top, bottom) {
   const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; return t;
 }
 
+const PAINT = {                                  // impasto: 4-sector Kuwahara (flat brush strokes) + canvas weave + raking-light relief
+  uniforms: { tDiffuse: { value: null }, res: { value: new THREE.Vector2(1080, 1920) }, r: { value: 6.0 } },
+  vertexShader: 'varying vec2 vUv; void main(){ vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }',
+  fragmentShader: `uniform sampler2D tDiffuse; uniform vec2 res; uniform float r; varying vec2 vUv;
+    float hh(vec2 p){ return fract(sin(dot(p, vec2(12.9898, 78.233))) * 43758.5453); }
+    float vn(vec2 p){ vec2 i = floor(p), f = fract(p); f = f * f * (3.0 - 2.0 * f);
+      return mix(mix(hh(i), hh(i + vec2(1, 0)), f.x), mix(hh(i + vec2(0, 1)), hh(i + vec2(1, 1)), f.x), f.y); }
+    void main(){ vec2 px = 1.0 / res; vec3 m[4]; vec3 s[4];
+      vec2 q0 = vUv * res; vec2 uv0 = vUv + (vec2(vn(q0 / 9.0), vn(q0 / 9.0 + 17.0)) - 0.5) * 7.0 * px;   // ragged stroke edges
+      for (int k = 0; k < 4; k++) { m[k] = vec3(0.0); s[k] = vec3(0.0); }
+      for (int j = 0; j <= 9; j++) for (int i = 0; i <= 9; i++) {
+        vec3 a = texture2D(tDiffuse, uv0 + vec2(-i, -j) * 1.4 * px).rgb, b = texture2D(tDiffuse, uv0 + vec2(i, -j) * 1.4 * px).rgb,
+             c = texture2D(tDiffuse, uv0 + vec2(-i, j) * 1.4 * px).rgb, d = texture2D(tDiffuse, uv0 + vec2(i, j) * 1.4 * px).rgb;
+        m[0] += a; s[0] += a * a; m[1] += b; s[1] += b * b; m[2] += c; s[2] += c * c; m[3] += d; s[3] += d * d; }
+      float n = 100.0, best = 1e9; vec3 col = vec3(0.0);
+      for (int k = 0; k < 4; k++) { vec3 mu = m[k] / n; vec3 v = abs(s[k] / n - mu * mu); float vv = v.r + v.g + v.b; if (vv < best) { best = vv; col = mu; } }
+      vec2 q = vUv * res; float weave = 0.05 * (sin(q.x * 1.6) * sin(q.y * 1.6));
+      float stroke = vn(vec2(q.x / 3.0 + q.y / 9.0, q.y / 30.0 - q.x / 60.0)) - 0.5;                      // directional bristle marks
+      float l = dot(col, vec3(0.33)); col = mix(vec3(l), col, 1.15);
+      gl_FragColor = vec4(col * (1.0 + weave + stroke * 0.16), 1.0); }`,
+};
+const SILENT = {                                 // silent film: orthochromatic B&W, crushed contrast, grain, scratches, flicker, iris
+  uniforms: { tDiffuse: { value: null }, time: { value: 0 }, res: { value: new THREE.Vector2(1080, 1920) } },
+  vertexShader: 'varying vec2 vUv; void main(){ vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }',
+  fragmentShader: `uniform sampler2D tDiffuse; uniform float time; uniform vec2 res; varying vec2 vUv;
+    float h(vec2 p){ return fract(sin(dot(p, vec2(12.9898, 78.233))) * 43758.5453); }
+    void main(){ vec2 uv = vUv + vec2(0.0, (h(vec2(floor(time * 18.0), 1.0)) - 0.5) * 0.002);   // gate weave
+      vec3 c = texture2D(tDiffuse, uv).rgb; float l = dot(c, vec3(0.22, 0.62, 0.16));                    // orthochromatic: reds go dark
+      l = smoothstep(0.06, 0.92, l); l = pow(l, 1.15);
+      l *= 0.93 + 0.07 * h(vec2(floor(time * 18.0), 7.0));                                                 // flicker
+      l += (h(vUv * res + time * 61.0) - 0.5) * 0.16;                                                      // grain
+      float sc = step(0.9985, h(vec2(floor(vUv.x * 420.0), floor(time * 18.0)))) * 0.35; l += sc;          // vertical scratches
+      vec2 d = (vUv - 0.5) * vec2(1.0, 1.7); l *= smoothstep(0.98, 0.45, length(d));                        // iris vignette
+      gl_FragColor = vec4(vec3(l) * vec3(1.0, 0.97, 0.9), 1.0); }`,
+};
+
 const PX = 5;                                     // pixel style: one art pixel = 5x5 screen pixels (216x384)
 const PIXEL = {                                  // nearest-sample the low-res frame, outline edges, posterize with ordered dither
   uniforms: { tDiffuse: { value: null }, res: { value: new THREE.Vector2(270, 480) }, levels: { value: 7.0 } },
@@ -81,7 +117,7 @@ function grainTex() {                            // fine fur/fabric grain for bu
 export function makeStyler({ renderer, scene, camera, hemi, amb, sun, W, H }) {
   let name = 'classic', composer = null, extra = [], noirBg = null, noirFog = null;
   const toonMats = new Map(), outlineMat = new THREE.MeshBasicMaterial({ color: 0x15141a, side: THREE.BackSide });
-  let grad = null, grain = null, clayTint = null; const roundCache = {};
+  let grad = null, grain = null, clayTint = null, silentPass = null; const roundCache = {};
 
   function toonOf(m) {
     const key = m.color.getHex() + (m.map ? m.map.uuid : '');
@@ -107,7 +143,7 @@ export function makeStyler({ renderer, scene, camera, hemi, amb, sun, W, H }) {
           line.scale.set(1 + 2 * t / p.width, 1 + 2 * t / p.height, 1 + 2 * t / p.depth);
           line.userData.outline = true; line.castShadow = false; line.receiveShadow = false; o.add(line);
         }
-      } else if (name === 'cinematic' || name === 'pixel' || name === 'clay') {
+      } else if (['cinematic', 'pixel', 'clay', 'painted', 'silent'].includes(name)) {
         const clay = name === 'clay', p = o.geometry && o.geometry.parameters;
         if (o.geometry.type === 'BoxGeometry' && p && (!m.map || m.userData.cine) && !Array.isArray(o.material)) {   // soften every edge (clay's own map doesn't count)
           const r = clay ? Math.min(0.16, Math.min(p.width, p.height, p.depth) * 0.42) : Math.min(0.07, Math.min(p.width, p.height, p.depth) * 0.22);
@@ -126,7 +162,7 @@ export function makeStyler({ renderer, scene, camera, hemi, amb, sun, W, H }) {
   }
 
   function set(n, off = [], on = []) {            // off/on: passes to skip or force, e.g. ['dof'] / ['ao'] (debugging)
-    name = ['toon', 'diorama', 'noir', 'cinematic', 'clay', 'pixel'].includes(n) ? n : 'classic';
+    name = ['toon', 'diorama', 'noir', 'cinematic', 'clay', 'pixel', 'painted', 'silent'].includes(n) ? n : 'classic';
     if (name === 'classic') return;
     if (name === 'toon') {
       grad = new THREE.DataTexture(new Uint8Array([90, 170, 255]), 3, 1, THREE.RedFormat);
@@ -146,7 +182,8 @@ export function makeStyler({ renderer, scene, camera, hemi, amb, sun, W, H }) {
       composer.setSize(W / PX, H / PX);
       for (const r of [composer.renderTarget1, composer.renderTarget2]) r.texture.minFilter = r.texture.magFilter = THREE.NearestFilter;
     }
-    if (name === 'cinematic' || pixel || clay) {
+    const painted = name === 'painted', silent = name === 'silent';
+    if (name === 'cinematic' || pixel || clay || painted || silent) {
       grain = clay ? clayTex() : grainTex();
       if (clay) { clayTint = clayTex(true); clayTint.colorSpace = THREE.SRGBColorSpace; clayTint.repeat.set(0.6, 0.6); }
       renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 0.82;
@@ -169,7 +206,9 @@ export function makeStyler({ renderer, scene, camera, hemi, amb, sun, W, H }) {
         composer.addPass(new BokehPass(scene, camera, { focus: 15.0, aperture: 0.0009, maxblur: 0.006 }));
       const g = new ShaderPass(GRADE); g.uniforms.sat.value = pixel ? 1.25 : clay ? 1.16 : 1.12; g.uniforms.contrast.value = pixel ? 1.12 : 1.08;
       g.uniforms.tint.value.set(1.02, 1.0, clay ? 0.94 : 0.97); composer.addPass(g);
-      if (!pixel) { const vig = new ShaderPass(VignetteShader); vig.uniforms.offset.value = 1.0; vig.uniforms.darkness.value = clay ? 0.7 : 0.55; composer.addPass(vig); }
+      if (painted) { const p = new ShaderPass(PAINT); composer.addPass(p); }
+      if (silent) { silentPass = new ShaderPass(SILENT); composer.addPass(silentPass); }
+      if (!pixel && !silent) { const vig = new ShaderPass(VignetteShader); vig.uniforms.offset.value = 1.0; vig.uniforms.darkness.value = clay ? 0.7 : 0.55; composer.addPass(vig); }
     } else if (name === 'diorama') {
       renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.3;
       hemi.color.set('#bcd4ff'); hemi.groundColor.set('#8a6a4a'); hemi.intensity = 1.0; amb.intensity = 0.15;
@@ -199,6 +238,6 @@ export function makeStyler({ renderer, scene, camera, hemi, amb, sun, W, H }) {
 
   // after the set's sky/fog is applied each frame: noir swaps in its own night sky
   function afterEnv() { if (name === 'noir') { scene.background = noirBg; scene.fog = noirFog; } }
-  function render() { prepare(); if (composer) composer.render(); else renderer.render(scene, camera); }
+  function render(t = 0) { prepare(); if (silentPass) silentPass.uniforms.time.value = t; if (composer) composer.render(); else renderer.render(scene, camera); }
   return { set, afterEnv, render, get name() { return name; } };
 }

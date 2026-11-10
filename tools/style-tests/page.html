@@ -1,0 +1,26 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>html,body{margin:0;background:#000}canvas{display:block;image-rendering:pixelated}</style>
+<script type="importmap">{"imports":{"three":"/three/build/three.module.js","three/addons/":"/three/examples/jsm/"}}</script>
+</head><body><canvas id="out" width="1080" height="1920"></canvas>
+<script type="module">
+import { shot } from './rpg.js';
+import { diorama } from './diorama.js';
+const out = document.getElementById('out'), g = out.getContext('2d');
+function tag(text, x, y) {                     // same white pill name tags as the live pipeline
+  g.font = '800 40px sans-serif'; const w = g.measureText(text).width + 44;
+  g.fillStyle = '#fff'; g.strokeStyle = '#111'; g.lineWidth = 4; g.beginPath(); g.roundRect(x - w / 2, y - 34, w, 62, 20); g.fill(); g.stroke();
+  g.fillStyle = '#111'; g.textAlign = 'center'; g.fillText(text, x, y + 12);
+}
+window.renderShot = async (style, name) => {
+  g.clearRect(0, 0, 1080, 1920);
+  if (style === 'rpg') {
+    const { P, tags } = shot(name); g.imageSmoothingEnabled = false; g.drawImage(P.canvas(), 0, 0, 1080, 1920);
+    for (const [t, x, y] of tags) tag(t, x * 6, y * 6);
+  } else {
+    const { canvas, tags } = await diorama(name); g.drawImage(canvas, 0, 0);
+    for (const [t, x, y] of tags) tag(t, x, y);
+  }
+  return true;
+};
+window.ready = true;
+</script></body></html>
