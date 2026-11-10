@@ -464,16 +464,14 @@ for t_, n_ in sorted(SFX_EVENTS, key=lambda e: (rank(e[1]), e[0])):      # impor
     if n_ not in ('step', 'whoosh') and any(abs(t_ - x) < 0.35 for x, m in kept if m not in ('step', 'whoosh')): continue
     kept.append((t_, n_)); count[n_] = count.get(n_, 0) + 1; times.setdefault(n_, []).append(t_)
 SFX_EVENTS = sorted(kept)
-# keep the energy up: if ~9 s pass with no feature sound, the next sentence lands with a meme boom
-_feat = sorted(t for t, n in SFX_EVENTS if n not in ('whoosh', 'pop', 'step'))
-_last = 0.0
-for s_ in sentences:
-    t0_ = s_[0][0]
-    if any(_last < x <= t0_ for x in _feat): _last = max(x for x in _feat if x <= t0_)
-    if t0_ - _last < 9 or (HANDLE_T is not None and t0_ > HANDLE_T - 3): continue
-    for te_ in (s_[-1][1] + 0.05, t0_):                              # end of the sentence, else its start
-        if te_ - _last >= 6 and all(abs(te_ - x) > 0.35 for x in _feat):
-            SFX_EVENTS.append((te_, 'vine')); _feat.append(te_); _last = te_; break
+# (no filler booms: the owner heard them as random loud noises, 2026-11-10)
+# at most one feature sound every 2.5 s and 12 per video; whooshes/steps/pops are quiet and don't count
+_kept, _lastf = [], -9.0
+for t_, n_ in sorted(SFX_EVENTS):
+    if n_ in ('whoosh', 'step', 'pop', 'click'): _kept.append((t_, n_)); continue
+    if t_ - _lastf < 2.5 or sum(1 for _, m in _kept if m not in ('whoosh', 'step', 'pop', 'click')) >= 12: continue
+    _kept.append((t_, n_)); _lastf = t_
+SFX_EVENTS = _kept
 SFX_EVENTS.sort()
 # reaction stickers: a big emoji pops beside the caption on the moments that already have a sound
 STICKER_FOR = {'gasp': '\U0001F631', 'cash': '\U0001F4B0', 'huh': '\U0001F914', 'alert': '\u2757', 'error': '\u274C',
@@ -822,13 +820,21 @@ def write_ass(path):
     open(path, 'w', encoding='utf-8').write('\n'.join(lines) + '\n')
 
 # ---------- audio: voice + sound effects ----------
+SFX_REL = {'whoosh': 0.22, 'step': 0.18, 'pop': 0.3, 'click': 0.28, 'wind': 0.25}   # loudest moment vs Larry's voice (0.5 = 6 dB under)
 def mix_audio(path):
     pcm = subprocess.run([FFMPEG, '-loglevel', 'error', '-i', wav, '-f', 's16le', '-ac', '1', '-ar', str(SR_A), '-'], capture_output=True).stdout
     voice = np.frombuffer(pcm, np.int16).astype(np.float32) / 32768
     mix = voice.copy()
+    # every sound effect is levelled against Larry's own speaking level, so none can jump out louder than him
+    w = int(0.05 * SR_A); n = len(voice) // w
+    vr = np.sqrt((voice[:n * w].reshape(n, w) ** 2).mean(1)) if n else np.array([0.1])
+    ref = float(np.percentile(vr[vr > 0.01], 90)) if (vr > 0.01).any() else 0.1
     for t0, name in SFX_EVENTS:
-        x = sfx_audio(name) * SFX_GAIN.get(name, 0.3); i = int(t0 * SR_A)
-        if i >= len(mix): continue
+        x = sfx_audio(name); i = int(t0 * SR_A)
+        if i >= len(mix) or not len(x): continue
+        m_ = len(x) // w
+        pk = float(np.sqrt((x[:m_ * w].reshape(m_, w) ** 2).mean(1)).max()) if m_ else float(np.abs(x).max())
+        x = x * (ref * SFX_REL.get(name, 0.5) / max(pk, 1e-4))
         mix[i:i + len(x)] += x[:len(mix) - i]
     k = 0.72                                                    # soft knee: loud sound-effect peaks get rounded off
     ax = np.abs(mix)                                            # (max ~0.88, leaving headroom for the music bed)

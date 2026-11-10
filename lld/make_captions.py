@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Legal Loopholes Daily - one-word captions timed to the actual audio.
 Usage: make_captions.py <voiceover.wav> <output.srt>
+The words shown are the script's own (<ID>-spoken.txt from make_voice.py), timed by the recognizer, so a misheard
+word can never reach the screen. Without that file the recognizer's words are used.
 """
 import sys, os, re, json, shutil, subprocess, tempfile
 import numpy as np, soundfile as sf, sherpa_onnx
@@ -54,6 +56,15 @@ for c0, c1 in zip(cuts, cuts[1:]):
         else:
             words[-1][0] += tok
 words = [w for w in words if w[0]]
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import textcheck as TC
+spoken_path = re.sub(r'-(voiceover|body)\.wav$', '-spoken.txt', src)
+aligned = None
+if spoken_path != src and os.path.exists(spoken_path):
+    toks = TC.tokens(open(spoken_path).read())
+    starts, aligned = TC.align(toks, words, len(audio) / sr)
+    heard_text = ' '.join(w for w, _ in words)
+    words = [[d, t] for (d, _), t in zip(toks, starts)]
 
 st = [t for _, t in words]
 for k, t in enumerate(st):
@@ -85,5 +96,6 @@ with open(out_srt, 'w') as fh:
     fh.write('\n\n'.join(f'{i + 1}\n{f(a)} --> {f(b)}\n{w}' for i, (a, b, w) in enumerate(caps)) + '\n')
 
 overlaps = sum(caps[i][0] < caps[i - 1][1] - 1e-6 for i in range(1, len(caps)))
-print(json.dumps({'srt': out_srt, 'words': len(caps), 'overlaps': overlaps,
+print(json.dumps({'srt': out_srt, 'words': len(caps), 'overlaps': overlaps, 'script_words': aligned is not None,
+                  'timed_by_voice': None if aligned is None else round(aligned, 3),
                   'text': ' '.join(w for _, _, w in caps)}))

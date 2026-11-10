@@ -78,8 +78,8 @@ for i in range(0, len(parts), 2):
     has_pause = i + 1 < len(parts)
     pieces.append((chunk, pause if has_pause else 0.0))
 
-def tts(chunk, speed=None):
-    body = json.dumps({'text': chunk, 'voice': VOICE, 'speed': speed or SPEED}).encode('utf-8')
+def tts(chunk, speed=None, take=0):
+    body = json.dumps({'text': chunk, 'voice': VOICE, 'speed': speed or SPEED, 'take': take}).encode('utf-8')
     req = urllib.request.Request(TTS_URL, data=body, headers={'Content-Type': 'application/json'})
     with urllib.request.urlopen(req, timeout=300) as r:
         data = r.read()
@@ -156,10 +156,10 @@ def sentences(t):
     return [back(p) for p in parts]
 
 
-def gap_after(s):
-    if s.endswith('?'): return 0.28
-    if s.endswith('!'): return 0.16
-    return 0.12 if len(s.split()) <= 4 else 0.18
+def gap_after(s):                                # a breath between sentences (owner: not rushed, not slow)
+    if s.endswith('?'): return 0.32
+    if s.endswith('!'): return 0.22
+    return 0.18 if len(s.split()) <= 4 else 0.26
 
 
 def speed_for(s, first):
@@ -185,20 +185,83 @@ def pop(a):
 def is_excl(s): return s.rstrip('"\u201d\u2019\')').endswith('!')
 
 
+# ---- voice check: every line is listened to (Parakeet) and re-taken if a word is wrong, missing or extra ----
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import textcheck as TC
+MAX_TAKES = int(_brand.get('voice_takes', 5))
+TAKES, CHECK = {}, []
+
+def checked(s_, speed):
+    """best take of one line: all words right, sane pace, no long dead air inside"""
+    if s_ in TAKES: return tts(s_, speed, TAKES[s_])
+    best = None
+    for take in range(MAX_TAKES):
+        a_ = tts(s_, speed, take)
+        sc, diffs = TC.score(s_, TC.heard(a_, SR))
+        n = len(TC.keys_of(s_)); dur = len(a_) / SR
+        rate = n / max(0.2, dur)
+        env = np.abs(a_.astype(np.float32)).reshape(-1)[:len(a_) // 240 * 240].reshape(-1, 240).mean(1)
+        quiet = env < 120; run = longest = 0
+        for q in quiet: run = run + 1 if q else 0; longest = max(longest, run)
+        dead = longest * 0.01
+        ok = sc >= 0.999 and (n < 5 or 1.8 <= rate <= 4.8) and dead <= 0.9
+        key = (ok, round(sc, 3), -abs(rate - 3.4))
+        if best is None or key > best[0]: best = (key, take, a_, sc, diffs, rate, dead)
+        if ok: break
+    _, take, a_, sc, diffs, rate, dead = best
+    TAKES[s_] = take
+    CHECK.append({'line': s_, 'take': take, 'ok': bool(best[0][0]), 'score': round(sc, 3), 'diffs': diffs, 'rate': round(rate, 2), 'dead_air': round(dead, 2)})
+    return a_
+
+
+def group_short(sents):
+    """one- and two-word sentences ("Trees. Bison.") are read together with their neighbours: Chatterbox garbles them alone"""
+    out, buf = [], []
+    for s_ in sents:
+        buf.append(s_)
+        if sum(len(x.split()) for x in buf) >= 4 or len(s_.split()) > 2: out.append(' '.join(buf)); buf = []
+    if buf:
+        if out and len(' '.join(buf).split()) <= 2: out[-1] = out[-1] + ' ' + ' '.join(buf)
+        else: out.append(' '.join(buf))
+    return out
+
+
+def checked_loop(s_, tail, speed):
+    """the loop line is voiced together with the hook's first words and cut; check what is left the same way"""
+    if s_ in TAKES: return cut_before(tts(s_ + ' ' + tail, speed, TAKES[s_]), s_, tail)
+    best = None
+    for take in range(MAX_TAKES):
+        try: a_ = cut_before(tts(s_ + ' ' + tail, speed, take), s_, tail)
+        except SystemExit: continue
+        sc, diffs = TC.score(s_, TC.heard(a_, SR))
+        if best is None or sc > best[0]: best = (sc, take, a_, diffs)
+        if sc >= 0.999: break
+    if best is None: raise SystemExit('loop line: no usable take')
+    TAKES[s_] = best[1]
+    CHECK.append({'line': s_, 'take': best[1], 'ok': best[0] >= 0.999, 'score': round(best[0], 3), 'diffs': best[3], 'rate': 0, 'dead_air': 0})
+    return best[2]
+
+
+SPOKEN = []
 def synth():
   audio, n_spoken, first = [], 0, True
+  SPOKEN.clear()
   for chunk, pause in pieces:
       if chunk:
           tail = None
           if re.search(r'\[cut\]', chunk, flags=re.I):
               chunk, tail = [c.strip() for c in re.split(r'\[cut\]', chunk, maxsplit=1, flags=re.I)]
           sents = sentences(clean(chunk, terminal=tail is None))
+          if tail: head_, last_ = group_short(sents[:-1]), sents[-1:]
+          else: head_, last_ = group_short(sents), []
+          sents = head_ + last_
           for j, s_ in enumerate(sents):
               last = j == len(sents) - 1
+              SPOKEN.append(s_)
               if last and tail:                                 # loop line: voiced with the hook's start, then cut
-                  audio.append(cut_before(tts(s_ + ' ' + tail, speed_for(s_, first)), s_, tail))
+                  audio.append(checked_loop(s_, tail, speed_for(s_, first)))
               else:
-                  a_ = tts(s_, speed_for(s_, first))
+                  a_ = checked(s_, speed_for(s_, first))
                   audio.append(pop(a_) if POP and is_excl(s_) else a_)
                   if not last: audio.append(np.zeros(int(gap_after(s_) * SR), dtype=np.int16))
               first = False
@@ -209,11 +272,23 @@ def synth():
 
 
 audio, n_spoken = synth()
+# pacing: aim for a natural ~3.4 spoken words a second overall (pauses included), never under the minimum length
+TARGET_WPS = float(_brand.get('words_per_second', 3.4))
+_words = len(TC.keys_of(' '.join(SPOKEN)))
 _dur = sum(len(x) for x in audio) / SR
-if _dur < MIN_SECONDS + 1.5 and SPEED > 0.9:          # never fall under the minimum length: slow down a bit and redo
-    SPEED = max(0.9, round(SPEED * _dur / (MIN_SECONDS + 2.5), 3))
+_new = min(1.12, max(0.95, round(SPEED * TARGET_WPS / (_words / _dur), 3)))
+if _dur * SPEED / _new < MIN_SECONDS + 1.5: _new = max(0.9, round(SPEED * _dur / (MIN_SECONDS + 2.5), 3))
+if abs(_new - SPEED) / SPEED > 0.015:                 # takes are kept; only the tempo changes
+    SPEED = _new
     audio, n_spoken = synth()
 full = np.concatenate(audio) if audio else np.zeros(0, dtype=np.int16)
 sf.write(out_wav, full, SR, subtype='PCM_16')
-print(json.dumps({'wav': out_wav, 'pieces': n_spoken, 'speed': SPEED,
+_base = re.sub(r'-(body|voiceover)\.wav$', '', out_wav)
+open(_base + '-spoken.txt', 'w').write(' '.join(SPOKEN) + '\n')          # exactly what Larry says: captions use these words
+_wps = len(TC.keys_of(' '.join(SPOKEN))) / (len(full) / SR)
+json.dump({'speed': SPEED, 'words_per_second': round(_wps, 2), 'seconds': round(len(full) / SR, 2),
+           'bad_lines': [c for c in CHECK if not c['ok']], 'retakes': sum(1 for c in CHECK if c['take'] > 0), 'lines': CHECK},
+          open(_base + '-voicecheck.json', 'w'), indent=1)
+print(json.dumps({'wav': out_wav, 'pieces': n_spoken, 'speed': SPEED, 'wps': round(_wps, 2), 'retakes': sum(1 for c in CHECK if c['take'] > 0),
+                  'bad_lines': len([c for c in CHECK if not c['ok']]),
                   'pauses': sum(1 for _, p in pieces if p > 0), 'seconds': round(len(full) / SR, 2)}))

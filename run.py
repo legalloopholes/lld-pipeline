@@ -131,6 +131,14 @@ def add_music(vid):
     return out, info['credit']
 
 
+def quality(vid, video):
+    """lld/qc.py: voice matches the script, captions are the script's words, pace, no stray loud sounds"""
+    r = sh([PY, f'{HERE}/lld/qc.py', vid, video], check=False)
+    q = last_json(r.stdout) or {'ok': False, 'fails': ['quality check crashed: ' + (r.stderr or '')[-300:]]}
+    log('quality:', json.dumps(q)[:1500])
+    return q
+
+
 def post_text(vid, script):
     return last_json(sh([PY, f'{HERE}/lld/make_meta.py', vid, base64.b64encode(script.encode()).decode()]).stdout)
 
@@ -143,26 +151,33 @@ def live(force_now):
     claim = os.path.join(STATE, 'last_slot.txt')
     if not force_now and os.path.exists(claim) and open(claim).read().strip() == sid:
         log(f'Slot {sid} was already handled by an earlier run.'); return
-    head, n, row = gapi.next_scripted()
-    if not row: log('No SCRIPTED rows left in the sheet. Nothing to post.'); return
-    vid, script = row['Video ID'], row['SCRIPT']
     os.makedirs(STATE, exist_ok=True); open(claim, 'w').write(sid + '\n')
-    commit([claim], f'Slot {sid}: {vid}')
-    log(f'== {vid} for the {sid} slot ==')
-
-    for stage in make(vid, script):
-        if stage == 'audio': gapi.update(vid, {'Status': 'AUDIO READY'})
-        if stage == 'captions': gapi.update(vid, {'Audio/Caption Status': 'CAPTIONS READY'})
-        if stage == 'video': gapi.update(vid, {'Status': 'VIDEO READY', 'Video File': RUN_URL})
+    commit([claim], f'Slot {sid}')
+    # an episode that fails the quality gate is set aside (Status "QC FAILED", reason in the run log) and the next one is tried
+    for attempt in range(int(json.load(open(os.path.join(HERE, 'assets', 'brand.json'))).get('qc_attempts', 3))):
+        head, n, row = gapi.next_scripted()
+        if not row: log('No SCRIPTED rows left in the sheet. Nothing to post.'); return
+        vid, script = row['Video ID'], row['SCRIPT']
+        log(f'== {vid} for the {sid} slot ==')
+        for stage in make(vid, script):
+            if stage == 'audio': gapi.update(vid, {'Status': 'AUDIO READY'})
+            if stage == 'captions': gapi.update(vid, {'Audio/Caption Status': 'CAPTIONS READY'})
+            if stage == 'video': gapi.update(vid, {'Status': 'VIDEO READY', 'Video File': RUN_URL})
+        video = os.path.join(ROOT, f'{vid}-video.mp4')             # clean: TikTok (you add the sound in the app)
+        mvideo, credit = add_music(vid)                              # with music: YouTube, Facebook, Instagram
+        loud(mvideo)
+        if mvideo != video: loud(video)
+        q = quality(vid, mvideo)
+        if q.get('ok'): break
+        gapi.update(vid, {'Status': 'QC FAILED'})
+        print('::error::' + vid + ' failed the quality check: ' + ' | '.join(q.get('fails', []))[:900], flush=True)
+    else:
+        raise SystemExit('no episode passed the quality check; nothing posted for ' + sid)
     meta = post_text(vid, script)
     gapi.update(vid, {'YouTube Title': meta['title'], 'Caption': meta['tiktok_caption'], 'Hashtags': meta['hashtags']})
 
     wait = (slot - datetime.datetime.now(ET)).total_seconds()
-    if wait > 0: log(f'Video ready. Waiting {round(wait / 60)} min for {slot:%H:%M}.'); time.sleep(wait)
-    video = os.path.join(ROOT, f'{vid}-video.mp4')                 # clean: TikTok (you add the sound in the app)
-    mvideo, credit = add_music(vid)                                  # with music: YouTube, Facebook, Instagram
-    loud(mvideo)
-    if mvideo != video: loud(video)
+    if wait > 0: log(f'Video ready and checked. Waiting {round(wait / 60)} min for {slot:%H:%M}.'); time.sleep(wait)
     desc = meta['description'] + ('\n\n' + credit if credit else '')
     fb_ig_caption = 'b64:' + base64.b64encode((meta['caption'] + ' ' + meta['hashtags'] + ' #reels'
                                                + ('\n\n' + credit if credit else '')).encode()).decode()
@@ -209,6 +224,11 @@ def test():
     loud(mvideo)
     if mvideo != os.path.join(ROOT, f'{vid}-video.mp4'): loud(os.path.join(ROOT, f'{vid}-video.mp4'))
     report['music'] = credit.splitlines()[0] if credit else 'off or failed'
+    q = quality(vid, mvideo); report['quality'] = q
+    if not q.get('ok'): ok = False
+    try: report['voicecheck'] = {k: v for k, v in json.load(open(os.path.join(ROOT, f'{vid}-voicecheck.json'))).items() if k != 'lines'}
+    except Exception: pass
+
     report['post_text'] = post_text(vid, script)
     check('youtube', lambda: 'channel: ' + ', '.join(gapi.youtube_check()))
     check('meta', lambda: last_json(sh([PY, f'{HERE}/lld/meta.py', 'check']).stdout))
@@ -232,6 +252,8 @@ def test():
     d = tempfile.mkdtemp()
     shutil.copy(os.path.join(ROOT, f'{vid}-video.mp4'), d)
     if mvideo != os.path.join(ROOT, f'{vid}-video.mp4'): shutil.copy(mvideo, d)
+    for extra in ('captions.srt', 'spoken.txt', 'voicecheck.json', 'voiceover.wav'):     # for reviewing the voice and captions
+        if os.path.exists(os.path.join(ROOT, f'{vid}-{extra}')): shutil.copy(os.path.join(ROOT, f'{vid}-{extra}'), d)
     json.dump(report, open(os.path.join(d, 'report.json'), 'w'), indent=1)
     hdr = git('config', '--get', 'http.https://github.com/.extraheader').stdout.strip()
     url = git('remote', 'get-url', 'origin').stdout.strip()
