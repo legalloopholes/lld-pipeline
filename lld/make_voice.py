@@ -17,6 +17,7 @@ except Exception:
     _brand = {}
 SPEED = float(_brand.get('voice_speed', 1.08))
 MIN_SECONDS = float(_brand.get('min_seconds', 60))
+POP = bool(_brand.get('voice_pop', True))     # pitch 'pop' on exclamations; off for Chatterbox (already expressive)
 DEFAULT_PAUSE = 0.25
 SR = 24000
 FFMPEG = next((p for p in ['/opt/homebrew/bin/ffmpeg', shutil.which('ffmpeg')] if p and os.path.exists(p)), 'ffmpeg')
@@ -198,7 +199,7 @@ def synth():
                   audio.append(cut_before(tts(s_ + ' ' + tail, speed_for(s_, first)), s_, tail))
               else:
                   a_ = tts(s_, speed_for(s_, first))
-                  audio.append(pop(a_) if is_excl(s_) else a_)
+                  audio.append(pop(a_) if POP and is_excl(s_) else a_)
                   if not last: audio.append(np.zeros(int(gap_after(s_) * SR), dtype=np.int16))
               first = False
               n_spoken += 1

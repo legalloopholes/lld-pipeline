@@ -1,0 +1,44 @@
+name: Voice audition
+
+# Renders the same Larry lines in several free voices and puts them on the voice-samples branch (posts nothing).
+# Start with: bash voices.sh  — it pushes the current commit to the voice-audition-run branch, which runs this once.
+on:
+  push:
+    branches: [voice-audition-run]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  samples:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: System packages
+        run: sudo apt-get update -q && sudo apt-get install -y -q espeak-ng ffmpeg
+      - name: Kokoro voices
+        run: |
+          pip install -q torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+          pip install -q -r requirements.txt
+          python tools/voice_samples.py kokoro out
+      - name: Chatterbox voices
+        continue-on-error: true
+        run: |
+          python -m venv /tmp/cb
+          # Chatterbox is unmaintained since Aug 2026: keep this exact version. CPU torch first (no CUDA download).
+          /tmp/cb/bin/pip install -q torch==2.6.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+          /tmp/cb/bin/pip install -q chatterbox-tts==0.1.7
+          /tmp/cb/bin/python tools/voice_samples.py chatterbox out
+      - name: Publish samples
+        run: |
+          cd out
+          for f in *.wav; do ffmpeg -v error -y -i "$f" -af loudnorm=I=-16:TP=-1.5 -ar 44100 -b:a 160k "${f%.wav}.mp3"; done
+          rm -f *.wav; ls -la
+          git init -q -b voice-samples; git add .
+          git -c user.name="LLD bot" -c user.email=bot@legalloopholes.invalid commit -q -m "Voice audition"
+          git push -q --force "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" voice-samples

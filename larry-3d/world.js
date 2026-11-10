@@ -7,6 +7,8 @@
 import * as THREE from 'three';
 import { makeLarry } from './larry.js';
 import { makeChimp, makeGorilla, makeOrangutan } from './cast.js';
+import { makePrimate, roleLook } from './primates.js';
+import { makeStyler } from './styles.js';
 import { SETS, buildEnv, useEnv } from './sets.js';
 import { PROPS, PROP_ALIASES, textSign, iconSign, doc } from './props.js';
 
@@ -17,12 +19,13 @@ renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadow
 document.getElementById('stage').prepend(renderer.domElement);
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(30, W / H, 0.1, 200);
-scene.add(new THREE.HemisphereLight(0xffffff, 0xd8d2c4, 1.7));
-scene.add(new THREE.AmbientLight(0xffffff, 0.35));
+const hemi = new THREE.HemisphereLight(0xffffff, 0xd8d2c4, 1.7); scene.add(hemi);
+const amb = new THREE.AmbientLight(0xffffff, 0.35); scene.add(amb);
 const sun = new THREE.DirectionalLight(0xffffff, 2.0);
 sun.position.set(4, 9, 7); sun.castShadow = true; sun.shadow.mapSize.set(2048, 2048);
 Object.assign(sun.shadow.camera, { left: -8, right: 8, top: 8, bottom: -8, near: 1, far: 40 });
 sun.shadow.radius = 6; scene.add(sun);
+const styler = makeStyler({ renderer, scene, camera, hemi, amb, sun, W, H });
 
 // ---------- build everything once ----------
 const sets = {};
@@ -30,6 +33,10 @@ for (const k of Object.keys(SETS)) { sets[k] = SETS[k](scene); sets[k].env = bui
 const larry = makeLarry(scene);
 const chimp = makeChimp(scene), gorilla = makeGorilla(scene), orang = makeOrangutan(scene);
 const CAST = { chimp, gorilla, orang };
+// extra characters from the kit ("<species>.<outfit>"), built on first use; one instance per look and slot in a shot
+const POOL = {};
+function poolChar(look, slot) { return (POOL[`${look}#${slot}`] ||= makePrimate(scene, look)); }
+const roleOf = id => /politician/.test(id) ? 'P' : /friend|chimp/.test(id) ? 'C' : /judge|gorilla/.test(id) ? 'J' : '';
 const props = {};
 const propKey = it => it.id === 'sign' ? `sign|${it.icon || ''}|${it.text || ''}` : it.id === 'doc' ? `doc|${it.text || ''}|${it.sub || ''}` : (PROP_ALIASES[it.id] || it.id);
 const isLectern = it => ['constitution', 'gavel'].includes(propKey(it)) || it.id === 'doc';
@@ -78,7 +85,7 @@ const LARRY_POSE = {
 };
 
 let TL = null;
-window.setupTimeline = tl => { TL = tl; TL.frames ||= Math.ceil(tl.dur * tl.fps); TL.vdur = TL.frames / TL.fps; return true; };
+window.setupTimeline = tl => { TL = tl; TL.frames ||= Math.ceil(tl.dur * tl.fps); TL.vdur = TL.frames / TL.fps; styler.set(tl.style || 'classic', tl.style_off || [], tl.style_on || []); return true; };
 
 const lerp = (a, b, k) => a + (b - a) * k;
 const ease = k => (k <= 0 ? 0 : k >= 1 ? 1 : k * k * (3 - 2 * k));
@@ -120,8 +127,13 @@ function layoutScene(sc) {
   const board = (sc.items || []).filter(it => it.id && it.anim !== 'roll');
   const hasBoard = board.length > 0 && !sc.loop;
   const L = { set, cast: [], board: hasBoard ? board : [], rolls: (sc.items || []).filter(it => it.anim === 'roll') };
+  const slots = {};
   for (const c of cast) {
     const key = castKey(c.id), e = { c, key, x: 0, z: 0.6, y: 0, yaw: 0, sit: false };
+    // story mode: an explicit look, or one picked from the role on the name tag (the judge stays the gorilla unless told)
+    const look = (c.face || c.gest || c.look) && key !== 'larry' ? (c.look || (roleOf(c.id) !== 'J' && roleLook(c.name, roleOf(c.id)))) : null;
+    if (look) { e.key = 'kit'; e.ch = poolChar(look, slots[look] = (slots[look] ?? -1) + 1); e.x = c.x != null ? wx(c.x) : 0.9; L.cast.push(e); continue; }
+    e.ch = CAST[key] || null;
     if (key === 'chimp' && spots.log) { e.sit = true; [e.x, , e.z, e.yaw] = spots.log; }
     else if (key === 'gorilla' && spots.judge) { [e.x, e.y, e.z] = spots.judge; }
     else if (key === 'larry') {
@@ -165,13 +177,13 @@ window.renderAt = (t, frame) => {
 
   // set + sky
   for (const k in sets) sets[k].root.visible = k === L.set;
-  useEnv(scene, sets[L.set].env); sets[L.set].anim(Math.max(0, tA + 100));   // +100 keeps flame/steam phase continuous
+  useEnv(scene, sets[L.set].env); styler.afterEnv(); sets[L.set].anim(Math.max(0, tA + 100));   // +100 keeps flame/steam phase continuous
 
   // hide everyone, then place this scene's cast
-  larry.root.visible = false; for (const k in CAST) CAST[k].root.visible = false;
+  larry.root.visible = false; for (const k in CAST) CAST[k].root.visible = false; for (const k in POOL) POOL[k].root.visible = false;
   let larryHead = null;
   for (const e of L.cast) {
-    const ch = e.key === 'larry' ? larry : CAST[e.key];
+    const ch = e.key === 'larry' ? larry : e.ch;
     ch.root.visible = true; ch.root.position.set(e.x, e.y, e.z); ch.root.rotation.set(0, e.yaw, 0);
     standLegs(ch); ch.parts.torso.rotation.set(0, 0, 0);
     if (e.key === 'larry') {
@@ -202,8 +214,8 @@ window.renderAt = (t, frame) => {
       }
       larry.root.updateMatrixWorld(true);
       larryHead = larry.parts.head.getWorldPosition(new THREE.Vector3()).add(new THREE.Vector3(0, 0.5, 0));
-    } else if (e.c.face || e.c.gest) {                         // story mode: plan sets this character's face and gesture
-      const ch = CAST[e.key];
+    } else if (e.c.face || e.c.gest || e.key === 'kit') {      // story mode: plan sets this character's face and gesture
+      const ch = e.ch;
       applyFace(ch, e.c.face || 'neutral', tA, 1.1);
       if (ch.parts.stick) ch.parts.stick.visible = false;
       if (!e.sit) standLegs(ch);
@@ -294,12 +306,12 @@ window.renderAt = (t, frame) => {
   }
   if (roll) camera.rotateZ(roll);
   camera.updateMatrixWorld(true);
-  renderer.render(scene, camera);
+  styler.render();
   // name tags: a label over each named character so viewers know who is who
   let used = 0;
   for (const e of L.cast) {
     if (!e.c.name || e.key === 'larry') continue;
-    const ch = CAST[e.key]; if (!ch || !ch.root.visible) continue;
+    const ch = e.ch; if (!ch || !ch.root.visible) continue;
     ch.root.updateMatrixWorld(true);
     const p = ch.parts.head.getWorldPosition(new THREE.Vector3()).add(new THREE.Vector3(0, 1.05, 0)).project(camera);
     const tag = nameTag(used++);

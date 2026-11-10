@@ -17,7 +17,7 @@
   "#lawtok",
   "#didyouknow"
  ],
- "script": "Breaking out of prison is not, by itself, a crime in Germany. The catch is everything around it. German criminal law has no offense of simply escaping from custody. The idea goes back to the nineteenth century: a prisoner's urge to be free was treated as a basic human drive, so the escape alone isn't punished. [pause 0.15] But look at section one-twenty of the criminal code. Anyone who frees a prisoner, talks a prisoner into escaping, or helps with the escape faces up to three years in prison. If the helper is an official whose job is to prevent escapes, it's up to five. Even an attempt is punishable. So escaping isn't the crime. Helping is. And the escape doesn't cancel anything. The sentence still stands. The prisoner can be caught and brought straight back, face prison discipline, and hurt their chances of early release. Sawed through the bars? That's property damage. Threatened or hurt a guard? Those are crimes too, and they don't become legal just because they happened during an escape. [loop] So if you ever hear someone say breaking out is legal, just remember",
+ "script": "In Germany, you can break out of prison and it's not a new crime. But the friend who drives the getaway car? He's the criminal. [disclaimer] Meet Klaus. Klaus is serving a sentence in a German prison. One night, Klaus finds a door left unlocked. And he walks out. His friend Jonas is waiting outside with a car. Klaus gets in. A few days later, police catch them both. And both end up in court. German criminal law has no crime called escaping. But section one twenty punishes anyone who frees a prisoner, talks one into leaving, or helps. So Jonas, the driver, faces up to three years. For an official whose job is to stop escapes, it's up to five. And Klaus? Nothing new. Not for the escape itself. Wait. The man who escaped is fine, and the man who drove is the criminal? You see, German law treats the urge to be free as human nature. It's like a bird flying out of an open cage. Nobody blames the bird. But if you open the cage, that's on you. The sentence still stands. Klaus gets brought back, faces prison discipline, and early release gets harder. Damage the bars or hurt a guard, and that's its own crime. So Klaus goes back to his cell with no new charge. And the only new criminal in the story is the guy who gave him a ride. [loop] So if you ever hear someone say breaking out is legal, remember",
  "publish_at": "2026-11-02T12:00:00-05:00",
  "sources": [
   "https://www.gesetze-im-internet.de/stgb/__120.html",
@@ -30,14 +30,79 @@
    "bg": "bg-prison",
    "cast": [
     {
-     "id": "larry:smug",
-     "x": 0.3
+     "id": "char-friend-chimp",
+     "face": "neutral",
+     "gest": "none",
+     "name": "KLAUS",
+     "x": 0.5
     }
    ]
   },
   {
-   "at": "german criminal law has no",
-   "bg": "white",
+   "at": "night klaus finds a",
+   "bg": "bg-prison",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "surprised",
+     "gest": "point",
+     "name": "KLAUS",
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "at": "his friend jonas is",
+   "bg": "bg-street",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "name": "KLAUS",
+     "x": 0.3
+    },
+    {
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "none",
+     "look": "macaque.tracksuit",
+     "name": "JONAS",
+     "x": 0.7
+    }
+   ]
+  },
+  {
+   "at": "a few days later",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "face": "neutral",
+     "gest": "none",
+     "name": "JUDGE",
+     "x": 0.2
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "none",
+     "name": "KLAUS",
+     "x": 0.2
+    },
+    {
+     "id": "char-politician",
+     "face": "worried",
+     "gest": "none",
+     "look": "macaque.tracksuit",
+     "name": "JONAS",
+     "x": 0.53
+    }
+   ]
+  },
+  {
+   "at": "german criminal law has",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:explaining"
@@ -46,125 +111,84 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🇩🇪",
-     "text": "German Criminal Code"
+     "icon": "📕",
+     "text": "SECTION 120"
     }
    ]
   },
   {
-   "at": "the idea goes back",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:thinking"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🕊️",
-     "text": "The urge to be free"
-    }
-   ]
-  },
-  {
-   "at": "but look at section",
-   "bg": "bg-prison",
-   "cast": [
-    {
-     "id": "larry:pointing",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "doc",
-     "text": "Section 120",
-     "sub": "German Criminal Code"
-    }
-   ]
-  },
-  {
-   "at": "anyone who frees",
+   "at": "so jonas the driver",
    "bg": "bg-courtroom",
    "cast": [
     {
      "id": "char-judge",
-     "x": 0.7
+     "face": "smug",
+     "gest": "point",
+     "name": "JUDGE",
+     "x": 0.3
     },
     {
-     "id": "larry:explaining",
-     "x": 0.3
-    }
-   ],
-   "card": "HELPING: UP TO 3 YEARS",
-   "card_at": "anyone who frees"
-  },
-  {
-   "at": "if the helper is",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:pointing"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "👮",
-     "text": "Officials: 5 years"
+     "id": "char-politician",
+     "face": "worried",
+     "gest": "scratch",
+     "look": "macaque.tracksuit",
+     "name": "JONAS",
+     "x": 0.2
     }
    ]
   },
   {
-   "at": "so escaping isn't",
+   "at": "and klaus nothing new",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "face": "neutral",
+     "gest": "think",
+     "name": "JUDGE",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "shrug",
+     "name": "KLAUS",
+     "x": 0.2
+    }
+   ]
+  },
+  {
+   "at": "wait the man who",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "face": "surprised",
+     "gest": "think",
+     "name": "JUDGE",
+     "x": 0.3
+    },
+    {
+     "id": "char-politician",
+     "face": "surprised",
+     "gest": "arms_up",
+     "look": "macaque.tracksuit",
+     "name": "JONAS",
+     "x": 0.2
+    }
+   ]
+  },
+  {
+   "at": "you see german law",
    "bg": "white",
    "cast": [
     {
-     "id": "larry:smug"
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🚪",
-     "text": "Helping = crime"
+     "id": "larry:explaining"
     }
    ]
   },
   {
    "at": "the sentence still stands",
-   "bg": "bg-prison",
-   "cast": [
-    {
-     "id": "larry:concerned",
-     "x": 0.3
-    }
-   ],
-   "card": "THE SENTENCE STILL STANDS",
-   "card_at": "the sentence still stands"
-  },
-  {
-   "at": "sawed through the bars",
-   "bg": "bg-prison",
-   "cast": [
-    {
-     "id": "larry:surprised",
-     "x": 0.3
-    }
-   ],
-   "card": "PROPERTY DAMAGE",
-   "card_at": "property damage",
-   "zooms": [
-    {
-     "at": "property damage",
-     "amount": 1.18,
-     "hold": 0.9
-    }
-   ]
-  },
-  {
-   "at": "threatened or hurt",
    "bg": "white",
    "cast": [
     {
@@ -174,26 +198,49 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🚫",
-     "text": "Still crimes"
+     "icon": "⚠️",
+     "text": "ESCAPE CANCELS NOTHING"
     }
    ]
   },
   {
-   "at": "make sure to like",
+   "at": "so klaus goes back",
+   "bg": "bg-prison",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "none",
+     "name": "KLAUS",
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "at": "send this to",
    "bg": "white",
    "cast": [
     {
-     "id": "larry:auto"
+     "id": "larry:pointing"
     }
    ]
   },
   {
-   "at": "so if you ever hear",
+   "at": "so if you ever",
    "bg": "bg-prison",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "neutral",
+     "gest": "none",
+     "name": "KLAUS",
+     "x": 0.5
+    }
+   ],
    "loop": true
   }
  ],
  "music_vibe": "tense",
- "share_line": "Send this to the friend who'd break you out of prison"
+ "share_line": "Send this to the friend who'd leave you inside and keep the getaway car",
+ "story_format": true
 }

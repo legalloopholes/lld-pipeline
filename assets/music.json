@@ -1,7 +1,7 @@
 {
- "_about": "Dark, playful background music (Dexter-style: plucked strings, bassoon, eerie bells) for YouTube / Facebook / Instagram (TikTok gets the clean video). Kevin MacLeod, incompetech.com, CC BY 4.0. level_db = music loudness relative to Larry's voice (-15 dB ≈ 18% of the voice level).",
+ "_about": "Dark, playful background music (Dexter-style: plucked strings, bassoon, eerie bells) for YouTube / Facebook / Instagram (TikTok gets the clean video). Kevin MacLeod, incompetech.com, CC BY 4.0. level_db = music loudness relative to Larry's voice (-10 dB ≈ 32% of the voice level; -15 was too quiet to notice on a phone).",
  "enabled": true,
- "level_db": -15,
+ "level_db": -10,
  "fade_in": 1.0,
  "fade_out": 2.0,
  "base_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/",

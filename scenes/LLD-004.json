@@ -17,7 +17,7 @@
   "#lawtok",
   "#weirdlaws"
  ],
- "script": "A California court ruled that bumble bees can legally count as fish. [disclaimer] Here's how. California's Endangered Species Act protects birds, mammals, fish, amphibians, reptiles and plants. Insects don't get their own category. But the state's Fish and Game Code defines fish to include invertebrates, along with things like mollusks and crustaceans. So, in twenty twenty-two, a California appeals court had to decide: can that definition reach a bee that has never lived in water? Its answer was yes. The court said the definition isn't limited to animals that live in water, so the state commission can list a land-dwelling invertebrate, like a bumble bee, if it meets the law's requirements. Even the case name sounds like a joke: Almond Alliance versus the Fish and Game Commission. When the California Supreme Court declined to review the case, the chief justice wrote that the denial should not be read as the court deciding that bumble bees are fish. And biologically, they obviously aren't. This is a legal classification for one wildlife law, not a rule that bees are fish everywhere in California. [loop] So if you ever spot a bee at the fish market, just remember",
+ "script": "In California, a bumble bee is legally a fish. A court said so. [disclaimer] Meet Gary. Gary grows almonds. And Gary's farm runs on bees. Then California wants to protect four kinds of bumble bees under its endangered species law. Protected species come with rules. And farmers like Gary worry those rules will reach their fields. But that law only covers birds, mammals, fish, amphibians, reptiles and plants. No insects. So Gary's farm groups sue. Their argument is simple. A bee is not on the list. Then the state points to another part of its code. It says fish include invertebrates. Like snails, crabs and clams. And a bee is an invertebrate. Wait. So the bee is a fish now? You see, a legal definition is like a label on a box. The law decides what goes inside. Not what it looks like. In twenty twenty two, an appeals court agrees. In this law, fish isn't limited to animals that live in water. This is one wildlife law. When the state supreme court declined to review it, the chief justice wrote that this doesn't mean bees are fish. And biologically, they obviously aren't. So Gary's farm runs on bees, and his side lost the case because of fish. [loop] So if you ever see a bee at the fish market, remember",
  "publish_at": "2026-11-03T12:00:00-05:00",
  "sources": [
   "https://www.courts.ca.gov/opinions/archive/C093542S.PDF"
@@ -26,24 +26,46 @@
  "scenes": [
   {
    "at": "start",
-   "bg": "bg-campsite",
+   "bg": "bg-neighborhood",
    "cast": [
     {
-     "id": "larry:smug",
-     "x": 0.3
-    }
-   ],
-   "props": [
-    {
-     "id": "sign",
-     "icon": "🐝➡️🐟",
-     "text": ""
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "name": "GARY",
+     "x": 0.5
     }
    ]
   },
   {
-   "at": "here's how",
-   "bg": "white",
+   "at": "then california wants to",
+   "bg": "bg-capitol",
+   "cast": [
+    {
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "point",
+     "name": "CALIFORNIA",
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "at": "protected species come with",
+   "bg": "bg-neighborhood",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "scratch",
+     "name": "GARY",
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "at": "but that law only",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:explaining"
@@ -51,31 +73,35 @@
    ],
    "props": [
     {
-     "id": "doc",
-     "text": "Endangered Species Act",
-     "sub": "California"
+     "id": "sign",
+     "icon": "📜",
+     "text": "THE PROTECTED LIST"
     }
    ]
   },
   {
-   "at": "insects don't get",
-   "bg": "white",
+   "at": "so gary's farm groups",
+   "bg": "bg-courtroom",
    "cast": [
     {
-     "id": "larry:surprised"
-    }
-   ],
-   "props": [
+     "id": "char-judge",
+     "face": "neutral",
+     "gest": "none",
+     "name": "JUDGE",
+     "x": 0.3
+    },
     {
-     "id": "sign",
-     "icon": "🐝",
-     "text": "No insect category"
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "point",
+     "name": "GARY",
+     "x": 0.2
     }
    ]
   },
   {
-   "at": "but the state's fish",
-   "bg": "white",
+   "at": "then the state points",
+   "bg": "bg-office",
    "cast": [
     {
      "id": "larry:pointing"
@@ -84,104 +110,106 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🐟🦀🐌",
-     "text": "Fish = invertebrates"
+     "icon": "🐟",
+     "text": "FISH = INVERTEBRATES"
     }
    ]
   },
   {
-   "at": "so in twenty",
+   "at": "and a bee is",
    "bg": "bg-courtroom",
    "cast": [
     {
      "id": "char-judge",
-     "x": 0.7
+     "face": "neutral",
+     "gest": "think",
+     "name": "JUDGE",
+     "x": 0.3
     },
     {
-     "id": "larry:thinking",
-     "x": 0.3
-    }
-   ],
-   "card": "A BEE THAT NEVER SWAM?",
-   "card_at": "never lived in water"
-  },
-  {
-   "at": "its answer was yes",
-   "bg": "bg-courtroom",
-   "cast": [
-    {
-     "id": "char-judge",
-     "x": 0.7
-    },
-    {
-     "id": "larry:surprised",
-     "x": 0.3
-    }
-   ],
-   "zooms": [
-    {
-     "at": "its answer was yes",
-     "amount": 1.18,
-     "hold": 0.9
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "explain",
+     "name": "CALIFORNIA",
+     "x": 0.2
     }
    ]
   },
   {
-   "at": "the court said",
+   "at": "wait so the bee",
+   "bg": "bg-courtroom",
+   "cast": [
+    {
+     "id": "char-judge",
+     "face": "surprised",
+     "gest": "scratch",
+     "name": "JUDGE",
+     "x": 0.3
+    },
+    {
+     "id": "char-friend-chimp",
+     "face": "surprised",
+     "gest": "arms_up",
+     "name": "GARY",
+     "x": 0.2
+    }
+   ]
+  },
+  {
+   "at": "you see a legal",
    "bg": "white",
    "cast": [
     {
      "id": "larry:explaining"
     }
-   ],
-   "props": [
+   ]
+  },
+  {
+   "at": "an appeals court agrees",
+   "bg": "bg-courtroom",
+   "cast": [
     {
-     "id": "sign",
-     "icon": "🐝✅",
-     "text": "Can be listed"
+     "id": "char-judge",
+     "face": "smug",
+     "gest": "point",
+     "name": "JUDGE",
+     "x": 0.3
+    },
+    {
+     "id": "char-politician",
+     "face": "smug",
+     "gest": "wave",
+     "name": "CALIFORNIA",
+     "x": 0.2
     }
    ]
   },
   {
-   "at": "even the case name",
+   "at": "this is",
    "bg": "white",
    "cast": [
     {
-     "id": "larry:smug"
-    }
-   ],
-   "card": "ALMOND ALLIANCE v. FISH AND GAME",
-   "card_at": "almond alliance"
-  },
-  {
-   "at": "when the california supreme",
-   "bg": "bg-courtroom",
-   "cast": [
-    {
-     "id": "char-judge-confused",
-     "x": 0.7
-    },
-    {
-     "id": "larry:concerned",
-     "x": 0.3
-    }
-   ],
-   "card": "NOT A RULING THAT BEES ARE FISH",
-   "card_at": "should not be read"
-  },
-  {
-   "at": "and biologically",
-   "bg": "white",
-   "cast": [
-    {
-     "id": "larry:smug"
+     "id": "larry:concerned"
     }
    ],
    "props": [
     {
      "id": "sign",
-     "icon": "🐝≠🐟",
-     "text": "Biology unchanged"
+     "icon": "⚠️",
+     "text": "ONE LAW ONLY"
+    }
+   ]
+  },
+  {
+   "at": "so gary's farm runs",
+   "bg": "bg-neighborhood",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "worried",
+     "gest": "none",
+     "name": "GARY",
+     "x": 0.5
     }
    ]
   },
@@ -190,18 +218,28 @@
    "bg": "white",
    "cast": [
     {
-     "id": "larry:auto"
+     "id": "larry:pointing"
     }
    ]
   },
   {
-   "at": "so if you ever spot",
-   "bg": "bg-campsite",
+   "at": "so if you ever",
+   "bg": "bg-neighborhood",
+   "cast": [
+    {
+     "id": "char-friend-chimp",
+     "face": "smug",
+     "gest": "wave",
+     "name": "GARY",
+     "x": 0.5
+    }
+   ],
    "loop": true
   }
  ],
  "music_vibe": "quirky",
- "share_line": "Send this to the friend with the brain of a bumble bee",
+ "share_line": "Send this to the friend with fewer brain cells than a legally certified fish",
  "hook_old": "BEES… LEGALLY FISH?",
- "script_old": "California found a way to protect bumble bees by fitting them into the legal definition of fish. Here's how. California's Endangered Species Act protects birds, mammals, fish, amphibians, reptiles and plants. Insects don't get their own category. But the state's Fish and Game Code defines fish to include invertebrates, along with things like mollusks and crustaceans. So, in twenty twenty-two, a California appeals court had to decide: can that definition reach a bee that has never lived in water? Its answer was yes. The court said the definition isn't limited to animals that live in water, so the state commission can list a land-dwelling invertebrate, like a bumble bee, if it meets the law's requirements. Even the case name sounds like a joke: Almond Alliance versus the Fish and Game Commission. When the California Supreme Court declined to review the case, the chief justice wrote that the denial should not be read as the court deciding that bumble bees are fish. And biologically, they obviously aren't. This is a legal classification for one wildlife law, not a rule that bees are fish everywhere in California. [loop] So if you ever spot a bee at the fish market, just remember"
+ "script_old": "California found a way to protect bumble bees by fitting them into the legal definition of fish. Here's how. California's Endangered Species Act protects birds, mammals, fish, amphibians, reptiles and plants. Insects don't get their own category. But the state's Fish and Game Code defines fish to include invertebrates, along with things like mollusks and crustaceans. So, in twenty twenty-two, a California appeals court had to decide: can that definition reach a bee that has never lived in water? Its answer was yes. The court said the definition isn't limited to animals that live in water, so the state commission can list a land-dwelling invertebrate, like a bumble bee, if it meets the law's requirements. Even the case name sounds like a joke: Almond Alliance versus the Fish and Game Commission. When the California Supreme Court declined to review the case, the chief justice wrote that the denial should not be read as the court deciding that bumble bees are fish. And biologically, they obviously aren't. This is a legal classification for one wildlife law, not a rule that bees are fish everywhere in California. [loop] So if you ever spot a bee at the fish market, just remember",
+ "story_format": true
 }

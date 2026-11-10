@@ -14,5 +14,8 @@
  "min_seconds": 60,
  "voice_speed": 1.08,
  "spoken_disclaimer": false,
- "stickers": true
+ "stickers": true,
+ "style": "cinematic",
+ "tts": "chatterbox",
+ "voice_pop": false
 }

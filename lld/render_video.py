@@ -72,7 +72,8 @@ elif arg and not arg.endswith('.json'):
 NUMW = {'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen',
         'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty', 'thirty', 'forty', 'fifty', 'sixty',
         'seventy', 'eighty', 'ninety', 'hundred', 'thousand', 'million', 'billion', 'oh', 'and', 'point', 'percent',
-        'first', 'second', 'third', 'fourth', 'fifth', 'tenth', 'st', 'nd', 'rd', 'th', 'twenties', 'thirties', 'forties',
+        'first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth', 'ninth', 'tenth', 'eleventh', 'twelfth',
+        'thirteenth', 'fourteenth', 'fifteenth', 'sixteenth', 'seventeenth', 'eighteenth', 'nineteenth', 'twentieth', 'hundredth', 'st', 'nd', 'rd', 'th', 'twenties', 'thirties', 'forties',
         'fifties', 'sixties', 'seventies', 'eighties', 'nineties', 'hundreds', 'thousands', 'millions'}
 def _numless(t): return t in NUMW or bool(re.fullmatch(r'\d+(st|nd|rd|th|s)?', t)) or bool(re.fullmatch(r'(twenty|thirty|forty|fifty|sixty|seventy|eighty|ninety)(one|two|three|four|five|six|seven|eight|nine)', t))
 def find(phrase, start_idx=0):
@@ -852,12 +853,13 @@ def render_3d_base(nframes):
           'mouth': [int(bool(MOUTH[i])) if i < len(MOUTH) else 0 for i in range(nframes)],
           'poses': auto_seg,
           'scenes': [{'t': sc['t'], 'end': min(sc['end'], dur + 1), 'bg': sc.get('bg', 'white'), 'loop': bool(sc.get('loop')),
-                      'cast': [{k: v for k, v in c.items() if k in ('id', 'x', 'anim', 'from', 'face', 'gest', 'name')} for c in sc.get('cast', [])],
+                      'cast': [{k: v for k, v in c.items() if k in ('id', 'x', 'anim', 'from', 'face', 'gest', 'name', 'look')} for c in sc.get('cast', [])],
                       'items': items_3d(sc), 'zooms': [{'t': z['t'], 'amount': z.get('amount', 1.18), 'hold': z.get('hold', 0.9)} for z in sc['zooms']]}
                      for sc in scenes],
           'share': None if SHARE_T0 is None else [SHARE_T0, SHARE_T1],   # camera pulls back to make room for the share card
           'shakes': [t_ for t_, n_ in SFX_EVENTS if n_ in ('vine', 'hit', 'boom', 'scratch', 'airhorn')],
-          'tilts': TILTS}
+          'tilts': TILTS,
+          'style': os.environ.get('LLD_STYLE') or BRAND.get('style', 'classic')}   # classic | toon | diorama | noir
     tl_path, base = os.path.abspath(out + '.timeline.json'), os.path.abspath(out + '.base3d.mp4')
     json.dump(tl, open(tl_path, 'w'))
     if os.environ.get('LLD_TIMELINE_ONLY'): raise SystemExit(0)
