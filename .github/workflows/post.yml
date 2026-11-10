@@ -82,7 +82,7 @@ jobs:
         if: steps.gate.outputs.go == 'yes'
         run: |
           sudo apt-get update -q
-          sudo apt-get install -y -q ffmpeg espeak-ng fonts-noto-color-emoji fonts-liberation fonts-dejavu-core
+          sudo apt-get install -y -q ffmpeg fonts-noto-color-emoji fonts-liberation fonts-dejavu-core
           mkdir -p ~/.local/share/fonts ~/.config/fontconfig
           cp fonts/*/*.ttf ~/.local/share/fonts/
           cp fonts/fonts.conf ~/.config/fontconfig/fonts.conf
@@ -99,7 +99,6 @@ jobs:
       - name: Python packages
         if: steps.gate.outputs.go == 'yes'
         run: |
-          pip install -q torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu
           pip install -q -r requirements.txt
 
       - name: Caption model (Parakeet) cache
@@ -109,12 +108,12 @@ jobs:
           path: ~/.n8n-files/aligner-models
           key: parakeet-tdt-0.6b-v2-int8
 
-      - name: Voice models (Kokoro + Chatterbox) cache
+      - name: Voice model (Chatterbox) cache
         if: steps.gate.outputs.go == 'yes'
         uses: actions/cache@v4
         with:
           path: ~/.cache/huggingface
-          key: voices-kokoro-82m-v1-chatterbox-0.1.7
+          key: voices-chatterbox-0.1.7
 
       - name: Caption model download (first run only)
         if: steps.gate.outputs.go == 'yes'
@@ -170,16 +169,12 @@ jobs:
       - name: Start voice server
         if: steps.gate.outputs.go == 'yes'
         run: |
-          # brand.json "tts": "chatterbox" (Larry's voice) or "kokoro" (the old voice, fallback)
-          if [ "$(python3 -c "import json;print(json.load(open('assets/brand.json')).get('tts','kokoro'))")" = "chatterbox" ]; then
-            # own venv: chatterbox pins its own torch/transformers. Unmaintained since Aug 2026 - keep this exact version.
-            python -m venv /tmp/cb
-            /tmp/cb/bin/pip install -q torch==2.6.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cpu
-            /tmp/cb/bin/pip install -q chatterbox-tts==0.1.7
-            nohup /tmp/cb/bin/python lld/tts_chatterbox.py > /tmp/tts.log 2>&1 &
-          else
-            nohup python lld/tts_server.py > /tmp/tts.log 2>&1 &
-          fi
+          # Larry's voice is Chatterbox, always (the old Kokoro voice was removed for good, 2026-11-10).
+          # Own venv: chatterbox pins its own torch/transformers. Unmaintained since Aug 2026 - keep this exact version.
+          python -m venv /tmp/cb
+          /tmp/cb/bin/pip install -q torch==2.6.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+          /tmp/cb/bin/pip install -q chatterbox-tts==0.1.7
+          nohup /tmp/cb/bin/python lld/tts_chatterbox.py > /tmp/tts.log 2>&1 &
           for i in $(seq 1 120); do curl -sf http://127.0.0.1:8300/health >/dev/null && break; sleep 5; done
           curl -sf http://127.0.0.1:8300/health || (cat /tmp/tts.log; exit 1)
 

@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """Voice audition: the same Larry lines in several free voices, for picking by ear.
-   python tools/voice_samples.py kokoro OUTDIR      (main env)
    python tools/voice_samples.py chatterbox OUTDIR  (separate env with chatterbox-tts)"""
 import sys, os
 TEXT = ("What if you just married the only witness to your crime? "
@@ -12,16 +11,7 @@ TEXT = ("What if you just married the only witness to your crime? "
 engine, out = sys.argv[1], sys.argv[2]
 os.makedirs(out, exist_ok=True)
 
-if engine == 'kokoro':
-    import numpy as np, soundfile as sf
-    from kokoro import KPipeline
-    p = KPipeline(lang_code='a', repo_id='hexgrad/Kokoro-82M', device='cpu')
-    for name, voice, speed in [('1-current-kokoro-puck', 'am_puck', 1.08), ('2-kokoro-fenrir', 'am_fenrir', 1.08),
-                               ('3-kokoro-michael', 'am_michael', 1.08), ('4-kokoro-onyx', 'am_onyx', 1.08)]:
-        a = np.concatenate([r.audio.cpu().numpy() for r in p(TEXT, voice=voice, speed=speed) if r.audio is not None])
-        sf.write(f'{out}/{name}.wav', a, 24000); print('ok', name, flush=True)
-
-else:
+if True:   # Chatterbox only (the old Kokoro voice was removed for good)
     import torch, torchaudio as ta
     torch.set_num_threads(os.cpu_count() or 4)
     from chatterbox.tts import ChatterboxTTS

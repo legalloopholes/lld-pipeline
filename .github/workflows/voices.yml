@@ -20,12 +20,7 @@ jobs:
         with:
           python-version: '3.11'
       - name: System packages
-        run: sudo apt-get update -q && sudo apt-get install -y -q espeak-ng ffmpeg
-      - name: Kokoro voices
-        run: |
-          pip install -q torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu
-          pip install -q -r requirements.txt
-          python tools/voice_samples.py kokoro out
+        run: sudo apt-get update -q && sudo apt-get install -y -q ffmpeg
       - name: Chatterbox voices
         continue-on-error: true
         run: |

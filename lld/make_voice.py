@@ -9,7 +9,7 @@ import sys, re, json, base64, subprocess, shutil, os, urllib.request
 import numpy as np, soundfile as sf
 
 TTS_URL = 'http://localhost:8300/api/tts'
-VOICE = 'am_puck'        # chosen by ear (Kokoro grade C+; am_liam was D)
+VOICE = 'larry'          # Chatterbox (lld/tts_chatterbox.py) is the only voice; it ignores this name
 SPEED = 0.95
 try:   # faster, punchier read (brand.json: voice_speed, min_seconds)
     _brand = json.load(open(os.path.join(os.path.expanduser('~/.n8n-files'), 'assets', 'brand.json')))
