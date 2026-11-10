@@ -7,7 +7,7 @@
   "minor",
   "exceptions"
  ],
- "youtube_title": "The Contract Only One Side Can Undo — If They're Under 18 🦝⚖️",
+ "youtube_title": "The Contract Only One Side Can Undo — If They're Under 18",
  "caption": "California Family Code 6710 lets a minor disaffirm most contracts before 18 or within a reasonable time after — with exceptions for necessities and court-approved entertainment contracts.",
  "hashtags": [
   "#legalloopholes",
@@ -90,7 +90,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "📜",
+     "icon": "",
      "text": "CALIFORNIA FAMILY CODE"
     }
    ]
@@ -106,7 +106,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🔙",
+     "icon": "",
      "text": "DISAFFIRM"
     }
    ]
@@ -144,7 +144,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🍎",
+     "icon": "",
      "text": "NECESSITIES: PAY UP"
     }
    ]
@@ -160,7 +160,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🎬",
+     "icon": "",
      "text": "JUDGE APPROVED: STUCK"
     }
    ]
@@ -176,7 +176,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⚠️",
+     "icon": "",
      "text": "NOT A FREE PASS"
     }
    ]

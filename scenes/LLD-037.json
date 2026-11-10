@@ -7,7 +7,7 @@
   "cooling",
   "heated"
  ],
- "youtube_title": "Two Warm Pastries, Same Temperature, Different Tax 🦝⚖️",
+ "youtube_title": "Two Warm Pastries, Same Temperature, Different Tax",
  "caption": "HMRC's hot takeaway rules look at why food is hot, not just its temperature: bakery items warm only because they're cooling can stay zero-rated, while items kept hot in heated cabinets are taxed.",
  "hashtags": [
   "#legalloopholes",
@@ -48,7 +48,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🔥",
+     "icon": "",
      "text": "HOT FOOD = TAXED"
     }
    ]
@@ -77,7 +77,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "❓",
+     "icon": "",
      "text": "WHY IS IT HOT?"
     }
    ]
@@ -93,7 +93,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🥐",
+     "icon": "",
      "text": "COOLING = OK"
     }
    ]
@@ -151,7 +151,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⚠️",
+     "icon": "",
      "text": "EVERY QUESTION MATTERS"
     }
    ]

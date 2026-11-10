@@ -99,7 +99,7 @@ def build(n, markup):
                 icon, _, stext = sign.partition(' ')
                 assert len(stext) <= 22, (n, stext)
                 assert all(c['id'].startswith('larry') for c in cast), (n, 'sign with other character', sign)
-                sc['props'] = [{'id': 'sign', 'icon': icon, 'text': stext}]
+                sc['props'] = [{'id': 'sign', 'icon': '', 'text': stext}]   # owner: no emojis on screen
             scenes.append(sc); pending = None
         text.append(p)
     body_txt = re.sub(r'\s+', ' ', ''.join(text)).strip()

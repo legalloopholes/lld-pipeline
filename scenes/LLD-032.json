@@ -7,7 +7,7 @@
   "devices",
   "conviction"
  ],
- "youtube_title": "Clocked Speeding — but This Pennsylvania Rule Can Block the Conviction 🦝⚖️",
+ "youtube_title": "Clocked Speeding — but This Pennsylvania Rule Can Block the Conviction",
  "caption": "Pennsylvania §3368(c)(4) sets minimum thresholds before certain speed-timing devices can support a conviction — 10 mph over for two-point devices on roads under 55 mph — except in school and active work zones.",
  "hashtags": [
   "#legalloopholes",
@@ -89,7 +89,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "📜",
+     "icon": "",
      "text": "PENNSYLVANIA LAW"
     }
    ]
@@ -105,7 +105,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🚗",
+     "icon": "",
      "text": "UNDER 55? 10 OVER"
     }
    ]
@@ -143,7 +143,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⚠️",
+     "icon": "",
      "text": "STILL SPEEDING"
     }
    ]

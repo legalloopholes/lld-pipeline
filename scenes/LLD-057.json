@@ -7,7 +7,7 @@
   "acceptance",
   "mailbox"
  ],
- "youtube_title": "The Contract That's Binding Before Your 'Yes' Even Arrives 🦝⚖️",
+ "youtube_title": "The Contract That's Binding Before Your 'Yes' Even Arrives",
  "caption": "Under the mailbox rule, a properly sent acceptance can take effect when it's sent, not when it arrives — unless the offer says otherwise. Option contracts and state rules can change the result.",
  "hashtags": [
   "#legalloopholes",
@@ -74,7 +74,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "📬",
+     "icon": "",
      "text": "THE MAILBOX RULE"
     }
    ]
@@ -90,7 +90,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "✅",
+     "icon": "",
      "text": "YES COUNTS WHEN SENT"
     }
    ]
@@ -128,7 +128,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⚠️",
+     "icon": "",
      "text": "OFFERS CAN SAY NO"
     }
    ]

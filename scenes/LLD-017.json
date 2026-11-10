@@ -7,7 +7,7 @@
   "income",
   "taxable"
  ],
- "youtube_title": "Too Rich for a Roth IRA? The 'Backdoor' Explained 🦝⚖️",
+ "youtube_title": "Too Rich for a Roth IRA? The 'Backdoor' Explained",
  "caption": "Direct Roth IRA contributions have income limits; conversions don't. The 'backdoor' pairs a nondeductible traditional IRA contribution with a conversion — but existing pre-tax IRA money can make part of it taxable.",
  "hashtags": [
   "#legalloopholes",
@@ -50,7 +50,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🏦",
+     "icon": "",
      "text": "ROTH IRA"
     }
    ]
@@ -106,7 +106,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🚪",
+     "icon": "",
      "text": "THE BACKDOOR"
     }
    ]
@@ -144,7 +144,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⚠️",
+     "icon": "",
      "text": "LIMITS STILL APPLY"
     }
    ]

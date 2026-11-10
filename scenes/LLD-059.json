@@ -7,7 +7,7 @@
   "property",
   "innocent"
  ],
- "youtube_title": "Your Property Can Be Taken Without a Conviction? Civil Forfeiture 🦝⚖️",
+ "youtube_title": "Your Property Can Be Taken Without a Conviction? Civil Forfeiture",
  "caption": "Federal civil forfeiture is a case against the property itself and doesn't require a criminal conviction — but the government must prove its case, and owners have defenses like innocent ownership and excessive-fines review.",
  "hashtags": [
   "#legalloopholes",
@@ -82,7 +82,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "💵",
+     "icon": "",
      "text": "CIVIL FORFEITURE"
     }
    ]
@@ -98,7 +98,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🚗",
+     "icon": "",
      "text": "DEFENDANT: THE CAR"
     }
    ]
@@ -136,7 +136,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⚖️",
+     "icon": "",
      "text": "GOVERNMENT MUST PROVE"
     }
    ]
@@ -152,7 +152,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⚠️",
+     "icon": "",
      "text": "OWNERS CAN FIGHT"
     }
    ]

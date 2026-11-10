@@ -7,7 +7,7 @@
   "aircraft",
   "warning"
  ],
- "youtube_title": "The Stolen Airplane the Car-Theft Law Didn't Cover (1931) 🦝⚖️",
+ "youtube_title": "The Stolen Airplane the Car-Theft Law Didn't Cover (1931)",
  "caption": "McBoyle v. United States (1931): the Supreme Court held a stolen airplane wasn't a 'vehicle' under the motor-vehicle theft law of the time, citing fair warning. Federal law now expressly covers aircraft.",
  "hashtags": [
   "#legalloopholes",
@@ -62,7 +62,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🚗",
+     "icon": "",
      "text": "STOLEN VEHICLE LAW"
     }
    ]
@@ -78,7 +78,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🚙",
+     "icon": "",
      "text": "CARS. TRUCKS. WAGONS."
     }
    ]
@@ -123,7 +123,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "✈️",
+     "icon": "",
      "text": "NEVER SAYS AIRPLANE"
     }
    ]
@@ -139,7 +139,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⚠️",
+     "icon": "",
      "text": "STILL A CRIME TODAY"
     }
    ]

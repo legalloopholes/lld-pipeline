@@ -7,7 +7,7 @@
   "escape",
   "helping"
  ],
- "youtube_title": "Escaping Prison Isn't a Crime in Germany? 🦝⚖️",
+ "youtube_title": "Escaping Prison Isn't a Crime in Germany?",
  "caption": "In Germany, a prisoner's own escape isn't a standalone crime — but helping someone escape is, and the sentence, recapture and any other crimes still apply.",
  "hashtags": [
   "#legalloopholes",
@@ -111,7 +111,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "📕",
+     "icon": "",
      "text": "SECTION 120"
     }
    ]
@@ -198,7 +198,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⚠️",
+     "icon": "",
      "text": "ESCAPE CANCELS NOTHING"
     }
    ]

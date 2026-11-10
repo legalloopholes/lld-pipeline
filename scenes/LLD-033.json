@@ -7,7 +7,7 @@
   "employee",
   "official"
  ],
- "youtube_title": "Some Government Work Has No Copyright — and You Can Reuse It 🦝⚖️",
+ "youtube_title": "Some Government Work Has No Copyright — and You Can Reuse It",
  "caption": "Under 17 U.S.C. §105, works made by federal employees as part of their official duties have no U.S. copyright. Contractor or licensed material on a .gov site can still be protected, and seals, endorsements and privacy are separate issues.",
  "hashtags": [
   "#legalloopholes",
@@ -61,7 +61,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🏛️",
+     "icon": "",
      "text": "FEDERAL WORK"
     }
    ]
@@ -90,7 +90,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "📸",
+     "icon": "",
      "text": "PHOTO ONE: FREE"
     }
    ]
@@ -128,7 +128,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⚠️",
+     "icon": "",
      "text": "LOGOS HAVE RULES"
     }
    ]

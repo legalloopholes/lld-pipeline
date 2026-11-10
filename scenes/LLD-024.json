@@ -7,7 +7,7 @@
   "incorporated",
   "historical"
  ],
- "youtube_title": "The 'Double Irish': Irish on Paper, Tax Resident Elsewhere (Closed) 🦝⚖️",
+ "youtube_title": "The 'Double Irish': Irish on Paper, Tax Resident Elsewhere (Closed)",
  "caption": "The 'Double Irish' exploited the gap between where a company was incorporated and where it was tax resident. Ireland changed its residence rules from 2015, with a transition that ended in 2020. Historical, not available today.",
  "hashtags": [
   "#legalloopholes",
@@ -50,7 +50,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🌍",
+     "icon": "",
      "text": "WHERE DO YOU LIVE?"
     }
    ]
@@ -66,7 +66,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🇮🇪",
+     "icon": "",
      "text": "OLD IRISH RULE"
     }
    ]
@@ -137,7 +137,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🇮🇪🇮🇪",
+     "icon": "",
      "text": "THE DOUBLE IRISH"
     }
    ]
@@ -173,7 +173,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⚠️",
+     "icon": "",
      "text": "CLOSED SINCE 2020"
     }
    ]

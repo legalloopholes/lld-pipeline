@@ -7,7 +7,7 @@
   "prosecution",
   "cps"
  ],
- "youtube_title": "The State Won't Prosecute? In England, a Private Person Can Try 🦝⚖️",
+ "youtube_title": "The State Won't Prosecute? In England, a Private Person Can Try",
  "caption": "In England and Wales, any adult can apply to a magistrates' court to bring a private prosecution. The CPS can take over or end it, the evidence and disclosure rules still apply, and costs are significant.",
  "hashtags": [
   "#legalloopholes",
@@ -61,7 +61,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⚖️",
+     "icon": "",
      "text": "PRIVATE PROSECUTION"
     }
    ]
@@ -77,7 +77,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🚫",
+     "icon": "",
      "text": "NOT A LAWSUIT"
     }
    ]
@@ -135,7 +135,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⚠️",
+     "icon": "",
      "text": "BIG CATCHES"
     }
    ]
@@ -151,7 +151,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "💷",
+     "icon": "",
      "text": "~£8,500 AVERAGE"
     }
    ]

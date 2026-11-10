@@ -8,7 +8,7 @@
   "doll",
   "tariff"
  ],
- "youtube_title": "X-Men Toys Were Ruled 'Not Human' — to Cut Import Duty 🦝⚖️",
+ "youtube_title": "X-Men Toys Were Ruled 'Not Human' — to Cut Import Duty",
  "caption": "In Toy Biz v. United States (2003), the trade court held X-Men figures weren't 'dolls representing only human beings' because of non-human features — putting them in a lower-duty toy category under the tariff schedule of the time.",
  "hashtags": [
   "#legalloopholes",
@@ -71,7 +71,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🧸",
+     "icon": "",
      "text": "DOLLS = 12% TAX"
     }
    ]
@@ -87,7 +87,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🦖",
+     "icon": "",
      "text": "CREATURES = 6.8%"
     }
    ]
@@ -216,7 +216,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⚠️",
+     "icon": "",
      "text": "OLD TAX RULES"
     }
    ]

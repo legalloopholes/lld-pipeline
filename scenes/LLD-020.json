@@ -7,7 +7,7 @@
   "crisps",
   "percent"
  ],
- "youtube_title": "Pringles Argued They Weren't Potato Crisps. Then Came the Appeal 🦝⚖️",
+ "youtube_title": "Pringles Argued They Weren't Potato Crisps. Then Came the Appeal",
  "caption": "Procter & Gamble won in the High Court arguing Regular Pringles weren't potato crisps for VAT — but in 2009 the Court of Appeal restored the tribunal's ruling that they're in the taxed category.",
  "hashtags": [
   "#legalloopholes",
@@ -49,7 +49,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🥔",
+     "icon": "",
      "text": "CRISPS: TAXED"
     }
    ]
@@ -65,7 +65,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "📜",
+     "icon": "",
      "text": "MADE FROM THE POTATO"
     }
    ]
@@ -163,7 +163,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🚫",
+     "icon": "",
      "text": "NO MAGIC PERCENT"
     }
    ]

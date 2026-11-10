@@ -7,7 +7,7 @@
   "invertebrates",
   "bees"
  ],
- "youtube_title": "California Protected Bees by Calling Them… Fish? 🦝⚖️",
+ "youtube_title": "California Protected Bees by Calling Them… Fish?",
  "caption": "A California appeals court held in 2022 that the Fish and Game Code's definition of fish, which includes invertebrates, lets the state list bumble bees under its Endangered Species Act. Legally classified — not biologically fish.",
  "hashtags": [
   "#legalloopholes",
@@ -74,7 +74,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "📜",
+     "icon": "",
      "text": "THE PROTECTED LIST"
     }
    ]
@@ -110,7 +110,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🐟",
+     "icon": "",
      "text": "FISH = INVERTEBRATES"
     }
    ]
@@ -195,7 +195,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⚠️",
+     "icon": "",
      "text": "ONE LAW ONLY"
     }
    ]

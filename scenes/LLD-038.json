@@ -7,7 +7,7 @@
   "property",
   "half"
  ],
- "youtube_title": "Car Already Hooked to the Tow Truck? In California, It May Not Be Too Late 🦝⚖️",
+ "youtube_title": "Car Already Hooked to the Tow Truck? In California, It May Not Be Too Late",
  "caption": "California Vehicle Code 22658: for private-property tows, the owner can demand release before the car leaves the property; if it's already hooked up, the fee is capped at half the regular towing charge.",
  "hashtags": [
   "#legalloopholes",
@@ -81,7 +81,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🚗",
+     "icon": "",
      "text": "STILL ON THE LOT?"
     }
    ]
@@ -97,7 +97,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "💵",
+     "icon": "",
      "text": "UP TO HALF PRICE"
     }
    ]
@@ -135,7 +135,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⚠️",
+     "icon": "",
      "text": "PRIVATE TOWS ONLY"
     }
    ]

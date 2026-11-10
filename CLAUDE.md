@@ -27,7 +27,9 @@ This repository is **public**: never commit secrets, tokens, personal emails or 
 - Music: Kevin MacLeod (incompetech, CC BY 4.0) — his popular, darker tracks (Dexter "Blood Theme" feel), never
   elevator music; bed at ~32% of Larry's loudness (`level_db` −10; owner found −15 inaudible, 2026-11-09). Credit auto-added to captions/description.
 - Sound effects: meme style (vine boom, Metal Gear alert, quack, huh, bruh, scratch, cash, gasp, airhorn, trombone).
-  **No** loud opening boom, **no** "dun dun dun" stings, no booms on cards.
+  **No** loud opening boom, **no** "dun dun dun" stings, no booms on cards, **no gasps** (owner 2026-11-10: "constant gasps").
+- **No camera shakes** and **no emojis anywhere** (no reaction stickers, sign icons, or emojis in titles/captions) — owner 2026-11-10.
+  Sign markup still accepts `"<emoji> TEXT"` but the icon is dropped; `make_meta.py` strips emojis from post text.
   The owner's own files (`assets/sfx/*.wav`, git-ignored) reach the cloud as `assets/sfx.tgz.enc`, decrypted with the
   `SFX_KEY` secret; the owner re-runs `bash tools/sfx_pack.sh` after changing them. Without it only Freesound sounds play.
 - Videos are **≥ 60 s** (`min_seconds` in `assets/brand.json`). Owner reconfirmed 2026-11-09 — don't propose shorter.

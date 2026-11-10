@@ -8,7 +8,7 @@
   "settlement",
   "allegations"
  ],
- "youtube_title": "Ford's Vans Had Temporary Back Seats — Then a $365 Million Settlement 🦝⚖️",
+ "youtube_title": "Ford's Vans Had Temporary Back Seats — Then a $365 Million Settlement",
  "caption": "DOJ alleged Ford imported Transit Connect cargo vans with temporary rear seats to pay the 2.5% passenger-vehicle duty instead of 25%. Ford settled for $365 million in 2024 without admitting liability.",
  "hashtags": [
   "#legalloopholes",
@@ -50,7 +50,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🚗",
+     "icon": "",
      "text": "PASSENGER CAR: 2.5%"
     }
    ]
@@ -66,7 +66,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🚐",
+     "icon": "",
      "text": "CARGO VAN: 25%"
     }
    ]
@@ -170,7 +170,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "💰",
+     "icon": "",
      "text": "$365,000,000"
     }
    ]
@@ -186,7 +186,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⚠️",
+     "icon": "",
      "text": "CLAIMS, NOT A RULING"
     }
    ]
