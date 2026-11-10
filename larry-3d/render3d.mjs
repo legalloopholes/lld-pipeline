@@ -53,9 +53,14 @@ const ff = spawn(FFMPEG, ['-y', '-v', 'error', '-f', 'image2pipe', '-framerate',
   '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '16', '-pix_fmt', 'yuv420p', '-r', String(fps), outPath], { stdio: ['pipe', 'inherit', 'inherit'] });
 const done = new Promise((res, rej) => ff.on('close', c => (c === 0 ? res() : rej(new Error('ffmpeg exited ' + c)))));
 const t0 = Date.now();
+const hold = tl.hold || (tl.style === 'clay' ? 2 : 1);      // clay: stop-motion "on twos" — each picture is held for 2 frames
+let jpg = null;
 for (let f = 0; f < frames; f++) {
-  await page.evaluate(([t, fr]) => window.renderAt(t, fr), [f / fps, f]);
-  const jpg = await page.screenshot({ type: 'jpeg', quality: 93 });
+  if (f % hold === 0) {
+    const fh = f;                                          // the held picture shows the time it was taken
+    await page.evaluate(([t, fr]) => window.renderAt(t, fr), [fh / fps, fh]);
+    jpg = await page.screenshot({ type: 'jpeg', quality: 93 });
+  }
   if (!ff.stdin.write(jpg)) await new Promise(r => ff.stdin.once('drain', r));
   if (f % 150 === 0) process.stderr.write(`3d frame ${f}/${frames}\n`);
 }
