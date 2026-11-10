@@ -76,9 +76,17 @@ NUMW = {'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 
         'thirteenth', 'fourteenth', 'fifteenth', 'sixteenth', 'seventeenth', 'eighteenth', 'nineteenth', 'twentieth', 'hundredth', 'st', 'nd', 'rd', 'th', 'twenties', 'thirties', 'forties',
         'fifties', 'sixties', 'seventies', 'eighties', 'nineties', 'hundreds', 'thousands', 'millions'}
 def _numless(t): return t in NUMW or bool(re.fullmatch(r'\d+(st|nd|rd|th|s)?', t)) or bool(re.fullmatch(r'(twenty|thirty|forty|fifty|sixty|seventy|eighty|ninety)(one|two|three|four|five|six|seven|eight|nine)', t))
+SMALL = {'the', 'a', 'an', 'and', 'so', 'but', 'then', 'now', 'well', 'oh'}
 def find(phrase, start_idx=0):
     """time and index of the first word of `phrase` in the narration, searching forward from start_idx.
-    Falls back to matching with number words/digits ignored, since the recognizer may write 'twenty fifteen' as '2015'."""
+    Falls back to matching with number words/digits ignored, since the recognizer may write 'twenty fifteen' as '2015',
+    and then without a leading small word the recognizer may have dropped ('the Sixth Amendment' heard as 'Sixth Amendment')."""
+    t_, i_ = _find(phrase, start_idx)
+    toks = [norm(t) for t in phrase.split() if norm(t)]
+    if t_ is None and len(toks) >= 3 and toks[0] in SMALL: t_, i_ = _find(' '.join(phrase.split()[1:]), start_idx)
+    return t_, i_
+
+def _find(phrase, start_idx=0):
     toks = [norm(t) for t in phrase.split() if norm(t)]
     for rng in (range(start_idx, len(wn) - len(toks) + 1), range(0, len(wn) - len(toks) + 1)):
         for i in rng:
