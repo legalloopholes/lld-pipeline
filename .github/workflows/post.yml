@@ -134,6 +134,18 @@ jobs:
           path: ~/.n8n-files/music
           key: music-${{ hashFiles('assets/music.json') }}
 
+      - name: Your own sound effects (encrypted in the repo, key in SFX_KEY; made by tools/sfx_pack.sh)
+        if: steps.gate.outputs.go == 'yes'
+        env:
+          SFX_KEY: ${{ secrets.SFX_KEY }}
+        run: |
+          if [ -n "$SFX_KEY" ] && [ -f assets/sfx.tgz.enc ]; then
+            openssl enc -d -aes-256-cbc -pbkdf2 -iter 200000 -md sha256 -pass env:SFX_KEY -in assets/sfx.tgz.enc | tar xzf - -C assets
+            echo "own sound effects: $(ls assets/sfx | tr '\n' ' ')"
+          else
+            echo "::warning::No SFX_KEY / assets/sfx.tgz.enc yet: only the Freesound sounds will play (run tools/sfx_pack.sh on the Mac)"
+          fi
+
       - name: Sound effects cache (Freesound CC0, downloaded on first use)
         if: steps.gate.outputs.go == 'yes'
         uses: actions/cache@v4

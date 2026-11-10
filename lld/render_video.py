@@ -72,7 +72,8 @@ elif arg and not arg.endswith('.json'):
 NUMW = {'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen',
         'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty', 'thirty', 'forty', 'fifty', 'sixty',
         'seventy', 'eighty', 'ninety', 'hundred', 'thousand', 'million', 'billion', 'oh', 'and', 'point', 'percent',
-        'first', 'second', 'third', 'fourth', 'fifth', 'tenth', 'st', 'nd', 'rd', 'th', 'twenties', 'thirties', 'forties',
+        'first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth', 'ninth', 'tenth', 'eleventh', 'twelfth',
+        'thirteenth', 'fourteenth', 'fifteenth', 'sixteenth', 'seventeenth', 'eighteenth', 'nineteenth', 'twentieth', 'hundredth', 'st', 'nd', 'rd', 'th', 'twenties', 'thirties', 'forties',
         'fifties', 'sixties', 'seventies', 'eighties', 'nineties', 'hundreds', 'thousands', 'millions'}
 def _numless(t): return t in NUMW or bool(re.fullmatch(r'\d+(st|nd|rd|th|s)?', t)) or bool(re.fullmatch(r'(twenty|thirty|forty|fifty|sixty|seventy|eighty|ninety)(one|two|three|four|five|six|seven|eight|nine)', t))
 def find(phrase, start_idx=0):

@@ -28,7 +28,7 @@ SPECIES = {'baboon', 'mandrill', 'capuchin', 'macaque', 'gibbon', 'proboscis', '
 OUTFITS = {'cop', 'customs', 'suit', 'irs', 'hardhat', 'chef', 'cardigan', 'dress', 'hoodie', 'tracksuit', 'tourist', 'overalls'}
 GESTS = {'none', 'explain', 'point', 'think', 'shrug', 'arms_up', 'wave', 'scratch'}
 LPOSE = {'explaining', 'concerned', 'pointing', 'smug', 'surprised', 'thinking', 'sneaky', 'auto'}
-NUMW = set('one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty thirty forty fifty sixty seventy eighty ninety hundred thousand million billion first second third'.split())
+NUMW = set('one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty thirty forty fifty sixty seventy eighty ninety hundred thousand million billion first second third fourth fifth sixth seventh eighth ninth tenth eleventh twelfth thirteenth fourteenth fifteenth sixteenth seventeenth eighteenth nineteenth twentieth'.split())
 norm = lambda s: re.sub(r'[^a-z0-9]', '', s.lower())
 
 

@@ -40,13 +40,13 @@ export function campsite(scene) {
 // ---------- Yellowstone: rocky ground, steaming geyser, blue hot spring, pines ----------
 export function yellowstone(scene) {
   const root = group(0, 0, 0, scene);
-  box(10, 0.08, 6, '#d9cfb8', 0, 0.04, -0.5, root);                            // pale geyser basin
+  box(10, 0.08, 6, '#c09a62', 0, 0.04, -0.5, root);                            // ochre geyser basin (no pale/white floors)
   const spring = group(-1.5, 0, -1.6, root);
   box(2.2, 0.06, 1.6, '#e8b04a', 0, 0.08, 0, spring);                          // orange rim
   box(1.7, 0.07, 1.2, G.water, 0, 0.1, 0, spring);
   box(0.9, 0.08, 0.6, '#2f7fb8', 0, 0.12, 0, spring);
   const geyser = group(1.7, 0, -2.6, root);
-  box(1.2, 0.4, 1.2, '#cfc6b0', 0, 0.2, 0, geyser);
+  box(1.2, 0.4, 1.2, '#a8916c', 0, 0.2, 0, geyser);
   const steam = [];
   for (let i = 0; i < 6; i++) { const s = box(0.5, 0.5, 0.5, '#ffffff', 0, 0.6 + i * 0.55, 0, geyser); s.material = mat('#dfe8ee').clone(); s.material.transparent = true; s.castShadow = false; steam.push(s); }
   for (const [x, z, s] of [[-3.0, -3.2, 1.4], [3.2, -3.4, 1.2], [-1.6, -4.0, 1.1], [0.2, -4.2, 1.0]]) pine(root, x, z, s);
@@ -137,12 +137,12 @@ export const ENV = {
     return { sky: ['#4fb3ea', '#c9eefc'], fog: '#c9eefc' };
   },
   yellowstone(root) {
-    ground(root, '#d9cfb8');
+    ground(root, '#7f9f55');                                                     // meadow around the basin
     mountain(root, -12, -34, 1.1, '#6f89a8', '#f4f7fa'); mountain(root, 3, -38, 1.4, '#5f7b9c', '#f4f7fa'); mountain(root, 17, -34, 1.0, '#7891ad', '#f4f7fa');
     hills(root, -22, '#2f6b3f', [[-14, 16, 2.5], [4, 22, 3], [20, 14, 2.2]]);
     for (let i = -5; i <= 5; i++) pine(root, i * 3 + (i % 2), -14 - (i % 2) * 2, 1.5);
     cloud(root, -4, 18, -34, 1.3);
-    return { sky: ['#5ab8ec', '#d6f1fb'], fog: '#d6f1fb' };
+    return { sky: ['#3f9fdc', '#9fd3f0'], fog: '#9fd3f0' };
   },
   capitol(root) {
     ground(root, '#86bf6a');
@@ -273,7 +273,7 @@ export function harbor(scene) {                                                 
 }
 Object.assign(ENV, {
   prison(root) { ground(root, '#9ea3a8', -10); return { sky: ['#6d7680', '#9aa3ad'], fog: null }; },
-  shop(root) { ground(root, '#f3efe6', -10); for (let i = -10; i <= 10; i++) for (let j = -2; j <= 8; j++) if ((i + j) % 2 === 0) box(1, 0.01, 1, '#e4dccb', i, 0.035, j - 1.5, root).castShadow = false; return { sky: ['#e9b98f', '#f6dcc0'], fog: null }; },
+  shop(root) { ground(root, '#c9a27a', -10); for (let i = -10; i <= 10; i++) for (let j = -2; j <= 8; j++) if ((i + j) % 2 === 0) box(1, 0.01, 1, '#b48a62', i, 0.035, j - 1.5, root).castShadow = false; return { sky: ['#e9b98f', '#f6dcc0'], fog: null }; },
   office(root) { ground(root, '#8e9eb0', -10); return { sky: ['#c9d6df', '#e4ecf1'], fog: null }; },
   street(root) { ground(root, '#c9c4bb'); return { sky: ['#4fb3ea', '#c9eefc'], fog: '#c9eefc' }; },
   neighborhood(root) { ground(root, '#86bf6a'); cloud(root, -6, 15, -32, 1.3); return { sky: ['#5ab8ec', '#d6f1fb'], fog: '#d6f1fb' }; },

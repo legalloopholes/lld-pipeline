@@ -25,9 +25,11 @@ This repository is **public**: never commit secrets, tokens, personal emails or 
 - Ending: Larry **says** an extreme, episode-specific share line ("Send this to a friend who…"), while a sign above him
   reads "LIKE & FOLLOW FOR MORE LOOPHOLES". Then a loop line that flows back into the hook.
 - Music: Kevin MacLeod (incompetech, CC BY 4.0) — his popular, darker tracks (Dexter "Blood Theme" feel), never
-  elevator music; bed at ~15–20% of Larry's loudness (`level_db` −15). Credit auto-added to captions/description.
+  elevator music; bed at ~32% of Larry's loudness (`level_db` −10; owner found −15 inaudible, 2026-11-09). Credit auto-added to captions/description.
 - Sound effects: meme style (vine boom, Metal Gear alert, quack, huh, bruh, scratch, cash, gasp, airhorn, trombone).
   **No** loud opening boom, **no** "dun dun dun" stings, no booms on cards.
+  The owner's own files (`assets/sfx/*.wav`, git-ignored) reach the cloud as `assets/sfx.tgz.enc`, decrypted with the
+  `SFX_KEY` secret; the owner re-runs `bash tools/sfx_pack.sh` after changing them. Without it only Freesound sounds play.
 - Videos are **≥ 60 s** (`min_seconds` in `assets/brand.json`). Owner reconfirmed 2026-11-09 — don't propose shorter.
 - LLD-040 (Nebraska safe haven) and LLD-060 (Thirteenth Amendment) keep a **serious tone**; never joke about children,
   slavery or incarceration.
