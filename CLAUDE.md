@@ -108,11 +108,12 @@ Scene plans are generated from a compact markup in `tools/episodes/`:
 
 ## Relaunch (started 2026-11-09)
 - Owner restarted the run from LLD-001 with the new voice, cast, cinematic look and story scripts.
-- Posting paused: repo variable `LIVE=false` until the owner approves a test video; set it back with
-  `gh variable set LIVE --body true -R legalloopholes/lld-pipeline`.
+- Owner approved the LLD-001 test (voice, look, script) on 2026-11-09. Merged to `main`, `LIVE=true`; the relaunch
+  starts with LLD-001 on 2026-11-10 12:00 ET, then two posts a day. Pause again with
+  `gh variable set LIVE --body false -R legalloopholes/lld-pipeline`.
 - Sheet: LLD-001…014 set back to SCRIPTED; their old post links/Video File cleared (list kept locally in
   `previews/old_posts.md`, git-ignored). Owner archives/hides the old posts himself (not delete).
-- Work lives on branch `voice-audition` until merged into `main`.
+- `voice-audition` was merged into `main` on 2026-11-09; work on `main` from now on.
 
 ## Open items (as of 2026-11-09)
 1. **Render time** — first cinematic test ran 2.5 h+ on the runner. Fixed 2026-11-09: DOF/MSAA off (−44% per frame,
