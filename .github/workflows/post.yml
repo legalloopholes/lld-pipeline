@@ -173,7 +173,7 @@ jobs:
           # Own venv: chatterbox pins its own torch/transformers. Unmaintained since Aug 2026 - keep this exact version.
           python -m venv /tmp/cb
           /tmp/cb/bin/pip install -q torch==2.6.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cpu
-          /tmp/cb/bin/pip install -q chatterbox-tts==0.1.7
+          /tmp/cb/bin/pip install -q chatterbox-tts==0.1.7 "setuptools<81"   # its watermarker needs pkg_resources (gone in setuptools 81+)
           nohup /tmp/cb/bin/python lld/tts_chatterbox.py > /tmp/tts.log 2>&1 &
           for i in $(seq 1 120); do curl -sf http://127.0.0.1:8300/health >/dev/null && break; sleep 5; done
           curl -sf http://127.0.0.1:8300/health || (cat /tmp/tts.log; exit 1)
