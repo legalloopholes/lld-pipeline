@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Legal Loopholes Daily - Chatterbox TTS server (Larry's voice since Nov 2026; audition pick #6 "excited").
-Drop-in for tts_server.py: same endpoint make_voice.py calls,
+The only voice server; the endpoint make_voice.py calls:
   POST http://localhost:8300/api/tts  {"text", "speed"}  -> WAV (24 kHz mono)
 Chatterbox has no speed control, so each sentence is generated once at natural pace (cached) and the requested
 speed is applied with ffmpeg atempo (pitch unchanged). Re-runs at a new speed cost no extra generation.

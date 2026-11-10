@@ -40,8 +40,8 @@ This repository is **public**: never commit secrets, tokens, personal emails or 
 1. `python run.py window` — gate: is a posting slot ~2 h away and not yet claimed (`state/last_slot.txt`)?
 2. Voice: `lld/make_voice.py` → local TTS server on :8300. Since 2026-11-09 Larry is **Chatterbox** (`lld/tts_chatterbox.py`,
    chatterbox-tts==0.1.7 in its own venv, exaggeration 0.75 / cfg 0.35 = audition #6, picked by the owner by ear;
-   speed via atempo, `voice_speed` 1.08; no pitch "pop": `voice_pop` false). `brand.json` `"tts": "kokoro"` falls back
-   to the old Kokoro `am_puck` server (`lld/tts_server.py`). Script comes from `scenes/<ID>.json` → `script`
+   speed via atempo, `voice_speed` 1.08; no pitch "pop": `voice_pop` false). The old Kokoro `am_puck` voice was
+   **removed for good** (owner, 2026-11-10): never bring it back or use it for previews. Script comes from `scenes/<ID>.json` → `script`
    (`[disclaimer]` marker after the hook, `[loop]` before the loop line; the share line is `share_line`).
 3. Captions: Parakeet via sherpa-onnx (`lld/make_captions.py`), one word at a time.
 4. Video: `lld/render_video.py` builds a timeline from the scene plan + captions, `larry-3d/render3d.mjs` renders it

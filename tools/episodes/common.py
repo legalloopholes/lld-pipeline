@@ -62,7 +62,7 @@ def validate(e):
     text, hook = spoken(e['script'])
     toks = [norm(w) for w in text.split() if norm(w)]
     words = len(toks)
-    # ~3.07 spoken words/second measured on LLD-001 (am_puck 0.95, incl. pauses)
+    # ~3.07 spoken words/second measured on LLD-001 (old voice at 0.95, incl. pauses)
     est = words / 3.07
     if est < 63: issues.append(f'too short: {words} words ≈ {est:.0f}s')
     if est > 80: issues.append(f'long: {words} words ≈ {est:.0f}s')

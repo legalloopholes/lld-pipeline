@@ -4,7 +4,7 @@ Twice a day (12:00 and 7:00 pm New York time) GitHub runs `.github/workflows/pos
 Mac's n8n workflow "LLD v2 (scheduled)" did:
 
 1. reads the next row with Status = SCRIPTED from the Google Sheet "Content Pipeline"
-2. voices the script with Kokoro (am_puck), the same model the Mac uses (`lld/tts_server.py` + `lld/make_voice.py`)
+2. voices the script with Chatterbox, Larry's voice (`lld/tts_chatterbox.py` + `lld/make_voice.py`)
 3. times one-word captions to the audio (Parakeet, `lld/make_captions.py`)
 4. renders the 3D video (`larry-3d/`, `lld/render_video.py`) from `scenes/<Video ID>.json`
 5. writes title / caption / hashtags (`lld/make_meta.py`)
