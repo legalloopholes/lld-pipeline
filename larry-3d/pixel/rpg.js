@@ -57,8 +57,8 @@ const mouthLevel = frame => TL.mouthlvl ? (TL.mouthlvl[frame] || 0) : (TL.mouth 
 const ROLES = [[/OFFICER|POLICE|COP|SHERIFF|DETECTIVE|TROOPER|RANGER|GUARD/, 'baboon.cop'], [/CUSTOMS/, 'macaque.cop'], [/IRS|TAX/, 'macaque.irs'],
   [/WIFE|LINDA|MOM|GRANDMA/, 'bonobo.dress'], [/STUDENT|AGE 1/, 'capuchin.hoodie'], [/BANK|COMPANY|DAIRY|CORP|INC|MARVEL|PEPSI|FORD/, 'mandrill.suit'],
   [/INFORMANT|STEVE|FRANK|CHAD/, 'macaque.tracksuit']];
-const OUTFIT = { cop: 'cop', customs: 'cop', suit: 'suit', irs: 'irs', dress: 'dress', cardigan: 'dress', hoodie: 'hoodie', tracksuit: 'tracksuit',
-  chef: 'suit', hardhat: 'hoodie', tourist: 'plaid', overalls: 'plaid' };
+const OUTFIT = { cop: 'cop', customs: 'cop', suit: 'suit', irs: 'irs', dress: 'dress', cardigan: 'cardigan', hoodie: 'hoodie', tracksuit: 'tracksuit',
+  chef: 'chef', hardhat: 'hardhat', tourist: 'tourist', overalls: 'overalls' };
 function lookOf(c) {
   if (c.id.startsWith('char-judge')) return ['gorilla', 'robe'];
   if (c.look) { const [sp, of] = c.look.split('.'); return [sp, OUTFIT[of] || 'suit']; }
@@ -111,7 +111,8 @@ window.renderAt = (t, frame) => {
   if (L) {
     const pose = L.id === 'larry:auto' || L.id === 'larry' ? autoPose(t) : L.id.slice(6);
     const id = idle(t, 0), mouth = mouthLevel(frame), tail = Math.round(Math.sin(t * 1.25) * 4), ear = ((t + 1.3) % 5.3) < 0.18 ? 2 : 0;
-    const im = spr(`L|${pose}|${mouth}|${id.blink}|${id.breath}|${tail}|${ear}`, () => larry(pose, { mouth, blink: id.blink, breath: id.breath, tail, ear }));
+    const fidget = ['explaining', 'neutral', 'smug', 'concerned'].includes(pose) && ((t + 2.1) % 8.5) < 0.7 && !TL.calm ? 'monocle' : '';
+    const im = spr(`L|${pose}|${mouth}|${id.blink}|${id.breath}|${tail}|${ear}|${fidget}`, () => larry(pose, { mouth, blink: id.blink, breath: id.breath, tail, ear, fidget }));
     const lx = signs.length ? 46 : 90; wg.drawImage(im, lx - 40, FEET - LARRY_H + 2); focus = [lx, FEET - 70];
   }
   for (const it of signs) { const im = spr(`s|${it.icon}|${it.text}`, () => sign(it.text || '', iconFor(it.icon))); wg.drawImage(im, Math.round(Math.min(PW - im.width - 14, 124 - im.width / 2)), FEET - im.height + 3); }

@@ -110,6 +110,11 @@ const OUTFITS = {
   irs: { top: ramp(['#8a8a8e', '#b8b8bc', '#dcdce0']), legs: ramp(['#3a3a40', '#55555c', '#707078']), shoe: ramp(['#141218', '#25222b', '#3a3642']), tie: true, glasses: true },
   dress: { top: ramp(['#8a1e5a', '#c23a84', '#e866a8']), legs: ramp(['#8a1e5a', '#c23a84', '#e866a8']), shoe: ramp(['#3a1a28', '#5a2a40', '#7a3a58']) },
   hoodie: { top: ramp(['#2e5a3a', '#3f7a4e', '#5a9c68']), legs: ramp(['#2a2a30', '#3e3e46', '#55555e']), shoe: ramp(['#c8c8c8', '#f2f2f2', '#ffffff']), zip: true },
+  chef: { top: ramp(['#c8c8cc', '#eeeef2', '#ffffff']), legs: ramp(['#2a2a30', '#3e3e46', '#55555e']), shoe: ramp(['#141218', '#25222b', '#3a3642']), buttons: true, toque: true },
+  hardhat: { top: ramp(['#c85a10', '#f07a22', '#ff9a4a']), legs: ramp(['#1f3b78', '#2f58ad', '#4f7fd6']), shoe: ramp(['#5a3a24', '#7a5236', '#9a6a46']), vest: true, helmet: ramp(['#c89a10', '#f2c230', '#ffe07a']) },
+  cardigan: { top: ramp(['#6a3a5a', '#8e5278', '#b06c96']), legs: ramp(['#4a4a52', '#626270', '#7c7c8a']), shoe: ramp(['#3a2416', '#5a3a24', '#7a5236']), buttons: true, knit: true },
+  tourist: { top: ramp(['#1a8a8a', '#22aaaa', '#4acccc']), legs: ramp(['#c8b48a', '#e0cca0', '#f0e0b8']), shoe: ramp(['#c8c8c8', '#f2f2f2', '#ffffff']), flowers: true, camera: true },
+  overalls: { top: ramp(['#a01818', '#d62b2b', '#ff5a4a']), legs: ramp(['#1f3b78', '#2f58ad', '#4f7fd6']), shoe: ramp(['#3a2416', '#5a3a24', '#7a5236']), bib: true },
 };
 
 // gestures: which arm poses (L = his right / viewer's left, R = his left / viewer's right)
@@ -146,6 +151,12 @@ export function primate({ species = 'chimp', outfit = 'plaid', face: fk = 'neutr
   if (O.collar) { U.rect(ox + 9, top, 8, 3, hex('#f4f4f4')); U.rect(ox + 12, top + 3, 2, 3, hex('#f4f4f4')); }
   if (O.tie) { U.rect(ox + 10, top, 6, 14, hex('#f2efe8')); U.rect(ox + 12, top + 1, 2, 11, C.tie[1]); U.set(ox + 12, top + 1, C.tie[2]); }
   if (O.badge) U.box(ox + 17, top + 4, 4, 4, C.gold);
+  if (O.buttons) for (let y = top + 3; y < top + 20; y += 5) U.rect(ox + 12, y, 2, 2, O.knit ? hex('#f2e8d0') : hex('#9a9aa4'));
+  if (O.knit) for (let y = top + 2; y < top + 21; y += 3) for (let x = ox + 2; x < ox + 24; x += 4) U.set(x + (y % 2), y, O.top[2]);
+  if (O.vest) { U.rect(ox + 3, top + 1, 6, 20, hex('#f2e830')); U.rect(ox + 17, top + 1, 6, 20, hex('#f2e830')); U.rect(ox + 3, top + 12, 20, 2, hex('#e8eef4')); }
+  if (O.flowers) for (const [fx, fy] of [[4, 4], [16, 3], [9, 11], [20, 13], [5, 17], [14, 18]]) { U.rect(ox + fx, top + fy, 2, 2, hex('#ffe07a')); U.set(ox + fx + 2, top + fy, hex('#ff6a9a')); U.set(ox + fx, top + fy + 2, hex('#ff6a9a')); }
+  if (O.camera) { U.rect(ox + 8, top, 1, 8, hex('#2a2e36')); U.rect(ox + 6, top + 8, 9, 6, hex('#2a2e36')); U.rect(ox + 9, top + 9, 3, 3, hex('#7fc4e8')); }
+  if (O.bib) { U.rect(ox + 6, top + 4, 14, 18, O.legs[1]); U.rect(ox + 6, top, 2, 5, O.legs[0]); U.rect(ox + 18, top, 2, 5, O.legs[0]); U.rect(ox + 7, top + 5, 2, 2, C.gold[1]); U.rect(ox + 17, top + 5, 2, 2, C.gold[1]); U.rect(ox + 10, top + 9, 6, 4, O.legs[0]); }
   let [aL, aR] = ARMS[gest] || ARMS.none, lk = look, emit = null, impact = null;
   const it = [];
   switch (act) {
@@ -191,6 +202,8 @@ export function primate({ species = 'chimp', outfit = 'plaid', face: fk = 'neutr
   face(U, hx + 4, hy + 8, fk, S, mouth, blink, lk);
   if (O.glasses) for (const gx of [hx + 6, hx + 14]) { U.rect(gx, hy + 12, 6, 1, INK); U.rect(gx, hy + 18, 6, 1, INK); U.rect(gx, hy + 12, 1, 7, INK); U.rect(gx + 5, hy + 12, 1, 7, INK); }
   if (O.cap) { U.box(hx - 1, hy - 2, 28, 7, O.cap, 2); U.rect(hx + 2, hy + 4, 24, 2, O.cap[0]); U.box(hx + 11, hy, 4, 3, C.gold); }
+  if (O.toque) { U.box(hx + 3, hy - 4, 20, 6, ramp(['#c8c8cc', '#eeeef2', '#ffffff'])); for (const k of [0, 1, 2]) U.ellipse(hx + 7 + k * 6, hy - 9, 4, 5, hex(k === 1 ? '#ffffff' : '#eeeef2')); }
+  if (O.helmet) { U.box(hx - 2, hy - 3, 30, 9, O.helmet, 3); U.rect(hx - 4, hy + 4, 34, 2, O.helmet[0]); U.rect(hx + 12, hy - 3, 2, 8, O.helmet[2]); }
   arms(true); items();
   P.stamp(U, 0, -breath);
   P.outline(); P.emit = emit && [emit[0], emit[1] - breath]; P.impact = impact; return P;
@@ -215,7 +228,7 @@ function cuteEye(U, ex, ey, pose, blink, look) {
   if (pose === 'smug' || pose === 'sneaky') { U.rect(ex - 4, ey - 5, 9, 4, C.lemur[1]); U.rect(ex - 4, ey - 1, 9, 1, LC.dark); }   // half-lidded
   if (pose === 'concerned') { U.set(ex - 4, ey - 4, C.lemur[1]); U.rect(ex - 4, ey - 5, 9, 1, C.lemur[1]); }
 }
-export function larry(pose = 'explaining', { mouth = 0, blink = false, breath = 0, tail = 0, ear = 0 } = {}) {
+export function larry(pose = 'explaining', { mouth = 0, blink = false, breath = 0, tail = 0, ear = 0, fidget = '' } = {}) {
   const P = new Pix(LARRY_W, LARRY_H), U = new Pix(LARRY_W, LARRY_H), cx = 40, by = LARRY_H - 1;
   // tail: ringed, tapering curve from the hip, out to the right and up behind him
   const p0 = [cx + 5, by - 14], p1 = [cx + 28, by - 12], p2 = [cx + 33 + tail * 0.8, by - 44], p3 = [cx + 24 + tail * 1.6, by - 76];
@@ -237,8 +250,12 @@ export function larry(pose = 'explaining', { mouth = 0, blink = false, breath = 
   const HANDS = { down: s => [s * 14, by - 15], out: s => [s * 22, by - 30], up: s => [s * 27, by - 54], chin: s => [s * 4, by - 37], head: s => [s * 22, by - 64], hip: s => [s * 12, by - 21] };
   const arms = { explaining: ['down', 'out'], pointing: ['up', 'down'], thinking: ['down', 'chin'], concerned: ['chin', 'down'], surprised: ['up', 'up'],
                  smug: ['hip', 'hip'], sneaky: ['chin', 'down'], neutral: ['down', 'down'] }[pose] || ['down', 'out'];
-  const drawArms = front => [-1, 1].forEach((s, k) => { if ((arms[k] === 'chin') !== front) return; const [hx_, hy_] = HANDS[arms[k]](s); const x1 = cx + hx_;
-    limb(U, sh[k][0], sh[k][1], x1, hy_, 3, C.lemur); blob(U, x1, hy_, 3, 3, LC.hand);
+  HANDS.mono = s => [s * 15, by - 42];
+  if (fidget === 'monocle') arms[1] = 'mono';                                   // straightens his monocle now and then
+  const drawArms = front => [-1, 1].forEach((s, k) => { if ((arms[k] === 'chin' || arms[k] === 'mono') !== front) return; const [hx_, hy_] = HANDS[arms[k]](s); const x1 = cx + hx_;
+    limb(U, sh[k][0], sh[k][1], x1, hy_, 3, C.lemur);
+    if (front) { const ink = hex('#2a2530'); blob(U, x1, hy_, 4, 4, [ink, ink, ink]); }          // paws over the face get an outline
+    blob(U, x1, hy_, 3, 3, LC.hand);
     if (arms[k] === 'up' && pose === 'pointing') U.rect(x1 - 1, hy_ - 6, 2, 4, LC.hand[1]); });
   drawArms(false);
   // head
