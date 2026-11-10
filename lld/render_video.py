@@ -145,7 +145,10 @@ def _mouth_track():
             while j < n and o[j] == o[i]: j += 1
             if j - i < 2 and 0 < i and j < n and not quiet[i]: o[i:j] = o[i - 1]
             i = j
-    return o & ~quiet
+    o = o & ~quiet
+    global MOUTH_LVL                          # how wide: 1..3 by loudness (the pixel renderer draws three mouth shapes)
+    MOUTH_LVL = [int(1 + (r > 0.5 * p95) + (r > 0.85 * p95)) if on else 0 for r, on in zip(rms, o)]
+    return o
 MOUTH = _mouth_track()
 def talking(t):
     f = int(round(t * FPS))
@@ -858,6 +861,7 @@ def render_3d_base(nframes):
         return out_
     tl = {'fps': FPS, 'dur': dur, 'frames': nframes,
           'mouth': [int(bool(MOUTH[i])) if i < len(MOUTH) else 0 for i in range(nframes)],
+          'mouthlvl': [MOUTH_LVL[i] if i < len(MOUTH_LVL) else 0 for i in range(nframes)],
           'poses': auto_seg,
           'scenes': [{'t': sc['t'], 'end': min(sc['end'], dur + 1), 'bg': sc.get('bg', 'white'), 'loop': bool(sc.get('loop')),
                       'cast': [{k: v for k, v in c.items() if k in ('id', 'x', 'anim', 'from', 'face', 'gest', 'name', 'look')} for c in sc.get('cast', [])],
