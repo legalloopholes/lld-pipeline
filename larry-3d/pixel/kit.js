@@ -59,8 +59,8 @@ function mouthShape(P, x, y, kind, lvl, line) {      // x = left edge of a 6-wid
 }
 
 // primate eye (4 x 5): dark, glossy, with a catch-light; blink = a closed lid line
-function eye(P, x, y, kind, blink, sk, big) {
-  const wht = hex('#ffffff');
+function eye(P, x, y, kind, blink, sk, big, look = [0, 0]) {
+  const wht = hex('#ffffff'); x += look[0]; y += look[1];
   if (big) { blob(P, x + 2, y + 2, 3, 3, C.amber); if (blink) { P.rect(x - 1, y + 2, 7, 1, C.eye); return; } P.rect(x + 1, y + 1, 3, 3, C.eye); P.set(x + 1, y + 1, wht); return; }
   if (blink) { P.rect(x, y + 2, 4, 1, C.eye); P.set(x, y + 1, sk[0]); P.set(x + 3, y + 1, sk[0]); return; }
   if (kind === 'surprised') { P.rect(x, y, 4, 5, wht); P.rect(x + 1, y + 1, 2, 3, C.eye); P.set(x + 1, y + 1, wht); return; }
@@ -69,7 +69,7 @@ function eye(P, x, y, kind, blink, sk, big) {
 }
 
 // face on an 18 x 19 skin panel: brow ridge, eyes, nose with nostrils, mouth
-function face(P, fx, fy, kind, S, mouth, blink) {
+function face(P, fx, fy, kind, S, mouth, blink, look = [0, 0]) {
   const sk = S.skin;
   if (S.snout) { blob(P, fx + 9, fy + 13, 8, 6, [sk[1], sk[2], sk[2]]); if (S.blueSides) { P.rect(fx + 3, fy + 10, 2, 6, sk[0]); P.rect(fx + 13, fy + 10, 2, 6, sk[0]); } }
   else blob(P, fx + 9, fy + 13, 7, 5, [sk[1], sk[2], sk[2]]);                                  // lighter muzzle
@@ -77,7 +77,7 @@ function face(P, fx, fy, kind, S, mouth, blink) {
   const brow = S.brow || sk[0];
   P.rect(fx + 2, fy + 3 + o, 3, 1, brow); P.rect(fx + 5, fy + 3 + i, 2, 1, brow);
   P.rect(fx + 11, fy + 3 + i, 2, 1, brow); P.rect(fx + 13, fy + 3 + o, 3, 1, brow);
-  eye(P, fx + 3, fy + 5, kind, blink, sk, S.bigEyes); eye(P, fx + 11, fy + 5, kind, blink, sk, S.bigEyes);
+  eye(P, fx + 3, fy + 5, kind, blink, sk, S.bigEyes, look); eye(P, fx + 11, fy + 5, kind, blink, sk, S.bigEyes, look);
   if (S.nose) {                                                                           // proboscis: big drooping nose
     blob(P, fx + 9, fy + 12, 3, 4, [sk[1], sk[2], sk[2]]); P.set(fx + 8, fy + 15, C.nostril); P.set(fx + 10, fy + 15, C.nostril);
     mouthShape(P, fx + 6, fy + 18, kind, Math.min(mouth, 2), C.nostril); return;
@@ -123,11 +123,16 @@ function arm(P, side, kind, ox, top, sleeve, hand, sway = 0) {   // side -1 = vi
   else if (kind === 'up') { P.box(x, top - 16, 6, 19, sleeve); P.box(x + side * sway, top - 22, 6, 7, hand); }
   else if (kind === 'chin') { P.box(x - 4, top + 2, 6, 10, sleeve); P.box(x - 9, top - 4, 7, 6, hand); }
   else if (kind === 'head') { P.box(x, top - 12, 6, 15, sleeve); P.box(x - 4 + sway, top - 20, 7, 6, hand); }
+  else if (kind === 'chest') { if (side > 0) { P.box(x - 1, top + 2, 6, 9, sleeve); P.box(x - 5, top + 8, 6, 5, hand); } else { P.box(x, top + 2, 6, 9, sleeve); P.box(x + 4, top + 8, 6, 5, hand); } }
+  else if (kind === 'mouth') { P.box(x - 4, top + 1, 6, 10, sleeve); P.box(x - 9, top - 9, 7, 6, hand); }
+  else if (kind === 'phone') { P.box(x - 4, top + 4, 6, 8, sleeve); P.box(x - 10, top + 2, 7, 5, hand); }
 }
 
 // generic primate: 64 x 84 frame, feet on the bottom row.
 // Idle: breath (0/1) lifts the upper body one pixel with the feet planted; blink closes the eyes; sway moves the hands a pixel.
-export function primate({ species = 'chimp', outfit = 'plaid', face: fk = 'neutral', gest = 'none', mouth = 0, blink = false, breath = 0, sway = 0 } = {}) {
+// Idle actions (act): smoke_drag smoke_hold phone coffee sip gavel_up gavel_down papers notepad stretch watch scratch glare.
+// P.emit = where smoke leaves the cigarette, P.impact = where the gavel hits (sprite coordinates).
+export function primate({ species = 'chimp', outfit = 'plaid', face: fk = 'neutral', gest = 'none', mouth = 0, blink = false, breath = 0, sway = 0, act = '', look = [0, 0] } = {}) {
   const S = SPECIES[species] || SPECIES.chimp, O = OUTFITS[outfit] || OUTFITS.plaid;
   const P = new Pix(64, 84), U = new Pix(64, 84), ox = 19, top = 41;
   P.box(ox + 5, top + 21, 7, 16, O.legs); P.box(ox + 14, top + 21, 7, 16, O.legs);
@@ -141,8 +146,40 @@ export function primate({ species = 'chimp', outfit = 'plaid', face: fk = 'neutr
   if (O.collar) { U.rect(ox + 9, top, 8, 3, hex('#f4f4f4')); U.rect(ox + 12, top + 3, 2, 3, hex('#f4f4f4')); }
   if (O.tie) { U.rect(ox + 10, top, 6, 14, hex('#f2efe8')); U.rect(ox + 12, top + 1, 2, 11, C.tie[1]); U.set(ox + 12, top + 1, C.tie[2]); }
   if (O.badge) U.box(ox + 17, top + 4, 4, 4, C.gold);
-  const [aL, aR] = ARMS[gest] || ARMS.none;
-  arm(U, -1, aL, ox, top, O.top, S.skin, sway); arm(U, 1, aR, ox, top, O.top, S.skin, sway);
+  let [aL, aR] = ARMS[gest] || ARMS.none, lk = look, emit = null, impact = null;
+  const it = [];
+  switch (act) {
+    case 'smoke_drag': aR = 'mouth'; it.push('cig_mouth'); break;
+    case 'smoke_hold': aR = 'down'; it.push('cig_hand'); break;
+    case 'phone': aR = 'phone'; lk = [0, 1]; it.push('phone'); break;
+    case 'coffee': aR = 'chest'; it.push('mug'); break;
+    case 'sip': aR = 'mouth'; it.push('mug_mouth'); blink = true; break;
+    case 'gavel_up': aR = 'up'; it.push('gavel_up'); fk = 'angry'; lk = [-1, 0]; break;
+    case 'gavel_down': aR = 'down'; it.push('gavel_down'); fk = 'angry'; lk = [-1, 0]; break;
+    case 'papers': aL = 'chest'; aR = 'chest'; lk = [0, 1]; break;
+    case 'notepad': aL = 'chest'; aR = 'chest'; lk = [0, 1]; break;
+    case 'stretch': aL = 'up'; aR = 'up'; mouth = Math.max(mouth, 3); blink = true; break;
+    case 'watch': aL = 'chest'; lk = [-1, 1]; it.push('watch'); break;
+    case 'scratch': aR = 'head'; break;
+    case 'glare': fk = 'angry'; break;
+  }
+  const W_ = hex('#f4f1e8'), ORANGE = hex('#ff8a2a'), BROWN = ramp(['#4a2c18', '#7a4a28', '#9a6a3c']);
+  if (act === 'papers') { U.rect(ox + 3, top + 2, 20, 13, W_); for (let y = top + 4; y < top + 14; y += 2) U.rect(ox + 5, y, 14 - (y % 3), 1, hex('#9a9aa4')); }
+  if (act === 'notepad') { U.rect(ox + 7, top + 3, 11, 12, hex('#f2e8a8')); for (let y = top + 6; y < top + 14; y += 2) U.rect(ox + 8, y, 9, 1, hex('#8ab0d8')); U.rect(ox + 7, top + 3, 11, 2, hex('#c23030')); }
+  const FRONT = new Set(['mouth', 'chin', 'phone']);           // hands at the face go over the head
+  const arms = front => { if (FRONT.has(aL) === front) arm(U, -1, aL, ox, top, O.top, S.skin, sway); if (FRONT.has(aR) === front) arm(U, 1, aR, ox, top, O.top, S.skin, act === 'notepad' ? Math.round(sway * 2) : sway); };
+  arms(false);
+  const x = ox + 25;
+  const items = () => { for (const k of it) {
+    if (k === 'cig_mouth') { U.rect(x - 2, top - 7, 4, 1, W_); U.set(x + 2, top - 7, ORANGE); emit = [x + 2, top - 8]; }
+    if (k === 'cig_hand') { U.rect(x + 6 + sway, top + 17, 4, 1, W_); U.set(x + 10 + sway, top + 17, ORANGE); emit = [x + 10 + sway, top + 16]; }
+    if (k === 'phone') { U.rect(x - 9, top - 5, 5, 8, hex('#22252c')); U.rect(x - 8, top - 4, 3, 6, hex('#7fd0ff')); }
+    if (k === 'mug') { U.rect(x - 6, top + 3, 5, 6, W_); U.rect(x - 5, top + 3, 3, 1, BROWN[0]); U.set(x - 1, top + 5, W_); U.set(x - 1, top + 6, W_); }
+    if (k === 'mug_mouth') { U.rect(x - 9, top - 13, 5, 6, W_); U.rect(x - 8, top - 13, 3, 1, BROWN[0]); }
+    if (k === 'gavel_up') { U.box(x + 6, top - 20, 8, 2, BROWN); U.box(x + 13, top - 23, 5, 8, BROWN); }
+    if (k === 'gavel_down') { U.box(x + 6, top + 17, 6, 2, BROWN); U.box(x + 11, top + 17, 5, 8, BROWN); impact = [x + 13, top + 25]; }
+    if (k === 'watch') U.rect(ox - 1 + 4, top + 7, 4, 2, C.gold[1]);
+  } };
   const hx = ox, hy = top - 30;
   if (S.ears) { U.box(hx - 3, hy + 11, 5, 8, S.skin); U.set(hx - 1, hy + 14, S.skin[0]); U.box(hx + 24, hy + 11, 5, 8, S.skin); U.set(hx + 26, hy + 14, S.skin[0]); }
   if (S.cheeks) { U.box(hx - 6, hy + 10, 8, 14, S.skin); U.box(hx + 24, hy + 10, 8, 14, S.skin); }
@@ -151,82 +188,89 @@ export function primate({ species = 'chimp', outfit = 'plaid', face: fk = 'neutr
   if (S.ring) U.box(hx + 2, hy + 6, 22, 22, ramp(['#d8d8d8', '#f0f0f0', '#ffffff']), 3);
   U.box(hx + 4, hy + 8, 18, 19, S.skin, 3);
   if (S.part) U.rect(hx + 12, hy, 2, 6, S.fur[0]);
-  face(U, hx + 4, hy + 8, fk, S, mouth, blink);
+  face(U, hx + 4, hy + 8, fk, S, mouth, blink, lk);
   if (O.glasses) for (const gx of [hx + 6, hx + 14]) { U.rect(gx, hy + 12, 6, 1, INK); U.rect(gx, hy + 18, 6, 1, INK); U.rect(gx, hy + 12, 1, 7, INK); U.rect(gx + 5, hy + 12, 1, 7, INK); }
   if (O.cap) { U.box(hx - 1, hy - 2, 28, 7, O.cap, 2); U.rect(hx + 2, hy + 4, 24, 2, O.cap[0]); U.box(hx + 11, hy, 4, 3, C.gold); }
+  arms(true); items();
   P.stamp(U, 0, -breath);
-  P.outline(); return P;
+  P.outline(); P.emit = emit && [emit[0], emit[1] - breath]; P.impact = impact; return P;
 }
 
 // ---------- Larry: a small, big-headed ring-tailed lemur with a monocle, white shirt and red tie (84 x 92) ----------
-// The tail grows out of his hip behind the body and sways; tailPhase -4..4. Feet on the bottom row.
+// Cute style: round head, big glossy dark eyes set low with two catch-lights, soft grey eye rings (lemur markings,
+// not a mask), tiny nose, pink cheeks, "w" mouth. The tail grows out of his hip behind the body and sways (tail -4..4).
 export const LARRY_W = 84, LARRY_H = 92;
+const LC = { ring: ramp(['#3b3742', '#4d4855', '#615b6a']), hand: ramp(['#2f2c36', '#45414d', '#5a5564']), dark: hex('#1d1a22'),
+             tailDark: ramp(['#26232b', '#38343f', '#4c4755']), shine: hex('#ffffff'), iris: hex('#7a4a1c'), glass: hex('#d8f0ff') };
+function cuteEye(U, ex, ey, pose, blink, look) {
+  if (blink || pose === 'happy') {                                          // closed: a soft downward arc
+    U.rect(ex - 3, ey + 1, 7, 1, LC.dark); U.set(ex - 4, ey, LC.dark); U.set(ex + 4, ey, LC.dark); return;
+  }
+  const [lx, ly] = look;
+  const big = pose === 'surprised' ? 1 : 0;
+  blob(U, ex, ey, 4 + big, 5 + big, [LC.dark, LC.dark, LC.dark]);            // big glossy eye (wider when surprised)
+  U.rect(ex - 2, ey + 3, 5, 1, LC.iris); U.rect(ex - 1, ey + 4, 3, 1, LC.iris);   // warm amber glow at the bottom
+  U.rect(ex - 2 + lx, ey - 3 + ly, 2, 2, LC.shine); U.set(ex - 3 + lx, ey - 2 + ly, LC.shine);   // big catch-light
+  U.set(ex + 2 + lx, ey + 1 + ly, LC.shine);                                 // small catch-light
+  if (pose === 'smug' || pose === 'sneaky') { U.rect(ex - 4, ey - 5, 9, 4, C.lemur[1]); U.rect(ex - 4, ey - 1, 9, 1, LC.dark); }   // half-lidded
+  if (pose === 'concerned') { U.set(ex - 4, ey - 4, C.lemur[1]); U.rect(ex - 4, ey - 5, 9, 1, C.lemur[1]); }
+}
 export function larry(pose = 'explaining', { mouth = 0, blink = false, breath = 0, tail = 0, ear = 0 } = {}) {
   const P = new Pix(LARRY_W, LARRY_H), U = new Pix(LARRY_W, LARRY_H), cx = 40, by = LARRY_H - 1;
-  // tail: a ringed, tapering curve from the hip, out to the right and up behind him
-  const p0 = [cx + 6, by - 16], p1 = [cx + 30, by - 14], p2 = [cx + 34 + tail * 0.8, by - 48], p3 = [cx + 24 + tail * 1.6, by - 80];
+  // tail: ringed, tapering curve from the hip, out to the right and up behind him
+  const p0 = [cx + 5, by - 14], p1 = [cx + 28, by - 12], p2 = [cx + 33 + tail * 0.8, by - 44], p3 = [cx + 24 + tail * 1.6, by - 76];
   const pts = []; for (let i = 0; i <= 140; i++) { const t = i / 140, u = 1 - t;
     pts.push([u * u * u * p0[0] + 3 * u * u * t * p1[0] + 3 * u * t * t * p2[0] + t * t * t * p3[0], u * u * u * p0[1] + 3 * u * u * t * p1[1] + 3 * u * t * t * p2[1] + t * t * t * p3[1]]); }
-  let len = 0; const RING = 6.5;
-  pts.forEach(([x, y], i) => { if (i) len += Math.hypot(x - pts[i - 1][0], y - pts[i - 1][1]); const t = i / 140, r = 4 - t * 1.2;
-    const band = Math.floor(len / RING); const col = t > 0.93 ? C.black : band % 2 ? C.white : C.black; blob(P, x, y, r, r, col); });
-  // legs and feet (stay planted)
-  blob(P, cx - 6, by - 10, 4, 6, C.lemur); blob(P, cx + 6, by - 10, 4, 6, C.lemur);
-  blob(P, cx - 7, by - 3, 6, 3, C.black); blob(P, cx + 7, by - 3, 6, 3, C.black);
-  // body: round grey belly with the white shirt front and the red tie
-  blob(U, cx, by - 24, 13, 13, C.lemur);
-  for (let y = -11; y <= 10; y++) { const w = Math.round(5.5 * Math.sqrt(1 - (y / 13) ** 2)); U.rect(cx - w, by - 24 + y, w * 2 + 1, 1, C.white[y < -6 ? 2 : 1]); }
-  U.rect(cx - 6, by - 36, 13, 2, C.white[2]);                                                          // collar
-  U.rect(cx - 1, by - 35, 3, 2, C.tie[0]); U.rect(cx - 1, by - 33, 3, 11, C.tie[1]); U.rect(cx - 1, by - 33, 1, 10, C.tie[2]); U.set(cx, by - 22, C.tie[1]);
-  // arms: thick rounded limbs from the shoulders, black hands
-  const sh = [[cx - 11, by - 33], [cx + 11, by - 33]];
-  const HANDS = { down: s => [s * 15, by - 16], out: s => [s * 24, by - 34], up: s => [s * 23, by - 60], chin: s => [s * 4, by - 42], head: s => [s * 20, by - 66], hip: s => [s * 13, by - 24] };
-  const arms = { explaining: ['down', 'out'], pointing: ['down', 'up'], thinking: ['down', 'chin'], concerned: ['chin', 'down'], surprised: ['up', 'up'],
+  let len = 0;
+  pts.forEach(([x, y], i) => { if (i) len += Math.hypot(x - pts[i - 1][0], y - pts[i - 1][1]); const t = i / 140, r = 4.2 - t * 1.4;
+    const col = t > 0.92 ? LC.tailDark : Math.floor(len / 6.5) % 2 ? C.white : LC.tailDark; blob(P, x, y, r, r, col); });
+  // little legs and feet (planted)
+  blob(P, cx - 6, by - 8, 4, 5, C.lemur); blob(P, cx + 6, by - 8, 4, 5, C.lemur);
+  blob(P, cx - 7, by - 2, 5, 2, LC.hand); blob(P, cx + 7, by - 2, 5, 2, LC.hand);
+  // body: small round belly, white shirt front, red tie
+  blob(U, cx, by - 21, 12, 12, C.lemur);
+  for (let y = -10; y <= 10; y++) { const w = Math.round(5 * Math.sqrt(Math.max(0, 1 - (y / 12) ** 2))); U.rect(cx - w, by - 21 + y, w * 2 + 1, 1, C.white[y < -6 ? 2 : 1]); }
+  U.rect(cx - 5, by - 32, 11, 2, C.white[2]);
+  U.rect(cx - 1, by - 31, 3, 2, C.tie[0]); U.rect(cx - 1, by - 29, 3, 9, C.tie[1]); U.rect(cx - 1, by - 29, 1, 8, C.tie[2]); U.set(cx, by - 20, C.tie[1]);
+  // stubby arms, soft dark hands: raised arms go behind the head, a hand on the chin in front of it
+  const sh = [[cx - 10, by - 29], [cx + 10, by - 29]];
+  const HANDS = { down: s => [s * 14, by - 15], out: s => [s * 22, by - 30], up: s => [s * 27, by - 54], chin: s => [s * 4, by - 37], head: s => [s * 22, by - 64], hip: s => [s * 12, by - 21] };
+  const arms = { explaining: ['down', 'out'], pointing: ['up', 'down'], thinking: ['down', 'chin'], concerned: ['chin', 'down'], surprised: ['up', 'up'],
                  smug: ['hip', 'hip'], sneaky: ['chin', 'down'], neutral: ['down', 'down'] }[pose] || ['down', 'out'];
-  [-1, 1].forEach((s, k) => { const [hx, hy] = HANDS[arms[k]](s); const x1 = cx + hx, y1 = hy + (arms[k] === 'down' ? 0 : 0);
-    limb(U, sh[k][0], sh[k][1], x1, y1, 3, C.lemur); blob(U, x1, y1, 3, 3, C.black);
-    if (arms[k] === 'up' && pose === 'pointing') { U.rect(x1 - 1, y1 - 6, 2, 4, C.black[1]); } });
-  // head: big and round, fluffy cheeks, tall tufted ears
-  const hx = cx, hy = by - 54;
-  for (const s of [-1, 1]) {                                                                           // ears
-    const ex = hx + s * 15, ey = hy - 16 - (s > 0 ? ear : 0);
-    blob(U, ex, ey, 6, 8, C.lemur); blob(U, ex + s, ey + 1, 3, 5, C.white);
-  }
-  for (const s of [-1, 1]) for (let k = 0; k < 3; k++) blob(U, hx + s * (19 + (k === 1 ? 2 : 0)), hy + 2 + k * 4, 3, 2, C.white);     // cheek fluff
-  blob(U, hx, hy, 20, 18, C.lemur);
-  blob(U, hx, hy + 6, 15, 11, C.white);                                                                 // white face mask
-  U.rect(hx - 2, hy - 15, 5, 12, C.white[2]); U.rect(hx - 1, hy - 17, 3, 2, C.white[1]);              // blaze up the forehead
-  for (const s of [-1, 1]) {                                                                           // black eye patches, drooping outward
-    blob(U, hx + s * 8, hy + 1, 7, 6, C.black); blob(U, hx + s * 12, hy + 5, 3, 3, C.black);
-  }
-  // eyes: big amber, big pupils, two catch-lights (the cute part)
-  const lid = pose === 'smug' || pose === 'sneaky' ? 2 : 0, look = pose === 'thinking' ? [1, -1] : pose === 'sneaky' ? [-1, 0] : [0, 0];
+  const drawArms = front => [-1, 1].forEach((s, k) => { if ((arms[k] === 'chin') !== front) return; const [hx_, hy_] = HANDS[arms[k]](s); const x1 = cx + hx_;
+    limb(U, sh[k][0], sh[k][1], x1, hy_, 3, C.lemur); blob(U, x1, hy_, 3, 3, LC.hand);
+    if (arms[k] === 'up' && pose === 'pointing') U.rect(x1 - 1, hy_ - 6, 2, 4, LC.hand[1]); });
+  drawArms(false);
+  // head
+  const hx = cx, hy = by - 50;
+  for (const s of [-1, 1]) { const ex = hx + s * 15, ey = hy - 15 - (s > 0 ? ear : 0); blob(U, ex, ey, 6, 7, C.lemur); blob(U, ex + s, ey + 1, 3, 4, C.white); }
+  for (const s of [-1, 1]) for (let k = 0; k < 3; k++) blob(U, hx + s * (20 + (k === 1 ? 2 : 0)), hy + 3 + k * 4, 3, 2, C.white);   // cheek fluff
+  blob(U, hx, hy, 21, 18, C.lemur);
+  blob(U, hx, hy + 6, 17, 11, C.white);                                      // soft white face
+  U.rect(hx - 1, hy - 14, 3, 6, C.white[2]);                                  // short blaze
+  const look = pose === 'thinking' ? [1, -1] : pose === 'sneaky' ? [-1, 0] : [0, 0];
   for (const s of [-1, 1]) {
-    const ex = hx + s * 8, ey = hy + 1;
-    if (blink) { U.rect(ex - 4, ey, 9, 1, C.amber[0]); U.rect(ex - 3, ey + 1, 7, 1, C.black[0]); continue; }
-    const big = pose === 'surprised' ? 1 : 0;
-    blob(U, ex, ey, 5 + big, 5 + big, C.amber);
-    blob(U, ex + look[0] + (pose === 'surprised' ? 0 : s * -1 * 0), ey + look[1] + 1, 3 - big, 3 - big, [C.eye, C.eye, C.eye]);
-    U.rect(ex - 2 + look[0], ey - 2 + look[1], 2, 2, hex('#ffffff')); U.set(ex + 2 + look[0], ey + 2 + look[1], hex('#ffffff'));
-    if (lid) U.rect(ex - 5, ey - 5, 11, 3 + lid, C.black[1]);
-    const bo = { concerned: [1, -2], surprised: [-3, -3], thinking: [0, -1], smug: [0, 1], sneaky: [-1, 1] }[pose] || [0, 0];
-    U.rect(ex - s * 1 - 2, ey - 8 + bo[1] - (lid ? 0 : 0), 3, 1, C.black[0]); U.rect(ex + s * 3 - 1, ey - 8 + bo[0], 3, 1, C.black[0]);   // little brows
+    const ex = hx + s * 9, ey = hy + 3;
+    blob(U, ex + s, ey, 6, 6, LC.ring);                                       // lemur eye ring, soft grey
+    cuteEye(U, ex, ey, pose, blink, look);
   }
-  // monocle on his left eye (viewer's right) with a chain down to the shirt
-  for (let a = 0; a < 60; a++) { const t = a / 60 * Math.PI * 2; U.set(hx + 8 + Math.round(Math.cos(t) * 7), hy + 1 + Math.round(Math.sin(t) * 7), a < 30 ? C.gold[2] : C.gold[1]); }
-  for (let i = 0; i < 16; i++) U.set(hx + 15 - (i >> 2), hy + 8 + i, i % 2 ? C.gold[0] : C.gold[1]);
-  // muzzle, little black nose, blush, mouth
-  blob(U, hx, hy + 11, 6, 4, C.white);
-  U.rect(hx - 2, hy + 8, 5, 2, C.black[0]); U.rect(hx - 1, hy + 10, 3, 1, C.black[0]); U.set(hx - 1, hy + 8, C.black[2]);
-  U.rect(hx - 12, hy + 10, 3, 1, C.blush); U.rect(hx + 10, hy + 10, 3, 1, C.blush);
+  // monocle on his left eye (viewer's right): thin gold ring, glass glint, chain to the shirt
+  const mx = hx + 9, my_ = hy + 3;
+  for (let a = 0; a < 64; a++) { const t = a / 64 * Math.PI * 2; U.set(mx + Math.round(Math.cos(t) * 7), my_ + Math.round(Math.sin(t) * 7), a < 32 ? C.gold[1] : C.gold[2]); }
+  U.set(mx + 3, my_ - 5, LC.glass); U.set(mx + 4, my_ - 4, LC.glass); U.set(mx + 5, my_ - 3, LC.glass);
+  for (let i = 0; i < 14; i++) U.set(mx + 6 - (i >> 2), my_ + 7 + i, i % 2 ? C.gold[0] : C.gold[1]);
+  // tiny nose, pink cheeks, mouth
+  U.rect(hx - 2, hy + 9, 5, 1, LC.dark); U.rect(hx - 1, hy + 10, 3, 1, LC.dark); U.set(hx - 1, hy + 9, hex('#5a5564'));
+  blob(U, hx - 14, hy + 10, 2, 1, [C.blush, C.blush, C.blush]); blob(U, hx + 14, hy + 10, 2, 1, [C.blush, C.blush, C.blush]);
   const my = hy + 13;
-  if (mouth > 0) { const w = [0, 4, 6, 6][mouth], h = mouth + 1; U.rect(hx - (w >> 1), my - 1, w, h, C.mouth); if (mouth >= 2) U.rect(hx - (w >> 1) + 1, my - 1, w - 2, 1, C.teeth); if (mouth === 3) U.rect(hx - 1, my + 1, 3, 1, C.tongue); }
-  else if (pose === 'surprised') U.rect(hx - 1, my - 1, 3, 3, C.mouth);
-  else if (pose === 'smug' || pose === 'sneaky') { U.rect(hx - 2, my, 5, 1, C.black[0]); U.set(hx + 3, my - 1, C.black[0]); }
-  else if (pose === 'concerned') { U.rect(hx - 2, my, 5, 1, C.black[0]); U.set(hx - 3, my + 1, C.black[0]); U.set(hx + 3, my + 1, C.black[0]); }
-  else { U.set(hx, my - 1, C.black[0]); U.rect(hx - 3, my, 3, 1, C.black[0]); U.rect(hx + 1, my, 3, 1, C.black[0]); U.set(hx - 4, my - 1, C.black[0]); U.set(hx + 4, my - 1, C.black[0]); }   // little "w" smile
+  if (mouth > 0) { const w = [0, 3, 5, 5][mouth], h = mouth + (mouth > 1 ? 1 : 0); U.rect(hx - (w >> 1), my - 1, w, h, C.mouth); if (mouth === 3) U.rect(hx - 1, my + 1, 3, 1, C.tongue); U.set(hx - (w >> 1), my - 1, C.white[1]); U.set(hx + (w >> 1), my - 1, C.white[1]); U.set(hx, my - 2, LC.dark); }
+  else if (pose === 'surprised') { U.rect(hx - 1, my - 1, 3, 3, C.mouth); U.set(hx - 1, my - 1, C.white[1]); U.set(hx + 1, my - 1, C.white[1]); }
+  else if (pose === 'smug' || pose === 'sneaky') { U.set(hx, my - 1, LC.dark); U.rect(hx - 2, my, 2, 1, LC.dark); U.rect(hx + 1, my, 3, 1, LC.dark); U.set(hx + 4, my - 1, LC.dark); }
+  else if (pose === 'concerned') { U.set(hx, my - 1, LC.dark); U.rect(hx - 2, my, 5, 1, LC.dark); U.set(hx - 3, my + 1, LC.dark); U.set(hx + 3, my + 1, LC.dark); }
+  else { U.set(hx, my - 1, LC.dark); U.set(hx - 1, my, LC.dark); U.set(hx - 2, my, LC.dark); U.set(hx + 1, my, LC.dark); U.set(hx + 2, my, LC.dark); U.set(hx - 3, my - 1, LC.dark); U.set(hx + 3, my - 1, LC.dark); }   // "w" smile
+  drawArms(true);
   P.stamp(U, 0, -breath);
-  P.outline(); return P;
+  P.outline(hex('#2a2530')); return P;
 }
 
 // ---------- pixel font + signs ----------

@@ -2,6 +2,9 @@
 // Each set is a stack of layers: static pictures (Pix) and animated layers (functions of time) so the world is
 // never frozen: clouds drift, birds cross, pines and grass move in the wind, steam rises, flags wave, clocks tick.
 import { Pix, hex, ramp } from './kit.js';
+import * as L from './life.js';
+import { wind } from './life.js';
+export { wind };
 
 export const PW = 180, PH = 320, FEET = 192;
 const BAYER = [0, 8, 2, 10, 12, 4, 14, 6, 3, 11, 1, 9, 15, 7, 13, 5];
@@ -21,8 +24,6 @@ export function painter(g) {
     clip(x, y, w, h, fn) { g.save(); g.beginPath(); g.rect(x, y, w, h); g.clip(); fn(); g.restore(); },
   };
 }
-// wind: a slow travelling wave plus gusts, -1..1
-export const wind = (t, x = 0) => Math.sin(t * 1.5 - x * 0.045) * 0.6 + Math.sin(t * 0.47 + 1.3) * 0.4;
 
 // ---------- static helpers ----------
 function gradient(P, y0, y1, cols) { const r = ramp(cols); for (let y = y0; y < y1; y++) for (let x = 0; x < PW; x++) { const t = (y - y0) / (y1 - y0) * (r.length - 1); P.set(x, y, r[Math.min(r.length - 1, Math.floor(t + dith(x, y) - 0.25))]); } }
@@ -103,10 +104,20 @@ const SETS = {
     ground.ellipse(148, 168, 20, 7, hex('#e39a3a')); ground.ellipse(148, 168, 16, 5, hex('#3fb0b8')); ground.ellipse(149, 168, 9, 3, hex('#1f6fb0'));
     seed = 11; const tufts = tuftList(70, (x, y) => !inBasin(x, y) && !(((x - 148) / 24) ** 2 + ((y - 168) / 9) ** 2 < 1), 134, PH);
     const farPines = []; for (let i = 0; i < 16; i++) farPines.push([4 + i * 11 + (i % 2) * 3, 126 + (i % 3) * 3, 20 + (i % 4) * 4]);
+    // wildflowers and pebbles on the meadow, a rock pile, a fallen log and a bush in the near foreground
+    seed = 17; for (let k = 0; k < 40; k++) { const x = rnd() * PW | 0, y = 134 + rnd() * 186 | 0; if (inBasin(x, y)) { ground.set(x, y, hex('#8a6a40')); continue; } ground.set(x, y, hex(['#f2c230', '#ffffff', '#e866a8', '#a87ae0'][k % 4])); }
+    const near = new Pix(PW, PH), rock = ramp(['#5e5a56', '#8a8580', '#b0aba4']), bark = ramp(['#4a3020', '#6e4a30', '#8e6644']), bush = ramp(['#2c5a2a', '#3f7a38', '#5a9c4a']);
+    near.ellipse(20, 296, 16, 8, rock[0]); near.ellipse(18, 293, 13, 6, rock[1]); near.ellipse(15, 290, 7, 3, rock[2]); near.ellipse(38, 300, 8, 5, rock[1]); near.ellipse(36, 298, 4, 2, rock[2]);
+    near.box(52, 286, 46, 8, bark); for (let x = 56; x < 96; x += 7) near.set(x, 289, bark[0]); near.ellipse(97, 290, 3, 4, hex('#c9a06a')); near.ellipse(97, 290, 1, 2, hex('#8e6644'));
+    near.ellipse(160, 292, 20, 13, bush[0]); near.ellipse(156, 288, 16, 10, bush[1]); near.ellipse(152, 284, 8, 5, bush[2]); for (const [x, y] of [[150, 286], [162, 290], [168, 284]]) near.set(x, y, hex('#d8342c'));
+    near.outline(hex('#1e2a18'));
     return { layers: [sky, clouds([[10, 22, 1.1, 2.2], [120, 14, 0.9, 1.6], [70, 44, 0.7, 3.0], [170, 34, 0.6, 2.6]]),
-      birds([[30, 17, 0, 1], [52, 23, 9, -1]]), far, pines(farPines, 1), ground,
-      pines([[8, 150, 28], [23, 154, 33], [150, 150, 38], [168, 154, 28]], 2),
-      sparkles([[146, 168, 7], [150, 167, 5], [143, 169, 9]]), steam(148, 162), grass(tufts)] };
+      L.eagle(118, 40, 34), birds([[30, 17, 0, 1], [52, 23, 9, -1]]), far, L.deer(119, 28, 4), pines(farPines, 1), ground,
+      L.geyser(92, 140, 16, 4), L.bison([[4, 146, 76, 3.0, 0], [100, 139, 74, 2.4, 9]]),
+      pines([[8, 150, 28], [23, 154, 33], [150, 150, 38], [168, 154, 28]], 2), L.tent(14, 162),
+      sparkles([[146, 168, 7], [150, 167, 5], [143, 169, 9]]), steam(148, 162), grass(tufts), L.campfire(89, 181),
+      L.butterflies([[30, 172, '#f2c230'], [160, 196, '#e866a8'], [118, 175, '#ffffff']])],
+      front: [near, L.rabbit(270, 12, 3, 1), L.butterflies([[120, 262, '#f2c230']])] };
   },
   courtroom() {
     const P = new Pix(PW, PH), wood = ramp(['#5a3218', '#7a4626', '#9a5e36']), dark = ramp(['#3a2010', '#4e2c16', '#64391e']);
@@ -119,7 +130,10 @@ const SETS = {
     for (let y = 150; y < PH; y++) for (let x = 0; x < PW; x++) { const k = ((x >> 4) + (y >> 3)) % 2; P.set(x, y, hex(k ? '#c8a47a' : '#b38e64')); }
     const F = new Pix(PW, PH);
     F.box(96, 150, 84, 46, wood, 0); F.rect(96, 150, 84, 4, dark[2]); F.box(120, 166, 34, 10, ramp(['#a07a22', '#d9a93a', '#ffe08a']));
-    return { layers: [P, (D, t) => usFlag(D, t, 17, 12), clockHands(52, 84, 6), motes(16, 0, 0, PW, 150)], F, judgeX: 138, judgeY: 166 };
+    const rail = new Pix(PW, PH); rail.box(0, 150, 98, 4, wood); for (let x = 3; x < 96; x += 7) rail.box(x, 154, 3, 12, dark); rail.box(0, 165, 98, 3, wood); rail.outline(hex('#2a160a'));
+    return { layers: [P, (D, t) => usFlag(D, t, 17, 12), clockHands(52, 84, 6), L.pendantLamps([[40, 12], [142, 8]]),
+      L.spectators([[8, 132, 0], [24, 134, 3], [42, 131, 1], [60, 134, 5], [78, 132, 2]]), rail, motes(16, 0, 0, PW, 150)],
+      front: [L.counselTable(50, 284), L.stenographer(146, 300)], F, judgeX: 138, judgeY: 166 };
   },
   office() {
     const wall = new Pix(PW, PH);
@@ -129,11 +143,14 @@ const SETS = {
     const city = new Pix(PW, PH), cr = ramp(['#4c6a8a', '#6a88a8', '#8aa6c4']), lights = [];
     for (const [x, w, h] of [[30, 16, 40], [50, 12, 55], [66, 20, 34], [90, 14, 60], [108, 18, 44], [130, 20, 52]]) { city.box(x, 98 - h, w, h, cr); for (let y = 98 - h + 4; y < 96; y += 6) for (let i = 2; i < w - 2; i += 4) lights.push([x + i, y]); }
     city.rect(89, 24, 2, 74, hex('#e8eef4'));
+    wall.ellipse(168, 40, 6, 6, hex('#3a4656')); wall.ellipse(168, 40, 5, 5, hex('#f4f1e8'));
     const potP = new Pix(PW, PH); potP.box(150, 140, 12, 12, ramp(['#8a5a34', '#b07a4a', '#d09a6a']));
     const plant = (D, t) => { const lean = wind(t * 0.6, 0); for (let k = 0; k < 7; k++) { const a = -1.3 + k * 0.43, len = 12 + (k % 3) * 4; for (let i = 0; i < len; i++) { const f = i / len, x = 156 + Math.sin(a) * i * 0.7 + lean * f * f * 2, y = 140 - Math.cos(a) * i * 0.9; D.px(x, y, i > len - 4 ? '#5a9c68' : '#3b7446'); D.px(x + 1, y, '#2c5a36'); } } };
     return { layers: [wall, (D, t) => D.clip(28, 24, 124, 74, () => { clouds([[0, 34, 0.8, 2.0], [90, 50, 0.6, 2.8]])(D, t); birds([[40, 15, 3, 1]])(D, t); }), city,
       (D, t) => lights.forEach(([x, y], i) => { if (hash(i, Math.floor(t * 0.4 + hash(i) * 10)) > 0.3) D.px(x, y, '#f2e8a8'); }),
-      (D, t) => { if (t % 1.6 < 0.8) { D.px(97, 37, '#ff4a3a'); D.px(57, 42, '#ff4a3a'); } }, potP, plant] };
+      (D, t) => { if (t % 1.6 < 0.8) { D.px(97, 37, '#ff4a3a'); D.px(57, 42, '#ff4a3a'); } },
+      L.typists([[44, 126, 0], [120, 126, 3]]), L.waterCooler(12, 150), clockHands(168, 40, 5), potP, plant],
+      front: [L.officeDesk(130, 280), L.pottedPlant(22, 300)] };
   },
   capitol() {
     const sky = new Pix(PW, PH); gradient(sky, 0, 140, ['#3f8ad4', '#5ea6e4', '#8cc4ef', '#c2e2f6']);
@@ -143,9 +160,13 @@ const SETS = {
     for (let i = 0; i < 4; i++) P.box(34 - i * 4, 140 + i * 3, 112 + i * 8, 4, stone);
     seed = 5; noise(P, 150, PH, ramp(['#4f8a3a', '#68a64a', '#86c062']));
     for (let y = 150; y < PH; y++) { const half = 8 + (y - 150) * 0.35; for (let x = Math.round(90 - half); x <= 90 + half; x++) P.set(x, y, hex((x + y) % 5 ? '#d8cfbd' : '#cbc1ae')); }
+    const lamps = new Pix(PW, PH); for (const x of [46, 134]) { lamps.rect(x, 150, 2, 34, hex('#2a2e36')); lamps.rect(x - 2, 146, 6, 5, hex('#2a2e36')); lamps.rect(x - 1, 147, 4, 3, hex('#ffe8a0')); }
     seed = 13; const tufts = tuftList(50, (x, y) => Math.abs(x - 90) > 10 + (y - 150) * 0.35, 154, PH);
     return { layers: [sky, clouds([[0, 20, 1, 2.0], [110, 30, 0.8, 2.6], [60, 70, 0.6, 3.2]]), birds([[44, 19, 4, -1]]), P,
-      (D, t) => usFlag(D, t, 90, 30, 12, 8), pines([[14, 150, 34], [166, 150, 30]], 2), grass(tufts, ['#3f6a28', '#6aa64a', '#9ccc70'])] };
+      (D, t) => usFlag(D, t, 90, 30, 12, 8), pines([[14, 150, 34], [166, 150, 30]], 2), lamps,
+      L.walkers([[160, 15, 0, 1, 0, 'camera'], [165, 19, 6, -1, 2, 'bag'], [157, 22, 11, 1, 4, 'balloon'], [168, 17, 3, -1, 5, null], [154, 26, 17, 1, 1, null]]),
+      grass(tufts, ['#3f6a28', '#6aa64a', '#9ccc70'])],
+      front: [L.pigeons([[26, 252], [42, 258], [150, 262], [164, 254]]), L.benchReader(150, 300, 4)] };
   },
   studio() {
     const floor = new Pix(PW, PH);
@@ -153,7 +174,12 @@ const SETS = {
     floor.rect(0, 150, PW, 2, hex('#b8862e'));
     const back = (D, t) => { const off = (t * 3) % 44; for (let x = -44; x < PW + 44; x += 44) { D.rect(x + off, 0, 22, 150, '#3d7fd0'); D.rect(x + off + 22, 0, 22, 150, '#4f92de'); } };
     const stars = (D, t) => { for (let i = 0; i < 9; i++) { const ph = (t * 0.5 + hash(i)) % 1; if (ph > 0.6) continue; const x = 10 + hash(i, 1) * 160, y = 14 + hash(i, 2) * 110, r = ph < 0.3 ? 1 : 2; D.px(x, y, '#ffffff'); for (let k = 1; k <= r; k++) { D.px(x - k, y, '#cfe6ff'); D.px(x + k, y, '#cfe6ff'); D.px(x, y - k, '#cfe6ff'); D.px(x, y + k, '#cfe6ff'); } } };
-    return { layers: [back, stars, floor] };
+    const shelf = new Pix(PW, PH), sw = ramp(['#4a2c18', '#6e4426', '#8e5a34']);
+    shelf.box(4, 70, 40, 80, sw); for (const y of [74, 100, 126]) { shelf.rect(6, y + 22, 36, 2, sw[0]); let x = 7; for (let k = 0; x < 40; k++) { const w = 3 + (k * 7) % 3, h = 16 + (k * 5) % 6, c = ['#8e1e1e', '#1d2f6b', '#2c5a36', '#c9a13a', '#5a2a6a'][k % 5]; shelf.rect(x, y + 22 - h, w, h, hex(c)); shelf.rect(x, y + 24 - h, w, 1, hex('#e6c35a')); x += w + 1; } }
+    shelf.box(146, 136, 22, 14, sw); shelf.outline(hex('#22140a'));
+    const rugP = L.rug(90, 198, 72, 24), books = L.bookStack(150, 300);
+    return { layers: [back, L.spotlights([[30, 9, 0], [150, 11, 1.3]]), stars, shelf, L.globe(157, 125), floor, rugP, L.lightPools([[90, 200, 9, 0], [90, 252, 11, 1.3]])],
+      front: [L.pottedPlant(24, 304), books] };
   },
 };
 const ALIAS = { 'bg-yellowstone': 'yellowstone', 'bg-courtroom': 'courtroom', 'bg-office': 'office', 'bg-capitol': 'capitol', white: 'studio', 'bg-studio': 'studio' };

@@ -11,6 +11,44 @@ const work = document.createElement('canvas'); work.width = PW; work.height = PH
 let TL = null; const cache = new Map();
 const spr = (key, make) => { if (!cache.has(key)) cache.set(key, make().canvas()); return cache.get(key); };
 const D = painter(wg);
+const meta = new Map();                                   // sprite key -> { emit, impact } in sprite pixels
+const sprM = (key, make) => { if (!cache.has(key)) { const P = make(); cache.set(key, P.canvas()); meta.set(key, { emit: P.emit, impact: P.impact }); } return [cache.get(key), meta.get(key)]; };
+const frac = x => x - Math.floor(x);
+const hashN = (a, b = 0) => frac(Math.sin(a * 127.1 + b * 311.7) * 43758.5453);
+const hashS = s => { let h = 7; for (const ch of s || '') h = (h * 31 + ch.charCodeAt(0)) % 9973; return h; };
+const wind = (t, x = 0) => Math.sin(t * 1.5 - x * 0.045) * 0.6 + Math.sin(t * 0.47 + 1.3) * 0.4;
+// What each kind of character does when the story doesn't give them a gesture. Chosen per character from the time,
+// so every frame renders on its own and two characters never move in lockstep.
+const ACTS = { judge: ['gavel', 'papers', 'glare', 'gavel', 'look'], cop: ['notepad', 'look', 'watch'], suit: ['phone', 'coffee', 'watch', 'look'],
+               lead: ['smoke', 'phone', 'scratch', 'look', 'stretch', 'coffee'] };
+function actFor(t, kind, gest, seed) {
+  const glance = [Math.sin(t * 0.6 + seed) > 0.75 ? 1 : Math.sin(t * 0.6 + seed) < -0.75 ? -1 : 0, 0];
+  if ((gest && gest !== 'none') || TL.calm) return { act: '', look: glance };
+  const per = 3.6, u = (t + seed * 1.7) / per, n = Math.floor(u), p = frac(u);
+  if (hashN(seed, n) < 0.25) return { act: '', look: glance };
+  const list = ACTS[kind] || ACTS.lead, a = list[Math.floor(hashN(seed + 3, n) * list.length)];
+  if (a === 'smoke') return { act: p < 0.35 ? 'smoke_drag' : 'smoke_hold', smoke: true, exhale: p >= 0.35 && p < 0.65 ? (p - 0.35) / 0.3 : -1 };
+  if (a === 'coffee') return { act: p > 0.4 && p < 0.62 ? 'sip' : 'coffee' };
+  if (a === 'look') return { act: '', look: [p < 0.5 ? -1 : 1, 0] };
+  if (a === 'gavel') { const hits = [0.18, 0.42], up = (p < 0.18) || (p > 0.28 && p < 0.42); const last = hits.filter(h => p >= h).pop();
+    return { act: p > 0.6 ? 'glare' : up ? 'gavel_up' : 'gavel_down', hitAge: last != null ? (p - last) * per : 9 }; }
+  return { act: a };
+}
+const kindOf = (sp, of) => of === 'robe' ? 'judge' : of === 'cop' ? 'cop' : ['suit', 'irs', 'dress'].includes(of) ? 'suit' : 'lead';
+function npc(c, sp, of, t, k) {                           // -> [canvas, meta, act state]
+  const id = idle(t, k), seed = hashS((c.name || c.id) + sp), a = actFor(t, kindOf(sp, of), c.gest, seed);
+  const look = a.look || [0, 0], key = `p|${sp}|${of}|${c.face}|${c.gest}|${id.breath}|${id.blink}|${id.sway}|${a.act}|${look}`;
+  const [im, m] = sprM(key, () => primate({ species: sp, outfit: of, face: c.face, gest: c.gest, ...id, act: a.act, look }));
+  return [im, m, a, id];
+}
+function drawFx(a, m, sx, sy, breath, t) {                    // smoke and gavel impacts, in set pixels (sx, sy = sprite top-left)
+  if (a.smoke && m.emit) for (let k = 0; k < 6; k++) { const q = frac(t * 0.45 + k / 6), x = sx + m.emit[0] + wind(t) * q * 7 + Math.sin(q * 8 + k) * 1.5, y = sy + m.emit[1] - q * 24, r = Math.round(q * 2.5);
+    for (let j = -r; j <= r; j++) for (let i = -r; i <= r; i++) if (i * i + j * j <= r * r) D.px(x + i, y + j, `rgba(225,228,232,${(0.55 * (1 - q)).toFixed(2)})`); }
+  if (a.exhale >= 0) { const e = a.exhale, x = sx + 36 + e * 10, y = sy + 32 - breath - e * 8, r = Math.round(1 + e * 4);
+    for (let j = -r; j <= r; j++) for (let i = -r; i <= r; i++) if (i * i + j * j <= r * r) D.px(x + i, y + j, `rgba(232,234,238,${(0.6 * (1 - e)).toFixed(2)})`); }
+  if (a.hitAge != null && a.hitAge < 0.18 && m.impact) { const x = sx + m.impact[0], y = sy + m.impact[1], L = 2 + Math.round(a.hitAge * 20);
+    for (const [dx, dy] of [[-1, -1], [1, -1], [0, -1], [-1, 0], [1, 0]]) for (let i = 1; i <= L; i++) D.px(x + dx * (i + 2), y + dy * (i + 1) - 1, i % 2 ? '#fff6c0' : '#ffd24a'); }
+}
 // idle state for one character (k = a per-character offset so they don't move in sync)
 const idle = (t, k) => ({ breath: Math.sin(t * 2 * Math.PI / 3.2 + k * 1.9) > 0.15 ? 1 : 0, blink: ((t + k * 1.37) % 4.1) < 0.13,
                           sway: Math.sin(t * 1.1 + k * 2.3) > 0.55 ? 1 : 0 });
@@ -52,22 +90,23 @@ window.renderAt = (t, frame) => {
   wg.clearRect(0, 0, PW, PH);
   for (const layer of set.layers) typeof layer === 'function' ? layer(D, t) : D.img(layer, 0, 0);
   const cast = sc.cast || [], signs = (sc.items || []).filter(it => it.id === 'sign' && t >= it.t - 0.01 && t < (it.end ?? 1e9));
-  const tags = []; let focus = [PW / 2, FEET - 60];
+  const tags = []; let focus = [PW / 2, FEET - 60], judgeFx = null;
   const others = cast.filter(c => !c.id.startsWith('larry') && !c.id.startsWith('char-judge')), judge = cast.find(c => c.id.startsWith('char-judge'));
   const L = cast.find(c => c.id.startsWith('larry'));
   // judge behind the bench (courtroom), then the bench in front
   if (judge) {
-    const [sp, of] = lookOf(judge), id = idle(t, 7), key = `p|${sp}|${of}|${judge.face}|${judge.gest}|${id.breath}|${id.blink}|${id.sway}`,
-      im = spr(key, () => primate({ species: sp, outfit: of, face: judge.face, gest: judge.gest, ...id }));
+    const [sp, of] = lookOf(judge), [im, m, a, id] = npc(judge, sp, of, t, 7);
     const jx = set.judgeX ?? 130, jy = (set.judgeY ?? FEET) - 82; wg.drawImage(im, jx - 32, jy); tags.push([judge.name || 'JUDGE', jx, jy + 6]);
+    judgeFx = [a, m, jx - 32, jy, id.breath];
   }
   if (set.F) D.img(set.F, 0, 0);
+  if (judgeFx) drawFx(judgeFx[0], judgeFx[1], judgeFx[2], judgeFx[3], judgeFx[4], t);
   // the rest of the cast, left to right by their x
   const slots = others.length === 1 ? [judge ? 46 : 70] : others.length === 2 ? [judge ? 34 : 50, judge ? 74 : 128] : [32, 90, 148];
   others.forEach((c, i) => {
-    const [sp, of] = lookOf(c), id = idle(t, i + 1), im = spr(`p|${sp}|${of}|${c.face}|${c.gest}|${id.breath}|${id.blink}|${id.sway}`, () => primate({ species: sp, outfit: of, face: c.face, gest: c.gest, ...id }));
+    const [sp, of] = lookOf(c), [im, m, a, id] = npc(c, sp, of, t, i + 1);
     const x = judge ? slots[i] : (c.x != null && others.length > 1 ? Math.round(c.x * PW) : slots[i]);
-    wg.drawImage(im, x - 32, FEET - 82); if (c.name) tags.push([c.name, x, FEET - 82 + 4]);
+    wg.drawImage(im, x - 32, FEET - 82); drawFx(a, m, x - 32, FEET - 82, id.breath, t); if (c.name) tags.push([c.name, x, FEET - 82 + 4]);
   });
   if (L) {
     const pose = L.id === 'larry:auto' || L.id === 'larry' ? autoPose(t) : L.id.slice(6);
@@ -76,6 +115,7 @@ window.renderAt = (t, frame) => {
     const lx = signs.length ? 46 : 90; wg.drawImage(im, lx - 40, FEET - LARRY_H + 2); focus = [lx, FEET - 70];
   }
   for (const it of signs) { const im = spr(`s|${it.icon}|${it.text}`, () => sign(it.text || '', iconFor(it.icon))); wg.drawImage(im, Math.round(Math.min(PW - im.width - 14, 124 - im.width / 2)), FEET - im.height + 3); }
+  for (const layer of set.front || []) typeof layer === 'function' ? layer(D, t) : D.img(layer, 0, 0);
 
   // camera on the scaled picture
   const z = zoomAmount(sc, t) * (sc.loop ? 1 : 1 + 0.045 * Math.min(1, age / sdur));

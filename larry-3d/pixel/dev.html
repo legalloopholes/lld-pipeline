@@ -1,0 +1,11 @@
+<!doctype html><html><head><meta charset="utf-8"><style>body{margin:0;background:#4f92de}canvas{display:block;image-rendering:pixelated}</style></head>
+<body><canvas id="c"></canvas><script type="module">
+// Sprite sheet for checking the pixel kit by eye: node tools/pixel_sheet.mjs out.png
+import * as K from './kit.js';
+const items = window.SHEET || [];
+const c = document.getElementById("c"), g = c.getContext("2d"), Z = 3;
+const sprites = (await import('./sheet.js')).sheet(K);
+let x = 8, y = 8, rowH = 0; c.width = 1600; c.height = 1000; g.fillStyle = '#4f92de'; g.fillRect(0, 0, c.width, c.height); g.imageSmoothingEnabled = false;
+for (const P of sprites) { if (x + P.w * Z > c.width) { x = 8; y += rowH + 8; rowH = 0; } g.drawImage(P.canvas(), x, y, P.w * Z, P.h * Z); x += P.w * Z + 8; rowH = Math.max(rowH, P.h * Z); }
+window.done = true;
+</script></body></html>
