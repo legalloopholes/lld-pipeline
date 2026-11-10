@@ -36,7 +36,7 @@ const browser = await chromium.launch({ args });
 const page = await browser.newPage({ viewport: { width: W, height: H }, deviceScaleFactor: 1 });
 let pageErr = null;
 page.on('pageerror', e => { pageErr = e; console.error('page error:', e.message); });
-await page.goto(`http://127.0.0.1:${server.address().port}/world.html`);
+await page.goto(`http://127.0.0.1:${server.address().port}/${tl.style === 'rpg' ? 'pixel.html' : 'world.html'}`);   // rpg: the 2D pixel renderer
 await page.waitForFunction(() => window.worldReady === true || window.__err, null, { timeout: 60000 });
 if (pageErr) process.exit(2);
 await page.evaluate(t => window.setupTimeline(t), tl);

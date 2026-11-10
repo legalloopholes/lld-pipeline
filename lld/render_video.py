@@ -145,7 +145,10 @@ def _mouth_track():
             while j < n and o[j] == o[i]: j += 1
             if j - i < 2 and 0 < i and j < n and not quiet[i]: o[i:j] = o[i - 1]
             i = j
-    return o & ~quiet
+    o = o & ~quiet
+    global MOUTH_LVL                          # how wide: 1..3 by loudness (the pixel renderer draws three mouth shapes)
+    MOUTH_LVL = [int(1 + (r > 0.5 * p95) + (r > 0.85 * p95)) if on else 0 for r, on in zip(rms, o)]
+    return o
 MOUTH = _mouth_track()
 def talking(t):
     f = int(round(t * FPS))
@@ -829,7 +832,7 @@ def mix_audio(path):
     w = int(0.05 * SR_A); n = len(voice) // w
     vr = np.sqrt((voice[:n * w].reshape(n, w) ** 2).mean(1)) if n else np.array([0.1])
     ref = float(np.percentile(vr[vr > 0.01], 90)) if (vr > 0.01).any() else 0.1
-    for t0, name in SFX_EVENTS:
+    for t0, name in ([] if os.environ.get('LLD_NO_SFX') else SFX_EVENTS):   # LLD_NO_SFX: tests whose voice track already has them
         x = sfx_audio(name); i = int(t0 * SR_A)
         if i >= len(mix) or not len(x): continue
         m_ = len(x) // w
@@ -864,6 +867,7 @@ def render_3d_base(nframes):
         return out_
     tl = {'fps': FPS, 'dur': dur, 'frames': nframes,
           'mouth': [int(bool(MOUTH[i])) if i < len(MOUTH) else 0 for i in range(nframes)],
+          'mouthlvl': [MOUTH_LVL[i] if i < len(MOUTH_LVL) else 0 for i in range(nframes)],
           'poses': auto_seg,
           'scenes': [{'t': sc['t'], 'end': min(sc['end'], dur + 1), 'bg': sc.get('bg', 'white'), 'loop': bool(sc.get('loop')),
                       'cast': [{k: v for k, v in c.items() if k in ('id', 'x', 'anim', 'from', 'face', 'gest', 'name', 'look')} for c in sc.get('cast', [])],
@@ -872,6 +876,7 @@ def render_3d_base(nframes):
           'share': None if SHARE_T0 is None else [SHARE_T0, SHARE_T1],   # camera pulls back to make room for the share card
           'shakes': [],                     # owner 2026-11-10: no camera shakes
           'tilts': TILTS,
+          'calm': video_id in ('LLD-040', 'LLD-060'),   # serious episodes: characters only glance, no smoking/stretching
           'style': os.environ.get('LLD_STYLE') or BRAND.get('style', 'classic')}   # classic | toon | diorama | noir
     tl_path, base = os.path.abspath(out + '.timeline.json'), os.path.abspath(out + '.base3d.mp4')
     json.dump(tl, open(tl_path, 'w'))

@@ -306,7 +306,7 @@ window.renderAt = (t, frame) => {
   }
   if (roll) camera.rotateZ(roll);
   camera.updateMatrixWorld(true);
-  styler.render();
+  styler.render(t);
   // name tags: a label over each named character so viewers know who is who
   let used = 0;
   for (const e of L.cast) {
