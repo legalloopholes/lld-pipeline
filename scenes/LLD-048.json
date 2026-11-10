@@ -7,7 +7,7 @@
   "domain",
   "trademark"
  ],
- "youtube_title": "One Mickey Mouse Is Public Domain. Not Every Mickey 🦝⚖️",
+ "youtube_title": "One Mickey Mouse Is Public Domain. Not Every Mickey",
  "caption": "Steamboat Willie (1928) entered the U.S. public domain in 2024, freeing that early version of Mickey. Later versions stay protected, and trademark law still bars confusing people about Disney's involvement.",
  "hashtags": [
   "#legalloopholes",
@@ -48,7 +48,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🗓️",
+     "icon": "",
      "text": "JANUARY 1, 2024"
     }
    ]
@@ -64,7 +64,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🐭",
+     "icon": "",
      "text": "OLD MICKEY: FREE"
     }
    ]
@@ -115,7 +115,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "™️",
+     "icon": "",
      "text": "TRADEMARK STILL EXISTS"
     }
    ]
@@ -131,7 +131,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⚠️",
+     "icon": "",
      "text": "OLD MICKEY ONLY"
     }
    ]

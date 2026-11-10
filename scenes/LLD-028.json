@@ -7,7 +7,7 @@
   "exchange",
   "deadlines"
  ],
- "youtube_title": "Swap One Property for Another and Postpone the Tax Bill (1031) 🦝⚖️",
+ "youtube_title": "Swap One Property for Another and Postpone the Tax Bill (1031)",
  "caption": "Section 1031 lets qualifying exchanges of business or investment real estate postpone tax on the gain. It's deferral, not forgiveness, with strict 45- and 180-day deadlines; personal homes don't qualify.",
  "hashtags": [
   "#legalloopholes",
@@ -48,7 +48,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "💸",
+     "icon": "",
      "text": "PROFIT = TAX"
     }
    ]
@@ -64,7 +64,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🔁",
+     "icon": "",
      "text": "THE 1031 SWAP"
     }
    ]
@@ -122,7 +122,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⚠️",
+     "icon": "",
      "text": "REAL ESTATE ONLY"
     }
    ]
@@ -138,7 +138,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "📅",
+     "icon": "",
      "text": "45 DAYS. 180 DAYS."
     }
    ]
@@ -187,7 +187,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🧾",
+     "icon": "",
      "text": "MISSED IT. PAY IT."
     }
    ]

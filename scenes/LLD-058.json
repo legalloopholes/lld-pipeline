@@ -7,7 +7,7 @@
   "productivity",
   "acres"
  ],
- "youtube_title": "In Texas, Bees Can Change a Landowner's Property Tax Bill 🦝⚖️",
+ "youtube_title": "In Texas, Bees Can Change a Landowner's Property Tax Bill",
  "caption": "Texas allows agricultural (productivity) appraisal of qualifying land, and its tax code counts beekeeping on 5 to 20 acres as agricultural use — subject to local intensity standards, history requirements and documentation.",
  "hashtags": [
   "#legalloopholes",
@@ -50,7 +50,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🌾",
+     "icon": "",
      "text": "FARM LAND RULE"
     }
    ]
@@ -66,7 +66,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🐝",
+     "icon": "",
      "text": "BEES = FARMING"
     }
    ]
@@ -104,7 +104,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "📏",
+     "icon": "",
      "text": "5 TO 20 ACRES"
     }
    ]
@@ -120,7 +120,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⚠️",
+     "icon": "",
      "text": "THE HOUSE STILL COUNTS"
     }
    ]

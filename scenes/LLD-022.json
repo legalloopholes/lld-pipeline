@@ -7,7 +7,7 @@
   "jeopardy",
   "element"
  ],
- "youtube_title": "The Judge Got the Law Wrong — and the Acquittal Still Stood 🦝⚖️",
+ "youtube_title": "The Judge Got the Law Wrong — and the Acquittal Still Stood",
  "caption": "Evans v. Michigan (2013): a trial judge acquitted after wrongly requiring proof of an element that didn't exist. The Supreme Court held double jeopardy still barred a retrial.",
  "hashtags": [
   "#legalloopholes",
@@ -55,7 +55,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🔥",
+     "icon": "",
      "text": "NOT A HOUSE"
     }
    ]
@@ -111,7 +111,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "❌",
+     "icon": "",
      "text": "THAT RULE ISN'T REAL"
     }
    ]
@@ -176,7 +176,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⚠️",
+     "icon": "",
      "text": "NOT A TRICK"
     }
    ]

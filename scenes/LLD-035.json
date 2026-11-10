@@ -7,7 +7,7 @@
   "conspicuous",
   "ninety"
  ],
- "youtube_title": "Cashing a 'Payment in Full' Check Can Settle a Disputed Bill 🦝⚖️",
+ "youtube_title": "Cashing a 'Payment in Full' Check Can Settle a Disputed Bill",
  "caption": "Under UCC 3-311 (Nebraska's version shown), a good-faith check clearly offered as full payment of a genuinely disputed claim can settle it once cashed — with exceptions for designated addresses and repayment within 90 days.",
  "hashtags": [
   "#legalloopholes",
@@ -88,7 +88,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "✍️",
+     "icon": "",
      "text": "PAYMENT IN FULL"
     }
    ]
@@ -104,7 +104,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "💵",
+     "icon": "",
      "text": "CASH IT = DONE"
     }
    ]
@@ -155,7 +155,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⚠️",
+     "icon": "",
      "text": "NEEDS A REAL FIGHT"
     }
    ]

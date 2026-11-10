@@ -7,7 +7,7 @@
   "distribution",
   "shipment"
  ],
- "youtube_title": "The Missing Comma That Revived an Overtime Fight 🦝⚖️",
+ "youtube_title": "The Missing Comma That Revived an Overtime Fight",
  "caption": "A missing comma in Maine's overtime exemption led the First Circuit in 2017 to revive delivery drivers' overtime claim. The ruling kept the case alive; it didn't itself award a payout.",
  "hashtags": [
   "#legalloopholes",
@@ -90,7 +90,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "📜",
+     "icon": "",
      "text": "THE LIST"
     }
    ]
@@ -106,7 +106,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🔍",
+     "icon": "",
      "text": "NO COMMA HERE"
     }
    ]
@@ -233,7 +233,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⚠️",
+     "icon": "",
      "text": "NOT A PAYOUT"
     }
    ]

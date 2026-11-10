@@ -7,7 +7,7 @@
   "sugar",
   "percent"
  ],
- "youtube_title": "Ireland's Supreme Court Said Subway's Bread Isn't Bread (for Tax) 🦝⚖️",
+ "youtube_title": "Ireland's Supreme Court Said Subway's Bread Isn't Bread (for Tax)",
  "caption": "In Bookfinders v Revenue Commissioners (2020), Ireland's Supreme Court held the Subway bread at issue exceeded the VAT law's 2% sugar limit for 'bread', so it didn't qualify for the zero rate.",
  "hashtags": [
   "#legalloopholes",
@@ -49,7 +49,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🍞",
+     "icon": "",
      "text": "REAL BREAD: 0% TAX"
     }
    ]
@@ -105,7 +105,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🍬",
+     "icon": "",
      "text": "SUGAR LIMIT: 2%"
     }
    ]
@@ -141,7 +141,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🍬",
+     "icon": "",
      "text": "SUBWAY: ~10%"
     }
    ]
@@ -166,7 +166,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⚠️",
+     "icon": "",
      "text": "NOT BANNED"
     }
    ]

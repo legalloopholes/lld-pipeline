@@ -8,7 +8,7 @@
   "vat",
   "stale"
  ],
- "youtube_title": "The Jaffa Cake Trial: Cake or Biscuit? 🦝⚖️",
+ "youtube_title": "The Jaffa Cake Trial: Cake or Biscuit?",
  "caption": "UK VAT treats chocolate-covered biscuits and cakes differently. A tribunal weighed ingredients, texture, staling, size, packaging and more, and ruled Jaffa Cakes are cakes.",
  "hashtags": [
   "#legalloopholes",
@@ -50,7 +50,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🧾",
+     "icon": "",
      "text": "CAKE = NO VAT"
     }
    ]
@@ -66,7 +66,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🍪",
+     "icon": "",
      "text": "CHOC BISCUIT = VAT"
     }
    ]
@@ -236,7 +236,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⚠️",
+     "icon": "",
      "text": "ONE PRODUCT ONLY"
     }
    ]

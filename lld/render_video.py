@@ -427,7 +427,6 @@ MONEY = {'dollars', 'dollar', 'million', 'millions', 'billion', 'billions', 'mon
 SHOCK = {'kill', 'killed', 'murder', 'death', 'destroyed', 'seized', 'arrested', 'prison', 'jail', 'escape', 'stolen'}
 for (a, b, wtxt), n_ in zip(words, wn):
     if n_ in MONEY: SFX_EVENTS.append((b, 'cash'))
-    if n_ in SHOCK: SFX_EVENTS.append((b + 0.05, 'gasp'))
 # energy: every exclamation gets a quick punch-in and a dutch tilt (no sound of its own)
 TILTS = []
 _planned = [z['t'] for sc in scenes for z in sc['zooms']]
@@ -483,7 +482,7 @@ STICKERS = []
 for t_, n_ in SFX_EVENTS:
     if n_ in STICKER_FOR and t_ > 2.5 and (not STICKERS or t_ - STICKERS[-1][0] >= 2.5) and len(STICKERS) < 14 \
             and not (BRAND.get('stickers', True) is False):
-        STICKERS.append((t_, STICKER_FOR[n_], len(STICKERS) % 2))
+        pass   # owner 2026-11-10: no emojis anywhere, so no reaction stickers
 
 def scene_at(t):
     for sc in reversed(scenes):
@@ -852,7 +851,7 @@ def render_3d_base(nframes):
         for j, it in enumerate(board):
             nxt = board[j + 1]['t'] if j + 1 < len(board) else sc['end']
             end = min(nxt, it['t'] + it['hold']) if it.get('hold') else nxt
-            out_.append(dict({k: it[k] for k in ('icon', 'text', 'sub') if k in it}, id=it['id'], t=it['t'], end=end))
+            out_.append(dict({k: it[k] for k in ('text', 'sub') if k in it}, id=it['id'], t=it['t'], end=end))   # no emoji icons
         for it in sc['items']:
             if 'id' in it and it.get('anim') == 'roll':
                 out_.append({'id': it['id'], 't': it['t'], 'anim': 'roll', 'roll_time': it.get('roll_time', 2.0)})
@@ -865,7 +864,7 @@ def render_3d_base(nframes):
                       'items': items_3d(sc), 'zooms': [{'t': z['t'], 'amount': z.get('amount', 1.18), 'hold': z.get('hold', 0.9)} for z in sc['zooms']]}
                      for sc in scenes],
           'share': None if SHARE_T0 is None else [SHARE_T0, SHARE_T1],   # camera pulls back to make room for the share card
-          'shakes': [t_ for t_, n_ in SFX_EVENTS if n_ in ('vine', 'hit', 'boom', 'scratch', 'airhorn')],
+          'shakes': [],                     # owner 2026-11-10: no camera shakes
           'tilts': TILTS,
           'style': os.environ.get('LLD_STYLE') or BRAND.get('style', 'classic')}   # classic | toon | diorama | noir
     tl_path, base = os.path.abspath(out + '.timeline.json'), os.path.abspath(out + '.base3d.mp4')

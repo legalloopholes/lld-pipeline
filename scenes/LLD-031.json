@@ -7,7 +7,7 @@
   "authorship",
   "monkey"
  ],
- "youtube_title": "If a Monkey Takes the Photo, Who Owns the Copyright? 🦝⚖️",
+ "youtube_title": "If a Monkey Takes the Photo, Who Owns the Copyright?",
  "caption": "The U.S. Copyright Office won't register works produced by animals — and its own rulebook lists 'a photo taken by a monkey' as an example. Owning the camera isn't the same as being the author.",
  "hashtags": [
   "#legalloopholes",
@@ -75,7 +75,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "📸",
+     "icon": "",
      "text": "WHO IS THE AUTHOR?"
     }
    ]
@@ -91,7 +91,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🐒",
+     "icon": "",
      "text": "MONKEY PHOTO: NO"
     }
    ]
@@ -129,7 +129,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⚠️",
+     "icon": "",
      "text": "HUMANS CAN STILL OWN"
     }
    ]

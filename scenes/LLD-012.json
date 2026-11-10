@@ -7,7 +7,7 @@
   "garment",
   "sleeves"
  ],
- "youtube_title": "The Snuggie Beat the Clothing Tariff — Sleeves and All 🦝⚖️",
+ "youtube_title": "The Snuggie Beat the Clothing Tariff — Sleeves and All",
  "caption": "In 2017 the Court of International Trade ruled the Snuggie is a blanket, not a garment, for tariff purposes: designed, used and sold as a blanket, with sleeves the court called incidental.",
  "hashtags": [
   "#legalloopholes",
@@ -81,7 +81,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🧾",
+     "icon": "",
      "text": "CLOTHING: ~15% TAX"
     }
    ]
@@ -117,7 +117,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🧥",
+     "icon": "",
      "text": "NO BUTTONS. NO ZIPPER"
     }
    ]
@@ -182,7 +182,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⚠️",
+     "icon": "",
      "text": "ONE PRODUCT ONLY"
     }
    ]

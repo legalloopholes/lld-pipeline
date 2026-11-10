@@ -7,7 +7,7 @@
   "three",
   "character"
  ],
- "youtube_title": "Why Part of a Fund Manager's Pay Can Be Taxed Differently 🦝⚖️",
+ "youtube_title": "Why Part of a Fund Manager's Pay Can Be Taxed Differently",
  "caption": "Carried interest is a fund manager's share of profits, which can keep long-term capital gain character. Since 2018, section 1061 generally requires a more-than-three-year holding period; fees are still ordinary income.",
  "hashtags": [
   "#legalloopholes",
@@ -68,7 +68,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "💼",
+     "icon": "",
      "text": "FEE = PAYCHECK TAX"
     }
    ]
@@ -84,7 +84,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "📈",
+     "icon": "",
      "text": "CUT = CARRIED INTEREST"
     }
    ]
@@ -113,7 +113,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "📉",
+     "icon": "",
      "text": "LOWER RATE"
     }
    ]
@@ -151,7 +151,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⏳",
+     "icon": "",
      "text": "3 YEAR RULE"
     }
    ]
@@ -167,7 +167,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⚠️",
+     "icon": "",
      "text": "NOT AN OPINION"
     }
    ]

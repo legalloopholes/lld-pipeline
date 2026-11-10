@@ -7,7 +7,7 @@
   "basis",
   "income"
  ],
- "youtube_title": "Buy, Borrow, Die: How the Rich Spend Without Selling 🦝⚖️",
+ "youtube_title": "Buy, Borrow, Die: How the Rich Spend Without Selling",
  "caption": "'Buy, borrow, die' describes how untaxed gains, tax-free loan proceeds and the date-of-death basis rule can interact. Interest, collateral calls, estate tax and repayment mean it's not a zero-tax guarantee.",
  "hashtags": [
   "#legalloopholes",
@@ -50,7 +50,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "📈",
+     "icon": "",
      "text": "STEP 1: BUY"
     }
    ]
@@ -99,7 +99,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🪦",
+     "icon": "",
      "text": "STEP 3: DIE"
     }
    ]
@@ -137,7 +137,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⚠️",
+     "icon": "",
      "text": "NOT ZERO TAX"
     }
    ]

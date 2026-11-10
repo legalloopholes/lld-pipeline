@@ -7,7 +7,7 @@
   "use",
   "revoked"
  ],
- "youtube_title": "McDonald's Lost Part of Its 'Big Mac' Trademark in the EU 🦝⚖️",
+ "youtube_title": "McDonald's Lost Part of Its 'Big Mac' Trademark in the EU",
  "caption": "In June 2024 the EU General Court partially revoked the BIG MAC trade mark for chicken products and restaurant services for lack of proven genuine use. Protection for meat sandwiches remained.",
  "hashtags": [
   "#legalloopholes",
@@ -48,7 +48,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🍔",
+     "icon": "",
      "text": "BIG MAC: EVERYTHING"
     }
    ]
@@ -64,7 +64,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⏳",
+     "icon": "",
      "text": "USE IT OR LOSE IT"
     }
    ]
@@ -169,7 +169,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🍗",
+     "icon": "",
      "text": "CHICKEN: GONE"
     }
    ]
@@ -185,7 +185,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⚠️",
+     "icon": "",
      "text": "THE BURGER SURVIVED"
     }
    ]

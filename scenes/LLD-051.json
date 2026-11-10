@@ -7,7 +7,7 @@
   "chance",
   "free"
  ],
- "youtube_title": "Why Every Giveaway Says 'No Purchase Necessary' 🦝⚖️",
+ "youtube_title": "Why Every Giveaway Says 'No Purchase Necessary'",
  "caption": "A lottery generally combines a prize, chance and payment. The FTC says purchase-required sweepstakes are illegal in the U.S. — which is why giveaways offer free entry. State rules still apply.",
  "hashtags": [
   "#legalloopholes",
@@ -49,7 +49,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🎰",
+     "icon": "",
      "text": "PRIZE. LUCK. PAYING."
     }
    ]
@@ -65,7 +65,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🚫",
+     "icon": "",
      "text": "PRIVATE LOTTERY"
     }
    ]
@@ -94,7 +94,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "✂️",
+     "icon": "",
      "text": "CUT THE PAYING PART"
     }
    ]
@@ -132,7 +132,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⚠️",
+     "icon": "",
      "text": "NOT A MAGIC SPELL"
     }
    ]

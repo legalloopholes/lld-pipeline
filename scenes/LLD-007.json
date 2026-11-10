@@ -7,7 +7,7 @@
   "exempt",
   "creditor"
  ],
- "youtube_title": "Could a Rare Bible Beat a Debt Collector in New York? 🦝⚖️",
+ "youtube_title": "Could a Rare Bible Beat a Debt Collector in New York?",
  "caption": "New York's CPLR 5205 lists religious texts used by a debtor's family as exempt without a stated dollar cap, while other books are capped at $500. A textual quirk — not a tested strategy.",
  "hashtags": [
   "#legalloopholes",
@@ -95,7 +95,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "📜",
+     "icon": "",
      "text": "NEW YORK DEBT LAW"
     }
    ]
@@ -111,7 +111,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "📚",
+     "icon": "",
      "text": "BOOKS: $500 MAX"
     }
    ]
@@ -127,7 +127,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "📖",
+     "icon": "",
      "text": "BIBLE: NO LIMIT"
     }
    ]
@@ -185,7 +185,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⚠️",
+     "icon": "",
      "text": "NEVER TESTED IN COURT"
     }
    ]

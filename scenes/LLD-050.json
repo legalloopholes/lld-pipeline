@@ -7,7 +7,7 @@
   "government",
   "patent"
  ],
- "youtube_title": "The U.S. Government Can Use Your Patent Without Asking — Then Pay 🦝⚖️",
+ "youtube_title": "The U.S. Government Can Use Your Patent Without Asking — Then Pay",
  "caption": "Under 28 U.S.C. §1498, when the U.S. government (or an authorized contractor) uses a patented invention without a license, the owner's remedy is compensation from the government in the Court of Federal Claims.",
  "hashtags": [
   "#legalloopholes",
@@ -48,7 +48,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🛑",
+     "icon": "",
      "text": "PATENT = STOP SIGN"
     }
    ]
@@ -104,7 +104,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🏛️",
+     "icon": "",
      "text": "FEDERAL LAW: NO STOP"
     }
    ]
@@ -162,7 +162,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⚠️",
+     "icon": "",
      "text": "NOT A FREE PASS"
     }
    ]

@@ -7,7 +7,7 @@
   "income",
   "home"
  ],
- "youtube_title": "Rent Your Home Under 15 Days and the IRS Lets the Rent Go Untaxed 🦝⚖️",
+ "youtube_title": "Rent Your Home Under 15 Days and the IRS Lets the Rent Go Untaxed",
  "caption": "IRS Publication 527: if you rent out a place you also use as your home for less than 15 days in a year, you don't include the rent in income — and you can't treat the costs as rental expenses. State and local rules can still apply.",
  "hashtags": [
   "#legalloopholes",
@@ -88,7 +88,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "💸",
+     "icon": "",
      "text": "RENT = INCOME"
     }
    ]
@@ -104,7 +104,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "📅",
+     "icon": "",
      "text": "UNDER 15 DAYS"
     }
    ]
@@ -142,7 +142,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⚠️",
+     "icon": "",
      "text": "IT MUST BE YOUR HOME"
     }
    ]
@@ -191,7 +191,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🧾",
+     "icon": "",
      "text": "DAY 15: REPORT IT ALL"
     }
    ]

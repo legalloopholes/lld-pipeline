@@ -7,7 +7,7 @@
   "nearby",
   "distant"
  ],
- "youtube_title": "Why Your Cruise Between U.S. Ports Stops in Another Country 🦝⚖️",
+ "youtube_title": "Why Your Cruise Between U.S. Ports Stops in Another Country",
  "caption": "Under the Passenger Vessel Services Act regulations, a non-U.S.-qualified ship can sail a round trip from one U.S. port with a nearby foreign stop — but ending at a different U.S. port needs a distant foreign port.",
  "hashtags": [
   "#legalloopholes",
@@ -81,7 +81,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🚢",
+     "icon": "",
      "text": "A LAW FROM 1886"
     }
    ]
@@ -97,7 +97,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🇺🇸",
+     "icon": "",
      "text": "US TO US: NOT ALLOWED"
     }
    ]
@@ -135,7 +135,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⚠️",
+     "icon": "",
      "text": "DIFFERENT PORT? HARDER"
     }
    ]

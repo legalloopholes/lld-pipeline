@@ -75,5 +75,8 @@ hashtags = ' '.join(tags)
 description = '\n\n'.join([caption, add(hashtags, YOUTUBE_ALWAYS), 'Not legal advice. For education and entertainment only.',
                            'Follow @legalloopholesdaily for more.'])
 tiktok_caption = (caption + ' ' + add(hashtags, TIKTOK_ALWAYS))[:2200]
+_EMOJI = re.compile('[\U0001F000-\U0001FFFF\u2600-\u27BF\u2B00-\u2BFF\uFE0F\u200D]')
+noemo = lambda x: re.sub(r'[ \t]{2,}', ' ', _EMOJI.sub('', x)).strip() if isinstance(x, str) else [noemo(i) for i in x] if isinstance(x, list) else x
+title, caption, hashtags, description, tiktok_caption = map(noemo, (title, caption, hashtags, description, tiktok_caption))   # owner: no emojis
 print(json.dumps({'title': title, 'caption': caption, 'hashtags': hashtags,
                   'description': description, 'tiktok_caption': tiktok_caption}))

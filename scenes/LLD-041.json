@@ -7,7 +7,7 @@
   "hardship",
   "qualified"
  ],
- "youtube_title": "Your Lender Calls It a Student Loan. Bankruptcy Law Might Not 🦝⚖️",
+ "youtube_title": "Your Lender Calls It a Student Loan. Bankruptcy Law Might Not",
  "caption": "Bankruptcy Code §523(a)(8) protects specific categories of education debt from discharge. A private loan that fits none of them may be treated like ordinary debt — but many loans do fit, and details decide it.",
  "hashtags": [
   "#legalloopholes",
@@ -49,7 +49,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "💳",
+     "icon": "",
      "text": "CREDIT CARD: WIPED"
     }
    ]
@@ -65,7 +65,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🎓",
+     "icon": "",
      "text": "STUDENT LOANS: HARD"
     }
    ]
@@ -94,7 +94,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "📜",
+     "icon": "",
      "text": "ONLY CERTAIN LOANS"
     }
    ]
@@ -132,7 +132,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🚪",
+     "icon": "",
      "text": "NOT ON THE LIST?"
     }
    ]
@@ -148,7 +148,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⚠️",
+     "icon": "",
      "text": "MOST LOANS FIT"
     }
    ]

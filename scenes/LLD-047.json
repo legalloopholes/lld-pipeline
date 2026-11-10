@@ -7,7 +7,7 @@
   "acre",
   "exceptions"
  ],
- "youtube_title": "Lose a Lawsuit — and Your Florida Mansion May Still Be Protected 🦝⚖️",
+ "youtube_title": "Lose a Lawsuit — and Your Florida Mansion May Still Be Protected",
  "caption": "Florida's constitutional homestead exemption limits protection by acreage — up to half an acre in a city — not by dollar value. Taxes, mortgages, repair and improvement debts, and federal and bankruptcy rules are exceptions.",
  "hashtags": [
   "#legalloopholes",
@@ -69,7 +69,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🏠",
+     "icon": "",
      "text": "FLORIDA CONSTITUTION"
     }
    ]
@@ -85,7 +85,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "📏",
+     "icon": "",
      "text": "LAND LIMIT, NOT $"
     }
    ]
@@ -123,7 +123,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⚠️",
+     "icon": "",
      "text": "BIG EXCEPTIONS"
     }
    ]
@@ -139,7 +139,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🚨",
+     "icon": "",
      "text": "FRAUD RULES"
     }
    ]

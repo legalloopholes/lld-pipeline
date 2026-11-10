@@ -65,7 +65,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "📜",
+     "icon": "",
      "text": "SIXTH AMENDMENT"
     }
    ]
@@ -81,7 +81,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🗺️",
+     "icon": "",
      "text": "ALL OF IT = WYOMING"
     }
    ]
@@ -117,7 +117,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "👥",
+     "icon": "",
      "text": "ELIGIBLE JURORS: 0"
     }
    ]
@@ -162,7 +162,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⚠️",
+     "icon": "",
      "text": "UNTESTED THEORY"
     }
    ]
@@ -227,7 +227,7 @@
   "wyoming",
   "sixth"
  ],
- "youtube_title": "The U.S. Zone Where No Jury Can Exist 🦝⚖️",
+ "youtube_title": "The U.S. Zone Where No Jury Can Exist",
  "caption": "A tiny piece of Yellowstone sits in Idaho but belongs to Wyoming's federal district, and that might make a constitutional jury impossible.",
  "hashtags": [
   "#legalloopholes",

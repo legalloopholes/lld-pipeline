@@ -7,7 +7,7 @@
   "expired",
   "hospital"
  ],
- "youtube_title": "Peter Pan's Copyright Expired — but a Children's Hospital Still Gets Royalties 🦝⚖️",
+ "youtube_title": "Peter Pan's Copyright Expired — but a Children's Hospital Still Gets Royalties",
  "caption": "Peter Pan's UK copyright expired at the end of 1987, but section 301 of the Copyright, Designs and Patents Act 1988 gives Great Ormond Street Hospital a continuing royalty right for performances, publication and adaptations.",
  "hashtags": [
   "#legalloopholes",
@@ -62,7 +62,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⏰",
+     "icon": "",
      "text": "COPYRIGHT ENDS: 1987"
     }
    ]
@@ -91,7 +91,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🏛️",
+     "icon": "",
      "text": "LAW FROM 1988"
     }
    ]
@@ -129,7 +129,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🏥",
+     "icon": "",
      "text": "SCHOOL PLAYS TOO"
     }
    ]
@@ -145,7 +145,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⚠️",
+     "icon": "",
      "text": "U.K. ONLY"
     }
    ]

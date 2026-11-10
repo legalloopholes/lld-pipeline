@@ -7,7 +7,7 @@
   "expected",
   "guaranteed"
  ],
- "youtube_title": "The Lottery Players Who Made the Odds Work for Them 🦝⚖️",
+ "youtube_title": "The Lottery Players Who Made the Odds Work for Them",
  "caption": "Massachusetts' Cash WinFall rolled its jackpot down to smaller prizes once the pool hit $2 million. Organized groups bet heavily on those draws for a favorable expected return. A state review found no illicit activity by bettors; the game was ended.",
  "hashtags": [
   "#legalloopholes",
@@ -63,7 +63,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "💰",
+     "icon": "",
      "text": "JACKPOT: $2,000,000"
     }
    ]
@@ -92,7 +92,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🎟️",
+     "icon": "",
      "text": "BUY A MOUNTAIN"
     }
    ]
@@ -177,7 +177,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⚠️",
+     "icon": "",
      "text": "NORMAL LOTTERIES: NO"
     }
    ]

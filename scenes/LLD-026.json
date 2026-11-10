@@ -7,7 +7,7 @@
   "vegetable",
   "fruit"
  ],
- "youtube_title": "The Supreme Court Ruled a Tomato Is a Vegetable — Because of a Tax 🦝⚖️",
+ "youtube_title": "The Supreme Court Ruled a Tomato Is a Vegetable — Because of a Tax",
  "caption": "In Nix v. Hedden (1893), importers argued tomatoes were fruit to avoid a vegetable tariff. The Supreme Court applied everyday meaning and treated them as vegetables under that law. Botany unchanged.",
  "hashtags": [
   "#legalloopholes",
@@ -48,7 +48,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🥕",
+     "icon": "",
      "text": "VEGETABLES: TAXED"
     }
    ]
@@ -153,7 +153,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "📖",
+     "icon": "",
      "text": "EVERYDAY WORDS WIN"
     }
    ]
@@ -169,7 +169,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⚠️",
+     "icon": "",
      "text": "SCIENCE DIDN'T CHANGE"
     }
    ]

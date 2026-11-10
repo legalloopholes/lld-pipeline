@@ -7,7 +7,7 @@
   "twenty",
   "mycitations"
  ],
- "youtube_title": "Lose a California Traffic Ticket on Paper — and Get a Brand-New Trial? 🦝⚖️",
+ "youtube_title": "Lose a California Traffic Ticket on Paper — and Get a Brand-New Trial?",
  "caption": "In California, losing a traditional trial by written declaration can let you request a new trial (trial de novo) within 20 days — but not in courts that offer online trials by declaration through MyCitations.",
  "hashtags": [
   "#legalloopholes",
@@ -62,7 +62,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "✉️",
+     "icon": "",
      "text": "TRIAL BY MAIL"
     }
    ]
@@ -98,7 +98,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "🔁",
+     "icon": "",
      "text": "NEW TRIAL, NEW JUDGE"
     }
    ]
@@ -143,7 +143,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⏰",
+     "icon": "",
      "text": "20 DAYS"
     }
    ]
@@ -159,7 +159,7 @@
    "props": [
     {
      "id": "sign",
-     "icon": "⚠️",
+     "icon": "",
      "text": "ONLINE COURTS DIFFER"
     }
    ]
