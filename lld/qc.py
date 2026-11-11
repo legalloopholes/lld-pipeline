@@ -53,7 +53,12 @@ else:
         vc = json.load(open(P('voicecheck.json')))
         m['retakes'] = vc.get('retakes'); m['speed'] = vc.get('speed')
         worst = [c for c in vc.get('lines', []) if c['score'] < QC['min_line_score']]
-        if worst: fails.append('lines still wrong after every take: ' + '; '.join(f"\"{c['line']}\" {c['diffs']}" for c in worst[:5]))
+        if worst:
+            msg = 'lines heard wrong when checked alone: ' + '; '.join(f"\"{c['line']}\" {c['diffs']}" for c in worst[:5])
+            # the whole read is the final word: if every word there is right (re-checked), a line-alone slip ("Oakhurst" ->
+            # "ocourse") is the recognizer, not Larry
+            if sc >= QC['min_voice_score'] and not m.get('confirmed_word_errors'): warns.append(msg + ' (fine in the whole read)')
+            else: fails.append(msg)
     except Exception: warns.append('no voicecheck.json')
 
 # ---- pacing ----

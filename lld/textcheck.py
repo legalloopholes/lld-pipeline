@@ -95,7 +95,25 @@ def heard(audio, sr):
             if tok.startswith((' ', '▁')) or not words: words.append([tok.strip(' ▁'), ts + i / 16000])
             else: words[-1][0] += tok
         i = j
-    return [w for w in words if spoken_keys(w[0])]
+    return [w for w in dollars(words) if spoken_keys(w[0])]
+
+
+SCALES = ('hundred', 'thousand', 'million', 'billion', 'trillion')
+
+
+def dollars(words):
+    """the recognizer writes "five million dollars" as "$5 million": put the spoken word "dollars" back"""
+    out = []
+    for i, (w, t) in enumerate(words):
+        out.append([w, t])
+        if w.startswith('$') and re.search(r'\d', w):
+            j = i + 1
+            if j < len(words) and re.sub(r'[^a-z]', '', words[j][0].lower()) in SCALES:
+                continue                                    # "dollars" goes after the scale word
+            out.append(['dollars', t + 0.2])
+        elif re.sub(r'[^a-z]', '', w.lower()) in SCALES and i > 0 and words[i - 1][0].startswith('$'):
+            out.append(['dollars', t + 0.3])
+    return out
 
 
 LETTERS = {'b': 'bee', 'c': 'see', 'u': 'you', 'r': 'are', 'y': 'why', 't': 'tea', 'o': 'oh', 'q': 'queue', 'j': 'jay'}
