@@ -268,6 +268,22 @@ def test():
     if not ok: raise SystemExit('some checks failed (see above)')
 
 
+def tiktok_again(vid):
+    """re-make one episode and send it to the TikTok inbox again (nothing else is posted, Status is left as it is)"""
+    head, rs = gapi.rows()
+    row = next((r for _, r in rs if r.get('Video ID') == vid), None)
+    if not row: raise SystemExit(f'{vid} is not in the sheet')
+    for _ in make(vid, row['SCRIPT']): pass
+    video = os.path.join(ROOT, f'{vid}-video.mp4'); loud(video)
+    r = sh([PY, f'{HERE}/lld/tiktok.py', 'draft', video], check=False)
+    tiktok_save()
+    tk = last_json(r.stdout); log('tiktok:', json.dumps(tk))
+    note = (f"Draft re-sent {datetime.datetime.now(ET):%Y-%m-%d %H:%M} ({tk.get('status')}, id {tk.get('publish_id')})"
+            " - open the TikTok app inbox, paste the Caption column and tap Post" if r.returncode == 0 else 'FAILED - see GitHub run ' + RUN_URL)
+    gapi.update(vid, {'TikTok URL': note})
+    if r.returncode != 0: raise SystemExit('TikTok draft failed: ' + (r.stdout + r.stderr)[-800:])
+
+
 if __name__ == '__main__':
     mode = sys.argv[1] if len(sys.argv) > 1 else ''
     if mode == 'window':                     # quick check used by the workflow before installing anything
@@ -277,4 +293,5 @@ if __name__ == '__main__':
         print('yes' if slot and not done else 'no')
     elif mode == 'live': live('--now' in sys.argv)
     elif mode == 'test': test()
+    elif mode == 'tiktok' and len(sys.argv) > 2: tiktok_again(sys.argv[2])
     else: print(__doc__)

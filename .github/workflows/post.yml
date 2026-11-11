@@ -11,10 +11,14 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: 'test = render + check accounts, no posting.  live = post the next episode now.'
+        description: 'test = render + check accounts, no posting.  live = post the next episode now.  tiktok = re-send one episode to the TikTok inbox.'
         type: choice
-        options: [test, live]
+        options: [test, live, tiktok]
         default: test
+      video_id:
+        description: 'for tiktok: the Video ID to re-send, e.g. LLD-002'
+        type: string
+        default: ''
 
 concurrency:
   group: lld-post
@@ -184,6 +188,9 @@ jobs:
         if: steps.gate.outputs.go == 'yes'
         env:
           STATE_KEY: ${{ secrets.STATE_KEY }}
+          VIDEO_ID: ${{ inputs.video_id }}
           LLD_FONT: ${{ github.workspace }}/fonts/mplusrounded1c/MPLUSRounded1c-ExtraBold.ttf
         run: |
-          if [ "$MODE" = "live" ] && [ "${{ github.event_name }}" != "schedule" ]; then python run.py live --now; else python run.py "$MODE"; fi
+          if [ "$MODE" = "live" ] && [ "${{ github.event_name }}" != "schedule" ]; then python run.py live --now
+          elif [ "$MODE" = "tiktok" ]; then python run.py tiktok "$VIDEO_ID"
+          else python run.py "$MODE"; fi
