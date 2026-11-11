@@ -185,7 +185,9 @@ def live(force_now):
 
     r = sh([PY, f'{HERE}/lld/tiktok.py', 'draft', video], check=False)
     tiktok_save()
-    results['TikTok URL'] = (f"Draft sent {datetime.datetime.now(ET):%Y-%m-%d %H:%M} - paste the Caption column and tap Post"
+    tk = last_json(r.stdout); log('tiktok:', json.dumps(tk))         # publish_id + TikTok's own status, for tracing a missing draft
+    results['TikTok URL'] = (f"Draft sent {datetime.datetime.now(ET):%Y-%m-%d %H:%M} ({tk.get('status')}, id {tk.get('publish_id')})"
+                             " - open the TikTok app inbox, paste the Caption column and tap Post"
                              if r.returncode == 0 else 'FAILED - see GitHub run ' + RUN_URL)
     gapi.update(vid, {'TikTok URL': results['TikTok URL']})
 
