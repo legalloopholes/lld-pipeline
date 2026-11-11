@@ -85,16 +85,32 @@ jobs:
           ln -sfn "$GITHUB_WORKSPACE/assets" ~/.n8n-files/assets
           ln -sfn "$GITHUB_WORKSPACE/larry-3d" ~/.n8n-files/larry-3d
 
+      - name: System packages cache (ffmpeg and fonts as .deb files, so no Ubuntu mirror is needed)
+        if: steps.gate.outputs.go == 'yes'
+        uses: actions/cache@v4
+        with:
+          path: ~/apt-debs
+          key: apt-debs-ubuntu2404-ffmpeg-fonts-v1
+
       - name: System packages and fonts
         if: steps.gate.outputs.go == 'yes'
         timeout-minutes: 20
         run: |
-          # 2026-11-11: an Ubuntu mirror stalled apt for 81 min and the noon post went out late; time out and retry instead
-          A="-o Acquire::Retries=3 -o Acquire::http::Timeout=30 -o Acquire::https::Timeout=30"
-          for i in 1 2 3; do
-            sudo timeout 240 apt-get update -q $A && sudo timeout 300 apt-get install -y -q $A ffmpeg fonts-noto-color-emoji fonts-liberation fonts-dejavu-core && break
-            echo "apt try $i failed; retrying"; sleep 10
-          done
+          # 2026-11-11: an Ubuntu mirror stalled apt for 81 min and the noon post went out late. Now the packages come from
+          # the cache above (no network); only if that fails is the mirror used, with timeouts and retries.
+          PKGS="ffmpeg fonts-noto-color-emoji fonts-liberation fonts-dejavu-core"
+          if ls ~/apt-debs/*.deb >/dev/null 2>&1 && sudo dpkg -i ~/apt-debs/*.deb >/dev/null 2>&1 && command -v ffmpeg >/dev/null; then
+            echo "packages installed from cache ($(ls ~/apt-debs/*.deb | wc -l) files)"
+          else
+            sudo dpkg --configure -a || true
+            mkdir -p ~/apt-debs/partial
+            A="-o Acquire::Retries=3 -o Acquire::http::Timeout=30 -o Acquire::https::Timeout=30 -o Dir::Cache::archives=$HOME/apt-debs"
+            for i in 1 2 3; do
+              sudo timeout 240 apt-get update -q $A && sudo timeout 300 apt-get install -y -q -f $A $PKGS && break
+              echo "apt try $i failed; retrying"; sleep 10
+            done
+            sudo chown -R "$USER" ~/apt-debs; rm -rf ~/apt-debs/partial ~/apt-debs/lock
+          fi
           command -v ffmpeg || { echo "::error::ffmpeg could not be installed"; exit 1; }
           mkdir -p ~/.local/share/fonts ~/.config/fontconfig
           cp fonts/*/*.ttf ~/.local/share/fonts/
