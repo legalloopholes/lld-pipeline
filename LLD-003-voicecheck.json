@@ -1,0 +1,406 @@
+{
+ "speed": 1.04,
+ "words_per_second": 3.37,
+ "whole_read_errors": [
+  [
+   "dollars",
+   1.48,
+   "lost five million because somebody skipped one comma meet kevin"
+  ],
+  [
+   "twenty",
+   48.13,
+   "wins so in 2017 a federal appeals court calls the"
+  ],
+  [
+   "seventeen,",
+   48.45,
+   "so in 2017 a federal appeals court calls the list unconscious"
+  ],
+  [
+   "dollars.",
+   66.69,
+   "company ten million so the next time someone says punctuation"
+  ]
+ ],
+ "seconds": 70.34,
+ "bad_lines": [
+  {
+   "line": "But his company, Oakhurst Dairy, doesn't pay him overtime.",
+   "take": 4,
+   "ok": false,
+   "score": 0.833,
+   "diffs": [
+    [
+     "oakhurst",
+     "ocourse"
+    ]
+   ],
+   "rate": 3.43,
+   "dead_air": 0.11
+  },
+  {
+   "line": "A dairy company lost five million dollars because somebody skipped one comma.",
+   "take": 9,
+   "ok": false,
+   "score": 0.917,
+   "diffs": [
+    [
+     "dollars",
+     ""
+    ]
+   ],
+   "rate": 4.03,
+   "dead_air": 0.09
+  },
+  {
+   "line": "So in twenty seventeen, a federal appeals court calls the list unclear and sides with the drivers.",
+   "take": 9,
+   "ok": false,
+   "score": 0.853,
+   "diffs": [
+    [
+     "twenty seventeen",
+     "2017"
+    ]
+   ],
+   "rate": 3.64,
+   "dead_air": 0.09
+  },
+  {
+   "line": "So the dairy settles for five million dollars.",
+   "take": 14,
+   "ok": false,
+   "score": 0.875,
+   "diffs": [
+    [
+     "dollars",
+     ""
+    ]
+   ],
+   "rate": 4.4,
+   "dead_air": 0.07
+  },
+  {
+   "line": "Send this to the friend whose texts would cost a company ten million dollars.",
+   "take": 13,
+   "ok": false,
+   "score": 0.929,
+   "diffs": [
+    [
+     "dollars",
+     ""
+    ]
+   ],
+   "rate": 4.38,
+   "dead_air": 0.07
+  }
+ ],
+ "retakes": 9,
+ "lines": [
+  {
+   "line": "Meet Kevin. Kevin drives a milk truck in Maine.",
+   "take": 0,
+   "ok": true,
+   "score": 1.0,
+   "diffs": [],
+   "rate": 3.44,
+   "dead_air": 0.32
+  },
+  {
+   "line": "He delivers milk all day.",
+   "take": 0,
+   "ok": true,
+   "score": 1.0,
+   "diffs": [],
+   "rate": 3.55,
+   "dead_air": 0.11
+  },
+  {
+   "line": "Kevin works long weeks.",
+   "take": 0,
+   "ok": true,
+   "score": 1.0,
+   "diffs": [],
+   "rate": 2.9,
+   "dead_air": 0.06
+  },
+  {
+   "line": "But his company, Oakhurst Dairy, doesn't pay him overtime.",
+   "take": 4,
+   "ok": false,
+   "score": 0.833,
+   "diffs": [
+    [
+     "oakhurst",
+     "ocourse"
+    ]
+   ],
+   "rate": 3.43,
+   "dead_air": 0.11
+  },
+  {
+   "line": "The dairy points to state law.",
+   "take": 1,
+   "ok": true,
+   "score": 1.0,
+   "diffs": [],
+   "rate": 4.4,
+   "dead_air": 0.13
+  },
+  {
+   "line": "In Maine, some food jobs don't get overtime.",
+   "take": 0,
+   "ok": true,
+   "score": 1.0,
+   "diffs": [],
+   "rate": 3.38,
+   "dead_air": 0.06
+  },
+  {
+   "line": "The law lists them.",
+   "take": 0,
+   "ok": true,
+   "score": 1.0,
+   "diffs": [],
+   "rate": 3.16,
+   "dead_air": 0.14
+  },
+  {
+   "line": "Canning, processing, preserving, freezing, drying, marketing, storing, packing for shipment or distribution.",
+   "take": 3,
+   "ok": true,
+   "score": 1.0,
+   "diffs": [],
+   "rate": 2.73,
+   "dead_air": 0.09
+  },
+  {
+   "line": "Look at the end.",
+   "take": 0,
+   "ok": true,
+   "score": 1.0,
+   "diffs": [],
+   "rate": 4.11,
+   "dead_air": 0.09
+  },
+  {
+   "line": "There's no comma after the word shipment.",
+   "take": 0,
+   "ok": true,
+   "score": 1.0,
+   "diffs": [],
+   "rate": 3.58,
+   "dead_air": 0.14
+  },
+  {
+   "line": "So Kevin's lawyers ask a simple question.",
+   "take": 0,
+   "ok": true,
+   "score": 1.0,
+   "diffs": [],
+   "rate": 3.7,
+   "dead_air": 0.12
+  },
+  {
+   "line": "Is distribution its own job?",
+   "take": 0,
+   "ok": true,
+   "score": 1.0,
+   "diffs": [],
+   "rate": 3.65,
+   "dead_air": 0.12
+  },
+  {
+   "line": "Or is the job packing, for shipment or for distribution?",
+   "take": 0,
+   "ok": true,
+   "score": 1.0,
+   "diffs": [],
+   "rate": 3.59,
+   "dead_air": 0.08
+  },
+  {
+   "line": "The dairy says Kevin distributes milk.",
+   "take": 0,
+   "ok": true,
+   "score": 1.0,
+   "diffs": [],
+   "rate": 4.09,
+   "dead_air": 0.1
+  },
+  {
+   "line": "So, no overtime.",
+   "take": 0,
+   "ok": true,
+   "score": 1.0,
+   "diffs": [],
+   "rate": 2.02,
+   "dead_air": 0.11
+  },
+  {
+   "line": "Kevin says he doesn't pack anything.",
+   "take": 0,
+   "ok": true,
+   "score": 1.0,
+   "diffs": [],
+   "rate": 3.95,
+   "dead_air": 0.08
+  },
+  {
+   "line": "He just drives.",
+   "take": 0,
+   "ok": true,
+   "score": 1.0,
+   "diffs": [],
+   "rate": 3.11,
+   "dead_air": 0.14
+  },
+  {
+   "line": "Wait. A whole overtime fight comes down to one comma?",
+   "take": 0,
+   "ok": true,
+   "score": 1.0,
+   "diffs": [],
+   "rate": 3.52,
+   "dead_air": 0.26
+  },
+  {
+   "line": "It's like a tie in baseball.",
+   "take": 1,
+   "ok": true,
+   "score": 1.0,
+   "diffs": [],
+   "rate": 3.63,
+   "dead_air": 0.14
+  },
+  {
+   "line": "The runner wins.",
+   "take": 0,
+   "ok": true,
+   "score": 1.0,
+   "diffs": [],
+   "rate": 3.43,
+   "dead_air": 0.08
+  },
+  {
+   "line": "Their case is back on.",
+   "take": 0,
+   "ok": true,
+   "score": 1.0,
+   "diffs": [],
+   "rate": 4.21,
+   "dead_air": 0.03
+  },
+  {
+   "line": "The ruling itself paid nobody.",
+   "take": 0,
+   "ok": true,
+   "score": 1.0,
+   "diffs": [],
+   "rate": 3.35,
+   "dead_air": 0.08
+  },
+  {
+   "line": "It sent the case back to court.",
+   "take": 0,
+   "ok": true,
+   "score": 1.0,
+   "diffs": [],
+   "rate": 5.38,
+   "dead_air": 0.15
+  },
+  {
+   "line": "And Maine later rewrote the law with semicolons.",
+   "take": 0,
+   "ok": true,
+   "score": 1.0,
+   "diffs": [],
+   "rate": 3.28,
+   "dead_air": 0.11
+  },
+  {
+   "line": "Because of a comma nobody typed.",
+   "take": 0,
+   "ok": true,
+   "score": 1.0,
+   "diffs": [],
+   "rate": 2.83,
+   "dead_air": 0.1
+  },
+  {
+   "line": "So the next time someone says punctuation doesn't matter, remember",
+   "take": 0,
+   "ok": true,
+   "score": 1.0,
+   "diffs": [],
+   "rate": 0,
+   "dead_air": 0
+  },
+  {
+   "line": "You see, when a pay law for workers can be read two ways, Maine leans toward the workers.",
+   "take": 6,
+   "ok": true,
+   "score": 1.0,
+   "diffs": [],
+   "rate": 4.3,
+   "dead_air": 0.22
+  },
+  {
+   "line": "A dairy company lost five million dollars because somebody skipped one comma.",
+   "take": 9,
+   "ok": false,
+   "score": 0.917,
+   "diffs": [
+    [
+     "dollars",
+     ""
+    ]
+   ],
+   "rate": 4.03,
+   "dead_air": 0.09
+  },
+  {
+   "line": "So in twenty seventeen, a federal appeals court calls the list unclear and sides with the drivers.",
+   "take": 9,
+   "ok": false,
+   "score": 0.853,
+   "diffs": [
+    [
+     "twenty seventeen",
+     "2017"
+    ]
+   ],
+   "rate": 3.64,
+   "dead_air": 0.09
+  },
+  {
+   "line": "So the dairy settles for five million dollars.",
+   "take": 14,
+   "ok": false,
+   "score": 0.875,
+   "diffs": [
+    [
+     "dollars",
+     ""
+    ]
+   ],
+   "rate": 4.4,
+   "dead_air": 0.07
+  },
+  {
+   "line": "Send this to the friend whose texts would cost a company ten million dollars.",
+   "take": 13,
+   "ok": false,
+   "score": 0.929,
+   "diffs": [
+    [
+     "dollars",
+     ""
+    ]
+   ],
+   "rate": 4.38,
+   "dead_air": 0.07
+  }
+ ]
+}

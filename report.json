@@ -1,0 +1,194 @@
+{
+ "sheet": "read ok; next SCRIPTED row is LLD-003 (row 4)",
+ "render_seconds": 2739,
+ "music": "Music: \"The Builder\" Kevin MacLeod (incompetech.com)",
+ "quality": {
+  "ok": false,
+  "video_id": "LLD-003",
+  "fails": [
+   "words Larry says wrong: \"dollars\" at 1.48s (heard: ...se somebody skipped one comma meet kevin); \"twenty\" at 48.13s (heard: ...n 2017 a federal appeals court calls the); \"seventeen,\" at 48.45s (heard: ...appeals court calls the list unconscious); \"dollars.\" at 66.69s (heard: ...o the next time someone says punctuation)",
+   "lines still wrong after every take: \"But his company, Oakhurst Dairy, doesn't pay him overtime.\" [['oakhurst', 'ocourse']]"
+  ],
+  "warnings": [],
+  "metrics": {
+   "seconds": 70.34,
+   "voice_score": 0.962,
+   "voice_differences": [
+    [
+     "dollars",
+     ""
+    ],
+    [
+     "",
+     "ah"
+    ],
+    [
+     "maine",
+     "main"
+    ],
+    [
+     "twenty seventeen",
+     "2017"
+    ],
+    [
+     "dollars",
+     ""
+    ],
+    [
+     "texts",
+     "text"
+    ],
+    [
+     "dollars",
+     ""
+    ]
+   ],
+   "confirmed_word_errors": [
+    [
+     "dollars",
+     1.48,
+     "lost five million because somebody skipped one comma meet kevin"
+    ],
+    [
+     "twenty",
+     48.13,
+     "wins so in 2017 a federal appeals court calls the"
+    ],
+    [
+     "seventeen,",
+     48.45,
+     "so in 2017 a federal appeals court calls the list unconscious"
+    ],
+    [
+     "dollars.",
+     66.69,
+     "company ten million so the next time someone says punctuation"
+    ]
+   ],
+   "retakes": 9,
+   "speed": 1.04,
+   "words_per_second": 3.37,
+   "longest_pause": 0.39,
+   "caption_words": 237,
+   "caption_timing_max_drift": 0.26,
+   "shots": 15,
+   "loudest_other_sound_db": -3.0,
+   "loudest_vs_voice_db": 2.0,
+   "peak": 0.889
+  }
+ },
+ "voicecheck": {
+  "speed": 1.04,
+  "words_per_second": 3.37,
+  "whole_read_errors": [
+   [
+    "dollars",
+    1.48,
+    "lost five million because somebody skipped one comma meet kevin"
+   ],
+   [
+    "twenty",
+    48.13,
+    "wins so in 2017 a federal appeals court calls the"
+   ],
+   [
+    "seventeen,",
+    48.45,
+    "so in 2017 a federal appeals court calls the list unconscious"
+   ],
+   [
+    "dollars.",
+    66.69,
+    "company ten million so the next time someone says punctuation"
+   ]
+  ],
+  "seconds": 70.34,
+  "bad_lines": [
+   {
+    "line": "But his company, Oakhurst Dairy, doesn't pay him overtime.",
+    "take": 4,
+    "ok": false,
+    "score": 0.833,
+    "diffs": [
+     [
+      "oakhurst",
+      "ocourse"
+     ]
+    ],
+    "rate": 3.43,
+    "dead_air": 0.11
+   },
+   {
+    "line": "A dairy company lost five million dollars because somebody skipped one comma.",
+    "take": 9,
+    "ok": false,
+    "score": 0.917,
+    "diffs": [
+     [
+      "dollars",
+      ""
+     ]
+    ],
+    "rate": 4.03,
+    "dead_air": 0.09
+   },
+   {
+    "line": "So in twenty seventeen, a federal appeals court calls the list unclear and sides with the drivers.",
+    "take": 9,
+    "ok": false,
+    "score": 0.853,
+    "diffs": [
+     [
+      "twenty seventeen",
+      "2017"
+     ]
+    ],
+    "rate": 3.64,
+    "dead_air": 0.09
+   },
+   {
+    "line": "So the dairy settles for five million dollars.",
+    "take": 14,
+    "ok": false,
+    "score": 0.875,
+    "diffs": [
+     [
+      "dollars",
+      ""
+     ]
+    ],
+    "rate": 4.4,
+    "dead_air": 0.07
+   },
+   {
+    "line": "Send this to the friend whose texts would cost a company ten million dollars.",
+    "take": 13,
+    "ok": false,
+    "score": 0.929,
+    "diffs": [
+     [
+      "dollars",
+      ""
+     ]
+    ],
+    "rate": 4.38,
+    "dead_air": 0.07
+   }
+  ],
+  "retakes": 9
+ },
+ "post_text": {
+  "title": "The Missing Comma That Revived an Overtime Fight",
+  "caption": "A missing comma in Maine's overtime exemption led the First Circuit in 2017 to revive delivery drivers' overtime claim. The ruling kept the case alive; it didn't itself award a payout.",
+  "hashtags": "#legalloopholes #oxfordcomma #grammar #overtime #lawtok #maine",
+  "description": "A missing comma in Maine's overtime exemption led the First Circuit in 2017 to revive delivery drivers' overtime claim. The ruling kept the case alive; it didn't itself award a payout.\n\n#legalloopholes #oxfordcomma #grammar #overtime #lawtok #maine #shorts #viral\n\nNot legal advice. For education and entertainment only.\n\nFollow @legalloopholesdaily for more.",
+  "tiktok_caption": "A missing comma in Maine's overtime exemption led the First Circuit in 2017 to revive delivery drivers' overtime claim. The ruling kept the case alive; it didn't itself award a payout. #legalloopholes #oxfordcomma #grammar #overtime #lawtok #maine #fyp #foryou #viral #learnontiktok"
+ },
+ "youtube": "channel: Legal Loopholes Daily",
+ "meta": {
+  "facebook_page": "Legal Loopholes Daily",
+  "instagram": "legalloopholesdaily"
+ },
+ "tiktok": "login present, renewal valid 353 more days",
+ "instagram_hosting": "lld-media push ok"
+}
