@@ -83,8 +83,9 @@ This repository is **public**: never commit secrets, tokens, personal emails or 
 ## Deploying changes
 - From the Mac clone: `bash ~/.n8n-files/lld-pipeline/update.sh` = commit + pull --rebase + push + start a test run.
 - Then review `test-output` (download the mp4, check frames with ffmpeg, check `report.json`).
-- Renders for a slot start ~2 h early (≈10:05 and ≈17:05 ET, backup run 30 min later; `EARLY` 130 in run.py, cron in post.yml;
-  owner 2026-11-10: pixel renders take ~35 min, no need for 4 h). Push changes before
+- Renders for a slot start ~2–3 h early (cron 9:05/10:05/10:35 and 16:05/17:05/17:35 ET in winter; `EARLY` 180 in run.py,
+  cron in post.yml; owner 2026-11-10: pixel renders take ~35 min). GitHub starts scheduled runs up to ~50 min late, and on
+  2026-11-11 apt hung 81 min (now timed out + retried), so LLD-003 posted late — keep that margin. Push changes before
   then or they apply to the next slot.
 
 ## Episodes: the story format (current)

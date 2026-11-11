@@ -1,7 +1,8 @@
 name: Post next episode
 
 # Runs about 2 hours before each posting time (12:00 and 7:00 pm New York time): a pixel episode takes ~35 min, up to
-# 3 tries ~1 h 40 min. Several UTC times are listed because GitHub's schedule is in UTC and New York changes clocks
+# 3 tries ~1 h 40 min. GitHub starts scheduled runs up to ~50 min late, so the first one may act up to 3 h early.
+# Several UTC times are listed because GitHub's schedule is in UTC and New York changes clocks
 # (and GitHub sometimes skips a scheduled run); run.py works out the real slot, skips runs outside a posting window
 # (EARLY in run.py) and makes sure each slot is handled once, so the extra runs are backups that do nothing.
 on:
@@ -86,9 +87,15 @@ jobs:
 
       - name: System packages and fonts
         if: steps.gate.outputs.go == 'yes'
+        timeout-minutes: 20
         run: |
-          sudo apt-get update -q
-          sudo apt-get install -y -q ffmpeg fonts-noto-color-emoji fonts-liberation fonts-dejavu-core
+          # 2026-11-11: an Ubuntu mirror stalled apt for 81 min and the noon post went out late; time out and retry instead
+          A="-o Acquire::Retries=3 -o Acquire::http::Timeout=30 -o Acquire::https::Timeout=30"
+          for i in 1 2 3; do
+            sudo timeout 240 apt-get update -q $A && sudo timeout 300 apt-get install -y -q $A ffmpeg fonts-noto-color-emoji fonts-liberation fonts-dejavu-core && break
+            echo "apt try $i failed; retrying"; sleep 10
+          done
+          command -v ffmpeg || { echo "::error::ffmpeg could not be installed"; exit 1; }
           mkdir -p ~/.local/share/fonts ~/.config/fontconfig
           cp fonts/*/*.ttf ~/.local/share/fonts/
           cp fonts/fonts.conf ~/.config/fontconfig/fonts.conf
