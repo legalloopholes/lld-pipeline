@@ -39,7 +39,7 @@ def spoken_keys(word):
     w = word.lower().replace('’', "'").replace('%', ' percent').replace('$', '')
     out = []
     for part in re.split(r"[-–—/\s]+", w):
-        m = re.fullmatch(r"(\d{1,3}(?:,\d{3})+|\d+)(st|nd|rd|th|s)?", re.sub(r"[^\w,]", '', part))
+        m = re.fullmatch(r"(\d{1,3}(?:,\d{3})+|\d+)(st|nd|rd|th|s)?", re.sub(r"[^\w,]", '', part).strip(','))
         if m:
             n = int(m.group(1).replace(',', ''))
             if 1100 <= n <= 2099 and n % 100 and m.group(2) in (None, 's'):          # years: "1872" -> eighteen seventy two
@@ -98,20 +98,38 @@ def heard(audio, sr):
     return [w for w in words if spoken_keys(w[0])]
 
 
+LETTERS = {'b': 'bee', 'c': 'see', 'u': 'you', 'r': 'are', 'y': 'why', 't': 'tea', 'o': 'oh', 'q': 'queue', 'j': 'jay'}
+
+
 def heard_keys(words):
     out = []
     for w, t in words:
-        for k in spoken_keys(w): out.append((k, t))
+        for k in spoken_keys(w): out.append((LETTERS.get(k, k), t))
+    return out
+
+
+def same_sound(a, b):
+    """the same words written differently: "bumble bee" / "bumblebee", "text" / "texts" is NOT the same"""
+    return ''.join(a) == ''.join(b)
+
+
+def opcodes(exp, got):
+    """difflib opcodes where a "replace" that is only a spacing difference counts as equal"""
+    out = []
+    for op, a1, a2, b1, b2 in difflib.SequenceMatcher(None, exp, got, autojunk=False).get_opcodes():
+        if op == 'replace' and same_sound(exp[a1:a2], got[b1:b2]): op = 'equal'
+        out.append((op, a1, a2, b1, b2))
     return out
 
 
 def score(expected_text, words):
     """fraction of expected words said, minus extra words; plus the list of differences"""
     exp = keys_of(expected_text); got = [k for k, _ in heard_keys(words)]
-    sm = difflib.SequenceMatcher(None, exp, got, autojunk=False)
-    match = sum(b.size for b in sm.get_matching_blocks())
-    diffs = [(' '.join(exp[a1:a2]), ' '.join(got[b1:b2])) for op, a1, a2, b1, b2 in sm.get_opcodes() if op != 'equal']
-    return (match - max(0, len(got) - match) * 0.5) / max(1, len(exp)), diffs
+    ops = opcodes(exp, got)
+    match = sum(a2 - a1 for op, a1, a2, b1, b2 in ops if op == 'equal')
+    seen = sum(b2 - b1 for op, a1, a2, b1, b2 in ops if op == 'equal')
+    diffs = [(' '.join(exp[a1:a2]), ' '.join(got[b1:b2])) for op, a1, a2, b1, b2 in ops if op != 'equal']
+    return (match - max(0, len(got) - seen) * 0.5) / max(1, len(exp)), diffs
 
 
 def align(toks, words, total=None):
@@ -154,14 +172,14 @@ def confirmed_diffs(audio, sr, spoken, words=None):
     flat = [(i, k) for i, (_, ks) in enumerate(toks) for k in ks]
     hk = heard_keys(words)
     starts, _ = align(toks, words, len(audio) / sr)
-    sm = difflib.SequenceMatcher(None, [k for _, k in flat], [k for k, _ in hk], autojunk=False)
-    bad = sorted({flat[j][0] for op, a1, a2, b1, b2 in sm.get_opcodes() if op in ('replace', 'delete') for j in range(a1, a2)})
+    bad = sorted({flat[j][0] for op, a1, a2, b1, b2 in opcodes([k for _, k in flat], [k for k, _ in hk])
+                  if op in ('replace', 'delete') for j in range(a1, a2)})
     out = []
     for i in bad:
         t = starts[i] or 0.0; want = toks[i][1]; got = ''
         for lo, hi in ((1.8, 1.6), (2.6, 1.0), (1.0, 2.4)):           # three windows: any one hearing it right is enough
             g = [k for k, _ in heard_keys(heard(audio[int(max(0, t - lo) * sr):int((t + hi) * sr)], sr))]
             got = ' '.join(g)
-            if all(k in g for k in want): break
+            if all(k in g for k in want) or ''.join(want) in ''.join(g) and len(''.join(want)) >= 3: break
         else: out.append((i, toks[i][0], round(t, 2), got))
     return out

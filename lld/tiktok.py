@@ -144,27 +144,32 @@ def draft(video):
     size = os.path.getsize(video)
     if size > 64 * 1024 * 1024:
         raise SystemExit('Video is over 64 MB; chunked upload not set up.')
-    init = http('POST', f'{API}/post/publish/inbox/video/init/',
-                {'source_info': {'source': 'FILE_UPLOAD', 'video_size': size, 'chunk_size': size, 'total_chunk_count': 1}},
-                headers=auth(c))
-    if init.get('error', {}).get('code') not in (None, 'ok'):
-        raise SystemExit('INIT ERROR: ' + json.dumps(init))
-    pid, up = init['data']['publish_id'], init['data']['upload_url']
     with open(video, 'rb') as f: blob = f.read()
-    req = urllib.request.Request(up, data=blob, method='PUT', headers={
-        'Content-Type': 'video/mp4', 'Content-Length': str(size), 'Content-Range': f'bytes 0-{size - 1}/{size}'})
-    try:
-        with urllib.request.urlopen(req, timeout=900) as r: r.read()
-    except urllib.error.HTTPError as e:
-        raise SystemExit(f'UPLOAD ERROR {e.code}: ' + e.read().decode('utf-8', 'replace')[:500])
-    status = {}
-    for _ in range(60):
-        time.sleep(5)
-        status = http('POST', f'{API}/post/publish/status/fetch/', {'publish_id': pid}, headers=auth(c))
-        st = (status.get('data') or {}).get('status')
-        if st in ('SEND_TO_USER_INBOX', 'PUBLISH_COMPLETE', 'FAILED'): break
-    out = {'publish_id': pid, 'status': (status.get('data') or {}).get('status'),
-           'fail_reason': (status.get('data') or {}).get('fail_reason')}
+    out = {}
+    for attempt in range(4):                              # TikTok's upload server sometimes answers 500 (2026-11-11): start over
+        if attempt: time.sleep(30 * attempt); print(f'retrying TikTok upload ({attempt}): {out}', file=sys.stderr, flush=True)
+        init = http('POST', f'{API}/post/publish/inbox/video/init/',
+                    {'source_info': {'source': 'FILE_UPLOAD', 'video_size': size, 'chunk_size': size, 'total_chunk_count': 1}},
+                    headers=auth(c))
+        if init.get('error', {}).get('code') not in (None, 'ok'):
+            out = {'error': 'INIT ERROR', 'detail': init}; continue
+        pid, up = init['data']['publish_id'], init['data']['upload_url']
+        req = urllib.request.Request(up, data=blob, method='PUT', headers={
+            'Content-Type': 'video/mp4', 'Content-Length': str(size), 'Content-Range': f'bytes 0-{size - 1}/{size}'})
+        try:
+            with urllib.request.urlopen(req, timeout=900) as r: r.read()
+        except Exception as e:
+            out = {'publish_id': pid, 'error': f'UPLOAD ERROR {getattr(e, "code", "")}', 'detail': (e.read().decode('utf-8', 'replace')[:300] if hasattr(e, 'read') else str(e))}
+            continue
+        status = {}
+        for _ in range(60):
+            time.sleep(5)
+            status = http('POST', f'{API}/post/publish/status/fetch/', {'publish_id': pid}, headers=auth(c))
+            st = (status.get('data') or {}).get('status')
+            if st in ('SEND_TO_USER_INBOX', 'PUBLISH_COMPLETE', 'FAILED'): break
+        out = {'publish_id': pid, 'status': (status.get('data') or {}).get('status'),
+               'fail_reason': (status.get('data') or {}).get('fail_reason')}
+        if out['status'] in ('SEND_TO_USER_INBOX', 'PUBLISH_COMPLETE'): break
     print(json.dumps(out))
     if out['status'] not in ('SEND_TO_USER_INBOX', 'PUBLISH_COMPLETE'):
         sys.exit(1)

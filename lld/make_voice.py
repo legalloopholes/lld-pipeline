@@ -286,7 +286,7 @@ if abs(_new - SPEED) / SPEED > 0.015:                 # takes are kept; only the
     audio, n_spoken = synth()
 full = np.concatenate(audio) if audio else np.zeros(0, dtype=np.int16)
 # whole-read check: a word that is still wrong when its own seconds are re-checked gets its line re-taken
-for _round in range(2):
+for _round in range(3):
     bad = TC.confirmed_diffs(full, SR, ' '.join(SPOKEN))
     if not bad: break
     starts_tok, li = [], []
